@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Learn how to include Bootstrap in your project using Parcel.">
+<meta name="description" content="Aprende a incluir Bootstrap en tu proyecto usando Parcel.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.91.2">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Parcel">
-<meta name="twitter:description" content="Learn how to include Bootstrap in your project using Parcel.">
+<meta name="twitter:description" content="Aprende a incluir Bootstrap en tu proyecto usando Parcel.">
 <meta name="twitter:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://bootstrap.fabdev.win/docs/5.1/getting-started/parcel/">
 <meta property="og:title" content="Parcel">
-<meta property="og:description" content="Learn how to include Bootstrap in your project using Parcel.">
+<meta property="og:description" content="Aprende a incluir Bootstrap en tu proyecto usando Parcel.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -204,10 +204,10 @@
               <li><a href="/docs/5.1/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.1/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.1/getting-started/parcel/" class="d-inline-flex align-items-center rounded active" aria-current="page">Parcel</a></li>
-              <li><a href="/docs/5.1/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">Accessibility</a></li>
+              <li><a href="/docs/5.1/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">Accesibilidad</a></li>
               <li><a href="/docs/5.1/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
               <li><a href="/docs/5.1/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a></li>
-              <li><a href="/docs/5.1/getting-started/contribute/" class="d-inline-flex align-items-center rounded">Contribute</a></li>
+              <li><a href="/docs/5.1/getting-started/contribute/" class="d-inline-flex align-items-center rounded">Contribuir</a></li>
           </ul>
         </div>
       </li>
@@ -404,7 +404,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/getting-started/parcel.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">Ver en GitHub</a>
           <h1 class="bd-title" id="content">Parcel</h1>
         </div>
-        <p class="bd-lead">Learn how to include Bootstrap in your project using Parcel.</p>
+        <p class="bd-lead">Aprende a incluir Bootstrap en tu proyecto usando Parcel.</p>
         
 
       </div>
@@ -414,15 +414,15 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#install-parcel">Install Parcel</a></li>
-    <li><a href="#install-bootstrap">Install Bootstrap</a></li>
-    <li><a href="#importing-javascript">Importing JavaScript</a></li>
-    <li><a href="#importing-css">Importing CSS</a></li>
-    <li><a href="#build-app">Build app</a>
+    <li><a href="#instalación-de-parcel">Instalación de Parcel</a></li>
+    <li><a href="#instalación-de-bootstrap">Instalación de Bootstrap</a></li>
+    <li><a href="#importación-de-javascript">Importación de JavaScript</a></li>
+    <li><a href="#importación-de-css">Importación de CSS</a></li>
+    <li><a href="#crear-la-aplicación">Crear la aplicación</a>
       <ul>
-        <li><a href="#edit-packagejson">Edit <code>package.json</code></a></li>
-        <li><a href="#run-dev-script">Run dev script</a></li>
-        <li><a href="#build-app-files">Build app files</a></li>
+        <li><a href="#edita-packagejson">Edita <code>package.json</code></a></li>
+        <li><a href="#ejecuta-el-script-dev">Ejecuta el script dev</a></li>
+        <li><a href="#construye-los-archivos-de-la-aplicaciones">Construye los archivos de la aplicaciones</a></li>
       </ul>
     </li>
   </ul>
@@ -433,12 +433,13 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="install-parcel">Install Parcel</h2>
-<p>Install <a href="https://en.parceljs.org/getting_started.html">Parcel Bundler</a>.</p>
-<h2 id="install-bootstrap">Install Bootstrap</h2>
-<p><a href="/docs/5.1/getting-started/download/#npm">Install bootstrap</a> as a Node.js module using npm.</p>
-<p>Bootstrap depends on <a href="https://popper.js.org/">Popper</a>, which is specified in the <code>peerDependencies</code> property. This means that you will have to make sure to add both of them to your <code>package.json</code> using <code>npm install @popperjs/core</code>.</p>
-<p>When all will be completed, your project will be structured like this:</p>
+        <h2 id="instalación-de-parcel">Instalación de Parcel</h2>
+<p>Instala <a href="https://en.parceljs.org/getting_started.html">Parcel Bundler</a>.</p>
+<h2 id="instalación-de-bootstrap">Instalación de Bootstrap</h2>
+<p><a href="/docs/5.1/getting-started/download/#npm">Instala bootstrap</a> como un módulo Node.js usando npm.</p>
+<p>Bootstrap depende de <a href="https://popper.js.org/">Popper</a>, que se especifica en la propiedad <code>peerDependencies</code>.
+Esto significa que deberás asegurarte de agregarlo a tu <code>package.json</code> usando <code>npm install @popperjs/core</code>.</p>
+<p>Cuando todo esté completo, tu proyecto se estructurará de la siguiente manera:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">project-name/
 ├── build/
 ├── node_modules/
@@ -450,21 +451,21 @@
 │   └── index.html
 │   └── index.js
 └── package.json
-</code></pre></div><h2 id="importing-javascript">Importing JavaScript</h2>
-<p>Import <a href="/docs/5.1/getting-started/javascript/">Bootstrap&rsquo;s JavaScript</a> in your app&rsquo;s entry point (usually <code>src/index.js</code>). You can import all our plugins in one file or separately if you require only a subset of them.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Import all plugins
+</code></pre></div><h2 id="importación-de-javascript">Importación de JavaScript</h2>
+<p>Importa el <a href="/docs/5.1/getting-started/javascript/">JavaScript de Bootstrap</a> en el punto de entrada de su aplicación (generalmente <code>src/index.js</code>). Puedes importar todos nuestros plugins en un archivo o por separado si necesitas solo un subconjunto de ellos.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Importar todos los plugins
 </span><span class="c1"></span><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">bootstrap</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span>
 
-<span class="c1">// Or import only needed plugins
+<span class="c1">// O importar solo los plugins necesarios
 </span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Tooltip</span> <span class="nx">as</span> <span class="nx">Tooltip</span><span class="p">,</span> <span class="nx">Toast</span> <span class="nx">as</span> <span class="nx">Toast</span><span class="p">,</span> <span class="nx">Popover</span> <span class="nx">as</span> <span class="nx">Popover</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span>
 
-<span class="c1">// Or import just one
+<span class="c1">// O importar solo uno
 </span><span class="c1"></span><span class="kr">import</span> <span class="nx">Alert</span> <span class="nx">as</span> <span class="nx">Alert</span> <span class="nx">from</span> <span class="s1">&#39;../node_modules/bootstrap/js/dist/alert&#39;</span><span class="p">;</span>
-</code></pre></div><h2 id="importing-css">Importing CSS</h2>
-<p>To utilize the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project&rsquo;s bundling process.</p>
-<p>Create your own <code>scss/custom.scss</code> to <a href="/docs/5.1/customize/sass/#importing">import Bootstrap&rsquo;s Sass files</a> and then override the <a href="/docs/5.1/customize/sass/#variable-defaults">built-in custom variables</a>.</p>
-<h2 id="build-app">Build app</h2>
-<p>Include <code>src/index.js</code> before the closing <code>&lt;/body&gt;</code> tag.</p>
+</code></pre></div><h2 id="importación-de-css">Importación de CSS</h2>
+<p>Para utilizar todo el potencial de Bootstrap y personalizarlo según tus necesidades, utiliza los archivos fuente como parte del proceso bundling (agrupación de todos los archivos) de tu proyecto.</p>
+<p>Crea tu propio <code>scss/custom.scss</code> para <a href="/docs/5.1/customize/sass/#importing">importar archivos Sass de Bootstrap</a> y luego sobrescribe las <a href="/docs/5.1/customize/sass/#variable-defaults">variables personalizadas integradas</a>.</p>
+<h2 id="crear-la-aplicación">Crear la aplicación</h2>
+<p>Incluye <code>src/index.js</code> antes de la etiqueta de cierre <code>&lt;/body&gt;</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -475,18 +476,18 @@
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./index.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="edit-packagejson">Edit <code>package.json</code></h3>
-<p>Add <code>dev</code> and <code>build</code> scripts in your <code>package.json</code> file.</p>
+</code></pre></div><h3 id="edita-packagejson">Edita <code>package.json</code></h3>
+<p>Agrega los scripts <code>dev</code> y <code>build</code> en tu archivo <code>package.json</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
   <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;parcel ./src/index.html&#34;</span><span class="p">,</span>
   <span class="nt">&#34;prebuild&#34;</span><span class="p">:</span> <span class="s2">&#34;npx rimraf build&#34;</span><span class="p">,</span>
   <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;parcel build --public-url ./ ./src/index.html --experimental-scope-hoisting --out-dir build&#34;</span>
 <span class="p">}</span>
-</code></pre></div><h3 id="run-dev-script">Run dev script</h3>
-<p>Your app will be accessible at <code>http://127.0.0.1:1234</code>.</p>
+</code></pre></div><h3 id="ejecuta-el-script-dev">Ejecuta el script dev</h3>
+<p>Se podrá acceder a tu aplicación en <code>http://127.0.0.1:1234</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">npm run dev
-</code></pre></div><h3 id="build-app-files">Build app files</h3>
-<p>Built files are in the <code>build/</code> folder.</p>
+</code></pre></div><h3 id="construye-los-archivos-de-la-aplicaciones">Construye los archivos de la aplicaciones</h3>
+<p>Los archivos construidos están en la carpeta <code>build/</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">npm run build
 </code></pre></div>
       </div>

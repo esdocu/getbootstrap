@@ -7,20 +7,28 @@ toc: true
 aliases: "/docs/5.1/forms/"
 sections:
   - title: Form control
+    es_title: Form control
     description: Style textual inputs and textareas with support for multiple states.
   - title: Select
+    es_title: Select
     description: Improve browser default select elements with a custom initial appearance.
   - title: Checks & radios
+    es_title: Checks & radios
     description: Use our custom radio buttons and checkboxes in forms for selecting input options.
   - title: Range
+    es_title: Range
     description: Replace browser default range inputs with our custom version.
   - title: Input group
+    es_title: Input group
     description: Attach labels and buttons to your inputs for increased semantic value.
   - title: Floating labels
+    es_title: Floating labels
     description: Create beautifully simple form labels that float over your input fields.
   - title: Layout
+    es_title: Layout
     description: Create inline, horizontal, or complex grid-based layouts with your forms.
   - title: Validation
+    es_title: Validation
     description: Validate your forms with custom or native validation behaviors and styles.
 ---
 

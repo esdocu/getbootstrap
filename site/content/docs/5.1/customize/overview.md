@@ -1,51 +1,57 @@
 ---
 layout: docs
 title: Personalizar
-description: Learn how to theme, customize, and extend Bootstrap with Sass, a boatload of global options, an expansive color system, and more.
+description: Aprende a crear temas, personalizar y ampliar Bootstrap con Sass, un montón de opciones globales, un amplio sistema de colores y más.
 group: customize
 toc: false
 aliases: "/docs/5.1/customize/"
 sections:
   - title: Sass
-    description: Utilize our source Sass files to take advantage of variables, maps, mixins, and functions.
+    es_title: Sass
+    description: Utiliza nuestros archivos fuente Sass para aprovechar variables, mapas, mixins y funciones.
   - title: Options
-    description: Customize Bootstrap with built-in variables to easily toggle global CSS preferences.
+    es_title: Opciones
+    description: Personaliza Bootstrap con variables integradas para alternar fácilmente las preferencias globales de CSS.
   - title: Color
-    description: Learn about and customize the color systems that support the entire toolkit.
+    es_title: Color
+    description: Conoce y personaliza los sistemas de colores utilizados en todo el toolkit.
   - title: Components
-    description: Learn how we build nearly all our components responsively and with base and modifier classes.
+    es_title: Componentes
+    description: Aprende cómo construimos casi todos nuestros componentes de manera responsive y con clases y modificadoras base.
   - title: CSS variables
-    description: Use Bootstrap's CSS custom properties for fast and forward-looking design and development.
+    es_title: Variables CSS
+    description: Utiliza las propiedades personalizadas de CSS de Bootstrap para un diseño y desarrollo rápidos y con visión de futuro.
   - title: Optimize
-    description: Keep your projects lean, responsive, and maintainable so you can deliver the best experience.
+    es_title: Optimizar
+    description: Manten tus proyectos ágiles, responsive y fáciles de mantener para que puedas ofrecer la mejor experiencia.
 ---
 
-## Overview
+## Descripción general
 
-There are multiple ways to customize Bootstrap. Your best path can depend on your project, the complexity of your build tools, the version of Bootstrap you're using, browser support, and more.
+Hay varias formas de personalizar Bootstrap. Tu mejor camino puede depender de tu proyecto, la complejidad de tus herramientas de compilación, la versión de Bootstrap que estás usando, la compatibilidad con el navegador y más.
 
-Our two preferred methods are:
+Nuestros dos métodos preferidos son:
 
-1. Using Bootstrap [via package manager]({{< docsref "/getting-started/download#package-managers" >}}) so you can use and extend our source files.
-2. Using Bootstrap's compiled distribution files or [jsDelivr]({{< docsref "/getting-started/download#cdn-via-jsdelivr" >}}) so you can add onto or override Bootstrap's styles.
+1. Usar Bootstrap a través del [administrador de paquetes]({{< docsref "/getting-started/download#package-managers" >}}) para que puedas usar y ampliar nuestros archivos fuente.
+2. Usar los archivos de distribución compilados de Bootstrap o [jsDelivr]({{< docsref "/getting-started/download#cdn-via-jsdelivr" >}}) para que puedas agregar o sobrescribir los estilos de Bootstrap.
 
-While we cannot go into details here on how to use every package manager, we can give some guidance on [using Bootstrap with your own Sass compiler]({{< docsref "/customize/sass" >}}).
+Si bien no podemos entrar en detalles aquí sobre cómo usar cada administrador de paquetes, podemos brindarte orientación sobre [el uso de Bootstrap con su propio compilador Sass]({{< docsref "/customize/sass" >}}).
 
-For those who want to use the distribution files, review the [getting started page]({{< docsref "/getting-started/introduction" >}}) for how to include those files and an example HTML page. From there, consult the docs for the layout, components, and behaviors you'd like to use.
+Para aquellos que quieran usar los archivos de distribución, revisen la [página de inicio]({{< docsref "/getting-started/introduction" >}}) para saber cómo incluir esos archivos y una página HTML de ejemplo. A partir de ahí, consulta los documentos para conocer el diseño, los componentes y los comportamientos que te gustaría usar.
 
-As you familiarize yourself with Bootstrap, continue exploring this section for more details on how to utilize our global options, making use of and changing our color system, how we build our components, how to use our growing list of CSS custom properties, and how to optimize your code when building with Bootstrap.
+A medida que te familiarices con Bootstrap, continúa explorando esta sección para obtener más detalles sobre cómo utilizar nuestras opciones globales, cómo cambiar nuestro sistema de color, cómo construimos nuestros componentes, cómo usar nuestra creciente lista de propiedades personalizadas de CSS y cómo optimizar tu código al construir con Bootstrap.
 
-## CSPs and embedded SVGs
+## CSP y SVG integrados
 
-Several Bootstrap components include embedded SVGs in our CSS to style components consistently and easily across browsers and devices. **For organizations with more strict <abbr title="Content Security Policy">CSP</abbr> configurations**, we've documented all instances of our embedded SVGs (all of which are applied via `background-image`) so you can more thoroughly review your options.
+Varios componentes de Bootstrap incluyen SVG incrustados en nuestro CSS para diseñar componentes de manera consistente y sencilla en todos los navegadores y dispositivos. **Para organizaciones con configuraciones de <abbr title="Content Security Policy">CSP</abbr> más estrictas**, hemos documentado todas las instancias de nuestros SVG integrados (todos los cuales se aplican a través de `background-image`) para que puedas revisar más a fondo sus opciones.
 
 - [Accordion]({{< docsref "/components/accordion" >}})
-- [Close button]({{< docsref "/components/close-button" >}}) (used in alerts and modals)
-- [Form checkboxes and radio buttons]({{< docsref "/forms/checks-radios" >}})
-- [Form switches]({{< docsref "/forms/checks-radios#switches" >}})
-- [Form validation icons]({{< docsref "/forms/validation#server-side" >}})
-- [Select menus]({{< docsref "/forms/select" >}})
-- [Carousel controls]({{< docsref "/components/carousel#with-controls" >}})
-- [Navbar toggle buttons]({{< docsref "/components/navbar#responsive-behaviors" >}})
+- [Botón de cierre]({{< docsref "/components/close-button" >}}) (usado en alerts y modals)
+- [Checkboxes y botones radio de formulario]({{< docsref "/forms/checks-radios" >}})
+- [Switches de formulario]({{< docsref "/forms/checks-radios#switches" >}})
+- [Iconos de validación de formulario]({{< docsref "/forms/validation#server-side" >}})
+- [Menús de selección]({{< docsref "/forms/select" >}})
+- [Controles de Carousel]({{< docsref "/components/carousel#with-controls" >}})
+- [Botones de Navbar]({{< docsref "/components/navbar#responsive-behaviors" >}})
 
-Based on [community conversation](https://github.com/twbs/bootstrap/issues/25394), some options for addressing this in your own codebase include replacing the URLs with locally hosted assets, removing the images and using inline images (not possible in all components), and modifying your CSP. Our recommendation is to carefully review your own security policies and decide on the best path forward, if necessary.
+Según la [conversación de la comunidad](https://github.com/twbs/bootstrap/issues/25394), algunas opciones para abordar esto en tu propio código base incluyen reemplazar las URL con assets alojados localmente, eliminar las imágenes y usar imágenes en línea (no es posible en todos los componentes), y modificando tu CSP. Nuestra recomendación es revisar cuidadosamente tus propias políticas de seguridad y decidir cuál es el mejor camino a seguir, si es necesario.
