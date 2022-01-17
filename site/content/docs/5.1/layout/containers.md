@@ -1,24 +1,24 @@
 ---
 layout: docs
-title: Containers
-description: Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.
+title: Contenedores
+description: Los contenedores son un bloque de construcción fundamental de Bootstrap que contienen, rellenan y alinean tu contenido dentro de un dispositivo o viewport determinado.
 group: layout
 toc: true
 ---
 
-## How they work
+## Cómo trabajan
 
-Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
+Los contenedores son el elemento de diseño más básico en Bootstrap y son **requeridos cuando se usa nuestro sistema de cuadrícula predeterminado**. Los contenedores se utilizan para contener, rellenar y (a veces) centrar el contenido dentro de ellos. Si bien los contenedores *pueden* anidarse, la mayoría de los diseños no requieren un contenedor anidado.
 
-Bootstrap comes with three different containers:
+Bootstrap viene con tres contenedores diferentes:
 
-- `.container`, which sets a `max-width` at each responsive breakpoint
-- `.container-fluid`, which is `width: 100%` at all breakpoints
-- `.container-{breakpoint}`, which is `width: 100%` until the specified breakpoint
+- `.container`, que establece un `max-width` en cada breakpoint responsive
+- `.container-fluid`, que es `width: 100%` en todos los breakpoints
+- `.container-{breakpoint}`, que es `width: 100%` hasta el breakpoint especificado
 
-The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
+La siguiente tabla ilustra cómo se compara el `max-width` de cada contenedor con el `.container` y el `.container-fluid` originales en cada breakpoint.
 
-See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}).
+Puedes verlo en acción y compararlos en nuestro [ejemplo de cuadrícula]({{< docsref "/examples/grid#containers" >}}).
 
 <table class="table">
   <thead>
@@ -117,31 +117,31 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
   </tbody>
 </table>
 
-## Default container
+## Contenedor predeterminado
 
-Our default `.container` class is a responsive, fixed-width container, meaning its `max-width` changes at each breakpoint.
+Nuestra clase `.container` predeterminada es un contenedor sensible de ancho fijo, lo que significa que su `max-width` cambia en cada breakpoint.
 
 ```html
 <div class="container">
-  <!-- Content here -->
+  <!-- Contenido aquí -->
 </div>
 ```
 
-## Responsive containers
+## Contenedores responsive
 
-Responsive containers allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, and `xxl`.
+Los contenedores responsive te permiten especificar una clase que tiene un 100% de ancho hasta que se alcanza el breakpoint especificado, después de lo cual aplicamos `max-width`s para cada uno de los breakpoints más altos. Por ejemplo, `.container-sm` tiene un 100% de ancho al principio hasta que se alcanza el breakpoint `sm`, donde se escalará con `md`, `lg`, `xl` y `xxl`.
 
 ```html
-<div class="container-sm">100% wide until small breakpoint</div>
-<div class="container-md">100% wide until medium breakpoint</div>
-<div class="container-lg">100% wide until large breakpoint</div>
-<div class="container-xl">100% wide until extra large breakpoint</div>
-<div class="container-xxl">100% wide until extra extra large breakpoint</div>
+<div class="container-sm">100% de ancho hasta el small breakpoint</div>
+<div class="container-md">100% de ancho hasta el medium breakpoint</div>
+<div class="container-lg">100% de ancho hasta el large breakpoint</div>
+<div class="container-xl">100% de ancho hasta el extra large breakpoint</div>
+<div class="container-xxl">100% de ancho hasta el extra extra large breakpoint</div>
 ```
 
-## Fluid containers
+## Contenedores fluidos
 
-Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
+Usa `.container-fluid` para un contenedor de ancho completo, que abarque todo el ancho del viewport.
 
 ```html
 <div class="container-fluid">
@@ -151,11 +151,11 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 
 ## Sass
 
-As shown above, Bootstrap generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
+Como se muestra arriba, Bootstrap genera una serie de clases de contenedores predefinidas para ayudarte a crear los diseños que deseas. Puedes personalizar estas clases de contenedor predefinidas modificando el mapa de Sass (que se encuentra en `_variables.scss`):
 
 {{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
 
-In addition to customizing the Sass, you can also create your own containers with our Sass mixin.
+Además de personalizar el Sass, también puedes crear tus propios contenedores con nuestro mixin Sass.
 
 ```scss
 // Source mixin
@@ -167,10 +167,10 @@ In addition to customizing the Sass, you can also create your own containers wit
   margin-left: auto;
 }
 
-// Usage
+// Uso
 .custom-container {
   @include make-container();
 }
 ```
 
-For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]({{< docsref "/layout/grid#sass" >}}).
+Para obtener más información y ejemplos sobre cómo modificar nuestros mapas y variables Sass, consulta [la sección Sass de la documentación de Grid]({{< docsref "/layout/grid#sass" >}}).
