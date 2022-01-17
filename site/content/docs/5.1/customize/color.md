@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Color
-description: Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
+description: Bootstrap está respaldado por un extenso sistema de colores que tematiza nuestros estilos y componentes. Esto permite una personalización y extensión más completas para cualquier proyecto.
 group: customize
 toc: true
 ---
 
-## Theme colors
+## Colores del tema
 
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Bootstrap's `scss/_variables.scss` file.
+Usamos un subconjunto de todos los colores para crear una paleta de colores más pequeña para generar esquemas de color, también disponible como variables Sass y un mapa Sass en el archivo `scss/_variables.scss` de Bootstrap.
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -20,17 +20,17 @@ We use a subset of all colors to create a smaller color palette for generating c
   {{< /theme-colors.inline >}}
 </div>
 
-All these colors are available as a Sass map, `$theme-colors`.
+Todos estos colores están disponibles como mapa Sass, `$theme-colors`.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
-Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
+Consulta nuestros documentos de [mapas y bucles de Sass]({{< docsref "/customize/sass#maps-and-loops" >}}) para saber cómo modificar estos colores.
 
-## All colors
+## Todos los colores
 
-All Bootstrap colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
+Todos los colores de Bootstrap están disponibles como variables Sass y un mapa Sass en el archivo `scss/_variables.scss`. Para evitar aumentar el tamaño de los archivos, no creamos clases de color de texto o de fondo para cada una de estas variables. En su lugar, elegimos un subconjunto de estos colores para una [paleta de temas](#theme-colors).
 
-Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
+Asegúrate de controlar las relaciones de contraste a medida que personalizas los colores. Como se muestra a continuación, hemos agregado tres proporciones de contraste a cada uno de los colores principales: una para los colores actuales de la muestra, una contra el blanco y otra contra el negro.
 
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
@@ -71,31 +71,31 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
   </div>
 </div>
 
-### Notes on Sass
+### Notas sobre Sass
 
-Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We specify the midpoint value (e.g., `$blue-500`) and use custom color functions to tint (lighten) or shade (darken) our colors via Sass's `mix()` color function.
+Sass no puede generar variables programáticamente, por lo que creamos variables manualmente para cada tinte y sombreado nosotros mismos. Especificamos el valor del punto medio (por ejemplo, `$blue-500`) y usamos funciones de color personalizadas para teñir (aclarar) o sombrear (oscurecer) nuestros colores a través de la función de color `mix()` de Sass.
 
-Using `mix()` is not the same as `lighten()` and `darken()`—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as [shown in this CodePen demo](https://codepen.io/emdeoh/pen/zYOQOPB).
+Usar `mix()` no es lo mismo que `lighten()` y `darken()`: el primero combina el color especificado con blanco o negro, mientras que el último solo ajusta el valor de luminosidad de cada color. El resultado es un conjunto de colores mucho más completo, como se muestra en esta [demostración de CodePen](https://codepen.io/emdeoh/pen/zYOQOPB).
 
-Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
+Nuestras funciones `tint-color()` y `shade-color()` usan `mix()` junto con nuestra variable `$theme-color-interval`, que especifica un valor porcentual escalonado para cada color mezclado que producimos. Consulta los archivos `scss/_functions.scss` y `scss/_variables.scss` para obtener el código fuente completo.
 
-## Color Sass maps
+## Mapas Sass de colores
 
-Bootstrap's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
+Los archivos fuente de Sass de Bootstrap incluyen tres mapas para ayudarte a recorrer rápida y fácilmente una lista de colores y sus valores hexadecimales.
 
-- `$colors` lists all our available base (`500`) colors
-- `$theme-colors` lists all semantically named theme colors (shown below)
-- `$grays` lists all tints and shades of gray
+- `$colors` enumera todos nuestros colores base disponibles (`500`)
+- `$theme-colors` enumera todos los colores del tema con nombres semánticos (que se muestran a continuación)
+- `$grays` enumera todos los tintes y tonos de gris
 
-Within `scss/_variables.scss`, you'll find Bootstrap's color variables and Sass map. Here's an example of the `$colors` Sass map:
+Dentro de `scss/_variables.scss`, encontrarás las variables de color de Bootstrap y el mapa de Sass. Aquí hay un ejemplo del mapa Sass `$colors`:
 
 {{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
 
-Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
+Agrega, elimina o modifica valores dentro del mapa para actualizar cómo se usan en muchos otros componentes. Desafortunadamente, en este momento, no todos los componentes utilizan este mapa de Sass. Las actualizaciones futuras se esforzarán por mejorar esto. Hasta entonces, planea hacer uso de las variables `${color}` y este mapa de Sass.
 
-### Example
+### Ejemplo
 
-Here's how you can use these in your Sass:
+Así es como puedes usarlos en tu Sass:
 
 ```scss
 .alpha { color: $purple; }
@@ -105,19 +105,19 @@ Here's how you can use these in your Sass:
 }
 ```
 
-[Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` color values.
+Las clases de utilidad [Color]({{< docsref "/utilities/colors" >}}) y [background]({{< docsref "/utilities/background" >}}) también están disponibles para configurar `color` y `background-color` utilizando los valores de color `500`.
 
-## Generating utilities
+## Generación de utilidades
 
-<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Añadido en v5.1.0</small>
 
-Bootstrap doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({{< docsref "/utilities/api" >}}) and our extended Sass maps added in v5.1.0.
+Bootstrap no incluye las utilidades `color` y `background-color` para cada variable de color, pero puedes generarlas tú mismo con nuestra [utility API]({{< docsref "/utilities/api" >}}) y nuestra mapas Sass extendido añadido en v5.1.0.
 
-1. To start, make sure you've imported our functions, variables, mixins, and utilities.
-2. Use our `map-merge-multiple()` function to quickly merge multiple Sass maps together in a new map.
-3. Merge this new combined map to extend any utility with a `{color}-{level}` class name.
+1. Para comenzar, asegúrate de haber importado nuestras funciones, variables, mixins y utilidades.
+2. Utiliza nuestra función `map-merge-multiple()` para fusionar rápidamente múltiples mapas Sass en un nuevo mapa.
+3. Fusiona este nuevo mapa combinado para ampliar cualquier utilidad con un nombre de clase `{color}-{level}`.
 
-Here's an example that generates text color utilities (e.g., `.text-purple-500`) using the above steps.
+Aquí hay un ejemplo que genera utilidades de color de texto (por ejemplo, `.text-purple-500`) siguiendo los pasos anteriores.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -148,4 +148,4 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities/api";
 ```
 
-This will generate new `.text-{color}-{level}` utilities for every color and level. You can do the same for any other utility and property as well.
+Esto generará nuevas utilidades `.text-{color}-{level}` para cada color y nivel. También puedes hacer lo mismo con cualquier otra utilidad y propiedad.
