@@ -1,25 +1,24 @@
 ---
 layout: docs
-title: Optimize
-description: Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.
+title: Optimizar
+description: Mantén tus proyectos ágiles, responsive y mantenibles para que puedas brindar la mejor experiencia y concentrarte en trabajos más importantes.
 group: customize
 toc: true
 ---
 
-## Lean Sass imports
+## Importaciones Sass ligeras
 
-When using Sass in your asset pipeline, make sure you optimize Bootstrap by only `@import`ing the components you need. Your largest optimizations will likely come from the `Layout & Components` section of our `bootstrap.scss`.
+Cuando utilices Sass en tus assets, asegúrate de optimizar Bootstrap solo importando (`@import`) los componentes que necesitas. Tus optimizaciones más grandes probablemente provendrán de la sección `Layout & Components` de nuestro `bootstrap.scss`.
 
 {{< scss-docs name="import-stack" file="scss/bootstrap.scss" >}}
 
+Si no estás utilizando un componente, coméntalo o elimínalo por completo. Por ejemplo, si no estás utilizando el *carousel*, elimina esa importación para ahorrar algo de tamaño de archivo en tu CSS compilado. Ten en cuenta que existen algunas dependencias en las importaciones de Sass que pueden dificultar la omisión de un archivo.
 
-If you're not using a component, comment it out or delete it entirely. For example, if you're not using the carousel, remove that import to save some file size in your compiled CSS. Keep in mind there are some dependencies across Sass imports that may make it more difficult to omit a file.
+## JavaScript ligero
 
-## Lean JavaScript
+El JavaScript de Bootstrap incluye todos los componentes de nuestros archivos de distribución principales (`bootstrap.js` y `bootstrap.min.js`), e incluso nuestra dependencia principal (Popper) con nuestros archivos de paquete (`bootstrap.bundle.js` y `bootstrap.bundle.min.js`). Mientras personalizas a través de Sass, asegúrate de eliminar el JavaScript relacionado.
 
-Bootstrap's JavaScript includes every component in our primary dist files (`bootstrap.js` and `bootstrap.min.js`), and even our primary dependency (Popper) with our bundle files (`bootstrap.bundle.js` and `bootstrap.bundle.min.js`). While you're customizing via Sass, be sure to remove related JavaScript.
-
-For instance, assuming you're using your own JavaScript bundler like Webpack or Rollup, you'd only import the JavaScript you plan on using. In the example below, we show how to just include our modal JavaScript:
+Por ejemplo, suponiendo que estás usando tu propio paquete de JavaScript como Webpack o Rollup, solo importarás el JavaScript que planeas usar. En el siguiente ejemplo, mostramos cómo incluir solamente nuestro JavaScript modal:
 
 ```js
 // Import just what we need
@@ -38,12 +37,12 @@ import 'bootstrap/js/dist/modal';
 // import 'bootstrap/js/dist/tooltip';
 ```
 
-This way, you're not including any JavaScript you don't intend to use for components like buttons, carousels, and tooltips. If you're importing dropdowns, tooltips or popovers, be sure to list the Popper dependency in your `package.json` file.
+De esta forma, no incluyes ningún JavaScript que no pretendas utilizar para componentes como botones, carruseles e tooltips. Si estás importando menús desplegables, tooltips o ventanas emergentes (popovers), asegúrate de incluir la dependencia de Popper en tu archivo `package.json`.
 
 {{< callout info >}}
 ### Default Exports
 
-Files in `bootstrap/js/dist` use the **default export**, so if you want to use one of them you have to do the following:
+Los archivos en `bootstrap/js/dist` usan **default export** (exportación predeterminada), por lo que si deseas usar uno de ellos, debes hacer lo siguiente:
 
 ```js
 import Modal from 'bootstrap/js/dist/modal'
@@ -54,40 +53,40 @@ const modal = new Modal(document.getElementById('myModal'))
 
 ## Autoprefixer .browserslistrc
 
-Bootstrap depends on Autoprefixer to automatically add browser prefixes to certain CSS properties. Prefixes are dictated by our `.browserslistrc` file, found in the root of the Bootstrap repo. Customizing this list of browsers and recompiling the Sass will automatically remove some CSS from your compiled CSS, if there are vendor prefixes unique to that browser or version.
+Bootstrap depende de Autoprefixer para agregar automáticamente prefijos de navegador a ciertas propiedades de CSS. Los prefijos están dictados por nuestro archivo `.browserslistrc`, que se encuentra en la raíz del repositorio de Bootstrap. Personalizar esta lista de navegadores y volver a compilar el Sass eliminará automáticamente algunos CSS de tu CSS compilado si hay prefijos de proveedores exclusivos para ese navegador o versión.
 
-## Unused CSS
+## CSS sin usar
 
-_Help wanted with this section, please consider opening a PR. Thanks!_
+_Se necesita ayuda con esta sección, considere abrir un PR. ¡Gracias!_
 
-While we don't have a prebuilt example for using [PurgeCSS](https://github.com/FullHuman/purgecss) with Bootstrap, there are some helpful articles and walkthroughs that the community has written. Here are some options:
+Si bien no tenemos un ejemplo preconstruido para usar [PurgeCSS](https://github.com/FullHuman/purgecss) con Bootstrap, hay algunos artículos y tutoriales útiles que ha escrito la comunidad. Aquí hay algunas opciones:
 
 - <https://medium.com/dwarves-foundation/remove-unused-css-styles-from-bootstrap-using-purgecss-88395a2c5772>
 - <https://lukelowrey.com/automatically-removeunused-css-from-bootstrap-or-other-frameworks/>
 
-Lastly, this [CSS Tricks article on unused CSS](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) shows how to use PurgeCSS and other similar tools.
+Por último, este artículo de [CSS Tricks sobre CSS sin usar](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) muestra cómo usar PurgeCSS y otras herramientas similares.
 
-## Minify and gzip
+## Minificar y gzip
 
-Whenever possible, be sure to compress all the code you serve to your visitors. If you're using Bootstrap dist files, try to stick to the minified versions (indicated by the `.min.css` and `.min.js` extensions). If you're building Bootstrap from the source with your own build system, be sure to implement your own minifiers for HTML, CSS, and JS.
+Siempre que sea posible, asegúrate de comprimir todo el código que ofreces a tus visitantes. Si estás utilizando archivos dist de Bootstrap, intenta inclinarte por las versiones minificadas (indicadas por las extensiones `.min.css` y `.min.js`). Si estás compilando Bootstrap desde la fuente con tu propio sistema de compilación, asegúrate de implementar tus propios minificadores para HTML, CSS y JS.
 
-## Non-blocking files
+## Archivos sin bloqueo
 
-While minifying and using compression might seem like enough, making your files non-blocking ones is also a big step in making your site well-optimized and fast enough.
+Si bien minimizar y usar la compresión puede parecer suficiente, hacer que tus archivos no bloqueen también es un gran paso para que tu sitio esté bien optimizado y sea lo suficientemente rápido.
 
-If you are using a [Lighthouse](https://developers.google.com/web/tools/lighthouse/) plugin in Google Chrome, you may have stumbled over FCP. [The First Contentful Paint](https://web.dev/fcp/) metric measures the time from when the page starts loading to when any part of the page's content is rendered on the screen.
+Si estás utilizando un complemento [Lighthouse](https://developers.google.com/web/tools/lighthouse/) en Google Chrome, es posible que hayas tropezado con FCP. La métrica [The First Contentful Paint](https://web.dev/fcp/) mide el tiempo desde que la página comienza a cargarse hasta que cualquier parte del contenido de la página se representa en la pantalla.
 
-You can improve FCP by deferring non-critical JavaScript or CSS. What does that mean? Simply, JavaScript or stylesheets that don't need to be present on the first paint of your page should be marked with `async` or `defer` attributes.
+Puedes mejorar FCP aplazando JavaScript o CSS no críticos. ¿Qué significa eso? Simplemente, JavaScript o las hojas de estilo que no necesitan estar presentes en la primera pintura de tu página deben marcarse con los atributos `async` o `defer`.
 
-This ensures that the less important resources are loaded later and not blocking the first paint. On the other hand, critical resources can be included as inline scripts or styles.
+Esto asegura que los recursos menos importantes se carguen más tarde y no bloqueen la primera pintura. Por otro lado, los recursos críticos se pueden incluir como scripts o estilos en línea.
 
-If you want to learn more about this, there are already a lot of great articles about it:
+Si deseas obtener más información sobre esto, ya hay muchos artículos excelentes al respecto:
 
 - <https://web.dev/render-blocking-resources/>
 - <https://web.dev/defer-non-critical-css/>
 
-## Always use HTTPS
+## Utiliza siempre HTTPS
 
-Your website should only be available over HTTPS connections in production. HTTPS improves the security, privacy, and availability of all sites, and [there is no such thing as non-sensitive web traffic](https://https.cio.gov/everything/). The steps to configure your website to be served exclusively over HTTPS vary widely depending on your architecture and web hosting provider, and thus are beyond the scope of these docs.
+Tu sitio web solo debe estar disponible a través de conexiones HTTPS en producción. HTTPS mejora la seguridad, la privacidad y la disponibilidad de todos los sitios, y [no existe el tráfico web no confidencial](https://https.cio.gov/everything/). Los pasos para configurar tu sitio web para que se sirva exclusivamente a través de HTTPS varían ampliamente según tu arquitectura y proveedor de alojamiento web y, por lo tanto, están más allá del alcance de estos documentos.
 
-Sites served over HTTPS should also access all stylesheets, scripts, and other assets over HTTPS connections. Otherwise, you'll be sending users [mixed active content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content), leading to potential vulnerabilities where a site can be compromised by altering a dependency. This can lead to security issues and in-browser warnings displayed to users. Whether you're getting Bootstrap from a CDN or serving it yourself, ensure that you only access it over HTTPS connections.
+Los sitios servidos a través de HTTPS también deben acceder a todas las hojas de estilo, scripts y otros activos a través de conexiones HTTPS. De lo contrario, enviarás a los usuarios [contenido activo mixto](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content), lo que generará vulnerabilidades potenciales en las que un sitio puede verse comprometido al alterar una dependencia. Esto puede generar problemas de seguridad y advertencias en el navegador que se muestran a los usuarios. Ya sea que estés obteniendo Bootstrap de un CDN o sirviéndolo tú mismo, asegúrate de acceder solo a través de conexiones HTTPS.

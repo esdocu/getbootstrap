@@ -1,18 +1,18 @@
 ---
 layout: docs
-title: CSS variables
-description: Use Bootstrap's CSS custom properties for fast and forward-looking design and development.
+title: Variables CSS
+description: Utiliza las propiedades personalizadas de CSS de Bootstrap para un diseño y desarrollo rápidos y con visión de futuro.
 group: customize
 toc: true
 ---
 
-Bootstrap includes many [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser's inspector, a code sandbox, or general prototyping.
+Bootstrap incluye muchas [propiedades personalizadas de CSS (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) en su CSS compilado para la personalización en tiempo real sin necesidad de volver a compilar Sass. Estas brindan un fácil acceso a los valores de uso común, como nuestros colores de tema, breakpoints y pilas de fuentes primarias, cuando trabajas en el inspector de tu navegador, un sandbox de código o en la creación de prototipos en general.
 
-**All our custom properties are prefixed with `bs-`** to avoid conflicts with third party CSS.
+**Todas nuestras propiedades personalizadas tienen el prefijo `bs-`** para evitar conflictos con CSS de terceros.
 
-## Root variables
+## Variables root
 
-Here are the variables we include (note that the `:root` is required) that can be accessed anywhere Bootstrap's CSS is loaded. They're located in our `_root.scss` file and included in our compiled dist files.
+Estas son las variables que incluimos (ten en cuenta que se requiere `:root`), a las que se puede acceder desde cualquier lugar donde se cargue el CSS de Bootstrap. Están ubicados en nuestro archivo `_root.scss` e incluidos en nuestros archivos dist compilados.
 
 ```css
 {{< root.inline >}}
@@ -30,15 +30,15 @@ Here are the variables we include (note that the `:root` is required) that can b
 
 ## Component variables
 
-We're also beginning to make use of custom properties as local variables for various components. This way we can reduce our compiled CSS, ensure styles aren't inherited in places like nested tables, and allow some basic restyling and extending of Bootstrap components after Sass compilation.
+También estamos comenzando a utilizar propiedades personalizadas como variables locales para varios componentes. De esta manera, podemos reducir nuestro CSS compilado, asegurarnos de que los estilos no se hereden en lugares como tablas anidadas y permitir algunos cambios de estilo básicos y la ampliación de los componentes de Bootstrap después de la compilación de Sass.
 
-Have a look at our table documentation for some [insight into how we're using CSS variables]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}}).
+Echa un vistazo a nuestra documentación de tabla para obtener algunos [conocimientos sobre cómo usamos las variables CSS]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}}).
 
-We're also using CSS variables across our grids—primarily for gutters—with more component usage coming in the future.
+También estamos usando variables CSS en nuestras cuadrículas (grid), principalmente para gutters, con más uso de componentes en el futuro.
 
-## Examples
+## Ejemplos
 
-CSS variables offer similar flexibility to Sass's variables, but without the need for compilation before being served to the browser. For example, here we're resetting our page's font and link styles with CSS variables.
+Las variables de CSS ofrecen una flexibilidad similar a las variables de Sass, pero sin necesidad de compilación antes de ser enviadas al navegador. Por ejemplo, aquí estamos restableciendo la fuente de nuestra página y los estilos de enlaces con variables CSS.
 
 ```css
 body {
@@ -51,4 +51,4 @@ a {
 
 ## Grid breakpoints
 
-While we include our grid breakpoints as CSS variables (except for `xs`), be aware that **CSS variables do not work in media queries**. This is by design in the CSS spec for variables, but may change in coming years with support for `env()` variables. Check out [this Stack Overflow answer](https://stackoverflow.com/a/47212942) for some helpful links. In the mean time, you can use these variables in other CSS situations, as well as in your JavaScript.
+Si bien incluimos nuestros breakpoints de cuadrícula como variables CSS (excepto `xs`), ten en cuenta que **las variables CSS no funcionan en las media queries**. Esto es por diseño en la especificación CSS para variables, pero puede cambiar en los próximos años con soporte para variables `env()`. Consulta [esta respuesta de Stack Overflow](https://stackoverflow.com/a/47212942) para obtener algunos enlaces útiles. Mientras tanto, puedes usar estas variables en otras situaciones de CSS, así como en tu JavaScript.
