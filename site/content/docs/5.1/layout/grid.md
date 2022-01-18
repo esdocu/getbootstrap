@@ -1,58 +1,60 @@
 ---
 layout: docs
-title: Grid system
-description: Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+title: Sistema de cuadrícula (Grid)
+description: Utiliza nuestra potente cuadrícula flexbox mobile-first para crear diseños de todas las formas y tamaños gracias a un sistema de doce columnas, seis niveles responsive (breakpoints) predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
 group: layout
 toc: true
 ---
 
-## Example
+## Ejemplo
 
-Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
+El sistema de cuadrícula (grid) de Bootstrap utiliza una serie de contenedores, filas y columnas para diseñar y alinear el contenido. Está construido con [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) y es completamente responsive. A continuación se muestra un ejemplo y una explicación detallada de cómo se compone el sistema de cuadrículo.
 
 {{< callout info >}}
-**New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
+**¿Eres nuevo o no estás familiarizado con flexbox?** [Lee esta guía de flexbox de CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) para conocer los antecedentes, terminología, directrices y fragmentos de código.
 {{< /callout >}}
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
     <div class="col">
-      Column
+      Columna
     </div>
     <div class="col">
-      Column
+      Columna
     </div>
     <div class="col">
-      Column
+      Columna
     </div>
   </div>
 </div>
 {{< /example >}}
 
-The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent `.container`.
+El ejemplo anterior crea tres columnas de igual ancho en todos los dispositivos y viewports utilizando nuestras clases de cuadrícula predefinidas. Esas columnas están centradas en la página con el `.container` principal.
 
-## How it works
+## Cómo funciona
 
-Breaking it down, here's how the grid system comes together:
+Desglosándolo, así es como se compone el sistema de cuadrícula:
 
-- **Our grid supports [six responsive breakpoints]({{< docsref "/layout/breakpoints" >}}).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, and `xxl`). This means you can control container and column sizing and behavior by each breakpoint.
+- **Nuestra cuadrícula admite [seis breakpoints responsive]({{< docsref "/layout/breakpoints" >}}).** Los breakpoints se basan en media queries `min-width`, lo que significa que afectan ese breakpoint y todos los anteriores (por ejemplo, `.col-sm-4` se aplica a `sm`, `md`, `lg`, `xl` y `xxl`). Esto significa que puedes controlar el tamaño y el comportamiento del contenedor y la columna en cada breakpoint.
 
-- **Containers center and horizontally pad your content.** Use `.container` for a responsive pixel width, `.container-fluid` for `width: 100%` across all viewports and devices, or a responsive container (e.g., `.container-md`) for a combination of fluid and pixel widths.
+- **Los contenedores centran y rellenan horizontalmente su contenido.** Usa `.container` para un ancho de píxel responsive, `.container-fluid` para `width: 100%` en todos los viewports y dispositivos, o un contenedor responsive (p. ej., `.container-md`) para una combinación entre fluido y anchos en píxeles.
 
-- **Rows are wrappers for columns.** Each column has horizontal `padding` (called a gutter) for controlling the space between them. This `padding` is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to [uniformly apply column sizing](#row-columns) and [gutter classes]({{< docsref "/layout/gutters" >}}) to change the spacing of your content.
 
-- **Columns are incredibly flexible.** There are 12 template columns available per row, allowing you to create different combinations of elements that span any number of columns. Column classes indicate the number of template columns to span (e.g., `col-4` spans four). `width`s are set in percentages so you always have the same relative sizing.
+- **Las filas son envoltorios para las columnas.** Cada columna tiene un `padding` horizontal (llamado *gutter*) para controlar el espacio entre ellas. Este `padding` luego se contrarresta en las filas con márgenes negativos para garantizar que el contenido de tus columnas esté alineado visualmente en el lado izquierdo. Las filas también admiten clases modificadoras para [aplicar uniformemente el tamaño de columna](#row-columns) y [clases de *gutter*]({{< docsref "/layout/gutters" >}}) para cambiar el espaciado de tu contenido.
 
-- **Gutters are also responsive and customizable.** [Gutter classes are available]({{< docsref "/layout/gutters" >}}) across all breakpoints, with all the same sizes as our [margin and padding spacing]({{< docsref "/utilities/spacing" >}}). Change horizontal gutters with `.gx-*` classes, vertical gutters with `.gy-*`, or all gutters with `.g-*` classes. `.g-0` is also available to remove gutters.
+- **Las columnas son increíblemente flexibles.** Hay 12 columnas de plantilla disponibles por fila, lo que te permite crear diferentes combinaciones de elementos que abarcan cualquier número de columnas. Las clases de columna indican el número de columnas de plantilla que abarcan (por ejemplo, `col-4` abarca cuatro). `width`s se establecen en porcentajes para que siempre tengas el mismo tamaño relativo.
 
-- **Sass variables, maps, and mixins power the grid.** If you don't want to use the predefined grid classes in Bootstrap, you can use our [grid's source Sass](#sass) to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
 
-Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9).
+- **Los gutters también son responsive y personalizables.** [Las clases *Gutter* están disponibles]({{< docsref "/layout/gutters" >}}) en todos los breakpoints, con los mismos tamaños que nuestro [espaciado de margin y padding]({{< docsref "/utilities/spacing" >}}). Cambia los gutters horizontales con las clases `.gx-*`, los gutters verticales con `.gy-*` o todos los gutters con las clases `.g-*`. `.g-0` también está disponible para eliminar gutters.
 
-## Grid options
+- **Las variables Sass, los mapas y los mixins alimentan la cuadrícula.** Si no deseas usar las clases de cuadrícula predefinidas en Bootstrap, puedes usar nuestra [código fuente Sass de cuedrículas](#sass) para crear el tuyo propio con más marcado semántico. También incluimos algunas propiedades personalizadas de CSS para consumir estas variables de Sass para una mayor flexibilidad.
 
-Bootstrap's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follow:
+Ten en cuenta las limitaciones y los [errores relacionados con flexbox](https://github.com/philipwalton/flexbugs), como la [incapacidad de usar algunos elementos HTML como contenedores flexibles](https://github.com/philipwalton/flexbugs#flexbug-9).
+
+## Opciones de cuadrícula
+
+El sistema de cuadrícula de Bootstrap puede adaptarse a los seis breakpoints predeterminados y a cualquier breakpoint que personalices. Los seis niveles de cuadrícula predeterminados son los siguientes:
 
 - Extra small (xs)
 - Small (sm)
@@ -61,7 +63,7 @@ Bootstrap's grid system can adapt across all six default breakpoints, and any br
 - Extra large (xl)
 - Extra extra large (xxl)
 
-As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here's how the grid changes across these breakpoints:
+Como se indicó anteriormente, cada uno de estos breakpoints tienen su propio contenedor, prefijo de clase único y modificadores. Así es como cambia la cuadrícula en estos breakpoints:
 
 <table class="table mb-4">
   <thead>
@@ -95,7 +97,7 @@ As noted above, each of these breakpoints have their own container, unique class
   </thead>
   <tbody>
     <tr>
-      <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
+      <th class="text-nowrap" scope="row">Contenedor <code class="fw-normal">max-width</code></th>
       <td>None (auto)</td>
       <td>540px</td>
       <td>720px</td>
@@ -104,7 +106,7 @@ As noted above, each of these breakpoints have their own container, unique class
       <td>1320px</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Class prefix</th>
+      <th class="text-nowrap" scope="row">Prefijo de clase</th>
       <td><code>.col-</code></td>
       <td><code>.col-sm-</code></td>
       <td><code>.col-md-</code></td>
@@ -113,129 +115,129 @@ As noted above, each of these breakpoints have their own container, unique class
       <td><code>.col-xxl-</code></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row"># of columns</th>
+      <th class="text-nowrap" scope="row"># de columnas</th>
       <td colspan="6">12</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Gutter width</th>
-      <td colspan="6">1.5rem (.75rem on left and right)</td>
+      <th class="text-nowrap" scope="row">Ancho de gutter</th>
+      <td colspan="6">1.5rem (.75rem a izquierda y derecha)</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Custom gutters</th>
-      <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
+      <th class="text-nowrap" scope="row">Gutters personalizados</th>
+      <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Si</a></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Nestable</th>
-      <td colspan="6"><a href="#nesting">Yes</a></td>
+      <th class="text-nowrap" scope="row">Anidable</th>
+      <td colspan="6"><a href="#nesting">Si</a></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Column ordering</th>
-      <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
+      <th class="text-nowrap" scope="row">Ordenamiento de columnas</th>
+      <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Si</a></td>
     </tr>
   </tbody>
 </table>
 
-## Auto-layout columns
+## Columnas con auto-layout
 
-Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like `.col-sm-6`.
+Utiliza clases de columnas de breakpoints específicos para facilitar la asignación de tamaño de las columnas sin una clase numerada explícita como `.col-sm-6`.
 
-### Equal-width
+### Anchos iguales
 
-For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xxl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+Por ejemplo, aquí hay dos diseños de cuadrícula que se aplican a cada dispositivo y viewport, desde `xs` hasta `xxl`. Agrega cualquier número de clases sin unidades para cada breakpoint que necesites y cada columna tendrá el mismo ancho.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
     <div class="col">
-      1 of 2
+      1 de 2
     </div>
     <div class="col">
-      2 of 2
+      2 de 2
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 de 3
     </div>
     <div class="col">
-      2 of 3
+      2 de 3
     </div>
     <div class="col">
-      3 of 3
+      3 de 3
     </div>
   </div>
 </div>
 {{< /example >}}
 
-### Setting one column width
+### Establecer un ancho de columna
 
-Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+El auto-layout para las columnas de cuadrícula de flexbox también significa que puedes establecer el ancho de una columna y hacer que las columnas hermanas cambien de tamaño automáticamente a su alrededor. Puedes usar clases de cuadrícula predefinidas (como se muestra a continuación), combinaciones de cuadrícula o anchos en línea. Ten en cuenta que las otras columnas cambiarán de tamaño sin importar el ancho de la columna central.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
     <div class="col">
-      1 of 3
+      1 de 3
     </div>
     <div class="col-6">
-      2 of 3 (wider)
+      2 de 3 (más ancho)
     </div>
     <div class="col">
-      3 of 3
+      3 de 3
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 de 3
     </div>
     <div class="col-5">
-      2 of 3 (wider)
+      2 de 3 (más ancho)
     </div>
     <div class="col">
-      3 of 3
+      3 de 3
     </div>
   </div>
 </div>
 {{< /example >}}
 
-### Variable width content
+### Contenido de ancho variable
 
-Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content.
+Usa las clases `col-{breakpoint}-auto` para dimensionar las columnas en función del ancho natural de su contenido.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col col-lg-2">
-      1 of 3
+      1 de 3
     </div>
     <div class="col-md-auto">
-      Variable width content
+      Contenido de ancho variable
     </div>
     <div class="col col-lg-2">
-      3 of 3
+      3 de 3
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      1 de 3
     </div>
     <div class="col-md-auto">
-      Variable width content
+      Contenido de ancho variable
     </div>
     <div class="col col-lg-2">
-      3 of 3
+      3 de 3
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Responsive classes
+## Clases responsive
 
-Bootstrap's grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+La cuadrícula de Bootstrap incluye seis niveles de clases predefinidas para crear diseños responsive complejos. Personaliza el tamaño de tus columnas en dispositivos extra pequeños, pequeños, medianos, grandes o extra grandes como mejor te parezca.
 
-### All breakpoints
+### Todos los breakpoints
 
-For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`.
+Para cuadrículas que son iguales desde el dispositivo más pequeño hasta el más grande, usa las clases `.col` y `.col-*`. Especifica una clase numerada cuando necesites una columna de tamaño particular; de lo contrario, siéntate libre de apegarte a `.col`.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -252,9 +254,9 @@ For grids that are the same from the smallest of devices to the largest, use the
 </div>
 {{< /example >}}
 
-### Stacked to horizontal
+### De apilado a horizontal
 
-Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`).
+Usando un solo conjunto de clases `.col-sm-*`, puedes crear un sistema de cuadrícula básico que comienza apilado y se vuelve horizontal en el breakpoint pequeño (`sm`).
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -270,26 +272,26 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 </div>
 {{< /example >}}
 
-### Mix and match
+### Mezclar y combinar
 
-Don't want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.
+¿No quieres que tus columnas simplemente se apilen en algunos niveles de cuadrícula? Usa una combinación de diferentes clases para cada nivel según sea necesario. Mira el ejemplo a continuación para tener una mejor idea de cómo funciona todo.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
-  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <!-- Apila las columnas en dispositivos móviles haciendo una de ancho completo y la otra de ancho medio -->
   <div class="row">
     <div class="col-md-8">.col-md-8</div>
     <div class="col-6 col-md-4">.col-6 .col-md-4</div>
   </div>
 
-  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+  <!-- Las columnas comienzan con un 50% de ancho en dispositivos móviles y cambian hasta un 33,3% de ancho en computadoras de escritorio -->
   <div class="row">
     <div class="col-6 col-md-4">.col-6 .col-md-4</div>
     <div class="col-6 col-md-4">.col-6 .col-md-4</div>
     <div class="col-6 col-md-4">.col-6 .col-md-4</div>
   </div>
 
-  <!-- Columns are always 50% wide, on mobile and desktop -->
+  <!-- Las columnas siempre tienen un 50% de ancho, en dispositivos móviles y de escritorio -->
   <div class="row">
     <div class="col-6">.col-6</div>
     <div class="col-6">.col-6</div>
@@ -297,19 +299,19 @@ Don't want your columns to simply stack in some grid tiers? Use a combination of
 </div>
 {{< /example >}}
 
-### Row columns
+### Columnas de fila
 
-Use the responsive `.row-cols-*` classes to quickly set the number of columns that best render your content and layout. Whereas normal `.col-*` classes apply to the individual columns (e.g., `.col-md-4`), the row columns classes are set on the parent `.row` as a shortcut. With `.row-cols-auto` you can give the columns their natural width.
+Usa las clases responsive `.row-cols-*` para establecer rápidamente la cantidad de columnas que mejor representen tu contenido y diseño. Mientras que las clases `.col-*` normales se aplican a las columnas individuales (p. ej., `.col-md-4`), las clases de *columnas de fila* se establecen en el `.row` principal como acceso directo. Con `.row-cols-auto` puedes dar a las columnas su ancho natural.
 
-Use these row columns classes to quickly create basic grid layouts or to control your card layouts.
+Utiliza estas clases de filas y columnas para crear rápidamente diseños de cuadrícula básicos o para controlar los diseños de tus tarjetas.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-2">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
   </div>
 </div>
 {{< /example >}}
@@ -317,10 +319,10 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-3">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
   </div>
 </div>
 {{< /example >}}
@@ -328,10 +330,10 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-auto">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
   </div>
 </div>
 {{< /example >}}
@@ -339,10 +341,10 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-4">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
   </div>
 </div>
 {{< /example >}}
@@ -350,10 +352,10 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-4">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col-6">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col-6">Columna</div>
+    <div class="col">Columna</div>
   </div>
 </div>
 {{< /example >}}
@@ -361,45 +363,45 @@ Use these row columns classes to quickly create basic grid layouts or to control
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
+    <div class="col">Columna</div>
   </div>
 </div>
 {{< /example >}}
 
-You can also use the accompanying Sass mixin, `row-cols()`:
+También puedes usar el mixin de Sass que lo acompaña, `row-cols()`:
 
 ```scss
 .element {
-  // Three columns to start
+  // Tres columnas al inicio
   @include row-cols(3);
 
-  // Five columns from medium breakpoint up
+  // Cinco columnas desde el breakpoint medium hacia arriba
   @include media-breakpoint-up(md) {
     @include row-cols(5);
   }
 }
 ```
 
-## Nesting
+## Anidamiento
 
-To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
+Para anidar tu contenido con la cuadrícula predeterminada, agrega un nuevo `.row` y un conjunto de columnas `.col-sm-*` dentro de una columna `.col-sm-*` existente. Las filas anidadas deben incluir un conjunto de columnas que suman 12 o menos (no es necesario que uses las 12 columnas disponibles).
 
 {{< example class="bd-example-row" >}}
 <div class="container">
   <div class="row">
     <div class="col-sm-3">
-      Level 1: .col-sm-3
+      Nivel 1: .col-sm-3
     </div>
     <div class="col-sm-9">
       <div class="row">
         <div class="col-8 col-sm-6">
-          Level 2: .col-8 .col-sm-6
+          Nivel 2: .col-8 .col-sm-6
         </div>
         <div class="col-4 col-sm-6">
-          Level 2: .col-4 .col-sm-6
+          Nivel 2: .col-4 .col-sm-6
         </div>
       </div>
     </div>
@@ -409,11 +411,11 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
 
 ## Sass
 
-When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
+Al usar los archivos fuente Sass de Bootstrap, tienes la opción de usar variables Sass y mixins para crear diseños de página personalizados, semánticos y responsive. Nuestras clases de cuadrícula predefinidas utilizan estas mismas variables y mixins para proporcionar un conjunto completo de clases listas para usar para rápidos diseños responsive.
 
 ### Variables
 
-Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.
+Las variables y los mapas determinan el número de columnas, el ancho del gutter y el punto de media query en el que comienzan las columnas flotantes. Los usamos para generar las clases de cuadrícula predefinidas documentadas anteriormente, así como para los mixins personalizados que se enumeran a continuación.
 
 ```scss
 $grid-columns:      12;
@@ -426,32 +428,32 @@ $grid-gutter-width: 1.5rem;
 
 ### Mixins
 
-Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.
+Los mixins se utilizan junto con las variables de cuadrícula para generar CSS semántico para columnas de cuadrícula individuales.
 
 ```scss
-// Creates a wrapper for a series of columns
+// Crea un contenedor para una serie de columnas
 @include make-row();
 
-// Make the element grid-ready (applying everything but the width)
+// Hacer que el elemento esté listo para la cuadrícula (aplicando todo menos el ancho)
 @include make-col-ready();
 
-// Without optional size values, the mixin will create equal columns (similar to using .col)
+// Sin valores de tamaño opcionales, el mixin creará columnas iguales (similar a usar .col)
 @include make-col();
 @include make-col($size, $columns: $grid-columns);
 
-// Offset with margins
+// Compensar con márgenes
 @include make-col-offset($size, $columns: $grid-columns);
 ```
 
-### Example usage
+### Ejemplo de uso
 
-You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.
+Puedes modificar las variables a tus propios valores personalizados, o simplemente usar los mixins con sus valores predeterminados. Este es un ejemplo del uso de la configuración predeterminada para crear un diseño de dos columnas con un espacio entre ellas.
 
 ```scss
 .example-container {
   @include make-container();
-  // Make sure to define this width after the mixin to override
-  // `width: 100%` generated by `make-container()`
+  // Asegúrate de definir este ancho después del mixin para sobrescribir
+  // `width: 100%` generado por `make-container()`
   width: 800px;
 }
 
@@ -485,28 +487,28 @@ You can modify the variables to your own custom values, or just use the mixins w
 {{< example >}}
 <div class="example-container">
   <div class="example-row">
-    <div class="example-content-main">Main content</div>
-    <div class="example-content-secondary">Secondary content</div>
+    <div class="example-content-main">Contenido principal</div>
+    <div class="example-content-secondary">Contenido secundario</div>
   </div>
 </div>
 {{< /example >}}
 
-## Customizing the grid
+## Personalización de la cuadrícula
 
-Using our built-in grid Sass variables and maps, it's possible to completely customize the predefined grid classes. Change the number of tiers, the media query dimensions, and the container widths—then recompile.
+Utilizando nuestras variables y mapas Sass de cuadrícula incorporados, es posible personalizar completamente las clases de cuadrícula predefinidas. Cambia la cantidad de niveles, las dimensiones de las media queries y los anchos de los contenedores, luego vuelve a compilar.
 
-### Columns and gutters
+### Columnas y gutters
 
-The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column while `$grid-gutter-width` sets the width for the column gutters.
+El número de columnas de la cuadrícula se puede modificar mediante variables Sass. `$grid-columns` se utiliza para generar los anchos (en porcentaje) de cada columna individual, mientras que `$grid-gutter-width` establece el ancho de los gutters (espacios de separación) de las columnas.
 
 ```scss
 $grid-columns: 12 !default;
 $grid-gutter-width: 1.5rem !default;
 ```
 
-### Grid tiers
+### Niveles de cuadrícula
 
-Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you'd update the `$grid-breakpoints` and `$container-max-widths` to something like this:
+Yendo más allá de las columnas en sí, también puedes personalizar la cantidad de niveles de cuadrícula. Si quisieras solo cuatro niveles de cuadrícula, actualizarías `$grid-breakpoints` y `$container-max-widths` a algo como esto:
 
 ```scss
 $grid-breakpoints: (
@@ -523,4 +525,4 @@ $container-max-widths: (
 );
 ```
 
-When making any changes to the Sass variables or maps, you'll need to save your changes and recompile. Doing so will output a brand new set of predefined grid classes for column widths, offsets, and ordering. Responsive visibility utilities will also be updated to use the custom breakpoints. Make sure to set grid values in `px` (not `rem`, `em`, or `%`).
+Al realizar cambios en las variables o mapas de Sass, deberás guardar los cambios y volver a compilar. Al hacerlo, se generará un nuevo conjunto de clases de cuadrícula predefinidas para anchos de columna, compensaciones y ordenación. Las utilidades de visibilidad responsive también se actualizarán para usar los breakpoints personalizados. Asegúrate de establecer los valores de cuadrícula en `px` (no en `rem`, `em` o `%`).
