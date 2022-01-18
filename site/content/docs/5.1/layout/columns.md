@@ -285,7 +285,7 @@ Con el cambio a flexbox en v4, puedes usar utilidades de margen como `.me-auto` 
 
 ## Clases de columna independientes
 
-Las clases `.col-*` también se pueden usar fuera de una `.row` para dar a un elemento un ancho específico. Siempre que las clases de columna se utilicen como elementos secundarios no directos de una fila, se omiten los rellenos.
+Las clases `.col-*` también se pueden usar fuera de una `.row` para dar a un elemento un ancho específico. Siempre que las clases de columna se utilicen como elementos hijos no directos de una fila, se omiten los rellenos.
 
 {{< example >}}
 <div class="col-3 bg-light p-3 border">

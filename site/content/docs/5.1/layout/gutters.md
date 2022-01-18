@@ -1,145 +1,145 @@
 ---
 layout: docs
 title: Gutters
-description: Gutters are the padding between your columns, used to responsively space and align content in the Bootstrap grid system.
+description: Los gutters son el padding entre las columnas, que se utilizan para espaciar y alinear de manera responsive el contenido en el sistema de cuadrícula de Bootstrap.
 group: layout
 toc: true
 ---
 
-## How they work
+## Cómo funcionan
 
-- **Gutters are the gaps between column content, created by horizontal `padding`.** We set `padding-right` and `padding-left` on each column, and use negative `margin` to offset that at the start and end of each row to align content.
+- **Los gutters son los espacios entre el columnas, creados con `padding` horizontal.** Establecemos `padding-right` y `padding-left` en cada columna, y usamos un `margin` negativo para compensar eso al principio y final de cada fila para alinear el contenido.
 
-- **Gutters start at `1.5rem` (`24px`) wide.** This allows us to match our grid to the [padding and margin spacers]({{< docsref "/utilities/spacing" >}}) scale.
+- **Los gutters comienzan en `1.5rem` (`24px`) de ancho.** Esto nos permite hacer coincidir nuestra cuadrícula con la escala de [espaciadores padding y margin]({{< docsref "/utilities/spacing" >}}).
 
-- **Gutters can be responsively adjusted.** Use breakpoint-specific gutter classes to modify horizontal gutters, vertical gutters, and all gutters.
+- **Los gutters se pueden ajustar de forma responsive.** Utiliza clases gutter de breakpoints específicos para modificar gutters horizontales, gutters verticales y todos los gutters.
 
-## Horizontal gutters
+## Gutters horizontales
 
-`.gx-*` classes can be used to control the horizontal gutter widths. The `.container` or `.container-fluid` parent may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-4`:
+Las clases `.gx-*` se pueden usar para controlar los anchos de los gutters horizontales. Es posible que sea necesario ajustar el `.container` o `.container-fluid` padre si también se usan gutters más grandes para evitar el desbordamiento no deseado, usando una utilidad de padding coincidente. Por ejemplo, en el siguiente ejemplo hemos aumentado el padding con `.px-4`:
 
 {{< example >}}
 <div class="container px-4">
   <div class="row gx-5">
     <div class="col">
-     <div class="p-3 border bg-light">Custom column padding</div>
+     <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-An alternative solution is to add a wrapper around the `.row` with the `.overflow-hidden` class:
+Una solución alternativa es agregar un contenedor alrededor de `.row` con la clase `.overflow-hidden`:
 
 {{< example >}}
 <div class="container overflow-hidden">
   <div class="row gx-5">
     <div class="col">
-     <div class="p-3 border bg-light">Custom column padding</div>
+     <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Vertical gutters
+## Gutters verticales
 
-`.gy-*` classes can be used to control the vertical gutter widths. Like the horizontal gutters, the vertical gutters can cause some overflow below the `.row` at the end of a page. If this occurs, you add a wrapper around `.row` with the `.overflow-hidden` class:
+Las clases `.gy-*` se pueden usar para controlar los anchos de los gutters verticales. Al igual que los gutters horizontales, los gutters verticales pueden provocar un desbordamiento debajo de la `.row` al final de una página. Si esto ocurre, agrega un contenedor alrededor de `.row` con la clase `.overflow-hidden`:
 
 {{< example >}}
 <div class="container overflow-hidden">
   <div class="row gy-5">
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Horizontal & vertical gutters
+## Gutters horizontales & verticales
 
-`.g-*` classes can be used to control the horizontal gutter widths, for the following example we use a smaller gutter width, so there won't be a need to add the `.overflow-hidden` wrapper class.
+Las clases `.g-*` se pueden usar para controlar los anchos de los gutters horizontales, para el siguiente ejemplo usamos un ancho de gutter más pequeño, por lo que no será necesario agregar la clase contenedora `.overflow-hidden`.
 
 {{< example >}}
 <div class="container">
   <div class="row g-2">
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
     <div class="col-6">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">Padding de columna personalizado</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Row columns gutters
+## Gutters columnas de filas
 
-Gutter classes can also be added to [row columns]({{< docsref "/layout/grid#row-columns" >}}). In the following example, we use responsive row columns and responsive gutter classes.
+Las clases de gutters también se pueden agregar a [columnas de fila]({{< docsref "/layout/grid#row-columns" >}}). En el siguiente ejemplo, usamos columnas de fila responsive y clases de gutters responsive.
 
 {{< example >}}
 <div class="container">
   <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
     <div class="col">
-      <div class="p-3 border bg-light">Row column</div>
+      <div class="p-3 border bg-light">Columna de fila</div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## No gutters
+## Sin gutters
 
-The gutters between columns in our predefined grid classes can be removed with `.g-0`. This removes the negative `margin`s from `.row` and the horizontal `padding` from all immediate children columns.
+Los gutters entre columnas en nuestras clases de cuadrícula predefinidas se pueden eliminar con `.g-0`. Esto elimina los `margin`s negativos de `.row` y el `padding` horizontal de todas las columnas secundarias inmediatas.
 
-**Need an edge-to-edge design?** Drop the parent `.container` or `.container-fluid` and add `.mx-0` to the `.row` to prevent overflow.
+**¿Necesitas un diseño de borde a borde?** Deja el `.container` o `.container-fluid` principal y agrega `.mx-0` a `.row` para evitar el desbordamiento.
 
-In practice, here's how it looks. Note you can continue to use this with all other predefined grid classes (including column widths, responsive tiers, reorders, and more).
+En la práctica, así es como se ve. Ten en cuenta que puedes continuar usándolo con todas las demás clases de cuadrícula predefinidas (incluidos los anchos de columna, los niveles responsive, los reordenamientos y más).
 
 {{< example class="bd-example-row" >}}
 <div class="row g-0">
@@ -148,9 +148,9 @@ In practice, here's how it looks. Note you can continue to use this with all oth
 </div>
 {{< /example >}}
 
-## Change the gutters
+## Cambiar los gutters
 
-Classes are built from the `$gutters` Sass map which is inherited from the `$spacers` Sass map.
+Las clases se crean a partir del mapa Sass `$gutters` que se hereda del mapa Sass `$spacers`.
 
 ```scss
 $grid-gutter-width: 1.5rem;
