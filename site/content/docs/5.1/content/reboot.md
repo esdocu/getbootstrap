@@ -1,38 +1,38 @@
 ---
 layout: docs
 title: Reboot
-description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
+description: Reboot, una colección de cambios CSS a elementos específicos en un solo archivo, punto de partida de Bootstrap para proporcionar una base elegante, consistente y simple sobre la cual construir.
 group: content
 aliases: "/docs/5.1/content/"
 toc: true
 ---
 
-## Approach
+## Enfoque
 
-Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
+Reboot se basa en Normalize, proporcionando muchos elementos HTML con estilos un tanto obstinados utilizando solo selectores de elementos. El estilo adicional se realiza solo con clases. Por ejemplo, reiniciamos algunos estilos `<table>` para una línea base más simple y luego proporcionamos `.table`, `.table-bordered` y más.
 
-Here are our guidelines and reasons for choosing what to override in Reboot:
+Estas son nuestras pautas y razones para elegir qué sobrescribir en Reboot:
 
-- Update some browser default values to use `rem`s instead of `em`s for scalable component spacing.
-- Avoid `margin-top`. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of `margin` is a simpler mental model.
-- For easier scaling across device sizes, block elements should use `rem`s for `margin`s.
-- Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible.
+- Actualizar algunos valores predeterminados del navegador para usar `rem`s en lugar de `em`s para el espaciado de componentes escalables.
+- Evitar `margin-top`. Los márgenes verticales pueden contraerse y producir resultados inesperados. Sin embargo, lo que es más importante, una sola dirección de `margin` es un modelo mental más simple.
+- Para escalar más fácilmente entre tamaños de dispositivos, los elementos de bloque deben usar `rem`s para `margin`s.
+- Mantener al mínimo las declaraciones de propiedades relacionadas con `font`, usando `inherit` siempre que sea posible.
 
-## CSS variables
+## Variables CSS
 
-<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.1</small>
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Añadido en v5.1.1</small>
 
-With v5.1.1, we standardized our required `@import`s across all our CSS bundles (including `bootstrap.css`, `bootstrap-reboot.css`, and `bootstrap-grid.css` to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately Bootstrap 5 will continue to see more [CSS variables]({{< docsref "/customize/css-variables" >}}) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
+Con v5.1.1, estandarizamos nuestros `@import`s requeridos en todos nuestros bundles de CSS (incluidos `bootstrap.css`, `bootstrap-reboot.css` y `bootstrap-grid.css` para incluir `_root.scss`. Esto agrega variables CSS de nivel `:root` a todos los bundles, independientemente de cuántas de ellas se usen en ese bundle. En última instancia, Bootstrap 5 seguirá teniendo más [variables CSS]({{< docsref "/customize/css-variables" >}}) agregadas con el tiempo, para proporcionar más personalización en tiempo real sin la necesidad de volver a compilar siempre Sass. Nuestro enfoque es tomar nuestras variables fuente Sass y transformarlas en variables CSS. De esa manera, incluso si no usas variables CSS, todavía tienes todo el poder de Sass. **Esto aún está en progreso y llevará tiempo implementarlo por completo.**
 
-For example, consider these `:root` CSS variables for common `<body>` styles:
+Por ejemplo, considera estas variables CSS `:root` para los estilos comunes `<body>`:
 
 {{< scss-docs name="root-body-variables" file="scss/_root.scss" >}}
 
-In practice, those variables are then applied in Reboot like so:
+En la práctica, esas variables se aplican en Reboot así:
 
 {{< scss-docs name="reboot-body-rules" file="scss/_reboot.scss" >}}
 
-Which allows you to make real-time customizations however you like:
+Lo que te permite hacer personalizaciones en tiempo real como quieras:
 
 ```html
 <body style="--bs-body-color: #333;">
@@ -40,24 +40,24 @@ Which allows you to make real-time customizations however you like:
 </body>
 ```
 
-## Page defaults
+## Valores de página predeterminados
 
-The `<html>` and `<body>` elements are updated to provide better page-wide defaults. More specifically:
+Los elementos `<html>` y `<body>` se actualizan para proporcionar mejores valores predeterminados para toda la página. Más específicamente:
 
-- The `box-sizing` is globally set on every element—including `*::before` and `*::after`, to `border-box`. This ensures that the declared width of element is never exceeded due to padding or border.
-  - No base `font-size` is declared on the `<html>`, but `16px` is assumed (the browser default). `font-size: 1rem` is applied on the `<body>` for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach. This browser default can be overridden by modifying the `$font-size-root` variable.
-- The `<body>` also sets a global `font-family`, `font-weight`, `line-height`, and `color`. This is inherited later by some form elements to prevent font inconsistencies.
-- For safety, the `<body>` has a declared `background-color`, defaulting to `#fff`.
+- El `box-sizing` se establece globalmente en cada elemento, incluidos `*::before` y `*::after`, en `border-box`. Esto asegura que nunca se exceda el ancho declarado del elemento debido al padding o al borde.
+   - No se declara `font-size` base en `<html>`, pero se asume `16px` (el valor predeterminado del navegador). `font-size: 1rem` se aplica en el `<body>` para facilitar el escalado de tipos responsive a través de media queries, respetando las preferencias del usuario y asegurando un enfoque más accesible. Este valor predeterminado del navegador se puede sobrescribir modificando la variable `$font-size-root`.
+- El `<body>` también establece de forma global `font-family`, `font-weight`, `line-height` y `color`. Esto lo heredan más adelante algunos elementos de formulario para evitar inconsistencias en las fuentes.
+- Por seguridad, `<body>` tiene un `background-color` declarado, por defecto es `#fff`.
 
-## Native font stack
+## Pila de fuentes nativas
 
-Bootstrap utilizes a "native font stack" or "system font stack" for optimum text rendering on every device and OS. These system fonts have been designed specifically with today's devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
+Bootstrap utiliza una "pila de fuentes nativa" o "pila de fuentes del sistema" para una reproducción de texto óptima en todos los dispositivos y sistemas operativos. Estas fuentes del sistema se han diseñado específicamente teniendo en cuenta los dispositivos actuales, con una representación mejorada en las pantallas, compatibilidad con fuentes variables y más. Lee más sobre [pilas de fuentes nativas en este artículo de *Smashing Magazine*](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 ```scss
 $font-family-sans-serif:
-  // Cross-platform generic font family (default user interface font)
+  // Familia de fuentes genéricas multiplataforma (fuente de interfaz de usuario predeterminada)
   system-ui,
-  // Safari for macOS and iOS (San Francisco)
+  // Safari para macOS y iOS (San Francisco)
   -apple-system,
   // Windows
   "Segoe UI",
@@ -74,19 +74,19 @@ $font-family-sans-serif:
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
-Note that because the font stack includes emoji fonts, many common symbol/dingbat unicode characters will be rendered as multi-colored pictographs. Their appearance will vary, depending on the style used in the browser/platform's native emoji font, and they won't be affected by any CSS `color` styles.
+Ten en cuenta que debido a que la pila de fuentes incluye fuentes emoji, muchos caracteres unicode comunes símbolos/dingbat, se representarán como pictogramas de varios colores. Su apariencia variará, según el estilo utilizado en la fuente emoji nativa del navegador/plataforma, y no se verán afectados por ningún estilo de `color` de CSS.
 
-This `font-family` is applied to the `<body>` and automatically inherited globally throughout Bootstrap. To switch the global `font-family`, update `$font-family-base` and recompile Bootstrap.
+Esta `font-family` se aplica al `<body>` y se hereda automáticamente de forma global a través de Bootstrap. Para cambiar la `font-family` global, actualiza `$font-family-base` y vuelve a compilar Bootstrap.
 
-## Headings and paragraphs
+## Títulos y párrafos
 
-All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-top` removed. Headings have `margin-bottom: .5rem` added and paragraphs `margin-bottom: 1rem` for easy spacing.
+Todos los elementos de encabezado, por ejemplo `<h1>`, y párrafos `<p>` se restablecen para eliminar su `margin-top`. Los encabezados tienen `margin-bottom: .5rem` agregado y los párrafos `margin-bottom: 1rem` para facilitar el espaciado.
 
 <table class="table">
   <thead>
     <tr>
-      <th>Heading</th>
-      <th>Example</th>
+      <th>Título</th>
+      <th>Ejemplo</th>
     </tr>
   </thead>
   <tbody>
@@ -94,208 +94,208 @@ All heading elements—e.g., `<h1>`—and `<p>` are reset to have their `margin-
       <td>
         {{< markdown >}}`<h1></h1>`{{< /markdown >}}
       </td>
-      <td><span class="h1">h1. Bootstrap heading</span></td>
+      <td><span class="h1">h1. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h2></h2>`{{< /markdown >}}
       </td>
-      <td><span class="h2">h2. Bootstrap heading</span></td>
+      <td><span class="h2">h2. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h3></h3>`{{< /markdown >}}
       </td>
-      <td><span class="h3">h3. Bootstrap heading</span></td>
+      <td><span class="h3">h3. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h4></h4>`{{< /markdown >}}
       </td>
-      <td><span class="h4">h4. Bootstrap heading</span></td>
+      <td><span class="h4">h4. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h5></h5>`{{< /markdown >}}
       </td>
-      <td><span class="h5">h5. Bootstrap heading</span></td>
+      <td><span class="h5">h5. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h6></h6>`{{< /markdown >}}
       </td>
-      <td><span class="h6">h6. Bootstrap heading</span></td>
+      <td><span class="h6">h6. Encabezado Bootstrap</span></td>
     </tr>
   </tbody>
 </table>
 
-## Lists
+## Listas
 
-All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
+Todas las listas, `<ul>`, `<ol>` y `<dl>`, tienen su `margin-top` eliminado y un `margin-bottom: 1rem`. Las listas anidadas no tienen un `margin-bottom`. También hemos reiniciado el `padding-left` en los elementos `<ul>` y `<ol>`.
 
 <div class="bd-example">
 {{< markdown >}}
-* All lists have their top margin removed
-* And their bottom margin normalized
-* Nested lists have no bottom margin
-  * This way they have a more even appearance
-  * Particularly when followed by more list items
-* The left padding has also been reset
+* Todas las listas tienen su margen superior eliminado
+* Y su margen inferior normalizado
+* Las listas anidadas no tienen margen inferior
+   * Así tienen una apariencia más pareja
+   * Particularmente cuando le siguen más elementos de la lista
+* El padding izquierdo también se ha restablecido
 
-1. Here's an ordered list
-2. With a few list items
-3. It has the same overall look
-4. As the previous unordered list
+1. Aquí hay una lista ordenada
+2. Con algunos elementos de la lista
+3. Tiene el mismo aspecto general
+4. Como la lista desordenada anterior
 {{< /markdown >}}
 </div>
 
-For simpler styling, clear hierarchy, and better spacing, description lists have updated `margin`s. `<dd>`s reset `margin-left` to `0` and add `margin-bottom: .5rem`. `<dt>`s are **bolded**.
+Para un estilo más simple, una jerarquía clara y un mejor espaciado, las listas de descripción han actualizado sus `margin`s. `<dd>`s restablece `margin-left` a `0` y agrega `margin-bottom: .5rem`. Los `<dt>` están **en negrita**.
 
 <div class="bd-example">
   <dl>
-    <dt>Description lists</dt>
-    <dd>A description list is perfect for defining terms.</dd>
-    <dt>Term</dt>
-    <dd>Definition for the term.</dd>
-    <dd>A second definition for the same term.</dd>
-    <dt>Another term</dt>
-    <dd>Definition for this other term.</dd>
+    <dt>Listas de descripción</dt>
+    <dd>Una lista de descripción es perfecta para definir términos.</dd>
+    <dt>Plazo</dt>
+    <dd>Definición del término.</dd>
+    <dd>Una segunda definición para el mismo término.</dd>
+    <dt>Otro término</dt>
+    <dd>Definición de este otro término.</dd>
   </dl>
 </div>
 
-## Inline code
+## Código en línea
 
-Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle brackets.
+Envuelve fragmentos de código en línea con `<code>`. Asegúrate de escapar los corchetes angulares de HTML.
 
 {{< example >}}
-For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+Por ejemplo, <code>&lt;section&gt;</code> debe ajustarse en línea.
 {{< /example >}}
 
-## Code blocks
+## Bloques de código
 
-Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. The `<pre>` element is reset to remove its `margin-top` and use `rem` units for its `margin-bottom`.
+Usa `<pre>`s para múltiples líneas de código. Una vez más, asegúrate de escapar los corchetes angulares en el código para una representación adecuada. El elemento `<pre>` se restablece para eliminar su `margin-top` y usar unidades `rem` para su `margin-bottom`.
 
 {{< example >}}
-<pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
-&lt;p&gt;And another line of sample text here...&lt;/p&gt;
+<pre><code>&lt;p&gt;Texto de ejemplo...&lt;/p&gt;
+&lt;p&gt;Y otra línea de ejemplo...&lt;/p&gt;
 </code></pre>
 {{< /example >}}
 
 ## Variables
 
-For indicating variables use the `<var>` tag.
+Para indicar variables usa la etiqueta `<var>`.
 
 {{< example >}}
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
 {{< /example >}}
 
-## User input
+## Entradas de usuario
 
-Use the `<kbd>` to indicate input that is typically entered via keyboard.
-
-{{< example >}}
-To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
-{{< /example >}}
-
-## Sample output
-
-For indicating sample output from a program use the `<samp>` tag.
+Usa `<kbd>` para indicar la entrada que normalmente se ingresa a través del teclado.
 
 {{< example >}}
-<samp>This text is meant to be treated as sample output from a computer program.</samp>
+Para cambiar de directorio, escribe <kbd>cd</kbd> seguido del nombre del directorio.<br>
+Para editar la configuración, presiona <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 {{< /example >}}
 
-## Tables
+## Salida de muestra
 
-Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]({{< docsref "/content/tables" >}}).
+Para indicar la salida de texto de un programa, usa la etiqueta `<samp>`.
+
+{{< example >}}
+<samp>Este texto está destinado a ser tratado como resultado de muestra de un programa de computadora.</samp>
+{{< /example >}}
+
+## Tablas
+
+Las tablas se ajustan ligeramente al estilo `<caption>`s, colapsan los bordes y aseguran una `text-align` consistente en todas partes. Los cambios adicionales para bordes, padding y más vienen con [la clase `.table`]({{< docsref "/content/tables" >}}).
 
 <div class="bd-example">
   <table>
     <caption>
-      This is an example table, and this is its caption to describe the contents.
+      Esta es una tabla de ejemplo, y este es su título para describir el contenido.
     </caption>
     <thead>
       <tr>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
-        <th>Table heading</th>
+        <th>Título de tabla</th>
+        <th>Título de tabla</th>
+        <th>Título de tabla</th>
+        <th>Título de tabla</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Celda de tabla</td>
+        <td>Celda de tabla</td>
+        <td>Celda de tabla</td>
+        <td>Celda de tabla</td>
       </tr>
       <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Celda de tabla</td>
+        <td>Celda de tabla</td>
+        <td>Celda de tabla</td>
+        <td>Celda de tabla</td>
       </tr>
       <tr>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
-        <td>Table cell</td>
+        <td>Celda de tabla</td>
+        <td>Celda de tabla</td>
+        <td>Celda de tabla</td>
+        <td>Celda de tabla</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-## Forms
+## Formularios
 
-Various form elements have been rebooted for simpler base styles. Here are some of the most notable changes:
+Se han reiniciado varios elementos de formulario para estilos básicos más simples. Estos son algunos de los cambios más notables:
 
-- `<fieldset>`s have no borders, padding, or margin so they can be easily used as wrappers for individual inputs or groups of inputs.
-- `<legend>`s, like fieldsets, have also been restyled to be displayed as a heading of sorts.
-- `<label>`s are set to `display: inline-block` to allow `margin` to be applied.
-- `<input>`s, `<select>`s, `<textarea>`s, and `<button>`s are mostly addressed by Normalize, but Reboot removes their `margin` and sets `line-height: inherit`, too.
-- `<textarea>`s are modified to only be resizable vertically as horizontal resizing often "breaks" page layout.
-- `<button>`s and `<input>` button elements have `cursor: pointer` when `:not(:disabled)`.
+- `<fieldset>`s no tienen bordes, padding o margen, por lo que pueden usarse fácilmente como contenedores para inputs individuales o grupos de inputs.
+- Los `<legend>`s, como los fieldsets, también se han rediseñado para que se muestren como una especie de encabezado.
+- `<label>`s se establecen en `display: inline-block` para permitir que se aplique `margin`.
+- Los `<input>`s, `<select>`s, `<textarea>`s y `<button>`s son abordados principalmente por Normalize, pero Reboot elimina su `margin` y establece `line-height: inherit` también.
+- `<textarea>`s se modifican para que solo se pueda cambiar el tamaño verticalmente, ya que el cambio de tamaño horizontal a menudo "rompe" el diseño de la página.
+- Los elementos de botón `<button>`s y `<input>` tienen `cursor: pointer` cuando `:not(:disabled)`.
 
-These changes, and more, are demonstrated below.
+Estos cambios, y más, se muestran a continuación.
 
 <form class="bd-example">
   <fieldset>
-    <legend>Example legend</legend>
+    <legend>Ejemplo de legend</legend>
     <p>
-      <label for="input">Example input</label>
-      <input type="text" id="input" placeholder="Example input">
+      <label for="input">Ejemplo de input</label>
+      <input type="text" id="input" placeholder="Ejemplo de input">
     </p>
     <p>
-      <label for="email">Example email</label>
+      <label for="email">Ejemplo de email</label>
       <input type="email" id="email" placeholder="test@example.com">
     </p>
     <p>
-      <label for="tel">Example telephone</label>
+      <label for="tel">Ejemplo de telephone</label>
       <input type="tel" id="tel">
     </p>
     <p>
-      <label for="url">Example url</label>
+      <label for="url">Ejemplo de url</label>
       <input type="url" id="url">
     </p>
     <p>
-      <label for="number">Example number</label>
+      <label for="number">Ejemplo de number</label>
       <input type="number" id="number">
     </p>
     <p>
-      <label for="search">Example search</label>
+      <label for="search">Ejemplo de search</label>
       <input type="search" id="search">
     </p>
     <p>
-      <label for="range">Example range</label>
+      <label for="range">Ejemplo de range</label>
       <input type="range" id="range" min="0" max="10">
     </p>
     <p>
-      <label for="file">Example file input</label>
+      <label for="file">Ejemplo de file input</label>
       <input type="file" id="file">
     </p>
     <p>
-      <label for="select">Example select</label>
+      <label for="select">Ejemplo de select</label>
       <select id="select">
         <option value="">Choose...</option>
         <optgroup label="Option group 1">
@@ -331,39 +331,39 @@ These changes, and more, are demonstrated below.
       </label>
     </p>
     <p>
-      <label for="textarea">Example textarea</label>
+      <label for="textarea">Ejemplo de textarea</label>
       <textarea id="textarea" rows="3"></textarea>
     </p>
     <p>
-      <label for="date">Example date</label>
+      <label for="date">Ejemplo de date</label>
       <input type="date" id="date">
     </p>
     <p>
-      <label for="time">Example time</label>
+      <label for="time">Ejemplo de time</label>
       <input type="time" id="time">
     </p>
     <p>
-      <label for="password">Example password</label>
+      <label for="password">Ejemplo de password</label>
       <input type="password" id="password">
     </p>
     <p>
-      <label for="datetime-local">Example datetime-local</label>
+      <label for="datetime-local">Ejemplo de datetime-local</label>
       <input type="datetime-local" id="datetime-local">
     </p>
     <p>
-      <label for="week">Example week</label>
+      <label for="week">Ejemplo de week</label>
       <input type="week" id="week">
     </p>
     <p>
-      <label for="month">Example month</label>
+      <label for="month">Ejemplo de month</label>
       <input type="month" id="month">
     </p>
     <p>
-      <label for="color">Example color</label>
+      <label for="color">Ejemplo de color</label>
       <input type="color" id="color">
     </p>
     <p>
-      <label for="output">Example output</label>
+      <label for="output">Ejemplo de output</label>
       <output name="result" id="output">100</output>
     </p>
     <p>
@@ -385,19 +385,19 @@ These changes, and more, are demonstrated below.
 {{< partial "callout-warning-input-support.md" >}}
 {{< /callout >}}
 
-### Pointers on buttons
+### Pointers en botones
 
-Reboot includes an enhancement for `role="button"` to change the default cursor to `pointer`. Add this attribute to elements to help indicate elements are interactive. This role isn't necessary for `<button>` elements, which get their own `cursor` change.
+Reboot incluye una mejora para `role="button"` para cambiar el cursor predeterminado a `pointer`. Agrega este atributo a los elementos para ayudar a indicar que los elementos son interactivos. Este rol no es necesario para los elementos `<button>`, que obtienen su propio cambio de `cursor`.
 
 {{< example >}}
-<span role="button" tabindex="0">Non-button element button</span>
+<span role="button" tabindex="0">Botón que no es un elemento button</span>
 {{< /example >}}
 
-## Misc elements
+## Elementos misceláneos
 
-### Address
+### Direcciones
 
-The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 1rem` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br>`.
+El elemento `<address>` se actualiza para restablecer el `font-style` predeterminado del navegador de `italic` a `normal`. `line-height` ahora también se hereda, y se ha agregado `margin-bottom: 1rem`. Las `<address>` son para presentar la información de contacto. Preserva el formato terminando las líneas con `<br>`.
 
 <div class="bd-example">
   <address>
@@ -408,58 +408,59 @@ The `<address>` element is updated to reset the browser default `font-style` fro
   </address>
 
   <address>
-    <strong>Full Name</strong><br>
+    <strong>Nombre completo</strong><br>
     <a href="mailto:first.last@example.com">first.last@example.com</a>
   </address>
 </div>
 
 ### Blockquote
 
-The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 1rem` for something more consistent with other elements.
+El `margin` predeterminado en las blockquotes (comillas en bloque) es `1em 40px`, por lo que lo restablecemos a `0 0 1rem` para que sea algo más consistente con otros elementos.
 
 <div class="bd-example">
   <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
+    <p>Una cita conocida, contenida en un elemento blockquote.</p>
   </blockquote>
-  <p>Someone famous in <cite title="Source Title">Source Title</cite></p>
+  <p>Alguien famoso en <cite title="Source Title">Source Title</cite></p>
 </div>
 
-### Inline elements
+### Elementos en línea
 
-The `<abbr>` element receives basic styling to make it stand out amongst paragraph text.
+El elemento `<abbr>` recibe un estilo básico para que se destaque entre el texto del párrafo.
 
 <div class="bd-example">
-  The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
+  El elemento de abreviatura <abbr title="HyperText Markup Language">HTML</abbr>.
 </div>
 
-### Summary
+### Resumen
 
-The default `cursor` on summary is `text`, so we reset that to `pointer` to convey that the element can be interacted with by clicking on it.
+El `cursor` predeterminado en `<summary>` es `text`, por lo que lo restablecemos a `pointer` para transmitir que se puede interactuar con el elemento haciendo clic en él.
 
 <div class="bd-example">
   <details>
-    <summary>Some details</summary>
-    <p>More info about the details.</p>
+    <summary>Algunos detalles</summary>
+    <p>Más información sobre los detalles.</p>
   </details>
 
   <details open>
-    <summary>Even more details</summary>
-    <p>Here are even more details about the details.</p>
+    <summary>Aún más detalles</summary>
+    <p>Aquí hay aún más detalles sobre los detalles.</p>
   </details>
 </div>
 
-## HTML5 `[hidden]` attribute
+## Atributo HTML5 `[hidden]`
 
-HTML5 adds [a new global attribute named `[hidden]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden), which is styled as `display: none` by default. Borrowing an idea from [PureCSS](https://purecss.io/), we improve upon this default by making `[hidden] { display: none !important; }` to help prevent its `display` from getting accidentally overridden.
+HTML5 agrega [un nuevo atributo global llamado `[hidden]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden), que tiene el estilo `display: none` por defecto. Tomando prestada una idea de [PureCSS](https://purecss.io/), mejoramos este valor predeterminado haciendo `[hidden] { display: none !important; }` para ayudar a evitar que su `display` se sobrescriba accidentalmente.
+
 
 ```html
 <input type="text" hidden>
 ```
 
 {{< callout warning >}}
-##### jQuery incompatibility
+##### Incompatibilidad jQuery
 
-`[hidden]` is not compatible with jQuery's `$(...).hide()` and `$(...).show()` methods. Therefore, we don't currently especially endorse `[hidden]` over other techniques for managing the `display` of elements.
+`[hidden]` no es compatible con los métodos `$(...).hide()` y `$(...).show()` de jQuery. Por lo tanto, actualmente no respaldamos especialmente `[hidden]` sobre otras técnicas para administrar la propiedad `display` de elementos.
 {{< /callout >}}
 
-To merely toggle the visibility of an element, meaning its `display` is not modified and the element can still affect the flow of the document, use [the `.invisible` class]({{< docsref "/utilities/visibility" >}}) instead.
+Para alternar simplemente la visibilidad de un elemento, lo que significa que su `display` no se modifica y el elemento aún puede afectar el flujo del documento, usa [la clase `.invisible`]({{< docsref "/utilities/visibility" >}}).
