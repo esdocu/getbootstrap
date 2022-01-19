@@ -149,7 +149,7 @@
 
 
     
-  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative me-auto">
       <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
@@ -187,9 +187,9 @@
 </nav>
 
 
-  <div class="container-xxl my-md-4 bd-layout">
-    <aside class="bd-sidebar">
-      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="true" aria-current="true">
           Empezando
@@ -254,7 +254,7 @@
         <div class="collapse" id="content-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
-              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Typography</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Images</a></li>
               <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tables</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
@@ -396,23 +396,30 @@
   </ul>
 </nav>
 
-    </aside>
+  </aside>
 
-    <main class="bd-main order-1">
-      <div class="bd-intro ps-lg-4">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/getting-started/rfs.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">Ver en GitHub</a>
-          <h1 class="bd-title" id="content">RFS</h1>
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
+            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/getting-started/rfs.md"
+            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
+            href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/getting-started/rfs.md"
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <p class="bd-lead">El motor de cambio de tamaño de Bootstrap escala de manera responsive las propiedades CSS comunes para utilizar mejor el espacio disponible en viewports y los dispositivos.</p>
-        
-
+        <h1 class="bd-title" id="content">RFS</h1>
       </div>
-
+      <p class="bd-lead">El motor de cambio de tamaño de Bootstrap escala de manera responsive las propiedades CSS comunes para utilizar mejor el espacio disponible en viewports y los dispositivos.</p>
       
-        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-          <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
-          <nav id="TableOfContents">
+
+    </div>
+
+    
+    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+      <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
+      <nav id="TableOfContents">
   <ul>
     <li><a href="#qué-es-rfs">¿Qué es RFS?</a></li>
     <li><a href="#uso-de-rfs">Uso de RFS</a>
@@ -424,13 +431,13 @@
     <li><a href="#documentación-extendida">Documentación extendida</a></li>
   </ul>
 </nav>
-        </div>
+    </div>
+    
+
+    <div class="bd-content ps-lg-4">
       
 
-      <div class="bd-content ps-lg-4">
-        
-
-        <h2 id="qué-es-rfs">¿Qué es RFS?</h2>
+      <h2 id="qué-es-rfs">¿Qué es RFS?</h2>
 <p>El proyecto paralelo de Bootstrap <a href="https://github.com/twbs/rfs/tree/v9.0.6">RFS</a> es un motor de cambio de tamaño de unidades que se desarrolló inicialmente para cambiar el tamaño de las fuentes (de ahí su abreviatura de Responsive Font Sizes). Hoy en día, RFS es capaz de cambiar la escala de la mayoría de las propiedades CSS con valores unitarios como <code>margin</code>, <code>padding</code>, <code>border-radius</code> o incluso <code>box-shadow</code>.</p>
 <p>El mecanismo calcula automáticamente los valores apropiados en función de las dimensiones del viewport del navegador. Se compilará en funciones <code>calc()</code> con una combinación de <code>rem</code> y unidades de viewport para habilitar el comportamiento de escalado responsive.</p>
 <h2 id="uso-de-rfs">Uso de RFS</h2>
@@ -479,9 +486,9 @@
 </code></pre></div><h2 id="documentación-extendida">Documentación extendida</h2>
 <p>RFS es un proyecto separado bajo la organización Bootstrap. Puedes encontrar más información sobre RFS y su configuración en su <a href="https://github.com/twbs/rfs/tree/v9.0.6">repositorio de GitHub</a>.</p>
 
-      </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>
 
 
     <footer class="bd-footer py-5 mt-5 bg-light">
@@ -551,6 +558,6 @@
 
 
     
-  
+
   </body>
 </html>

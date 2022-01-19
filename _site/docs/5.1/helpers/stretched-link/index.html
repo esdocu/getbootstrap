@@ -149,7 +149,7 @@
 
 
     
-  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative me-auto">
       <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
@@ -187,9 +187,9 @@
 </nav>
 
 
-  <div class="container-xxl my-md-4 bd-layout">
-    <aside class="bd-sidebar">
-      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
           Empezando
@@ -254,7 +254,7 @@
         <div class="collapse" id="content-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
-              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Typography</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Images</a></li>
               <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tables</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
@@ -396,25 +396,32 @@
   </ul>
 </nav>
 
-    </aside>
+  </aside>
 
-    <main class="bd-main order-1">
-      <div class="bd-intro ps-lg-4">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/helpers/stretched-link.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">Ver en GitHub</a>
-          <h1 class="bd-title" id="content">Stretched link</h1>
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
+            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/helpers/stretched-link.md"
+            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
+            href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/helpers/stretched-link.md"
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <p class="bd-lead">Make any HTML element or Bootstrap component clickable by &ldquo;stretching&rdquo; a nested link via CSS.</p>
-        
-
+        <h1 class="bd-title" id="content">Stretched link</h1>
       </div>
-
+      <p class="bd-lead">Make any HTML element or Bootstrap component clickable by &ldquo;stretching&rdquo; a nested link via CSS.</p>
       
 
-      <div class="bd-content ps-lg-4">
-        
+    </div>
 
-        <p>Add <code>.stretched-link</code> to a link to make its <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block">containing block</a> clickable via a <code>::after</code> pseudo element. In most cases, this means that an element with <code>position: relative;</code> that contains a link with the <code>.stretched-link</code> class is clickable. Please note given <a href="https://www.w3.org/TR/CSS21/visuren.html#propdef-position">how CSS <code>position</code> works</a>, <code>.stretched-link</code> cannot be mixed with most table elements.</p>
+    
+
+    <div class="bd-content ps-lg-4">
+      
+
+      <p>Add <code>.stretched-link</code> to a link to make its <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block">containing block</a> clickable via a <code>::after</code> pseudo element. In most cases, this means that an element with <code>position: relative;</code> that contains a link with the <code>.stretched-link</code> class is clickable. Please note given <a href="https://www.w3.org/TR/CSS21/visuren.html#propdef-position">how CSS <code>position</code> works</a>, <code>.stretched-link</code> cannot be mixed with most table elements.</p>
 <p>Cards have <code>position: relative</code> by default in Bootstrap, so in this case you can safely add the <code>.stretched-link</code> class to a link in the card without any other HTML changes.</p>
 <p>Multiple links and tap targets are not recommended with stretched links. However, some <code>position</code> and <code>z-index</code> styles can help should this be required.</p>
 <div class="bd-example">
@@ -513,9 +520,9 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 
-      </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>
 
 
     <footer class="bd-footer py-5 mt-5 bg-light">
@@ -585,6 +592,6 @@
 
 
     
-  
+
   </body>
 </html>

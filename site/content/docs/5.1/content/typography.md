@@ -1,32 +1,32 @@
 ---
 layout: docs
-title: Typography
-description: Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.
+title: Tipografía
+description: Documentación y ejemplos de tipografía Bootstrap, incluidos ajustes globales, encabezados, texto del body, listas y más.
 group: content
 toc: true
 ---
 
-## Global settings
+## Ajustes globales
 
-Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
+Bootstrap establece estilos básicos de visualización, tipografía y enlaces globales. Cuando se necesita más control, consulta las [clases de utilidades textuales]({{< docsref "/utilities/text" >}}).
 
-- Use a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
-- For a more inclusive and accessible type scale, we use the browser's default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
-- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
-- Set the global link color via `$link-color`.
-- Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
+- Utiliza una [pila de fuentes nativas]({{< docsref "/content/reboot#native-font-stack" >}}) que seleccione la mejor `font-family` para cada sistema operativo y dispositivo.
+- Para una escala de tipos más inclusiva y accesible, utilizamos el `font-size` raíz predeterminado del navegador (normalmente 16x) para que los visitantes puedan personalizar los valores predeterminados de su navegador según sea necesario.
+- Usa los atributos `$font-family-base`, `$font-size-base` y `$line-height-base` como nuestra base tipográfica aplicada al `<body>`.
+- Establece el color global de enlaces a través de `$link-color`.
+- Usa `$body-bg` para establecer un `background-color` en `<body>` (`#fff` por defecto).
 
-These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
+Estos estilos se pueden encontrar dentro de `_reboot.scss`, y las variables globales se definen en `_variables.scss`. Asegúrate de configurar `$font-size-base` en `rem`.
 
-## Headings
+## Encabezados
 
-All HTML headings, `<h1>` through `<h6>`, are available.
+Todos los encabezados HTML, `<h1>` a `<h6>`, están disponibles.
 
 <table class="table">
   <thead>
     <tr>
-      <th>Heading</th>
-      <th>Example</th>
+      <th>Encabezado</th>
+      <th>Ejemplo</th>
     </tr>
   </thead>
   <tbody>
@@ -34,75 +34,75 @@ All HTML headings, `<h1>` through `<h6>`, are available.
       <td>
         {{< markdown >}}`<h1></h1>`{{< /markdown >}}
       </td>
-      <td><span class="h1">h1. Bootstrap heading</span></td>
+      <td><span class="h1">h1. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h2></h2>`{{< /markdown >}}
       </td>
-      <td><span class="h2">h2. Bootstrap heading</span></td>
+      <td><span class="h2">h2. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h3></h3>`{{< /markdown >}}
       </td>
-      <td><span class="h3">h3. Bootstrap heading</span></td>
+      <td><span class="h3">h3. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h4></h4>`{{< /markdown >}}
       </td>
-      <td><span class="h4">h4. Bootstrap heading</span></td>
+      <td><span class="h4">h4. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h5></h5>`{{< /markdown >}}
       </td>
-      <td><span class="h5">h5. Bootstrap heading</span></td>
+      <td><span class="h5">h5. Encabezado Bootstrap</span></td>
     </tr>
     <tr>
       <td>
         {{< markdown >}}`<h6></h6>`{{< /markdown >}}
       </td>
-      <td><span class="h6">h6. Bootstrap heading</span></td>
+      <td><span class="h6">h6. Encabezado Bootstrap</span></td>
     </tr>
   </tbody>
 </table>
 
 ```html
-<h1>h1. Bootstrap heading</h1>
-<h2>h2. Bootstrap heading</h2>
-<h3>h3. Bootstrap heading</h3>
-<h4>h4. Bootstrap heading</h4>
-<h5>h5. Bootstrap heading</h5>
-<h6>h6. Bootstrap heading</h6>
+<h1>h1. Encabezado Bootstrap</h1>
+<h2>h2. Encabezado Bootstrap</h2>
+<h3>h3. Encabezado Bootstrap</h3>
+<h4>h4. Encabezado Bootstrap</h4>
+<h5>h5. Encabezado Bootstrap</h5>
+<h6>h6. Encabezado Bootstrap</h6>
 ```
 
-`.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
+Las clases `.h1` a `.h6` también están disponibles, para cuando deseas hacer coincidir el estilo de fuentes de un encabezado pero no puedes usar el elemento HTML asociado.
 
 {{< example >}}
-<p class="h1">h1. Bootstrap heading</p>
-<p class="h2">h2. Bootstrap heading</p>
-<p class="h3">h3. Bootstrap heading</p>
-<p class="h4">h4. Bootstrap heading</p>
-<p class="h5">h5. Bootstrap heading</p>
-<p class="h6">h6. Bootstrap heading</p>
+<p class="h1">h1. Encabezado Bootstrap</p>
+<p class="h2">h2. Encabezado Bootstrap</p>
+<p class="h3">h3. Encabezado Bootstrap</p>
+<p class="h4">h4. Encabezado Bootstrap</p>
+<p class="h5">h5. Encabezado Bootstrap</p>
+<p class="h6">h6. Encabezado Bootstrap</p>
 {{< /example >}}
 
-### Customizing headings
+### Personalizar los encabezados
 
-Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
+Utiliza las clases de utilidad incluidas para recrear el pequeño texto de encabezado secundario de Bootstrap 3.
 
 {{< example >}}
 <h3>
-  Fancy display heading
-  <small class="text-muted">With faded secondary text</small>
+  Encabezado de visualización elegante
+  <small class="text-muted">Con texto secundario desvanecido</small>
 </h3>
 {{< /example >}}
 
 ## Display headings
 
-Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
+Los elementos de encabezado tradicionales están diseñados para funcionar mejor en el cuerpo del contenido de tu página. Cuando necesites que un título destaque, considera usar un **display heading**, un estilo de título más grande y un poco más obstinado.
 
 <div class="bd-example">
   <div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
@@ -122,60 +122,60 @@ Traditional heading elements are designed to work best in the meat of your page 
 <h1 class="display-6">Display 6</h1>
 ```
 
-Display headings are configured via the `$display-font-sizes` Sass map and two variables, `$display-font-weight` and `$display-line-height`.
+Estos encabezados de visualización se configuran mediante el mapa Sass `$display-font-sizes` y dos variables, `$display-font-weight` y `$display-line-height`.
 
 {{< scss-docs name="display-headings" file="scss/_variables.scss" >}}
 
 ## Lead
 
-Make a paragraph stand out by adding `.lead`.
+Haz que un párrafo se destaque agregando `.lead`.
 
 {{< example >}}
 <p class="lead">
-  This is a lead paragraph. It stands out from regular paragraphs.
+  Este es un párrafo principal. Se destaca de los párrafos regulares.
 </p>
 {{< /example >}}
 
-## Inline text elements
+## Elementos de texto en línea
 
-Styling for common inline HTML5 elements.
+Estilo para elementos HTML5 en línea comunes.
 
 {{< example >}}
-<p>You can use the mark tag to <mark>highlight</mark> text.</p>
-<p><del>This line of text is meant to be treated as deleted text.</del></p>
-<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
-<p><u>This line of text will render as underlined.</u></p>
-<p><small>This line of text is meant to be treated as fine print.</small></p>
-<p><strong>This line rendered as bold text.</strong></p>
-<p><em>This line rendered as italicized text.</em></p>
+<p>Puedes usar la etiqueta mark para <mark>resaltar</mark> texto.</p>
+<p><del>Esta línea de texto debe tratarse como texto eliminado.</del></p>
+<p><s>Esta línea de texto debe tratarse como si ya no fuera precisa.</s></p>
+<p><ins>Esta línea de texto debe tratarse como una adición al documento.</ins></p>
+<p><u>Esta línea de texto aparecerá subrayada.</u></p>
+<p><small>Esta línea de texto debe tratarse como letra pequeña.</small></p>
+<p><strong>Esta línea aparece en negrita.</strong></p>
+<p><em>Esta línea aparece como texto en cursiva.</em></p>
 {{< /example >}}
 
-Beware that those tags should be used for semantic purpose:
+Ten en cuenta que estas etiquetas deben usarse con fines semánticos:
 
-- `<mark>` represents text which is marked or highlighted for reference or notation purposes.
-- `<small>` represents side-comments and small print, like copyright and legal text.
-- `<s>` represents element that are no longer relevant or no longer accurate.
-- `<u>` represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.
+- `<mark>` representa texto que está marcado o resaltado para fines de referencia o notación.
+- `<small>` representa comentarios secundarios y letra pequeña, como derechos de autor y texto legal.
+- `<s>` representa elementos que ya no son relevantes o ya no son precisos.
+- `<u>` representa un tramo de texto en línea que debe presentarse de manera que indique que tiene una anotación no textual.
 
-If you want to style your text, you should use the following classes instead:
+Si deseas aplicar estilo a tu texto, debes usar las siguientes clases en su lugar:
 
-- `.mark` will apply the same styles as `<mark>`.
-- `.small` will apply the same styles as `<small>`.
-- `.text-decoration-underline` will apply the same styles as `<u>`.
-- `.text-decoration-line-through` will apply the same styles as `<s>`.
+- `.mark` aplicará los mismos estilos que `<mark>`.
+- `.small` aplicará los mismos estilos que `<small>`.
+- `.text-decoration-underline` aplicará los mismos estilos que `<u>`.
+- `.text-decoration-line-through` aplicará los mismos estilos que `<s>`.
 
-While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance, while `<i>` is mostly for voice, technical terms, etc.
+Si bien no se muestra arriba, siéntete libre de usar `<b>` y `<i>` en HTML5. `<b>` está destinado a resaltar palabras o frases sin transmitir una importancia adicional, mientras que `<i>` es principalmente para voz, términos técnicos, etc.
 
-## Text utilities
+## Utilidades de texto
 
-Change text alignment, transform, style, weight, line-height, decoration and color with our [text utilities]({{< docsref "/utilities/text" >}}) and [color utilities]({{< docsref "/utilities/colors" >}}).
+Cambia la alineación, transformación, estilo, grosor, altura de línea, decoración y color del texto con nuestras [utilidades de texto]({{< docsref "/utilities/text" >}}) y [utilidades de color]({{< docsref "/utilities/colors" >}}).
 
-## Abbreviations
+## Abreviaturas
 
-Stylized implementation of HTML's `<abbr>` element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
+Implementación estilizada del elemento `<abbr>` de HTML para abreviaturas y acrónimos para mostrar la versión ampliada al pasar el mouse. Las abreviaturas tienen un subrayado predeterminado y obtienen un cursor de ayuda para proporcionar contexto adicional al pasar el mouse por encima y para los usuarios de tecnologías de asistencia.
 
-Add `.initialism` to an abbreviation for a slightly smaller font-size.
+Agrega `.initialism` a una abreviatura para un tamaño de fuente ligeramente más pequeño.
 
 {{< example >}}
 <p><abbr title="attribute">attr</abbr></p>
@@ -184,40 +184,40 @@ Add `.initialism` to an abbreviation for a slightly smaller font-size.
 
 ## Blockquotes
 
-For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote.
+Para citar bloques de contenido de otra fuente dentro de tu documento. Envuelve con `<blockquote class="blockquote">` cualquier HTML como cita.
 
 {{< example >}}
 <blockquote class="blockquote">
-  <p>A well-known quote, contained in a blockquote element.</p>
+  <p>Una cita conocida, contenida en un elemento blockquote.</p>
 </blockquote>
 {{< /example >}}
 
-### Naming a source
+### Nombrar una fuente
 
-The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well.
+La especificación HTML requiere que la atribución de comillas en bloque se coloque fuera de `<blockquote>`. Al proporcionar la atribución, envuelve tu `<blockquote>` en una `<figure>` y usa un `<figcaption>` o un elemento de nivel de bloque (por ejemplo, `<p>`) con la clase `.blockquote-footer`. Asegúrate de envolver el nombre del trabajo fuente en `<cite>` también.
 
 {{< example >}}
 <figure>
   <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
+    <p>Una cita conocida, contenida en un elemento blockquote.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
+    Alguien fomoso en <cite title="Título fuente">Título fuente</cite>
   </figcaption>
 </figure>
 {{< /example >}}
 
-### Alignment
+### Alineación
 
-Use text utilities as needed to change the alignment of your blockquote.
+Use las utilidades de texto según sea necesario para cambiar la alineación de tu blockquote.
 
 {{< example >}}
 <figure class="text-center">
   <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
+    <p>Una cita conocida, contenida en un elemento blockquote.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
+    Alguien fomoso en <cite title="Título fuente">Título fuente</cite>
   </figcaption>
 </figure>
 {{< /example >}}
@@ -225,75 +225,75 @@ Use text utilities as needed to change the alignment of your blockquote.
 {{< example >}}
 <figure class="text-end">
   <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
+    <p>Una cita conocida, contenida en un elemento blockquote.</p>
   </blockquote>
   <figcaption class="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
+    Alguien fomoso en <cite title="Título fuente">Título fuente</cite>
   </figcaption>
 </figure>
 {{< /example >}}
 
-## Lists
+## Listas
 
-### Unstyled
+### Sin estilo
 
-Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
+Elimina el `list-style` predeterminado y el margen izquierdo en los elementos de la lista (solo elementos secundarios inmediatos). **Esto solo se aplica a los elementos de la lista de elementos secundarios inmediatos**, lo que significa que también deberás agregar la clase para cualquier lista anidada.
 
 {{< example >}}
 <ul class="list-unstyled">
-  <li>This is a list.</li>
-  <li>It appears completely unstyled.</li>
-  <li>Structurally, it's still a list.</li>
-  <li>However, this style only applies to immediate child elements.</li>
-  <li>Nested lists:
+  <li>Esta es una lista.</li>
+  <li>Parece completamente sin estilo.</li>
+  <li>Estructuralmente, sigue siendo una lista.</li>
+  <li>Sin embargo, este estilo solo se aplica a los elementos secundarios inmediatos.</li>
+  <li>Listas anidadas:
     <ul>
-      <li>are unaffected by this style</li>
-      <li>will still show a bullet</li>
-      <li>and have appropriate left margin</li>
+      <li>no se ven afectados por este estilo</li>
+      <li>seguirá mostrando una viñeta</li>
+      <li>y tenedrá un margen izquierdo apropiado</li>
     </ul>
   </li>
-  <li>This may still come in handy in some situations.</li>
+  <li>Esto aún puede ser útil en algunas situaciones.</li>
 </ul>
 {{< /example >}}
 
-### Inline
+### En línea
 
-Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
+Elimina las viñetas de una lista y aplica un `margin` ligero con una combinación de dos clases, `.list-inline` y `.list-inline-item`.
 
 {{< example >}}
 <ul class="list-inline">
-  <li class="list-inline-item">This is a list item.</li>
-  <li class="list-inline-item">And another one.</li>
-  <li class="list-inline-item">But they're displayed inline.</li>
+  <li class="list-inline-item">Este es un elemento de lista.</li>
+  <li class="list-inline-item">Y otro.</li>
+  <li class="list-inline-item">Pero se muestran en línea.</li>
 </ul>
 {{< /example >}}
 
-### Description list alignment
+### Alineación de la lista de descripciones
 
-Align terms and descriptions horizontally by using our grid system's predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
+Alinea términos y descripciones horizontalmente utilizando las clases predefinidas de nuestro sistema de cuadrícula (o mixins semánticos). Para términos más largos, puedes agregar opcionalmente una clase `.text-truncate` para truncar el texto con puntos suspensivos.
 
 {{< example >}}
 <dl class="row">
-  <dt class="col-sm-3">Description lists</dt>
-  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+  <dt class="col-sm-3">Listas de descripción</dt>
+  <dd class="col-sm-9">Una lista de descripciones es perfecta para definir términos.</dd>
 
-  <dt class="col-sm-3">Term</dt>
+  <dt class="col-sm-3">Plazo</dt>
   <dd class="col-sm-9">
-    <p>Definition for the term.</p>
-    <p>And some more placeholder definition text.</p>
+    <p>Definición del término.</p>
+    <p>Y más texto de definición de marcador de posición.</p>
   </dd>
 
-  <dt class="col-sm-3">Another term</dt>
-  <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+  <dt class="col-sm-3">Otro término</dt>
+  <dd class="col-sm-9">Esta definición es corta, así que no hay párrafos adicionales ni nada.</dd>
 
-  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-  <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+  <dt class="col-sm-3 text-truncate">El término truncado está truncado</dt>
+  <dd class="col-sm-9">Esto puede ser útil cuando el espacio es reducido. Añade puntos suspensivos al final.</dd>
 
-  <dt class="col-sm-3">Nesting</dt>
+  <dt class="col-sm-3">Anidamiento</dt>
   <dd class="col-sm-9">
     <dl class="row">
-      <dt class="col-sm-4">Nested definition list</dt>
-      <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
+      <dt class="col-sm-4">Lista de definiciones anidadas</dt>
+      <dd class="col-sm-8">Oí que te gustan las listas de definiciones. Déjame poner una lista de definiciones dentro de tu lista de definiciones.</dd>
     </dl>
   </dd>
 </dl>
@@ -301,20 +301,20 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 
 ## Responsive font sizes
 
-In Bootstrap 5, we've enabled responsive font sizes by default, allowing text to scale more naturally across device and viewport sizes. Have a look at the [RFS page]({{< docsref "/getting-started/rfs" >}}) to find out how this works.
+En Bootstrap 5, habilitamos tamaños de fuente responsive de forma predeterminada, lo que permite que el texto se escale de forma más natural según los tamaños de dispositivos y viewports. Echa un vistazo a la [página RFS]({{< docsref "/getting-started/rfs" >}}) para averiguar cómo funciona.
 
 ## Sass
 
 ### Variables
 
-Headings have some dedicated variables for sizing and spacing.
+Los encabezados tienen algunas variables dedicadas para el tamaño y el espaciado.
 
 {{< scss-docs name="headings-variables" file="scss/_variables.scss" >}}
 
-Miscellaneous typography elements covered here and in [Reboot]({{< docsref "/content/reboot" >}}) also have dedicated variables.
+Varios elementos tipográficos que se tratan aquí y en [Reboot]({{< docsref "/content/reboot" >}}) también tienen variables dedicadas.
 
 {{< scss-docs name="type-variables" file="scss/_variables.scss" >}}
 
 ### Mixins
 
-There are no dedicated mixins for typography, but Bootstrap does use [Responsive Font Sizing (RFS)]({{< docsref "/getting-started/rfs" >}}).
+No hay mixins dedicados para la tipografía, pero Bootstrap usa [Tamaño de fuente responsive (RFS)]({{< docsref "/getting-started/rfs" >}}).

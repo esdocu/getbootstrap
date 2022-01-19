@@ -149,7 +149,7 @@
 
 
     
-  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative me-auto">
       <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
@@ -187,9 +187,9 @@
 </nav>
 
 
-  <div class="container-xxl my-md-4 bd-layout">
-    <aside class="bd-sidebar">
-      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
           Empezando
@@ -254,7 +254,7 @@
         <div class="collapse" id="content-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
-              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Typography</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Images</a></li>
               <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tables</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
@@ -396,23 +396,30 @@
   </ul>
 </nav>
 
-    </aside>
+  </aside>
 
-    <main class="bd-main order-1">
-      <div class="bd-intro ps-lg-4">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/forms/validation.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">Ver en GitHub</a>
-          <h1 class="bd-title" id="content">Validation</h1>
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
+            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/forms/validation.md"
+            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
+            href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/forms/validation.md"
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <p class="bd-lead">Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.</p>
-        
-
+        <h1 class="bd-title" id="content">Validation</h1>
       </div>
-
+      <p class="bd-lead">Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.</p>
       
-        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-          <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
-          <nav id="TableOfContents">
+
+    </div>
+
+    
+    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+      <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
+      <nav id="TableOfContents">
   <ul>
     <li><a href="#how-it-works">How it works</a></li>
     <li><a href="#custom-styles">Custom styles</a></li>
@@ -431,13 +438,13 @@
     </li>
   </ul>
 </nav>
-        </div>
+    </div>
+    
+
+    <div class="bd-content ps-lg-4">
       
 
-      <div class="bd-content ps-lg-4">
-        
-
-        <div class="bd-callout bd-callout-warning">
+      <div class="bd-callout bd-callout-warning">
 We are aware that currently the client-side custom validation styles and tooltips are not accessible, since they are not exposed to assistive technologies. While we work on a solution, we&rsquo;d recommend either using the server-side option or the default browser validation method.
 </div>
 
@@ -1213,9 +1220,9 @@ We are aware that currently the client-side custom validation styles and tooltip
 <p>Validation states can be customized via Sass with the <code>$form-validation-states</code> map. Located in our <code>_variables.scss</code> file, this Sass map is how we generate the default <code>valid</code>/<code>invalid</code> validation states. Included is a nested map for customizing each state&rsquo;s color, icon, tooltip color, and focus shadow. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.</p>
 <p>Please note that <strong>we do not recommend customizing <code>$form-validation-states</code> values without also modifying the <code>form-validation-state</code> mixin</strong>.</p>
 
-      </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>
 
 
     <footer class="bd-footer py-5 mt-5 bg-light">
@@ -1285,6 +1292,7 @@ We are aware that currently the client-side custom validation styles and tooltip
 
 
     
-  <script async src="/docs/5.1/assets/js/validate-forms.js"></script>
+<script async src="/docs/5.1/assets/js/validate-forms.js">
+</script>
   </body>
 </html>

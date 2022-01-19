@@ -149,7 +149,7 @@
 
 
     
-  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative me-auto">
       <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
@@ -187,9 +187,9 @@
 </nav>
 
 
-  <div class="container-xxl my-md-4 bd-layout">
-    <aside class="bd-sidebar">
-      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
           Empezando
@@ -254,7 +254,7 @@
         <div class="collapse" id="content-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
-              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Typography</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Images</a></li>
               <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tables</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
@@ -396,23 +396,30 @@
   </ul>
 </nav>
 
-    </aside>
+  </aside>
 
-    <main class="bd-main order-1">
-      <div class="bd-intro ps-lg-4">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/customize/optimize.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">Ver en GitHub</a>
-          <h1 class="bd-title" id="content">Optimizar</h1>
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
+            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/customize/optimize.md"
+            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
+            href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/customize/optimize.md"
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <p class="bd-lead">Mantén tus proyectos ágiles, responsive y mantenibles para que puedas brindar la mejor experiencia y concentrarte en trabajos más importantes.</p>
-        
-
+        <h1 class="bd-title" id="content">Optimizar</h1>
       </div>
-
+      <p class="bd-lead">Mantén tus proyectos ágiles, responsive y mantenibles para que puedas brindar la mejor experiencia y concentrarte en trabajos más importantes.</p>
       
-        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-          <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
-          <nav id="TableOfContents">
+
+    </div>
+
+    
+    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+      <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
+      <nav id="TableOfContents">
   <ul>
     <li><a href="#importaciones-sass-ligeras">Importaciones Sass ligeras</a></li>
     <li><a href="#javascript-ligero">JavaScript ligero</a></li>
@@ -423,13 +430,13 @@
     <li><a href="#utiliza-siempre-https">Utiliza siempre HTTPS</a></li>
   </ul>
 </nav>
-        </div>
+    </div>
+    
+
+    <div class="bd-content ps-lg-4">
       
 
-      <div class="bd-content ps-lg-4">
-        
-
-        <h2 id="importaciones-sass-ligeras">Importaciones Sass ligeras</h2>
+      <h2 id="importaciones-sass-ligeras">Importaciones Sass ligeras</h2>
 <p>Cuando utilices Sass en tus assets, asegúrate de optimizar Bootstrap solo importando (<code>@import</code>) los componentes que necesitas. Tus optimizaciones más grandes probablemente provendrán de la sección <code>Layout &amp; Components</code> de nuestro <code>bootstrap.scss</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Configuration
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;functions&#34;</span><span class="p">;</span>
@@ -531,9 +538,9 @@
 <p>Tu sitio web solo debe estar disponible a través de conexiones HTTPS en producción. HTTPS mejora la seguridad, la privacidad y la disponibilidad de todos los sitios, y <a href="https://https.cio.gov/everything/">no existe el tráfico web no confidencial</a>. Los pasos para configurar tu sitio web para que se sirva exclusivamente a través de HTTPS varían ampliamente según tu arquitectura y proveedor de alojamiento web y, por lo tanto, están más allá del alcance de estos documentos.</p>
 <p>Los sitios servidos a través de HTTPS también deben acceder a todas las hojas de estilo, scripts y otros activos a través de conexiones HTTPS. De lo contrario, enviarás a los usuarios <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content">contenido activo mixto</a>, lo que generará vulnerabilidades potenciales en las que un sitio puede verse comprometido al alterar una dependencia. Esto puede generar problemas de seguridad y advertencias en el navegador que se muestran a los usuarios. Ya sea que estés obteniendo Bootstrap de un CDN o sirviéndolo tú mismo, asegúrate de acceder solo a través de conexiones HTTPS.</p>
 
-      </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>
 
 
     <footer class="bd-footer py-5 mt-5 bg-light">
@@ -603,6 +610,6 @@
 
 
     
-  
+
   </body>
 </html>

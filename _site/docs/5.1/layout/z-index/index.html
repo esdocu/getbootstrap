@@ -149,7 +149,7 @@
 
 
     
-  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative me-auto">
       <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
@@ -187,9 +187,9 @@
 </nav>
 
 
-  <div class="container-xxl my-md-4 bd-layout">
-    <aside class="bd-sidebar">
-      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
           Empezando
@@ -254,7 +254,7 @@
         <div class="collapse" id="content-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
-              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Typography</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Images</a></li>
               <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tables</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
@@ -396,25 +396,32 @@
   </ul>
 </nav>
 
-    </aside>
+  </aside>
 
-    <main class="bd-main order-1">
-      <div class="bd-intro ps-lg-4">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/layout/z-index.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">Ver en GitHub</a>
-          <h1 class="bd-title" id="content">Z-index</h1>
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
+            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/layout/z-index.md"
+            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
+            href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/layout/z-index.md"
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <p class="bd-lead">Si bien no forman parte del sistema de cuadrícula de Bootstrap, los z-index juegan un papel importante en la forma en que nuestros componentes se superponen e interactúan entre sí.</p>
-        
-
+        <h1 class="bd-title" id="content">Z-index</h1>
       </div>
-
+      <p class="bd-lead">Si bien no forman parte del sistema de cuadrícula de Bootstrap, los z-index juegan un papel importante en la forma en que nuestros componentes se superponen e interactúan entre sí.</p>
       
 
-      <div class="bd-content ps-lg-4">
-        
+    </div>
 
-        <p>Varios componentes de Bootstrap utilizan <code>z-index</code>, la propiedad CSS que ayuda a controlar el diseño al proporcionar un tercer eje para organizar el contenido. Utilizamos una escala de z-index predeterminada en Bootstrap que ha sido diseñada para capas de navegación,tooltips y popovers, modals y más.</p>
+    
+
+    <div class="bd-content ps-lg-4">
+      
+
+      <p>Varios componentes de Bootstrap utilizan <code>z-index</code>, la propiedad CSS que ayuda a controlar el diseño al proporcionar un tercer eje para organizar el contenido. Utilizamos una escala de z-index predeterminada en Bootstrap que ha sido diseñada para capas de navegación,tooltips y popovers, modals y más.</p>
 <p>Estos valores más altos comienzan en un número arbitrario, lo suficientemente alto y específico para evitar idealmente conflictos. Necesitamos un conjunto estándar de estos en todos nuestros componentes en capas (tooltips, popovers, navbars, dropdowns, modals) para que podamos ser razonablemente consistentes en los comportamientos. No hay razón por la que no pudiéramos haber usado <code>100</code>+ o <code>500</code>+.</p>
 <p>No fomentamos la personalización de estos valores individuales; si cambias uno, es probable que necesites cambiarlos todos.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$zindex-dropdown</span><span class="o">:</span>                   <span class="mi">1000</span><span class="p">;</span>
@@ -429,9 +436,9 @@
 </code></pre></div>
 <p>Para manejar los bordes superpuestos dentro de los componentes (por ejemplo, buttons e inputs en input groups), usamos valores bajos de z-index de un solo dígito de <code>1</code>, <code>2</code>, y <code>3</code> para default, hover, y estdos active. En hover/focus/active, traemos un elemento particular al frente con un valor de <code>z-index</code> más alto para mostrar su borde sobre los elementos hermanos.</p>
 
-      </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>
 
 
     <footer class="bd-footer py-5 mt-5 bg-light">
@@ -501,6 +508,6 @@
 
 
     
-  
+
   </body>
 </html>

@@ -149,7 +149,7 @@
 
 
     
-  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative me-auto">
       <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
@@ -187,9 +187,9 @@
 </nav>
 
 
-  <div class="container-xxl my-md-4 bd-layout">
-    <aside class="bd-sidebar">
-      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
           Empezando
@@ -254,7 +254,7 @@
         <div class="collapse show" id="content-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded active" aria-current="page">Reboot</a></li>
-              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Typography</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Images</a></li>
               <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tables</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
@@ -396,23 +396,30 @@
   </ul>
 </nav>
 
-    </aside>
+  </aside>
 
-    <main class="bd-main order-1">
-      <div class="bd-intro ps-lg-4">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/content/reboot.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">Ver en GitHub</a>
-          <h1 class="bd-title" id="content">Reboot</h1>
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
+            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/content/reboot.md"
+            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
+            href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/content/reboot.md"
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <p class="bd-lead">Reboot, una colección de cambios CSS a elementos específicos en un solo archivo, punto de partida de Bootstrap para proporcionar una base elegante, consistente y simple sobre la cual construir.</p>
-        
-
+        <h1 class="bd-title" id="content">Reboot</h1>
       </div>
-
+      <p class="bd-lead">Reboot, una colección de cambios CSS a elementos específicos en un solo archivo, punto de partida de Bootstrap para proporcionar una base elegante, consistente y simple sobre la cual construir.</p>
       
-        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-          <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
-          <nav id="TableOfContents">
+
+    </div>
+
+    
+    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+      <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
+      <nav id="TableOfContents">
   <ul>
     <li><a href="#enfoque">Enfoque</a></li>
     <li><a href="#variables-css">Variables CSS</a></li>
@@ -442,13 +449,13 @@
     <li><a href="#atributo-html5-hidden">Atributo HTML5 <code>[hidden]</code></a></li>
   </ul>
 </nav>
-        </div>
+    </div>
+    
+
+    <div class="bd-content ps-lg-4">
       
 
-      <div class="bd-content ps-lg-4">
-        
-
-        <h2 id="enfoque">Enfoque</h2>
+      <h2 id="enfoque">Enfoque</h2>
 <p>Reboot se basa en Normalize, proporcionando muchos elementos HTML con estilos un tanto obstinados utilizando solo selectores de elementos. El estilo adicional se realiza solo con clases. Por ejemplo, reiniciamos algunos estilos <code>&lt;table&gt;</code> para una línea base más simple y luego proporcionamos <code>.table</code>, <code>.table-bordered</code> y más.</p>
 <p>Estas son nuestras pautas y razones para elegir qué sobrescribir en Reboot:</p>
 <ul>
@@ -867,9 +874,9 @@ Para editar la configuración, presiona <span class="p">&lt;</span><span class="
 
 <p>Para alternar simplemente la visibilidad de un elemento, lo que significa que su <code>display</code> no se modifica y el elemento aún puede afectar el flujo del documento, usa <a href="/docs/5.1/utilities/visibility/">la clase <code>.invisible</code></a>.</p>
 
-      </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>
 
 
     <footer class="bd-footer py-5 mt-5 bg-light">
@@ -939,6 +946,6 @@ Para editar la configuración, presiona <span class="p">&lt;</span><span class="
 
 
     
-  
+
   </body>
 </html>

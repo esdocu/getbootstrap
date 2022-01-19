@@ -149,7 +149,7 @@
 
 
     
-  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     <form class="bd-search position-relative me-auto">
       <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
@@ -187,9 +187,9 @@
 </nav>
 
 
-  <div class="container-xxl my-md-4 bd-layout">
-    <aside class="bd-sidebar">
-      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
           Empezando
@@ -254,7 +254,7 @@
         <div class="collapse" id="content-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
-              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Typography</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Images</a></li>
               <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tables</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
@@ -396,23 +396,30 @@
   </ul>
 </nav>
 
-    </aside>
+  </aside>
 
-    <main class="bd-main order-1">
-      <div class="bd-intro ps-lg-4">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/forms/overview.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">Ver en GitHub</a>
-          <h1 class="bd-title" id="content">Forms</h1>
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
+            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/forms/overview.md"
+            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
+            href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/forms/overview.md"
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <p class="bd-lead">Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.</p>
-        
-
+        <h1 class="bd-title" id="content">Forms</h1>
       </div>
-
+      <p class="bd-lead">Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.</p>
       
-        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-          <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
-          <nav id="TableOfContents">
+
+    </div>
+
+    
+    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+      <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
+      <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
     <li><a href="#form-text">Form text</a></li>
@@ -425,73 +432,73 @@
     </li>
   </ul>
 </nav>
+    </div>
+    
+
+    <div class="bd-content ps-lg-4">
+      
+      <div class="row g-3">
+        
+        <div class="col-md-6">
+          <a class="d-block text-decoration-none" href="../form-control/">
+            <strong class="d-block h5 mb-0">Form control</strong>
+            <span class="text-secondary">Style textual inputs and textareas with support for multiple states.</span>
+          </a>
         </div>
+        
+        <div class="col-md-6">
+          <a class="d-block text-decoration-none" href="../select/">
+            <strong class="d-block h5 mb-0">Select</strong>
+            <span class="text-secondary">Improve browser default select elements with a custom initial appearance.</span>
+          </a>
+        </div>
+        
+        <div class="col-md-6">
+          <a class="d-block text-decoration-none" href="../checks-radios/">
+            <strong class="d-block h5 mb-0">Checks &amp; radios</strong>
+            <span class="text-secondary">Use our custom radio buttons and checkboxes in forms for selecting input options.</span>
+          </a>
+        </div>
+        
+        <div class="col-md-6">
+          <a class="d-block text-decoration-none" href="../range/">
+            <strong class="d-block h5 mb-0">Range</strong>
+            <span class="text-secondary">Replace browser default range inputs with our custom version.</span>
+          </a>
+        </div>
+        
+        <div class="col-md-6">
+          <a class="d-block text-decoration-none" href="../input-group/">
+            <strong class="d-block h5 mb-0">Input group</strong>
+            <span class="text-secondary">Attach labels and buttons to your inputs for increased semantic value.</span>
+          </a>
+        </div>
+        
+        <div class="col-md-6">
+          <a class="d-block text-decoration-none" href="../floating-labels/">
+            <strong class="d-block h5 mb-0">Floating labels</strong>
+            <span class="text-secondary">Create beautifully simple form labels that float over your input fields.</span>
+          </a>
+        </div>
+        
+        <div class="col-md-6">
+          <a class="d-block text-decoration-none" href="../layout/">
+            <strong class="d-block h5 mb-0">Layout</strong>
+            <span class="text-secondary">Create inline, horizontal, or complex grid-based layouts with your forms.</span>
+          </a>
+        </div>
+        
+        <div class="col-md-6">
+          <a class="d-block text-decoration-none" href="../validation/">
+            <strong class="d-block h5 mb-0">Validation</strong>
+            <span class="text-secondary">Validate your forms with custom or native validation behaviors and styles.</span>
+          </a>
+        </div>
+        
+      </div>
       
 
-      <div class="bd-content ps-lg-4">
-        
-          <div class="row g-3">
-            
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../form-control/">
-                <strong class="d-block h5 mb-0">Form control</strong>
-                <span class="text-secondary">Style textual inputs and textareas with support for multiple states.</span>
-              </a>
-            </div>
-            
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../select/">
-                <strong class="d-block h5 mb-0">Select</strong>
-                <span class="text-secondary">Improve browser default select elements with a custom initial appearance.</span>
-              </a>
-            </div>
-            
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../checks-radios/">
-                <strong class="d-block h5 mb-0">Checks &amp; radios</strong>
-                <span class="text-secondary">Use our custom radio buttons and checkboxes in forms for selecting input options.</span>
-              </a>
-            </div>
-            
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../range/">
-                <strong class="d-block h5 mb-0">Range</strong>
-                <span class="text-secondary">Replace browser default range inputs with our custom version.</span>
-              </a>
-            </div>
-            
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../input-group/">
-                <strong class="d-block h5 mb-0">Input group</strong>
-                <span class="text-secondary">Attach labels and buttons to your inputs for increased semantic value.</span>
-              </a>
-            </div>
-            
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../floating-labels/">
-                <strong class="d-block h5 mb-0">Floating labels</strong>
-                <span class="text-secondary">Create beautifully simple form labels that float over your input fields.</span>
-              </a>
-            </div>
-            
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../layout/">
-                <strong class="d-block h5 mb-0">Layout</strong>
-                <span class="text-secondary">Create inline, horizontal, or complex grid-based layouts with your forms.</span>
-              </a>
-            </div>
-            
-            <div class="col-md-6">
-              <a class="d-block text-decoration-none" href="../validation/">
-                <strong class="d-block h5 mb-0">Validation</strong>
-                <span class="text-secondary">Validate your forms with custom or native validation behaviors and styles.</span>
-              </a>
-            </div>
-            
-          </div>
-        
-
-        <h2 id="overview">Overview</h2>
+      <h2 id="overview">Overview</h2>
 <p>Bootstrap&rsquo;s form controls expand on <a href="/docs/5.1/content/reboot/#forms">our Rebooted form styles</a> with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.</p>
 <p>Be sure to use an appropriate <code>type</code> attribute on all inputs (e.g., <code>email</code> for email address or <code>number</code> for numerical information) to take advantage of newer input controls like email verification, number selection, and more.</p>
 <p>Here&rsquo;s a quick example to demonstrate Bootstrap&rsquo;s form styles. Keep reading for documentation on required classes, form layout, and more.</p>
@@ -667,9 +674,9 @@
 <span class="nv">$input-btn-border-width</span><span class="o">:</span>      <span class="nv">$border-width</span><span class="p">;</span>
 </code></pre></div>
 
-      </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>
 
 
     <footer class="bd-footer py-5 mt-5 bg-light">
@@ -739,6 +746,6 @@
 
 
     
-  
+
   </body>
 </html>
