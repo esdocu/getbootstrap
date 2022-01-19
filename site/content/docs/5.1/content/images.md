@@ -1,30 +1,30 @@
 ---
 layout: docs
-title: Images
-description: Documentation and examples for opting images into responsive behavior (so they never become wider than their parent) and add lightweight styles to them—all via classes.
+title: Imágenes
+description: Documentación y ejemplos para optar por que las imágenes tengan un comportamiento responsive (para que nunca se vuelvan más anchas que sus padres) y agregarles estilos livianos, todo a través de clases.
 group: content
 toc: true
 ---
 
-## Responsive images
+## Imágenes responsive
 
-Images in Bootstrap are made responsive with `.img-fluid`. This applies `max-width: 100%;` and `height: auto;` to the image so that it scales with the parent width.
+Las imágenes en Bootstrap se hacen responsive con `.img-fluid`. Esto aplica `max-width: 100%;` y `height: auto;` a la imagen para que se escale con el ancho de su elemento padre.
 
 {{< example >}}
 {{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Responsive image" >}}
 {{< /example >}}
 
-## Image thumbnails
+## Miniaturas de imágenes
 
-In addition to our [border-radius utilities]({{< docsref "/utilities/borders" >}}), you can use `.img-thumbnail` to give an image a rounded 1px border appearance.
+Además de nuestras [utilidades border-radius]({{< docsref "/utilities/borders" >}}), puedes usar `.img-thumbnail` para darle a una imagen una apariencia de borde redondeado de 1px.
 
 {{< example >}}
-{{< placeholder width="200" height="200" class="img-thumbnail" title="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera" >}}
+{{< placeholder width="200" height="200" class="img-thumbnail" title="Una imagen placeholder cuadrada genérica con un borde blanco alrededor, lo que la hace parecerse a una fotografía tomada con una cámara instantánea antigua" >}}
 {{< /example >}}
 
-## Aligning images
+## Alinear imágenes
 
-Align images with the [helper float classes]({{< docsref "/utilities/float" >}}) or [text alignment classes]({{< docsref "/utilities/text#text-alignment" >}}). `block`-level images can be centered using [the `.mx-auto` margin utility class]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
+Alinea las imágenes con las [clases flotantes auxiliares]({{< docsref "/utilities/float" >}}) o [clases de alineación de texto]({{< docsref "/utilities/text#text-alignment" >}}). Las imágenes a nivel de `block` se pueden centrar usando [la clase de utilidad de margen `.mx-auto`]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
 
 {{< example >}}
 {{< placeholder width="200" height="200" class="rounded float-start" >}}
@@ -45,7 +45,7 @@ Align images with the [helper float classes]({{< docsref "/utilities/float" >}})
 
 ## Picture
 
-If you are using the `<picture>` element to specify multiple `<source>` elements for a specific `<img>`, make sure to add the `.img-*` classes to the `<img>` and not to the `<picture>` tag.
+Si estás utilizando el elemento `<picture>` para especificar múltiples elementos `<source>` para un `<img>` específico, asegúrate de agregar las clases `.img-*` a `<img>` y no a la etiqueta `<picture>`.
 
 ```html
 <picture>
@@ -58,6 +58,6 @@ If you are using the `<picture>` element to specify multiple `<source>` elements
 
 ### Variables
 
-Variables are available for image thumbnails.
+Las variables están disponibles para las miniaturas de imágenes.
 
 {{< scss-docs name="thumbnail-variables" file="scss/_variables.scss" >}}

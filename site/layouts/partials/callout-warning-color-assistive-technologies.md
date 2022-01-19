@@ -1,3 +1,3 @@
-##### Conveying meaning to assistive technologies
+##### Transmitir significado a las tecnologías de asistencia
 
-Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the `.visually-hidden` class.
+El uso del color para agregar significado solo proporciona una indicación visual, que no se transmitirá a los usuarios de tecnologías de asistencia, como los lectores de pantalla. Asegúrate de que la información denotada por el color sea obvia a partir del contenido mismo (por ejemplo, el texto visible) o se incluya a través de medios alternativos, como texto adicional oculto con la clase `.visually-hidden`.

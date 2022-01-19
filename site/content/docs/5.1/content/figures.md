@@ -1,28 +1,28 @@
 ---
 layout: docs
-title: Figures
-description: Documentation and examples for displaying related images and text with the figure component in Bootstrap.
+title: Figuras
+description: Documentación y ejemplos para mostrar imágenes y texto relacionados con el componente de figure en Bootstrap.
 group: content
 toc: true
 ---
 
-Anytime you need to display a piece of content—like an image with an optional caption, consider using a `<figure>`.
+Cada vez que necesites mostrar una parte del contenido, como una imagen con un título opcional, considera usar `<figure>`.
 
-Use the included `.figure`, `.figure-img` and `.figure-caption` classes to provide some baseline styles for the HTML5 `<figure>` and `<figcaption>` elements. Images in figures have no explicit size, so be sure to add the `.img-fluid` class to your `<img>` to make it responsive.
+Utiliza las clases incluidas `.figure`, `.figure-img` y `.figure-caption` para proporcionar algunos estilos básicos para los elementos HTML5 `<figure>` y `<figcaption>`. Las imágenes en las figuras no tienen un tamaño explícito, así que asegúrate de agregar la clase `.img-fluid` a tu `<img>` para que sea responsive.
 
 {{< example >}}
 <figure class="figure">
   {{< placeholder width="400" height="300" class="figure-img img-fluid rounded" >}}
-  <figcaption class="figure-caption">A caption for the above image.</figcaption>
+  <figcaption class="figure-caption">Un título para la imagen de arriba.</figcaption>
 </figure>
 {{< /example >}}
 
-Aligning the figure's caption is easy with our [text utilities]({{< docsref "/utilities/text#text-alignment" >}}).
+Alinear el título de la figura es fácil con nuestras [utilidades de texto]({{< docsref "/utilities/text#text-alignment" >}}).
 
 {{< example >}}
 <figure class="figure">
   {{< placeholder width="400" height="300" class="figure-img img-fluid rounded" >}}
-  <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
+  <figcaption class="figure-caption text-end">Un título para la imagen de arriba.</figcaption>
 </figure>
 {{< /example >}}
 
