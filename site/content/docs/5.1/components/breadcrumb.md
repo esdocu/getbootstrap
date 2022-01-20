@@ -1,64 +1,64 @@
 ---
 layout: docs
 title: Breadcrumb
-description: Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
+description: Indica la ubicación de la página actual dentro de una jerarquía de navegación que agrega automáticamente separadores a través de CSS.
 group: components
 toc: true
 ---
 
-## Example
+## Ejemplo
 
-Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. Use our utilities to add additional styles as desired.
+Usa una lista ordenada o desordenada con elementos de lista vinculados para crear una ruta de navegación con un estilo mínimo. Utiliza nuestras utilidades para agregar estilos adicionales según lo desees.
 
 {{< example >}}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
+    <li class="breadcrumb-item active" aria-current="page">Inicio</li>
   </ol>
 </nav>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
   </ol>
 </nav>
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="#">Biblioteca</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Datos</li>
   </ol>
 </nav>
 {{< /example >}}
 
-## Dividers
+## Divisores
 
-Dividers are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). They can be changed by modifying a local CSS custom property `--bs-breadcrumb-divider`, or through the `$breadcrumb-divider` Sass variable — and `$breadcrumb-divider-flipped` for its RTL counterpart, if needed. We default to our Sass variable, which is set as a fallback to the custom property. This way, you get a global divider that you can override without recompiling CSS at any time.
+Los divisores se agregan automáticamente en CSS a través de [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) y [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). Se pueden cambiar modificando una propiedad personalizada CSS local `--bs-breadcrumb-divider`, o a través de la variable Sass `$breadcrumb-divider` y `$breadcrumb-divider-flipped` para su contraparte RTL, si es necesario. Usamos de forma predeterminada nuestra variable Sass, que se establece como una alternativa (fallback) a la propiedad personalizada. De esta manera, obtienes un divisor global que puedes sobrescribir sin volver a compilar CSS en ningún momento.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
   </ol>
 </nav>
 {{< /example >}}
 
-When modifying via Sass, the [quote](https://sass-lang.com/documentation/modules/string#quote) function is required to generate the quotes around a string. For example, using `>` as the divider, you can use this:
+Al modificar a través de Sass, se requiere la función [quote](https://sass-lang.com/documentation/modules/string#quote) para generar las comillas alrededor de una cadena. Por ejemplo, usando `>` como divisor, puedes usar esto:
 
 ```scss
 $breadcrumb-divider: quote(">");
 ```
 
-It's also possible to use an **embedded SVG icon**. Apply it via our CSS custom property, or use the Sass variable.
+También es posible usar un **icono SVG incrustado**. Aplícalo a través de nuestra propiedad personalizada CSS, o usa la variable Sass.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
   </ol>
 </nav>
 {{< /example >}}
@@ -67,13 +67,13 @@ It's also possible to use an **embedded SVG icon**. Apply it via our CSS custom 
 $breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");
 ```
 
-You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty strings in CSS custom properties counts as a value), or setting the Sass variable to `$breadcrumb-divider: none;`.
+También puede eliminar la configuración del divisor `--bs-breadcrumb-divider: '';` (las cadenas vacías en las propiedades personalizadas de CSS cuentan como un valor), o configurar la variable Sass en `$breadcrumb-divider: none;`.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
+    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
   </ol>
 </nav>
 {{< /example >}}
@@ -83,11 +83,11 @@ You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty st
 $breadcrumb-divider: none;
 ```
 
-## Accessibility
+## Accesibilidad
 
-Since breadcrumbs provide a navigation, it's a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.
+Dado que breadcrumbs proporciona una navegación, es una buena idea agregar una etiqueta significativa como `aria-label="breadcrumb"` para describir el tipo de navegación proporcionada en el elemento `<nav>`, así como aplicar un `aria-current="page"` al último elemento del conjunto para indicar que representa la página actual.
 
-For more information, see the [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
+Para obtener más información, consulta las [Prácticas de creación de WAI-ARIA para el patrón de ruta de navegación](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
 
 ## Sass
 

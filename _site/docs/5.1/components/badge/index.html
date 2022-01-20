@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Documentation and examples for badges, our small count and labeling component.">
+<meta name="description" content="Documentación y ejemplos para insignias, nuestro pequeño componente de conteo y etiquetado.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.91.2">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Badges">
-<meta name="twitter:description" content="Documentation and examples for badges, our small count and labeling component.">
+<meta name="twitter:description" content="Documentación y ejemplos para insignias, nuestro pequeño componente de conteo y etiquetado.">
 <meta name="twitter:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://bootstrap.fabdev.win/docs/5.1/components/badge/">
 <meta property="og:title" content="Badges">
-<meta property="og:description" content="Documentation and examples for badges, our small count and labeling component.">
+<meta property="og:description" content="Documentación y ejemplos para insignias, nuestro pequeño componente de conteo y etiquetado.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -411,7 +411,7 @@
         </div>
         <h1 class="bd-title" id="content">Badges</h1>
       </div>
-      <p class="bd-lead">Documentation and examples for badges, our small count and labeling component.</p>
+      <p class="bd-lead">Documentación y ejemplos para insignias, nuestro pequeño componente de conteo y etiquetado.</p>
       
 
     </div>
@@ -421,15 +421,15 @@
       <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#examples">Examples</a>
+    <li><a href="#ejemplos">Ejemplos</a>
       <ul>
-        <li><a href="#headings">Headings</a></li>
-        <li><a href="#buttons">Buttons</a></li>
-        <li><a href="#positioned">Positioned</a></li>
+        <li><a href="#encabezados">Encabezados</a></li>
+        <li><a href="#botones">Botones</a></li>
+        <li><a href="#posicionado">Posicionado</a></li>
       </ul>
     </li>
-    <li><a href="#background-colors">Background colors</a></li>
-    <li><a href="#pill-badges">Pill badges</a></li>
+    <li><a href="#colores-de-fondo">Colores de fondo</a></li>
+    <li><a href="#insignias-de-píldora">Insignias de píldora</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
         <li><a href="#variables">Variables</a></li>
@@ -443,66 +443,66 @@
     <div class="bd-content ps-lg-4">
       
 
-      <h2 id="examples">Examples</h2>
-<p>Badges scale to match the size of the immediate parent element by using relative font sizing and <code>em</code> units. As of v5, badges no longer have focus or hover styles for links.</p>
-<h3 id="headings">Headings</h3>
+      <h2 id="ejemplos">Ejemplos</h2>
+<p>Las insignias se escalan para coincidir con el tamaño del elemento padre inmediato mediante el uso de tamaños de fuente relativos y unidades <code>em</code>. A partir de la v5, las insignias ya no tienen estilos de focus o de hover para los enlaces.</p>
+<h3 id="encabezados">Encabezados</h3>
 <div class="bd-example">
-<h1>Example heading <span class="badge bg-secondary">New</span></h1>
-<h2>Example heading <span class="badge bg-secondary">New</span></h2>
-<h3>Example heading <span class="badge bg-secondary">New</span></h3>
-<h4>Example heading <span class="badge bg-secondary">New</span></h4>
-<h5>Example heading <span class="badge bg-secondary">New</span></h5>
-<h6>Example heading <span class="badge bg-secondary">New</span></h6>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Example heading <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>New<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Example heading <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>New<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Example heading <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>New<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Example heading <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>New<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Example heading <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>New<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>Example heading <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>New<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="buttons">Buttons</h3>
-<p>Badges can be used as part of links or buttons to provide a counter.</p>
+<h1>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h1>
+<h2>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h2>
+<h3>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h3>
+<h4>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h4>
+<h5>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h5>
+<h6>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h6>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Encabezado de ejemplo <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>Nuevo<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Encabezado de ejemplo <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>Nuevo<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Encabezado de ejemplo <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>Nuevo<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Encabezado de ejemplo <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>Nuevo<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Encabezado de ejemplo <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>Nuevo<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>Encabezado de ejemplo <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>Nuevo<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="botones">Botones</h3>
+<p>Las insignias se pueden usar como parte de enlaces o botones para proporcionar un contador.</p>
 <div class="bd-example">
 <button type="button" class="btn btn-primary">
-  Notifications <span class="badge bg-secondary">4</span>
+  Notificaciones <span class="badge bg-secondary">4</span>
 </button>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span><span class="p">&gt;</span>
-  Notifications <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  Notificaciones <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;badge bg-secondary&#34;</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
-<p>Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.</p>
-<p>Unless the context is clear (as with the &ldquo;Notifications&rdquo; example, where it is understood that the &ldquo;4&rdquo; is the number of notifications), consider including additional context with a visually hidden piece of additional text.</p>
-<h3 id="positioned">Positioned</h3>
-<p>Use utilities to modify a <code>.badge</code> and position it in the corner of a link or button.</p>
+<p>Ten en cuenta que, dependiendo de cómo se utilicen, las insignias pueden resultar confusas para los usuarios de lectores de pantalla y tecnologías de asistencia similares. Si bien el estilo de las insignias proporciona una indicación visual de su propósito, a estos usuarios simplemente se les presentará el contenido de la insignia. Dependiendo de la situación específica, estas insignias pueden parecer palabras o números adicionales aleatorios al final de una oración, enlace o botón.</p>
+<p>A menos que el contexto sea claro (como en el ejemplo de &ldquo;Notificaciones&rdquo;, donde se entiende que el &ldquo;4&rdquo; es el número de notificaciones), considera incluir un contexto adicional con un texto adicional oculto visualmente.</p>
+<h3 id="posicionado">Posicionado</h3>
+<p>Usa las utilidades para modificar un <code>.badge</code> y colócalo en la esquina de un enlace o botón.</p>
 <div class="bd-example">
 <button type="button" class="btn btn-primary position-relative">
   Inbox
   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
     99+
-    <span class="visually-hidden">unread messages</span>
+    <span class="visually-hidden">mensajes no leídos</span>
   </span>
 </button>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary position-relative&#34;</span><span class="p">&gt;</span>
   Inbox
   <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger&#34;</span><span class="p">&gt;</span>
     99+
-    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>unread messages<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>mensajes no leídos<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
-<p>You can also replace the <code>.badge</code> class with a few more utilities without a count for a more generic indicator.</p>
+<p>También puedes reemplazar la clase <code>.badge</code> con algunas utilidades más sin contar para un indicador más genérico.</p>
 <div class="bd-example">
 <button type="button" class="btn btn-primary position-relative">
-  Profile
+  Perfil
   <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-    <span class="visually-hidden">New alerts</span>
+    <span class="visually-hidden">Nuevas alertas</span>
   </span>
 </button>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary position-relative&#34;</span><span class="p">&gt;</span>
-  Profile
+  Perfil
   <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>New alerts<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Nuevas alertas<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="background-colors">Background colors</h2>
-<p>Use our background utility classes to quickly change the appearance of a badge. Please note that when using Bootstrap&rsquo;s default <code>.bg-light</code>, you&rsquo;ll likely need a text color utility like <code>.text-dark</code> for proper styling. This is because background utilities do not set anything but <code>background-color</code>.</p>
+<h2 id="colores-de-fondo">Colores de fondo</h2>
+<p>Utiliza nuestras clases de utilidad de fondo para cambiar rápidamente la apariencia de una insignia. Ten en cuenta que cuando usas el <code>.bg-light</code> predeterminado de Bootstrap, es probable que necesites una utilidad de color de texto como <code>.text-dark</code> para un estilo adecuado. Esto se debe a que las utilidades de fondo no configuran nada más que <code>background-color</code>.</p>
 <div class="bd-example">
 
 <span class="badge bg-primary">Primary</span>
@@ -526,8 +526,8 @@
 <p>El uso del color para agregar significado solo proporciona una indicación visual, que no se transmitirá a los usuarios de tecnologías de asistencia, como los lectores de pantalla. Asegúrate de que la información denotada por el color sea obvia a partir del contenido mismo (por ejemplo, el texto visible) o se incluya a través de medios alternativos, como texto adicional oculto con la clase <code>.visually-hidden</code>.
 </div>
 
-<h2 id="pill-badges">Pill badges</h2>
-<p>Use the <code>.rounded-pill</code> utility class to make badges more rounded with a larger <code>border-radius</code>.</p>
+<h2 id="insignias-de-píldora">Insignias de píldora</h2>
+<p>Usa la clase de utilidad <code>.rounded-pill</code> para hacer que las insignias sean más redondeadas con un <code>border-radius</code> más grande.</p>
 <div class="bd-example">
 
 <span class="badge rounded-pill bg-primary">Primary</span>

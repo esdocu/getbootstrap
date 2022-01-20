@@ -1,68 +1,68 @@
 ---
 layout: docs
 title: Badges
-description: Documentation and examples for badges, our small count and labeling component.
+description: Documentación y ejemplos para insignias, nuestro pequeño componente de conteo y etiquetado.
 group: components
 toc: true
 ---
 
-## Examples
+## Ejemplos
 
-Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units. As of v5, badges no longer have focus or hover styles for links.
+Las insignias se escalan para coincidir con el tamaño del elemento padre inmediato mediante el uso de tamaños de fuente relativos y unidades `em`. A partir de la v5, las insignias ya no tienen estilos de focus o de hover para los enlaces.
 
-### Headings
+### Encabezados
 
 {{< example >}}
-<h1>Example heading <span class="badge bg-secondary">New</span></h1>
-<h2>Example heading <span class="badge bg-secondary">New</span></h2>
-<h3>Example heading <span class="badge bg-secondary">New</span></h3>
-<h4>Example heading <span class="badge bg-secondary">New</span></h4>
-<h5>Example heading <span class="badge bg-secondary">New</span></h5>
-<h6>Example heading <span class="badge bg-secondary">New</span></h6>
+<h1>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h1>
+<h2>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h2>
+<h3>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h3>
+<h4>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h4>
+<h5>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h5>
+<h6>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h6>
 {{< /example >}}
 
-### Buttons
+### Botones
 
-Badges can be used as part of links or buttons to provide a counter.
+Las insignias se pueden usar como parte de enlaces o botones para proporcionar un contador.
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
-  Notifications <span class="badge bg-secondary">4</span>
+  Notificaciones <span class="badge bg-secondary">4</span>
 </button>
 {{< /example >}}
 
-Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
+Ten en cuenta que, dependiendo de cómo se utilicen, las insignias pueden resultar confusas para los usuarios de lectores de pantalla y tecnologías de asistencia similares. Si bien el estilo de las insignias proporciona una indicación visual de su propósito, a estos usuarios simplemente se les presentará el contenido de la insignia. Dependiendo de la situación específica, estas insignias pueden parecer palabras o números adicionales aleatorios al final de una oración, enlace o botón.
 
-Unless the context is clear (as with the "Notifications" example, where it is understood that the "4" is the number of notifications), consider including additional context with a visually hidden piece of additional text.
+A menos que el contexto sea claro (como en el ejemplo de "Notificaciones", donde se entiende que el "4" es el número de notificaciones), considera incluir un contexto adicional con un texto adicional oculto visualmente.
 
-### Positioned
+### Posicionado
 
-Use utilities to modify a `.badge` and position it in the corner of a link or button.
+Usa las utilidades para modificar un `.badge` y colócalo en la esquina de un enlace o botón.
 
 {{< example >}}
 <button type="button" class="btn btn-primary position-relative">
   Inbox
   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
     99+
-    <span class="visually-hidden">unread messages</span>
+    <span class="visually-hidden">mensajes no leídos</span>
   </span>
 </button>
 {{< /example >}}
 
-You can also replace the `.badge` class with a few more utilities without a count for a more generic indicator.
+También puedes reemplazar la clase `.badge` con algunas utilidades más sin contar para un indicador más genérico.
 
 {{< example >}}
 <button type="button" class="btn btn-primary position-relative">
-  Profile
+  Perfil
   <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-    <span class="visually-hidden">New alerts</span>
+    <span class="visually-hidden">Nuevas alertas</span>
   </span>
 </button>
 {{< /example >}}
 
-## Background colors
+## Colores de fondo
 
-Use our background utility classes to quickly change the appearance of a badge. Please note that when using Bootstrap's default `.bg-light`, you'll likely need a text color utility like `.text-dark` for proper styling. This is because background utilities do not set anything but `background-color`.
+Utiliza nuestras clases de utilidad de fondo para cambiar rápidamente la apariencia de una insignia. Ten en cuenta que cuando usas el `.bg-light` predeterminado de Bootstrap, es probable que necesites una utilidad de color de texto como `.text-dark` para un estilo adecuado. Esto se debe a que las utilidades de fondo no configuran nada más que `background-color`.
 
 {{< example >}}
 {{< badge.inline >}}
@@ -75,9 +75,9 @@ Use our background utility classes to quickly change the appearance of a badge. 
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## Pill badges
+## Insignias de píldora
 
-Use the `.rounded-pill` utility class to make badges more rounded with a larger `border-radius`.
+Usa la clase de utilidad `.rounded-pill` para hacer que las insignias sean más redondeadas con un `border-radius` más grande.
 
 {{< example >}}
 {{< badge.inline >}}
