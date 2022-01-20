@@ -106,6 +106,9 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/getting-started/contribute/</loc>
   </url>
   <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/forms/form-control/</loc>
+  </url>
+  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/examples/cover/</loc>
   </url>
   <url>
@@ -149,9 +152,6 @@
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/examples/footers/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/forms/form-control/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/forms/overview/</loc>

@@ -1,27 +1,27 @@
 ---
 layout: docs
-title: Form controls
-description: Give textual form controls like `<input>`s and `<textarea>`s an upgrade with custom styles, sizing, focus states, and more.
+title: Controles de formulario
+description: Proporciona a controles de formulario como `<input>`s y `<textarea>`s una actualización con estilos personalizados, tamaño, estados de enfoque y más.
 group: forms
 toc: true
 ---
 
-## Example
+## Ejemplo
 
 {{< example >}}
 <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
 </div>
 <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <label for="exampleFormControlTextarea1" class="form-label">Ejemplo de textarea</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
 {{< /example >}}
 
-## Sizing
+## Dimensionamiento
 
-Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+Establece alturas usando clases como `.form-control-lg` y `.form-control-sm`.
 
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
@@ -29,26 +29,26 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
 {{< /example >}}
 
-## Disabled
+## Deshabilitado
 
-Add the `disabled` boolean attribute on an input to give it a grayed out appearance and remove pointer events.
-
-{{< example >}}
-<input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
-<input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
-{{< /example >}}
-
-## Readonly
-
-Add the `readonly` boolean attribute on an input to prevent modification of the input's value.
+Agrega el atributo booleano `disabled` en un input para darle una apariencia atenuada y eliminar los eventos de puntero.
 
 {{< example >}}
-<input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly>
+<input class="form-control" type="text" placeholder="Input deshabilitado" aria-label="Ejemplo de input deshabilitado" disabled>
+<input class="form-control" type="text" value="Input deshabilitado de solo lectura" aria-label="Ejemplo de input deshabilitado" disabled readonly>
 {{< /example >}}
 
-## Readonly plain text
+## Solo lectura
 
-If you want to have `<input readonly>` elements in your form styled as plain text, use the `.form-control-plaintext` class to remove the default form field styling and preserve the correct margin and padding.
+Agrega el atributo booleano `readonly` en un input para evitar la modificación de su valor.
+
+{{< example >}}
+<input class="form-control" type="text" value="Input de solo lectura..." aria-label="Ejemplo de input de solo lectura" readonly>
+{{< /example >}}
+
+## Solo lectura como texto plano
+
+Si deseas tener elementos `<input readonly>` en tu formulario con estilo de texto sin formato, usa la clase `.form-control-plaintext` para eliminar el estilo de campo de formulario predeterminado y conservar el margen y padding correctos.
 
 {{< example >}}
   <div class="mb-3 row">
@@ -58,7 +58,7 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
     </div>
   </div>
   <div class="mb-3 row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" id="inputPassword">
     </div>
@@ -72,11 +72,11 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
     <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
   </div>
   <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+    <label for="inputPassword2" class="visually-hidden">Contraseña</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Contraseña">
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+    <button type="submit" class="btn btn-primary mb-3">Confirmar identidad</button>
   </div>
 </form>
 {{< /example >}}
@@ -85,23 +85,23 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 
 {{< example >}}
 <div class="mb-3">
-  <label for="formFile" class="form-label">Default file input example</label>
+  <label for="formFile" class="form-label">Ejemplo de entrada de archivo predeterminado</label>
   <input class="form-control" type="file" id="formFile">
 </div>
 <div class="mb-3">
-  <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+  <label for="formFileMultiple" class="form-label">Ejemplo de entrada de varios archivos</label>
   <input class="form-control" type="file" id="formFileMultiple" multiple>
 </div>
 <div class="mb-3">
-  <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+  <label for="formFileDisabled" class="form-label">Ejemplo de entrada de archivo deshabilitado</label>
   <input class="form-control" type="file" id="formFileDisabled" disabled>
 </div>
 <div class="mb-3">
-  <label for="formFileSm" class="form-label">Small file input example</label>
+  <label for="formFileSm" class="form-label">Ejemplo de entrada de archivo pequeño</label>
   <input class="form-control form-control-sm" id="formFileSm" type="file">
 </div>
 <div>
-  <label for="formFileLg" class="form-label">Large file input example</label>
+  <label for="formFileLg" class="form-label">Ejemplo de entrada de archivos grandes</label>
   <input class="form-control form-control-lg" id="formFileLg" type="file">
 </div>
 {{< /example >}}
@@ -109,18 +109,18 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 ## Color
 
 {{< example >}}
-<label for="exampleColorInput" class="form-label">Color picker</label>
+<label for="exampleColorInput" class="form-label">Selector de color</label>
 <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
 {{< /example >}}
 
-## Datalists
+## Listas de datos
 
-Datalists allow you to create a group of `<option>`s that can be accessed (and autocompleted) from within an `<input>`. These are similar to `<select>` elements, but come with more menu styling limitations and differences. While most browsers and operating systems include some support for `<datalist>` elements, their styling is inconsistent at best.
+Las listas de datos te permiten crear un grupo de `<option>`s a las que se puedes acceder (y autocompletar) desde un `<input>`. Estos son similares a los elementos `<select>`, pero vienen con más limitaciones y diferencias de estilo de menú. Si bien la mayoría de los navegadores y sistemas operativos incluyen cierto soporte para los elementos `<datalist>`, su estilo es inconsistente en el mejor de los casos.
 
-Learn more about [support for datalist elements](https://caniuse.com/datalist).
+Obten más información sobre [soporte para elementos datalist](https://caniuse.com/datalist).
 
 {{< example >}}
-<label for="exampleDataList" class="form-label">Datalist example</label>
+<label for="exampleDataList" class="form-label">Ejemplo de lista de datos</label>
 <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
 <datalist id="datalistOptions">
   <option value="San Francisco">
@@ -135,16 +135,16 @@ Learn more about [support for datalist elements](https://caniuse.com/datalist).
 
 ### Variables
 
-`$input-*` are shared across most of our form controls (and not buttons).
+`$input-*` se comparten en la mayoría de nuestros controles de formulario (y no en los botones).
 
 {{< scss-docs name="form-input-variables" file="scss/_variables.scss" >}}
 
-`$form-label-*` and `$form-text-*` are for our `<label>`s and `.form-text` component.
+`$form-label-*` y `$form-text-*` son para nuestros componentes `<label>` y `.form-text`.
 
 {{< scss-docs name="form-label-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="form-text-variables" file="scss/_variables.scss" >}}
 
-`$form-file-*` are for file input.
+`$form-file-*` son para la entrada de archivos.
 
 {{< scss-docs name="form-file-variables" file="scss/_variables.scss" >}}
