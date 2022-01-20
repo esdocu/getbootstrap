@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.">
+<meta name="description" content="Proporciona mensajes de retroalimentación contextuales para las acciones típicas de los usuarios con mensajes de alerta disponibles y flexibles.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.91.2">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Alerts">
-<meta name="twitter:description" content="Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.">
+<meta name="twitter:description" content="Proporciona mensajes de retroalimentación contextuales para las acciones típicas de los usuarios con mensajes de alerta disponibles y flexibles.">
 <meta name="twitter:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://bootstrap.fabdev.win/docs/5.1/components/alerts/">
 <meta property="og:title" content="Alerts">
-<meta property="og:description" content="Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.">
+<meta property="og:description" content="Proporciona mensajes de retroalimentación contextuales para las acciones típicas de los usuarios con mensajes de alerta disponibles y flexibles.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -411,7 +411,7 @@
         </div>
         <h1 class="bd-title" id="content">Alerts</h1>
       </div>
-      <p class="bd-lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+      <p class="bd-lead">Proporciona mensajes de retroalimentación contextuales para las acciones típicas de los usuarios con mensajes de alerta disponibles y flexibles.</p>
       
 
     </div>
@@ -421,13 +421,13 @@
       <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#examples">Examples</a>
+    <li><a href="#ejemplos">Ejemplos</a>
       <ul>
-        <li><a href="#live-example">Live example</a></li>
-        <li><a href="#link-color">Link color</a></li>
-        <li><a href="#additional-content">Additional content</a></li>
-        <li><a href="#icons">Icons</a></li>
-        <li><a href="#dismissing">Dismissing</a></li>
+        <li><a href="#ejemplo-en-vivo">Ejemplo en vivo</a></li>
+        <li><a href="#color-de-enlace">Color de enlace</a></li>
+        <li><a href="#contenido-adicional">Contenido adicional</a></li>
+        <li><a href="#iconos">Iconos</a></li>
+        <li><a href="#descartar">Descartar</a></li>
       </ul>
     </li>
     <li><a href="#css">CSS</a>
@@ -438,12 +438,12 @@
         <li><a href="#sass-loop">Sass loop</a></li>
       </ul>
     </li>
-    <li><a href="#javascript-behavior">JavaScript behavior</a>
+    <li><a href="#comportamiento-de-javascript">Comportamiento de JavaScript</a>
       <ul>
-        <li><a href="#initialize">Initialize</a></li>
+        <li><a href="#inicializar">Inicializar</a></li>
         <li><a href="#triggers">Triggers</a></li>
-        <li><a href="#methods">Methods</a></li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="#métodos">Métodos</a></li>
+        <li><a href="#eventos">Eventos</a></li>
       </ul>
     </li>
   </ul>
@@ -454,71 +454,71 @@
     <div class="bd-content ps-lg-4">
       
 
-      <h2 id="examples">Examples</h2>
-<p>Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the eight <strong>required</strong> contextual classes (e.g., <code>.alert-success</code>). For inline dismissal, use the <a href="#dismissing">alerts JavaScript plugin</a>.</p>
+      <h2 id="ejemplos">Ejemplos</h2>
+<p>Las alertas están disponibles para cualquier longitud de texto, así como un botón de cierre opcional. Para un estilo adecuado, usa una de las ocho clases contextuales <strong>obligatorias</strong> (por ejemplo, <code>.alert-success</code>). Para el botón de cierre en línea, usa el <a href="#dismissing">complemento JavaScript de alertas</a>.</p>
 <div class="bd-example">
 
 <div class="alert alert-primary" role="alert">
-  A simple primary alert—check it out!
+  Una simple alerta primary: ¡échale un vistazo!
 </div>
 <div class="alert alert-secondary" role="alert">
-  A simple secondary alert—check it out!
+  Una simple alerta secondary: ¡échale un vistazo!
 </div>
 <div class="alert alert-success" role="alert">
-  A simple success alert—check it out!
+  Una simple alerta success: ¡échale un vistazo!
 </div>
 <div class="alert alert-danger" role="alert">
-  A simple danger alert—check it out!
+  Una simple alerta danger: ¡échale un vistazo!
 </div>
 <div class="alert alert-warning" role="alert">
-  A simple warning alert—check it out!
+  Una simple alerta warning: ¡échale un vistazo!
 </div>
 <div class="alert alert-info" role="alert">
-  A simple info alert—check it out!
+  Una simple alerta info: ¡échale un vistazo!
 </div>
 <div class="alert alert-light" role="alert">
-  A simple light alert—check it out!
+  Una simple alerta light: ¡échale un vistazo!
 </div>
 <div class="alert alert-dark" role="alert">
-  A simple dark alert—check it out!
+  Una simple alerta dark: ¡échale un vistazo!
 </div>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-primary&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple primary alert—check it out!
+  Una simple alerta primary: ¡échale un vistazo!
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-secondary&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple secondary alert—check it out!
+  Una simple alerta secondary: ¡échale un vistazo!
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-success&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple success alert—check it out!
+  Una simple alerta success: ¡échale un vistazo!
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple danger alert—check it out!
+  Una simple alerta danger: ¡échale un vistazo!
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-warning&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple warning alert—check it out!
+  Una simple alerta warning: ¡échale un vistazo!
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-info&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple info alert—check it out!
+  Una simple alerta info: ¡échale un vistazo!
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-light&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple light alert—check it out!
+  Una simple alerta light: ¡échale un vistazo!
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-dark&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple dark alert—check it out!
+  Una simple alerta dark: ¡échale un vistazo!
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <div class="bd-callout bd-callout-info">
 <h5 id="transmitir-significado-a-las-tecnologías-de-asistencia">Transmitir significado a las tecnologías de asistencia</h5>
 <p>El uso del color para agregar significado solo proporciona una indicación visual, que no se transmitirá a los usuarios de tecnologías de asistencia, como los lectores de pantalla. Asegúrate de que la información denotada por el color sea obvia a partir del contenido mismo (por ejemplo, el texto visible) o se incluya a través de medios alternativos, como texto adicional oculto con la clase <code>.visually-hidden</code>.
 </div>
 
-<h3 id="live-example">Live example</h3>
-<p>Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.</p>
+<h3 id="ejemplo-en-vivo">Ejemplo en vivo</h3>
+<p>Haz clic en el botón a continuación para mostrar una alerta (oculta con estilos en línea para comenzar), luego deséchela (y destrúyala) con el botón de cierre incorporado.</p>
 <div class="bd-example">
 <div id="liveAlertPlaceholder"></div>
-<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Mostrar alerta en vivo</button>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;liveAlertPlaceholder&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;liveAlertBtn&#34;</span><span class="p">&gt;</span>Show live alert<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
-<p>We use the following JavaScript to trigger our live alert demo:</p>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;liveAlertBtn&#34;</span><span class="p">&gt;</span>Mostrar alerta en vivo<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
+<p>Usamos el siguiente JavaScript para activar nuestra demostración de alerta en vivo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">alertPlaceholder</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;liveAlertPlaceholder&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">alertTrigger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;liveAlertBtn&#39;</span><span class="p">)</span>
 
@@ -531,85 +531,85 @@
 
 <span class="k">if</span> <span class="p">(</span><span class="nx">alertTrigger</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">alertTrigger</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Nice, you triggered this alert message!&#39;</span><span class="p">,</span> <span class="s1">&#39;success&#39;</span><span class="p">)</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Genial, activaste este mensaje de alerta.&#39;</span><span class="p">,</span> <span class="s1">&#39;success&#39;</span><span class="p">)</span>
   <span class="p">})</span>
 <span class="p">}</span>
-</code></pre></div><h3 id="link-color">Link color</h3>
-<p>Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
+</code></pre></div><h3 id="color-de-enlace">Color de enlace</h3>
+<p>Utiliza la clase de utilidad <code>.alert-link</code> para proporcionar rápidamente enlaces de colores coincidentes dentro de cualquier alerta.</p>
 <div class="bd-example">
 
 <div class="alert alert-primary" role="alert">
-  A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  Una simple alerta primary con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
 </div>
 <div class="alert alert-secondary" role="alert">
-  A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  Una simple alerta secondary con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
 </div>
 <div class="alert alert-success" role="alert">
-  A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  Una simple alerta success con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
 </div>
 <div class="alert alert-danger" role="alert">
-  A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  Una simple alerta danger con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
 </div>
 <div class="alert alert-warning" role="alert">
-  A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  Una simple alerta warning con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
 </div>
 <div class="alert alert-info" role="alert">
-  A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  Una simple alerta info con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
 </div>
 <div class="alert alert-light" role="alert">
-  A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  Una simple alerta light con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
 </div>
 <div class="alert alert-dark" role="alert">
-  A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+  Una simple alerta dark con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
 </div>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-primary&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple primary alert with <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Give it a click if you like.
+  Una simple alerta primary con <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>un enlace de ejemplo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Dale un clic si quieres.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-secondary&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple secondary alert with <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Give it a click if you like.
+  Una simple alerta secondary con <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>un enlace de ejemplo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Dale un clic si quieres.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-success&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple success alert with <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Give it a click if you like.
+  Una simple alerta success con <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>un enlace de ejemplo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Dale un clic si quieres.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple danger alert with <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Give it a click if you like.
+  Una simple alerta danger con <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>un enlace de ejemplo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Dale un clic si quieres.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-warning&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple warning alert with <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Give it a click if you like.
+  Una simple alerta warning con <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>un enlace de ejemplo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Dale un clic si quieres.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-info&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple info alert with <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Give it a click if you like.
+  Una simple alerta info con <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>un enlace de ejemplo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Dale un clic si quieres.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-light&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple light alert with <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Give it a click if you like.
+  Una simple alerta light con <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>un enlace de ejemplo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Dale un clic si quieres.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-dark&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  A simple dark alert with <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Give it a click if you like.
+  Una simple alerta dark con <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-link&#34;</span><span class="p">&gt;</span>un enlace de ejemplo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>. Dale un clic si quieres.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="additional-content">Additional content</h3>
-<p>Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
+<h3 id="contenido-adicional">Contenido adicional</h3>
+<p>Las alertas también pueden contener elementos HTML adicionales como encabezados, párrafos y divisores.</p>
 <div class="bd-example">
 <div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <h4 class="alert-heading">¡Bien hecho!</h4>
+  <p>Oh, sí, leísto con éxito este importante mensaje de alerta. Este texto de ejemplo se extenderá un poco más para que puedas ver cómo funciona el espaciado dentro de una alerta con este tipo de contenido.</p>
   <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  <p class="mb-0">Siempre que lo necesites, asegúrate de usar utilidades de margen para mantener las cosas ordenadas y ordenadas.</p>
 </div>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-success&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-heading&#34;</span><span class="p">&gt;</span>Well done!<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert-heading&#34;</span><span class="p">&gt;</span>¡Bien hecho!<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Oh, sí, leísto con éxito este importante mensaje de alerta. Este texto de ejemplo se extenderá un poco más para que puedas ver cómo funciona el espaciado dentro de una alerta con este tipo de contenido.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;</span>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;</span>Siempre que lo necesites, asegúrate de usar utilidades de margen para mantener las cosas ordenadas y ordenadas.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="icons">Icons</h3>
-<p>Similarly, you can use <a href="/docs/5.1/utilities/flex/">flexbox utilities</a> and <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a> to create alerts with icons. Depending on your icons and content, you may want to add more utilities or custom styles.</p>
+<h3 id="iconos">Iconos</h3>
+<p>De manera similar, puedes usar <a href="/docs/5.1/utilities/flex/">utilidades flexbox</a> y <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a> para crear alertas con íconos. Dependiendo de tus íconos y contenido, es posible que desees agregar más utilidades o estilos personalizados.</p>
 <div class="bd-example">
 <div class="alert alert-primary d-flex align-items-center" role="alert">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
     <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
   </svg>
   <div>
-    An example alert with an icon
+    Un ejemplo de alerta con un icono
   </div>
 </div>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-primary d-flex align-items-center&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
@@ -617,10 +617,10 @@
     <span class="p">&lt;</span><span class="nt">path</span> <span class="na">d</span><span class="o">=</span><span class="s">&#34;M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z&#34;</span><span class="p">/&gt;</span>
   <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    An example alert with an icon
+    Un ejemplo de alerta con un icono
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Need more than one icon for your alerts? Consider using more Bootstrap Icons and making a local SVG sprite like so to easily reference the same icons repeatedly.</p>
+<p>¿Necesitas más de un ícono para tus alertas? Considera usar más íconos de Bootstrap y hacer un sprite SVG local para hacer referencia fácilmente a los mismos íconos repetidamente.</p>
 <div class="bd-example">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -637,25 +637,25 @@
 <div class="alert alert-primary d-flex align-items-center" role="alert">
   <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
   <div>
-    An example alert with an icon
+    Un ejemplo de alerta con un icono
   </div>
 </div>
 <div class="alert alert-success d-flex align-items-center" role="alert">
   <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
   <div>
-    An example success alert with an icon
+    Un ejemplo de alerta success con un icono
   </div>
 </div>
 <div class="alert alert-warning d-flex align-items-center" role="alert">
   <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
   <div>
-    An example warning alert with an icon
+    Un ejemplo de alerta warning con un icono
   </div>
 </div>
 <div class="alert alert-danger d-flex align-items-center" role="alert">
   <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
   <div>
-    An example danger alert with an icon
+    Un ejemplo de alerta danger con un icono
   </div>
 </div>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/2000/svg&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;display: none;&#34;</span><span class="p">&gt;</span>
@@ -673,53 +673,53 @@
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-primary d-flex align-items-center&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi flex-shrink-0 me-2&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;24&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;24&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Info:&#34;</span><span class="p">&gt;&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;#info-fill&#34;</span><span class="p">/&gt;&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    An example alert with an icon
+    Un ejemplo de alerta con un icono
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-success d-flex align-items-center&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi flex-shrink-0 me-2&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;24&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;24&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Success:&#34;</span><span class="p">&gt;&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;#check-circle-fill&#34;</span><span class="p">/&gt;&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    An example success alert with an icon
+    Un ejemplo de alerta success con un icono
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-warning d-flex align-items-center&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi flex-shrink-0 me-2&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;24&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;24&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Warning:&#34;</span><span class="p">&gt;&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;#exclamation-triangle-fill&#34;</span><span class="p">/&gt;&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    An example warning alert with an icon
+    Un ejemplo de alerta warning con un icono
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-danger d-flex align-items-center&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bi flex-shrink-0 me-2&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;24&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;24&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;img&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Danger:&#34;</span><span class="p">&gt;&lt;</span><span class="nt">use</span> <span class="na">xlink:href</span><span class="o">=</span><span class="s">&#34;#exclamation-triangle-fill&#34;</span><span class="p">/&gt;&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    An example danger alert with an icon
+    Un ejemplo de alerta danger con un icono
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="dismissing">Dismissing</h3>
-<p>Using the alert JavaScript plugin, it&rsquo;s possible to dismiss any alert inline. Here&rsquo;s how:</p>
+<h3 id="descartar">Descartar</h3>
+<p>Con el complemento JavaScript de alerta, es posible descartar cualquier alerta. Así es cómo:</p>
 <ul>
-<li>Be sure you&rsquo;ve loaded the alert plugin, or the compiled Bootstrap JavaScript.</li>
-<li>Add a <a href="/docs/5.1/components/close-button/">close button</a> and the <code>.alert-dismissible</code> class, which adds extra padding to the right of the alert and positions the close button.</li>
-<li>On the close button, add the <code>data-bs-dismiss=&quot;alert&quot;</code> attribute, which triggers the JavaScript functionality. Be sure to use the <code>&lt;button&gt;</code> element with it for proper behavior across all devices.</li>
-<li>To animate alerts when dismissing them, be sure to add the <code>.fade</code> and <code>.show</code> classes.</li>
+<li>Asegúrate de haber cargado el complemento de alerta o el JavaScript de Bootstrap compilado.</li>
+<li>Agrega un <a href="/docs/5.1/components/close-button/">botón de cierre</a> y la clase <code>.alert-dismissible</code>, que agrega padding adicional a la derecha de la alerta y posiciona el botón de cierre.</li>
+<li>En el botón de cerrar, agrega el atributo <code>data-bs-dismiss=&quot;alert&quot;</code>, que activa la funcionalidad de JavaScript. Asegúrate de usar el elemento <code>&lt;button&gt;</code> para un comportamiento adecuado en todos los dispositivos.</li>
+<li>Para animar alertas al descartarlas, asegúrate de agregar las clases <code>.fade</code> y <code>.show</code>.</li>
 </ul>
-<p>You can see this in action with a live demo:</p>
+<p>Puedes ver esto en acción con una demostración en vivo:</p>
 <div class="bd-example">
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <strong>Holy guacamole!</strong> Debes verificar algunos de esos campos a continuación.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;alert alert-warning alert-dismissible fade show&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Holy guacamole!<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> You should check in on some of those fields below.
+  <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Holy guacamole!<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> Debes verificar algunos de esos campos a continuación.
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <div class="bd-callout bd-callout-warning">
-When an alert is dismissed, the element is completely removed from the page structure. If a keyboard user dismisses the alert using the close button, their focus will suddenly be lost and, depending on the browser, reset to the start of the page/document. For this reason, we recommend including additional JavaScript that listens for the <code>closed.bs.alert</code> event and programmatically sets <code>focus()</code> to the most appropriate location in the page. If you&rsquo;re planning to move focus to a non-interactive element that normally does not receive focus, make sure to add <code>tabindex=&quot;-1&quot;</code> to the element.
+Cuando se descarta una alerta, el elemento se elimina por completo de la estructura de la página. Si un usuario desde el teclado descarta la alerta usando el botón de cerrar, su enfoque se perderá repentinamente y, según el navegador, se restablecerá al inicio de la página/documento. Por este motivo, recomendamos incluir JavaScript adicional que detecte el evento <code>closed.bs.alert</code> y programáticamente establecer <code>focus()</code> en la ubicación más adecuada de la página. Si planeas mover el foco a un elemento no interactivo que normalmente no recibe el foco, asegúrate de agregar <code>tabindex=&quot;-1&quot;</code> al elemento.
 </div>
 
 <h2 id="css">CSS</h2>
 <h3 id="variables">Variables</h3>
 <p><small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.2.0</small></p>
-<p>As part of Bootstrap&rsquo;s evolving CSS variables approach, alerts now use local CSS variables on <code>.alert</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>Como parte del enfoque de variables CSS en evolución de Bootstrap, las alertas ahora usan variables CSS locales en <code>.alert</code> para mejorar la personalización en tiempo real. Los valores para las variables CSS se establecen a través de Sass, por lo que también se admite la personalización de Sass.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss">  <span class="na">--#{$variable-prefix}alert-bg</span><span class="o">:</span> <span class="ni">transparent</span><span class="p">;</span>
   <span class="na">--#{$variable-prefix}alert-padding</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$alert-padding-y</span> <span class="nv">$alert-padding-x</span><span class="si">}</span><span class="p">;</span>
   <span class="na">--#{$variable-prefix}alert-margin-bottom</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$alert-margin-bottom</span><span class="si">}</span><span class="p">;</span>
@@ -741,7 +741,7 @@ When an alert is dismissed, the element is completely removed from the page stru
 <span class="nv">$alert-dismissible-padding-r</span><span class="o">:</span>   <span class="nv">$alert-padding-x</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 3x covers width of x plus default padding on either side
 </span></code></pre></div>
 <h3 id="sass-mixin">Sass mixin</h3>
-<p>Used in combination with <code>$theme-colors</code> to create contextual modifier classes for our alerts.</p>
+<p>Se usa en combinación con <code>$theme-colors</code> para crear clases de modificadores contextuales para nuestras alertas.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> alert-variant</span><span class="p">(</span><span class="nv">$background</span><span class="o">,</span> <span class="nv">$border</span><span class="o">,</span> <span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
   <span class="na">--#{$variable-prefix}alert-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$color</span><span class="si">}</span><span class="p">;</span>
   <span class="na">--#{$variable-prefix}alert-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$background</span><span class="si">}</span><span class="p">;</span>
@@ -757,7 +757,7 @@ When an alert is dismissed, the element is completely removed from the page stru
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="sass-loop">Sass loop</h3>
-<p>Loop that generates the modifier classes with the <code>alert-variant()</code> mixin.</p>
+<p>Bucle que genera las clases modificadoras con el mixin <code>alert-variant()</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Generate contextual modifier classes for colorizing the alert.
 </span><span class="c1"></span>
 <span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
@@ -773,16 +773,16 @@ When an alert is dismissed, the element is completely removed from the page stru
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="javascript-behavior">JavaScript behavior</h2>
-<h3 id="initialize">Initialize</h3>
-<p>Initialize elements as alerts</p>
+<h2 id="comportamiento-de-javascript">Comportamiento de JavaScript</h2>
+<h3 id="inicializar">Inicializar</h3>
+<p>Inicializar elementos como alertas</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">alertList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.alert&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">alerts</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">alertList</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Alert</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div><div class="bd-callout bd-callout-info">
-<p>For the sole purpose of dismissing an alert, it isn&rsquo;t necessary to initialize the component manually via the JS API. By making use of <code>data-bs-dismiss=&quot;alert&quot;</code>, the component will be initialized automatically and properly dismissed.</p>
-<p>See the <a href="#triggers">triggers</a> section for more details.</p>
+<p>Con el único propósito de descartar una alerta, no es necesario inicializar el componente manualmente a través de la API de JS. Al hacer uso de <code>data-bs-dismiss=&quot;alert&quot;</code>, el componente se inicializará automáticamente y se descartará correctamente.</p>
+<p>Consulta la sección <a href="#triggers">triggers</a> para obtener más detalles.</p>
 
 </div>
 
@@ -791,13 +791,13 @@ When an alert is dismissed, the element is completely removed from the page stru
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div><p>or on a button <strong>outside the alert</strong> using the <code>data-bs-target</code> as demonstrated below:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#my-alert&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</code></pre></div><p><strong>Note that closing an alert will remove it from the DOM.</strong></p>
-<h3 id="methods">Methods</h3>
+</code></pre></div><p><strong>Ten en cuenta que cerrar una alerta la eliminará del DOM.</strong></p>
+<h3 id="métodos">Métodos</h3>
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>Método</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -806,7 +806,7 @@ When an alert is dismissed, the element is completely removed from the page stru
         <code>close</code>
       </td>
       <td>
-        Closes an alert by removing it from the DOM. If the <code>.fade</code> and <code>.show</code> classes are present on the element, the alert will fade out before it is removed.
+        Cierra una alerta eliminándola del DOM. Si las clases <code>.fade</code> y <code>.show</code> están presentes en el elemento, la alerta se desvanecerá antes de que se elimine.
       </td>
     </tr>
     <tr>
@@ -814,7 +814,7 @@ When an alert is dismissed, the element is completely removed from the page stru
         <code>dispose</code>
       </td>
       <td>
-        Destroys an element's alert. (Removes stored data on the DOM element)
+        Destruye la alerta de un elemento. (Elimina los datos almacenados en el elemento DOM)
       </td>
     </tr>
     <tr>
@@ -822,7 +822,7 @@ When an alert is dismissed, the element is completely removed from the page stru
         <code>getInstance</code>
       </td>
       <td>
-        Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: <code>bootstrap.Alert.getInstance(alert)</code>
+        Método estático que te permite obtener la instancia de alerta asociada a un elemento DOM, puedes usarlo así: <code>bootstrap.Alert.getInstance(alert)</code>
       </td>
     </tr>
     <tr>
@@ -830,8 +830,8 @@ When an alert is dismissed, the element is completely removed from the page stru
         <code>getOrCreateInstance</code>
       </td>
       <td>
-        Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialized.
-        You can use it like this: <code>bootstrap.Alert.getOrCreateInstance(element)</code>
+        Método estático que devuelve una instancia de alerta asociada a un elemento DOM o crea una nueva en caso de que no haya sido inicializado.
+        Puedes usarlo así: <code>bootstrap.Alert.getOrCreateInstance(element)</code>
       </td>
     </tr>
   </tbody>
@@ -839,34 +839,34 @@ When an alert is dismissed, the element is completely removed from the page stru
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">alertNode</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.alert&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">alert</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Alert</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">alertNode</span><span class="p">)</span>
 <span class="nx">alert</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
-</code></pre></div><h3 id="events">Events</h3>
-<p>Bootstrap&rsquo;s alert plugin exposes a few events for hooking into alert functionality.</p>
+</code></pre></div><h3 id="eventos">Eventos</h3>
+<p>El complemento de alerta de Bootstrap expone algunos eventos para conectarse a la funcionalidad de alerta.</p>
 <table class="table">
   <thead>
     <tr>
-      <th>Event</th>
-      <th>Description</th>
+      <th>Evento</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>close.bs.alert</code></td>
       <td>
-        Fires immediately when the <code>close</code> instance method is called.
+        Se activa inmediatamente cuando se llama al método de instancia <code>close</code>.
       </td>
     </tr>
     <tr>
       <td><code>closed.bs.alert</code></td>
       <td>
-        Fired when the alert has been closed and CSS transitions have completed.
+        Se activa cuando se ha cerrado la alerta y se han completado las transiciones de CSS.
       </td>
     </tr>
   </tbody>
 </table>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myAlert</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myAlert&#39;</span><span class="p">)</span>
 <span class="nx">myAlert</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;closed.bs.alert&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// do something, for instance, explicitly move focus to the most appropriate element,
-</span><span class="c1"></span>  <span class="c1">// so it doesn&#39;t get lost/reset to the start of the page
+  <span class="c1">// hacer algo, por ejemplo, mover explícitamente el foco al elemento más apropiado,
+</span><span class="c1"></span>  <span class="c1">// para que no se pierda/restablezca al inicio de la página
 </span><span class="c1"></span>  <span class="c1">// document.getElementById(&#39;...&#39;).focus()
 </span><span class="c1"></span><span class="p">})</span>
 </code></pre></div>
