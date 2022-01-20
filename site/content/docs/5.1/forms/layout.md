@@ -1,69 +1,69 @@
 ---
 layout: docs
 title: Layout
-description: Give your forms some structure—from inline to horizontal to custom grid implementations—with our form layout options.
+description: Proporciona cierta estructura a tus formularios, desde implementaciones en línea hasta horizontales y cuadrículas personalizadas, con nuestras opciones de diseño de formularios.
 group: forms
 toc: true
 ---
 
-## Forms
+## Formularios
 
-Every group of form fields should reside in a `<form>` element. Bootstrap provides no default styling for the `<form>` element, but there are some powerful browser features that are provided by default.
+Cada grupo de campos de formulario debe residir en un elemento `<form>`. Bootstrap no proporciona un estilo predeterminado para el elemento `<form>`, pero hay algunas características potentes del navegador que se proporcionan de forma predeterminada.
 
-- New to browser forms? Consider reviewing [the MDN form docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) for an overview and complete list of available attributes.
-- `<button>`s within a `<form>` default to `type="submit"`, so strive to be specific and always include a `type`.
-- You can disable every form element within a form with the `disabled` attribute on the `<form>`.
+- ¿Nuevo en los formularios del navegador? Considera revisar [los documentos del formulario MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) para obtener una descripción general y una lista completa de los atributos disponibles.
+- `<button>` está dentro de un `<form>` por defecto a `type="submit"`, así que esfuértate por ser específico e incluir siempre un `type`.
+- Puedes deshabilitar cada elemento de formulario dentro de un formulario con el atributo `disabled` en `<form>`.
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+Dado que Bootstrap aplica `display: block` y `width: 100%` a casi todos nuestros controles de formulario, los formularios se apilarán verticalmente de manera predeterminada. Se pueden usar clases adicionales para variar este diseño según el formulario.
 
-## Utilities
+## Utilidades
 
-[Margin utilities]({{< docsref "/utilities/spacing" >}}) are the easiest way to add some structure to forms. They provide basic grouping of labels, controls, optional form text, and form validation messaging. We recommend sticking to `margin-bottom` utilities, and using a single direction throughout the form for consistency.
+Las [utilidades de margen]({{< docsref "/utilities/spacing" >}}) son la forma más fácil de agregar algo de estructura a los formularios. Proporcionan una agrupación básica de etiquetas, controles, texto de formulario opcional y mensajes de validación de formulario. Recomendamos apegarse a las utilidades de `margin-bottom` y usar una sola dirección en todo el formulario para mantener la coherencia.
 
-Feel free to build your forms however you like, with `<fieldset>`s, `<div>`s, or nearly any other element.
+Siéntete libre de construir tus formularios como quieras, con `<fieldset>`s, `<div>`s, o casi cualquier otro elemento.
 
 {{< example >}}
 <div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Example label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  <label for="formGroupExampleInput" class="form-label">Etiqueta de ejemplo</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ejemplo de input placeholder">
 </div>
 <div class="mb-3">
-  <label for="formGroupExampleInput2" class="form-label">Another label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+  <label for="formGroupExampleInput2" class="form-label">Otra etiqueta</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Otro input placeholder">
 </div>
 {{< /example >}}
 
-## Form grid
+## Cuadrícula de formulario
 
-More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options. **Requires the `$enable-grid-classes` Sass variable to be enabled** (on by default).
+Se pueden construir formularios más complejos utilizando nuestras clases de cuadrícula. Utilízalos para diseños de formularios que requieran varias columnas, anchos variados y opciones de alineación adicionales. **Requiere que la variable Sass `$enable-grid-classes` esté habilitada** (activada de forma predeterminada).
 
 {{< example >}}
 <div class="row">
   <div class="col">
-    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
   </div>
   <div class="col">
-    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
   </div>
 </div>
 {{< /example >}}
 
 ## Gutters
 
-By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), you can have control over the gutter width in as well the inline as block direction. **Also requires the `$enable-grid-classes` Sass variable to be enabled** (on by default).
+Al agregar [clases de modificador de gutter]({{< docsref "/layout/gutters" >}}), puede tener control sobre el ancho del gutter, así como la dirección en línea y del bloque. **También requiere que la variable Sass `$enable-grid-classes` esté habilitada** (activada de manera predeterminada).
 
 {{< example >}}
 <div class="row g-3">
   <div class="col">
-    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
   </div>
   <div class="col">
-    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
   </div>
 </div>
 {{< /example >}}
 
-More complex layouts can also be created with the grid system.
+También se pueden crear diseños más complejos con el sistema de cuadrícula.
 
 {{< example >}}
 <form class="row g-3">
@@ -72,51 +72,51 @@ More complex layouts can also be created with the grid system.
     <input type="email" class="form-control" id="inputEmail4">
   </div>
   <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
+    <label for="inputPassword4" class="form-label">Contraseña</label>
     <input type="password" class="form-control" id="inputPassword4">
   </div>
   <div class="col-12">
-    <label for="inputAddress" class="form-label">Address</label>
+    <label for="inputAddress" class="form-label">Dirección</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
+    <label for="inputAddress2" class="form-label">Dirección 2</label>
     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
   </div>
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
+    <label for="inputCity" class="form-label">Ciudad</label>
     <input type="text" class="form-control" id="inputCity">
   </div>
   <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
+    <label for="inputState" class="form-label">Estado</label>
     <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
+      <option selected>Elige...</option>
       <option>...</option>
     </select>
   </div>
   <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
+    <label for="inputZip" class="form-label">Código postal</label>
     <input type="text" class="form-control" id="inputZip">
   </div>
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="gridCheck">
       <label class="form-check-label" for="gridCheck">
-        Check me out
+        Verifícame
       </label>
     </div>
   </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
   </div>
 </form>
 {{< /example >}}
 
-## Horizontal form
+## Formularios horizontales
 
-Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls. Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls.
+Crea formularios horizontales con la cuadrícula agregando la clase `.row` para formar grupos y usando las clases `.col-*-*` para especificar el ancho de tus etiquetas y controles. Asegúrate de agregar `.col-form-label` a tus `<label>`s también para que estén centrados verticalmente con tus controles de formulario asociados.
 
-At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
+A veces, es posible que necesites utilizar utilidades de margen o padding para crear la alineación perfecta que necesitas. Por ejemplo, hemos eliminado el `padding-top` en nuestra etiqueta de entradas de radio apiladas para alinear mejor la línea de base del texto.
 
 {{< example >}}
 <form>
@@ -127,7 +127,7 @@ At times, you maybe need to use margin or padding utilities to create that perfe
     </div>
   </div>
   <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
     <div class="col-sm-10">
       <input type="password" class="form-control" id="inputPassword3">
     </div>
@@ -138,19 +138,19 @@ At times, you maybe need to use margin or padding utilities to create that perfe
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
         <label class="form-check-label" for="gridRadios1">
-          First radio
+          Primer radio
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
         <label class="form-check-label" for="gridRadios2">
-          Second radio
+          Segundo radio
         </label>
       </div>
       <div class="form-check disabled">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
         <label class="form-check-label" for="gridRadios3">
-          Third disabled radio
+          Tercer radio desactivado
         </label>
       </div>
     </div>
@@ -160,18 +160,18 @@ At times, you maybe need to use margin or padding utilities to create that perfe
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="gridCheck1">
         <label class="form-check-label" for="gridCheck1">
-          Example checkbox
+          Ejemplo de checkbox
         </label>
       </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Ingresar</button>
 </form>
 {{< /example >}}
 
-### Horizontal form label sizing
+### Tamaño de etiqueta de formulario horizontal
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+Asegúrate de usar `.col-form-label-sm` o `.col-form-label-lg` en tus `<label>`s o `<legend>`s para seguir correctamente el tamaño de `.form-control-lg` y `.form-control-sm`.
 
 {{< example >}}
 <div class="row mb-3">
@@ -194,20 +194,20 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 </div>
 {{< /example >}}
 
-## Column sizing
+## Tamaño de columna
 
-As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-sm-7`.
+Como se muestra en los ejemplos anteriores, nuestro sistema de cuadrícula te permite colocar cualquier cantidad de `.col`s dentro de una `.row`. Dividirán el ancho disponible en partes iguales entre ellos. También puedes elegir un subconjunto de tus columnas para que ocupe más o menos espacio, mientras que los `.col`s restantes dividen el resto por igual, con clases de columnas específicas como `.col-sm-7`.
 
 {{< example >}}
 <div class="row g-3">
   <div class="col-sm-7">
-    <input type="text" class="form-control" placeholder="City" aria-label="City">
+    <input type="text" class="form-control" placeholder="Ciudad" aria-label="Ciudad">
   </div>
   <div class="col-sm">
-    <input type="text" class="form-control" placeholder="State" aria-label="State">
+    <input type="text" class="form-control" placeholder="Estado" aria-label="Estado">
   </div>
   <div class="col-sm">
-    <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
+    <input type="text" class="form-control" placeholder="Código postal" aria-label="Código postal">
   </div>
 </div>
 {{< /example >}}
@@ -219,98 +219,98 @@ The example below uses a flexbox utility to vertically center the contents and c
 {{< example >}}
 <form class="row gy-2 gx-3 align-items-center">
   <div class="col-auto">
-    <label class="visually-hidden" for="autoSizingInput">Name</label>
+    <label class="visually-hidden" for="autoSizingInput">Nombre</label>
     <input type="text" class="form-control" id="autoSizingInput" placeholder="Jane Doe">
   </div>
   <div class="col-auto">
-    <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
+    <label class="visually-hidden" for="autoSizingInputGroup">Nombre de usuario</label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+      <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nombre de usuario">
     </div>
   </div>
   <div class="col-auto">
-    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+    <label class="visually-hidden" for="autoSizingSelect">Preferencia</label>
     <select class="form-select" id="autoSizingSelect">
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option selected>Elige...</option>
+      <option value="1">Uno</option>
+      <option value="2">Dos</option>
+      <option value="3">Tres</option>
     </select>
   </div>
   <div class="col-auto">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="autoSizingCheck">
       <label class="form-check-label" for="autoSizingCheck">
-        Remember me
+        Recuérdame
       </label>
     </div>
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </div>
 </form>
 {{< /example >}}
 
-You can then remix that once again with size-specific column classes.
+Luego puedes mezclar esto una vez más con clases de columna de tamaño específico.
 
 {{< example >}}
 <form class="row gx-3 gy-2 align-items-center">
   <div class="col-sm-3">
-    <label class="visually-hidden" for="specificSizeInputName">Name</label>
+    <label class="visually-hidden" for="specificSizeInputName">Nombre</label>
     <input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
   </div>
   <div class="col-sm-3">
-    <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+    <label class="visually-hidden" for="specificSizeInputGroupUsername">Nombre de usuario</label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username">
+      <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Nombre de usuario">
     </div>
   </div>
   <div class="col-sm-3">
-    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+    <label class="visually-hidden" for="specificSizeSelect">Preferencia</label>
     <select class="form-select" id="specificSizeSelect">
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option selected>Elige...</option>
+      <option value="1">Uno</option>
+      <option value="2">Dos</option>
+      <option value="3">Tres</option>
     </select>
   </div>
   <div class="col-auto">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
       <label class="form-check-label" for="autoSizingCheck2">
-        Remember me
+        Recuérdame
       </label>
     </div>
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </div>
 </form>
 {{< /example >}}
 
-## Inline forms
+## Formularios en línea
 
-Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), we'll have gutters in horizontal and vertical directions. On narrow mobile viewports, the `.col-12` helps stack the form controls and more. The `.align-items-center` aligns the form elements to the middle, making the `.form-checkbox` align properly.
+Usa las clases `.row-cols-*` para crear diseños horizontales responsive. Al agregar [clases de modificadores de gutters]({{< docsref "/layout/gutters" >}}), tendremos gutters en direcciones horizontales y verticales. En viewports móviles estrechos, `.col-12` ayuda a apilar los controles de formulario y más. `.align-items-center` alinea los elementos del formulario en el medio, haciendo que `.form-checkbox` se alinee correctamente.
 
 {{< example >}}
 <form class="row row-cols-lg-auto g-3 align-items-center">
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
+    <label class="visually-hidden" for="inlineFormInputGroupUsername">Nombre de usuario</label>
     <div class="input-group">
       <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nombre de usuario">
     </div>
   </div>
 
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+    <label class="visually-hidden" for="inlineFormSelectPref">Preferencia</label>
     <select class="form-select" id="inlineFormSelectPref">
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option selected>Elige...</option>
+      <option value="1">Uno</option>
+      <option value="2">Dos</option>
+      <option value="3">Tres</option>
     </select>
   </div>
 
@@ -318,13 +318,13 @@ Use the `.row-cols-*` classes to create responsive horizontal layouts. By adding
     <div class="form-check">
       <input class="form-check-input" type="checkbox" id="inlineFormCheck">
       <label class="form-check-label" for="inlineFormCheck">
-        Remember me
+        Recuérdame
       </label>
     </div>
   </div>
 
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </div>
 </form>
 {{< /example >}}

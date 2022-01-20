@@ -1085,8 +1085,8 @@ describe('Dropdown', () => {
         '  <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>',
         '  <div class="dropdown-menu">',
         '    <select>',
-        '      <option selected>Open this select menu</option>',
-        '      <option value="1">One</option>',
+        '      <option selected>Abre este menú</option>',
+        '      <option value="1">Uno</option>',
         '    </select>',
         '  </div>',
         '</div>'

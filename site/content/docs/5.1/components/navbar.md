@@ -257,7 +257,7 @@ Input groups work, too. If your navbar is an entire form, or mostly a form, you 
   <form class="container-fluid">
     <div class="input-group">
       <span class="input-group-text" id="basic-addon1">@</span>
-      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      <input type="text" class="form-control" placeholder="Nombre de usuario" aria-label="Nombre de usuario" aria-describedby="basic-addon1">
     </div>
   </form>
 </nav>

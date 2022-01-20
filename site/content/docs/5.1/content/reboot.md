@@ -297,7 +297,7 @@ Estos cambios, y más, se muestran a continuación.
     <p>
       <label for="select">Ejemplo de select</label>
       <select id="select">
-        <option value="">Choose...</option>
+        <option value="">Elige...</option>
         <optgroup label="Option group 1">
           <option value="">Option 1</option>
           <option value="">Option 2</option>

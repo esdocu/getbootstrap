@@ -93,13 +93,13 @@
     - title: Range
       es_title: Rango
     - title: Input group
-      es_title: Input group
+      es_title: Grupo de inputs
     - title: Floating labels
-      es_title: Floating labels
+      es_title: Etiquetas flotantes
     - title: Layout
       es_title: Layout
     - title: Validation
-      es_title: Validation
+      es_title: Validación
 
 - title: Components
   es_title: Componentes
