@@ -1,162 +1,162 @@
 ---
 layout: docs
-title: Forms
-description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
+title: Formularios
+description: Ejemplos y pautas de uso para los estilos de controles de formulario, opciones de diseño y componentes personalizados para crear una amplia variedad de formularios.
 group: forms
 toc: true
 aliases: "/docs/5.1/forms/"
 sections:
   - title: Form control
-    es_title: Form control
-    description: Style textual inputs and textareas with support for multiple states.
+    es_title: Controles de Formulario
+    description: Estiliza entradas de texto y áreas de texto con soporte para múltiples estados.    
   - title: Select
-    es_title: Select
-    description: Improve browser default select elements with a custom initial appearance.
+    es_title: Select    
+    description: Mejora los elementos select predeterminados del navegador con una apariencia inicial personalizada.
   - title: Checks & radios
-    es_title: Checks & radios
-    description: Use our custom radio buttons and checkboxes in forms for selecting input options.
+    es_title: Checks & radios    
+    description: Utiliza nuestros botones de radio personalizados y casillas de verificación en formularios para seleccionar opciones de entrada.
   - title: Range
-    es_title: Range
-    description: Replace browser default range inputs with our custom version.
+    es_title: Rangos
+    description: Reemplaza las entradas de rango predeterminadas del navegador con nuestra versión personalizada.
   - title: Input group
     es_title: Input group
-    description: Attach labels and buttons to your inputs for increased semantic value.
+    description: Adjunta etiquetas y botones a sus inputs para aumentar el valor semántico.
   - title: Floating labels
-    es_title: Floating labels
-    description: Create beautifully simple form labels that float over your input fields.
+    es_title: Etiquetas flotantes
+    description: Crea etiquetas de formulario hermosamente simples que floten sobre tus campos de entrada.
   - title: Layout
-    es_title: Layout
-    description: Create inline, horizontal, or complex grid-based layouts with your forms.
+    es_title: Layout    
+    description: Crea diseños en línea, horizontales o basados en cuadrículas complejas con tus formularios.
   - title: Validation
-    es_title: Validation
-    description: Validate your forms with custom or native validation behaviors and styles.
+    es_title: Validación
+    description: Valida tus formularios con estilos y comportamientos de validación nativos o personalizados.
 ---
 
-## Overview
+## Descripción general
 
-Bootstrap's form controls expand on [our Rebooted form styles]({{< docsref "/content/reboot#forms" >}}) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices.
+Los controles de formulario de Bootstrap se expanden en [nuestros estilos de formulario reiniciados]({{< docsref "/content/reboot#forms" >}}) con clases. Usa estas clases para optar por tus pantallas personalizadas para una representación más consistente en todos los navegadores y dispositivos.
 
-Be sure to use an appropriate `type` attribute on all inputs (e.g., `email` for email address or `number` for numerical information) to take advantage of newer input controls like email verification, number selection, and more.
+Asegúrate de utilizar un atributo `type` apropiado en todas las entradas (por ejemplo, `email` para las direcciones de correo electrónico o `number` para información numérica) para aprovechar los controles de entrada más nuevos, como la verificación de correo electrónico, la selección de números y más.
 
-Here's a quick example to demonstrate Bootstrap's form styles. Keep reading for documentation on required classes, form layout, and more.
+Aquí hay un ejemplo rápido para demostrar los estilos de formulario de Bootstrap. Sigue leyendo para obtener documentación sobre las clases requeridas, el diseño de formularios y más.
 
 {{< example >}}
 <form>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
     <input type="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <label class="form-check-label" for="exampleCheck1">Verificado</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 {{< /example >}}
 
-## Form text
+## Textos de formulario
 
-Block-level or inline-level form text can be created using `.form-text`.
+Textos de formulario a nivel de bloque o en línea se pueden crear usando `.form-text`.
 
 {{< callout warning >}}
-##### Associating form text with form controls
+##### Asociación de textos de formulario con controles de formulario
 
-Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
+Los textos de formulario deben asociarse explícitamente con el control del formulario al que se relacionan mediante el atributo `aria-describedby`. Esto garantizará que las tecnologías de asistencia, como los lectores de pantalla, anuncien el texto de este formulario cuando el usuario lo enfoca o ingresa al control.
 {{< /callout >}}
 
-Form text below inputs can be styled with `.form-text`. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
+El texto debajo de los inputs se puede estilizar con `.form-text`. Si se utiliza un elemento a nivel de bloque, se agrega un margen superior para facilitar el espaciado de los imputs anteriores.
 
 {{< example >}}
-<label for="inputPassword5" class="form-label">Password</label>
+<label for="inputPassword5" class="form-label">Contraseña</label>
 <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
 <div id="passwordHelpBlock" class="form-text">
-  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+  Tu contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener espacios, caracteres especiales ni emoji.
 </div>
 {{< /example >}}
 
-Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
+Textos en línea pueden usar cualquier elemento HTML en línea típico (ya sea `<span>`, `<small>` o cualquier otro) con nada más que la clase `.form-text`.
 
 {{< example >}}
 <div class="row g-3 align-items-center">
   <div class="col-auto">
-    <label for="inputPassword6" class="col-form-label">Password</label>
+    <label for="inputPassword6" class="col-form-label">Contraseña</label>
   </div>
   <div class="col-auto">
     <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
   </div>
   <div class="col-auto">
     <span id="passwordHelpInline" class="form-text">
-      Must be 8-20 characters long.
+      Debe tener entre 8 y 20 caracteres.
     </span>
   </div>
 </div>
 {{< /example >}}
 
-## Disabled forms
+## Formularios deshabilitados
 
-Add the `disabled` boolean attribute on an input to prevent user interactions and make it appear lighter.
+Agrega el atributo booleano `disabled` en un input para evitar interacciones del usuario y hacer que parezca más claro.
 
 ```html
-<input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+<input class="form-control" id="disabledInput" type="text" placeholder="Entrada deshabilitada..." disabled>
 ```
 
-Add the `disabled` attribute to a `<fieldset>` to disable all the controls within. Browsers treat all native form controls (`<input>`, `<select>`, and `<button>` elements) inside a `<fieldset disabled>` as disabled, preventing both keyboard and mouse interactions on them.
+Agrega el atributo `disabled` a un `<fieldset>` para deshabilitar todos los controles en su interior. Los navegadores tratan todos los controles de formulario nativos (elementos `<input>`, `<select>` y `<button>`) dentro de un `<fieldset disabled>` como deshabilitados, lo que impide que interactúen con ellos tanto con el teclado como con el mouse.
 
-However, if your form also includes custom button-like elements such as `<a class="btn btn-*">...</a>`, these will only be given a style of `pointer-events: none`, meaning they are still focusable and operable using the keyboard. In this case, you must manually modify these controls by adding `tabindex="-1"` to prevent them from receiving focus and `aria-disabled="disabled"` to signal their state to assistive technologies.
+Sin embargo, si tu formulario también incluye elementos personalizados similares a botones como `<a class="btn btn-*">...</a>`, estos solo tendrán un estilo de `pointer-events: none` , lo que significa que aún se podrán enfocar y operar con el teclado. En este caso, debes modificar manualmente estos controles agregando `tabindex="-1"` para evitar que reciban atención y `aria-disabled="disabled"` para señalar su estado a las tecnologías de asistencia.
 
 {{< example >}}
 <form>
   <fieldset disabled>
-    <legend>Disabled fieldset example</legend>
+    <legend>Ejemplo de fieldset deshabilitado</legend>
     <div class="mb-3">
-      <label for="disabledTextInput" class="form-label">Disabled input</label>
-      <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+      <label for="disabledTextInput" class="form-label">Input deshabilitado</label>
+      <input type="text" id="disabledTextInput" class="form-control" placeholder="Input deshabilitado">
     </div>
     <div class="mb-3">
-      <label for="disabledSelect" class="form-label">Disabled select menu</label>
+      <label for="disabledSelect" class="form-label">Select menu deshabilitado</label>
       <select id="disabledSelect" class="form-select">
-        <option>Disabled select</option>
+        <option>Select deshabilitado</option>
       </select>
     </div>
     <div class="mb-3">
       <div class="form-check">
         <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
         <label class="form-check-label" for="disabledFieldsetCheck">
-          Can't check this
+          No puedes verificar esto
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </fieldset>
 </form>
 {{< /example >}}
 
-## Accessibility
+## Accesibilidad
 
-Ensure that all form controls have an appropriate accessible name so that their purpose can be conveyed to users of assistive technologies. The simplest way to achieve this is to use a `<label>` element, or—in the case of buttons—to include sufficiently descriptive text as part of the `<button>...</button>` content.
+Asegúrate de que todos los controles de formulario tengan un nombre accesible adecuado para que su propósito pueda transmitirse a los usuarios de tecnologías de asistencia. La forma más sencilla de lograr esto es usar un elemento `<label>` o, en el caso de los botones, incluir texto suficientemente descriptivo como parte del contenido `<button>...</button>`.
 
-For situations where it's not possible to include a visible `<label>` or appropriate text content, there are alternative ways of still providing an accessible name, such as:
+Para situaciones en las que no es posible incluir una `<label>` visible o contenido de texto apropiado, existen formas alternativas de proporcionar un nombre accesible, como:
 
-- `<label>` elements hidden using the `.visually-hidden` class
-- Pointing to an existing element that can act as a label using `aria-labelledby`
-- Providing a `title` attribute
-- Explicitly setting the accessible name on an element using `aria-label`
+- Elementos `<label>` ocultos usando la clase `.visually-hidden`
+- Apuntando a un elemento existente que puede actuar como una etiqueta usando `aria-labelledby`
+- Proporcionar un atributo `title`
+- Establecer explícitamente el nombre accesible en un elemento usando `aria-label`
 
-If none of these are present, assistive technologies may resort to using the `placeholder` attribute as a fallback for the accessible name on `<input>` and `<textarea>` elements. The examples in this section provide a few suggested, case-specific approaches.
+Si ninguno de estos están presentes, las tecnologías de asistencia pueden recurrir al uso del atributo `placeholder` como respaldo para el nombre accesible en los elementos `<input>` y `<textarea>`. Los ejemplos de esta sección proporcionan algunos enfoques sugeridos para casos específicos.
 
-While using visually hidden content (`.visually-hidden`, `aria-label`, and even `placeholder` content, which disappears once a form field has content) will benefit assistive technology users, a lack of visible label text may still be problematic for certain users. Some form of visible label is generally the best approach, both for accessibility and usability.
+Si bien el uso de contenido visualmente oculto (`.visually-hidden`, `aria-label` e incluso `placeholder`, que desaparece una vez que un campo de formulario tiene contenido) beneficiará a los usuarios de tecnología de asistencia, la falta de texto de etiqueta visible aún puede ser un problema. problemático para ciertos usuarios. Alguna forma de etiqueta visible es generalmente el mejor enfoque, tanto para la accesibilidad como para la usabilidad.
 
 ## Sass
 
-Many form variables are set at a general level to be re-used and extended by individual form components. You'll see these most often as `$input-btn-*` and `$input-*` variables.
+Muchas variables de formulario se establecen en un nivel general para ser reutilizadas y ampliadas por componentes de formulario individuales. Las verás con más frecuencia como variables `$input-btn-*` y `$input-*`.
 
 ### Variables
 
-`$input-btn-*` variables are shared global variables between our [buttons]({{< docsref "/components/buttons" >}}) and our form components. You'll find these frequently reassigned as values to other component-specific variables.
+Las variables `$input-btn-*` son variables globales compartidas entre nuestros [botones]({{< docsref "/components/buttons" >}}) y nuestros componentes de formulario. Encontrarás que estos se reasignan con frecuencia como valores a otras variables específicas de componentes.
 
 {{< scss-docs name="input-btn-variables" file="scss/_variables.scss" >}}
