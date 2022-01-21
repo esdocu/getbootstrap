@@ -1,34 +1,34 @@
 ---
 layout: docs
 title: Close button
-description: A generic close button for dismissing content like modals and alerts.
+description: Un botón de cierre genérico para descartar contenido como modals y alerts.
 group: components
 toc: true
 ---
 
-## Example
+## Ejemplo
 
-Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `background-image`. **Be sure to include text for screen readers**, as we've done with `aria-label`.
-
-{{< example >}}
-<button type="button" class="btn-close" aria-label="Close"></button>
-{{< /example >}}
-
-## Disabled state
-
-Disabled close buttons change their `opacity`. We've also applied `pointer-events: none` and `user-select: none` to preventing hover and active states from triggering.
+Proporciona una opción para descartar o cerrar un componente con `.btn-close`. El estilo predeterminado es limitado, pero altamente personalizable. Modifica las variables de Sass para reemplazar la `background-image` predeterminada. **Asegúrate de incluir texto para lectores de pantalla**, como hemos hecho con `aria-label`.
 
 {{< example >}}
-<button type="button" class="btn-close" disabled aria-label="Close"></button>
+<button type="button" class="btn-close" aria-label="Cerrar"></button>
 {{< /example >}}
 
-## White variant
+## Estado deshabilitado
 
-Change the default `.btn-close` to be white with the `.btn-close-white` class. This class uses the `filter` property to invert the `background-image`.
+Los botones de cierre deshabilitados cambian su `opacity`. También hemos aplicado `pointer-events: none` y `user-select: none` para evitar que se activen los estados *active* y *hover*.
+
+{{< example >}}
+<button type="button" class="btn-close" disabled aria-label="Cerrar"></button>
+{{< /example >}}
+
+## Variante clara
+
+Cambia el `.btn-close` predeterminado para que sea blanco con la clase `.btn-close-white`. Esta clase usa la propiedad `filter` para invertir la `background-image`.
 
 {{< example class="bg-dark" >}}
-<button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
-<button type="button" class="btn-close btn-close-white" disabled aria-label="Close"></button>
+<button type="button" class="btn-close btn-close-white" aria-label="Cerrar"></button>
+<button type="button" class="btn-close btn-close-white" disabled aria-label="Cerrar"></button>
 {{< /example >}}
 
 ## Sass
