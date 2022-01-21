@@ -237,7 +237,7 @@ Use our handful of [available sizing utilities]({{< docsref "/utilities/sizing" 
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Button</a>
+    <a href="#" class="btn btn-primary">Botón</a>
   </div>
 </div>
 
@@ -245,7 +245,7 @@ Use our handful of [available sizing utilities]({{< docsref "/utilities/sizing" 
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Button</a>
+    <a href="#" class="btn btn-primary">Botón</a>
   </div>
 </div>
 {{< /example >}}
