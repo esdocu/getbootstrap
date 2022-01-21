@@ -1,89 +1,89 @@
 ---
 layout: docs
 title: Cards
-description: Bootstrap's cards provide a flexible and extensible content container with multiple variants and options.
+description: Las tarjetas de Bootstrap brindan un contenedor de contenido flexible y extensible con múltiples variantes y opciones.
 group: components
 toc: true
 ---
 
-## About
+## ¿Qué es una tarjeta?
 
-A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+Una **tarjeta** es un contenedor de contenido flexible y extensible. Incluye opciones para encabezados y pies de página, una amplia variedad de contenido, colores de fondo contextuales y potentes opciones de visualización. Si estás familiarizado con Bootstrap 3, las tarjetas reemplazan nuestros viejos panels, wells y thumbnails. Una funcionalidad similar a esos componentes está disponible como clases modificadoras para tarjetas.
 
-## Example
+## Ejemplo
 
-Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no `margin` by default, so use [spacing utilities]({{< docsref "/utilities/spacing" >}}) as needed.
+Las tarjetas se construyen con la menor cantidad de marcado y estilos posible, pero aun así logran ofrecer una tonelada de control y personalización. Construidos con flexbox, ofrecen una fácil alineación y se combinan bien con otros componentes de Bootstrap. No tienen `margin` por defecto, así que usa [utilidades de espaciado]({{< docsref "/utilities/spacing" >}}) según sea necesario.
 
-Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various [sizing options](#sizing).
+A continuación se muestra un ejemplo de una tarjeta básica con contenido mixto y un ancho fijo. Las tarjetas no tienen un ancho fijo para comenzar, por lo que naturalmente llenarán todo el ancho de su elemento padre. Esto se puede personalizar fácilmente con nuestras diversas [opciones de tamaño](#sizing).
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+  {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 {{< /example >}}
 
-## Content types
+## Tipos de contenido
 
-Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what's supported.
+Las tarjetas admiten una amplia variedad de contenido, incluidas imágenes, texto, grupos de listas, enlaces y más. A continuación se muestran ejemplos de lo que se admite.
 
-### Body
+### Cuerpo
 
-The building block of a card is the `.card-body`. Use it whenever you need a padded section within a card.
+El componente básico de una tarjeta es `.card-body`. Úsalo siempre que necesites una sección con padding dentro de una tarjeta.
 
 {{< example >}}
 <div class="card">
   <div class="card-body">
-    This is some text within a card body.
+    Este es un texto dentro del cuerpo de una tarjeta.
   </div>
 </div>
 {{< /example >}}
 
-### Titles, text, and links
+### Títulos, texto y enlaces
 
-Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to an `<a>` tag.
+Los títulos de las cartas se usan agregando `.card-title` a una etiqueta `<h*>`. De la misma manera, los enlaces se agregan y colocan uno al lado del otro agregando `.card-link` a una etiqueta `<a>`.
 
-Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-body` item, the card title and subtitle are aligned nicely.
+Los subtítulos se usan agregando un `.card-subtitle` a una etiqueta `<h*>`. Si los elementos `.card-title` y `.card-subtitle` se colocan en un elemento `.card-body`, el título y el subtítulo de la tarjeta se alinearán muy bien.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Subtítulo de la tarjeta</h6>
+    <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
+    <a href="#" class="card-link">Enlace de tarjeta</a>
+    <a href="#" class="card-link">Otro enlace</a>
   </div>
 </div>
 {{< /example >}}
 
-### Images
+### Imágenes
 
-`.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
+`.card-img-top` coloca una imagen en la parte superior de la tarjeta. Con `.card-text`, se puede agregar texto a la tarjeta. El texto dentro de `.card-text` también se puede diseñar con las etiquetas HTML estándar.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+  {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
   <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
   </div>
 </div>
 {{< /example >}}
 
 ### List groups
 
-Create lists of content in a card with a flush list group.
+Crea listas de contenido en una tarjeta con un grupo de listas flush.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">Un elemento</li>
+    <li class="list-group-item">Un segundo elemento<//li>
+    <li class="list-group-item">Un tercer elemento<//li>
   </ul>
 </div>
 {{< /example >}}
@@ -91,12 +91,12 @@ Create lists of content in a card with a flush list group.
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <div class="card-header">
-    Featured
+    Destacado
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">Un elemento</li>
+    <li class="list-group-item">Un segundo elemento<//li>
+    <li class="list-group-item">Un tercer elemento<//li>
   </ul>
 </div>
 {{< /example >}}
@@ -104,65 +104,65 @@ Create lists of content in a card with a flush list group.
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">Un elemento</li>
+    <li class="list-group-item">Un segundo elemento<//li>
+    <li class="list-group-item">Un tercer elemento<//li>
   </ul>
   <div class="card-footer">
-    Card footer
+    Pie de tarjeta
   </div>
 </div>
 {{< /example >}}
 
 ### Kitchen sink
 
-Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card.
+Mezcla y combina múltiples tipos de contenido para crear la tarjeta que necesitas, o coloca todo allí. A continuación se muestran estilos de imagen, bloques, estilos de texto y un grupo de listas, todo incluido en una tarjeta de ancho fijo.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+  {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">Un elemento</li>
+    <li class="list-group-item">Un segundo elemento<//li>
+    <li class="list-group-item">Un tercer elemento<//li>
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <a href="#" class="card-link">Enlace de tarjeta</a>
+    <a href="#" class="card-link">Otro enlace</a>
   </div>
 </div>
 {{< /example >}}
 
-### Header and footer
+### Encabezado y pié de página
 
-Add an optional header and/or footer within a card.
+Agrega un encabezado y/o pie de página opcional dentro de una tarjeta.
 
 {{< example >}}
 <div class="card">
   <div class="card-header">
-    Featured
+    Destacado
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Tratamiento especial del título</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 {{< /example >}}
 
-Card headers can be styled by adding `.card-header` to `<h*>` elements.
+Los encabezados de las tarjetas se pueden diseñar agregando `.card-header` a los elementos `<h*>`.
 
 {{< example >}}
 <div class="card">
-  <h5 class="card-header">Featured</h5>
+  <h5 class="card-header">Destacado</h5>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Tratamiento especial del título</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 {{< /example >}}
@@ -170,12 +170,12 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 {{< example >}}
 <div class="card">
   <div class="card-header">
-    Quote
+    Cita
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
-      <p>A well-known quote, contained in a blockquote element.</p>
-      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      <p>Una cita conocida, contenida en un elemento blockquote.</p>
+      <footer class="blockquote-footer">Alguien famoso en <cite title="Título de la fuente">Título de la fuente</cite></footer>
     </blockquote>
   </div>
 </div>
@@ -184,139 +184,139 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 {{< example >}}
 <div class="card text-center">
   <div class="card-header">
-    Featured
+    Destacado
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Tratamiento especial del título</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
   <div class="card-footer text-muted">
-    2 days ago
+    Hace 2 días
   </div>
 </div>
 {{< /example >}}
 
-## Sizing
+## Dimensionamiento
 
-Cards assume no specific `width` to start, so they'll be 100% wide unless otherwise stated. You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities.
+Las tarjetas no asumen un `width` específico para comenzar, por lo que tendrán un 100% de ancho a menos que se indique lo contrario. Puedes cambiar esto según sea necesario con CSS personalizado, clases de cuadrícula, mixins Sass de cuadrícula o utilidades.
 
-### Using grid markup
+### Uso de marcado de cuadrícula
 
-Using the grid, wrap cards in columns and rows as needed.
+Usando la cuadrícula, envuelve las tarjetas en columnas y filas según sea necesario.
 
 {{< example >}}
 <div class="row">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Tratamiento especial del título</h5>
+        <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+        <a href="#" class="btn btn-primary">Ir a algún lugar</a>
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">Tratamiento especial del título</h5>
+        <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+        <a href="#" class="btn btn-primary">Ir a algún lugar</a>
       </div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-### Using utilities
+### Uso de utilidades
 
-Use our handful of [available sizing utilities]({{< docsref "/utilities/sizing" >}}) to quickly set a card's width.
+Usa nuestro puñado de [utilidades de tamaño disponibles]({{< docsref "/utilities/sizing" >}}) para configurar rápidamente el ancho de una tarjeta.
 
 {{< example >}}
 <div class="card w-75">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
     <a href="#" class="btn btn-primary">Botón</a>
   </div>
 </div>
 
 <div class="card w-50">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
     <a href="#" class="btn btn-primary">Botón</a>
   </div>
 </div>
 {{< /example >}}
 
-### Using custom CSS
+### Uso de CSS personalizado
 
-Use custom CSS in your stylesheets or as inline styles to set a width.
+Usa CSS personalizado en tus hojas de estilo o como estilos en línea para establecer un ancho.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Tratamiento especial del título</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 {{< /example >}}
 
-## Text alignment
+## Alineación del texto
 
-You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{< docsref "/utilities/text#text-alignment" >}}).
+Puedes cambiar rápidamente la alineación del texto de cualquier tarjeta, en su totalidad o en partes específicas, con nuestras [clases de alineación de texto]({{< docsref "/utilities/text#text-alignment" >}}).
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Tratamiento especial del título</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 
 <div class="card text-center" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Tratamiento especial del título</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 
 <div class="card text-end" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Tratamiento especial del título</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 {{< /example >}}
 
-## Navigation
+## Navegación
 
-Add some navigation to a card's header (or block) with Bootstrap's [nav components]({{< docsref "/components/navs-tabs" >}}).
+Agrega algo de navegación al encabezado (o bloque) de una tarjeta con los [componentes de navegación]({{< docsref "/components/navs-tabs" >}}) de Bootstrap.
 
 {{< example >}}
 <div class="card text-center">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="true" href="#">Active</a>
+        <a class="nav-link active" aria-current="true" href="#">Activo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Enlace</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
+        <a class="nav-link disabled">Deshabilitado</a>
       </li>
     </ul>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Tratamiento especial del título</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 {{< /example >}}
@@ -326,73 +326,73 @@ Add some navigation to a card's header (or block) with Bootstrap's [nav componen
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link active" href="#">Activo</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Enlace</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
+        <a class="nav-link disabled">Deshabilitado</a>
       </li>
     </ul>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Tratamiento especial del título</h5>
+    <p class="card-text">Con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 {{< /example >}}
 
-## Images
+## Imágenes
 
-Cards include a few options for working with images. Choose from appending "image caps" at either end of a card, overlaying images with card content, or simply embedding the image in a card.
+Las tarjetas incluyen algunas opciones para trabajar con imágenes. Elije entre agregar "capas de imagen" en cualquiera de los extremos de una tarjeta, superponer imágenes con el contenido de la tarjeta o simplemente incrustar la imagen en una tarjeta.
 
-### Image caps
+### Capas de imágenes
 
-Similar to headers and footers, cards can include top and bottom "image caps"—images at the top or bottom of a card.
+De forma similar a los encabezados y pies de página, las tarjetas pueden incluir "capas de imágenes" en la parte superior e inferior: imágenes en la parte superior o inferior de una tarjeta.
 
 {{< example >}}
 <div class="card mb-3">
-  {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+  {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+    <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
   </div>
 </div>
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+    <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
   </div>
-  {{< placeholder width="100%" height="180" class="card-img-bottom" text="Image cap" >}}
+  {{< placeholder width="100%" height="180" class="card-img-bottom" text="Capa de imagen" >}}
 </div>
 {{< /example >}}
 
-### Image overlays
+### Superposición de imágenes
 
-Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities.
+Convierte una imagen en un fondo de tarjeta y superpon el texto de tu tarjeta. Dependiendo de la imagen, es posible que necesites o no estilos o utilidades adicionales.
 
 {{< example >}}
 <div class="card bg-dark text-white">
   {{< placeholder width="100%" height="270" class="bd-placeholder-img-lg card-img" text="Card image" >}}
   <div class="card-img-overlay">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+    <p class="card-text">Última actualización hace 3 minutos</p>
   </div>
 </div>
 {{< /example >}}
 
 {{< callout info >}}
-Note that content should not be larger than the height of the image. If content is larger than the image the content will be displayed outside the image.
+Ten en cuenta que el contenido no debe ser más grande que la altura de la imagen. Si el contenido es más grande que la imagen, el contenido se mostrará fuera de la imagen.
 {{< /callout >}}
 
 ## Horizontal
 
-Using a combination of grid and utility classes, cards can be made horizontal in a mobile-friendly and responsive way. In the example below, we remove the grid gutters with `.g-0` and use `.col-md-*` classes to make the card horizontal at the `md` breakpoint. Further adjustments may be needed depending on your card content.
+Usando una combinación de cuadrícula y clases de utilidad, las tarjetas se pueden hacer horizontales de una manera responsive y compatible con dispositivos móviles. En el siguiente ejemplo, eliminamos los gutters de la cuadrícula con `.g-0` y usamos las clases `.col-md-*` para hacer que la tarjeta sea horizontal en el breakpoint `md`. Es posible que se necesiten más ajustes según el contenido de tu tarjeta.
 
 {{< example >}}
 <div class="card mb-3" style="max-width: 540px;">
@@ -402,31 +402,31 @@ Using a combination of grid and utility classes, cards can be made horizontal in
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+        <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
       </div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Card styles
+## Estilos de tarjeta
 
-Cards include various options for customizing their backgrounds, borders, and color.
+Las tarjetas incluyen varias opciones para personalizar sus fondos, bordes y colores.
 
-### Background and color
+### Fondo y color
 
-Use [text color]({{< docsref "/utilities/colors" >}}) and [background utilities]({{< docsref "/utilities/background" >}}) to change the appearance of a card.
+Utiliza [color de texto]({{< docsref "/utilities/colors" >}}) y [utilidades de fondo]({{< docsref "/utilities/background" >}}) para cambiar la apariencia de una tarjeta.
 
 {{< example >}}
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="card{{ if .contrast_color }} text-{{ .contrast_color }}{{ else }} text-white{{ end }} bg-{{ .name }} mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
+  <div class="card-header">Encabezado</div>
   <div class="card-body">
-    <h5 class="card-title">{{ .name | title }} card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Título de tarjeta {{ .name | title }}</h5>
+    <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
   </div>
 </div>
 {{- end -}}
@@ -437,281 +437,281 @@ Use [text color]({{< docsref "/utilities/colors" >}}) and [background utilities]
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-### Border
+### Borde
 
-Use [border utilities]({{< docsref "/utilities/borders" >}}) to change just the `border-color` of a card. Note that you can put `.text-{color}` classes on the parent `.card` or a subset of the card's contents as shown below.
+Usa las [utilidades de border]({{< docsref "/utilities/borders" >}}) para cambiar solo el `borde-color` de una tarjeta. Ten en cuenta que puedes colocar las clases `.text-{color}` en la `.card` principal o en un subconjunto del contenido de la tarjeta, como se muestra a continuación.
 
 {{< example >}}
 {{< card.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="card border-{{ .name }} mb-3" style="max-width: 18rem;">
-  <div class="card-header">Header</div>
+  <div class="card-header">Encabezado</div>
   <div class="card-body{{ if not .contrast_color }} text-{{ .name }}{{ end }}">
-    <h5 class="card-title">{{ .name | title }} card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Título de la tarjeta {{ .name | title }}</h5>
+    <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
   </div>
 </div>
 {{- end -}}
 {{< /card.inline >}}
 {{< /example >}}
 
-### Mixins utilities
+### Utilidades mixins
 
-You can also change the borders on the card header and footer as needed, and even remove their `background-color` with `.bg-transparent`.
+También puedes cambiar los bordes en el encabezado y pie de página de la tarjeta según sea necesario, e incluso eliminar su `background-color` con `.bg-transparent`.
 
 {{< example >}}
 <div class="card border-success mb-3" style="max-width: 18rem;">
-  <div class="card-header bg-transparent border-success">Header</div>
+  <div class="card-header bg-transparent border-success">Encabezado</div>
   <div class="card-body text-success">
-    <h5 class="card-title">Success card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Título de tarjeta Success</h5>
+    <p class="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
   </div>
-  <div class="card-footer bg-transparent border-success">Footer</div>
+  <div class="card-footer bg-transparent border-success">Pie de tarjeta</div>
 </div>
 {{< /example >}}
 
-## Card layout
+## Layout de tarjeta
 
-In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, **these layout options are not yet responsive**.
+Además de diseñar el contenido dentro de las tarjetas, Bootstrap incluye algunas opciones para diseñar series de tarjetas. Por el momento, **estas opciones de diseño aún no son responsive**.
 
-### Card groups
+### Grupos de tarjetas
 
-Use card groups to render cards as a single, attached element with equal width and height columns. Card groups start off stacked and use `display: flex;` to become attached with uniform dimensions starting at the `sm` breakpoint.
+Usa grupos de tarjetas para representar tarjetas como un único elemento adjunto con columnas de igual ancho y alto. Los grupos de cartas comienzan apilados y usan `display: flex;` para unirse con dimensiones uniformes comenzando en el breakpoint `sm`.
 
 {{< example >}}
 <div class="card-group">
   <div class="card">
-    {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+    {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título de la tarjeta</h5>
+      <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+      <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
     </div>
   </div>
   <div class="card">
-    {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+    {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título de la tarjeta</h5>
+      <p class="card-text">Esta tarjeta tiene texto de apoyo a continuación como una introducción natural a contenido adicional.</p>
+      <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
     </div>
   </div>
   <div class="card">
-    {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+    {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Título de la tarjeta</h5>
+      <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Esta tarjeta tiene un contenido aún más largo que la primera para mostrar esa acción de igual altura.</p>
+      <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-When using card groups with footers, their content will automatically line up.
+Al usar grupos de tarjetas con pies de página, su contenido se alineará automáticamente.
 
 {{< example >}}
 <div class="card-group">
   <div class="card">
-    {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+    {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">Título de la tarjeta</h5>
+      <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Última actualización hace 3 minutos</small>
     </div>
   </div>
   <div class="card">
-    {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+    {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h5 class="card-title">Título de la tarjeta</h5>
+      <p class="card-text">Esta tarjeta tiene texto de apoyo a continuación como una introducción natural a contenido adicional.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Última actualización hace 3 minutos</small>
     </div>
   </div>
   <div class="card">
-    {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+    {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h5 class="card-title">Título de la tarjeta</h5>
+      <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Esta tarjeta tiene un contenido aún más largo que la primera para mostrar esa acción de igual altura.</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+      <small class="text-muted">Última actualización hace 3 minutos</small>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-### Grid cards
+### Tarjetas de cuadrícula
 
-Use the Bootstrap grid system and its [`.row-cols` classes]({{< docsref "/layout/grid#row-columns" >}}) to control how many grid columns (wrapped around your cards) you show per row. For example, here's `.row-cols-1` laying out the cards on one column, and `.row-cols-md-2` splitting four cards to equal width across multiple rows, from the medium breakpoint up.
+Utiliza el sistema de cuadrícula Bootstrap y sus [clases `.row-cols`]({{< docsref "/layout/grid#row-columns" >}}) para controlar cuántas columnas de cuadrícula (envueltas alrededor de tus tarjetas) muestra por hilera. Por ejemplo, aquí está `.row-cols-1` colocando las tarjetas en una columna, y `.row-cols-md-2` dividiendo cuatro tarjetas al mismo ancho en varias filas, desde el breakpoint medium hacia arriba.
 
 {{< example >}}
 <div class="row row-cols-1 row-cols-md-2 g-4">
   <div class="col">
     <div class="card">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
       </div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-Change it to `.row-cols-3` and you'll see the fourth card wrap.
+Cámbialo a `.row-cols-3` y verás el ajuste de la cuarta tarjeta.
 
 {{< example >}}
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
       </div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-When you need equal height, add `.h-100` to the cards. If you want equal heights by default, you can set `$card-height: 100%` in Sass.
+Cuando necesites la misma altura, agrega `.h-100` a las tarjetas. Si deseas alturas iguales de forma predeterminada, puedes configurar `$card-height: 100%` en Sass.
 
 {{< example >}}
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-100">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card h-100">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a short card.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta corta.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card h-100">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card h-100">
-      {{< placeholder width="100%" height="140" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="140" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más larga con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
       </div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-Just like with card groups, card footers will automatically line up.
+Al igual que con los grupos de tarjetas, los pies de página de las tarjetas se alinearán automáticamente.
 
 {{< example >}}
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class="col">
     <div class="card h-100">
-      {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">Última actualización hace 3 minutos</small>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card h-100">
-      {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta tarjeta tiene texto de apoyo a continuación como una introducción natural a contenido adicional.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">Última actualización hace 3 minutos</small>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card h-100">
-      {{< placeholder width="100%" height="180" class="card-img-top" text="Image cap" >}}
+      {{< placeholder width="100%" height="180" class="card-img-top" text="Capa de imagen" >}}
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <h5 class="card-title">Título de la tarjeta</h5>
+        <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Esta tarjeta tiene un contenido aún más largo que la primera para mostrar esa acción de igual altura.</p>
       </div>
       <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
+        <small class="text-muted">Última actualización hace 3 minutos</small>
       </div>
     </div>
   </div>
@@ -720,7 +720,7 @@ Just like with card groups, card footers will automatically line up.
 
 ### Masonry
 
-In `v4` we used a CSS-only technique to mimic the behavior of [Masonry](https://masonry.desandro.com/)-like columns, but this technique came with lots of unpleasant [side effects](https://github.com/twbs/bootstrap/pull/28922). If you want to have this type of layout in `v5`, you can just make use of Masonry plugin. **Masonry is not included in Bootstrap**, but we've made a [demo example]({{< docsref "/examples/masonry" >}}) to help you get started.
+En `v4` usamos una técnica solo de CSS para imitar el comportamiento de las columnas similares a [Masonry](https://masonry.desandro.com/), pero esta técnica vino con muchos [efectos secundarios](https://github.com/twbs/bootstrap/pull/28922) desagradables. Si deseas tener este tipo de diseño en `v5`, puedes usar el complemento Masonry. **Masonry no está incluida en Bootstrap**, pero creamos un [ejemplo de demostración]({{< docsref "/examples/masonry" >}}) para ayudarte a comenzar.
 
 ## Sass
 

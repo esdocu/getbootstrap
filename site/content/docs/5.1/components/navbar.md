@@ -48,7 +48,7 @@ Here's an example of all the sub-components included in a responsive light-theme
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Enlace</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -515,7 +515,7 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Enlace</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -529,7 +529,7 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Link</a>
+          <a class="nav-link disabled">Enlace</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -566,7 +566,7 @@ With no `.navbar-brand` shown at the smallest breakpoint:
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Enlace</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
@@ -596,7 +596,7 @@ With a brand name shown on the left and toggler on the right:
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Enlace</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
@@ -626,7 +626,7 @@ With a toggler on the left and brand name on the right:
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Enlace</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
@@ -687,7 +687,7 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Enlace</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

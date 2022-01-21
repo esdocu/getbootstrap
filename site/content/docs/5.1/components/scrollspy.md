@@ -31,7 +31,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
     <a class="navbar-brand" href="#">Navbar</a>
     <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link" href="#scrollspyHeading1">First</a>
+        <a class="nav-link" href="#scrollspyHeading1">Primero</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#scrollspyHeading2">Second</a>
@@ -66,7 +66,7 @@ Scroll the area below the navbar and watch the active class change. The dropdown
   <a class="navbar-brand" href="#">Navbar</a>
   <ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link" href="#scrollspyHeading1">First</a>
+      <a class="nav-link" href="#scrollspyHeading1">Primero</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#scrollspyHeading2">Second</a>

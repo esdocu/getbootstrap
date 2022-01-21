@@ -1,64 +1,64 @@
 ---
 layout: docs
 title: Button group
-description: Group a series of buttons together on a single line or stack them in a vertical column.
+description: Agrupa una serie de botones en una sola línea o apílalos en una columna vertical.
 group: components
 toc: true
 ---
 
-## Basic example
+## Ejemplo básico
 
-Wrap a series of buttons with `.btn` in `.btn-group`.
+Envuelve una serie de botones con `.btn` en `.btn-group`.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
+  <button type="button" class="btn btn-primary">Izquierdo</button>
+  <button type="button" class="btn btn-primary">Medio</button>
+  <button type="button" class="btn btn-primary">Derecho</button>
 </div>
 {{< /example >}}
 
 {{< callout warning >}}
-##### Ensure correct `role` and provide a label
+##### Asegurar el `role` correcto y proporcionar una etiqueta
 
-In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate `role` attribute needs to be provided. For button groups, this would be `role="group"`, while toolbars should have a `role="toolbar"`.
+Para que las tecnologías de asistencia (como los lectores de pantalla) transmitan que una serie de botones está agrupada, se debe proporcionar un atributo `role` apropiado. Para los grupos de botones, sería `role="group"`, mientras que las barras de herramientas deberían tener `role="toolbar"`.
 
-In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use `aria-label`, but alternatives such as `aria-labelledby` can also be used.
+Además, los grupos y las barras de herramientas deben recibir una etiqueta explícita, ya que, de lo contrario, la mayoría de las tecnologías de asistencia no los anunciarán, a pesar de la presencia del atributo de rol correcto. En los ejemplos proporcionados aquí, usamos `aria-label`, pero también se pueden usar alternativas como `aria-labelledby`.
 {{< /callout >}}
 
-These classes can also be added to groups of links, as an alternative to the [`.nav` navigation components]({{< docsref "/components/navs-tabs" >}}).
+Estas clases también se pueden agregar a grupos de enlaces, como alternativa a los [componentes de navegación `.nav`]({{< docsref "/components/navs-tabs" >}}).
 
 {{< example >}}
 <div class="btn-group">
-  <a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
-  <a href="#" class="btn btn-primary">Link</a>
-  <a href="#" class="btn btn-primary">Link</a>
+  <a href="#" class="btn btn-primary active" aria-current="page">Enlace activo</a>
+  <a href="#" class="btn btn-primary">Enlace</a>
+  <a href="#" class="btn btn-primary">Enlace</a>
 </div>
 {{< /example >}}
 
-## Mixed styles
+## Estilos mixtos
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-  <button type="button" class="btn btn-danger">Left</button>
-  <button type="button" class="btn btn-warning">Middle</button>
-  <button type="button" class="btn btn-success">Right</button>
+  <button type="button" class="btn btn-danger">Izquierda</button>
+  <button type="button" class="btn btn-warning">Medio</button>
+  <button type="button" class="btn btn-success">Derecha</button>
 </div>
 {{< /example >}}
 
-## Outlined styles
+## Estilos de contorno
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic outlined example">
-  <button type="button" class="btn btn-outline-primary">Left</button>
-  <button type="button" class="btn btn-outline-primary">Middle</button>
-  <button type="button" class="btn btn-outline-primary">Right</button>
+  <button type="button" class="btn btn-outline-primary">Izquierda</button>
+  <button type="button" class="btn btn-outline-primary">Medio</button>
+  <button type="button" class="btn btn-outline-primary">Derecha</button>
 </div>
 {{< /example >}}
 
-## Checkbox and radio button groups
+## Gropos de botones checkbox y radio
 
-Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/checks-radios" >}}) into a seamless looking button group.
+Combina botones similares a casillas de verificación y botones radio [botones toggle]({{< docsref "/forms/checks-radios" >}}) en un grupo de botones de apariencia perfecta.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -86,9 +86,9 @@ Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/chec
 </div>
 {{< /example >}}
 
-## Button toolbar
+## Botones toolbar
 
-Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
+Combina conjuntos de grupos de botones en barras de herramientas de botones para componentes más complejos. Usa clases de utilidad según sea necesario para espaciar grupos, botones y más.
 
 {{< example >}}
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -109,7 +109,7 @@ Combine sets of button groups into button toolbars for more complex components. 
 </div>
 {{< /example >}}
 
-Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you'll likely need some utilities though to space things properly.
+Siéntete libre de mezclar grupos de inputs con grupos de botones en tus barras de herramientas. Similar al ejemplo anterior, es probable que necesites algunas utilidades para espaciar las cosas correctamente.
 
 {{< example >}}
 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
@@ -139,27 +139,27 @@ Feel free to mix input groups with button groups in your toolbars. Similar to th
 </div>
 {{< /example >}}
 
-## Sizing
+## Dimensionamiento
 
-Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
+En lugar de aplicar clases de tamaño de botón a cada botón en un grupo, simplemente agrega `.btn-group-*` a cada `.btn-group`, incluyendo a cada uno al anidar varios grupos.
 
 <div class="bd-example">
   <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-    <button type="button" class="btn btn-outline-dark">Left</button>
-    <button type="button" class="btn btn-outline-dark">Middle</button>
-    <button type="button" class="btn btn-outline-dark">Right</button>
+    <button type="button" class="btn btn-outline-dark">Izquierda</button>
+    <button type="button" class="btn btn-outline-dark">Medio</button>
+    <button type="button" class="btn btn-outline-dark">Derecha</button>
   </div>
   <br>
   <div class="btn-group" role="group" aria-label="Default button group">
-    <button type="button" class="btn btn-outline-dark">Left</button>
-    <button type="button" class="btn btn-outline-dark">Middle</button>
-    <button type="button" class="btn btn-outline-dark">Right</button>
+    <button type="button" class="btn btn-outline-dark">Izquierda</button>
+    <button type="button" class="btn btn-outline-dark">Medio</button>
+    <button type="button" class="btn btn-outline-dark">Derecha</button>
   </div>
   <br>
   <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-    <button type="button" class="btn btn-outline-dark">Left</button>
-    <button type="button" class="btn btn-outline-dark">Middle</button>
-    <button type="button" class="btn btn-outline-dark">Right</button>
+    <button type="button" class="btn btn-outline-dark">Izquierda</button>
+    <button type="button" class="btn btn-outline-dark">Medio</button>
+    <button type="button" class="btn btn-outline-dark">Derecha</button>
   </div>
 </div>
 
@@ -169,9 +169,9 @@ Instead of applying button sizing classes to every button in a group, just add `
 <div class="btn-group btn-group-sm" role="group" aria-label="...">...</div>
 ```
 
-## Nesting
+## Anidamiento
 
-Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
+Coloca un `.btn-group` dentro de otro `.btn-group` cuando desees que los menús desplegables se mezclen con una serie de botones.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -183,16 +183,16 @@ Place a `.btn-group` within another `.btn-group` when you want dropdown menus mi
       Dropdown
     </button>
     <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
+      <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
     </ul>
   </div>
 </div>
 {{< /example >}}
 
-## Vertical variation
+## Variación vertical
 
-Make a set of buttons appear vertically stacked rather than horizontally. **Split button dropdowns are not supported here.**
+Haz que un conjunto de botones aparezcan apilados verticalmente en lugar de horizontalmente. **Los menús desplegables de botones divididos no son compatibles aquí.**
 
 <div class="bd-example">
   <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
@@ -214,8 +214,8 @@ Make a set of buttons appear vertically stacked rather than horizontally. **Spli
         Dropdown
       </button>
       <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+        <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
+        <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
       </ul>
     </div>
     <button type="button" class="btn btn-primary">Botón</button>
@@ -225,8 +225,8 @@ Make a set of buttons appear vertically stacked rather than horizontally. **Spli
         Dropdown
       </button>
       <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2">
-        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+        <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
+        <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
       </ul>
     </div>
     <div class="btn-group" role="group">
@@ -234,8 +234,8 @@ Make a set of buttons appear vertically stacked rather than horizontally. **Spli
         Dropdown
       </button>
       <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop3">
-        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+        <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
+        <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
       </ul>
     </div>
     <div class="btn-group" role="group">
@@ -243,8 +243,8 @@ Make a set of buttons appear vertically stacked rather than horizontally. **Spli
         Dropdown
       </button>
       <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop4">
-        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-        <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+        <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
+        <li><a class="dropdown-item" href="#">Enlace dropdown</a></li>
       </ul>
     </div>
   </div>

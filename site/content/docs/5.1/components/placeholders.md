@@ -18,7 +18,7 @@ In the example below, we take a typical card component and recreate it with plac
 <div class="card">
   {{< placeholder width="100%" height="180" class="card-img-top" text="false" background="#20c997" >}}
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">Título de la tarjeta</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
@@ -47,7 +47,7 @@ In the example below, we take a typical card component and recreate it with plac
   <img src="..." class="card-img-top" alt="...">
 
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">Título de la tarjeta</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>

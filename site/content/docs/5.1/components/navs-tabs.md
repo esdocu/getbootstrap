@@ -25,10 +25,10 @@ To convey the active state to assistive technologies, use the `aria-current` att
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -41,8 +41,8 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 {{< example >}}
 <nav class="nav">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link" href="#">Enlace</a>
+  <a class="nav-link" href="#">Enlace</a>
   <a class="nav-link disabled">Disabled</a>
 </nav>
 {{< /example >}}
@@ -63,10 +63,10 @@ Centered with `.justify-content-center`:
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -82,10 +82,10 @@ Right-aligned with `.justify-content-end`:
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -103,10 +103,10 @@ Stack your navigation by changing the flex item direction with the `.flex-column
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -119,8 +119,8 @@ As always, vertical navigation is possible without `<ul>`s, too.
 {{< example >}}
 <nav class="nav flex-column">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
-  <a class="nav-link" href="#">Link</a>
-  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link" href="#">Enlace</a>
+  <a class="nav-link" href="#">Enlace</a>
   <a class="nav-link disabled">Disabled</a>
 </nav>
 {{< /example >}}
@@ -135,10 +135,10 @@ Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabb
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -156,10 +156,10 @@ Take that same HTML, but use `.nav-pills` instead:
     <a class="nav-link active" aria-current="page" href="#">Active</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -180,7 +180,7 @@ Force your `.nav`'s contents to extend the full available width one of two modif
     <a class="nav-link" href="#">Much longer nav link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -194,7 +194,7 @@ When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `
 <nav class="nav nav-pills nav-fill">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
-  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link" href="#">Enlace</a>
   <a class="nav-link disabled">Disabled</a>
 </nav>
 {{< /example >}}
@@ -210,7 +210,7 @@ For equal-width elements, use `.nav-justified`. All horizontal space will be occ
     <a class="nav-link" href="#">Much longer nav link</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -224,7 +224,7 @@ Similar to the `.nav-fill` example using a `<nav>`-based navigation.
 <nav class="nav nav-pills nav-justified">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
   <a class="nav-link" href="#">Much longer nav link</a>
-  <a class="nav-link" href="#">Link</a>
+  <a class="nav-link" href="#">Enlace</a>
   <a class="nav-link disabled">Disabled</a>
 </nav>
 
@@ -237,7 +237,7 @@ If you need responsive nav variations, consider using a series of [flexbox utili
 <nav class="nav nav-pills flex-column flex-sm-row">
   <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
   <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
-  <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+  <a class="flex-sm-fill text-sm-center nav-link" href="#">Enlace</a>
   <a class="flex-sm-fill text-sm-center nav-link disabled">Disabled</a>
 </nav>
 {{< /example >}}
@@ -270,7 +270,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>
@@ -296,7 +296,7 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" href="#">Enlace</a>
   </li>
   <li class="nav-item">
     <a class="nav-link disabled">Disabled</a>

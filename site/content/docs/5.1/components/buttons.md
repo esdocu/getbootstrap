@@ -17,7 +17,7 @@ Bootstrap incluye varios estilos de botones predefinidos, cada uno con su propio
 {{- end -}}
 {{< /buttons.inline >}}
 
-<button type="button" class="btn btn-link">Link</button>
+<button type="button" class="btn btn-link">Enlace</button>
 {{< /example >}}
 
 {{< callout info >}}
@@ -35,7 +35,7 @@ Las clases `.btn` están diseñadas para usarse con el elemento `<button>`. Sin 
 Al usar clases de botón en elementos `<a>` que se usan para activar alguna funcionalidad en la página (como colapsar contenido), en lugar de vincular a nuevas páginas o secciones dentro de la página actual, estos enlaces deben recibir un `role="button "` para transmitir adecuadamente su propósito a las tecnologías de asistencia, como los lectores de pantalla.
 
 {{< example >}}
-<a class="btn btn-primary" href="#" role="button">Link</a>
+<a class="btn btn-primary" href="#" role="button">Enlace</a>
 <button class="btn btn-primary" type="submit">Botón</button>
 <input class="btn btn-primary" type="button" value="Input">
 <input class="btn btn-primary" type="submit" value="Submit">
