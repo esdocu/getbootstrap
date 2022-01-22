@@ -457,7 +457,7 @@ Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Default</a>
+    <a class="navbar-brand" href="#">Por defecto</a>
   </div>
 </nav>
 {{< /example >}}

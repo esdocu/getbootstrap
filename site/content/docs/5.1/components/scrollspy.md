@@ -314,10 +314,10 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 <table class="table">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Nombre</th>
+      <th style="width: 100px;">Tipo</th>
+      <th style="width: 50px;">Por defecto</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -348,7 +348,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>
-      <th>Description</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>

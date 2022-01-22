@@ -583,7 +583,7 @@ Modals have three optional sizes, available via modifier classes to be placed on
       <td><code>300px</code></td>
     </tr>
     <tr>
-      <td>Default</td>
+      <td>Por defecto</td>
       <td class="text-muted">None</td>
       <td><code>500px</code></td>
     </tr>
@@ -862,10 +862,10 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 <table class="table">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 50px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Nombre</th>
+      <th style="width: 50px;">Tipo</th>
+      <th style="width: 50px;">Por defecto</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -979,7 +979,7 @@ Bootstrap's modal class exposes a few events for hooking into modal functionalit
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>
-      <th>Description</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>

@@ -650,7 +650,7 @@ If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events 
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>
-      <th>Description</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>

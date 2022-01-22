@@ -16,7 +16,7 @@ Envuelve un par de elementos `<input class="form-control">` y `<label>` en `.for
   <label for="floatingInput">Correo electrónico</label>
 </div>
 <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
   <label for="floatingPassword">Contraseña</label>
 </div>
 {{< /example >}}

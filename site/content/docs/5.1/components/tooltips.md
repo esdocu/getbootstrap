@@ -172,10 +172,10 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
 <table class="table">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Nombre</th>
+      <th style="width: 100px;">Tipo</th>
+      <th style="width: 50px;">Por defecto</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -443,7 +443,7 @@ var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns
   <thead>
     <tr>
       <th style="width: 150px;">Event type</th>
-      <th>Description</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>

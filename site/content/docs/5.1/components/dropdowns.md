@@ -1,123 +1,123 @@
 ---
 layout: docs
 title: Dropdowns
-description: Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
+description: Alterna la visibilidad de superposiciones contextuales para mostrar listas de enlaces y más con el complemento desplegable Bootstrap.
 group: components
 toc: true
 ---
 
-## Overview
+## ¿Qué es Dropdown?
 
-Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Bootstrap dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
+Los menús desplegables son superposiciones contextuales que se pueden alternar (su visibilidad) para mostrar listas de enlaces y más. Se hacen interactivos con  dropdown, el complemento JavaScript incluido de Bootstrap. Se alternan al hacer clic, no al pasar el mouse; esta es [una decisión de diseño intencional](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
 
-Dropdowns are built on a third party library, [Popper](https://popper.js.org/), which provides dynamic positioning and viewport detection. Be sure to include [popper.min.js]({{< param "cdn.popper" >}}) before Bootstrap's JavaScript or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper. Popper isn't used to position dropdowns in navbars though as dynamic positioning isn't required.
+Los menús desplegables se basan en una biblioteca de terceros, [Popper](https://popper.js.org/), que proporciona posicionamiento dinámico y detección de viewport. Asegúrate de incluir [popper.min.js]({{< param "cdn.popper" >}}) antes del JavaScript de Bootstrap o usa `bootstrap.bundle.min.js` / `bootstrap.bundle.js` que contiene Popper. Popper no se usa para posicionar los menús desplegables en las barras de navegación, ya que no se requiere un posicionamiento dinámico.
 
-## Accessibility
+## Accesibilidad
 
-The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
+El estándar [<abbr title="Iniciativa de Accesibilidad Web">WAI</abbr> <abbr title="Aplicaciones Accesibles de Internet Enriquecidas">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) define un [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu) actual, pero esto es específico para menús similares a aplicaciones que activan acciones o funciones. Los menús <abbr title="Accessible Rich Internet Applications">ARIA</abbr> solo pueden contener elementos de menú, elementos de menú de casillas de verificación, elementos de menú de botones radio, grupos de botones radio y submenús.
 
-Bootstrap's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the `role` and `aria-` attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.
+Los menús desplegables de Bootstrap, por otro lado, están diseñados para ser genéricos y aplicables a una variedad de situaciones y estructuras de marcado. Por ejemplo, es posible crear menús desplegables que contengan entradas adicionales y controles de formulario, como campos de búsqueda o formularios de inicio de sesión. Por esta razón, Bootstrap no espera (ni agrega automáticamente) ninguno de los atributos `role` y `aria-` requeridos para los verdaderos menús <abbr title="Accessible Rich Internet Applications">ARIA</abbr>. Los autores tendrán que incluir ellos mismos estos atributos más específicos.
 
-However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual `.dropdown-item` elements using the cursor keys and close the menu with the <kbd>ESC</kbd> key.
+Sin embargo, Bootstrap agrega soporte incorporado para la mayoría de las interacciones estándar del menú del teclado, como la capacidad de moverse a través de elementos individuales `.dropdown-item` usando las teclas de flecha del teclado y cerrar el menú con la tecla <kbd>ESC</kbd> .
 
-## Examples
+## Ejemplos
 
-Wrap the dropdown's toggle (your button or link) and the dropdown menu within `.dropdown`, or another element that declares `position: relative;`. Dropdowns can be triggered from `<a>` or `<button>` elements to better fit your potential needs. The examples shown here use semantic `<ul>` elements where appropriate, but custom markup is supported.
+Envuelve el elemento conmutador del menú desplegable (tu botón o enlace) y el menú desplegable dentro de `.dropdown`, u otro elemento que declare `position: relative;`. Los menús desplegables se pueden activar desde los elementos `<a>` o `<button>` para adaptarse mejor a tus necesidades potenciales. Los ejemplos que se muestran aquí usan elementos semánticos `<ul>` cuando corresponde, pero se admite el marcado personalizado.
 
-### Single button
+### Botón único
 
-Any single `.btn` can be turned into a dropdown toggle with some markup changes. Here's how you can put them to work with either `<button>` elements:
+Cualquier `.btn` individual se puede convertir en un menú desplegable con algunos cambios de marcado. Así es como puedes ponerlos a trabajar con cualquiera de los elementos `<button>`:
 
 {{< example >}}
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+    Botón Dropdown
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Acción</a></li>
+    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+    <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
   </ul>
 </div>
 {{< /example >}}
 
-And with `<a>` elements:
+Y con elementos `<a>`:
 
 {{< example >}}
 <div class="dropdown">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown link
+    Enlace Dropdown
   </a>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Acción</a></li>
+    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+    <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
   </ul>
 </div>
 {{< /example >}}
 
-The best part is you can do this with any button variant, too:
+La mejor parte es que también puedes hacer esto con cualquier variante de botón:
 
 <div class="bd-example">
   <div class="btn-group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Primary</button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Secondary</button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Success</button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Info</button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Warning</button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
     <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Danger</button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
 </div>
@@ -126,23 +126,23 @@ The best part is you can do this with any button variant, too:
 <!-- Example single danger button -->
 <div class="btn-group">
   <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Action
+    Acción
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Acción</a></li>
+    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+    <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Enlace separado</a></li>
   </ul>
 </div>
 ```
 
-### Split button
+### Botón dividido
 
-Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of `.dropdown-toggle-split` for proper spacing around the dropdown caret.
+Del mismo modo, crea menús desplegables de botones divididos con prácticamente el mismo marcado que los menús desplegables de un solo botón, pero con la adición de `.dropdown-toggle-split` en el lado del botón de despliegue.
 
-We use this extra class to reduce the horizontal `padding` on either side of the caret by 25% and remove the `margin-left` that's added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
+Usamos esta clase adicional para reducir el `padding` horizontal a cada lado del símbolo de despliegue (flecha hacia abajo) en un 25% y eliminamos el `margin-left` que se agrega para los menús desplegables de botones normales. Esos cambios adicionales mantienen el símbolo de despliegue centrado en el botón de división y brindan un área de impacto de tamaño más apropiado al lado del botón principal.
 
 <div class="bd-example">
   <div class="btn-group">
@@ -151,11 +151,11 @@ We use this extra class to reduce the horizontal `padding` on either side of the
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
@@ -164,11 +164,11 @@ We use this extra class to reduce the horizontal `padding` on either side of the
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
@@ -177,11 +177,11 @@ We use this extra class to reduce the horizontal `padding` on either side of the
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
@@ -190,11 +190,11 @@ We use this extra class to reduce the horizontal `padding` on either side of the
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
@@ -203,11 +203,11 @@ We use this extra class to reduce the horizontal `padding` on either side of the
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
   <div class="btn-group">
@@ -216,11 +216,11 @@ We use this extra class to reduce the horizontal `padding` on either side of the
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div><!-- /btn-group -->
 </div>
@@ -228,48 +228,48 @@ We use this extra class to reduce the horizontal `padding` on either side of the
 ```html
 <!-- Example split danger button -->
 <div class="btn-group">
-  <button type="button" class="btn btn-danger">Action</button>
+  <button type="button" class="btn btn-danger">Acción</button>
   <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" href="#">Acción</a></li>
+    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+    <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Enlace separado</a></li>
   </ul>
 </div>
 ```
 
-## Sizing
+## Dimensionamiento
 
-Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
+Los menús desplegables de botones funcionan con botones de todos los tamaños, incluidos los botones desplegables predeterminados y divididos.
 
 <div class="bd-example">
   <div class="btn-group">
     <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Large button
+      Botón grande
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
   <div class="btn-group">
-    <button type="button" class="btn btn-lg btn-secondary">Large split button</button>
+    <button type="button" class="btn btn-lg btn-secondary">Botón grande dividido</button>
     <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
 </div>
@@ -278,7 +278,7 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 <!-- Large button groups (default and split) -->
 <div class="btn-group">
   <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Large button
+    Botón grande
   </button>
   <ul class="dropdown-menu">
     ...
@@ -286,7 +286,7 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 <div class="btn-group">
   <button class="btn btn-secondary btn-lg" type="button">
-    Large split button
+    Botón grande dividido
   </button>
   <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
@@ -300,27 +300,27 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 <div class="bd-example">
   <div class="btn-group">
     <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Small button
+      Botón pequeño
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
   <div class="btn-group">
-    <button type="button" class="btn btn-sm btn-secondary">Small split button</button>
+    <button type="button" class="btn btn-sm btn-secondary">Botón pequeño dividido</button>
     <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
 </div>
@@ -328,7 +328,7 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 ```html
 <div class="btn-group">
   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Small button
+    Botón pequeño
   </button>
   <ul class="dropdown-menu">
     ...
@@ -336,7 +336,7 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 </div>
 <div class="btn-group">
   <button class="btn btn-secondary btn-sm" type="button">
-    Small split button
+    Botón pequeño dividido
   </button>
   <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
@@ -349,24 +349,24 @@ Button dropdowns work with buttons of all sizes, including default and split dro
 
 ## Dark dropdowns
 
-Opt into darker dropdowns to match a dark navbar or custom style by adding `.dropdown-menu-dark` onto an existing `.dropdown-menu`. No changes are required to the dropdown items.
+Opta por menús desplegables más oscuros para que coincidan con una barra de navegación oscura o un estilo personalizado agregando `.dropdown-menu-dark` en un `.dropdown-menu` existente. No se requieren cambios en los elementos desplegables.
 
 {{< example >}}
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
+    Botón Dropdown
   </button>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-    <li><a class="dropdown-item active" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><a class="dropdown-item active" href="#">Acción</a></li>
+    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+    <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <li><a class="dropdown-item" href="#">Enlace separado</a></li>
   </ul>
 </div>
 {{< /example >}}
 
-And putting it to use in a navbar:
+Y ponlo en uso en una barra de navegación:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -382,9 +382,9 @@ And putting it to use in a navbar:
             Dropdown
           </a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Acción</a></li>
+            <li><a class="dropdown-item" href="#">Otra acción</a></li>
+            <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
           </ul>
         </li>
       </ul>
@@ -393,16 +393,16 @@ And putting it to use in a navbar:
 </nav>
 {{< /example >}}
 
-## Directions
+## Direcciones
 
 {{< callout info >}}
 #### RTL
-Directions are mirrored when using Bootstrap in RTL, meaning `.dropstart` will appear on the right side.
+Las direcciones se reflejan cuando se usa Bootstrap en RTL, lo que significa que `.dropstart` aparecerá en el lado derecho.
 {{< /callout >}}
 
 ### Dropup
 
-Trigger dropdown menus above elements by adding `.dropup` to the parent element.
+Activa los menús desplegables sobre los elementos agregando `.dropup` al elemento padre.
 
 <div class="bd-example">
   <div class="btn-group dropup">
@@ -410,26 +410,26 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
       Dropup
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
   <div class="btn-group dropup">
     <button type="button" class="btn btn-secondary">
-      Split dropup
+      Dropup dividido
     </button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
 </div>
@@ -448,7 +448,7 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 <!-- Split dropup button -->
 <div class="btn-group dropup">
   <button type="button" class="btn btn-secondary">
-    Split dropup
+    Dropup dividido
   </button>
   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
@@ -461,7 +461,7 @@ Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 
 ### Dropend
 
-Trigger dropdown menus at the right of the elements by adding `.dropend` to the parent element.
+Activa los menús desplegables a la derecha de los elementos agregando `.dropend` al elemento padre.
 
 <div class="bd-example">
   <div class="btn-group dropend">
@@ -469,26 +469,26 @@ Trigger dropdown menus at the right of the elements by adding `.dropend` to the 
       Dropend
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
   <div class="btn-group dropend">
     <button type="button" class="btn btn-secondary">
-      Split dropend
+      Dropend dividido
     </button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
       <span class="visually-hidden">Toggle Dropend</span>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
 </div>
@@ -507,7 +507,7 @@ Trigger dropdown menus at the right of the elements by adding `.dropend` to the 
 <!-- Split dropend button -->
 <div class="btn-group dropend">
   <button type="button" class="btn btn-secondary">
-    Split dropend
+    Dropend dividido
   </button>
   <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropend</span>
@@ -520,7 +520,7 @@ Trigger dropdown menus at the right of the elements by adding `.dropend` to the 
 
 ### Dropstart
 
-Trigger dropdown menus at the left of the elements by adding `.dropstart` to the parent element.
+Activa los menús desplegables a la izquierda de los elementos agregando `.dropstart` al elemento padre.
 
 <div class="bd-example">
   <div class="btn-group dropstart">
@@ -528,11 +528,11 @@ Trigger dropdown menus at the left of the elements by adding `.dropstart` to the
       Dropstart
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
   <div class="btn-group">
@@ -541,15 +541,15 @@ Trigger dropdown menus at the left of the elements by adding `.dropstart` to the
         <span class="visually-hidden">Toggle Dropstart</span>
       </button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="dropdown-item" href="#">Acción</a></li>
+        <li><a class="dropdown-item" href="#">Otra acción</a></li>
+        <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
+        <li><a class="dropdown-item" href="#">Enlace separado</a></li>
       </ul>
     </div>
     <button type="button" class="btn btn-secondary">
-      Split dropstart
+      Dropstart dividido
     </button>
   </div>
 </div>
@@ -576,14 +576,14 @@ Trigger dropdown menus at the left of the elements by adding `.dropstart` to the
     </ul>
   </div>
   <button type="button" class="btn btn-secondary">
-    Split dropstart
+    Dropstart dividido
   </button>
 </div>
 ```
 
-## Menu items
+## Elementos de menú
 
-You can use `<a>` or `<button>` elements as dropdown items.
+Puedes usar los elementos `<a>` o `<button>` como elementos desplegables.
 
 {{< example >}}
 <div class="dropdown">
@@ -591,110 +591,110 @@ You can use `<a>` or `<button>` elements as dropdown items.
     Dropdown
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><button class="dropdown-item" type="button">Action</button></li>
-    <li><button class="dropdown-item" type="button">Another action</button></li>
-    <li><button class="dropdown-item" type="button">Something else here</button></li>
+    <li><button class="dropdown-item" type="button">Acción</button></li>
+    <li><button class="dropdown-item" type="button">Otra acción</button></li>
+    <li><button class="dropdown-item" type="button">Algo más aqui</button></li>
   </ul>
 </div>
 {{< /example >}}
 
-You can also create non-interactive dropdown items with `.dropdown-item-text`. Feel free to style further with custom CSS or text utilities.
+También puedes crear elementos desplegables no interactivos con `.dropdown-item-text`. Siéntete libre de diseñar más con CSS personalizado o utilidades de texto.
 
 {{< example >}}
 <ul class="dropdown-menu">
-  <li><span class="dropdown-item-text">Dropdown item text</span></li>
-  <li><a class="dropdown-item" href="#">Action</a></li>
-  <li><a class="dropdown-item" href="#">Another action</a></li>
-  <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <li><span class="dropdown-item-text">Texto del elemento Dropdown</span></li>
+  <li><a class="dropdown-item" href="#">Acción</a></li>
+  <li><a class="dropdown-item" href="#">Otra acción</a></li>
+  <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
 </ul>
 {{< /example >}}
 
 ### Active
 
-Add `.active` to items in the dropdown to **style them as active**. To convey the active state to assistive technologies, use the `aria-current` attribute — using the `page` value for the current page, or `true` for the current item in a set.
+Agrega `.active` a los elementos en el menú desplegable para **mostrarlos como activos**. Para transmitir el estado active a las tecnologías de asistencia, usa el atributo `aria-current` — usando el valor `page` para la página actual, o `true` para el elemento actual en un conjunto.
 
 {{< example >}}
 <ul class="dropdown-menu">
-  <li><a class="dropdown-item" href="#">Regular link</a></li>
+  <li><a class="dropdown-item" href="#">Enlace regular</a></li>
   <li><a class="dropdown-item active" href="#" aria-current="true">Enlace activo</a></li>
-  <li><a class="dropdown-item" href="#">Another link</a></li>
+  <li><a class="dropdown-item" href="#">Otro enlace</a></li>
 </ul>
 {{< /example >}}
 
-### Disabled
+### Deshabilitado
 
-Add `.disabled` to items in the dropdown to **style them as disabled**.
+Agrega `.disabled` a los elementos en el menú desplegable para **mostrarlos como deshabilitados**.
 
 {{< example >}}
 <ul class="dropdown-menu">
-  <li><a class="dropdown-item" href="#">Regular link</a></li>
-  <li><a class="dropdown-item disabled">Disabled link</a></li>
-  <li><a class="dropdown-item" href="#">Another link</a></li>
+  <li><a class="dropdown-item" href="#">Enlace regular</a></li>
+  <li><a class="dropdown-item disabled">Enlace deshabilitado</a></li>
+  <li><a class="dropdown-item" href="#">Otro enlace</a></li>
 </ul>
 {{< /example >}}
 
-## Menu alignment
+## Alineación del menú
 
-By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. You can change this with the directional `.drop*` classes, but you can also control them with additional modifier classes.
+De forma predeterminada, un menú desplegable se coloca automáticamente al 100% desde la parte superior y a lo largo del lado izquierdo de su elemento padre. Puedes cambiar esto con las clases direccionales `.drop*`, pero también puedes controlarlas con clases modificadoras adicionales.
 
-Add `.dropdown-menu-end` to a `.dropdown-menu` to right align the dropdown menu. Directions are mirrored when using Bootstrap in RTL, meaning `.dropdown-menu-end` will appear on the left side.
+Agrega `.dropdown-menu-end` a un `.dropdown-menu` para alinear a la derecha el menú desplegable. Las direcciones se reflejan cuando se usa Bootstrap en RTL, lo que significa que `.dropdown-menu-end` aparecerá en el lado izquierdo.
 
 {{< callout info >}}
-**Heads up!** Dropdowns are positioned thanks to Popper except when they are contained in a navbar.
+**¡Cuidado!** Los menús desplegables se posicionan gracias a Popper, excepto cuando están contenidos en una barra de navegación.
 {{< /callout >}}
 
 {{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Right-aligned menu example
+    Ejemplo de menú alineado a la derecha
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
-    <li><button class="dropdown-item" type="button">Action</button></li>
-    <li><button class="dropdown-item" type="button">Another action</button></li>
-    <li><button class="dropdown-item" type="button">Something else here</button></li>
+    <li><button class="dropdown-item" type="button">Acción</button></li>
+    <li><button class="dropdown-item" type="button">Otra acción</button></li>
+    <li><button class="dropdown-item" type="button">Algo más aqui</button></li>
   </ul>
 </div>
 {{< /example >}}
 
-### Responsive alignment
+### Alineación responsive
 
-If you want to use responsive alignment, disable dynamic positioning by adding the `data-bs-display="static"` attribute and use the responsive variation classes.
+Si deseas utilizar la alineación responsive, deshabilita el posicionamiento dinámico agregando el atributo `data-bs-display="static"` y usa las clases de variación responsive.
 
-To align **right** the dropdown menu with the given breakpoint or larger, add `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end`.
+Para alinear **a la derecha** el menú desplegable con el breakpoint dado o más grande, agrea `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end`.
 
 {{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-    Left-aligned but right aligned when large screen
+    Alineado a la izquierda pero alineado a la derecha cuando la pantalla es grande
   </button>
   <ul class="dropdown-menu dropdown-menu-lg-end">
-    <li><button class="dropdown-item" type="button">Action</button></li>
-    <li><button class="dropdown-item" type="button">Another action</button></li>
-    <li><button class="dropdown-item" type="button">Something else here</button></li>
+    <li><button class="dropdown-item" type="button">Acción</button></li>
+    <li><button class="dropdown-item" type="button">Otra acción</button></li>
+    <li><button class="dropdown-item" type="button">Algo más aqui</button></li>
   </ul>
 </div>
 {{< /example >}}
 
-To align **left** the dropdown menu with the given breakpoint or larger, add `.dropdown-menu-end` and `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start`.
+Para alinear **a la izquierda** el menú desplegable con el breakpoint dado o más grande, agrega `.dropdown-menu-end` y `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start`.
 
 {{< example >}}
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-    Right-aligned but left aligned when large screen
+    Alineado a la derecha pero alineado a la izquierda cuando la pantalla es grande
   </button>
   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-    <li><button class="dropdown-item" type="button">Action</button></li>
-    <li><button class="dropdown-item" type="button">Another action</button></li>
-    <li><button class="dropdown-item" type="button">Something else here</button></li>
+    <li><button class="dropdown-item" type="button">Acción</button></li>
+    <li><button class="dropdown-item" type="button">Otra acción</button></li>
+    <li><button class="dropdown-item" type="button">Algo más aqui</button></li>
   </ul>
 </div>
 {{< /example >}}
 
-Note that you don't need to add a `data-bs-display="static"` attribute to dropdown buttons in navbars, since Popper isn't used in navbars.
+Ten en cuenta que no necesitas agregar un atributo `data-bs-display="static"` a los botones desplegables en las barras de navegación, ya que Popper no se usa en las barras de navegación.
 
-### Alignment options
+### Opciones de alineación
 
-Taking most of the options shown above, here's a small kitchen sink demo of various dropdown alignment options in one place.
+Tomando la mayoría de las opciones que se muestran arriba, aquí hay una pequeña demostración de varias opciones de alineación de dropdown en un solo lugar.
 
 {{< example >}}
 <div class="btn-group">
@@ -702,42 +702,42 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
     Dropdown
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Right-aligned menu
+    Menú alineado a la derecha
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-    Left-aligned, right-aligned lg
+    Alineado a la izquierda, alineado a la derecha lg
   </button>
   <ul class="dropdown-menu dropdown-menu-lg-end">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-    Right-aligned, left-aligned lg
+    Alineado a la derecha, alineado a la izquierda lg
   </button>
   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 
@@ -746,9 +746,9 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
     Dropstart
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 
@@ -757,9 +757,9 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
     Dropend
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 
@@ -768,112 +768,112 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
     Dropup
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 {{< /example >}}
 
-## Menu content
+## Contenido del menú
 
-### Headers
+### Encabezados
 
-Add a header to label sections of actions in any dropdown menu.
+Agrega un encabezado para etiquetar secciones de acciones en cualquier menú desplegable.
 
 {{< example >}}
 <ul class="dropdown-menu">
-  <li><h6 class="dropdown-header">Dropdown header</h6></li>
-  <li><a class="dropdown-item" href="#">Action</a></li>
-  <li><a class="dropdown-item" href="#">Another action</a></li>
+  <li><h6 class="dropdown-header">Encabezado del dropdown</h6></li>
+  <li><a class="dropdown-item" href="#">Acción</a></li>
+  <li><a class="dropdown-item" href="#">Otra acción</a></li>
 </ul>
 {{< /example >}}
 
-### Dividers
+### Divisores
 
-Separate groups of related menu items with a divider.
+Separa los grupos de elementos de menú relacionados con un divisor.
 
 {{< example >}}
 <ul class="dropdown-menu">
-  <li><a class="dropdown-item" href="#">Action</a></li>
-  <li><a class="dropdown-item" href="#">Another action</a></li>
-  <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <li><a class="dropdown-item" href="#">Acción</a></li>
+  <li><a class="dropdown-item" href="#">Otra acción</a></li>
+  <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
   <li><hr class="dropdown-divider"></li>
-  <li><a class="dropdown-item" href="#">Separated link</a></li>
+  <li><a class="dropdown-item" href="#">Enlace separado</a></li>
 </ul>
 {{< /example >}}
 
-### Text
+### Texto
 
-Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
+Coloca cualquier texto de forma libre dentro de un menú desplegable con texto y usa las [utilidades de espaciado]({{< docsref "/utilities/spacing" >}}). Ten en cuenta que probablemente necesitarás estilos de tamaño adicionales para restringir el ancho del menú.
 
 {{< example >}}
 <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
   <p>
-    Some example text that's free-flowing within the dropdown menu.
+    Algunos ejemplos de texto que fluyen libremente dentro del menú desplegable.
   </p>
   <p class="mb-0">
-    And this is more example text.
+    Y esto es más texto de ejemplo.
   </p>
 </div>
 {{< /example >}}
 
-### Forms
+### Formularios
 
-Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
+Coloca un formulario dentro de un menú desplegable, o conviértelo en un menú desplegable, y usa las [utilidades de margen o padding]({{< docsref "/utilities/spacing" >}}) para darle el espacio negativo que necesitas.
 
 {{< example >}}
 <div class="dropdown-menu">
   <form class="px-4 py-3">
     <div class="mb-3">
-      <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+      <label for="exampleDropdownFormEmail1" class="form-label">Correo electrónico</label>
       <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
     </div>
     <div class="mb-3">
-      <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+      <label for="exampleDropdownFormPassword1" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
     </div>
     <div class="mb-3">
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="dropdownCheck">
         <label class="form-check-label" for="dropdownCheck">
-          Remember me
+          Recuérdame
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
   </form>
   <div class="dropdown-divider"></div>
-  <a class="dropdown-item" href="#">New around here? Sign up</a>
-  <a class="dropdown-item" href="#">Forgot password?</a>
+  <a class="dropdown-item" href="#">¿Nuevo por aquí? Regístrate</a>
+  <a class="dropdown-item" href="#">¿Se te olvidó tu contraseña?</a>
 </div>
 {{< /example >}}
 
 {{< example >}}
 <form class="dropdown-menu p-4">
   <div class="mb-3">
-    <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+    <label for="exampleDropdownFormEmail2" class="form-label">Correo electrónico</label>
     <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
   </div>
   <div class="mb-3">
-    <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+    <label for="exampleDropdownFormPassword2" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
   </div>
   <div class="mb-3">
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="dropdownCheck2">
       <label class="form-check-label" for="dropdownCheck2">
-        Remember me
+        Recuérdame
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary">Ingresar</button>
 </form>
 {{< /example >}}
 
-## Dropdown options
+## Opciones de dropdown
 
-Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdown.
+Usa `data-bs-offset` o `data-bs-reference` para cambiar la ubicación del menú desplegable.
 
 {{< example >}}
 <div class="d-flex">
@@ -882,30 +882,30 @@ Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdo
       Offset
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
     </ul>
   </div>
   <div class="btn-group">
-    <button type="button" class="btn btn-secondary">Reference</button>
+    <button type="button" class="btn btn-secondary">Referencia</button>
     <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
       <span class="visually-hidden">Toggle Dropdown</span>
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
 </div>
 {{< /example >}}
 
-### Auto close behavior
+### Comportamiento de cierre automático
 
-By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
+De forma predeterminada, el menú desplegable se cierra al hacer clic dentro o fuera del menú desplegable. Puedes usar la opción `autoClose` para cambiar este comportamiento del menú desplegable.
 
 {{< example >}}
 <div class="btn-group">
@@ -913,42 +913,42 @@ By default, the dropdown menu is closed when clicking inside or outside the drop
     Default dropdown
   </button>
   <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 
 <div class="btn-group">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
-    Clickable outside
+    Se puede hacer clic afuera
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 
 <div class="btn-group">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-    Clickable inside
+    Se puede hacer clic en el interior
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 
 <div class="btn-group">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickable" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
-    Manual close
+    Cierre manual
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
-    <li><a class="dropdown-item" href="#">Menu item</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
+    <li><a class="dropdown-item" href="#">Opción del menú</a></li>
   </ul>
 </div>
 {{< /example >}}
@@ -957,35 +957,35 @@ By default, the dropdown menu is closed when clicking inside or outside the drop
 
 ### Variables
 
-Variables for all dropdowns:
+Variables para todos los menús desplegables:
 
 {{< scss-docs name="dropdown-variables" file="scss/_variables.scss" >}}
 
-Variables for the [dark dropdown](#dark-dropdowns):
+Variables para el [dark dropdown](#dark-dropdowns):
 
 {{< scss-docs name="dropdown-dark-variables" file="scss/_variables.scss" >}}
 
-Variables for the CSS-based carets that indicate a dropdown's interactivity:
+Variables para los símbolos de despliegue (flecha) basados en CSS que indican la interactividad de un menú desplegable:
 
 {{< scss-docs name="caret-variables" file="scss/_variables.scss" >}}
 
 ### Mixins
 
-Mixins are used to generate the CSS-based carets and can be found in `scss/mixins/_caret.scss`.
+Los mixins se utilizan para generar los símbolos de despliegue basados en CSS y se pueden encontrar en `scss/mixins/_caret.scss`.
 
 {{< scss-docs name="caret-mixins" file="scss/mixins/_caret.scss" >}}
 
-## Usage
+## Uso
 
-Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the `.show` class on the parent `.dropdown-menu`. The `data-bs-toggle="dropdown"` attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it.
+A través de atributos de datos o JavaScript, el complemento dropdown alterna el contenido oculto (menús desplegables) al alternar la clase `.show` en el `.dropdown-menu` padre. Se confía en el atributo `data-bs-toggle="dropdown"` para cerrar los menús desplegables a nivel de aplicación, por lo que es una buena idea usarlo siempre.
 
 {{< callout info >}}
-On touch-enabled devices, opening a dropdown adds empty `mouseover` handlers to the immediate children of the `<body>` element. This admittedly ugly hack is necessary to work around a [quirk in iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html), which would otherwise prevent a tap anywhere outside of the dropdown from triggering the code that closes the dropdown. Once the dropdown is closed, these additional empty `mouseover` handlers are removed.
+En los dispositivos táctiles, al abrir un menú desplegable se agregan controladores vacíos `mouseover` a los elementos secundarios inmediatos del elemento `<body>`. Este truco ciertamente feo es necesario para evitar una [peculiaridad en la delegación de eventos de iOS](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html), que de otro modo evitaría un toque en cualquier lugar fuera del menú desplegable active el código que cierra el menú desplegable. Una vez que se cierra el menú desplegable, se eliminan estos controladores "mouseover" vacíos adicionales.
 {{< /callout >}}
 
-### Via data attributes
+### A través de atributos de datos
 
-Add `data-bs-toggle="dropdown"` to a link or button to toggle a dropdown.
+Agrega `data-bs-toggle="dropdown"` a un enlace o botón para alternar un menú desplegable.
 
 ```html
 <div class="dropdown">
@@ -998,9 +998,9 @@ Add `data-bs-toggle="dropdown"` to a link or button to toggle a dropdown.
 </div>
 ```
 
-### Via JavaScript
+### A través de JavaScript
 
-Call the dropdowns via JavaScript:
+Llama a los menús desplegables a través de JavaScript:
 
 ```js
 var dropdownElementList = Array.prototype.slice.call(document.querySelectorAll('.dropdown-toggle'))
@@ -1010,22 +1010,22 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
 ```
 
 {{< callout info >}}
-##### `data-bs-toggle="dropdown"` still required
+##### `data-bs-toggle="dropdown"` todavía se requiere
 
-Regardless of whether you call your dropdown via JavaScript or instead use the data-api, `data-bs-toggle="dropdown"` is always required to be present on the dropdown's trigger element.
+Independientemente de si llamas a tu menú desplegable a través de JavaScript o en su lugar utilizas la API de datos, `data-bs-toggle="dropdown"` siempre debe estar presente en el elemento desencadenante del menú desplegable.
 {{< /callout >}}
 
-### Options
+### Opciones
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-offset=""`. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using `data-bs-autoClose="false"`, use `data-bs-auto-close="false"`.
+Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega el nombre de la opción a `data-bs-`, como en `data-bs-offset=""`. Asegúrate de cambiar el tipo de caso del nombre de la opción de camelCase a kebab-case al pasar las opciones a través de atributos de datos. Por ejemplo, en lugar de usar `data-bs-autoClose="false"`, usa `data-bs-auto-close="false"`.
 
 <table class="table">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Nombre</th>
+      <th style="width: 100px;">Tipo</th>
+      <th style="width: 50px;">Por defecto</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -1033,28 +1033,28 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>Overflow constraint boundary of the dropdown menu (applies only to Popper's preventOverflow modifier). By default it's <code>'clippingParents'</code> and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>.</td>
+      <td>Límite de restricción de desbordamiento del menú desplegable (se aplica solo al modificador preventOverflow de Popper). De forma predeterminada, es <code>'clippingParents'</code> y puede aceptar una referencia HTMLElement (solo a través de JavaScript). Para obtener más información, consulta las <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a> de Popper.</td>
     </tr>
     <tr>
       <td><code>reference</code></td>
       <td>string | element | object</td>
       <td><code>'toggle'</code></td>
-      <td>Reference element of the dropdown menu. Accepts the values of <code>'toggle'</code>, <code>'parent'</code>, an HTMLElement reference or an object providing <code>getBoundingClientRect</code>. For more information refer to Popper's <a href="https://popper.js.org/docs/v2/constructors/#createpopper">constructor docs</a> and <a href="https://popper.js.org/docs/v2/virtual-elements/">virtual element docs</a>.</td>
+      <td>Elemento de referencia del menú desplegable. Acepta los valores de <code>'toggle'</code>, <code>'parent'</code>, una referencia HTMLElement o un objeto que proporciona <code>getBoundingClientRect</code>. Para obtener más información, consulta las <a href="https://popper.js.org/docs/v2/constructors/#createpopper">documentos de construcción</a> y <a href="https://popper.js.org/docs/v2/virtual-elements/">documentos de elementos virtuales</a>.</td>    
     </tr>
     <tr>
       <td><code>display</code></td>
       <td>string</td>
       <td><code>'dynamic'</code></td>
-      <td>By default, we use Popper for dynamic positioning. Disable this with <code>static</code>.</td>
+      <td>Por defecto, usamos Popper para el posicionamiento dinámico. Deshabilita esto con <code>static</code>.</td>
     </tr>
     <tr>
       <td><code>offset</code></td>
       <td>array | string | function</td>
       <td><code>[0, 2]</code></td>
       <td>
-        <p>Offset of the dropdown relative to its target. You can pass a string in data attributes with comma separated values like: <code>data-bs-offset="10,20"</code></p>
-        <p>When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
-        <p>For more information refer to Popper's <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>.</p>
+        <p>Desplazamiento del menú desplegable en relación con su objetivo. Puedes pasar una cadena en atributos de datos con valores separados por comas como: <code>data-bs-offset="10,20"</code></p>
+        <p>Cuando se usa una función para determinar el desplazamiento, se llama con un objeto que contiene la ubicación del popper, la referencia y los rects del popper como su primer argumento. El nodo DOM del elemento desencadenante se pasa como segundo argumento. La función debe devolver una matriz con dos números: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
+        <p>Para obtener más información, consulta las <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">documentos de compensación</a> de Popper.</p>
       </td>
     </tr>
     <tr>
@@ -1062,12 +1062,12 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>boolean | string</td>
       <td><code>true</code></td>
       <td>
-        <p>Configure the auto close behavior of the dropdown:</p>
+        <p>Configura el comportamiento de cierre automático del menú desplegable:</p>
         <ul>
-          <li><code>true</code> - the dropdown will be closed by clicking outside or inside the dropdown menu.</li>
-          <li><code>false</code> - the dropdown will be closed by clicking the toggle button and manually calling <code>hide</code> or <code>toggle</code> method. (Also will not be closed by pressing <kbd>esc</kbd> key)</li>
-          <li><code>'inside'</code> - the dropdown will be closed (only) by clicking inside the dropdown menu.</li>
-          <li><code>'outside'</code> - the dropdown will be closed (only) by clicking outside the dropdown menu.</li>
+          <li><code>true</code>: el menú desplegable se cerrará haciendo clic fuera o dentro del menú desplegable.</li>
+          <li><code>false</code>: el menú desplegable se cerrará haciendo clic en el botón de alternancia y llamando manualmente al método <code>hide</code> o <code>toggle</code>. (Tampoco se cerrará presionando la tecla <kbd>esc</kbd>)</li>
+          <li><code>'inside'</code>: el menú desplegable se cerrará (solo) al hacer clic dentro del menú desplegable.</li>
+          <li><code>'outside'</code>: el menú desplegable se cerrará (solo) al hacer clic fuera del menú desplegable.</li>
         </ul>
       </td>
     </tr>
@@ -1076,63 +1076,63 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>null | object | function</td>
       <td><code>null</code></td>
       <td>
-        <p>To change Bootstrap's default Popper config, see <a href="https://popper.js.org/docs/v2/constructors/#options">Popper's configuration</a>.</p>
-        <p>When a function is used to create the Popper configuration, it's called with an object that contains the Bootstrap's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.</p>
+        <p>Para cambiar la configuración predeterminada de Popper de Bootstrap, consulta <a href="https://popper.js.org/docs/v2/constructors/#options">Configuración de Popper</a>.</p>
+        <p>Cuando se usa una función para crear la configuración Popper, se llama con un objeto que contiene la configuración Popper predeterminada de Bootstrap. Te ayuda a usar y fusionar el valor predeterminado con tu propia configuración. La función debe devolver un objeto de configuración para Popper.</p>
       </td>
     </tr>
   </tbody>
 </table>
 
-#### Using function with `popperConfig`
+#### Usando la función con `popperConfig`
 
 ```js
 var dropdown = new bootstrap.Dropdown(element, {
   popperConfig: function (defaultBsPopperConfig) {
     // var newPopperConfig = {...}
-    // use defaultBsPopperConfig if needed...
-    // return newPopperConfig
+    // usa defaultBsPopperConfig si es necesario...
+    // devuelve newPopperConfig
   }
 })
 ```
 
-### Methods
+### Métodos
 
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>Método</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>toggle</code></td>
       <td>
-        Toggles the dropdown menu of a given navbar or tabbed navigation.
+        Alterna el menú desplegable de una barra de navegación determinada o navegación con pestañas.
       </td>
     </tr>
     <tr>
       <td><code>show</code></td>
       <td>
-        Shows the dropdown menu of a given navbar or tabbed navigation.
+        Muestra el menú desplegable de una barra de navegación determinada o navegación con pestañas.
       </td>
     </tr>
     <tr>
       <td><code>hide</code></td>
       <td>
-        Hides the dropdown menu of a given navbar or tabbed navigation.
+        Oculta el menú desplegable de una barra de navegación determinada o navegación con pestañas.
       </td>
     </tr>
     <tr>
       <td><code>update</code></td>
       <td>
-        Updates the position of an element's dropdown.
+        Actualiza la posición del menú desplegable de un elemento.
       </td>
     </tr>
     <tr>
       <td><code>dispose</code></td>
       <td>
-        Destroys an element's dropdown. (Removes stored data on the DOM element)
+        Destruye el menú desplegable de un elemento. (Elimina los datos almacenados en el elemento DOM)
       </td>
     </tr>
     <tr>
@@ -1140,7 +1140,7 @@ var dropdown = new bootstrap.Dropdown(element, {
         <code>getInstance</code>
       </td>
       <td>
-        Static method which allows you to get the dropdown instance associated to a DOM element, you can use it like this: <code>bootstrap.Dropdown.getInstance(element)</code>
+        Método estático que te permite obtener la instancia desplegable asociada a un elemento DOM, puedes usarlo así: <code>bootstrap.Dropdown.getInstance(element)</code>
       </td>
     </tr>
     <tr>
@@ -1148,22 +1148,22 @@ var dropdown = new bootstrap.Dropdown(element, {
         <code>getOrCreateInstance</code>
       </td>
       <td>
-        Static method which returns a dropdown instance associated to a DOM element or create a new one in case it wasn't initialized.
-        You can use it like this: <code>bootstrap.Dropdown.getOrCreateInstance(element)</code>
+        Método estático que devuelve una instancia desplegable asociada a un elemento DOM o crea una nueva en caso de que no se haya inicializado.
+        Puedes usarlo así: <code>bootstrap.Dropdown.getOrCreateInstance(element)</code>
       </td>
     </tr>
   </tbody>
 </table>
 
-### Events
+### Eventos
 
-All dropdown events are fired at the toggling element and then bubbled up. So you can also add event listeners on the `.dropdown-menu`'s parent element. `hide.bs.dropdown` and `hidden.bs.dropdown` events have a `clickEvent` property (only when the original Event type is `click`) that contains an Event Object for the click event.
+Todos los eventos desplegables se activan en el elemento de alternancia y luego se expanden. Por lo tanto, también puedes agregar detectores de eventos en el elemento padre `.dropdown-menu`. Los eventos `hide.bs.dropdown` y `hidden.bs.dropdown` tienen una propiedad `clickEvent` (solo cuando el tipo de evento original es `click`) que contiene un objeto *Event* para el evento de clic.
 
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>Método</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -1172,7 +1172,7 @@ All dropdown events are fired at the toggling element and then bubbled up. So yo
         <code>show.bs.dropdown</code>
       </td>
       <td>
-        Fires immediately when the show instance method is called.
+        Se activa inmediatamente cuando se llama al método de instancia show.
       </td>
     </tr>
     <tr>
@@ -1180,7 +1180,7 @@ All dropdown events are fired at the toggling element and then bubbled up. So yo
         <code>shown.bs.dropdown</code>
       </td>
       <td>
-        Fired when the dropdown has been made visible to the user and CSS transitions have completed.
+        Se activa cuando el menú desplegable se ha hecho visible para el usuario y se han completado las transiciones de CSS.
       </td>
     </tr>
     <tr>
@@ -1188,7 +1188,7 @@ All dropdown events are fired at the toggling element and then bubbled up. So yo
         <code>hide.bs.dropdown</code>
       </td>
       <td>
-        Fires immediately when the hide instance method has been called.
+        Se activa inmediatamente cuando se llama al método de instancia hide.
       </td>
     </tr>
     <tr>
@@ -1196,7 +1196,7 @@ All dropdown events are fired at the toggling element and then bubbled up. So yo
         <code>hidden.bs.dropdown</code>
       </td>
       <td>
-        Fired when the dropdown has finished being hidden from the user and CSS transitions have completed.
+        Se activa cuando el menú desplegable ha terminado de ocultarse para el usuario y se han completado las transiciones de CSS.
       </td>
     </tr>
   </tbody>
@@ -1205,6 +1205,6 @@ All dropdown events are fired at the toggling element and then bubbled up. So yo
 ```js
 var myDropdown = document.getElementById('myDropdown')
 myDropdown.addEventListener('show.bs.dropdown', function () {
-  // do something...
+  // hacer algo...
 })
 ```

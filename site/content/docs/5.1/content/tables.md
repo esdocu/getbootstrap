@@ -29,7 +29,7 @@ Usa clases contextuales para colorear tablas, filas de tablas o celdas individua
     </thead>
     <tbody>
       <tr>
-        <th scope="row">Default</th>
+        <th scope="row">Por defecto</th>
         <td>Celda</td>
         <td>Celda</td>
       </tr>
