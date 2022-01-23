@@ -649,7 +649,7 @@ If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events 
 <table class="table">
   <thead>
     <tr>
-      <th style="width: 150px;">Event type</th>
+      <th style="width: 150px;">Tipo de evento</th>
       <th>Descripción</th>
     </tr>
   </thead>

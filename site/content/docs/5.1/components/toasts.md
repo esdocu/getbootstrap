@@ -172,7 +172,7 @@ Alternatively, you can also add additional controls and components to toasts.
     Hello, world! This is a toast message.
     <div class="mt-2 pt-2 border-top">
       <button type="button" class="btn btn-primary btn-sm">Take action</button>
-      <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+      <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Cerrar</button>
     </div>
   </div>
 </div>
@@ -436,7 +436,7 @@ var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootst
 <table class="table">
   <thead>
     <tr>
-      <th style="width: 150px;">Event type</th>
+      <th style="width: 150px;">Tipo de evento</th>
       <th>Descripción</th>
     </tr>
   </thead>

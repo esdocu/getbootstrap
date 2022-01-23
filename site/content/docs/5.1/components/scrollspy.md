@@ -347,7 +347,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 <table class="table">
   <thead>
     <tr>
-      <th style="width: 150px;">Event type</th>
+      <th style="width: 150px;">Tipo de evento</th>
       <th>Descripción</th>
     </tr>
   </thead>

@@ -43,7 +43,7 @@ describe('Offcanvas', () => {
     it('should call hide when a element with data-bs-dismiss="offcanvas" is clicked', () => {
       fixtureEl.innerHTML = [
         '<div class="offcanvas">',
-        '  <a href="#" data-bs-dismiss="offcanvas">Close</a>',
+        '  <a href="#" data-bs-dismiss="offcanvas">Cerrar</a>',
         '</div>'
       ].join('')
 
