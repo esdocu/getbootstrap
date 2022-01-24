@@ -43,7 +43,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav" role="tablist">',
         '  <li><button type="button" data-bs-target="#home" role="tab">Inicio</button></li>',
-        '  <li><button type="button" id="triggerProfile" data-bs-target="#profile" role="tab">Profile</button></li>',
+        '  <li><button type="button" id="triggerProfile" data-bs-target="#profile" role="tab">Perfil</button></li>',
         '</ul>',
         '<ul>',
         '  <li id="home" role="tabpanel"></li>',
@@ -67,7 +67,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav" role="tablist">',
         '  <li><a href="#home" role="tab">Inicio</a></li>',
-        '  <li><a id="triggerProfile" href="#profile" role="tab">Profile</a></li>',
+        '  <li><a id="triggerProfile" href="#profile" role="tab">Perfil</a></li>',
         '</ul>',
         '<ul>',
         '  <li id="home" role="tabpanel"></li>',
@@ -91,7 +91,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ol class="nav nav-pills">',
         '  <li><button type="button" data-bs-target="#home" role="tab">Inicio</button></li>',
-        '  <li><button type="button" id="triggerProfile" href="#profile" role="tab">Profile</button></li>',
+        '  <li><button type="button" id="triggerProfile" href="#profile" role="tab">Perfil</button></li>',
         '</ol>',
         '<ol>',
         '  <li id="home" role="tabpanel"></li>',
@@ -114,7 +114,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<nav class="nav">',
         '  <button type="button" data-bs-target="#home" role="tab">Inicio</button>',
-        '  <button type="button" id="triggerProfile" data-bs-target="#profile" role="tab">Profile</button>',
+        '  <button type="button" id="triggerProfile" data-bs-target="#profile" role="tab">Perfil</button>',
         '</nav>',
         '<div>',
         '  <div id="home" role="tabpanel"></div>',
@@ -137,7 +137,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<div class="list-group" role="tablist">',
         '  <button type="button" data-bs-target="#home" role="tab">Inicio</button>',
-        '  <button type="button" id="triggerProfile" data-bs-target="#profile" role="tab">Profile</button>',
+        '  <button type="button" id="triggerProfile" data-bs-target="#profile" role="tab">Perfil</button>',
         '</div>',
         '<div>',
         '  <div id="home" role="tabpanel"></div>',
@@ -184,7 +184,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
         '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</button></li>',
-        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#profile" class="nav-link" role="tab">Profile</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#profile" class="nav-link" role="tab">Perfil</button></li>',
         '</ul>',
         '<div class="tab-content">',
         '  <div class="tab-pane active" id="home" role="tabpanel"></div>',
@@ -210,7 +210,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
         '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</button></li>',
-        '  <li class="nav-item" role="presentation"><button type="button" id="triggerProfile" data-bs-target="#profile" class="nav-link" role="tab">Profile</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" id="triggerProfile" data-bs-target="#profile" class="nav-link" role="tab">Perfil</button></li>',
         '</ul>',
         '<div class="tab-content">',
         '  <div class="tab-pane active" id="home" role="tabpanel"></div>',
@@ -239,7 +239,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav" role="tablist">',
         '  <li><button type="button" data-bs-target="#home" role="tab">Inicio</button></li>',
-        '  <li><button type="button" data-bs-target="#profile">Profile</button></li>',
+        '  <li><button type="button" data-bs-target="#profile">Perfil</button></li>',
         '</ul>'
       ].join('')
 
@@ -270,7 +270,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav" role="tablist">',
         '  <li><button type="button" data-bs-target="#home" role="tab">Inicio</button></li>',
-        '  <li><button type="button" data-bs-target="#profile" role="tab">Profile</button></li>',
+        '  <li><button type="button" data-bs-target="#profile" role="tab">Perfil</button></li>',
         '</ul>'
       ].join('')
 
@@ -468,7 +468,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
         '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</button></li>',
-        '  <li class="nav-item" role="presentation"><button type="button" id="triggerProfile" data-bs-toggle="tab" data-bs-target="#profile" class="nav-link" role="tab">Profile</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" id="triggerProfile" data-bs-toggle="tab" data-bs-target="#profile" class="nav-link" role="tab">Perfil</button></li>',
         '</ul>',
         '<div class="tab-content">',
         '  <div class="tab-pane active" id="home" role="tabpanel"></div>',
@@ -491,7 +491,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs">',
         '  <li class="nav-item"><a class="nav-link" href="#home" data-bs-toggle="tab">Inicio</a></li>',
-        '  <li class="nav-item"><a class="nav-link" href="#profile" data-bs-toggle="tab">Profile</a></li>',
+        '  <li class="nav-item"><a class="nav-link" href="#profile" data-bs-toggle="tab">Perfil</a></li>',
         '  <li class="nav-item dropdown">',
         '    <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#">Dropdown</a>',
         '    <div class="dropdown-menu">',
@@ -549,7 +549,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs">',
         '  <li class="nav-item"><a class="nav-link active" href="#home" data-bs-toggle="tab">Inicio</a></li>',
-        '  <li class="nav-item"><a class="nav-link" href="#profile" data-bs-toggle="tab">Profile</a></li>',
+        '  <li class="nav-item"><a class="nav-link" href="#profile" data-bs-toggle="tab">Perfil</a></li>',
         '  <li class="nav-item dropdown">',
         '    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Dropdown</a>',
         '    <ul class="dropdown-menu">',
@@ -611,7 +611,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
         '  <li class="nav-item" role="presentation"><button type="button" id="tab-home" data-bs-target="#home" class="nav-link" data-bs-toggle="tab" role="tab">Inicio</button></li>',
-        '  <li class="nav-item" role="presentation"><button type="button" id="tab-profile" data-bs-target="#profile" class="nav-link" data-bs-toggle="tab" role="tab">Profile</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" id="tab-profile" data-bs-target="#profile" class="nav-link" data-bs-toggle="tab" role="tab">Perfil</button></li>',
         '</ul>',
         '<div class="tab-content">',
         '  <div class="tab-pane fade" id="home" role="tabpanel"></div>',
@@ -651,7 +651,7 @@ describe('Tab', () => {
         '    <button type="button" class="nav-link nav-tab" data-bs-target="#home" role="tab" data-bs-toggle="tab">Inicio</button>',
         '  </li>',
         '  <li class="nav-item" role="presentation">',
-        '    <button type="button" id="secondNav" class="nav-link nav-tab" data-bs-target="#profile" role="tab" data-bs-toggle="tab">Profile</button>',
+        '    <button type="button" id="secondNav" class="nav-link nav-tab" data-bs-target="#profile" role="tab" data-bs-toggle="tab">Perfil</button>',
         '  </li>',
         '</ul>',
         '<div class="tab-content">',
@@ -677,7 +677,7 @@ describe('Tab', () => {
         '    <button type="button" class="nav-link nav-tab" data-bs-target="#home" role="tab" data-bs-toggle="tab">Inicio</button>',
         '  </li>',
         '  <li class="nav-item" role="presentation">',
-        '    <button type="button" id="secondNav" class="nav-link nav-tab" data-bs-target="#profile" role="tab" data-bs-toggle="tab">Profile</button>',
+        '    <button type="button" id="secondNav" class="nav-link nav-tab" data-bs-target="#profile" role="tab" data-bs-toggle="tab">Perfil</button>',
         '  </li>',
         '</ul>',
         '<div class="tab-content">',
@@ -720,7 +720,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
         '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</button></li>',
-        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#profile" class="nav-link" disabled role="tab">Profile</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#profile" class="nav-link" disabled role="tab">Perfil</button></li>',
         '</ul>',
         '<div class="tab-content">',
         '  <div class="tab-pane active" id="home" role="tabpanel"></div>',
@@ -744,7 +744,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
         '  <li class="nav-item" role="presentation"><a href="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</a></li>',
-        '  <li class="nav-item" role="presentation"><a href="#profile" class="nav-link disabled" role="tab">Profile</a></li>',
+        '  <li class="nav-item" role="presentation"><a href="#profile" class="nav-link disabled" role="tab">Perfil</a></li>',
         '</ul>',
         '<div class="tab-content">',
         '  <div class="tab-pane active" id="home" role="tabpanel"></div>',
