@@ -1,25 +1,25 @@
 ---
 layout: docs
 title: Placeholders
-description: Use loading placeholders for your components or pages to indicate something may still be loading.
+description: Usa marcadores de posición (placeholders) de carga para tus componentes o páginas para indicar que algo aún se puede estar cargando.
 group: components
 toc: true
 ---
 
-## About
+## ¿Qué es placeholder?
 
-Placeholders can be used to enhance the experience of your application. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, color, and sizing can be easily customized with our utility classes.
+Los marcadores de posición se pueden utilizar para mejorar la experiencia de tu aplicación. Están construidos solo con HTML y CSS, lo que significa que no necesitas JavaScript para crearlos. Sin embargo, necesitarás JavaScript personalizado para alternar su visibilidad. Su apariencia, color y tamaño se pueden personalizar fácilmente con nuestras clases de utilidad.
 
-## Example
+## Ejemplo
 
-In the example below, we take a typical card component and recreate it with placeholders applied to create a "loading card". Size and proportions are the same between the two.
+En el siguiente ejemplo, tomamos un componente de tarjeta típico y lo recreamos con marcadores de posición aplicados para crear una "tarjeta de carga". El tamaño y las proporciones son los mismos entre los dos.
 
 <div class="bd-example bd-example-placeholder-cards d-flex justify-content-around">
 <div class="card">
   {{< placeholder width="100%" height="180" class="card-img-top" text="false" background="#20c997" >}}
   <div class="card-body">
     <h5 class="card-title">Título de la tarjeta</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Un texto de ejemplo rápido para colocar próximo al título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -48,7 +48,7 @@ In the example below, we take a typical card component and recreate it with plac
 
   <div class="card-body">
     <h5 class="card-title">Título de la tarjeta</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">Un texto de ejemplo rápido para colocar próximo al título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -71,11 +71,11 @@ In the example below, we take a typical card component and recreate it with plac
 </div>
 ```
 
-## How it works
+## ¿Cómo funciona un placeholder?
 
-Create placeholders with the `.placeholder` class and a grid column class (e.g., `.col-6`) to set the `width`. They can replace the text inside an element or be added as a modifier class to an existing component.
+Crea marcadores de posición con la clase `.placeholder` y una clase de columna de cuadrícula (por ejemplo, `.col-6`) para establecer el `width`. Pueden reemplazar el texto dentro de un elemento o agregarse como una clase modificadora a un componente existente.
 
-We apply additional styling to `.btn`s via `::before` to ensure the `height` is respected. You may extend this pattern for other situations as needed, or add a `&nbsp;` within the element to reflect the height when actual text is rendered in its place.
+Aplicamos estilos adicionales a `.btn`s a través de `::before` para garantizar que se respete la altura `height`. Puedes extender este patrón para otras situaciones según sea necesario, o agregar un `&nbsp;` dentro del elemento para reflejar la altura cuando el texto real se represente en su lugar.
 
 {{< example >}}
 <p aria-hidden="true">
@@ -86,12 +86,12 @@ We apply additional styling to `.btn`s via `::before` to ensure the `height` is 
 {{< /example >}}
 
 {{< callout info >}}
-The use of `aria-hidden="true"` only indicates that the element should be hidden to screen readers. The *loading* behavior of the placeholder depends on how authors will actually use the placeholder styles, how they plan to update things, etc. Some JavaScript code may be needed to *swap* the state of the placeholder and inform AT users of the update.
+El uso de `aria-hidden="true"` solo indica que el elemento debe estar oculto para los lectores de pantalla. El comportamiento de *carga* del marcador de posición depende de cómo los autores realmente usarán los estilos de marcador de posición, cómo planean actualizar las cosas, etc. Es posible que se necesite algún código JavaScript para *cambiar* el estado del marcador de posición e informar a los usuarios de AT sobre la actualización .
 {{< /callout >}}
 
-### Width
+### Ancho
 
-You can change the `width` through grid column classes, width utilities, or inline styles.
+Puedes cambiar el `width` a través de clases de columna de cuadrícula, utilidades de ancho o estilos en línea.
 
 {{< example >}}
 <span class="placeholder col-6"></span>
@@ -101,7 +101,7 @@ You can change the `width` through grid column classes, width utilities, or inli
 
 ### Color
 
-By default, the `placeholder` uses `currentColor`. This can be overridden with a custom color or utility class.
+De forma predeterminada, el `placeholder` usa `currentColor`. Esto se puede sobrescribir con un color personalizado o una clase de utilidad.
 
 {{< example >}}
 <span class="placeholder col-12"></span>
@@ -112,9 +112,9 @@ By default, the `placeholder` uses `currentColor`. This can be overridden with a
 {{< /placeholders.inline >}}
 {{< /example >}}
 
-### Sizing
+### Dimensionamiento
 
-The size of `.placeholder`s are based on the typographic style of the parent element. Customize them with sizing modifiers: `.placeholder-lg`, `.placeholder-sm`, or `.placeholder-xs`.
+El tamaño de `.placeholder`s se basa en el estilo tipográfico del elemento principal. Personalízalos con modificadores de tamaño: `.placeholder-lg`, `.placeholder-sm` o `.placeholder-xs`.
 
 {{< example >}}
 <span class="placeholder col-12 placeholder-lg"></span>
@@ -123,9 +123,9 @@ The size of `.placeholder`s are based on the typographic style of the parent ele
 <span class="placeholder col-12 placeholder-xs"></span>
 {{< /example >}}
 
-### Animation
+### Animaciones
 
-Animate placeholders with `.placeholder-glow` or `.placeholder-wave` to better convey the perception of something being _actively_ loaded.
+Anima marcadores de posición con `.placeholder-glow` o `.placeholder-wave` para transmitir mejor la percepción de que algo se está cargando _activamente_.
 
 {{< example >}}
 <p class="placeholder-glow">
