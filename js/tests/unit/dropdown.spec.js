@@ -1729,7 +1729,7 @@ describe('Dropdown', () => {
         '    <button disabled class="btn dropdown-toggle" data-bs-toggle="dropdown">Dropdown</button>',
         '    <div class="dropdown-menu">',
         '      <a class="dropdown-item" href="#">Secondary link</a>',
-        '      <a class="dropdown-item" href="#">Something else here</a>',
+        '      <a class="dropdown-item" href="#">Algo más aquí</a>',
         '      <div class="divider"></div>',
         '      <a class="dropdown-item" href="#">Another link</a>',
         '    </div>',

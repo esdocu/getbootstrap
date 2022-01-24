@@ -32,7 +32,7 @@ El sistema de cuadrícula (grid) de Bootstrap utiliza una serie de contenedores,
 
 El ejemplo anterior crea tres columnas de igual ancho en todos los dispositivos y viewports utilizando nuestras clases de cuadrícula predefinidas. Esas columnas están centradas en la página con el `.container` principal.
 
-## Cómo funciona
+## ¿Cómo funciona el sistema de cuadrícula (Grid)?
 
 Desglosándolo, así es como se compone el sistema de cuadrícula:
 

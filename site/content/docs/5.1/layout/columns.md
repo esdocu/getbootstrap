@@ -10,7 +10,7 @@ toc: true
 **Importante!** Asegúrate de [leer la página de cuadrícula]({{< docsref "/layout/grid" >}}) antes de sumergirte en cómo modificar y personalizar las columnas de tu cuadrícula.
 {{< /callout >}}
 
-## Cómo funcionan
+## ¿Cómo funcionan las Columnas?
 
 - **Las columnas se basan en la arquitectura flexbox de la cuadrícula.** Flexbox significa que tenemos opciones para cambiar columnas individuales y [modificar grupos de columnas en el nivel de fila]({{< docsref "/layout/grid#row-columns" >}}). Tú eliges cómo crecen, se reducen o cambian las columnas.
 

@@ -6,7 +6,7 @@ group: layout
 toc: true
 ---
 
-## Cómo funcionan
+## ¿Cómo funcionan los Gutters?
 
 - **Los gutters son los espacios entre el columnas, creados con `padding` horizontal.** Establecemos `padding-right` y `padding-left` en cada columna, y usamos un `margin` negativo para compensar eso al principio y final de cada fila para alinear el contenido.
 

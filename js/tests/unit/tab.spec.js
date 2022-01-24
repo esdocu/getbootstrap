@@ -22,7 +22,7 @@ describe('Tab', () => {
     it('should take care of element either passed as a CSS selector or DOM element', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav">',
-        '  <li><a href="#home" role="tab">Home</a></li>',
+        '  <li><a href="#home" role="tab">Inicio</a></li>',
         '</ul>',
         '<ul>',
         '  <li id="home"></li>',
@@ -42,7 +42,7 @@ describe('Tab', () => {
     it('should activate element by tab id (using buttons, the preferred semantic way)', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav" role="tablist">',
-        '  <li><button type="button" data-bs-target="#home" role="tab">Home</button></li>',
+        '  <li><button type="button" data-bs-target="#home" role="tab">Inicio</button></li>',
         '  <li><button type="button" id="triggerProfile" data-bs-target="#profile" role="tab">Profile</button></li>',
         '</ul>',
         '<ul>',
@@ -66,7 +66,7 @@ describe('Tab', () => {
     it('should activate element by tab id (using links for tabs - not ideal, but still supported)', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav" role="tablist">',
-        '  <li><a href="#home" role="tab">Home</a></li>',
+        '  <li><a href="#home" role="tab">Inicio</a></li>',
         '  <li><a id="triggerProfile" href="#profile" role="tab">Profile</a></li>',
         '</ul>',
         '<ul>',
@@ -90,7 +90,7 @@ describe('Tab', () => {
     it('should activate element by tab id in ordered list', done => {
       fixtureEl.innerHTML = [
         '<ol class="nav nav-pills">',
-        '  <li><button type="button" data-bs-target="#home" role="tab">Home</button></li>',
+        '  <li><button type="button" data-bs-target="#home" role="tab">Inicio</button></li>',
         '  <li><button type="button" id="triggerProfile" href="#profile" role="tab">Profile</button></li>',
         '</ol>',
         '<ol>',
@@ -113,7 +113,7 @@ describe('Tab', () => {
     it('should activate element by tab id in nav list', done => {
       fixtureEl.innerHTML = [
         '<nav class="nav">',
-        '  <button type="button" data-bs-target="#home" role="tab">Home</button>',
+        '  <button type="button" data-bs-target="#home" role="tab">Inicio</button>',
         '  <button type="button" id="triggerProfile" data-bs-target="#profile" role="tab">Profile</button>',
         '</nav>',
         '<div>',
@@ -136,7 +136,7 @@ describe('Tab', () => {
     it('should activate element by tab id in list group', done => {
       fixtureEl.innerHTML = [
         '<div class="list-group" role="tablist">',
-        '  <button type="button" data-bs-target="#home" role="tab">Home</button>',
+        '  <button type="button" data-bs-target="#home" role="tab">Inicio</button>',
         '  <button type="button" id="triggerProfile" data-bs-target="#profile" role="tab">Profile</button>',
         '</div>',
         '<div>',
@@ -183,7 +183,7 @@ describe('Tab', () => {
     it('should not fire shown when tab is already active', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
-        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Home</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</button></li>',
         '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#profile" class="nav-link" role="tab">Profile</button></li>',
         '</ul>',
         '<div class="tab-content">',
@@ -209,7 +209,7 @@ describe('Tab', () => {
     it('show and shown events should reference correct relatedTarget', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
-        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Home</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</button></li>',
         '  <li class="nav-item" role="presentation"><button type="button" id="triggerProfile" data-bs-target="#profile" class="nav-link" role="tab">Profile</button></li>',
         '</ul>',
         '<div class="tab-content">',
@@ -238,7 +238,7 @@ describe('Tab', () => {
     it('should fire hide and hidden events', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav" role="tablist">',
-        '  <li><button type="button" data-bs-target="#home" role="tab">Home</button></li>',
+        '  <li><button type="button" data-bs-target="#home" role="tab">Inicio</button></li>',
         '  <li><button type="button" data-bs-target="#profile">Profile</button></li>',
         '</ul>'
       ].join('')
@@ -269,7 +269,7 @@ describe('Tab', () => {
     it('should not fire hidden when hide is prevented', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav" role="tablist">',
-        '  <li><button type="button" data-bs-target="#home" role="tab">Home</button></li>',
+        '  <li><button type="button" data-bs-target="#home" role="tab">Inicio</button></li>',
         '  <li><button type="button" data-bs-target="#profile" role="tab">Profile</button></li>',
         '</ul>'
       ].join('')
@@ -467,7 +467,7 @@ describe('Tab', () => {
     it('should create dynamically a tab', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
-        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Home</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</button></li>',
         '  <li class="nav-item" role="presentation"><button type="button" id="triggerProfile" data-bs-toggle="tab" data-bs-target="#profile" class="nav-link" role="tab">Profile</button></li>',
         '</ul>',
         '<div class="tab-content">',
@@ -490,7 +490,7 @@ describe('Tab', () => {
     it('selected tab should deactivate previous selected link in dropdown', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs">',
-        '  <li class="nav-item"><a class="nav-link" href="#home" data-bs-toggle="tab">Home</a></li>',
+        '  <li class="nav-item"><a class="nav-link" href="#home" data-bs-toggle="tab">Inicio</a></li>',
         '  <li class="nav-item"><a class="nav-link" href="#profile" data-bs-toggle="tab">Profile</a></li>',
         '  <li class="nav-item dropdown">',
         '    <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#">Dropdown</a>',
@@ -513,7 +513,7 @@ describe('Tab', () => {
     it('selecting a dropdown tab does not activate another', () => {
       const nav1 = [
         '<ul class="nav nav-tabs" id="nav1">',
-        '  <li class="nav-item active"><a class="nav-link" href="#home" data-bs-toggle="tab">Home</a></li>',
+        '  <li class="nav-item active"><a class="nav-link" href="#home" data-bs-toggle="tab">Inicio</a></li>',
         '  <li class="nav-item dropdown">',
         '    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Dropdown</a>',
         '    <div class="dropdown-menu">',
@@ -524,7 +524,7 @@ describe('Tab', () => {
       ].join('')
       const nav2 = [
         '<ul class="nav nav-tabs" id="nav2">',
-        '  <li class="nav-item active"><a class="nav-link" href="#home" data-bs-toggle="tab">Home</a></li>',
+        '  <li class="nav-item active"><a class="nav-link" href="#home" data-bs-toggle="tab">Inicio</a></li>',
         '  <li class="nav-item dropdown">',
         '    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Dropdown</a>',
         '    <div class="dropdown-menu">',
@@ -548,7 +548,7 @@ describe('Tab', () => {
     it('should support li > .dropdown-item', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs">',
-        '  <li class="nav-item"><a class="nav-link active" href="#home" data-bs-toggle="tab">Home</a></li>',
+        '  <li class="nav-item"><a class="nav-link active" href="#home" data-bs-toggle="tab">Inicio</a></li>',
         '  <li class="nav-item"><a class="nav-link" href="#profile" data-bs-toggle="tab">Profile</a></li>',
         '  <li class="nav-item dropdown">',
         '    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Dropdown</a>',
@@ -610,7 +610,7 @@ describe('Tab', () => {
     it('should not remove fade class if no active pane is present', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
-        '  <li class="nav-item" role="presentation"><button type="button" id="tab-home" data-bs-target="#home" class="nav-link" data-bs-toggle="tab" role="tab">Home</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" id="tab-home" data-bs-target="#home" class="nav-link" data-bs-toggle="tab" role="tab">Inicio</button></li>',
         '  <li class="nav-item" role="presentation"><button type="button" id="tab-profile" data-bs-target="#profile" class="nav-link" data-bs-toggle="tab" role="tab">Profile</button></li>',
         '</ul>',
         '<div class="tab-content">',
@@ -648,7 +648,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
         '  <li class="nav-item" role="presentation">',
-        '    <button type="button" class="nav-link nav-tab" data-bs-target="#home" role="tab" data-bs-toggle="tab">Home</button>',
+        '    <button type="button" class="nav-link nav-tab" data-bs-target="#home" role="tab" data-bs-toggle="tab">Inicio</button>',
         '  </li>',
         '  <li class="nav-item" role="presentation">',
         '    <button type="button" id="secondNav" class="nav-link nav-tab" data-bs-target="#profile" role="tab" data-bs-toggle="tab">Profile</button>',
@@ -674,7 +674,7 @@ describe('Tab', () => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
         '  <li class="nav-item" role="presentation">',
-        '    <button type="button" class="nav-link nav-tab" data-bs-target="#home" role="tab" data-bs-toggle="tab">Home</button>',
+        '    <button type="button" class="nav-link nav-tab" data-bs-target="#home" role="tab" data-bs-toggle="tab">Inicio</button>',
         '  </li>',
         '  <li class="nav-item" role="presentation">',
         '    <button type="button" id="secondNav" class="nav-link nav-tab" data-bs-target="#profile" role="tab" data-bs-toggle="tab">Profile</button>',
@@ -699,8 +699,8 @@ describe('Tab', () => {
     it('should prevent default when the trigger is <a> or <area>', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav" role="tablist">',
-        '  <li><a type="button" href="#test"  class="active" role="tab" data-bs-toggle="tab">Home</a></li>',
-        '  <li><a type="button" href="#test2" role="tab" data-bs-toggle="tab">Home</a></li>',
+        '  <li><a type="button" href="#test"  class="active" role="tab" data-bs-toggle="tab">Inicio</a></li>',
+        '  <li><a type="button" href="#test2" role="tab" data-bs-toggle="tab">Inicio</a></li>',
         '</ul>'
       ].join('')
 
@@ -719,7 +719,7 @@ describe('Tab', () => {
     it('should not fire shown when tab has disabled attribute', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
-        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Home</button></li>',
+        '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</button></li>',
         '  <li class="nav-item" role="presentation"><button type="button" data-bs-target="#profile" class="nav-link" disabled role="tab">Profile</button></li>',
         '</ul>',
         '<div class="tab-content">',
@@ -743,7 +743,7 @@ describe('Tab', () => {
     it('should not fire shown when tab has disabled class', done => {
       fixtureEl.innerHTML = [
         '<ul class="nav nav-tabs" role="tablist">',
-        '  <li class="nav-item" role="presentation"><a href="#home" class="nav-link active" role="tab" aria-selected="true">Home</a></li>',
+        '  <li class="nav-item" role="presentation"><a href="#home" class="nav-link active" role="tab" aria-selected="true">Inicio</a></li>',
         '  <li class="nav-item" role="presentation"><a href="#profile" class="nav-link disabled" role="tab">Profile</a></li>',
         '</ul>',
         '<div class="tab-content">',

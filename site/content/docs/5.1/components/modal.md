@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## Cómo funciona
+## ¿Cómo funcionan los modals?
 
 Antes de comenzar con el componente modal de Bootstrap, asegúrate de leer lo siguiente, ya que nuestras opciones de menú han cambiado recientemente.
 

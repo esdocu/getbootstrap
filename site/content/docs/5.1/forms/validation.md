@@ -13,7 +13,7 @@ extra_js:
 Somos conscientes de que actualmente los estilos de validación personalizados del lado del cliente y la información sobre herramientas no son accesibles, ya que no están expuestos a tecnologías de asistencia. Mientras trabajamos en una solución, recomendamos usar la opción del lado del servidor o el método de validación predeterminado del navegador.
 {{< /callout >}}
 
-## Cómo funciona
+## ¿Cómo funciona la validación?
 
 Así es como funciona la validación de formularios con Bootstrap:
 

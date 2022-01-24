@@ -12,7 +12,7 @@ El sistema de cuadrícula predeterminado de Bootstrap representa la culminación
 **Aviso: ¡nuestro sistema CSS Grid es experimental y está habilitado a partir de la versión 5.1.0!** Lo incluimos en el CSS de nuestra documentación para demostrártelo, pero está deshabilitado de manera predeterminada. Sigue leyendo para aprender cómo habilitarlo en tus proyectos.
 {{< /callout >}}
 
-## Cómo funciona
+## ¿Cómo funciona las cuadrículas CSS?
 
 Con Bootstrap 5, agregamos la opción para habilitar un sistema de cuadrícula separado que se basa en CSS Grid, pero con un toque de Bootstrap. Todavía recibe clases que puedes aplicar por capricho para crear diseños responsive, pero con un enfoque diferente bajo el capó.
 

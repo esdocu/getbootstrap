@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## Cómo funciona
+## ¿Cómo funciona el Carousel?
 
 El carrusel es una presentación de diapositivas para recorrer una serie de contenido, creado con transformaciones CSS 3D y un poco de JavaScript. Funciona con una serie de imágenes, texto o marcas personalizadas. También incluye soporte para controles e indicadores anteriores/siguientes.
 

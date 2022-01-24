@@ -9,7 +9,7 @@ aliases:
 toc: true
 ---
 
-## Cómo funciona
+## ¿Cómo funciona el Accordion?
 
 El acordeón usa [collapse]({{< docsref "/components/collapse" >}}) internamente para hacerse plegable. Para renderizar un acordeón expandido, agrega la clase `.open` en `.accordion`.
 
