@@ -1,32 +1,32 @@
 ---
 layout: docs
 title: Pagination
-description: Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
+description: Documentación y ejemplos de paginación para indicar que existe una serie de contenido relacionado en varias páginas.
 group: components
 toc: true
 ---
 
 ## Overview
 
-We use a large block of connected links for our pagination, making links hard to miss and easily scalable—all while providing large hit areas. Pagination is built with list HTML elements so screen readers can announce the number of available links. Use a wrapping `<nav>` element to identify it as a navigation section to screen readers and other assistive technologies.
+Usamos un gran bloque de enlaces conectados para nuestra paginación, lo que hace que los enlaces sean difíciles de perder y fácilmente escalables, todo mientras proporciona grandes áreas de acción. La paginación se crea con elementos HTML de lista para que los lectores de pantalla puedan anunciar la cantidad de enlaces disponibles. Utiliza un elemento envolvente `<nav>` para identificarlo como una sección de navegación para lectores de pantalla y otras tecnologías de asistencia.
 
-In addition, as pages likely have more than one such navigation section, it's advisable to provide a descriptive `aria-label` for the `<nav>` to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be `aria-label="Search results pages"`.
+Además, como es probable que las páginas tengan más de una de estas secciones de navegación, es recomendable proporcionar una `aria-label` descriptiva para `<nav>` para reflejar su propósito. Por ejemplo, si el componente de paginación se usa para navegar entre un conjunto de resultados de búsqueda, una etiqueta apropiada podría ser `aria-label="Search results pages"`.
 
 {{< example >}}
 <nav aria-label="Page navigation example">
   <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
   </ul>
 </nav>
 {{< /example >}}
 
-## Working with icons
+## Trabajar con iconos
 
-Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with `aria` attributes.
+¿Deseas utilizar un icono o símbolo en lugar de texto para algunos enlaces de paginación? Asegúrate de proporcionar la compatibilidad adecuada con el lector de pantalla con los atributos `aria`.
 
 {{< example >}}
 <nav aria-label="Page navigation example">
@@ -48,17 +48,17 @@ Looking to use an icon or symbol in place of text for some pagination links? Be 
 </nav>
 {{< /example >}}
 
-## Disabled and active states
+## Estados disabled y active
 
-Pagination links are customizable for different circumstances. Use `.disabled` for links that appear un-clickable and `.active` to indicate the current page.
+Los enlaces de paginación se pueden personalizar para diferentes circunstancias. Usa `.disabled` para los enlaces a los que no se puede hacer clic y `.active` para indicar la página actual.
 
-While the `.disabled` class uses `pointer-events: none` to _try_ to disable the link functionality of `<a>`s, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add `tabindex="-1"` on disabled links and use custom JavaScript to fully disable their functionality.
+Mientras que la clase `.disabled` usa `pointer-events: none` para _intentar_ deshabilitar la funcionalidad de enlace de elementos `<a>`, esa propiedad CSS aún no está estandarizada y no tiene en cuenta la navegación con el teclado. Como tal, siempre debes agregar `tabindex="-1"` en los enlaces deshabilitados y usar JavaScript personalizado para deshabilitar completamente su funcionalidad.
 
 {{< example >}}
 <nav aria-label="...">
   <ul class="pagination">
     <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+      <a class="page-link">Anterior</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
@@ -66,19 +66,19 @@ While the `.disabled` class uses `pointer-events: none` to _try_ to disable the 
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+      <a class="page-link" href="#">Siguiente</a>
     </li>
   </ul>
 </nav>
 {{< /example >}}
 
-You can optionally swap out active or disabled anchors for `<span>`, or omit the anchor in the case of the prev/next arrows, to remove click functionality and prevent keyboard focus while retaining intended styles.
+Opcionalmente, puedes cambiar los enlaces *active* o *disabled* por `<span>`, u omitir el enlace en el caso de las flechas anterior/siguiente, para eliminar la función de clic y evitar el enfoque del teclado mientras conserva los estilos previstos.
 
 {{< example >}}
 <nav aria-label="...">
   <ul class="pagination">
     <li class="page-item disabled">
-      <span class="page-link">Previous</span>
+      <span class="page-link">Anterior</span>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item active" aria-current="page">
@@ -86,15 +86,15 @@ You can optionally swap out active or disabled anchors for `<span>`, or omit the
     </li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+      <a class="page-link" href="#">Siguiente</a>
     </li>
   </ul>
 </nav>
 {{< /example >}}
 
-## Sizing
+## Dimensionamiento
 
-Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for additional sizes.
+¿Te apetece una paginación más grande o más pequeña? Agrega `.pagination-lg` o `.pagination-sm` para tamaños adicionales.
 
 {{< example >}}
 <nav aria-label="...">
@@ -120,21 +120,21 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
 </nav>
 {{< /example >}}
 
-## Alignment
+## Alineación
 
-Change the alignment of pagination components with [flexbox utilities]({{< docsref "/utilities/flex" >}}).
+Cambia la alineación de los componentes de paginación con [utilidades flexbox]({{< docsref "/utilities/flex" >}}).
 
 {{< example >}}
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+      <a class="page-link">Anterior</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+      <a class="page-link" href="#">Siguiente</a>
     </li>
   </ul>
 </nav>
@@ -144,13 +144,13 @@ Change the alignment of pagination components with [flexbox utilities]({{< docsr
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
-      <a class="page-link">Previous</a>
+      <a class="page-link">Anterior</a>
     </li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
     <li class="page-item"><a class="page-link" href="#">2</a></li>
     <li class="page-item"><a class="page-link" href="#">3</a></li>
     <li class="page-item">
-      <a class="page-link" href="#">Next</a>
+      <a class="page-link" href="#">Siguiente</a>
     </li>
   </ul>
 </nav>
