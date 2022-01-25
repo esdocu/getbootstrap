@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.">
+<meta name="description" content="Documentación y ejemplos para el uso de barras de progreso personalizadas de Bootstrap con soporte para barras apiladas, fondos animados y etiquetas de texto.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.91.2">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Progress">
-<meta name="twitter:description" content="Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.">
+<meta name="twitter:description" content="Documentación y ejemplos para el uso de barras de progreso personalizadas de Bootstrap con soporte para barras apiladas, fondos animados y etiquetas de texto.">
 <meta name="twitter:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://bootstrap.fabdev.win/docs/5.1/components/progress/">
 <meta property="og:title" content="Progress">
-<meta property="og:description" content="Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.">
+<meta property="og:description" content="Documentación y ejemplos para el uso de barras de progreso personalizadas de Bootstrap con soporte para barras apiladas, fondos animados y etiquetas de texto.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -411,7 +411,7 @@
         </div>
         <h1 class="bd-title" id="content">Progress</h1>
       </div>
-      <p class="bd-lead">Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.</p>
+      <p class="bd-lead">Documentación y ejemplos para el uso de barras de progreso personalizadas de Bootstrap con soporte para barras apiladas, fondos animados y etiquetas de texto.</p>
       
 
     </div>
@@ -421,13 +421,13 @@
       <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#labels">Labels</a></li>
-    <li><a href="#height">Height</a></li>
-    <li><a href="#backgrounds">Backgrounds</a></li>
-    <li><a href="#multiple-bars">Multiple bars</a></li>
-    <li><a href="#striped">Striped</a></li>
-    <li><a href="#animated-stripes">Animated stripes</a></li>
+    <li><a href="#cómo-funciona-progress">¿Cómo funciona progress?</a></li>
+    <li><a href="#etiquetas">Etiquetas</a></li>
+    <li><a href="#altura">Altura</a></li>
+    <li><a href="#fondos">Fondos</a></li>
+    <li><a href="#múltiples-barras">Múltiples barras</a></li>
+    <li><a href="#a-rayas">A rayas</a></li>
+    <li><a href="#rayas-animadas">Rayas animadas</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
         <li><a href="#variables">Variables</a></li>
@@ -442,15 +442,15 @@
     <div class="bd-content ps-lg-4">
       
 
-      <h2 id="how-it-works">How it works</h2>
-<p>Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don&rsquo;t use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">the HTML5 <code>&lt;progress&gt;</code> element</a>, ensuring you can stack progress bars, animate them, and place text labels over them.</p>
+      <h2 id="cómo-funciona-progress">¿Cómo funciona progress?</h2>
+<p>Los componentes de progreso se construyen con dos elementos HTML, algo de CSS para establecer el ancho y algunos atributos. No usamos <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">el elemento HTML5 <code>&lt;progress&gt;</code></a>, lo que garantiza que puedes apilar barras de progreso, animarlas y colocar etiquetas de texto sobre ellos.</p>
 <ul>
-<li>We use the <code>.progress</code> as a wrapper to indicate the max value of the progress bar.</li>
-<li>We use the inner <code>.progress-bar</code> to indicate the progress so far.</li>
-<li>The <code>.progress-bar</code> requires an inline style, utility class, or custom CSS to set their width.</li>
-<li>The <code>.progress-bar</code> also requires some <code>role</code> and <code>aria</code> attributes to make it accessible.</li>
+<li>Usamos <code>.progress</code> como contenedor para indicar el valor máximo de la barra de progreso.</li>
+<li>Usamos la <code>.progress-bar</code> interna para indicar el progreso hasta el momento.</li>
+<li>La <code>.progress-bar</code> requiere un estilo en línea, una clase de utilidad o un CSS personalizado para establecer su ancho.</li>
+<li>La <code>.progress-bar</code> también requiere algunos atributos <code>role</code> y <code>aria</code> para que sea accesible.</li>
 </ul>
-<p>Put that all together, and you have the following examples.</p>
+<p>Pon todo eso junto, y tienes los siguientes ejemplos.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -482,7 +482,7 @@
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 100%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Bootstrap provides a handful of <a href="/docs/5.1/utilities/sizing/">utilities for setting width</a>. Depending on your needs, these may help with quickly configuring progress.</p>
+<p>Bootstrap proporciona un puñado de <a href="/docs/5.1/utilities/sizing/">utilidades para configurar el ancho</a>. Dependiendo de tus necesidades, estos pueden ayudar a configurar rápidamente el progreso.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -490,8 +490,8 @@
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar w-75&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;75&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="labels">Labels</h2>
-<p>Add labels to your progress bars by placing text within the <code>.progress-bar</code>.</p>
+<h2 id="etiquetas">Etiquetas</h2>
+<p>Agrega etiquetas a tus barras de progreso colocando texto dentro de <code>.progress-bar</code>.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
@@ -499,8 +499,8 @@
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 25%;&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;</span>25%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="height">Height</h2>
-<p>We only set a <code>height</code> value on the <code>.progress</code>, so if you change that value the inner <code>.progress-bar</code> will automatically resize accordingly.</p>
+<h2 id="altura">Altura</h2>
+<p>Solo establecemos un valor de <code>height</code> en <code>.progress</code>, por lo que si cambias ese valor, la <code>.progress-bar</code> interna cambiará automáticamente de tamaño en consecuencia.</p>
 <div class="bd-example">
 <div class="progress" style="height: 1px;">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -514,8 +514,8 @@
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 20px;&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 25%;&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="backgrounds">Backgrounds</h2>
-<p>Use background utility classes to change the appearance of individual progress bars.</p>
+<h2 id="fondos">Fondos</h2>
+<p>Usa clases de utilidad de fondo para cambiar la apariencia de las barras de progreso individuales.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -541,8 +541,8 @@
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 100%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="multiple-bars">Multiple bars</h2>
-<p>Include multiple progress bars in a progress component if you need.</p>
+<h2 id="múltiples-barras">Múltiples barras</h2>
+<p>Incluye múltiples barras de progreso en un componente de progreso si lo necesitas.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
@@ -554,8 +554,8 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-success&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 30%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;30&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-info&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 20%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;20&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="striped">Striped</h2>
-<p>Add <code>.progress-bar-striped</code> to any <code>.progress-bar</code> to apply a stripe via CSS gradient over the progress bar&rsquo;s background color.</p>
+<h2 id="a-rayas">A rayas</h2>
+<p>Agrega <code>.progress-bar-striped</code> a cualquier <code>.progress-bar</code> para aplicar una rayas con un degradado CSS sobre el color de fondo de la barra de progreso.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -587,8 +587,8 @@
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar progress-bar-striped bg-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 100%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="animated-stripes">Animated stripes</h2>
-<p>The striped gradient can also be animated. Add <code>.progress-bar-animated</code> to <code>.progress-bar</code> to animate the stripes right to left via CSS3 animations.</p>
+<h2 id="rayas-animadas">Rayas animadas</h2>
+<p>El degradado rayado también se puede animar. Agrega <code>.progress-bar-animated</code> a <code>.progress-bar</code> para animar las franjas de derecha a izquierda a través de animaciones CSS3.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
@@ -609,7 +609,7 @@
 <span class="nv">$progress-bar-transition</span><span class="o">:</span>           <span class="ni">width</span> <span class="mf">.6</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="keyframes">Keyframes</h3>
-<p>Used for creating the CSS animations for <code>.progress-bar-animated</code>. Included in <code>scss/_progress-bar.scss</code>.</p>
+<p>Se utiliza para crear animaciones CSS para <code>.progress-bar-animated</code>. Incluido en <code>scss/_progress-bar.scss</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@if</span> <span class="nv">$enable-transitions</span> <span class="p">{</span>
   <span class="k">@keyframes</span> <span class="nt">progress-bar-stripes</span> <span class="p">{</span>
     <span class="nt">0</span><span class="err">%</span> <span class="p">{</span> <span class="na">background-position-x</span><span class="o">:</span> <span class="nv">$progress-height</span><span class="p">;</span> <span class="p">}</span>
