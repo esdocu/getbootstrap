@@ -2,13 +2,13 @@
 
 {{- $name := .Get 0 -}}
 
-Dismissal can be achieved with the `data` attribute on a button **within the {{ $name }}** as demonstrated below:
+El descarte (cierre) se puede lograr con el atributo `data` en un botón **dentro de {{ $name }}** como se muestra a continuación:
 
 ```html
 <button type="button" class="btn-close" data-bs-dismiss="{{ $name }}" aria-label="Close"></button>
 ```
 
-or on a button **outside the {{ $name }}** using the `data-bs-target` as demonstrated below:
+o en un botón **fuera de {{ $name }}** usando `data-bs-target` como se muestra a continuación:
 
 ```html
 <button type="button" class="btn-close" data-bs-dismiss="{{ $name }}" data-bs-target="#my-{{ $name }}" aria-label="Close"></button>

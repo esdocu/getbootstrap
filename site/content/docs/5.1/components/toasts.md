@@ -1,91 +1,93 @@
 ---
 layout: docs
 title: Toasts
-description: Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
+description: Envía notificaciones a tus visitantes con un toast, un mensaje de alerta ligero y fácilmente personalizable.
 group: components
 toc: true
 ---
 
-Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They're built with flexbox, so they're easy to align and position.
+## ¿Qué es toast?
 
-## Overview
+Los toasts son notificaciones livianas diseñadas para imitar las notificaciones automáticas que se han popularizado en los sistemas operativos móviles y de escritorio. Están construidos con flexbox, por lo que son fáciles de alinear y colocar.
 
-Things to know when using the toast plugin:
+## Descripción general
 
-- Toasts are opt-in for performance reasons, so **you must initialize them yourself**.
-- Toasts will automatically hide if you do not specify `autohide: false`.
+Cosas que debes saber al usar el complemento de toast:
+
+- Los toasts son opcionales por motivos de rendimiento, por lo que **debes inicializarlos tú mismo**.
+- Los toasts se ocultarán automáticamente si no especificas `autohide: false`.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Examples
+## Ejemplos
 
-### Basic
+### Básico
 
-To encourage extensible and predictable toasts, we recommend a header and body. Toast headers use `display: flex`, allowing easy alignment of content thanks to our margin and flexbox utilities.
+Para fomentar los toasts extensibles y predecibles, recomendamos un encabezado y un cuerpo. Los encabezados de toasts usan `display: flex`, lo que permite una fácil alineación del contenido gracias a nuestras utilidades margin y flexbox.
 
-Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your "toasted" content and strongly encourage a dismiss button.
+Los toasts son tan flexibles como necesites y requieren muy poco marcado. Como mínimo, requerimos que un solo elemento contenga tu contenido "toasted" y recomendamos enfáticamente un botón para descartar (cerrar).
 
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
     <strong class="me-auto">Bootstrap</strong>
-    <small>11 mins ago</small>
+    <small>Hace 11 minutos</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
   <div class="toast-body">
-    Hello, world! This is a toast message.
+    ¡Hola Mundo! Este es un mensaje de toast.
   </div>
 </div>
 {{< /example >}}
 
 {{< callout warning >}}
-Previously, our scripts dynamically added the `.hide` class to completely hide a toast (with `display:none`, rather than just with `opacity:0`). This is now not necessary anymore. However, for backwards compatibility, our script will continue to toggle the class (even though there is no practical need for it) until the next major version.
+Anteriormente, nuestros scripts agregaban dinámicamente la clase `.hide` para ocultar completamente un toast (con `display:none`, en lugar de solo con `opacity:0`). Esto ya no es necesario. Sin embargo, para compatibilidad con versiones anteriores, nuestro script continuará alternando la clase (aunque no haya una necesidad práctica de hacerlo) hasta la próxima versión major.
 {{< /callout >}}
 
-### Live example
+### Ejemplo en vivo
 
-Click the button below to show a toast (positioned with our utilities in the lower right corner) that has been hidden by default.
+Haz clic en el botón a continuación para mostrar un toast (ubicado con nuestras utilidades en la esquina inferior derecha) que se ha ocultado de forma predeterminada.
 
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
+      <small>Hace 11 minutos</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
-      Hello, world! This is a toast message.
+      ¡Hola Mundo! Este es un mensaje de toast.
     </div>
   </div>
 </div>
 
 <div class="bd-example">
-  <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+  <button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar el toast en vivo</button>
 </div>
 
 ```html
-<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+<button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar el toast en vivo</button>
 
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <img src="..." class="rounded me-2" alt="...">
       <strong class="me-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
+      <small>Hace 11 minutos</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
-      Hello, world! This is a toast message.
+      ¡Hola Mundo! Este es un mensaje de toast.
     </div>
   </div>
 </div>
 ```
 
-We use the following JavaScript to trigger our live toast demo:
+Usamos el siguiente JavaScript para activar nuestra demostración de toast en vivo:
 
 ```js
 var toastTrigger = document.getElementById('liveToastBtn')
@@ -98,28 +100,27 @@ if (toastTrigger) {
   })
 }
 ```
+### Translúcido
 
-### Translucent
-
-Toasts are slightly translucent to blend in with what's below them.
+Los toasts son ligeramente translúcidos para mezclarse con lo que hay debajo de ellos.
 
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
     <strong class="me-auto">Bootstrap</strong>
-    <small class="text-muted">11 mins ago</small>
+    <small class="text-muted">Hace 11 minutos</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
   <div class="toast-body">
-    Hello, world! This is a toast message.
+    ¡Hola Mundo! Este es un mensaje de toast.
   </div>
 </div>
 {{< /example >}}
 
-### Stacking
+### Apilamiento
 
-You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.
+Puedes apilar toasts envolviéndolas en un recipiente para toasts, lo que agregará algo de espacio verticalmente.
 
 {{< example class="bg-light" >}}
 <div class="toast-container">
@@ -127,11 +128,11 @@ You can stack toasts by wrapping them in a toast container, which will verticall
     <div class="toast-header">
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Bootstrap</strong>
-      <small class="text-muted">just now</small>
+      <small class="text-muted">justo ahora</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
-      See? Just like this.
+      ¿Ves? Justo como esto
     </div>
   </div>
 
@@ -143,75 +144,75 @@ You can stack toasts by wrapping them in a toast container, which will verticall
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
-      Heads up, toasts will stack automatically
+      Atención, los toasts se apilarán automáticamente
     </div>
   </div>
 </div>
 {{< /example >}}
 
-### Custom content
+### Contenido personalizado
 
-Customize your toasts by removing sub-components, tweaking them with [utilities]({{< docsref "/utilities/api" >}}), or by adding your own markup. Here we've created a simpler toast by removing the default `.toast-header`, adding a custom hide icon from [Bootstrap Icons]({{< param icons >}}), and using some [flexbox utilities]({{< docsref "/utilities/flex" >}}) to adjust the layout.
+Personaliza tus toasts eliminando subcomponentes, ajustándolos con [utilidades]({{< docsref "/utilities/api" >}}), o agregando tu propio marcado. Aquí hemos creado un toast más simple eliminando el `.toast-header` predeterminado, agregando un ícono de ocultación personalizado de [Iconos de Bootstrap]({{< param icons >}}), y usando algunas [utilidades de flexbox]({{< docsref "/utilities/flex" >}}) para ajustar el diseño.
 
 {{< example class="bg-light" >}}
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
     <div class="toast-body">
-    Hello, world! This is a toast message.
+    ¡Hola Mundo! Este es un mensaje de toast.
    </div>
     <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
 </div>
 {{< /example >}}
 
-Alternatively, you can also add additional controls and components to toasts.
+Alternativamente, también puedes agregar controles y componentes adicionales a los toasts.
 
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-body">
-    Hello, world! This is a toast message.
+    ¡Hola Mundo! Este es un mensaje de toast.
     <div class="mt-2 pt-2 border-top">
-      <button type="button" class="btn btn-primary btn-sm">Take action</button>
+      <button type="button" class="btn btn-primary btn-sm">Tomar acción</button>
       <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Cerrar</button>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-### Color schemes
+### Esquemas de color
 
-Building on the above example, you can create different toast color schemes with our [color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utilities. Here we've added `.bg-primary` and `.text-white` to the `.toast`, and then added `.btn-close-white` to our close button. For a crisp edge, we remove the default border with `.border-0`.
+Sobre la base del ejemplo anterior, puedes crear diferentes esquemas de colores con nuestras utilidades de [color]({{< docsref "/utilities/colors" >}}) y [background]({{< docsref "/utilities/background" >}}). Aquí hemos agregado `.bg-primary` y `.text-white` a `.toast`, y luego agregamos `.btn-close-white` a nuestro botón de cierre. Para un borde nítido, eliminamos el borde predeterminado con `.border-0`.
 
 {{< example class="bg-light" >}}
 <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="d-flex">
     <div class="toast-body">
-      Hello, world! This is a toast message.
+      ¡Hola Mundo! Este es un mensaje de toast.
     </div>
     <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
 </div>
 {{< /example >}}
 
-## Placement
+## Colocación
 
-Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the `.toast`.
+Coloca toast con CSS personalizado a medida que los necesites. La parte superior derecha se usa a menudo para notificaciones, al igual que la parte superior central. Si solo vas a mostrar un toast a la vez, coloca los estilos de posicionamiento justo en `.toast`.
 
 {{< example >}}
 <form>
   <div class="mb-3">
-    <label for="selectToastPlacement">Toast placement</label>
+    <label for="selectToastPlacement">Colocación del toast</label>
     <select class="form-select mt-2" id="selectToastPlacement">
-      <option value="" selected>Select a position...</option>
-      <option value="top-0 start-0">Top left</option>
-      <option value="top-0 start-50 translate-middle-x">Top center</option>
-      <option value="top-0 end-0">Top right</option>
-      <option value="top-50 start-0 translate-middle-y">Middle left</option>
-      <option value="top-50 start-50 translate-middle">Middle center</option>
-      <option value="top-50 end-0 translate-middle-y">Middle right</option>
-      <option value="bottom-0 start-0">Bottom left</option>
-      <option value="bottom-0 start-50 translate-middle-x">Bottom center</option>
-      <option value="bottom-0 end-0">Bottom right</option>
+      <option value="" selected>Selecciona una posición...</option>
+      <option value="top-0 start-0">Superior izquierda</option>
+      <option value="top-0 start-50 translate-middle-x">Superior central</option>
+      <option value="top-0 end-0">Superior derecha</option>
+      <option value="top-50 start-0 translate-middle-y">Medio izquierda</option>
+      <option value="top-50 start-50 translate-middle">Medio central</option>
+      <option value="top-50 end-0 translate-middle-y">Medio derecha</option>
+      <option value="bottom-0 start-0">Inferior izquierda</option>
+      <option value="bottom-0 start-50 translate-middle-x">Inferior central</option>
+      <option value="bottom-0 end-0">Inferior derecha</option>
     </select>
   </div>
 </form>
@@ -221,24 +222,24 @@ Place toasts with custom CSS as you need them. The top right is often used for n
       <div class="toast-header">
         {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
         <strong class="me-auto">Bootstrap</strong>
-        <small>11 mins ago</small>
+        <small>Hace 11 minutos</small>
       </div>
       <div class="toast-body">
-        Hello, world! This is a toast message.
+        ¡Hola Mundo! Este es un mensaje de toast.
       </div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-For systems that generate more notifications, consider using a wrapping element so they can easily stack.
+Para los sistemas que generan más notificaciones, considera usar un elemento envolvente para que puedan apilarse fácilmente.
 
 {{< example class="bg-dark bd-example-toasts p-0" >}}
 <div aria-live="polite" aria-atomic="true" class="position-relative">
-  <!-- Position it: -->
-  <!-- - `.toast-container` for spacing between toasts -->
-  <!-- - `.position-absolute`, `top-0` & `end-0` to position the toasts in the upper right corner -->
-  <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
+  <!-- Posicionarlo: -->
+  <!-- - `.toast-container` para espaciado entre toasts -->
+  <!-- - `.position-absolute`, `top-0` & `end-0` para posicionar el toasts en la esquina superior izquierda -->
+  <!-- - `.p-3` para evitar que los toasts se peguen al borde del container  -->
   <div class="toast-container position-absolute top-0 end-0 p-3">
 
     <!-- Then put toasts within -->
@@ -246,11 +247,11 @@ For systems that generate more notifications, consider using a wrapping element 
       <div class="toast-header">
         {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
         <strong class="me-auto">Bootstrap</strong>
-        <small class="text-muted">just now</small>
+        <small class="text-muted">justo ahora</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body">
-        See? Just like this.
+        ¿Ves? Justo como esto
       </div>
     </div>
 
@@ -262,17 +263,17 @@ For systems that generate more notifications, consider using a wrapping element 
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body">
-        Heads up, toasts will stack automatically
+        Atención, los toasts se apilarán automáticamente
       </div>
     </div>
   </div>
 </div>
 {{< /example >}}
 
-You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.
+También pueden utilizarse las utilidades de flexbox para alinear los toasts horizontal y/o verticalmente.
 
 {{< example class="bg-dark bd-example-toasts d-flex" >}}
-<!-- Flexbox container for aligning the toasts -->
+<!-- Flexbox container para el alineamiento de toasts -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
   <!-- Then put toasts within -->
@@ -280,49 +281,48 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
     <div class="toast-header">
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
       <strong class="me-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
+      <small>Hace 11 minutos</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
     <div class="toast-body">
-      Hello, world! This is a toast message.
+      ¡Hola Mundo! Este es un mensaje de toast.
     </div>
   </div>
 </div>
 {{< /example >}}
 
-## Accessibility
+## Accesibilidad
 
-Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user's focus or otherwise interrupt the user. Additionally, include `aria-atomic="true"` to ensure that the entire toast is always announced as a single (atomic) unit, rather than just announcing what was changed (which could lead to problems if you only update part of the toast's content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the [alert component]({{< docsref "/components/alerts" >}}) instead of toast.
+Los toasts están destinados a ser pequeñas interrupciones para tus visitantes o usuarios, por lo que para ayudar a aquellos con lectores de pantalla y tecnologías de asistencia similares, debes envolver tus toasts en una [región `aria-live`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Los lectores de pantalla anuncian automáticamente los cambios en las regiones activas (como inyectar/actualizar un componente del sistema) sin necesidad de mover el foco del usuario o interrumpirlo de otra manera. Además, incluye `aria-atomic="true"` para asegurarte de que todo los toasts se anuncien siempre como una sola unidad (atómica), en lugar de simplemente anunciar lo que se cambió (lo que podría ocasionar problemas si solo actualizas parte del contenido del toasts, o si muestras el mismo contenido de toast en un momento posterior). Si la información necesaria es importante para el proceso, p.e. para obtener una lista de errores en un formulario, utiliza el [componente de alerta]({{< docsref "/components/alerts" >}}) en lugar de toasts.
 
-Note that the live region needs to be present in the markup *before* the toast is generated or updated. If you dynamically generate both at the same time and inject them into the page, they will generally not be announced by assistive technologies.
+Ten en cuenta que la región en vivo debe estar presente en el marcado *antes* de que se genere o actualice el toasts. Si generas dinámicamente ambos al mismo tiempo y los insertas en la página, generalmente no serán anunciados por tecnologías de asistencia.
 
-You also need to adapt the `role` and `aria-live` level depending on the content. If it's an important message like an error, use `role="alert" aria-live="assertive"`, otherwise use `role="status" aria-live="polite"` attributes.
+También necesitas adaptar el nivel de `role` y `aria-live` dependiendo del contenido. Si es un mensaje importante como un error, usa `role="alert" aria-live="assertive"`, de lo contrario, use los atributos `role="status" aria-live="polite"`.
 
-As the content you're displaying changes, be sure to update the [`delay` timeout](#options) so that users have enough time to read the toast.
+A medida que cambias el contenido que estás mostrando, asegúrate de actualizar el [tiempo de espera de `delay`](#options) para que los usuarios tengan tiempo suficiente para leer el toasts.
 
 ```html
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
   <div role="alert" aria-live="assertive" aria-atomic="true">...</div>
 </div>
 ```
-
-When using `autohide: false`, you must add a close button to allow users to dismiss the toast.
+Al usar `autohide: false`, debes agregar un botón de cierre para permitir que los usuarios descarten el toast.
 
 {{< example class="bg-light" >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
   <div class="toast-header">
     {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
     <strong class="me-auto">Bootstrap</strong>
-    <small>11 mins ago</small>
+    <small>Hace 11 minutos</small>
     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
   <div class="toast-body">
-    Hello, world! This is a toast message.
+    ¡Hola Mundo! Este es un mensaje de toast.
   </div>
 </div>
 {{< /example >}}
 
-While technically it's possible to add focusable/actionable controls (such as additional buttons or links) in your toast, you should avoid doing this for autohiding toasts. Even if you give the toast a long [`delay` timeout](#options), keyboard and assistive technology users may find it difficult to reach the toast in time to take action (since toasts don't receive focus when they are displayed). If you absolutely must have further controls, we recommend using a toast with `autohide: false`.
+Si bien técnicamente es posible agregar controles enfocables/accionables (como botones o enlaces adicionales) en tu toast, debes evitar hacer esto para ocultar automáticamente los toasts. Incluso si das al toast un largo [tiempo de espera `delay`](#options), los usuarios de tecnología de asistencia y teclado pueden tener dificultades para llegar al toast a tiempo para tomar medidas (ya que los toasts no reciben atención cuando se muestran) . Si es absolutamente necesario tener controles adicionales, te recomendamos usar un toast con `autohide: false`.
 
 ## Sass
 
@@ -330,9 +330,9 @@ While technically it's possible to add focusable/actionable controls (such as ad
 
 {{< scss-docs name="toast-variables" file="scss/_variables.scss" >}}
 
-## Usage
+## Uso
 
-Initialize toasts via JavaScript:
+Inicializa los toasts a través de JavaScript:
 
 ```js
 var toastElList = Array.prototype.slice.call(document.querySelectorAll('.toast'))
@@ -345,9 +345,9 @@ var toastList = toastElList.map(function (toastEl) {
 
 {{% js-dismiss "toast" %}}
 
-### Options
+### Opciones
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`.
+Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega el nombre de la opción a `data-bs-`, como en `data-bs-animation=""`.
 
 <table class="table">
   <thead>
@@ -363,13 +363,13 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td><code>animation</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Apply a CSS fade transition to the toast</td>
+      <td>Aplicar una transición de fundido CSS al toast</td>
     </tr>
     <tr>
       <td><code>autohide</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Auto hide the toast</td>
+      <td>Ocultar automáticamente el toast</td>
     </tr>
     <tr>
       <td><code>delay</code></td>
@@ -377,12 +377,12 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>
         <code>5000</code>
       </td>
-      <td>Delay hiding the toast (ms)</td>
+      <td>Retraso en ocultar el toast (ms)</td>
     </tr>
   </tbody>
 </table>
 
-### Methods
+### Métodos
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
@@ -390,8 +390,8 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 
 #### show
 
-Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs).
-You have to manually call this method, instead your toast won't show.
+Revela el toast de un elemento. **Regresa al punto de la llamada antes de que se muestre realmente el toast** (es decir, antes de que ocurra el evento `shown.bs.toast`).
+Debes llamar manualmente a este método, caso contrario tu toast no se mostrará.
 
 ```js
 toast.show()
@@ -399,7 +399,7 @@ toast.show()
 
 #### hide
 
-Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`.
+Oculta el toast de un elemento. **Regresa al punto de la llamada antes de que se haya ocultado realmente el toast** (es decir, antes de que ocurra el evento `hidden.bs.toast`). Tienes que llamar manualmente a este método si asignaste `autohide` en `false`.
 
 ```js
 toast.hide()
@@ -407,7 +407,7 @@ toast.hide()
 
 #### dispose
 
-Hides an element's toast. Your toast will remain on the DOM but won't show anymore.
+Oculta el toast de un elemento. Tu toast permanecerá en el DOM pero ya no se mostrará.
 
 ```js
 toast.dispose()
@@ -415,23 +415,23 @@ toast.dispose()
 
 #### getInstance
 
-*Static* method which allows you to get the toast instance associated with a DOM element
+Método *estático* que te permite obtener la instancia de toast asociada con un elemento DOM
 
 ```js
 var myToastEl = document.getElementById('myToastEl')
-var myToast = bootstrap.Toast.getInstance(myToastEl) // Returns a Bootstrap toast instance
+var myToast = bootstrap.Toast.getInstance(myToastEl) // Devuelve una instancia de toast Bootstrap
 ```
 
 #### getOrCreateInstance
 
-*Static* method which allows you to get the toast instance associated with a DOM element, or create a new one in case it wasn't initialized
+Método *estático* que te permite obtener la instancia de toast asociada con un elemento DOM, o crear uno nuevo en caso de que no se haya inicializado
 
 ```js
 var myToastEl = document.getElementById('myToastEl')
-var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootstrap toast instance
+var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Devuelve una instancia de toast Bootstrap
 ```
 
-### Events
+### Eventos
 
 <table class="table">
   <thead>
@@ -443,19 +443,19 @@ var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootst
   <tbody>
     <tr>
       <td><code>show.bs.toast</code></td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+      <td>Este evento se activa inmediatamente cuando se llama al método de instancia <code>show</code>.</td>
     </tr>
     <tr>
       <td><code>shown.bs.toast</code></td>
-      <td>This event is fired when the toast has been made visible to the user.</td>
+      <td>Este evento se activa cuando el usuario ya puede ver el toast.</td>
     </tr>
     <tr>
       <td><code>hide.bs.toast</code></td>
-      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+      <td>Este evento se activa inmediatamente cuando se llama al método de instancia <code>hide</code>.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.toast</code></td>
-      <td>This event is fired when the toast has finished being hidden from the user.</td>
+      <td>Este evento se activa cuando el toast ha terminado de ocultarse al usuario.</td>
     </tr>
   </tbody>
 </table>
@@ -463,6 +463,6 @@ var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootst
 ```js
 var myToastEl = document.getElementById('myToast')
 myToastEl.addEventListener('hidden.bs.toast', function () {
-  // do something...
+  // hacer algo...
 })
 ```
