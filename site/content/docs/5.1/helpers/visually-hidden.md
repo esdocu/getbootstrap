@@ -1,23 +1,23 @@
 ---
 layout: docs
-title: Visually hidden
-description: Use these helpers to visually hide elements but keep them accessible to assistive technologies.
+title: Visualmente oculto
+description: Utiliza estos helpers para ocultar elementos visualmente, manteniéndolos accesibles para las tecnologías de asistencia.
 group: helpers
 aliases: "/docs/5.1/helpers/screen-readers/"
 ---
 
-Visually hide an element while still allowing it to be exposed to assistive technologies (such as screen readers) with `.visually-hidden`. Use `.visually-hidden-focusable` to visually hide an element by default, but to display it when it's focused (e.g. by a keyboard-only user). `.visually-hidden-focusable` can also be applied to a container–thanks to `:focus-within`, the container will be displayed when any child element of the container receives focus.
+Oculta visualmente un elemento y, al mismo tiempo, permite que esté expuesto a tecnologías de asistencia (como lectores de pantalla) con `.visually-hidden`. Usa `.visually-hidden-focusable` para ocultar visualmente un elemento de forma predeterminada, pero mostrarlo cuando está enfocado (por ejemplo, por un usuario que solo usa el teclado). `.visually-hidden-focusable` también se puede aplicar a un contenedor, gracias a `:focus-within`, el contenedor se mostrará cuando cualquier elemento secundario del contenedor reciba el foco.
 
 {{< example >}}
-<h2 class="visually-hidden">Title for screen readers</h2>
-<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
-<div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
+<h2 class="visually-hidden">Título para lectores de pantalla</h2>
+<a class="visually-hidden-focusable" href="#content">Saltar al contenido principal</a>
+<div class="visually-hidden-focusable">Un contenedor con un <a href="#">elemento enfocable</a>.</div>
 {{< /example >}}
 
-Both `visually-hidden` and `visually-hidden-focusable` can also be used as mixins.
+Ambos `visually-hidden` y `visually-hidden-focusable` pueden ser usados como mixins.
 
 ```scss
-// Usage as a mixin
+// Uso como un mixin
 
 .visually-hidden-title {
   @include visually-hidden;

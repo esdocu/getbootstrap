@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Use these helpers to visually hide elements but keep them accessible to assistive technologies.">
+<meta name="description" content="Utiliza estos helpers para ocultar elementos visualmente, manteniéndolos accesibles para las tecnologías de asistencia.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
 
-<title>Visually hidden · Bootstrap en Español v5.1</title>
+<title>Visualmente oculto · Bootstrap en Español v5.1</title>
 
 <link rel="canonical" href="https://bootstrap.fabdev.win/docs/5.1/helpers/visually-hidden/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Visually hidden">
-<meta name="twitter:description" content="Use these helpers to visually hide elements but keep them accessible to assistive technologies.">
+<meta name="twitter:title" content="Visualmente oculto">
+<meta name="twitter:description" content="Utiliza estos helpers para ocultar elementos visualmente, manteniéndolos accesibles para las tecnologías de asistencia.">
 <meta name="twitter:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://bootstrap.fabdev.win/docs/5.1/helpers/visually-hidden/">
-<meta property="og:title" content="Visually hidden">
-<meta property="og:description" content="Use these helpers to visually hide elements but keep them accessible to assistive technologies.">
+<meta property="og:title" content="Visualmente oculto">
+<meta property="og:description" content="Utiliza estos helpers para ocultar elementos visualmente, manteniéndolos accesibles para las tecnologías de asistencia.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -322,14 +322,14 @@
         <div class="collapse show" id="helpers-collapse">
           <ul class="list-unstyled fw-normal pb-1 small">
               <li><a href="/docs/5.1/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
-              <li><a href="/docs/5.1/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Colored links</a></li>
-              <li><a href="/docs/5.1/helpers/ratio/" class="d-inline-flex align-items-center rounded">Ratio</a></li>
-              <li><a href="/docs/5.1/helpers/position/" class="d-inline-flex align-items-center rounded">Position</a></li>
-              <li><a href="/docs/5.1/helpers/stacks/" class="d-inline-flex align-items-center rounded">Stacks</a></li>
-              <li><a href="/docs/5.1/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded active" aria-current="page">Visually hidden</a></li>
-              <li><a href="/docs/5.1/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Stretched link</a></li>
-              <li><a href="/docs/5.1/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Text truncation</a></li>
-              <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-inline-flex align-items-center rounded">Vertical rule</a></li>
+              <li><a href="/docs/5.1/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Enlaces de colores</a></li>
+              <li><a href="/docs/5.1/helpers/ratio/" class="d-inline-flex align-items-center rounded">Relación de aspecto</a></li>
+              <li><a href="/docs/5.1/helpers/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
+              <li><a href="/docs/5.1/helpers/stacks/" class="d-inline-flex align-items-center rounded">Pilas</a></li>
+              <li><a href="/docs/5.1/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded active" aria-current="page">Visualmente oculto</a></li>
+              <li><a href="/docs/5.1/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Enlace estirado</a></li>
+              <li><a href="/docs/5.1/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Texto truncado</a></li>
+              <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-inline-flex align-items-center rounded">Regla vertical</a></li>
           </ul>
         </div>
       </li>
@@ -409,9 +409,9 @@
             href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/helpers/visually-hidden.md"
             title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <h1 class="bd-title" id="content">Visually hidden</h1>
+        <h1 class="bd-title" id="content">Visualmente oculto</h1>
       </div>
-      <p class="bd-lead">Use these helpers to visually hide elements but keep them accessible to assistive technologies.</p>
+      <p class="bd-lead">Utiliza estos helpers para ocultar elementos visualmente, manteniéndolos accesibles para las tecnologías de asistencia.</p>
       
 
     </div>
@@ -421,16 +421,16 @@
     <div class="bd-content ps-lg-4">
       
 
-      <p>Visually hide an element while still allowing it to be exposed to assistive technologies (such as screen readers) with <code>.visually-hidden</code>. Use <code>.visually-hidden-focusable</code> to visually hide an element by default, but to display it when it&rsquo;s focused (e.g. by a keyboard-only user). <code>.visually-hidden-focusable</code> can also be applied to a container–thanks to <code>:focus-within</code>, the container will be displayed when any child element of the container receives focus.</p>
+      <p>Oculta visualmente un elemento y, al mismo tiempo, permite que esté expuesto a tecnologías de asistencia (como lectores de pantalla) con <code>.visually-hidden</code>. Usa <code>.visually-hidden-focusable</code> para ocultar visualmente un elemento de forma predeterminada, pero mostrarlo cuando está enfocado (por ejemplo, por un usuario que solo usa el teclado). <code>.visually-hidden-focusable</code> también se puede aplicar a un contenedor, gracias a <code>:focus-within</code>, el contenedor se mostrará cuando cualquier elemento secundario del contenedor reciba el foco.</p>
 <div class="bd-example">
-<h2 class="visually-hidden">Title for screen readers</h2>
-<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
-<div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Title for screen readers<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Skip to main content<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span><span class="p">&gt;</span>A container with a <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>focusable element<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Both <code>visually-hidden</code> and <code>visually-hidden-focusable</code> can also be used as mixins.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Usage as a mixin
+<h2 class="visually-hidden">Título para lectores de pantalla</h2>
+<a class="visually-hidden-focusable" href="#content">Saltar al contenido principal</a>
+<div class="visually-hidden-focusable">Un contenedor con un <a href="#">elemento enfocable</a>.</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Título para lectores de pantalla<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Saltar al contenido principal<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span><span class="p">&gt;</span>Un contenedor con un <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>elemento enfocable<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Ambos <code>visually-hidden</code> y <code>visually-hidden-focusable</code> pueden ser usados como mixins.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Uso como un mixin
 </span><span class="c1"></span>
 <span class="nc">.visually-hidden-title</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> visually-hidden</span><span class="p">;</span>

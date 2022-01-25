@@ -159,21 +159,21 @@
     - title: Clearfix
       es_title: Clearfix
     - title: Colored links
-      es_title: Colored links
+      es_title: Enlaces de colores
     - title: Ratio
-      es_title: Ratio
+      es_title: Relación de aspecto
     - title: Position
-      es_title: Position
+      es_title: Posición
     - title: Stacks
-      es_title: Stacks
+      es_title: Pilas
     - title: Visually hidden
-      es_title: Visually hidden
+      es_title: Visualmente oculto
     - title: Stretched link
-      es_title: Stretched link
+      es_title: Enlace estirado
     - title: Text truncation
-      es_title: Text truncation
+      es_title: Texto truncado
     - title: Vertical rule
-      es_title: Vertical rule
+      es_title: Regla vertical
 
 - title: Utilities
   es_title: Utilidades

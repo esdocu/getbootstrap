@@ -1,24 +1,24 @@
 ---
 layout: docs
-title: Ratios
-description: Use generated pseudo elements to make an element maintain the aspect ratio of your choosing. Perfect for responsively handling video or slideshow embeds based on the width of the parent.
+title: Relación de aspecto
+description: Usa pseudo elementos generados para hacer que un elemento mantenga la relación de aspecto de tu elección. Perfecto para manejar incrustaciones de video o presentación de diapositivas de manera responsive según el ancho del padre.
 group: helpers
 toc: true
 ---
 
-## About
+## Acerca de ratio
 
-Use the ratio helper to manage the aspect ratios of external content like `<iframe>`s, `<embed>`s, `<video>`s, and `<object>`s. These helpers also can be used on any standard HTML child element (e.g., a `<div>` or `<img>`). Styles are applied from the parent `.ratio` class directly to the child.
+Utiliza el asistente de proporción para administrar las proporciones de aspecto de contenido externo como `<iframe>`s, `<embed>`s, `<video>`s y `<object>`s. Estos helpers también se pueden usar en cualquier elemento secundario HTML estándar (por ejemplo, un `<div>` o `<img>`). Los estilos se aplican desde la clase principal `.ratio` directamente a la secundaria.
 
-Aspect ratios are declared in a Sass map and included in each class via CSS variable, which also allows [custom aspect ratios](#custom-ratios).
+Las relaciones de aspecto se declaran en un mapa de Sass y se incluyen en cada clase a través de la variable CSS, que también permite [relaciones de aspecto personalizadas](#custom-ratios).
 
 {{< callout info >}}
-**Pro-Tip!** You don't need `frameborder="0"` on your `<iframe>`s as we override that for you in [Reboot]({{< docsref "/content/reboot" >}}).
+**¡Pro-Tip!** No necesitas `frameborder="0"` en tus `<iframe>`s, ya que lo sobrescribimos en [Reboot]({{< docsref "/content/reboot" >}}).
 {{< /callout >}}
 
-## Example
+## Ejemplo
 
-Wrap any embed, like an `<iframe>`, in a parent element with `.ratio` and an aspect ratio class. The immediate child element is automatically sized thanks to our universal selector `.ratio > *`.
+Envuelve cualquier inserción, como un `<iframe>`, en un elemento padre con una clase `.ratio` y una clase de relación de aspecto. El elemento secundario inmediato se dimensiona automáticamente gracias a nuestro selector universal `.ratio > *`.
 
 {{< example >}}
 <div class="ratio ratio-16x9">
@@ -26,9 +26,9 @@ Wrap any embed, like an `<iframe>`, in a parent element with `.ratio` and an asp
 </div>
 {{< /example >}}
 
-## Aspect ratios
+## Relaciones de aspecto
 
-Aspect ratios can be customized with modifier classes. By default the following ratio classes are provided:
+Las relaciones de aspecto se pueden personalizar con clases modificadoras. De forma predeterminada, se proporcionan las siguientes clases de relación:
 
 {{< example class="bd-example-ratios" >}}
 <div class="ratio ratio-1x1">
@@ -45,11 +45,11 @@ Aspect ratios can be customized with modifier classes. By default the following 
 </div>
 {{< /example >}}
 
-## Custom ratios
+## Proporciones personalizadas
 
-Each `.ratio-*` class includes a CSS custom property (or CSS variable) in the selector. You can override this CSS variable to create custom aspect ratios on the fly with some quick math on your part.
+Cada clase `.ratio-*` incluye una propiedad personalizada CSS (o variable CSS) en el selector. Puedes sobrescribir esta variable CSS para crear relaciones de aspecto personalizadas sobre la marcha con algunos cálculos rápidos de tu parte.
 
-For example, to create a 2x1 aspect ratio, set `--bs-aspect-ratio: 50%` on the `.ratio`.
+Por ejemplo, para crear una relación de aspecto de 2x1, establece `--bs-aspect-ratio: 50%` en `.ratio`.
 
 {{< example class="bd-example-ratios" >}}
 <div class="ratio" style="--bs-aspect-ratio: 50%;">
@@ -57,7 +57,7 @@ For example, to create a 2x1 aspect ratio, set `--bs-aspect-ratio: 50%` on the `
 </div>
 {{< /example >}}
 
-This CSS variable makes it easy to modify the aspect ratio across breakpoints. The following is 4x3 to start, but changes to a custom 2x1 at the medium breakpoint.
+Esta variable CSS facilita la modificación de la relación de aspecto en los breakpoints. Lo siguiente es 4x3 para comenzar, pero cambia a un 2x1 personalizado en el breakpoint medium.
 
 ```scss
 .ratio-4x3 {
@@ -76,6 +76,6 @@ This CSS variable makes it easy to modify the aspect ratio across breakpoints. T
 
 ## Sass map
 
-Within `_variables.scss`, you can change the aspect ratios you want to use. Here's our default `$ratio-aspect-ratios` map. Modify the map as you like and recompile your Sass to put them to use.
+Dentro de `_variables.scss`, puedes cambiar las relaciones de aspecto que deseas utilizar. Aquí está nuestro mapa `$ratio-aspect-ratios` por defecto. Modifica el mapa como desees y vuelve a compilar tu Sass para ponerlos en uso.
 
 {{< scss-docs name="aspect-ratios" file="scss/_variables.scss" >}}

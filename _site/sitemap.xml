@@ -85,9 +85,6 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/customize/color/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/colored-links/</loc>
-  </url>
-  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/colors/</loc>
   </url>
   <url>
@@ -131,6 +128,12 @@
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/examples/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/stretched-link/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/colored-links/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/forms/floating-labels/</loc>
@@ -253,6 +256,9 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/customize/overview/</loc>
   </url>
   <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/stacks/</loc>
+  </url>
+  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/components/placeholders/</loc>
   </url>
   <url>
@@ -277,10 +283,13 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/forms/range/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/ratio/</loc>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/content/reboot/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/content/reboot/</loc>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/vertical-rule/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/ratio/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/getting-started/rfs/</loc>
@@ -319,9 +328,6 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/components/spinners/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/stacks/</loc>
-  </url>
-  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/examples/starter-template/</loc>
   </url>
   <url>
@@ -329,9 +335,6 @@
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/examples/sticky-footer/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/stretched-link/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/content/tables/</loc>
@@ -377,9 +380,6 @@
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/vertical-align/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/vertical-rule/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/visibility/</loc>

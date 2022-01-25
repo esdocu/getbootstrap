@@ -1,28 +1,28 @@
 ---
 layout: docs
-title: Vertical rule
-description: Use the custom vertical rule helper to create vertical dividers like the `<hr>` element.
+title: Regla vertical
+description: Utiliza el asistente de regla vertical personalizado para crear divisores verticales como el elemento `<hr>`.
 group: helpers
 toc: true
 ---
 
-## How it works
+## ¿Cómo funciona?
 
-Vertical rules are inspired by the `<hr>` element, allowing you to create vertical dividers in common layouts. They're styled just like `<hr>` elements:
+Las reglas verticales están inspiradas en el elemento `<hr>`, lo que te permite crear divisores verticales en diseños comunes. Tienen el mismo estilo que los elementos `<hr>`:
 
-- They're `1px` wide
-- They have `min-height` of `1em`
-- Their color is set via `currentColor` and `opacity`
+- Son `1px` de ancho
+- Tienen `min-height` de `1em`
+- Su color se establece a través de `currentColor` y `opacity`
 
-Customize them with additional styles as needed.
+Personalízalos con estilos adicionales según sea necesario.
 
-## Example
+## Ejemplo
 
 {{< example >}}
 <div class="vr"></div>
 {{< /example >}}
 
-Vertical rules scale their height in flex layouts:
+Las reglas verticales escalan su altura en diseños flexibles:
 
 {{< example >}}
 <div class="d-flex" style="height: 200px;">
@@ -30,15 +30,15 @@ Vertical rules scale their height in flex layouts:
 </div>
 {{< /example >}}
 
-## With stacks
+## Con pilas (stacks)
 
-They can also be used in [stacks]({{< docsref "/helpers/stacks" >}}):
+También se pueden usar en [stacks]({{< docsref "/helpers/stacks" >}}):
 
 {{< example >}}
 <div class="hstack gap-3">
-  <div class="bg-light border">First item</div>
-  <div class="bg-light border ms-auto">Second item</div>
+  <div class="bg-light border">Primer elemento</div>
+  <div class="bg-light border ms-auto">Segundo elemento</div>
   <div class="vr"></div>
-  <div class="bg-light border">Third item</div>
+  <div class="bg-light border">Tercer elemento</div>
 </div>
 {{< /example >}}

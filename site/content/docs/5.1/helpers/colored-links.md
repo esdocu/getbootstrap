@@ -1,21 +1,21 @@
 ---
 layout: docs
-title: Colored links
-description: Colored links with hover states
+title: Enlaces de colores
+description: Enlaces de colores con estados flotantes
 group: helpers
 toc: false
 ---
 
-You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` classes]({{< docsref "/utilities/colors" >}}), these classes have a `:hover` and `:focus` state.
+Puedes usar las clases `.link-*` para colorear los enlaces. A diferencia de las [clases `.text-*`]({{< docsref "/utilities/colors" >}}), estas clases tienen un estado `:hover` y `:focus`.
 
 {{< example >}}
 {{< colored-links.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<a href="#" class="link-{{ .name }}">{{ .name | title }} link</a>
+<a href="#" class="link-{{ .name }}">Enlace {{ .name | title }}</a> 
 {{- end -}}
 {{< /colored-links.inline >}}
 {{< /example >}}
 
 {{< callout info >}}
-Some of the link styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
+Algunos de los estilos de enlace usan un color de primer plano relativamente claro y solo deben usarse sobre un fondo oscuro para tener suficiente contraste.
 {{< /callout >}}

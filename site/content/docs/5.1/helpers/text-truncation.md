@@ -1,23 +1,23 @@
 ---
 layout: docs
-title: Text truncation
-description: Truncate long strings of text with an ellipsis.
+title: Texto truncado
+description: Trunca cadenas largas de texto con puntos suspensivos.
 group: helpers
 toc: false
 ---
 
-For longer content, you can add a `.text-truncate` class to truncate the text with an ellipsis. **Requires `display: inline-block` or `display: block`.**
+Para contenido más largo, puedes agregar una clase `.text-truncate` para truncar el texto con puntos suspensivos. **Requiere `display: inline-block` o `display: block`.**
 
 {{< example >}}
 <!-- Block level -->
 <div class="row">
   <div class="col-2 text-truncate">
-    This text is quite long, and will be truncated once displayed.
+    Este texto es bastante largo y se truncará una vez que se muestre.
   </div>
 </div>
 
 <!-- Inline level -->
 <span class="d-inline-block text-truncate" style="max-width: 150px;">
-  This text is quite long, and will be truncated once displayed.
+  Este texto es bastante largo y se truncará una vez que se muestre.
 </span>
 {{< /example >}}

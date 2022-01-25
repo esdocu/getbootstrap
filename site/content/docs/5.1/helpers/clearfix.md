@@ -1,24 +1,24 @@
 ---
 layout: docs
 title: Clearfix
-description: Quickly and easily clear floated content within a container by adding a clearfix utility.
+description: Borra rápida y fácilmente el contenido flotante dentro de un contenedor agregando una utilidad clearfix.
 group: helpers
 aliases: "/docs/5.1/helpers/"
 ---
 
-Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin.
+Borre fácilmente los `float`s agregando `.clearfix` **al elemento padre**. También se puedes utilizar como mixin.
 
-Use in HTML:
+Uso en HTML:
 
 ```html
 <div class="clearfix">...</div>
 ```
 
-The mixin source code:
+El código fuente del mixin:
 
 {{< scss-docs name="clearfix" file="scss/mixins/_clearfix.scss" >}}
 
-Use the mixin in SCSS:
+Uso del mixin en SCSS:
 
 ```scss
 .element {
@@ -26,11 +26,11 @@ Use the mixin in SCSS:
 }
 ```
 
-The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.
+El siguiente ejemplo muestra cómo se puede utilizar clearfix. Sin clearfix, el div envolvente no se extendería alrededor de los botones, lo que causaría un diseño roto.
 
 {{< example >}}
 <div class="bg-info clearfix">
-  <button type="button" class="btn btn-secondary float-start">Example Button floated left</button>
-  <button type="button" class="btn btn-secondary float-end">Example Button floated right</button>
+  <button type="button" class="btn btn-secondary float-start">Botón flotando a la izquierda</button>
+  <button type="button" class="btn btn-secondary float-end">Botón flotando a la derecha</button>
 </div>
 {{< /example >}}
