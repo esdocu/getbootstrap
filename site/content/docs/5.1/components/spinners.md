@@ -1,102 +1,102 @@
 ---
 layout: docs
 title: Spinners
-description: Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.
+description: Indica el estado de carga de un componente o una página con los indicadores giratorios de Bootstrap, creados completamente con HTML, CSS y sin JavaScript.
 group: components
 toc: true
 ---
 
-## About
+## Acerca de spinners
 
-Bootstrap "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
+Los "spinners" de Bootstrap se pueden usar para mostrar el estado de carga en tus proyectos. Están construidos solo con HTML y CSS, lo que significa que no necesitas JavaScript para crearlos. Sin embargo, necesitarás JavaScript personalizado para alternar su visibilidad. Su apariencia, alineación y tamaño se pueden personalizar fácilmente con nuestras increíbles clases de utilidad.
 
-For accessibility purposes, each loader here includes `role="status"` and a nested `<span class="visually-hidden">Loading...</span>`.
+Para propósitos de accesibilidad, cada cargador aquí incluye `role="status"` y un `<span class="visually-hidden">Cargando...</span>` anidado.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Border spinner
+## Spinner de borde
 
-Use the border spinners for a lightweight loading indicator.
+Utiliza los spinners de borde para un indicador de carga ligero.
 
 {{< example >}}
 <div class="spinner-border" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </div>
 {{< /example >}}
 
-### Colors
+### Colores
 
-The border spinner uses `currentColor` for its `border-color`, meaning you can customize the color with [text color utilities][color]. You can use any of our text color utilities on the standard spinner.
+El spinner de borde usa `currentColor` para su `border-color`, lo que significa que puedes personalizar el color con [utilidades de color de texto][color]. Puedes usar cualquiera de nuestras utilidades de color de texto en el spinner estándar.
 
 {{< example >}}
 {{< spinner.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="spinner-border text-{{ .name }}" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </div>
 {{- end -}}
 {{< /spinner.inline >}}
 {{< /example >}}
 
 {{< callout info >}}
-**Why not use `border-color` utilities?** Each border spinner specifies a `transparent` border for at least one side, so `.border-{color}` utilities would override that.
+**¿Por qué no usar las utilidades `border-color`?** Cada marcador giratorio de borde especifica un borde `transparent` para al menos un lado, por lo que las utilidades `.border-{color}` sobrescribirían eso.
 {{< /callout >}}
 
-## Growing spinner
+## Spinner creciente
 
-If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
+Si no te apetece un spinner de borde, cambia al spinner de crecimiento. Si bien técnicamente no gira, ¡crece repetidamente!
 
 {{< example >}}
 <div class="spinner-grow" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </div>
 {{< /example >}}
 
-Once again, this spinner is built with `currentColor`, so you can easily change its appearance with [text color utilities][color]. Here it is in blue, along with the supported variants.
+Una vez más, este spinner está construido con `currentColor`, por lo que puedes cambiar fácilmente su apariencia con [utilidades de color de texto][color]. Aquí está en azul, junto con las variantes admitidas.
 
 {{< example >}}
 {{< spinner.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
 <div class="spinner-grow text-{{ .name }}" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </div>
 {{- end -}}
 {{< /spinner.inline >}}
 {{< /example >}}
 
-## Alignment
+## Alineación
 
-Spinners in Bootstrap are built with `rem`s, `currentColor`, and `display: inline-flex`. This means they can easily be resized, recolored, and quickly aligned.
+Los spinners en Bootstrap están construidos con `rem`s, `currentColor` y `display: inline-flex`. Esto significa que se pueden cambiar de tamaño, cambiar de color y alinear rápidamente.
 
-### Margin
+### Margen
 
-Use [margin utilities][margin] like `.m-5` for easy spacing.
+Usa [utilidades de margen][margen] como `.m-5` para facilitar el espaciado.
 
 {{< example >}}
 <div class="spinner-border m-5" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </div>
 {{< /example >}}
 
-### Placement
+### Colocación
 
-Use [flexbox utilities][flex], [float utilities][float], or [text alignment][text] utilities to place spinners exactly where you need them in any situation.
+Utiliza las [utilidades flexbox][flex], [utilidades float][float] o [alineación de texto][text] para colocar los spinners exactamente donde los necesitas en cualquier situación.
 
 #### Flex
 
 {{< example >}}
 <div class="d-flex justify-content-center">
   <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Cargando...</span>
   </div>
 </div>
 {{< /example >}}
 
 {{< example >}}
 <div class="d-flex align-items-center">
-  <strong>Loading...</strong>
+  <strong>Cargando...</strong>
   <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
 </div>
 {{< /example >}}
@@ -106,68 +106,68 @@ Use [flexbox utilities][flex], [float utilities][float], or [text alignment][tex
 {{< example >}}
 <div class="clearfix">
   <div class="spinner-border float-end" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Cargando...</span>
   </div>
 </div>
 {{< /example >}}
 
-#### Text align
+#### Alineación de texto
 
 {{< example >}}
 <div class="text-center">
   <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Cargando...</span>
   </div>
 </div>
 {{< /example >}}
 
-## Size
+## Tamaño
 
-Add `.spinner-border-sm` and `.spinner-grow-sm` to make a smaller spinner that can quickly be used within other components.
+Agrega `.spinner-border-sm` y `.spinner-grow-sm` para hacer un spinner más pequeño que se pueda usar rápidamente dentro de otros componentes.
 
 {{< example >}}
 <div class="spinner-border spinner-border-sm" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </div>
 <div class="spinner-grow spinner-grow-sm" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </div>
 {{< /example >}}
 
-Or, use custom CSS or inline styles to change the dimensions as needed.
+O bien, usa CSS personalizado o estilos en línea para cambiar las dimensiones según sea necesario.
 
 {{< example >}}
 <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </div>
 <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </div>
 {{< /example >}}
 
-## Buttons
+## Botones
 
-Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed.
+Usa los spinners dentro de botones para indicar que una acción se está procesando o está teniendo lugar actualmente. También puedes cambiar el texto fuera del elemento spinner y utilizar el texto del botón según sea necesario.
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-  Loading...
+  Cargando...
 </button>
 {{< /example >}}
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Cargando...</span>
 </button>
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-  Loading...
+  Cargando...
 </button>
 {{< /example >}}
 
@@ -179,7 +179,7 @@ Use spinners within buttons to indicate an action is currently processing or tak
 
 ### Keyframes
 
-Used for creating the CSS animations for our spinners. Included in `scss/_spinners.scss`.
+Usado para crear las animaciones CSS para nuestros spinners. Incluido en `scss/_spinners.scss`.
 
 {{< scss-docs name="spinner-border-keyframes" file="scss/_spinners.scss" >}}
 
