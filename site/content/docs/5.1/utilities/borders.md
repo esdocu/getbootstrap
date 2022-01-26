@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Borders
-description: Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
+title: Bordes
+description: Utiliza las utilidades de borde para diseñar rápidamente el borde y el radio del borde de un elemento. Ideal para imágenes, botones o cualquier otro elemento.
 group: utilities
 toc: true
 ---
 
-## Border
+## Bordes
 
-Use border utilities to add or remove an element's borders. Choose from all borders or one at a time.
+Utiliza las utilidades de borde para agregar o eliminar los bordes de un elemento. Elije entre, todos los bordes o uno a la vez.
 
-### Additive
+### Aditivo
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border"></span>
@@ -20,7 +20,7 @@ Use border utilities to add or remove an element's borders. Choose from all bord
 <span class="border-start"></span>
 {{< /example >}}
 
-### Subtractive
+### Sustractivo
 
 {{< example class="bd-example-border-utils bd-example-border-utils-0" >}}
 <span class="border-0"></span>
@@ -30,9 +30,9 @@ Use border utilities to add or remove an element's borders. Choose from all bord
 <span class="border-start-0"></span>
 {{< /example >}}
 
-## Border color
+## Color del borde
 
-Change the border color using utilities built on our theme colors.
+Cambia el color del borde usando utilidades basadas en nuestros colores temáticos.
 
 {{< example class="bd-example-border-utils" >}}
 {{< border.inline >}}
@@ -43,7 +43,7 @@ Change the border color using utilities built on our theme colors.
 <span class="border border-white"></span>
 {{< /example >}}
 
-## Border-width
+## Ancho del borde
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-1"></span>
@@ -53,9 +53,9 @@ Change the border color using utilities built on our theme colors.
 <span class="border border-5"></span>
 {{< /example >}}
 
-## Border-radius
+## Radio del borde
 
-Add classes to an element to easily round its corners.
+Agrega clases a un elemento para redondear fácilmente tus esquinas.
 
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded" title="Example rounded image" >}}
@@ -67,9 +67,9 @@ Add classes to an element to easily round its corners.
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
 {{< /example >}}
 
-### Sizes
+### Tamaños
 
-Use the scaling classes for larger or smaller rounded corners. Sizes range from `0` to `3`, and can be configured by modifying the utilities API.
+Utiliza las clases de escala para esquinas redondeadas más grandes o más pequeñas. Los tamaños varían de `0` a `3` y se pueden configurar modificando la API de utilidades.
 
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" >}}
@@ -90,9 +90,9 @@ Use the scaling classes for larger or smaller rounded corners. Sizes range from 
 
 {{< scss-docs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" >}}
 
-### Utilities API
+### API de utilidades
 
-Border utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades de borde se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-borders" file="scss/_utilities.scss" >}}
 
