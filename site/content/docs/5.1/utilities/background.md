@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Background
-description: Convey meaning through `background-color` and add decoration with gradients.
+title: Color de fondo
+description: Transmite significado a través de `background-color` (color de fondo) y agrega decoración con degradados.
 group: utilities
 toc: true
 ---
 
-## Background color
+## Color de fondo
 
-Similar to the contextual text color classes, set the background of an element to any contextual class. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` [color utilities]({{< docsref "/utilities/colors" >}}).
+De forma similar a las clases de color de texto contextual, establece el fondo de un elemento en cualquier clase contextual. Las utilidades de fondo **no configuran `color`**, por lo que en algunos casos querrás usar `.text-*` [utilidades de color]({{< docsref "/utilities/colors" >}}).
 
 {{< example >}}
 {{< colors.inline >}}
@@ -21,11 +21,11 @@ Similar to the contextual text color classes, set the background of an element t
 <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
 {{< /example >}}
 
-## Background gradient
+## Gradiente de fondo
 
-By adding a `.bg-gradient` class, a linear gradient is added as background image to the backgrounds. This gradient starts with a semi-transparent white which fades out to the bottom.
+Al agregar una clase `.bg-gradient`, se agrega un degradado lineal como imagen de fondo a los fondos. Este degradado comienza con un blanco semitransparente que se desvanece hasta el fondo.
 
-Do you need a gradient in your custom CSS? Just add `background-image: var(--bs-gradient);`.
+¿Necesitas un degradado personalizado en tu CSS? Simplemente agrega `background-image: var(--bs-gradient);`.
 
 {{< markdown >}}
 {{< colors.inline >}}
@@ -35,15 +35,15 @@ Do you need a gradient in your custom CSS? Just add `background-image: var(--bs-
 {{< /colors.inline >}}
 {{< /markdown >}}
 
-## Opacity
+## Opacidad
 
-<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Añadido en v5.1.0</small>
 
-As of v5.1.0, `background-color` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+A partir de v5.1.0, las utilidades `background-color` se generan con Sass usando variables CSS. Esto permite cambios de color en tiempo real sin compilación y cambios dinámicos de transparencia alfa.
 
-### How it works
+### ¿Cómo funciona background-color?
 
-Consider our default `.bg-success` utility.
+Analicemos nuestra utilidad predeterminada `.bg-success`.
 
 ```css
 .bg-success {
@@ -52,34 +52,34 @@ Consider our default `.bg-success` utility.
 }
 ```
 
-We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-bg-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.bg-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.bg-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+Usamos una versión RGB de nuestra variable CSS `--bs-success` (con el valor de `25, 135, 84`) y adjuntamos una segunda variable CSS, `--bs-bg-opacity`, para la transparencia alfa (con un valor predeterminado `1` gracias a una variable CSS local). Esto significa que cada vez que usas `.bg-success` ahora, tu valor de `color` calculado es `rgba(25, 135, 84, 1)`. La variable CSS local dentro de cada clase `.bg-*` evita problemas de herencia, por lo que las instancias anidadas de las utilidades no tienen automáticamente una transparencia alfa modificada.
 
-### Example
+### Ejemplo
 
-To change that opacity, override `--bs-bg-opacity` via custom styles or inline styles.
+Para cambiar esa opacidad, sobrescribe `--bs-bg-opacity` a través de estilos personalizados o estilos en línea.
 
 {{< example >}}
-<div class="bg-success p-2 text-white">This is default success background</div>
-<div class="bg-success p-2" style="--bs-bg-opacity: .5;">This is 50% opacity success background</div>
+<div class="bg-success p-2 text-white">Este es el fondo de success predeterminado</div>
+<div class="bg-success p-2" style="--bs-bg-opacity: .5;">Este es el fondo de success con una opacidad del 50%</div>
 {{< /example >}}
 
-Or, choose from any of the `.bg-opacity` utilities:
+O bien, elije cualquiera de las utilidades `.bg-opacity`:
 
 {{< example >}}
-<div class="bg-success p-2 text-white">This is default success background</div>
-<div class="bg-success p-2 text-white bg-opacity-75">This is 75% opacity success background</div>
-<div class="bg-success p-2 text-dark bg-opacity-50">This is 50% opacity success background</div>
-<div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
-<div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
+<div class="bg-success p-2 text-white">Este es el fondo success predeterminado</div>
+<div class="bg-success p-2 text-white bg-opacity-75">Este es un fondo success con una opacidad del 75%</div>
+<div class="bg-success p-2 text-dark bg-opacity-50">Este es un fondo success con una opacidad del 50%</div>
+<div class="bg-success p-2 text-dark bg-opacity-25">Este es un fondo success con una opacidad del 25%</div>
+<div class="bg-success p-2 text-dark bg-opacity-10">Este es un fondo success con una opacidad del 10%</div>
 {{< /example >}}
 
 ## Sass
 
-In addition to the following Sass functionality, consider reading about our included [CSS custom properties]({{< docsref "/customize/css-variables" >}}) (aka CSS variables) for colors and more.
+Además de la siguiente funcionalidad de Sass, considera leer sobre nuestras [propiedades personalizadas CSS]({{< docsref "/customize/css-variables" >}}) (también conocidas como variables CSS) para colores y más.
 
 ### Variables
 
-Most `background-color` utilities are generated by our theme colors, reassigned from our generic color palette variables.
+La mayoría de las utilidades de `background-color` son generadas por nuestros colores de tema, reasignados desde nuestras variables de paleta de colores genéricas.
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
@@ -87,38 +87,38 @@ Most `background-color` utilities are generated by our theme colors, reassigned 
 
 {{< scss-docs name="variable-gradient" file="scss/_variables.scss" >}}
 
-Grayscale colors are also available, but only a subset are used to generate any utilities.
+Los colores en escala de grises también están disponibles, pero solo se usa un subconjunto para generar utilidades.
 
 {{< scss-docs name="gray-color-variables" file="scss/_variables.scss" >}}
 
-### Map
+### Mapas
 
-Theme colors are then put into a Sass map so we can loop over them to generate our utilities, component modifiers, and more.
+Luego, los colores del tema se colocan en un mapa de Sass para que podamos recorrerlos para generar nuestras utilidades, modificadores de componentes y más.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
-Grayscale colors are also available as a Sass map. **This map is not used to generate any utilities.**
+Los colores en escala de grises también están disponibles como mapa Sass. **Este mapa no se usa para generar utilidades.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
 
-RGB colors are generated from a separate Sass map:
+Los colores RGB se generan a partir de un mapa Sass separado:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
 
-And background color opacities build on that with their own map that's consumed by the utilities API:
+Y las opacidades del color de fondo se basan en esto con su propio mapa que consume la API de utilidades:
 
 {{< scss-docs name="utilities-bg-colors" file="scss/_maps.scss" >}}
 
 ### Mixins
 
-**No mixins are used to generate our background utilities**, but we do have some additional mixins for other situations where you'd like to create your own gradients.
+**No se utilizan mixins para generar nuestras utilidades de fondo**, pero tenemos algunos mixins adicionales para otras situaciones en las que te gustaría crear tus propios degradados.
 
 {{< scss-docs name="gradient-bg-mixin" file="scss/mixins/_gradients.scss" >}}
 
 {{< scss-docs name="gradient-mixins" file="scss/mixins/_gradients.scss" >}}
 
-### Utilities API
+### API de utilidades
 
-Background utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades de fondo se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-bg-color" file="scss/_utilities.scss" >}}
