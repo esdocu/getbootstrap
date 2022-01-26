@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Add or remove shadows to elements with box-shadow utilities.">
+<meta name="description" content="Agrega o elimina sombras a los elementos con las utilidades de box-shadow.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
 
-<title>Shadows · Bootstrap en Español v5.1</title>
+<title>Sombras · Bootstrap en Español v5.1</title>
 
 <link rel="canonical" href="https://bootstrap.fabdev.win/docs/5.1/utilities/shadows/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Shadows">
-<meta name="twitter:description" content="Add or remove shadows to elements with box-shadow utilities.">
+<meta name="twitter:title" content="Sombras">
+<meta name="twitter:description" content="Agrega o elimina sombras a los elementos con las utilidades de box-shadow.">
 <meta name="twitter:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://bootstrap.fabdev.win/docs/5.1/utilities/shadows/">
-<meta property="og:title" content="Shadows">
-<meta property="og:description" content="Add or remove shadows to elements with box-shadow utilities.">
+<meta property="og:title" content="Sombras">
+<meta property="og:description" content="Agrega o elimina sombras a los elementos con las utilidades de box-shadow.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -351,12 +351,12 @@
               <li><a href="/docs/5.1/utilities/opacity/" class="d-inline-flex align-items-center rounded">Opacidad</a></li>
               <li><a href="/docs/5.1/utilities/overflow/" class="d-inline-flex align-items-center rounded">Desbordamiento</a></li>
               <li><a href="/docs/5.1/utilities/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
-              <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded active" aria-current="page">Shadows</a></li>
-              <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded">Sizing</a></li>
-              <li><a href="/docs/5.1/utilities/spacing/" class="d-inline-flex align-items-center rounded">Spacing</a></li>
-              <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Text</a></li>
-              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Vertical align</a></li>
-              <li><a href="/docs/5.1/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibility</a></li>
+              <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded active" aria-current="page">Sombras</a></li>
+              <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded">Tamaño</a></li>
+              <li><a href="/docs/5.1/utilities/spacing/" class="d-inline-flex align-items-center rounded">Espaciado</a></li>
+              <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Texto</a></li>
+              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Alineamiento vertical</a></li>
+              <li><a href="/docs/5.1/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibilidad</a></li>
           </ul>
         </div>
       </li>
@@ -409,9 +409,9 @@
             href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/utilities/shadows.md"
             title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <h1 class="bd-title" id="content">Shadows</h1>
+        <h1 class="bd-title" id="content">Sombras</h1>
       </div>
-      <p class="bd-lead">Add or remove shadows to elements with box-shadow utilities.</p>
+      <p class="bd-lead">Agrega o elimina sombras a los elementos con las utilidades de box-shadow.</p>
       
 
     </div>
@@ -421,11 +421,11 @@
       <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#examples">Examples</a></li>
+    <li><a href="#ejemplos">Ejemplos</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
         <li><a href="#variables">Variables</a></li>
-        <li><a href="#utilities-api">Utilities API</a></li>
+        <li><a href="#api-de-utilidades">API de utilidades</a></li>
       </ul>
     </li>
   </ul>
@@ -436,17 +436,17 @@
     <div class="bd-content ps-lg-4">
       
 
-      <h2 id="examples">Examples</h2>
-<p>While shadows on components are disabled by default in Bootstrap and can be enabled via <code>$enable-shadows</code>, you can also quickly add or remove a shadow with our <code>box-shadow</code> utility classes. Includes support for <code>.shadow-none</code> and three default sizes (which have associated variables to match).</p>
+      <h2 id="ejemplos">Ejemplos</h2>
+<p>Si bien las sombras en los componentes están deshabilitadas de forma predeterminada en Bootstrap y se pueden habilitar a través de <code>$enable-shadows</code>, también puedes agregar o eliminar rápidamente una sombra con nuestras clases de utilidad <code>box-shadow</code>. Incluye soporte para <code>.shadow-none</code> y tres tamaños predeterminados (que tienen variables asociadas para que coincidan).</p>
 <div class="bd-example">
-<div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
-<div class="shadow-sm p-3 mb-5 bg-body rounded">Small shadow</div>
-<div class="shadow p-3 mb-5 bg-body rounded">Regular shadow</div>
-<div class="shadow-lg p-3 mb-5 bg-body rounded">Larger shadow</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;shadow-none p-3 mb-5 bg-light rounded&#34;</span><span class="p">&gt;</span>No shadow<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;shadow-sm p-3 mb-5 bg-body rounded&#34;</span><span class="p">&gt;</span>Small shadow<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;shadow p-3 mb-5 bg-body rounded&#34;</span><span class="p">&gt;</span>Regular shadow<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;shadow-lg p-3 mb-5 bg-body rounded&#34;</span><span class="p">&gt;</span>Larger shadow<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="shadow-none p-3 mb-5 bg-light rounded">Sin sombra</div>
+<div class="shadow-sm p-3 mb-5 bg-body rounded">Sombra pequeña</div>
+<div class="shadow p-3 mb-5 bg-body rounded">Sombra regular</div>
+<div class="shadow-lg p-3 mb-5 bg-body rounded">Sombra grande</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;shadow-none p-3 mb-5 bg-light rounded&#34;</span><span class="p">&gt;</span>Sin sombra<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;shadow-sm p-3 mb-5 bg-body rounded&#34;</span><span class="p">&gt;</span>Sombra pequeña<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;shadow p-3 mb-5 bg-body rounded&#34;</span><span class="p">&gt;</span>Sombra regular<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;shadow-lg p-3 mb-5 bg-body rounded&#34;</span><span class="p">&gt;</span>Sombra grande<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$box-shadow</span><span class="o">:</span>                  <span class="mi">0</span> <span class="mf">.5</span><span class="kt">rem</span> <span class="mi">1</span><span class="kt">rem</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.15</span><span class="p">);</span>
@@ -454,8 +454,8 @@
 <span class="nv">$box-shadow-lg</span><span class="o">:</span>               <span class="mi">0</span> <span class="mi">1</span><span class="kt">rem</span> <span class="mi">3</span><span class="kt">rem</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.175</span><span class="p">);</span>
 <span class="nv">$box-shadow-inset</span><span class="o">:</span>            <span class="ni">inset</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.075</span><span class="p">);</span>
 </code></pre></div>
-<h3 id="utilities-api">Utilities API</h3>
-<p>Shadow utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.1/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<h3 id="api-de-utilidades">API de utilidades</h3>
+<p>Las utilidades ocultas se declaran en nuestra API de utilidades en <code>scss/_utilities.scss</code>. <a href="/docs/5.1/utilities/api/#using-the-api">Aprende a usar la API de utilidades.</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss">    <span class="s2">&#34;shadow&#34;</span><span class="nd">:</span> <span class="o">(</span>
       <span class="nt">property</span><span class="nd">:</span> <span class="nt">box-shadow</span><span class="o">,</span>
       <span class="nt">class</span><span class="nd">:</span> <span class="nt">shadow</span><span class="o">,</span>

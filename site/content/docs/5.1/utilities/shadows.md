@@ -1,20 +1,20 @@
 ---
 layout: docs
-title: Shadows
-description: Add or remove shadows to elements with box-shadow utilities.
+title: Sombras
+description: Agrega o elimina sombras a los elementos con las utilidades de box-shadow.
 group: utilities
 toc: true
 ---
 
-## Examples
+## Ejemplos
 
-While shadows on components are disabled by default in Bootstrap and can be enabled via `$enable-shadows`, you can also quickly add or remove a shadow with our `box-shadow` utility classes. Includes support for `.shadow-none` and three default sizes (which have associated variables to match).
+Si bien las sombras en los componentes están deshabilitadas de forma predeterminada en Bootstrap y se pueden habilitar a través de `$enable-shadows`, también puedes agregar o eliminar rápidamente una sombra con nuestras clases de utilidad `box-shadow`. Incluye soporte para `.shadow-none` y tres tamaños predeterminados (que tienen variables asociadas para que coincidan).
 
 {{< example >}}
-<div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
-<div class="shadow-sm p-3 mb-5 bg-body rounded">Small shadow</div>
-<div class="shadow p-3 mb-5 bg-body rounded">Regular shadow</div>
-<div class="shadow-lg p-3 mb-5 bg-body rounded">Larger shadow</div>
+<div class="shadow-none p-3 mb-5 bg-light rounded">Sin sombra</div>
+<div class="shadow-sm p-3 mb-5 bg-body rounded">Sombra pequeña</div>
+<div class="shadow p-3 mb-5 bg-body rounded">Sombra regular</div>
+<div class="shadow-lg p-3 mb-5 bg-body rounded">Sombra grande</div>
 {{< /example >}}
 
 ## Sass
@@ -23,8 +23,8 @@ While shadows on components are disabled by default in Bootstrap and can be enab
 
 {{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
 
-### Utilities API
+### API de utilidades
 
-Shadow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades ocultas se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-shadow" file="scss/_utilities.scss" >}}

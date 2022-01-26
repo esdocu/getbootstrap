@@ -139,6 +139,9 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/colored-links/</loc>
   </url>
   <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/spacing/</loc>
+  </url>
+  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/forms/floating-labels/</loc>
   </url>
   <url>
@@ -310,9 +313,6 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/forms/select/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/shadows/</loc>
-  </url>
-  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/examples/sidebars/</loc>
   </url>
   <url>
@@ -322,10 +322,7 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/layout/grid/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/sizing/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/spacing/</loc>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/shadows/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/components/spinners/</loc>
@@ -341,6 +338,9 @@
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/content/tables/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/sizing/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/about/team/</loc>

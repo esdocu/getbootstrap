@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Easily make an element as wide or as tall with our width and height utilities.">
+<meta name="description" content="Crea fácilmente un elemento del mismo ancho o alto con nuestras utilidades de ancho y alto.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
 
-<title>Sizing · Bootstrap en Español v5.1</title>
+<title>Tamaño · Bootstrap en Español v5.1</title>
 
 <link rel="canonical" href="https://bootstrap.fabdev.win/docs/5.1/utilities/sizing/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Sizing">
-<meta name="twitter:description" content="Easily make an element as wide or as tall with our width and height utilities.">
+<meta name="twitter:title" content="Tamaño">
+<meta name="twitter:description" content="Crea fácilmente un elemento del mismo ancho o alto con nuestras utilidades de ancho y alto.">
 <meta name="twitter:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://bootstrap.fabdev.win/docs/5.1/utilities/sizing/">
-<meta property="og:title" content="Sizing">
-<meta property="og:description" content="Easily make an element as wide or as tall with our width and height utilities.">
+<meta property="og:title" content="Tamaño">
+<meta property="og:description" content="Crea fácilmente un elemento del mismo ancho o alto con nuestras utilidades de ancho y alto.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -351,12 +351,12 @@
               <li><a href="/docs/5.1/utilities/opacity/" class="d-inline-flex align-items-center rounded">Opacidad</a></li>
               <li><a href="/docs/5.1/utilities/overflow/" class="d-inline-flex align-items-center rounded">Desbordamiento</a></li>
               <li><a href="/docs/5.1/utilities/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
-              <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded">Shadows</a></li>
-              <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded active" aria-current="page">Sizing</a></li>
-              <li><a href="/docs/5.1/utilities/spacing/" class="d-inline-flex align-items-center rounded">Spacing</a></li>
-              <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Text</a></li>
-              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Vertical align</a></li>
-              <li><a href="/docs/5.1/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibility</a></li>
+              <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded">Sombras</a></li>
+              <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded active" aria-current="page">Tamaño</a></li>
+              <li><a href="/docs/5.1/utilities/spacing/" class="d-inline-flex align-items-center rounded">Espaciado</a></li>
+              <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Texto</a></li>
+              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Alineamiento vertical</a></li>
+              <li><a href="/docs/5.1/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibilidad</a></li>
           </ul>
         </div>
       </li>
@@ -409,9 +409,9 @@
             href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/utilities/sizing.md"
             title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <h1 class="bd-title" id="content">Sizing</h1>
+        <h1 class="bd-title" id="content">Tamaño</h1>
       </div>
-      <p class="bd-lead">Easily make an element as wide or as tall with our width and height utilities.</p>
+      <p class="bd-lead">Crea fácilmente un elemento del mismo ancho o alto con nuestras utilidades de ancho y alto.</p>
       
 
     </div>
@@ -421,11 +421,11 @@
       <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#relative-to-the-parent">Relative to the parent</a></li>
-    <li><a href="#relative-to-the-viewport">Relative to the viewport</a></li>
+    <li><a href="#relativo-al-padre">Relativo al padre</a></li>
+    <li><a href="#relativo-al-viewport">Relativo al viewport</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
-        <li><a href="#utilities-api">Utilities API</a></li>
+        <li><a href="#api-de-utilidades">API de utilidades</a></li>
       </ul>
     </li>
   </ul>
@@ -436,35 +436,35 @@
     <div class="bd-content ps-lg-4">
       
 
-      <h2 id="relative-to-the-parent">Relative to the parent</h2>
-<p>Width and height utilities are generated from the utility API in <code>_utilities.scss</code>. Includes support for <code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code>, and <code>auto</code> by default. Modify those values as you need to generate different utilities here.</p>
+      <h2 id="relativo-al-padre">Relativo al padre</h2>
+<p>Las utilidades de ancho y alto se generan a partir de la API de utilidades en <code>_utilities.scss</code>. Incluye soporte para <code>25%</code>, <code>50%</code>, <code>75%</code>, <code>100%</code> y <code>auto</code> por defecto. Modifica esos valores según necesites para generar diferentes utilidades.</p>
 <div class="bd-example">
-<div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
-<div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
-<div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
-<div class="w-100 p-3" style="background-color: #eee;">Width 100%</div>
-<div class="w-auto p-3" style="background-color: #eee;">Width auto</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-25 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Width 25%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-50 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Width 50%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-75 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Width 75%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Width 100%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-auto p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Width auto<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="w-25 p-3" style="background-color: #eee;">Ancho de 25%</div>
+<div class="w-50 p-3" style="background-color: #eee;">Ancho de 50%</div>
+<div class="w-75 p-3" style="background-color: #eee;">Ancho de 75%</div>
+<div class="w-100 p-3" style="background-color: #eee;">Ancho de 100%</div>
+<div class="w-auto p-3" style="background-color: #eee;">Ancho de auto</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-25 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Ancho de 25%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-50 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Ancho de 50%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-75 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Ancho de 75%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100 p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Ancho de 100%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-auto p-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;background-color: #eee;&#34;</span><span class="p">&gt;</span>Ancho de auto<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <div class="bd-example">
 <div style="height: 100px; background-color: rgba(255,0,0,0.1);">
-  <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 25%</div>
-  <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 50%</div>
-  <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 75%</div>
-  <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height 100%</div>
-  <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Height auto</div>
+  <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Alto de 25%</div>
+  <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Alto de 50%</div>
+  <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Alto de 75%</div>
+  <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Alto de 100%</div>
+  <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(0,0,255,.1)">Alto de auto</div>
 </div>
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px; background-color: rgba(255,0,0,0.1);&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-25 d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Height 25%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-50 d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Height 50%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-75 d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Height 75%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-100 d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Height 100%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-auto d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Height auto<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-25 d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Alto de 25%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-50 d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Alto de 50%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-75 d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Alto de 75%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-100 d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Alto de 100%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h-auto d-inline-block&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 120px; background-color: rgba(0,0,255,.1)&#34;</span><span class="p">&gt;</span>Alto de auto<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>You can also use <code>max-width: 100%;</code> and <code>max-height: 100%;</code> utilities as needed.</p>
+<p>También puedes usar las utilidades <code>max-width: 100%;</code> y <code>max-height: 100%;</code> según sea necesario.</p>
 <div class="bd-example">
 <svg class="bd-placeholder-img mw-100" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Max-width 100%" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Max-width 100%</text></svg>
 
@@ -476,15 +476,15 @@
 </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 100px; background-color: rgba(255,0,0,.1);&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mh-100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 100px; height: 200px; background-color: rgba(0,0,255,.1);&#34;</span><span class="p">&gt;</span>Max-height 100%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="relative-to-the-viewport">Relative to the viewport</h2>
-<p>You can also use utilities to set the width and height relative to the viewport.</p>
+<h2 id="relativo-al-viewport">Relativo al viewport</h2>
+<p>También puedes usar utilidades para establecer el ancho y la altura en relación con el viewport.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;min-vw-100&#34;</span><span class="p">&gt;</span>Min-width 100vw<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;min-vh-100&#34;</span><span class="p">&gt;</span>Min-height 100vh<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;vw-100&#34;</span><span class="p">&gt;</span>Width 100vw<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;vh-100&#34;</span><span class="p">&gt;</span>Height 100vh<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="sass">Sass</h2>
-<h3 id="utilities-api">Utilities API</h3>
-<p>Sizing utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.1/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<h3 id="api-de-utilidades">API de utilidades</h3>
+<p>Las utilidades de dimensionamiento se declaran en nuestra API de utilidades en <code>scss/_utilities.scss</code>. <a href="/docs/5.1/utilities/api/#using-the-api">Aprenda a usar la API de utilidades.</a></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss">    <span class="s2">&#34;width&#34;</span><span class="nd">:</span> <span class="o">(</span>
       <span class="nt">property</span><span class="nd">:</span> <span class="nt">width</span><span class="o">,</span>
       <span class="nt">class</span><span class="nd">:</span> <span class="nt">w</span><span class="o">,</span>

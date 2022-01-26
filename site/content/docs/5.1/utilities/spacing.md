@@ -1,53 +1,53 @@
 ---
 layout: docs
-title: Spacing
-description: Bootstrap includes a wide range of shorthand responsive margin, padding, and gap utility classes to modify an element's appearance.
+title: Espaciado
+description: Bootstrap incluye una amplia gama de clases de utilidades de margin, padding y gap para modificar la apariencia de un elemento.
 group: utilities
 toc: true
 ---
 
-## Margin and padding
+## Margin y padding
 
-Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`.
+Asigna valores de "margin" o "padding" responsive a un elemento o un subconjunto de sus lados con clases abreviadas. Incluye soporte para propiedades individuales, todas las propiedades y propiedades verticales y horizontales. Las clases se crean a partir de un mapa Sass predeterminado que va desde `.25rem` a `3rem`.
 
-Using the CSS Grid layout module? Consider using [the gap utility](#gap).
+¿Utilizas el módulo de diseño de cuadrícula CSS? Considera usar [la utilidad gap](#gap).
 
-### Notation
+### Notación
 
-Spacing utilities that apply to all breakpoints, from `xs` to `xxl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+Las utilidades de espaciado que se aplican a todos los breakpoint, desde `xs` hasta `xxl`, no tienen abreviatura de breakpoint. Esto se debe a que esas clases se aplican desde `min-width: 0` en adelante y, por lo tanto, no están vinculadas a una media query. Sin embargo, los breakpoints restantes sí incluyen una abreviatura de breakpoint.
 
-The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, `xl`, and `xxl`.
+Las clases se nombran usando el formato `{property}{sides}-{size}` para `xs` y `{property}{sides}-{breakpoint}-{size}` para `sm`, `md`, `lg`, `xl` y `xxl`.
 
-Where *property* is one of:
+Donde *property* es uno de:
 
-- `m` - for classes that set `margin`
-- `p` - for classes that set `padding`
+- `m` - para clases que establecen `margin`
+- `p` - para clases que establecen `padding`
 
-Where *sides* is one of:
+Donde *sides* es uno de:
 
-- `t` - for classes that set `margin-top` or `padding-top`
-- `b` - for classes that set `margin-bottom` or `padding-bottom`
-- `s` - (start) for classes that set `margin-left` or `padding-left` in LTR, `margin-right` or `padding-right` in RTL
-- `e` - (end) for classes that set `margin-right` or `padding-right` in LTR, `margin-left` or `padding-left` in RTL
-- `x` - for classes that set both `*-left` and `*-right`
-- `y` - for classes that set both `*-top` and `*-bottom`
-- blank - for classes that set a `margin` or `padding` on all 4 sides of the element
+- `t` - para clases que establecen `margin-top` o `padding-top`
+- `b` - para clases que establecen `margin-bottom` o `padding-bottom`
+- `s` - (start) para clases que establecen `margin-left` o `padding-left` en LTR, `margin-right` o `padding-right` en RTL
+- `e` - (end) para clases que establecen `margin-right` o `padding-right` en LTR, `margin-left` o `padding-left` en RTL
+- `x` - para clases que establecen tanto `*-left` como `*-right`
+- `y` - para clases que establecen tanto `*-top` como `*-bottom`
+- en blanco - para clases que establecen un `margin` o `padding` en los 4 lados del elemento
 
-Where *size* is one of:
+Donde *size* es uno de:
 
-- `0` - for classes that eliminate the `margin` or `padding` by setting it to `0`
-- `1` - (by default) for classes that set the `margin` or `padding` to `$spacer * .25`
-- `2` - (by default) for classes that set the `margin` or `padding` to `$spacer * .5`
-- `3` - (by default) for classes that set the `margin` or `padding` to `$spacer`
-- `4` - (by default) for classes that set the `margin` or `padding` to `$spacer * 1.5`
-- `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3`
-- `auto` - for classes that set the `margin` to auto
+- `0` - para clases que eliminan el `margin` o `padding` al establecerlo en `0`
+- `1` - (por defecto) para las clases que establecen el `margin` o `padding` en `$spacer * .25`
+- `2` - (por defecto) para las clases que establecen el `margin` o `padding` en `$spacer * .5`
+- `3` - (por defecto) para las clases que establecen el `margin` o `padding` en `$spacer`
+- `4` - (por defecto) para las clases que establecen el `margin` o `padding` en `$spacer * 1.5`
+- `5` - (por defecto) para las clases que establecen el `margin` o `padding` en `$spacer * 3`
+- `auto` - para clases que establecen el `margin` en automático
 
-(You can add more sizes by adding entries to the `$spacers` Sass map variable.)
+(Puedes agregar más tamaños agregando entradas a la variable de mapa Sass `$spacers`).
 
-### Examples
+### Ejemplos
 
-Here are some representative examples of these classes:
+Estos son algunos ejemplos representativos de estas clases:
 
 ```scss
 .mt-0 {
@@ -68,27 +68,27 @@ Here are some representative examples of these classes:
 }
 ```
 
-### Horizontal centering
+### Centrado horizontal
 
-Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
+Además, Bootstrap también incluye una clase `.mx-auto` para centrar horizontalmente contenido de nivel de bloque de ancho fijo, es decir, contenido que tiene `display: block` y un conjunto `width`, configurando los márgenes horizontales en `auto` .
 
 <div class="bd-example">
   <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
-    Centered element
+    Elemento centrado
   </div>
 </div>
 
 ```html
 <div class="mx-auto" style="width: 200px;">
-  Centered element
+  Elemento centrado
 </div>
 ```
 
-## Negative margin
+## Margen negativo
 
-In CSS, `margin` properties can utilize negative values (`padding` cannot). These negative margins are **disabled by default**, but can be enabled in Sass by setting `$enable-negative-margins: true`.
+En CSS, las propiedades `margin` pueden utilizar valores negativos (`padding` no). Estos márgenes negativos están **deshabilitados de forma predeterminada**, pero se pueden habilitar en Sass configurando `$enable-negative-margins: true`.
 
-The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here's an example class that's the opposite of `.mt-1`:
+La sintaxis es casi la misma que las utilidades de margen positivo predeterminadas, pero con la adición de `n` antes del tamaño solicitado. Aquí hay una clase de ejemplo que es lo opuesto a `.mt-1`:
 
 ```scss
 .mt-n1 {
@@ -96,30 +96,30 @@ The syntax is nearly the same as the default, positive margin utilities, but wit
 }
 ```
 
-## Gap
+##  Gap (espacios entre elementos)
 
-When using `display: grid`, you can make use of `gap` utilities on the parent grid container. This can save on having to add margin utilities to individual grid items (children of a `display: grid` container). Gap utilities are responsive by default, and are generated via our utilities API, based on the `$spacers` Sass map.
+Al usar `display: grid`, puede utilizar las utilidades `gap` en el contenedor de cuadrícula principal. Esto puede evitar tener que agregar utilidades de margen a elementos de cuadrícula individuales (hijos de un contenedor `display: grid`). Las utilidades Gap responden de forma predeterminada y se generan a través de nuestra API de utilidades, según el mapa Sass `$spacers`.
 
 {{< example html >}}
 <div class="d-grid gap-3">
-  <div class="p-2 bg-light border">Grid item 1</div>
-  <div class="p-2 bg-light border">Grid item 2</div>
-  <div class="p-2 bg-light border">Grid item 3</div>
+  <div class="p-2 bg-light border">Elemento de cuadrícula 1</div>
+  <div class="p-2 bg-light border">Elemento de cuadrícula 2</div>
+  <div class="p-2 bg-light border">Elemento de cuadrícula 3</div>
 </div>
 {{< /example >}}
 
-Support includes responsive options for all of Bootstrap's grid breakpoints, as well as six sizes from the `$spacers` map (`0`–`5`). There is no `.gap-auto` utility class as it's effectively the same as `.gap-0`.
+El soporte incluye opciones responsive para todos los puntos de interrupción de la cuadrícula de Bootstrap, así como seis tamaños del mapa `$spacers` (`0`–`5`). No hay clase de utilidad `.gap-auto` ya que es efectivamente lo mismo que `.gap-0`.
 
 ## Sass
 
-### Maps
+### Mapas
 
-Spacing utilities are declared via Sass map and then generated with our utilities API.
+Las utilidades de espaciado se declaran a través del mapa Sass y luego se generan con nuestra API de utilidades.
 
 {{< scss-docs name="spacer-variables-maps" file="scss/_variables.scss" >}}
 
-### Utilities API
+### API de utilidades
 
-Spacing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades de espaciado se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-spacing" file="scss/_utilities.scss" >}}
