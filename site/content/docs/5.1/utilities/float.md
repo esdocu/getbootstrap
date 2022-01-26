@@ -1,33 +1,33 @@
 ---
 layout: docs
 title: Float
-description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
+description: Configura la flotabilidad en cualquier elemento, a través de cualquier breakpoint, utilizando nuestras utilidades flotantes responsive.
 group: utilities
 toc: true
 ---
 
-## Overview
+## Descripción general
 
-These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.
+Estas clases de utilidad hacen flotar un elemento a la izquierda o a la derecha, o deshabilitan la flotación, en función del tamaño actual del viewport mediante la [propiedad `float` de CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/float). Se incluye `!important` para evitar problemas de especificidad. Estos utilizan los mismos breakpoints de viewport que nuestro sistema de cuadrícula. Ten en cuenta que las utilidades flotantes no tienen efecto en los elementos flexibles.
 
 {{< example >}}
-<div class="float-start">Float start on all viewport sizes</div><br>
-<div class="float-end">Float end on all viewport sizes</div><br>
-<div class="float-none">Don't float on all viewport sizes</div>
+<div class="float-start">Float start en todos los tamaños de viewport</div><br>
+<div class="float-end">Float end en todos los tamaños de viewport</div><br>
+<div class="float-none">Don't float en todos los tamaños de viewport</div>
 {{< /example >}}
 
 ## Responsive
 
-Responsive variations also exist for each `float` value.
+También existen variaciones responsive para cada valor `float`.
 
 {{< example >}}
-<div class="float-sm-start">Float start on viewports sized SM (small) or wider</div><br>
-<div class="float-md-start">Float start on viewports sized MD (medium) or wider</div><br>
-<div class="float-lg-start">Float start on viewports sized LG (large) or wider</div><br>
-<div class="float-xl-start">Float start on viewports sized XL (extra-large) or wider</div><br>
+<div class="float-sm-start">Float start en viewports de tamaño SM (small) o superior</div><br>
+<div class="float-md-start">Float start en viewports de tamaño MD (medium) o superior</div><br>
+<div class="float-lg-start">Float start en viewports de tamaño LG (large) o superior</div><br>
+<div class="float-xl-start">Float start en viewports de tamaño XL (extra-large) o superior</div><br>
 {{< /example >}}
 
-Here are all the support classes:
+Aquí están todas las clases soportadas:
 
 {{< markdown >}}
 {{< float.inline >}}
@@ -41,8 +41,8 @@ Here are all the support classes:
 
 ## Sass
 
-### Utilities API
+### API de utilidades
 
-Float utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades flotantes se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-float" file="scss/_utilities.scss" >}}

@@ -118,6 +118,9 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/examples/dashboard/</loc>
   </url>
   <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/overflow/</loc>
+  </url>
+  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/getting-started/download/</loc>
   </url>
   <url>
@@ -242,9 +245,6 @@
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/customize/optimize/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/overflow/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/components/pagination/</loc>

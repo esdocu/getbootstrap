@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: Opacity
-description: Control the opacity of elements.
+title: Opacidad
+description: Controla la opacidad de los elementos.
 group: utilities
 ---
 
-The `opacity` property sets the opacity level for an element. The opacity level describes the transparency level, where `1` is not transparent at all, `.5` is 50% visible, and `0` is completely transparent.
+La propiedad `opacity` establece el nivel de opacidad de un elemento. El nivel de opacidad describe el nivel de transparencia, donde `1` no es transparente en absoluto, `.5` es 50% visible y `0` es completamente transparente.
 
-Set the `opacity` of an element using `.opacity-{value}` utilities.
+Establece la `opacity` de un elemento usando las utilidades `.opacity-{value}`.
 
 <div class="bd-example d-sm-flex">
   <div class="opacity-100 p-3 m-2 bg-primary text-light fw-bold rounded">100%</div>
@@ -23,8 +23,8 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
 <div class="opacity-25">...</div>
 ```
 
-### Utilities API
+### API de utilidades
 
-Opacity utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades de opacidad se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-opacity" file="scss/_utilities.scss" >}}

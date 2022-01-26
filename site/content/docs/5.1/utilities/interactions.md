@@ -1,42 +1,42 @@
 ---
 layout: docs
-title: Interactions
-description: Utility classes that change how users interact with contents of a website.
+title: Interacciones
+description: Clases de utilidad que cambian la forma en la que los usuarios interactúan con los contenidos de un sitio web.
 group: utilities
 toc: false
 ---
 
-## Text selection
+## Selección de texto
 
-Change the way in which the content is selected when the user interacts with it.
-
-{{< example >}}
-<p class="user-select-all">This paragraph will be entirely selected when clicked by the user.</p>
-<p class="user-select-auto">This paragraph has default select behavior.</p>
-<p class="user-select-none">This paragraph will not be selectable when clicked by the user.</p>
-{{< /example >}}
-
-## Pointer events
-
-Bootstrap provides `.pe-none` and `.pe-auto` classes to prevent or add element interactions.
+Cambiar la forma en que se selecciona el contenido cuando el usuario interactúa con él.
 
 {{< example >}}
-<p><a href="#" class="pe-none" tabindex="-1" aria-disabled="true">This link</a> can not be clicked.</p>
-<p><a href="#" class="pe-auto">This link</a> can be clicked (this is default behavior).</p>
-<p class="pe-none"><a href="#" tabindex="-1" aria-disabled="true">This link</a> can not be clicked because the <code>pointer-events</code> property is inherited from its parent. However, <a href="#" class="pe-auto">this link</a> has a <code>pe-auto</code> class and can be clicked.</p>
+<p class="user-select-all">Este párrafo se seleccionará por completo cuando el usuario haga clic.</p>
+<p class="user-select-auto">Este párrafo tiene un comportamiento de selección predeterminado.</p>
+<p class="user-select-none">Este párrafo no se podrá seleccionar cuando el usuario haga clic en él.</p>
 {{< /example >}}
 
-The `.pe-none` class (and the `pointer-events` CSS property it sets) only prevents interactions with a pointer (mouse, stylus, touch). Links and controls with `.pe-none` are, by default, still focusable and actionable for keyboard users. To ensure that they are completely neutralized even for keyboard users, you may need to add further attributes such as `tabindex="-1"` (to prevent them from receiving keyboard focus) and `aria-disabled="true"` (to convey the fact they are effectively disabled to assistive technologies), and possibly use JavaScript to completely prevent them from being actionable.
+## Eventos de puntero
 
-If possible, the simpler solution is:
+Bootstrap proporciona las clases `.pe-none` y `.pe-auto` para evitar o agregar interacciones de elementos.
 
-- For form controls, add the `disabled` HTML attribute.
-* For links, remove the `href` attribute, making it a non-interactive anchor or placeholder link.
+{{< example >}}
+<p>No se puede hacer clic en <a href="#" class="pe-none" tabindex="-1" aria-disabled="true">este enlace</a>.</p>
+<p><a href="#" class="pe-auto">Este enlace</a> se puede hacer clic (este es el comportamiento predeterminado).</p>
+<p class="pe-none">No se puede hacer clic en <a href="#" tabindex="-1" aria-disabled="true">este enlace</a> porque la propiedad <code>pointer-events</code> se hereda de su padre. Sin embargo, <a href="#" class="pe-auto">este enlace</a> tiene una clase <code>pe-auto</code> y se puede hacer clic en él.</p>
+{{< /example >}}
+
+La clase `.pe-none` (y la propiedad CSS `pointer-events` que establece) solo evita las interacciones con un puntero (mouse, lápiz óptico, toque). Los enlaces y controles con `.pe-none` son, de forma predeterminada, aún enfocables y procesables para los usuarios del teclado. Para asegurarse de que estén completamente neutralizados, incluso para los usuarios de teclado, es posible que debas agregar más atributos como `tabindex="-1"` (para evitar que reciban el foco del teclado) y `aria-disabled="true"` (para transmitir el hecho de que están efectivamente deshabilitados para las tecnologías de asistencia) y posiblemente usar JavaScript para evitar que sean accionables.
+
+Si es posible, la solución más simple es:
+
+- Para los controles de formulario, agrega el atributo HTML `disabled`.
+* Para los enlaces, elimina el atributo `href`, convirtiéndolo en un enlace no interactivo o enlace placeholder.
 
 ## Sass
 
-### Utilities API
+### API de utilidades
 
-Interaction utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades de interacción se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-interaction" file="scss/_utilities.scss" >}}

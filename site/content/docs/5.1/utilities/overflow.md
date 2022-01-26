@@ -1,24 +1,24 @@
 ---
 layout: docs
-title: Overflow
-description: Use these shorthand utilities for quickly configuring how content overflows an element.
+title: Desbordamiento
+description: Utiliza estas utilidades para configurar rápidamente cómo el contenido desborda un elemento.
 group: utilities
 ---
 
-Adjust the `overflow` property on the fly with four default values and classes. These classes are not responsive by default.
+Ajusta la propiedad `overflow` sobre la marcha con cuatro valores y clases predeterminados. Estas clases no son responsive de forma predeterminada.
 
 <div class="bd-example d-md-flex">
   <div class="overflow-auto p-3 mb-3 mb-md-0 me-md-3 bg-light" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-auto</code> on an element with set width and height dimensions. By design, this content will vertically scroll.
+    Este es un ejemplo del uso de <code>.overflow-auto</code> en un elemento con dimensiones establecidas de ancho y alto. Por diseño, este contenido se desplazará verticalmente.
   </div>
   <div class="overflow-hidden p-3 mb-3 mb-md-0 me-md-3 bg-light" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-hidden</code> on an element with set width and height dimensions.
+    Este es un ejemplo del uso de <code>.overflow-hidden</code> en un elemento con dimensiones establecidas de ancho y alto.
   </div>
   <div class="overflow-visible p-3 mb-3 mb-md-0 me-md-3 bg-light" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-visible</code> on an element with set width and height dimensions.
+    Este es un ejemplo del uso de <code>.overflow-visible</code> en un elemento con dimensiones establecidas de ancho y alto.
   </div>
   <div class="overflow-scroll p-3 bg-light" style="max-width: 260px; max-height: 100px;">
-    This is an example of using <code>.overflow-scroll</code> on an element with set width and height dimensions.
+    Este es un ejemplo del uso de <code>.overflow-scroll</code> en un elemento con dimensiones establecidas de ancho y alto.
   </div>
 </div>
 
@@ -29,12 +29,12 @@ Adjust the `overflow` property on the fly with four default values and classes. 
 <div class="overflow-scroll">...</div>
 ```
 
-Using Sass variables, you may customize the overflow utilities by changing the `$overflows` variable in `_variables.scss`.
+Con las variables de Sass, puedes personalizar las utilidades de desbordamiento cambiando la variable `$overflows` en `_variables.scss`.
 
 ## Sass
 
-### Utilities API
+### API de utilidades
 
-Overflow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades de desbordamiento se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-overflow" file="scss/_utilities.scss" >}}
