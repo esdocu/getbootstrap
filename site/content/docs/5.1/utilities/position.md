@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Position
-description: Use these shorthand utilities for quickly configuring the position of an element.
+title: Posición
+description: Utiliza estas utilidades abreviadas para configurar rápidamente la posición de un elemento.
 group: utilities
 toc: true
 ---
 
-## Position values
+## Valores de posición
 
-Quick positioning classes are available, though they are not responsive.
+Las clases de posicionamiento rápido están disponibles, aunque no son responsive.
 
 ```html
 <div class="position-static">...</div>
@@ -18,24 +18,24 @@ Quick positioning classes are available, though they are not responsive.
 <div class="position-sticky">...</div>
 ```
 
-## Arrange elements
+## Organizar elementos
 
-Arrange elements easily with the edge positioning utilities. The format is `{property}-{position}`.
+Organiza elementos fácilmente con las utilidades de posicionamiento de bordes. El formato es `{property}-{position}`.
 
-Where *property* is one of:
+Donde *property* es uno de:
 
-- `top` - for the vertical `top` position
-- `start` - for the horizontal `left` position (in LTR)
-- `bottom` - for the vertical `bottom` position
-- `end` - for the horizontal `right` position (in LTR)
+- `top` - para la posición vertical `top`
+- `start` - para la posición horizontal `left` (en LTR)
+- `bottom` - para la posición vertical `bottom`
+- `end` - para la posición horizontal `right` (en LTR)
 
-Where *position* is one of:
+Donde *position* es uno de:
 
-- `0` - for `0` edge position
-- `50` - for `50%` edge position
-- `100` - for `100%` edge position
+- `0` - para posición de borde `0`
+- `50` - para posición de borde `50%`
+- `100` - para posición de borde `100%`
 
-(You can add more position values by adding entries to the `$position-values` Sass map variable.)
+(Puedes agregar más valores de posición agregando entradas a la variable de mapa Sass `$position-values`).
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -48,11 +48,11 @@ Where *position* is one of:
 </div>
 {{< /example >}}
 
-## Center elements
+## Centrar elementos
 
-In addition, you can also center the elements with the transform utility class `.translate-middle`.
+Además, también puedes centrar los elementos con la clase de utilidad de transformación `.translate-middle`.
 
-This class applies the transformations `translateX(-50%)` and `translateY(-50%)` to the element which, in combination with the edge positioning utilities, allows you to absolute center an element.
+Esta clase aplica las transformaciones `translateX(-50%)` y `translateY(-50%)` al elemento que, en combinación con las utilidades de posicionamiento de bordes, te permite centrar un elemento de forma absoluta.
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -68,7 +68,7 @@ This class applies the transformations `translateX(-50%)` and `translateY(-50%)`
 </div>
 {{< /example >}}
 
-By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can be positioned only in horizontal or vertical direction.
+Al agregar las clases `.translate-middle-x` o `.translate-middle-y`, los elementos se pueden colocar solo en dirección horizontal o vertical.
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -84,25 +84,25 @@ By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can b
 </div>
 {{< /example >}}
 
-## Examples
+## Ejemplos
 
-Here are some real life examples of these classes:
+Aquí hay algunos ejemplos de la vida real de estas clases:
 
 {{< example class="bd-example-position-examples d-flex justify-content-around" >}}
 <button type="button" class="btn btn-primary position-relative">
-  Mails <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">unread messages</span></span>
+  Correos <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">mensajes no leídos</span></span>
 </button>
 
 <button type="button" class="btn btn-dark position-relative">
-  Marker <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#212529" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+  Marcador <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill" fill="#212529" xmlns="http://www.w3.org/2000/svg"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
 </button>
 
 <button type="button" class="btn btn-primary position-relative">
-  Alerts <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
+  Alertas <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">mensajes no leídos</span></span>
 </button>
 {{< /example >}}
 
-You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the `$position-values` variable.
+Puedes usar estas clases con componentes existentes para crear otros nuevos. Recuerda que puedes extender su funcionalidad agregando entradas a la variable `$position-values`.
 
 {{< example class="bd-example-position-examples" >}}
 <div class="position-relative m-4">
@@ -117,14 +117,14 @@ You can use these classes with existing components to create new ones. Remember 
 
 ## Sass
 
-### Maps
+### Mapas
 
-Default position utility values are declared in a Sass map, then used to generate our utilities.
+Los valores de utilidad de posición predeterminados se declaran en un mapa Sass y luego se utilizan para generar nuestras utilidades.
 
 {{< scss-docs name="position-map" file="scss/_variables.scss" >}}
 
-### Utilities API
+### API de utilidades
 
-Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades de posición se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-position" file="scss/_utilities.scss" >}}
