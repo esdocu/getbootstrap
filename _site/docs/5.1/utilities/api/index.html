@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The utility API is a Sass-based tool to generate utility classes.">
+<meta name="description" content="La API de utilidad es una herramienta basada en Sass para generar clases de utilidad.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
 
-<title>Utility API · Bootstrap en Español v5.1</title>
+<title>API de utilidades · Bootstrap en Español v5.1</title>
 
 <link rel="canonical" href="https://bootstrap.fabdev.win/docs/5.1/utilities/api/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Utility API">
-<meta name="twitter:description" content="The utility API is a Sass-based tool to generate utility classes.">
+<meta name="twitter:title" content="API de utilidades">
+<meta name="twitter:description" content="La API de utilidad es una herramienta basada en Sass para generar clases de utilidad.">
 <meta name="twitter:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://bootstrap.fabdev.win/docs/5.1/utilities/api/">
-<meta property="og:title" content="Utility API">
-<meta property="og:description" content="The utility API is a Sass-based tool to generate utility classes.">
+<meta property="og:title" content="API de utilidades">
+<meta property="og:description" content="La API de utilidad es una herramienta basada en Sass para generar clases de utilidad.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://bootstrap.fabdev.win/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -409,9 +409,9 @@
             href="https://github.com/esdocu/bootstrap/blob/main/site/content/docs/5.1/utilities/api.md"
             title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
-        <h1 class="bd-title" id="content">Utility API</h1>
+        <h1 class="bd-title" id="content">API de utilidades</h1>
       </div>
-      <p class="bd-lead">The utility API is a Sass-based tool to generate utility classes.</p>
+      <p class="bd-lead">La API de utilidad es una herramienta basada en Sass para generar clases de utilidad.</p>
       
 
     </div>
@@ -421,32 +421,32 @@
       <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#api-explained">API explained</a>
+    <li><a href="#api-explicada">API explicada</a>
       <ul>
         <li><a href="#property">Property</a></li>
         <li><a href="#values">Values</a></li>
         <li><a href="#class">Class</a></li>
-        <li><a href="#css-variable-utilities">CSS variable utilities</a></li>
-        <li><a href="#local-css-variables">Local CSS variables</a></li>
-        <li><a href="#states">States</a></li>
+        <li><a href="#utilidades-de-variables-css">Utilidades de variables CSS</a></li>
+        <li><a href="#variables-css-locales">Variables CSS locales</a></li>
+        <li><a href="#estados">Estados</a></li>
         <li><a href="#responsive">Responsive</a></li>
         <li><a href="#print">Print</a></li>
       </ul>
     </li>
-    <li><a href="#importance">Importance</a></li>
-    <li><a href="#using-the-api">Using the API</a>
+    <li><a href="#importancia">Importancia</a></li>
+    <li><a href="#uso-de-la-api">Uso de la API</a>
       <ul>
-        <li><a href="#override-utilities">Override utilities</a></li>
-        <li><a href="#add-utilities">Add utilities</a></li>
-        <li><a href="#modify-utilities">Modify utilities</a>
+        <li><a href="#sobrescribir-utilidades">Sobrescribir utilidades</a></li>
+        <li><a href="#agregar-utilidades">Agregar utilidades</a></li>
+        <li><a href="#modificar-utilidades">Modificar utilidades</a>
           <ul>
-            <li><a href="#enable-responsive">Enable responsive</a></li>
-            <li><a href="#rename-utilities">Rename utilities</a></li>
+            <li><a href="#habilitar-responsive">Habilitar responsive</a></li>
+            <li><a href="#renombrar-utilidades">Renombrar utilidades</a></li>
           </ul>
         </li>
-        <li><a href="#remove-utilities">Remove utilities</a>
+        <li><a href="#eliminar-utilidades">Eliminar utilidades</a>
           <ul>
-            <li><a href="#remove-utility-in-rtl">Remove utility in RTL</a></li>
+            <li><a href="#eliminar-utilidad-en-rtl">Eliminar utilidad en RTL</a></li>
           </ul>
         </li>
       </ul>
@@ -459,83 +459,83 @@
     <div class="bd-content ps-lg-4">
       
 
-      <p>Bootstrap utilities are generated with our utility API and can be used to modify or extend our default set of utility classes via Sass. Our utility API is based on a series of Sass maps and functions for generating families of classes with various options. If you&rsquo;re unfamiliar with Sass maps, read up on the <a href="https://sass-lang.com/documentation/values/maps">official Sass docs</a> to get started.</p>
-<p>The <code>$utilities</code> map contains all our utilities and is later merged with your custom <code>$utilities</code> map, if present. The utility map contains a keyed list of utility groups which accept the following options:</p>
+      <p>Las utilidades Bootstrap se generan con nuestra API de utilidades y se pueden usar para modificar o ampliar nuestro conjunto predeterminado de clases de utilidades a través de Sass. Nuestra API de utilidad se basa en una serie de mapas y funciones de Sass para generar familias de clases con varias opciones. Si no estás familiarizado con los mapas de Sass, lee la <a href="https://sass-lang.com/documentation/values/maps">documentación oficial de Sass</a> para comenzar.</p>
+<p>El mapa <code>$utilities</code> contiene todas nuestras utilidades y luego se fusiona con tu mapa <code>$utilities</code> personalizado, si está presente. El mapa de utilidades contiene una lista codificada de grupos de utilidades que aceptan las siguientes opciones:</p>
 <table class="table text-start">
 <thead>
 <tr>
-<th>Option</th>
-<th>Type</th>
-<th>Default value</th>
-<th>Description</th>
+<th>Opción</th>
+<th>Tipo</th>
+<th>Por defecto</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="#property"><code>property</code></a></td>
-<td><strong>Required</strong></td>
+<td><strong>Requerido</strong></td>
 <td>–</td>
-<td>Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins).</td>
+<td>Nombre de la propiedad, puede ser un string o un array de strings (por ejemplo, margins o paddings horizontales).</td>
 </tr>
 <tr>
 <td><a href="#values"><code>values</code></a></td>
-<td><strong>Required</strong></td>
+<td><strong>Requerido</strong></td>
 <td>–</td>
-<td>List of values, or a map if you don&rsquo;t want the class name to be the same as the value. If <code>null</code> is used as map key, <code>class</code> is not prepended to the class name.</td>
+<td>Lista de valores o un mapa si no deseas que el nombre de la clase sea el mismo que el valor. Si se usa <code>null</code> como clave de mapa, <code>class</code> no se antepone al nombre de la clase.</td>
 </tr>
 <tr>
 <td><a href="#class"><code>class</code></a></td>
-<td>Optional</td>
+<td>Opcional</td>
 <td>null</td>
-<td>Name of the generated class. If not provided and <code>property</code> is an array of strings, <code>class</code> will default to the first element of the <code>property</code> array. If not provided and <code>property</code> is a string, the <code>values</code> keys are used for the <code>class</code> names.</td>
+<td>Nombre de la clase generada. Si no se proporciona y <code>property</code> es un array de strings, <code>class</code> tomará por defecto el primer elemento del array <code>property</code>. Si no se proporciona y <code>property</code> es un string, las claves de <code>values</code> se utilizan para los nombres de <code>class</code>.</td>
 </tr>
 <tr>
 <td><a href="#css-variable-utilities"><code>css-var</code></a></td>
-<td>Optional</td>
+<td>Opcional</td>
 <td><code>false</code></td>
-<td>Boolean to generate CSS variables instead of CSS rules.</td>
+<td>Boolean para generar variables CSS en lugar de reglas CSS.</td>
 </tr>
 <tr>
 <td><a href="#local-css-variables"><code>local-vars</code></a></td>
-<td>Optional</td>
+<td>Opcional</td>
 <td>null</td>
-<td>Map of local CSS variables to generate in addition to the CSS rules.</td>
+<td>Mapa de variables CSS locales para generar además de las reglas CSS.</td>
 </tr>
 <tr>
 <td><a href="#states"><code>state</code></a></td>
-<td>Optional</td>
+<td>Opcional</td>
 <td>null</td>
-<td>List of pseudo-class variants (e.g., <code>:hover</code> or <code>:focus</code>) to generate.</td>
+<td>Lista de variantes de pseudoclases (p. ej., <code>:hover</code> o <code>:focus</code>) para generar.</td>
 </tr>
 <tr>
 <td><a href="#responsive"><code>responsive</code></a></td>
-<td>Optional</td>
+<td>Opcional</td>
 <td><code>false</code></td>
-<td>Boolean indicating if responsive classes should be generated.</td>
+<td>Booleano que indica si se deben generar clases responsive.</td>
 </tr>
 <tr>
 <td><code>rfs</code></td>
-<td>Optional</td>
+<td>Opcional</td>
 <td><code>false</code></td>
-<td>Boolean to enable <a href="/docs/5.1/getting-started/rfs/">fluid rescaling with RFS</a>.</td>
+<td>Booleano para habilitar el <a href="/docs/5.1/getting-started/rfs/">cambio de escala fluido con RFS</a>.</td>
 </tr>
 <tr>
 <td><a href="#print"><code>print</code></a></td>
-<td>Optional</td>
+<td>Opcional</td>
 <td><code>false</code></td>
-<td>Boolean indicating if print classes need to be generated.</td>
+<td>Booleano que indica si es necesario generar clases de impresión.</td>
 </tr>
 <tr>
 <td><code>rtl</code></td>
-<td>Optional</td>
+<td>Opcional</td>
 <td><code>true</code></td>
-<td>Boolean indicating if utility should be kept in RTL.</td>
+<td>Booleano que indica si la utilidad debe mantenerse en RTL.</td>
 </tr>
 </tbody>
 </table>
 
-<h2 id="api-explained">API explained</h2>
-<p>All utility variables are added to the <code>$utilities</code> variable within our <code>_utilities.scss</code> stylesheet. Each group of utilities looks something like this:</p>
+<h2 id="api-explicada">API explicada</h2>
+<p>Todas las variables de utilidad se agregan a la variable <code>$utilities</code> dentro de nuestra hoja de estilo <code>_utilities.scss</code>. Cada grupo de utilidades se parece a esto:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -548,29 +548,29 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><p>Which outputs the following:</p>
+</code></pre></div><p>Lo que genera lo siguiente:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div><h3 id="property">Property</h3>
-<p>The required <code>property</code> key must be set for any utility, and it must contain a valid CSS property. This property is used in the generated utility&rsquo;s ruleset. When the <code>class</code> key is omitted, it also serves as the default class name. Consider the <code>text-decoration</code> utility:</p>
+<p>La clave de <code>property</code> requerida debe configurarse para cualquier utilidad y debe contener una propiedad CSS válida. Esta propiedad se utiliza en el conjunto de reglas de la utilidad generada. Cuando se omite la clave <code>class</code>, también sirve como el nombre de clase predeterminado. Considera la utilidad <code>text-decoration</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;text-decoration&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">text</span><span class="o">-</span><span class="n">decoration</span><span class="o">,</span>
     <span class="na">values</span><span class="o">:</span> <span class="ni">none</span> <span class="ni">underline</span> <span class="ni">line-through</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">text-decoration-none</span> <span class="p">{</span> <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">text-decoration-underline</span> <span class="p">{</span> <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">underline</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">text-decoration-line-through</span> <span class="p">{</span> <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">line-through</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div><h3 id="values">Values</h3>
-<p>Use the <code>values</code> key to specify which values for the specified <code>property</code> should be used in the generated class names and rules. Can be a list or map (set in the utilities or in a Sass variable).</p>
-<p>As a list, like with <a href="/docs/5.1/utilities/text/#text-decoration"><code>text-decoration</code> utilities</a>:</p>
+<p>Usa la clave <code>values</code> para especificar qué valores para la <code>property</code> especificada deben usarse en los nombres y reglas de clase generados. Puede ser una lista o un mapa (establecido en las utilidades o en una variable Sass).</p>
+<p>Como lista, como con las <a href="/docs/5.1/utilities/text/#text-decoration">utilidades <code>text-decoration</code></a>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nt">values</span><span class="nd">:</span> <span class="nt">none</span> <span class="nt">underline</span> <span class="nt">line-through</span>
-</code></pre></div><p>As a map, like with <a href="/docs/5.1/utilities/opacity/"><code>opacity</code> utilities</a>:</p>
+</code></pre></div><p>Como mapa, como con las <a href="/docs/5.1/utilities/opacity/">utilidades <code>opacity</code></a>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="na">values</span><span class="o">:</span> <span class="p">(</span>
   <span class="na">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
   <span class="na">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
@@ -578,10 +578,10 @@
   <span class="na">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
   <span class="na">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
 <span class="p">)</span>
-</code></pre></div><p>As a Sass variable that sets the list or map, as in our <a href="/docs/5.1/utilities/position/"><code>position</code> utilities</a>:</p>
+</code></pre></div><p>Como una variable de Sass que establece la lista o el mapa, como en nuestras <a href="/docs/5.1/utilities/position/">utilidades <code>position</code></a>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nt">values</span><span class="nd">:</span> <span class="err">$</span><span class="nt">position-values</span>
 </code></pre></div><h3 id="class">Class</h3>
-<p>Use the <code>class</code> option to change the class prefix used in the compiled CSS. For example, to change from <code>.opacity-*</code> to <code>.o-*</code>:</p>
+<p>Utiliza la opción <code>class</code> para cambiar el prefijo de clase utilizado en el CSS compilado. Por ejemplo, para cambiar de <code>.opacity-*</code> a <code>.o-*</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -595,13 +595,13 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">o-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">o-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">o-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">o-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">o-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><p>If <code>class: null</code>, generates classes for each of the <code>values</code> keys:</p>
+</code></pre></div><p>Si <code>class: null</code>, genera clases para cada una de las claves <code>values</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;visibility&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="n">visibility</span><span class="o">,</span>
@@ -612,11 +612,11 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">visible</span> <span class="p">{</span> <span class="k">visibility</span><span class="p">:</span> <span class="kc">visible</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">invisible</span> <span class="p">{</span> <span class="k">visibility</span><span class="p">:</span> <span class="kc">hidden</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><h3 id="css-variable-utilities">CSS variable utilities</h3>
-<p>Set the <code>css-var</code> boolean option to <code>true</code> and the API will generate local CSS variables for the given selector instead of the usual <code>property: value</code> rules. Consider our <code>.text-opacity-*</code> utilities:</p>
+</code></pre></div><h3 id="utilidades-de-variables-css">Utilidades de variables CSS</h3>
+<p>Establece la opción booleana <code>css-var</code> en <code>true</code> y la API generará variables CSS locales para el selector dado en lugar de las reglas habituales de <code>property: value</code>. Considera nuestras utilidades <code>.text-opacity-*</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;text-opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">css-var</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
@@ -629,13 +629,13 @@
     <span class="p">)</span>
   <span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">text-opacity-25</span> <span class="p">{</span> <span class="nv">--bs-text-opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">text-opacity-50</span> <span class="p">{</span> <span class="nv">--bs-text-opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">text-opacity-75</span> <span class="p">{</span> <span class="nv">--bs-text-opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">text-opacity-100</span> <span class="p">{</span> <span class="nv">--bs-text-opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><h3 id="local-css-variables">Local CSS variables</h3>
-<p>Use the <code>local-vars</code> option to specify a Sass map that will generate local CSS variables within the utility class&rsquo;s ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. For example, consider our <code>.bg-*</code> utilities:</p>
+</code></pre></div><h3 id="variables-css-locales">Variables CSS locales</h3>
+<p>Utiliza la opción <code>local-vars</code> para especificar un mapa Sass que generará variables CSS locales dentro del conjunto de reglas de la clase de utilidad. Ten en cuenta que puede requerir trabajo adicional consumir esas variables CSS locales en las reglas CSS generadas. Por ejemplo, considera nuestras utilidades <code>.bg-*</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;background-color&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="n">background-color</span><span class="o">,</span>
@@ -651,14 +651,14 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">bg-primary</span> <span class="p">{</span>
   <span class="nv">--bs-bg-opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
   <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">primary</span><span class="o">-</span><span class="n">rgb</span><span class="p">),</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">bg</span><span class="o">-</span><span class="n">opacity</span><span class="p">))</span> <span class="cp">!important</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><h3 id="states">States</h3>
-<p>Use the <code>state</code> option to generate pseudo-class variations. Example pseudo-classes are <code>:hover</code> and <code>:focus</code>. When a list of states are provided, classnames are created for that pseudo-class. For example, to change opacity on hover, add <code>state: hover</code> and you&rsquo;ll get <code>.opacity-hover:hover</code> in your compiled CSS.</p>
-<p>Need multiple pseudo-classes? Use a space-separated list of states: <code>state: hover focus</code>.</p>
+</code></pre></div><h3 id="estados">Estados</h3>
+<p>Usa la opción <code>state</code> para generar variaciones de pseudo-clase. Ejemplos de pseudo-clases son <code>:hover</code> y <code>:focus</code>. Cuando se proporciona una lista de estados, se crean nombres de clase para esa pseudoclase. Por ejemplo, para cambiar la opacidad al pasar el mouse, agrega <code>state: hover</code> y obtendrás <code>.opacity-hover:hover</code> en tu CSS compilado.</p>
+<p>¿Necesita varias pseudoclases? Usa una lista de estados separados por espacios: <code>state: hover focus</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -673,14 +673,14 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-25-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-50-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-75-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-100-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div><h3 id="responsive">Responsive</h3>
-<p>Add the <code>responsive</code> boolean to generate responsive utilities (e.g., <code>.opacity-md-25</code>) across <a href="/docs/5.1/layout/breakpoints/">all breakpoints</a>.</p>
+<p>Agrega el booleano <code>responsive</code> para generar utilidades responsive (p. ej., <code>.opacity-md-25</code>) en <a href="/docs/5.1/layout/breakpoints/">todos los breakpoints</a>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -694,7 +694,7 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
@@ -741,7 +741,7 @@
   <span class="p">.</span><span class="nc">opacity-xxl-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="print">Print</h3>
-<p>Enabling the <code>print</code> option will <strong>also</strong> generate utility classes for print, which are only applied within the <code>@media print { ... }</code> media query.</p>
+<p>Habilitar la opción <code>print</code> <strong>también</strong> generará clases de utilidad para imprimir, que solo se aplican dentro de la media query <code>@media print { ... }</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -755,7 +755,7 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
@@ -769,12 +769,12 @@
   <span class="p">.</span><span class="nc">opacity-print-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
   <span class="p">.</span><span class="nc">opacity-print-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h2 id="importance">Importance</h2>
-<p>All utilities generated by the API include <code>!important</code> to ensure they override components and modifier classes as intended. You can toggle this setting globally with the <code>$enable-important-utilities</code> variable (defaults to <code>true</code>).</p>
-<h2 id="using-the-api">Using the API</h2>
-<p>Now that you&rsquo;re familiar with how the utilities API works, learn how to add your own custom classes and modify our default utilities.</p>
-<h3 id="override-utilities">Override utilities</h3>
-<p>Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:</p>
+</code></pre></div><h2 id="importancia">Importancia</h2>
+<p>Todas las utilidades generadas por la API incluyen <code>!important</code> para garantizar que sobrescriben los componentes y las clases modificadoras según lo previsto. Puedes alternar esta configuración globalmente con la variable <code>$enable-important-utilities</code> (predeterminado en <code>true</code>).</p>
+<h2 id="uso-de-la-api">Uso de la API</h2>
+<p>Ahora que estás familiarizado con el funcionamiento de la API de utilidades, aprende cómo agregar tus propias clases personalizadas y modificar nuestras utilidades predeterminadas.</p>
+<h3 id="sobrescribir-utilidades">Sobrescribir utilidades</h3>
+<p>Sobrescribe las utilidades existentes utilizando la misma clave. Por ejemplo, si deseas clases de utilidad de desbordamiento responsive adicionales, puedes hacer esto:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;overflow&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
@@ -782,8 +782,8 @@
     <span class="na">values</span><span class="o">:</span> <span class="ni">visible</span> <span class="ni">hidden</span> <span class="ni">scroll</span> <span class="ni">auto</span><span class="o">,</span>
   <span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
-</code></pre></div><h3 id="add-utilities">Add utilities</h3>
-<p>New utilities can be added to the default <code>$utilities</code> map with a <code>map-merge</code>. Make sure our required Sass files and <code>_utilities.scss</code> are imported first, then use the <code>map-merge</code> to add your additional utilities. For example, here&rsquo;s how to add a responsive <code>cursor</code> utility with three values.</p>
+</code></pre></div><h3 id="agregar-utilidades">Agregar utilidades</h3>
+<p>Se pueden agregar nuevas utilidades al mapa <code>$utilities</code> predeterminado con un <code>map-merge</code>. Asegúrate de que nuestros archivos Sass requeridos y <code>_utilities.scss</code> se importen primero, luego usa <code>map-merge</code> para agregar tus utilidades adicionales. Por ejemplo, aquí se explica cómo agregar una utilidad responsive de <code>cursor</code> con tres valores.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/maps&#34;</span><span class="p">;</span>
@@ -802,8 +802,8 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><h3 id="modify-utilities">Modify utilities</h3>
-<p>Modify existing utilities in the default <code>$utilities</code> map with <code>map-get</code> and <code>map-merge</code> functions. In the example below, we&rsquo;re adding an additional value to the <code>width</code> utilities. Start with an initial <code>map-merge</code> and then specify which utility you want to modify. From there, fetch the nested <code>&quot;width&quot;</code> map with <code>map-get</code> to access and modify the utility&rsquo;s options and values.</p>
+</code></pre></div><h3 id="modificar-utilidades">Modificar utilidades</h3>
+<p>Modifica las utilidades existentes en el mapa <code>$utilities</code> predeterminado con las funciones <code>map-get</code> y <code>map-merge</code>. En el siguiente ejemplo, estamos agregando un valor adicional a las utilidades <code>width</code>. Comienza con un <code>map-merge</code> inicial y luego especifica qué utilidad deseas modificar. A partir de ahí, busca el mapa <code>&quot;width&quot;</code> anidado con <code>map-get</code> para acceder y modificar las opciones y valores de la utilidad.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/maps&#34;</span><span class="p">;</span>
@@ -825,8 +825,8 @@
     <span class="p">)</span><span class="o">,</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><h4 id="enable-responsive">Enable responsive</h4>
-<p>You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the <code>border</code> classes responsive:</p>
+</code></pre></div><h4 id="habilitar-responsive">Habilitar responsive</h4>
+<p>Puedes habilitar clases responsive para un conjunto existente de utilidades que actualmente no sean responsive de forma predeterminada. Por ejemplo, para hacer que las clases <code>border</code> sean responsive:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/maps&#34;</span><span class="p">;</span>
@@ -842,7 +842,7 @@
     <span class="p">)</span><span class="o">,</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><p>This will now generate responsive variations of <code>.border</code> and <code>.border-0</code> for each breakpoint. Your generated CSS will look like this:</p>
+</code></pre></div><p>Esto ahora generará variaciones responsive de <code>.border</code> y <code>.border-0</code> para cada breakpoint. Tu CSS generado se verá así:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">border</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">border-0</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
 
@@ -870,8 +870,8 @@
   <span class="p">.</span><span class="nc">border-xxl</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
   <span class="p">.</span><span class="nc">border-xxl-0</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h4 id="rename-utilities">Rename utilities</h4>
-<p>Missing v4 utilities, or used to another naming convention? The utilities API can be used to override the resulting <code>class</code> of a given utility—for example, to rename <code>.ms-*</code> utilities to oldish <code>.ml-*</code>:</p>
+</code></pre></div><h4 id="renombrar-utilidades">Renombrar utilidades</h4>
+<p>¿Extrañas las utilidades v4 o estás acostumbrado a otra convención de nomenclatura? La API de utilidades se puede usar para sobrescribir la <code>class</code> resultante de una utilidad determinada, por ejemplo, para cambiar el nombre de las utilidades <code>.ms-*</code> al  antiguo <code>.ml-*</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/maps&#34;</span><span class="p">;</span>
@@ -887,8 +887,8 @@
     <span class="p">)</span><span class="o">,</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><h3 id="remove-utilities">Remove utilities</h3>
-<p>Remove any of the default utilities by setting the group key to <code>null</code>. For example, to remove all our <code>width</code> utilities, create a <code>$utilities</code> <code>map-merge</code> and add <code>&quot;width&quot;: null</code> within.</p>
+</code></pre></div><h3 id="eliminar-utilidades">Eliminar utilidades</h3>
+<p>Elimina cualquiera de las utilidades predeterminadas configurando la clave de grupo en <code>null</code>. Por ejemplo, para eliminar todas nuestras utilidades <code>width</code>, crea <code>$utilities</code> <code>map-merge</code> y agrega <code>&quot;width&quot;: null</code> dentro.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/maps&#34;</span><span class="p">;</span>
@@ -902,8 +902,8 @@
     <span class="s2">&#34;width&#34;</span><span class="o">:</span> <span class="n">null</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><h4 id="remove-utility-in-rtl">Remove utility in RTL</h4>
-<p>Some edge cases make <a href="https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl">RTL styling difficult</a>, such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the <code>rtl</code> option to <code>false</code>:</p>
+</code></pre></div><h4 id="eliminar-utilidad-en-rtl">Eliminar utilidad en RTL</h4>
+<p>Algunos casos extremos dificultan <a href="https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl">el estilo RTL</a>, como los saltos de línea en árabe. Por lo tanto, las utilidades se pueden eliminar de la salida RTL configurando la opción <code>rtl</code> en <code>false</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;word-wrap&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="n">word-wrap</span> <span class="n">word-break</span><span class="o">,</span>
@@ -912,14 +912,14 @@
     <span class="na">rtl</span><span class="o">:</span> <span class="n">false</span>
   <span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
-</code></pre></div><p>Output:</p>
+</code></pre></div><p>Salida:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/* rtl:begin:remove */</span>
 <span class="p">.</span><span class="nc">text-break</span> <span class="p">{</span>
   <span class="k">word-wrap</span><span class="p">:</span> <span class="kc">break-word</span> <span class="cp">!important</span><span class="p">;</span>
   <span class="k">word-break</span><span class="p">:</span> <span class="kc">break-word</span> <span class="cp">!important</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="c">/* rtl:end:remove */</span>
-</code></pre></div><p>This doesn&rsquo;t output anything in RTL, thanks to <a href="https://rtlcss.com/learn/usage-guide/control-directives/#remove">the RTLCSS <code>remove</code> control directive</a>.</p>
+</code></pre></div><p>Esto no genera nada en RTL, gracias a <a href="https://rtlcss.com/learn/usage-guide/control-directives/#remove">la directiva de control <code>remove</code> de RTLCSS</a>.</p>
 
     </div>
   </main>

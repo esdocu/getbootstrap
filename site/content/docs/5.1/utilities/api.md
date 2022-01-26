@@ -1,34 +1,34 @@
 ---
 layout: docs
-title: Utility API
-description: The utility API is a Sass-based tool to generate utility classes.
+title: API de utilidades
+description: La API de utilidad es una herramienta basada en Sass para generar clases de utilidad.
 group: utilities
 aliases: "/docs/5.1/utilities/"
 toc: true
 ---
 
-Bootstrap utilities are generated with our utility API and can be used to modify or extend our default set of utility classes via Sass. Our utility API is based on a series of Sass maps and functions for generating families of classes with various options. If you're unfamiliar with Sass maps, read up on the [official Sass docs](https://sass-lang.com/documentation/values/maps) to get started.
+Las utilidades Bootstrap se generan con nuestra API de utilidades y se pueden usar para modificar o ampliar nuestro conjunto predeterminado de clases de utilidades a través de Sass. Nuestra API de utilidad se basa en una serie de mapas y funciones de Sass para generar familias de clases con varias opciones. Si no estás familiarizado con los mapas de Sass, lee la [documentación oficial de Sass](https://sass-lang.com/documentation/values/maps) para comenzar.
 
-The `$utilities` map contains all our utilities and is later merged with your custom `$utilities` map, if present. The utility map contains a keyed list of utility groups which accept the following options:
+El mapa `$utilities` contiene todas nuestras utilidades y luego se fusiona con tu mapa `$utilities` personalizado, si está presente. El mapa de utilidades contiene una lista codificada de grupos de utilidades que aceptan las siguientes opciones:
 
 {{< bs-table "table text-start" >}}
-| Option | Type | Default&nbsp;value | Description |
+| Opción | Tipo | Por&nbsp;defecto | Descripción |
 | --- | --- | --- | --- |
-| [`property`](#property) | **Required** | – | Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins). |
-| [`values`](#values) | **Required** | – | List of values, or a map if you don't want the class name to be the same as the value. If `null` is used as map key, `class` is not prepended to the class name. |
-| [`class`](#class) | Optional | null | Name of the generated class. If not provided and `property` is an array of strings, `class` will default to the first element of the `property` array. If not provided and `property` is a string, the `values` keys are used for the `class` names. |
-| [`css-var`](#css-variable-utilities) | Optional | `false` | Boolean to generate CSS variables instead of CSS rules. |
-| [`local-vars`](#local-css-variables) | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. |
-| [`state`](#states) | Optional | null | List of pseudo-class variants (e.g., `:hover` or `:focus`) to generate. |
-| [`responsive`](#responsive) | Optional | `false` | Boolean indicating if responsive classes should be generated. |
-| `rfs` | Optional | `false` | Boolean to enable [fluid rescaling with RFS]({{< docsref "/getting-started/rfs" >}}). |
-| [`print`](#print) | Optional | `false` | Boolean indicating if print classes need to be generated. |
-| `rtl` | Optional | `true` | Boolean indicating if utility should be kept in RTL. |
+| [`property`](#property) | **Requerido** | – | Nombre de la propiedad, puede ser un string o un array de strings (por ejemplo, margins o paddings horizontales). |
+| [`values`](#values) | **Requerido** | – | Lista de valores o un mapa si no deseas que el nombre de la clase sea el mismo que el valor. Si se usa `null` como clave de mapa, `class` no se antepone al nombre de la clase. |
+| [`class`](#class) | Opcional | null | Nombre de la clase generada. Si no se proporciona y `property` es un array de strings, `class` tomará por defecto el primer elemento del array `property`. Si no se proporciona y `property` es un string, las claves de `values` se utilizan para los nombres de `class`. |
+| [`css-var`](#css-variable-utilities) | Opcional | `false` | Boolean para generar variables CSS en lugar de reglas CSS. |
+| [`local-vars`](#local-css-variables) | Opcional | null | Mapa de variables CSS locales para generar además de las reglas CSS. |
+| [`state`](#states) | Opcional | null | Lista de variantes de pseudoclases (p. ej., `:hover` o `:focus`) para generar. |
+| [`responsive`](#responsive) | Opcional | `false` | Booleano que indica si se deben generar clases responsive. |
+| `rfs` | Opcional | `false` | Booleano para habilitar el [cambio de escala fluido con RFS]({{< docsref "/getting-started/rfs" >}}). |
+| [`print`](#print) | Opcional | `false` | Booleano que indica si es necesario generar clases de impresión. |
+| `rtl` | Opcional | `true` | Booleano que indica si la utilidad debe mantenerse en RTL. |
 {{< /bs-table >}}
 
-## API explained
+## API explicada
 
-All utility variables are added to the `$utilities` variable within our `_utilities.scss` stylesheet. Each group of utilities looks something like this:
+Todas las variables de utilidad se agregan a la variable `$utilities` dentro de nuestra hoja de estilo `_utilities.scss`. Cada grupo de utilidades se parece a esto:
 
 ```scss
 $utilities: (
@@ -45,7 +45,7 @@ $utilities: (
 );
 ```
 
-Which outputs the following:
+Lo que genera lo siguiente:
 
 ```css
 .opacity-0 { opacity: 0; }
@@ -57,7 +57,7 @@ Which outputs the following:
 
 ### Property
 
-The required `property` key must be set for any utility, and it must contain a valid CSS property. This property is used in the generated utility's ruleset. When the `class` key is omitted, it also serves as the default class name. Consider the `text-decoration` utility:
+La clave de `property` requerida debe configurarse para cualquier utilidad y debe contener una propiedad CSS válida. Esta propiedad se utiliza en el conjunto de reglas de la utilidad generada. Cuando se omite la clave `class`, también sirve como el nombre de clase predeterminado. Considera la utilidad `text-decoration`:
 
 ```scss
 $utilities: (
@@ -68,7 +68,7 @@ $utilities: (
 );
 ```
 
-Output:
+Salida:
 
 ```css
 .text-decoration-none { text-decoration: none !important; }
@@ -78,15 +78,15 @@ Output:
 
 ### Values
 
-Use the `values` key to specify which values for the specified `property` should be used in the generated class names and rules. Can be a list or map (set in the utilities or in a Sass variable).
+Usa la clave `values` para especificar qué valores para la `property` especificada deben usarse en los nombres y reglas de clase generados. Puede ser una lista o un mapa (establecido en las utilidades o en una variable Sass).
 
-As a list, like with [`text-decoration` utilities]({{< docsref "/utilities/text#text-decoration" >}}):
+Como lista, como con las [utilidades `text-decoration`]({{< docsref "/utilities/text#text-decoration" >}}):
 
 ```scss
 values: none underline line-through
 ```
 
-As a map, like with [`opacity` utilities]({{< docsref "/utilities/opacity" >}}):
+Como mapa, como con las [utilidades `opacity`]({{< docsref "/utilities/opacity" >}}):
 
 ```scss
 values: (
@@ -98,7 +98,7 @@ values: (
 )
 ```
 
-As a Sass variable that sets the list or map, as in our [`position` utilities]({{< docsref "/utilities/position" >}}):
+Como una variable de Sass que establece la lista o el mapa, como en nuestras [utilidades `position`]({{< docsref "/utilities/position" >}}):
 
 ```scss
 values: $position-values
@@ -106,7 +106,7 @@ values: $position-values
 
 ### Class
 
-Use the `class` option to change the class prefix used in the compiled CSS. For example, to change from `.opacity-*` to `.o-*`:
+Utiliza la opción `class` para cambiar el prefijo de clase utilizado en el CSS compilado. Por ejemplo, para cambiar de `.opacity-*` a `.o-*`:
 
 ```scss
 $utilities: (
@@ -124,7 +124,7 @@ $utilities: (
 );
 ```
 
-Output:
+Salida:
 
 ```css
 .o-0 { opacity: 0 !important; }
@@ -134,7 +134,7 @@ Output:
 .o-100 { opacity: 1 !important; }
 ```
 
-If `class: null`, generates classes for each of the `values` keys:
+Si `class: null`, genera clases para cada una de las claves `values`:
 
 ```scss
 $utilities: (
@@ -149,16 +149,16 @@ $utilities: (
 );
 ```
 
-Output:
+Salida:
 
 ```css
 .visible { visibility: visible !important; }
 .invisible { visibility: hidden !important; }
 ```
 
-### CSS variable utilities
+### Utilidades de variables CSS
 
-Set the `css-var` boolean option to `true` and the API will generate local CSS variables for the given selector instead of the usual `property: value` rules. Consider our `.text-opacity-*` utilities:
+Establece la opción booleana `css-var` en `true` y la API generará variables CSS locales para el selector dado en lugar de las reglas habituales de `property: value`. Considera nuestras utilidades `.text-opacity-*`:
 
 ```scss
 $utilities: (
@@ -175,7 +175,7 @@ $utilities: (
 );
 ```
 
-Output:
+Salida:
 
 ```css
 .text-opacity-25 { --bs-text-opacity: .25; }
@@ -184,9 +184,9 @@ Output:
 .text-opacity-100 { --bs-text-opacity: 1; }
 ```
 
-### Local CSS variables
+### Variables CSS locales
 
-Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class's ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. For example, consider our `.bg-*` utilities:
+Utiliza la opción `local-vars` para especificar un mapa Sass que generará variables CSS locales dentro del conjunto de reglas de la clase de utilidad. Ten en cuenta que puede requerir trabajo adicional consumir esas variables CSS locales en las reglas CSS generadas. Por ejemplo, considera nuestras utilidades `.bg-*`:
 
 ```scss
 $utilities: (
@@ -206,7 +206,7 @@ $utilities: (
 );
 ```
 
-Output:
+Salida:
 
 ```css
 .bg-primary {
@@ -215,11 +215,11 @@ Output:
 }
 ```
 
-### States
+### Estados
 
-Use the `state` option to generate pseudo-class variations. Example pseudo-classes are `:hover` and `:focus`. When a list of states are provided, classnames are created for that pseudo-class. For example, to change opacity on hover, add `state: hover` and you'll get `.opacity-hover:hover` in your compiled CSS.
+Usa la opción `state` para generar variaciones de pseudo-clase. Ejemplos de pseudo-clases son `:hover` y `:focus`. Cuando se proporciona una lista de estados, se crean nombres de clase para esa pseudoclase. Por ejemplo, para cambiar la opacidad al pasar el mouse, agrega `state: hover` y obtendrás `.opacity-hover:hover` en tu CSS compilado.
 
-Need multiple pseudo-classes? Use a space-separated list of states: `state: hover focus`.
+¿Necesita varias pseudoclases? Usa una lista de estados separados por espacios: `state: hover focus`.
 
 ```scss
 $utilities: (
@@ -238,7 +238,7 @@ $utilities: (
 );
 ```
 
-Output:
+Salida:
 
 ```css
 .opacity-0-hover:hover { opacity: 0 !important; }
@@ -250,7 +250,7 @@ Output:
 
 ### Responsive
 
-Add the `responsive` boolean to generate responsive utilities (e.g., `.opacity-md-25`) across [all breakpoints]({{< docsref "/layout/breakpoints" >}}).
+Agrega el booleano `responsive` para generar utilidades responsive (p. ej., `.opacity-md-25`) en [todos los breakpoints]({{< docsref "/layout/breakpoints" >}}).
 
 ```scss
 $utilities: (
@@ -268,7 +268,7 @@ $utilities: (
 );
 ```
 
-Output:
+Salida:
 
 ```css
 .opacity-0 { opacity: 0 !important; }
@@ -320,7 +320,7 @@ Output:
 
 ### Print
 
-Enabling the `print` option will **also** generate utility classes for print, which are only applied within the `@media print { ... }` media query.
+Habilitar la opción `print` **también** generará clases de utilidad para imprimir, que solo se aplican dentro de la media query `@media print { ... }`.
 
 ```scss
 $utilities: (
@@ -338,7 +338,7 @@ $utilities: (
 );
 ```
 
-Output:
+Salida:
 
 ```css
 .opacity-0 { opacity: 0 !important; }
@@ -356,17 +356,17 @@ Output:
 }
 ```
 
-## Importance
+## Importancia
 
-All utilities generated by the API include `!important` to ensure they override components and modifier classes as intended. You can toggle this setting globally with the `$enable-important-utilities` variable (defaults to `true`).
+Todas las utilidades generadas por la API incluyen `!important` para garantizar que sobrescriben los componentes y las clases modificadoras según lo previsto. Puedes alternar esta configuración globalmente con la variable `$enable-important-utilities` (predeterminado en `true`).
 
-## Using the API
+## Uso de la API
 
-Now that you're familiar with how the utilities API works, learn how to add your own custom classes and modify our default utilities.
+Ahora que estás familiarizado con el funcionamiento de la API de utilidades, aprende cómo agregar tus propias clases personalizadas y modificar nuestras utilidades predeterminadas.
 
-### Override utilities
+### Sobrescribir utilidades
 
-Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:
+Sobrescribe las utilidades existentes utilizando la misma clave. Por ejemplo, si deseas clases de utilidad de desbordamiento responsive adicionales, puedes hacer esto:
 
 ```scss
 $utilities: (
@@ -378,9 +378,9 @@ $utilities: (
 );
 ```
 
-### Add utilities
+### Agregar utilidades
 
-New utilities can be added to the default `$utilities` map with a `map-merge`. Make sure our required Sass files and `_utilities.scss` are imported first, then use the `map-merge` to add your additional utilities. For example, here's how to add a responsive `cursor` utility with three values.
+Se pueden agregar nuevas utilidades al mapa `$utilities` predeterminado con un `map-merge`. Asegúrate de que nuestros archivos Sass requeridos y `_utilities.scss` se importen primero, luego usa `map-merge` para agregar tus utilidades adicionales. Por ejemplo, aquí se explica cómo agregar una utilidad responsive de `cursor` con tres valores.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -403,9 +403,9 @@ $utilities: map-merge(
 );
 ```
 
-### Modify utilities
+### Modificar utilidades
 
-Modify existing utilities in the default `$utilities` map with `map-get` and `map-merge` functions. In the example below, we're adding an additional value to the `width` utilities. Start with an initial `map-merge` and then specify which utility you want to modify. From there, fetch the nested `"width"` map with `map-get` to access and modify the utility's options and values.
+Modifica las utilidades existentes en el mapa `$utilities` predeterminado con las funciones `map-get` y `map-merge`. En el siguiente ejemplo, estamos agregando un valor adicional a las utilidades `width`. Comienza con un `map-merge` inicial y luego especifica qué utilidad deseas modificar. A partir de ahí, busca el mapa `"width"` anidado con `map-get` para acceder y modificar las opciones y valores de la utilidad.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -431,9 +431,9 @@ $utilities: map-merge(
 );
 ```
 
-#### Enable responsive
+#### Habilitar responsive
 
-You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the `border` classes responsive:
+Puedes habilitar clases responsive para un conjunto existente de utilidades que actualmente no sean responsive de forma predeterminada. Por ejemplo, para hacer que las clases `border` sean responsive:
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -453,7 +453,7 @@ $utilities: map-merge(
 );
 ```
 
-This will now generate responsive variations of `.border` and `.border-0` for each breakpoint. Your generated CSS will look like this:
+Esto ahora generará variaciones responsive de `.border` y `.border-0` para cada breakpoint. Tu CSS generado se verá así:
 
 ```css
 .border { ... }
@@ -485,9 +485,9 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 }
 ```
 
-#### Rename utilities
+#### Renombrar utilidades
 
-Missing v4 utilities, or used to another naming convention? The utilities API can be used to override the resulting `class` of a given utility—for example, to rename `.ms-*` utilities to oldish `.ml-*`:
+¿Extrañas las utilidades v4 o estás acostumbrado a otra convención de nomenclatura? La API de utilidades se puede usar para sobrescribir la `class` resultante de una utilidad determinada, por ejemplo, para cambiar el nombre de las utilidades `.ms-*` al  antiguo `.ml-*`:
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -507,9 +507,9 @@ $utilities: map-merge(
 );
 ```
 
-### Remove utilities
+### Eliminar utilidades
 
-Remove any of the default utilities by setting the group key to `null`. For example, to remove all our `width` utilities, create a `$utilities` `map-merge` and add `"width": null` within.
+Elimina cualquiera de las utilidades predeterminadas configurando la clave de grupo en `null`. Por ejemplo, para eliminar todas nuestras utilidades `width`, crea `$utilities` `map-merge` y agrega `"width": null` dentro.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -527,9 +527,9 @@ $utilities: map-merge(
 );
 ```
 
-#### Remove utility in RTL
+#### Eliminar utilidad en RTL
 
-Some edge cases make [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the `rtl` option to `false`:
+Algunos casos extremos dificultan [el estilo RTL](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), como los saltos de línea en árabe. Por lo tanto, las utilidades se pueden eliminar de la salida RTL configurando la opción `rtl` en `false`:
 
 ```scss
 $utilities: (
@@ -542,7 +542,7 @@ $utilities: (
 );
 ```
 
-Output:
+Salida:
 
 ```css
 /* rtl:begin:remove */
@@ -553,4 +553,4 @@ Output:
 /* rtl:end:remove */
 ```
 
-This doesn't output anything in RTL, thanks to [the RTLCSS `remove` control directive](https://rtlcss.com/learn/usage-guide/control-directives/#remove).
+Esto no genera nada en RTL, gracias a [la directiva de control `remove` de RTLCSS](https://rtlcss.com/learn/usage-guide/control-directives/#remove).

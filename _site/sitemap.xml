@@ -16,6 +16,9 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/components/alerts/</loc>
   </url>
   <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/api/</loc>
+  </url>
+  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/extend/approach/</loc>
   </url>
   <url>
@@ -365,9 +368,6 @@
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/layout/utilities/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/api/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/forms/validation/</loc>
