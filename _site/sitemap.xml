@@ -16,6 +16,9 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/components/alerts/</loc>
   </url>
   <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/vertical-align/</loc>
+  </url>
+  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/api/</loc>
   </url>
   <url>
@@ -377,9 +380,6 @@
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/versions/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/vertical-align/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/visibility/</loc>
