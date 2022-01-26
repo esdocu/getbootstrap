@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Colors
-description: Convey meaning through `color` with a handful of color utility classes. Includes support for styling links with hover states, too.
+title: Colores
+description: Transmite significado a través del `color` con un puñado de clases de utilidad de color. También incluye soporte para diseñar enlaces con estado hover.
 group: utilities
 toc: true
 ---
 
-## Colors
+## Colores
 
-Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
+Colorea el texto con utilidades de color. Si deseas colorear los enlaces, puedes usar las [clases auxiliares `.link-*`]({{< docsref "/helpers/colored-links" >}}) que tienen estados `:hover` y `:focus` .
 
 {{< example >}}
 {{< colors.inline >}}
@@ -24,22 +24,22 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 {{< /example >}}
 
 {{< callout warning >}}
-**Deprecation:** With the addition of `.text-opacity-*` utilities and CSS variables for text utilities, `.text-black-50` and `.text-white-50` are deprecated as of v5.1.0. They'll be removed in v6.0.0.
+**En desuso:** Con la adición de las utilidades `.text-opacity-*` y las variables CSS para las utilidades de texto, `.text-black-50` y `.text-white-50` quedan en desuso a partir de la v5.1.0 . Se eliminarán en v6.0.0.
 {{< /callout >}}
 
 {{< callout info >}}
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## Opacity
+## Opacidad
 
-<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Añadido en v5.1.0</small>
 
-As of v5.1.0, text color utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+A partir de v5.1.0, las utilidades de color de texto se generan con Sass usando variables CSS. Esto permite cambios de color en tiempo real sin compilación y cambios dinámicos de transparencia alfa.
 
-### How it works
+### ¿Cómo funcionan los colores?
 
-Consider our default `.text-primary` utility.
+Analicemos nuestra utilidad predeterminada `.text-primary`.
 
 ```css
 .text-primary {
@@ -48,66 +48,66 @@ Consider our default `.text-primary` utility.
 }
 ```
 
-We use an RGB version of our `--bs-primary` (with the value of `13, 110, 253`) CSS variable and attached a second CSS variable, `--bs-text-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.text-primary` now, your computed `color` value is `rgba(13, 110, 253, 1)`. The local CSS variable inside each `.text-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+Usamos una versión RGB de nuestra variable CSS `--bs-primary` (con el valor de `13, 110, 253`) y adjuntamos una segunda variable CSS, `--bs-text-opacity`, para la transparencia alfa (con un valor predeterminado `1` gracias a una variable CSS local). Esto significa que cada vez que usas `.text-primary` ahora, tu valor de `color` calculado es `rgba(13, 110, 253, 1)`. La variable CSS local dentro de cada clase `.text-*` evita problemas de herencia, por lo que las instancias anidadas de las utilidades no tienen automáticamente una transparencia alfa modificada.
 
-### Example
+### Ejemplo
 
-To change that opacity, override `--bs-text-opacity` via custom styles or inline styles.
-
-{{< example >}}
-<div class="text-primary">This is default primary text</div>
-<div class="text-primary" style="--bs-text-opacity: .5;">This is 50% opacity primary text</div>
-{{< /example >}}
-
-Or, choose from any of the `.text-opacity` utilities:
+Para cambiar la opacidad, sobrescribe `--bs-text-opacity` a través de estilos personalizados o estilos en línea.
 
 {{< example >}}
-<div class="text-primary">This is default primary text</div>
-<div class="text-primary text-opacity-75">This is 75% opacity primary text</div>
-<div class="text-primary text-opacity-50">This is 50% opacity primary text</div>
-<div class="text-primary text-opacity-25">This is 25% opacity primary text</div>
+<div class="text-primary">Este es el texto primary predeterminado</div>
+<div class="text-primary" style="--bs-text-opacity: .5;">Este es un texto primary con una opacidad del 50%</div>
 {{< /example >}}
 
-## Specificity
+O bien, elije cualquiera de las utilidades `.text-opacity`:
 
-Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` or more semantic element with the desired class.
+{{< example >}}
+<div class="text-primary">Este es el texto primary predeterminado</div>
+<div class="text-primary text-opacity-75">Este es un texto primary con una opacidad del 75%</div>
+<div class="text-primary text-opacity-50">Este es un texto primary con una opacidad del 50%</div>
+<div class="text-primary text-opacity-25">Este es un texto primary con una opacidad del 25%</div>
+{{< /example >}}
+
+## Especificidad
+
+A veces, las clases contextuales no se pueden aplicar debido a la especificidad de otro selector. En algunos casos, una solución alternativa suficiente es envolver el contenido de tu elemento en un `<div>` con la clase deseada.
 
 ## Sass
 
-In addition to the following Sass functionality, consider reading about our included [CSS custom properties]({{< docsref "/customize/css-variables" >}}) (aka CSS variables) for colors and more.
+Además de la siguiente funcionalidad de Sass, considera leer sobre nuestras [propiedades personalizadas CSS]({{< docsref "/customize/css-variables" >}}) (también conocidas como variables CSS) para colores y más.
 
 ### Variables
 
-Most `color` utilities are generated by our theme colors, reassigned from our generic color palette variables.
+La mayoría de las utilidades de `color` son generadas por nuestros colores de tema, reasignados desde nuestras variables genéricas de paleta de colores.
 
 {{< scss-docs name="color-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-color-variables" file="scss/_variables.scss" >}}
 
-Grayscale colors are also available, but only a subset are used to generate any utilities.
+Los colores en escala de grises también están disponibles, pero solo se usa un subconjunto para generar utilidades.
 
 {{< scss-docs name="gray-color-variables" file="scss/_variables.scss" >}}
 
-### Map
+### Mapa
 
-Theme colors are then put into a Sass map so we can loop over them to generate our utilities, component modifiers, and more.
+Luego, los colores del tema se colocan en un mapa de Sass para que podamos recorrerlos para generar nuestras utilidades, modificadores de componentes y más.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
-Grayscale colors are also available as a Sass map. **This map is not used to generate any utilities.**
+Los colores en escala de grises también están disponibles como mapa Sass. **Este mapa no se usa para generar utilidades.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
 
-RGB colors are generated from a separate Sass map:
+Los colores RGB se generan a partir de un mapa Sass separado:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
 
-And color opacities build on that with their own map that's consumed by the utilities API:
+Y las opacidades de color se basan en esto con su propio mapa que consume la API de utilidades:
 
 {{< scss-docs name="utilities-text-colors" file="scss/_maps.scss" >}}
 
-### Utilities API
+### API de utilidades
 
-Color utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Las utilidades de color se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-color" file="scss/_utilities.scss" >}}
