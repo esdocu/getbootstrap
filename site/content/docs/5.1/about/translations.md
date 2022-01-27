@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Translations
-description: Links to community-translated Bootstrap documentation sites.
+title: Traducciones
+description: Enlaces a sitios de documentación de Bootstrap traducidos por la comunidad.
 group: about
 ---
 
-Community members have translated Bootstrap's documentation into various languages. None are officially supported and they may not always be up to date.
+Los miembros de la comunidad han traducido la documentación de Bootstrap a varios idiomas. Ninguno tiene soporte oficial y es posible que no siempre estén actualizados.
 
 {{< translations.inline >}}
 <ul>
@@ -15,6 +15,6 @@ Community members have translated Bootstrap's documentation into various languag
 </ul>
 {{< /translations.inline >}}
 
-**We don't help organize or host translations, we just link to them.**
+**No ayudamos a organizar ni a alojar traducciones, solo las vinculamos.**
 
-Finished a new or better translation? Open a pull request to add it to our list.
+¿Terminaste una traducción nueva o mejor? Abre un pull request para agregarla a nuestra lista.

@@ -15,7 +15,7 @@ Bootstrap Icons es una biblioteca en crecimiento de íconos SVG diseñados por [
 
 Ah, ¿y mencionamos que son completamente de código abierto? Con licencia del MIT, al igual que Bootstrap, nuestro conjunto de iconos está disponible para todos.
 
-[Obten más información sobre los íconos de Bootstrap]({{< param icons >}}), incluido cómo instalarlos y el uso recomendado.
+[Obtén más información sobre los íconos de Bootstrap]({{< param icons >}}), incluido cómo instalarlos y el uso recomendado.
 
 ## Alternativas
 

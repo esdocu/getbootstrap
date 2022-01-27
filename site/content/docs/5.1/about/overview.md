@@ -1,29 +1,29 @@
 ---
 layout: docs
-title: About
-description: Learn more about the team maintaining Bootstrap, how and why the project started, and how to get involved.
+title: Acerca de Bootstrap
+description: Obtén más información sobre el equipo que mantiene Bootstrap, cómo y por qué comenzó el proyecto y cómo participar.
 group: about
 aliases:
   - "/about/"
   - "/docs/5.1/about/"
 ---
 
-## Team
+## Equipo
 
-Bootstrap is maintained by a [small team of developers](https://github.com/orgs/twbs/people) on GitHub. We're actively looking to grow this team and would love to hear from you if you're excited about CSS at scale, writing and maintaining vanilla JavaScript plugins, and improving build tooling processes for frontend code.
+Bootstrap es mantenido por un [pequeño equipo de desarrolladores](https://github.com/orgs/twbs/people) en GitHub. Estamos buscando activamente hacer crecer este equipo y nos encantaría saber si estás entusiasmado con CSS a escala, escribir y mantener complementos de JavaScript estándar y mejorar los procesos de creación de herramientas para el código de interfaz.
 
-## History
+## Historia
 
-Originally created by a designer and a developer at Twitter, Bootstrap has become one of the most popular front-end frameworks and open source projects in the world.
+Originalmente creado por un diseñador y desarrollador en Twitter, Bootstrap se ha convertido en uno de los frameworks front-end y proyectos de código abierto más populares del mundo.
 
-Bootstrap was created at Twitter in mid-2010 by [@mdo](https://twitter.com/mdo) and [@fat](https://twitter.com/fat). Prior to being an open-sourced framework, Bootstrap was known as _Twitter Blueprint_. A few months into development, Twitter held its [first Hack Week](https://blog.twitter.com/engineering/en_us/a/2010/hack-week.html) and the project exploded as developers of all skill levels jumped in without any external guidance. It served as the style guide for internal tools development at the company for over a year before its public release, and continues to do so today.
+Bootstrap fue creado en Twitter a mediados de 2010 por [@mdo](https://twitter.com/mdo) y [@fat](https://twitter.com/fat). Antes de ser un framework de código abierto, Bootstrap se conocía como _Twitter Blueprint_. Unos meses después del desarrollo, Twitter celebró su [primera Hack Week](https://blog.twitter.com/engineering/en_us/a/2010/hack-week.html) y el proyecto explotó cuando los desarrolladores de todos los niveles saltaron sin ninguna guía externa. Sirvió como guía de estilo para el desarrollo de herramientas internas en la empresa durante más de un año antes de su lanzamiento al público, y continúa haciéndolo en la actualidad.
 
-Originally [released](https://blog.twitter.com/developer/en_us/a/2011/bootstrap-twitter.html) on <time datetime="2011-08-19 11:25">Friday, August 19, 2011</time>, we've since had over [twenty releases]({{< param repo >}}/releases), including two major rewrites with v2 and v3. With Bootstrap 2, we added responsive functionality to the entire framework as an optional stylesheet. Building on that with Bootstrap 3, we rewrote the library once more to make it responsive by default with a mobile first approach.
+Originalmente [publicado](https://blog.twitter.com/developer/en_us/a/2011/bootstrap-twitter.html) el <time datetime="2011-08-19 11:25">viernes 19 de agosto de 2011</time>, desde entonces hemos tenido más de [veinte lanzamientos]({{< param repo >}}/releases), incluidas dos reescrituras importantes con v2 y v3. Con Bootstrap 2, agregamos funcionalidad responsive a todo el framework como una hoja de estilo opcional. Sobre la base de Bootstrap 3, reescribimos la biblioteca una vez más para sea responsive de forma predeterminada con un enfoque mobile-first.
 
-With Bootstrap 4, we once again rewrote the project to account for two key architectural changes: a migration to Sass and the move to CSS's flexbox. Our intention is to help in a small way to move the web development community forward by pushing for newer CSS properties, fewer dependencies, and new technologies across more modern browsers.
+Con Bootstrap 4, una vez más reescribimos el proyecto para tener en cuenta dos cambios arquitectónicos clave: una migración a Sass y el cambio a Flexbox de CSS. Nuestra intención es ayudar de una manera pequeña a hacer avanzar a la comunidad de desarrollo web impulsando propiedades CSS más nuevas, menos dependencias y nuevas tecnologías en navegadores más modernos.
 
-Our latest release, Bootstrap 5, focuses on improving v4's codebase with as few major breaking changes as possible. We improved existing features and components, removed support for older browsers, dropped jQuery for regular JavaScript, and embraced more future-friendly technologies like CSS custom properties as part of our tooling.
+Nuestro último lanzamiento, Bootstrap 5, se enfoca en mejorar la base de código de v4 con la menor cantidad posible de cambios importantes. Mejoramos las funciones y los componentes existentes, eliminamos la compatibilidad con navegadores más antiguos, eliminamos jQuery para JavaScript normal y adoptamos tecnologías más amigables para el futuro, como las propiedades personalizadas de CSS, como parte de nuestras herramientas.
 
-## Get involved
+## Involucrarse
 
-Get involved with Bootstrap development by [opening an issue]({{< param repo >}}/issues/new) or submitting a pull request. Read our [contributing guidelines]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how we develop.
+Participa en el desarrollo de Bootstrap [abriendo un issue]({{< param repo >}}/issues/new) o enviando un pull request. Lee nuestras [directrices de contribución]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) para obtener información sobre cómo desarrollamos.

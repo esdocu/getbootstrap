@@ -117,7 +117,7 @@ Si deseas tener elementos `<input readonly>` en tu formulario con estilo de text
 
 Las listas de datos te permiten crear un grupo de `<option>`s a las que se puedes acceder (y autocompletar) desde un `<input>`. Estos son similares a los elementos `<select>`, pero vienen con más limitaciones y diferencias de estilo de menú. Si bien la mayoría de los navegadores y sistemas operativos incluyen cierto soporte para los elementos `<datalist>`, su estilo es inconsistente en el mejor de los casos.
 
-Obten más información sobre [soporte para elementos datalist](https://caniuse.com/datalist).
+Obtén más información sobre [soporte para elementos datalist](https://caniuse.com/datalist).
 
 {{< example >}}
 <label for="exampleDataList" class="form-label">Ejemplo de lista de datos</label>

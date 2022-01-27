@@ -55,7 +55,7 @@ Bootstrap incluye varios componentes que funcionan como una superposición de al
 
 Cada componente de superposición aumenta ligeramente su valor de `z-index` de tal manera que los principios comunes de la interfaz de usuario permiten que los elementos centrados o sobrevolados por el usuario permanezcan a la vista en todo momento. Por ejemplo, un modal es un bloqueo de documentos (por ejemplo, no puedes realizar ninguna otra acción excepto la acción del modal), por lo que lo colocamos encima de nuestras barras de navegación.
 
-Obten más información sobre esto en nuestra [página de diseño `z-index`]({{< docsref "/layout/z-index" >}}).
+Obtén más información sobre esto en nuestra [página de diseño `z-index`]({{< docsref "/layout/z-index" >}}).
 
 ## HTML y CSS sobre JS
 

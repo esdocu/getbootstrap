@@ -5,7 +5,6 @@ description: Track and review changes to the Bootstrap source files, documentati
 group: migration
 aliases: "/migration/"
 toc: true
-draft: true
 ---
 
 ## v5.2.0

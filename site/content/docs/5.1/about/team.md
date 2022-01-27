@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Team
-description: An overview of the founding team and core contributors to Bootstrap.
+title: Equipo
+description: Una descripción general del equipo fundador y los principales contribuyentes de Bootstrap.
 group: about
 ---
 
-Bootstrap is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.
+Bootstrap es mantenido por el equipo fundador y un pequeño grupo de valiosos colaboradores principales, con el apoyo masivo y la participación de nuestra comunidad.
 
 {{< team.inline >}}
 <div class="list-group mb-3">
@@ -20,4 +20,4 @@ Bootstrap is maintained by the founding team and a small group of invaluable cor
 </div>
 {{< /team.inline >}}
 
-Get involved with Bootstrap development by [opening an issue]({{< param repo >}}/issues/new) or submitting a pull request. Read our [contributing guidelines]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how we develop.
+Participa en el desarrollo de Bootstrap [abriendo un issue]({{< param repo >}}/issues/new) o enviando un pull request. Lee nuestras [directrices de contribución]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) para obtener información sobre cómo desarrollamos.
