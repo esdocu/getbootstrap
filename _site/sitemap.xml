@@ -34,9 +34,6 @@
     <loc>https://bootstrap.esdocu.com/docs/5.1/utilities/borders/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/navbar-bottom/</loc>
-  </url>
-  <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/components/breadcrumb/</loc>
   </url>
   <url>
@@ -103,9 +100,6 @@
     <loc>https://bootstrap.esdocu.com/docs/5.1/forms/form-control/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/cover/</loc>
-  </url>
-  <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/layout/css-grid/</loc>
   </url>
   <url>
@@ -128,6 +122,24 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/album/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/jumbotron/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/navbar-bottom/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/navbar-static/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/navbar-fixed/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/pricing/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/product/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/</loc>
@@ -158,9 +170,6 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/content/figures/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/navbar-fixed/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/utilities/flex/</loc>
@@ -203,9 +212,6 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/getting-started/javascript/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/jumbotron/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/forms/layout/</loc>
@@ -271,6 +277,9 @@
     <loc>https://bootstrap.esdocu.com/docs/5.1/components/placeholders/</loc>
   </url>
   <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/cover/</loc>
+  </url>
+  <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/starter-template/</loc>
   </url>
   <url>
@@ -290,12 +299,6 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/utilities/position/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/pricing/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/product/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/components/progress/</loc>
@@ -362,9 +365,6 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/components/tooltips/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/navbar-static/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/about/translations/</loc>
