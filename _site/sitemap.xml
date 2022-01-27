@@ -22,9 +22,6 @@
     <loc>https://bootstrap.fabdev.win/docs/5.1/utilities/api/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.fabdev.win/docs/5.1/extend/approach/</loc>
-  </url>
-  <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/components/badge/</loc>
   </url>
   <url>
@@ -134,6 +131,9 @@
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/examples/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.fabdev.win/docs/5.1/extend/approach/</loc>
   </url>
   <url>
     <loc>https://bootstrap.fabdev.win/docs/5.1/helpers/stretched-link/</loc>

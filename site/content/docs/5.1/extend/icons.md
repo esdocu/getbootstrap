@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: Icons
-description: Guidance and suggestions for using external icon libraries with Bootstrap.
+title: Iconos
+description: Orientación y sugerencias para el uso de bibliotecas de iconos externos con Bootstrap.
 group: extend
 ---
 
-While Bootstrap doesn't include an icon set by default, we do have our own comprehensive icon library called Bootstrap Icons. Feel free to use them or any other icon set in your project. We've included details for Bootstrap Icons and other preferred icon sets below.
+Si bien Bootstrap no incluye un conjunto de íconos predeterminado, tenemos nuestra propia biblioteca de íconos integral llamada Bootstrap Icons. Siéntete libre de usarlos o cualquier otro conjunto de iconos en tu proyecto. Hemos incluido detalles para los íconos de Bootstrap y otros conjuntos de íconos preferidos a continuación.
 
-While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
+Si bien la mayoría de los conjuntos de íconos incluyen múltiples formatos de archivo, preferimos las implementaciones SVG por su mejor accesibilidad y compatibilidad con vectores.
 
 ## Bootstrap Icons
 
-Bootstrap Icons is a growing library of SVG icons that are designed by [@mdo](https://github.com/mdo) and maintained by [the Bootstrap Team](https://github.com/orgs/twbs/people). The beginnings of this icon set come from Bootstrap's very own components—our forms, carousels, and more. Bootstrap has very few icon needs out of the box, so we didn't need much. However, once we got going, we couldn't stop making more.
+Bootstrap Icons es una biblioteca en crecimiento de íconos SVG diseñados por [@mdo](https://github.com/mdo) y mantenidos por [el equipo de Bootstrap](https://github.com/orgs/twbs/people). Los inicios de este conjunto de íconos provienen de los propios componentes de Bootstrap: nuestros formularios, carruseles y más. Bootstrap tiene muy pocas necesidades de íconos listas para usar, por lo que no necesitábamos mucho. Sin embargo, una vez que nos pusimos en marcha, no pudimos dejar de hacer más.
 
-Oh, and did we mention they're completely open source? Licensed under MIT, just like Bootstrap, our icon set is available to everyone.
+Ah, ¿y mencionamos que son completamente de código abierto? Con licencia del MIT, al igual que Bootstrap, nuestro conjunto de iconos está disponible para todos.
 
-[Learn more about Bootstrap Icons]({{< param icons >}}), including how to install them and recommended usage.
+[Obten más información sobre los íconos de Bootstrap]({{< param icons >}}), incluido cómo instalarlos y el uso recomendado.
 
-## Alternatives
+## Alternativas
 
-We've tested and used these icon sets ourselves as preferred alternatives to Bootstrap Icons.
+Hemos probado y utilizado estos conjuntos de iconos como alternativas preferidas a los iconos de Bootstrap.
 
 {{< markdown >}}
 {{< icons.inline >}}
@@ -31,9 +31,9 @@ We've tested and used these icon sets ourselves as preferred alternatives to Boo
 {{< /icons.inline >}}
 {{< /markdown >}}
 
-## More options
+## Mas opciones
 
-While we haven't tried these out ourselves, they do look promising and provide multiple formats, including SVG.
+Si bien no los hemos probado nosotros mismos, parecen prometedores y brindan múltiples formatos, incluido SVG.
 
 {{< markdown >}}
 {{< icons.inline type="more" />}}
