@@ -1,6 +1,6 @@
 languageCode:           "es"
 title:                  "Bootstrap en Español"
-baseURL:                "https://bootstrap.fabdev.win"
+baseURL:                "https://bootstrap.esdocu.com"
 
 security:
   enableInlineShortcodes: true
