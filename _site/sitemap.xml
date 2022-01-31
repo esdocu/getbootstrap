@@ -25,9 +25,6 @@
     <loc>https://bootstrap.esdocu.com/docs/5.1/getting-started/best-practices/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/blog/</loc>
-  </url>
-  <url>
     <loc>https://bootstrap.esdocu.com/</loc>
   </url>
   <url>
@@ -50,9 +47,6 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/components/carousel/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/carousel/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/cheatsheet/</loc>
@@ -275,6 +269,12 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/components/placeholders/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/blog/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/carousel/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/cover/</loc>
