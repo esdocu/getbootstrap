@@ -341,9 +341,9 @@ Las tablas anidadas no heredan los estilos de borde, los estilos *active* y las 
         <table class="table mb-0">
           <thead>
             <tr>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
+              <th scope="col">Encabezado</th>
+              <th scope="col">Encabezado</th>
+              <th scope="col">Encabezado</th>
             </tr>
           </thead>
           <tbody>

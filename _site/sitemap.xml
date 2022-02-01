@@ -52,9 +52,6 @@
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/cheatsheet/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/checkout/</loc>
-  </url>
-  <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/forms/checks-radios/</loc>
   </url>
   <url>
@@ -97,9 +94,6 @@
     <loc>https://bootstrap.esdocu.com/docs/5.1/layout/css-grid/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/dashboard/</loc>
-  </url>
-  <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/utilities/overflow/</loc>
   </url>
   <url>
@@ -116,6 +110,9 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/album/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/checkout/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/jumbotron/</loc>
@@ -278,6 +275,9 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/cover/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/dashboard/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/starter-template/</loc>
