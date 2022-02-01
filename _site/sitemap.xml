@@ -136,6 +136,9 @@
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/</loc>
   </url>
   <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/headers/</loc>
+  </url>
+  <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/extend/approach/</loc>
   </url>
   <url>
@@ -175,13 +178,10 @@
     <loc>https://bootstrap.esdocu.com/docs/5.1/forms/overview/</loc>
   </url>
   <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/grid/</loc>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/list-groups/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/layout/gutters/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/headers/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/heroes/</loc>
@@ -209,9 +209,6 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/components/list-group/</loc>
-  </url>
-  <url>
-    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/list-groups/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/masonry/</loc>
@@ -275,6 +272,9 @@
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/cover/</loc>
+  </url>
+  <url>
+    <loc>https://bootstrap.esdocu.com/docs/5.1/examples/grid/</loc>
   </url>
   <url>
     <loc>https://bootstrap.esdocu.com/docs/5.1/examples/dashboard/</loc>

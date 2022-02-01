@@ -266,7 +266,7 @@ Agrega menús desplegables con un poco de HTML adicional y el [complemento JavaS
       <li><a class="dropdown-item" href="#">Otra acción</a></li>
       <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </li>
   <li class="nav-item">
@@ -292,7 +292,7 @@ Agrega menús desplegables con un poco de HTML adicional y el [complemento JavaS
       <li><a class="dropdown-item" href="#">Otra acción</a></li>
       <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </li>
   <li class="nav-item">
