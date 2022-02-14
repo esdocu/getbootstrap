@@ -8,8 +8,6 @@
     <meta name="generator" content="Hugo {{ hugo.Version }}">
     <title>{{ .Page.Title | markdownify }} · {{ .Site.Title | markdownify }} v{{ .Site.Params.docs_version }}</title>
 
-    <link rel="canonical" href="{{ .Permalink }}">
-
     {{ with .Params.robots -}}
     <meta name="robots" content="{{ . }}">
     {{- end }}
