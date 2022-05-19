@@ -5,10 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Bootstrap está respaldado por un extenso sistema de colores que tematiza nuestros estilos y componentes. Esto permite una personalización y extensión más completas para cualquier proyecto.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.96.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290" crossorigin="anonymous"></script>
 
 <title>Color · Bootstrap 5 en Español v5.1</title>
 
@@ -483,17 +485,17 @@
   
 </div>
 <p>Todos estos colores están disponibles como mapa Sass, <code>$theme-colors</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
-  <span class="s2">&#34;primary&#34;</span><span class="o">:</span>    <span class="nv">$primary</span><span class="o">,</span>
-  <span class="s2">&#34;secondary&#34;</span><span class="o">:</span>  <span class="nv">$secondary</span><span class="o">,</span>
-  <span class="s2">&#34;success&#34;</span><span class="o">:</span>    <span class="nv">$success</span><span class="o">,</span>
-  <span class="s2">&#34;info&#34;</span><span class="o">:</span>       <span class="nv">$info</span><span class="o">,</span>
-  <span class="s2">&#34;warning&#34;</span><span class="o">:</span>    <span class="nv">$warning</span><span class="o">,</span>
-  <span class="s2">&#34;danger&#34;</span><span class="o">:</span>     <span class="nv">$danger</span><span class="o">,</span>
-  <span class="s2">&#34;light&#34;</span><span class="o">:</span>      <span class="nv">$light</span><span class="o">,</span>
-  <span class="s2">&#34;dark&#34;</span><span class="o">:</span>       <span class="nv">$dark</span>
-<span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;primary&#34;</span><span class="o">:</span>    <span class="nv">$primary</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;secondary&#34;</span><span class="o">:</span>  <span class="nv">$secondary</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;success&#34;</span><span class="o">:</span>    <span class="nv">$success</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;info&#34;</span><span class="o">:</span>       <span class="nv">$info</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;warning&#34;</span><span class="o">:</span>    <span class="nv">$warning</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;danger&#34;</span><span class="o">:</span>     <span class="nv">$danger</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;light&#34;</span><span class="o">:</span>      <span class="nv">$light</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;dark&#34;</span><span class="o">:</span>       <span class="nv">$dark</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div>
 <p>Consulta nuestros documentos de <a href="/docs/5.1/customize/sass/#maps-and-loops">mapas y bucles de Sass</a> para saber cómo modificar estos colores.</p>
 <h2 id="todos-los-colores">Todos los colores</h2>
 <p>Todos los colores de Bootstrap están disponibles como variables Sass y un mapa Sass en el archivo <code>scss/_variables.scss</code>. Para evitar aumentar el tamaño de los archivos, no creamos clases de color de texto o de fondo para cada una de estas variables. En su lugar, elegimos un subconjunto de estos colores para una <a href="#theme-colors">paleta de temas</a>.</p>
@@ -806,31 +808,31 @@
 <li><code>$grays</code> enumera todos los tintes y tonos de gris</li>
 </ul>
 <p>Dentro de <code>scss/_variables.scss</code>, encontrarás las variables de color de Bootstrap y el mapa de Sass. Aquí hay un ejemplo del mapa Sass <code>$colors</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
-  <span class="s2">&#34;blue&#34;</span><span class="o">:</span>       <span class="nv">$blue</span><span class="o">,</span>
-  <span class="s2">&#34;indigo&#34;</span><span class="o">:</span>     <span class="nv">$indigo</span><span class="o">,</span>
-  <span class="s2">&#34;purple&#34;</span><span class="o">:</span>     <span class="nv">$purple</span><span class="o">,</span>
-  <span class="s2">&#34;pink&#34;</span><span class="o">:</span>       <span class="nv">$pink</span><span class="o">,</span>
-  <span class="s2">&#34;red&#34;</span><span class="o">:</span>        <span class="nv">$red</span><span class="o">,</span>
-  <span class="s2">&#34;orange&#34;</span><span class="o">:</span>     <span class="nv">$orange</span><span class="o">,</span>
-  <span class="s2">&#34;yellow&#34;</span><span class="o">:</span>     <span class="nv">$yellow</span><span class="o">,</span>
-  <span class="s2">&#34;green&#34;</span><span class="o">:</span>      <span class="nv">$green</span><span class="o">,</span>
-  <span class="s2">&#34;teal&#34;</span><span class="o">:</span>       <span class="nv">$teal</span><span class="o">,</span>
-  <span class="s2">&#34;cyan&#34;</span><span class="o">:</span>       <span class="nv">$cyan</span><span class="o">,</span>
-  <span class="s2">&#34;white&#34;</span><span class="o">:</span>      <span class="nv">$white</span><span class="o">,</span>
-  <span class="s2">&#34;gray&#34;</span><span class="o">:</span>       <span class="nv">$gray-600</span><span class="o">,</span>
-  <span class="s2">&#34;gray-dark&#34;</span><span class="o">:</span>  <span class="nv">$gray-800</span>
-<span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$colors</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;blue&#34;</span><span class="o">:</span>       <span class="nv">$blue</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;indigo&#34;</span><span class="o">:</span>     <span class="nv">$indigo</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;purple&#34;</span><span class="o">:</span>     <span class="nv">$purple</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;pink&#34;</span><span class="o">:</span>       <span class="nv">$pink</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;red&#34;</span><span class="o">:</span>        <span class="nv">$red</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;orange&#34;</span><span class="o">:</span>     <span class="nv">$orange</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;yellow&#34;</span><span class="o">:</span>     <span class="nv">$yellow</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;green&#34;</span><span class="o">:</span>      <span class="nv">$green</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;teal&#34;</span><span class="o">:</span>       <span class="nv">$teal</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;cyan&#34;</span><span class="o">:</span>       <span class="nv">$cyan</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;white&#34;</span><span class="o">:</span>      <span class="nv">$white</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;gray&#34;</span><span class="o">:</span>       <span class="nv">$gray-600</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;gray-dark&#34;</span><span class="o">:</span>  <span class="nv">$gray-800</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div>
 <p>Agrega, elimina o modifica valores dentro del mapa para actualizar cómo se usan en muchos otros componentes. Desafortunadamente, en este momento, no todos los componentes utilizan este mapa de Sass. Las actualizaciones futuras se esforzarán por mejorar esto. Hasta entonces, planea hacer uso de las variables <code>${color}</code> y este mapa de Sass.</p>
 <h3 id="ejemplo">Ejemplo</h3>
 <p>Así es como puedes usarlos en tu Sass:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.alpha</span> <span class="p">{</span> <span class="na">color</span><span class="o">:</span> <span class="nv">$purple</span><span class="p">;</span> <span class="p">}</span>
-<span class="nc">.beta</span> <span class="p">{</span>
-  <span class="na">color</span><span class="o">:</span> <span class="nv">$yellow-300</span><span class="p">;</span>
-  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$indigo-900</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><p>Las clases de utilidad <a href="/docs/5.1/utilities/colors/">Color</a> y <a href="/docs/5.1/utilities/background/">background</a> también están disponibles para configurar <code>color</code> y <code>background-color</code> utilizando los valores de color <code>500</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.alpha</span> <span class="p">{</span> <span class="na">color</span><span class="o">:</span> <span class="nv">$purple</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.beta</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nv">$yellow-300</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$indigo-900</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Las clases de utilidad <a href="/docs/5.1/utilities/colors/">Color</a> y <a href="/docs/5.1/utilities/background/">background</a> también están disponibles para configurar <code>color</code> y <code>background-color</code> utilizando los valores de color <code>500</code>.</p>
 <h2 id="generación-de-utilidades">Generación de utilidades</h2>
 <p><small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Añadido en v5.1.0</small></p>
 <p>Bootstrap no incluye las utilidades <code>color</code> y <code>background-color</code> para cada variable de color, pero puedes generarlas tú mismo con nuestra <a href="/docs/5.1/utilities/api/">utility API</a> y nuestra mapas Sass extendido añadido en v5.1.0.</p>
@@ -840,33 +842,33 @@
 <li>Fusiona este nuevo mapa combinado para ampliar cualquier utilidad con un nombre de clase <code>{color}-{level}</code>.</li>
 </ol>
 <p>Aquí hay un ejemplo que genera utilidades de color de texto (por ejemplo, <code>.text-purple-500</code>) siguiendo los pasos anteriores.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/maps&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/mixins&#34;</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>
-
-<span class="nv">$all-colors</span><span class="o">:</span> <span class="nf">map-merge-multiple</span><span class="p">(</span><span class="nv">$blues</span><span class="o">,</span> <span class="nv">$indigos</span><span class="o">,</span> <span class="nv">$purples</span><span class="o">,</span> <span class="nv">$pinks</span><span class="o">,</span> <span class="nv">$reds</span><span class="o">,</span> <span class="nv">$oranges</span><span class="o">,</span> <span class="nv">$yellows</span><span class="o">,</span> <span class="nv">$greens</span><span class="o">,</span> <span class="nv">$teals</span><span class="o">,</span> <span class="nv">$cyans</span><span class="p">);</span>
-
-<span class="nv">$utilities</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
-  <span class="nv">$utilities</span><span class="o">,</span>
-  <span class="p">(</span>
-    <span class="s2">&#34;color&#34;</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
-      <span class="nf">map-get</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;color&#34;</span><span class="p">)</span><span class="o">,</span>
-      <span class="p">(</span>
-        <span class="na">values</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
-          <span class="nf">map-get</span><span class="p">(</span><span class="nf">map-get</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;color&#34;</span><span class="p">)</span><span class="o">,</span> <span class="s2">&#34;values&#34;</span><span class="p">)</span><span class="o">,</span>
-          <span class="p">(</span>
-            <span class="nv">$all-colors</span>
-          <span class="p">)</span><span class="o">,</span>
-        <span class="p">)</span><span class="o">,</span>
-      <span class="p">)</span><span class="o">,</span>
-    <span class="p">)</span><span class="o">,</span>
-  <span class="p">)</span>
-<span class="p">);</span>
-
-<span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities/api&#34;</span><span class="p">;</span>
-</code></pre></div><p>Esto generará nuevas utilidades <code>.text-{color}-{level}</code> para cada color y nivel. También puedes hacer lo mismo con cualquier otra utilidad y propiedad.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/maps&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/mixins&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$all-colors</span><span class="o">:</span> <span class="nf">map-merge-multiple</span><span class="p">(</span><span class="nv">$blues</span><span class="o">,</span> <span class="nv">$indigos</span><span class="o">,</span> <span class="nv">$purples</span><span class="o">,</span> <span class="nv">$pinks</span><span class="o">,</span> <span class="nv">$reds</span><span class="o">,</span> <span class="nv">$oranges</span><span class="o">,</span> <span class="nv">$yellows</span><span class="o">,</span> <span class="nv">$greens</span><span class="o">,</span> <span class="nv">$teals</span><span class="o">,</span> <span class="nv">$cyans</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">$utilities</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;color&#34;</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">map-get</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;color&#34;</span><span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="na">values</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="nf">map-get</span><span class="p">(</span><span class="nf">map-get</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;color&#34;</span><span class="p">)</span><span class="o">,</span> <span class="s2">&#34;values&#34;</span><span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$all-colors</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities/api&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Esto generará nuevas utilidades <code>.text-{color}-{level}</code> para cada color y nivel. También puedes hacer lo mismo con cualquier otra utilidad y propiedad.</p>
 
     </div>
   </main>
