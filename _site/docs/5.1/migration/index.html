@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Realiza un seguimiento y revisa los cambios en los archivos fuente, la documentación y los componentes de Bootstrap para ayudarte a migrar de la v4 a v5.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.96.0">
+<meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -617,14 +617,15 @@ ul {
 
 <div id="frb-inline" class="frb frb-rml-enabled frb-country-AR" style="">
     <div class="frb-inline-topbar">
-        Te lo pedimos, humildemente: colabóranos.
+        ¿Sos de Argentina? Por favor, lee esto.
     </div>
 
     <div class="frb-inline-main">
 
         <div class="frb-inline-message">
-            Hola lector, hoy te pedimos que ayudes a Esdocu. Gracias al 1% de los lectores que donan, Esdocu permanece
-            activo. Si Esdocu te ha dado conocimientos, tómate un minuto y dona para que nuestro equipo pueda trabajar full-time en nuevas traducciones. Si eres uno de nuestros raros donantes, te agradecemos calurosamente.
+            Hola lector, me llamo Fabián y en este momento no tengo trabajo. Esdocu es mi proyecto de tiempo libre que se convirtió en mi actividad de tiempo completo.
+            Si está en tus posibilidades, por favor dóname un cafecito de ARS $100. Nuevas traducciones y actualizaciones estarán disponible pronto.
+            ¡Muchas gracias!
         </div>
 
         <form id="frb-form" class="frb-form">
@@ -633,17 +634,15 @@ ul {
 
                 <fieldset class="frb-methods">
 
-                    <legend class="frb-legend error-highlight">Por favor selecciona un método de pago</legend>
+                    <legend class="frb-legend error-highlight">Podés donar vía Mercado Pago a través de cafecito.app</legend>
                     <ul class="frb-btn-wrapper">
 
                         <li class="frb-pm-cc">
                             <a class="frb-btn" href="https://cafecito.app/esdocu" target="_blank">
-                                cafecito.app
+                                Ir a cafecito.app
                             </a>
                         </li>
-                        <li class="frb-pm-bt no-monthly" style="">
-                            <a class="frb-btn" href="https://buymeacoffee.com/esdocu" target="_blank">buymeacoffee.com</a>
-                        </li>
+                        
 
                     </ul>
 
@@ -729,31 +728,31 @@ ul {
 <li><code>$gutters</code></li>
 </ul>
 <p>Tus compilaciones personalizadas de Bootstrap CSS ahora deberían verse así con una importación de mapas separada.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">  // Functions come first
-</span></span><span class="line"><span class="cl">  @import &#34;functions&#34;;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  // Optional variable overrides here
-</span></span><span class="line"><span class="cl"><span class="gi">+ $custom-color: #df711b;
-</span></span></span><span class="line"><span class="cl"><span class="gi">+ $custom-theme-colors: (
-</span></span></span><span class="line"><span class="cl"><span class="gi">+   &#34;custom&#34;: $custom-color
-</span></span></span><span class="line"><span class="cl"><span class="gi">+ );
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>
-</span></span><span class="line"><span class="cl">  // Variables come next
-</span></span><span class="line"><span class="cl">  @import &#34;variables&#34;;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="gi">+ // Optional Sass map overrides here
-</span></span></span><span class="line"><span class="cl"><span class="gi">+ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
-</span></span></span><span class="line"><span class="cl"><span class="gi">+
-</span></span></span><span class="line"><span class="cl"><span class="gi">+ // Followed by our default maps
-</span></span></span><span class="line"><span class="cl"><span class="gi">+ @import &#34;maps&#34;;
-</span></span></span><span class="line"><span class="cl"><span class="gi">+
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>  // Rest of our imports
-</span></span><span class="line"><span class="cl">  @import &#34;mixins&#34;;
-</span></span><span class="line"><span class="cl">  @import &#34;utilities&#34;;
-</span></span><span class="line"><span class="cl">  @import &#34;root&#34;;
-</span></span><span class="line"><span class="cl">  @import &#34;reboot&#34;;
-</span></span><span class="line"><span class="cl">  // etc
-</span></span></code></pre></div><h3 id="cambios-clave">Cambios clave</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">  // Functions come first
+  @import &#34;functions&#34;;
+
+  // Optional variable overrides here
+<span class="gi">+ $custom-color: #df711b;
+</span><span class="gi">+ $custom-theme-colors: (
+</span><span class="gi">+   &#34;custom&#34;: $custom-color
+</span><span class="gi">+ );
+</span><span class="gi"></span>
+  // Variables come next
+  @import &#34;variables&#34;;
+
+<span class="gi">+ // Optional Sass map overrides here
+</span><span class="gi">+ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
+</span><span class="gi">+
+</span><span class="gi">+ // Followed by our default maps
+</span><span class="gi">+ @import &#34;maps&#34;;
+</span><span class="gi">+
+</span><span class="gi"></span>  // Rest of our imports
+  @import &#34;mixins&#34;;
+  @import &#34;utilities&#34;;
+  @import &#34;root&#34;;
+  @import &#34;reboot&#34;;
+  // etc
+</code></pre></div><h3 id="cambios-clave">Cambios clave</h3>
 <ul>
 <li><strong>Se introdujo la nueva opción <code>$enable-container-classes</code>.</strong> Ahora, al optar por el diseño experimental de CSS Grid, las clases <code>.container-*</code> aún se compilarán, a menos que esta opción se establezca en <code>false</code>.</li>
 </ul>
@@ -1268,9 +1267,9 @@ ul {
 </li>
 <li>
 <p><strong>Todos los complementos ahora pueden aceptar un selector CSS como primer argumento.</strong> Puede pasar un elemento DOM o cualquier selector CSS válido para crear una nueva instancia del complemento:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">dropdown</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Dropdown</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;dropdown&#34;]&#39;</span><span class="p">)</span>
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">dropdown</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Dropdown</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;dropdown&#34;]&#39;</span><span class="p">)</span>
+</code></pre></div></li>
 <li>
 <p><code>popperConfig</code> se puede pasar como una función que acepta la configuración predeterminada de Popper de Bootstrap como argumento, para que pueda fusionar esta configuración predeterminada a su manera. <strong>Se aplica a los menús desplegables, popovers y tooltips.</strong></p>
 </li>
