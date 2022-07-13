@@ -410,9 +410,22 @@
         <h1 class="bd-title" id="content">Sass</h1>
       </div>
       <p class="bd-lead">Utiliza nuestros archivos fuente Sass para aprovechar variables, mapas, mixins y funciones para ayudarte a construir más rápido y personalizar tu proyecto.</p>
-      <a href="https://esdocu.com/form" target="_blank">
-    <img src="/img/esdocu-dev-news.png" style="width: 100%; max-width: 444px; margin: 20px 0">
-</a>
+      
+
+<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:180px;"></iframe>
+<script>
+    
+    var iframe = document.getElementById("myIframe");
+    
+    
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+    }
+</script>
     </div>
 
     

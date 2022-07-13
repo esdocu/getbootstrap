@@ -410,9 +410,22 @@
         <h1 class="bd-title" id="content">JavaScript</h1>
       </div>
       <p class="bd-lead">Dale vida a Bootstrap con nuestros complementos de JavaScript opcionales. Obtén información sobre cada complemento, nuestras opciones de API programáticas y de datos, y más.</p>
-      <a href="https://esdocu.com/form" target="_blank">
-    <img src="/img/esdocu-dev-news.png" style="width: 100%; max-width: 444px; margin: 20px 0">
-</a>
+      
+
+<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:180px;"></iframe>
+<script>
+    
+    var iframe = document.getElementById("myIframe");
+    
+    
+    iframe.onload = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+    }
+</script>
     </div>
 
     
