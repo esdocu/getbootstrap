@@ -412,19 +412,20 @@
       <p class="bd-lead">Alterna de manera rápida y responsive el valor de visualización de los componentes y más con nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como algunos extras para controlar la visualización al imprimir.</p>
       
 
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:180px;"></iframe>
+<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:204px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
     
     
     iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
     }
 
     window.onresize = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
     }
+
 </script>
     </div>
 

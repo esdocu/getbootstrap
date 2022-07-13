@@ -412,19 +412,20 @@
       <p class="bd-lead">Proporciona comentarios valiosos a tus usuarios con la validación de formularios HTML5, a través de comportamientos predeterminados del navegador o estilos personalizados y JavaScript.</p>
       
 
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:180px;"></iframe>
+<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:204px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
     
     
     iframe.onload = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
     }
 
     window.onresize = function(){
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 50 + 'px';
     }
+
 </script>
     </div>
 
