@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Controles de formulario</h1>
       </div>
       <p class="bd-lead">Proporciona a controles de formulario como <code>&lt;input&gt;</code>s y <code>&lt;textarea&gt;</code>s una actualización con estilos personalizados, tamaño, estados de enfoque y más.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -691,6 +689,23 @@
 <span class="nv">$form-file-button-hover-bg</span><span class="o">:</span>       <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$form-file-button-bg</span><span class="o">,</span> <span class="mi">5</span><span class="kt">%</span><span class="p">);</span>
 </code></pre></div>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

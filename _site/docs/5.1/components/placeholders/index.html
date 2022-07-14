@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Placeholders</h1>
       </div>
       <p class="bd-lead">Usa marcadores de posición (placeholders) de carga para tus componentes o páginas para indicar que algo aún se puede estar cargando.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -599,6 +597,23 @@ El uso de <code>aria-hidden=&quot;true&quot;</code> solo indica que el elemento 
 <span class="nv">$placeholder-opacity-min</span><span class="o">:</span>           <span class="mf">.2</span><span class="p">;</span>
 </code></pre></div>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

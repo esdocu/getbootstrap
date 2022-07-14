@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Sass</h1>
       </div>
       <p class="bd-lead">Utiliza nuestros archivos fuente Sass para aprovechar variables, mapas, mixins y funciones para ayudarte a construir más rápido y personalizar tu proyecto.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -689,6 +687,23 @@
 </span><span class="c1"></span>  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

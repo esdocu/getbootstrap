@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Rango</h1>
       </div>
       <p class="bd-lead">Utiliza nuestras entradas de rango personalizadas para obtener un estilo coherente entre navegadores y una personalización integrada.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -501,6 +499,23 @@
 <span class="nv">$form-range-thumb-transition</span><span class="o">:</span>              <span class="n">background-color</span> <span class="mf">.15</span><span class="kt">s</span> <span class="ni">ease-in-out</span><span class="o">,</span> <span class="n">border-color</span> <span class="mf">.15</span><span class="kt">s</span> <span class="ni">ease-in-out</span><span class="o">,</span> <span class="n">box-shadow</span> <span class="mf">.15</span><span class="kt">s</span> <span class="ni">ease-in-out</span><span class="p">;</span>
 </code></pre></div>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

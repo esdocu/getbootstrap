@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Best practices</h1>
       </div>
       <p class="bd-lead">Learn about some of the best practices we&rsquo;ve gathered from years of working on and using Bootstrap.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -448,6 +446,23 @@
 <li>Ask in <a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
 </ul>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

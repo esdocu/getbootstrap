@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Color</h1>
       </div>
       <p class="bd-lead">Bootstrap está respaldado por un extenso sistema de colores que tematiza nuestros estilos y componentes. Esto permite una personalización y extensión más completas para cualquier proyecto.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -877,6 +875,23 @@
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities/api&#34;</span><span class="p">;</span>
 </code></pre></div><p>Esto generará nuevas utilidades <code>.text-{color}-{level}</code> para cada color y nivel. También puedes hacer lo mismo con cualquier otra utilidad y propiedad.</p>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

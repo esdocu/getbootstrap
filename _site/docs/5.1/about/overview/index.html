@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Acerca de Bootstrap</h1>
       </div>
       <p class="bd-lead">Obtén más información sobre el equipo que mantiene Bootstrap, cómo y por qué comenzó el proyecto y cómo participar.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -445,6 +443,23 @@
 <h2 id="involucrarse">Involucrarse</h2>
 <p>Participa en el desarrollo de Bootstrap <a href="https://github.com/twbs/bootstrap/issues/new">abriendo un issue</a> o enviando un pull request. Lee nuestras <a href="https://github.com/twbs/bootstrap/blob/v5.1.3/.github/CONTRIBUTING.md">directrices de contribución</a> para obtener información sobre cómo desarrollamos.</p>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Breadcrumb</h1>
       </div>
       <p class="bd-lead">Indica la ubicación de la página actual dentro de una jerarquía de navegación que agrega automáticamente separadores a través de CSS.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -558,6 +556,23 @@
 <span class="nv">$breadcrumb-border-radius</span><span class="o">:</span>          <span class="n">null</span><span class="p">;</span>
 </code></pre></div>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Optimizar</h1>
       </div>
       <p class="bd-lead">Mantén tus proyectos ágiles, responsive y mantenibles para que puedas brindar la mejor experiencia y concentrarte en trabajos más importantes.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -551,6 +549,23 @@
 <p>Tu sitio web solo debe estar disponible a través de conexiones HTTPS en producción. HTTPS mejora la seguridad, la privacidad y la disponibilidad de todos los sitios, y <a href="https://https.cio.gov/everything/">no existe el tráfico web no confidencial</a>. Los pasos para configurar tu sitio web para que se sirva exclusivamente a través de HTTPS varían ampliamente según tu arquitectura y proveedor de alojamiento web y, por lo tanto, están más allá del alcance de estos documentos.</p>
 <p>Los sitios servidos a través de HTTPS también deben acceder a todas las hojas de estilo, scripts y otros activos a través de conexiones HTTPS. De lo contrario, enviarás a los usuarios <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content">contenido activo mixto</a>, lo que generará vulnerabilidades potenciales en las que un sitio puede verse comprometido al alterar una dependencia. Esto puede generar problemas de seguridad y advertencias en el navegador que se muestran a los usuarios. Ya sea que estés obteniendo Bootstrap de un CDN o sirviéndolo tú mismo, asegúrate de acceder solo a través de conexiones HTTPS.</p>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

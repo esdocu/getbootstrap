@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Contribuir</h1>
       </div>
       <p class="bd-lead">Ayuda a desarrollar Bootstrap con nuestros scripts y pruebas de compilación de documentación.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -525,6 +523,23 @@
 <h2 id="solución-de-problemas">Solución de problemas</h2>
 <p>Si encuentras problemas con la instalación de dependencias, desinstala todas las versiones de dependencia anteriores (globales y locales). Luego, vuelve a ejecutar <code>npm install</code>.</p>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

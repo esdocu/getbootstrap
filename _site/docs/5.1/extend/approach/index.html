@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Enfoque</h1>
       </div>
       <p class="bd-lead">Conoce las principales directrices, las estrategias y las técnicas utilizadas para crear y mantener Bootstrap para que puedas personalizarlo y ampliarlo más fácilmente.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -482,6 +480,23 @@
 <p>Usamos <a href="https://stylelint.io/">Stylelint</a> para hacer cumplir estos estándares y más en nuestro Sass/CSS. <a href="https://github.com/twbs/stylelint-config-twbs-bootstrap">Nuestra configuración personalizada de Stylelint</a> es de código abierto y está disponible para que otros la usen y amplíen.</p>
 <p>Usamos <a href="https://www.npmjs.com/package/vnu-jar">vnu-jar</a> para aplicar HTML estándar y semántico, así como para detectar errores comunes.</p>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

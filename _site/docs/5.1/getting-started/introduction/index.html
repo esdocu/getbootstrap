@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Introducción</h1>
       </div>
       <p class="bd-lead">Comienza con Bootstrap, el framework más popular del mundo para crear sitios adaptables para dispositivos móviles, con jsDelivr y con una plantilla como página de inicio.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -563,6 +561,23 @@
 </ul>
 <p>También puedes seguir a <a href="https://twitter.com/getbootstrap">@getbootstrap en Twitter</a> para conocer los últimos chismes y videos musicales increíbles.</p>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

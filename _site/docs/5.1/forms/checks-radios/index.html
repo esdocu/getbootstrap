@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Checks y radios</h1>
       </div>
       <p class="bd-lead">Crea casillas de verificación y radios consistentes entre navegadores y dispositivos con nuestro componente de checks completamente reescrito.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -871,6 +869,23 @@ Visualmente, estos botones toggle de casilla de verificación son idénticos a l
 <span class="nv">$form-check-inline-margin-end</span><span class="o">:</span>    <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
 </code></pre></div>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

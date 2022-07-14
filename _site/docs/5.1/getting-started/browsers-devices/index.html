@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Navegadores y dispositivos</h1>
       </div>
       <p class="bd-lead">Obtén información sobre los navegadores y dispositivos, desde modernos hasta antiguos, que son compatibles con Bootstrap, incluidas las peculiaridades y los errores conocidos de cada uno.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -553,6 +551,23 @@ not Explorer &lt;= 11
 <p>Estas advertencias de validación no importan en la práctica, ya que la parte no pirateada de nuestro CSS se valida completamente y las porciones pirateadas no interfieren con el funcionamiento adecuado de la porción no pirateada, por lo que ignoramos deliberadamente estas advertencias en particular.</p>
 <p>Nuestros documentos HTML también tienen algunas advertencias de validación de HTML triviales e intrascendentes debido a nuestra inclusión de una solución para <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">cierto error de Firefox</a>.</p>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>

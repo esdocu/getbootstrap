@@ -410,9 +410,7 @@
         <h1 class="bd-title" id="content">Validación</h1>
       </div>
       <p class="bd-lead">Proporciona comentarios valiosos a tus usuarios con la validación de formularios HTML5, a través de comportamientos predeterminados del navegador o estilos personalizados y JavaScript.</p>
-      
-
-<iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:234px;"></iframe>
+      <iframe src="/form" id="myIframe" frameborder="0" style="width:100%;height:260px;"></iframe>
 <script>
     
     var iframe = document.getElementById("myIframe");
@@ -1233,6 +1231,23 @@ Somos conscientes de que actualmente los estilos de validación personalizados d
 <p>Los estados de validación se pueden personalizar a través de Sass con el mapa <code>$form-validation-states</code>. Ubicado en nuestro archivo <code>_variables.scss</code>, este mapa de Sass es cómo generamos los estados de validación predeterminados <code>valid</code>/<code>invalid</code>. Se incluye un mapa anidado para personalizar el color, el ícono, el color de tooltips y la sombra de enfoque de cada estado. Si bien los navegadores no admiten otros estados, aquellos que usan estilos personalizados pueden agregar fácilmente feedbacks de formularios más complejos.</p>
 <p>Ten en cuenta que <strong>no recomendamos personalizar los valores de <code>$form-validation-states</code> sin modificar también el mixin <code>form-validation-state</code></strong>.</p>
 
+    </div>
+    <div>
+      <iframe src="/form" id="myIframe2" frameborder="0" style="width:100%;height:260px;"></iframe>
+<script>
+    
+    var iframe2 = document.getElementById("myIframe2");
+    
+    
+    iframe2.onload = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+    window.onresize = function(){
+        iframe2.style.height = iframe2.contentWindow.document.body.scrollHeight + 80 + 'px';
+    }
+
+</script>
     </div>
   </main>
 </div>
