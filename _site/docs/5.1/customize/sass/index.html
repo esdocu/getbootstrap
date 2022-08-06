@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Utiliza nuestros archivos fuente Sass para aprovechar variables, mapas, mixins y funciones para ayudarte a construir más rápido y personalizar tu proyecto.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.101.0">
+<meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="/scss/docs.scss" rel="stylesheet">
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -457,85 +457,85 @@
       <p>Utiliza nuestros archivos fuente Sasspara aprovechar variables, mapas, mixins y más.</p>
 <h2 id="estructura-de-archivos">Estructura de archivos</h2>
 <p>Siempre que sea posible, evita modificar los archivos del núcleo de Bootstrap. Para Sass, eso significa crear tu propia hoja de estilos que importe Bootstrap para que puedas modificarla y ampliarla. Suponiendo que estás utilizando un administrador de paquetes como npm, tendrás una estructura de archivos que se ve así:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">your-project/
-</span></span><span class="line"><span class="cl">├── scss
-</span></span><span class="line"><span class="cl">│   └── custom.scss
-</span></span><span class="line"><span class="cl">└── node_modules/
-</span></span><span class="line"><span class="cl">    └── bootstrap
-</span></span><span class="line"><span class="cl">        ├── js
-</span></span><span class="line"><span class="cl">        └── scss
-</span></span></code></pre></div><p>Si descargaste nuestros archivos fuente y no estás utilizando un administrador de paquetes, querrás configurar manualmente algo similar a esa estructura, manteniendo los archivos fuente de Bootstrap separados de los tuyos.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">your-project/
-</span></span><span class="line"><span class="cl">├── scss
-</span></span><span class="line"><span class="cl">│   └── custom.scss
-</span></span><span class="line"><span class="cl">└── bootstrap/
-</span></span><span class="line"><span class="cl">    ├── js
-</span></span><span class="line"><span class="cl">    └── scss
-</span></span></code></pre></div><h2 id="importación">Importación</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">your-project/
+├── scss
+│   └── custom.scss
+└── node_modules/
+    └── bootstrap
+        ├── js
+        └── scss
+</code></pre></div><p>Si descargaste nuestros archivos fuente y no estás utilizando un administrador de paquetes, querrás configurar manualmente algo similar a esa estructura, manteniendo los archivos fuente de Bootstrap separados de los tuyos.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">your-project/
+├── scss
+│   └── custom.scss
+└── bootstrap/
+    ├── js
+    └── scss
+</code></pre></div><h2 id="importación">Importación</h2>
 <p>En tu <code>custom.scss</code>, importarás los archivos fuente Sass de Bootstrap. Tienes dos opciones: incluir todo Bootstrap o elegir las partes que necesitas. Recomendamos lo último, aunque ten en cuenta que existen algunos requisitos y dependencias entre nuestros componentes. También deberás incluir algo de JavaScript para nuestros complementos.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Custom.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1">// Opción A: Incluir todo Bootstrap
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">// Incluye cualquier sobrescritura de variable predeterminada aquí (aunque las funciones no estarán disponibles)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Luego agrega código personalizado adicional aquí
-</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Custom.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1">// Opción B: Incluir partes de Bootstrap
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">// 1. Incluye las funciones primero (para que puedas manipular colores, SVG, calc, etc.)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/functions&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 2. Incluye cualquier sobrescritura de variable predeterminada aquí
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">// 3. Incluye el resto de las hojas de estilo Bootstrap requeridas
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 4. Incluye cualquier sobrescritura de mapa predeterminado aquí
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="c1">// 5. Incluye el resto de las partes requeridas
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/maps&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/root&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 6. Opcionalmente, incluye otras partes según sea necesario
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/utilities&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/reboot&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/type&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/images&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/containers&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/grid&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/helpers&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 7. Opcionalmente, incluye la API de utilidades en último lugar para generar clases basadas en el mapa Sass en `_utilities.scss`
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/utilities/api&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 8. Agrega código personalizado adicional aquí
-</span></span></span></code></pre></div><p>Con esta configuración, puedes comenzar a modificar cualquiera de las variables y mapas de Sass en tu <code>custom.scss</code>. También puedes comenzar a agregar partes de Bootstrap en las secciones <code>// Opcionalmente</code> según sea necesario. Sugerimos usar la pila de importación completa de nuestro archivo <code>bootstrap.scss</code> como punto de partida.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
+</span><span class="c1">// Opción A: Incluir todo Bootstrap
+</span><span class="c1"></span>
+<span class="c1">// Incluye cualquier sobrescritura de variable predeterminada aquí (aunque las funciones no estarán disponibles)
+</span><span class="c1"></span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
+
+<span class="c1">// Luego agrega código personalizado adicional aquí
+</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Custom.scss
+</span><span class="c1">// Opción B: Incluir partes de Bootstrap
+</span><span class="c1"></span>
+<span class="c1">// 1. Incluye las funciones primero (para que puedas manipular colores, SVG, calc, etc.)
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/functions&#34;</span><span class="p">;</span>
+
+<span class="c1">// 2. Incluye cualquier sobrescritura de variable predeterminada aquí
+</span><span class="c1"></span>
+<span class="c1">// 3. Incluye el resto de las hojas de estilo Bootstrap requeridas
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
+
+<span class="c1">// 4. Incluye cualquier sobrescritura de mapa predeterminado aquí
+</span><span class="c1"></span>
+<span class="c1">// 5. Incluye el resto de las partes requeridas
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/maps&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/root&#34;</span><span class="p">;</span>
+
+<span class="c1">// 6. Opcionalmente, incluye otras partes según sea necesario
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/utilities&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/reboot&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/type&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/images&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/containers&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/grid&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/helpers&#34;</span><span class="p">;</span>
+
+<span class="c1">// 7. Opcionalmente, incluye la API de utilidades en último lugar para generar clases basadas en el mapa Sass en `_utilities.scss`
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/utilities/api&#34;</span><span class="p">;</span>
+
+<span class="c1">// 8. Agrega código personalizado adicional aquí
+</span></code></pre></div><p>Con esta configuración, puedes comenzar a modificar cualquiera de las variables y mapas de Sass en tu <code>custom.scss</code>. También puedes comenzar a agregar partes de Bootstrap en las secciones <code>// Opcionalmente</code> según sea necesario. Sugerimos usar la pila de importación completa de nuestro archivo <code>bootstrap.scss</code> como punto de partida.</p>
 <h2 id="valores-predeterminados-de-variables">Valores predeterminados de variables</h2>
 <p>Cada variable de Sass en Bootstrap incluye el indicador <code>!default</code> que te permite sobrescribir el valor predeterminado de la variable en tu propio Sass sin modificar el código fuente de Bootstrap. Copia y pega las variables según sea necesario, modifica tus valores y elimina el indicador <code>!default</code>. Si ya se asignó una variable, no se reasignará con los valores predeterminados en Bootstrap.</p>
 <p>Encontrarás la lista completa de variables de Bootstrap en <code>scss/_variables.scss</code>. Algunas variables se establecen en <code>null</code>, estas variables no generan la propiedad a menos que se sobrescriban en tu configuración.</p>
 <p>Las sobrescrituras de variables deben realizarse después de importar nuestras funciones, pero antes del resto de las importaciones.</p>
 <p>Aquí hay un ejemplo que cambia <code>background-color</code> y <code>color</code> para <code>&lt;body&gt;</code> al importar y compilar Bootstrap a través de npm:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Requerido
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/functions&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Sobrescritura del valor por defecto de las variables
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$body-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$body-color</span><span class="o">:</span> <span class="mh">#111</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Requerido
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/maps&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/root&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Componentes opcionales de Bootstrap aquí
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/reboot&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/type&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// etc
-</span></span></span></code></pre></div><p>Repite según sea necesario para cualquier variable en Bootstrap, incluidas las opciones globales a continuación.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Requerido
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/functions&#34;</span><span class="p">;</span>
+
+<span class="c1">// Sobrescritura del valor por defecto de las variables
+</span><span class="c1"></span><span class="nv">$body-bg</span><span class="o">:</span> <span class="mh">#000</span><span class="p">;</span>
+<span class="nv">$body-color</span><span class="o">:</span> <span class="mh">#111</span><span class="p">;</span>
+
+<span class="c1">// Requerido
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/maps&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/root&#34;</span><span class="p">;</span>
+
+<span class="c1">// Componentes opcionales de Bootstrap aquí
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/reboot&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/type&#34;</span><span class="p">;</span>
+<span class="c1">// etc
+</span></code></pre></div><p>Repite según sea necesario para cualquier variable en Bootstrap, incluidas las opciones globales a continuación.</p>
 <div class="bd-callout bd-callout-info">
 <strong>¡Comienza con Bootstrap a través de npm con nuestro proyecto de inicio!</strong> Diríjete al repositorio de plantillas <a href="https://github.com/twbs/bootstrap-npm-starter">twbs/bootstrap-npm-starter</a> para ver cómo construir y personalizar Bootstrap en tu propio proyecto npm. Incluye el compilador Sass, Autoprefixer, Stylelint, PurgeCSS y Bootstrap Icons.
 </div>
@@ -545,138 +545,138 @@
 <p>Algunos de nuestros mapas Sass se fusionan en mapas vacíos de forma predeterminada. Esto se hace para permitir una fácil expansión de un mapa Sass determinado, pero tiene el costo de hacer <em>removing</em> de elementos de un mapa sea un poco más difícil.</p>
 <h3 id="modificar-mapa">Modificar mapa</h3>
 <p>Todas las variables en el mapa <code>$theme-colors</code> se definen como variables independientes. Para modificar un color existente en nuestro mapa <code>$theme-colors</code>, agrega lo siguiente a tu archivo Sass personalizado:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$primary</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$danger</span><span class="o">:</span> <span class="mh">#ff4136</span><span class="p">;</span>
-</span></span></code></pre></div><p>Posteriormente, estas variables se configuran en el mapa <code>$theme-colors</code> de Bootstrap:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;primary&#34;</span><span class="o">:</span> <span class="nv">$primary</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;danger&#34;</span><span class="o">:</span> <span class="nv">$danger</span>
-</span></span><span class="line"><span class="cl"><span class="p">);</span>
-</span></span></code></pre></div><h3 id="añadir-al-mapa">Añadir al mapa</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$primary</span><span class="o">:</span> <span class="mh">#0074d9</span><span class="p">;</span>
+<span class="nv">$danger</span><span class="o">:</span> <span class="mh">#ff4136</span><span class="p">;</span>
+</code></pre></div><p>Posteriormente, estas variables se configuran en el mapa <code>$theme-colors</code> de Bootstrap:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="s2">&#34;primary&#34;</span><span class="o">:</span> <span class="nv">$primary</span><span class="o">,</span>
+  <span class="s2">&#34;danger&#34;</span><span class="o">:</span> <span class="nv">$danger</span>
+<span class="p">);</span>
+</code></pre></div><h3 id="añadir-al-mapa">Añadir al mapa</h3>
 <p>Agrega nuevos colores a <code>$theme-colors</code>, o cualquier otro mapa, creando un nuevo mapa Sass con sus valores personalizados y combinándolo con el mapa original. En este caso, crearemos un nuevo mapa <code>$custom-colors</code> y lo fusionaremos con <code>$theme-colors</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Crea tu propio mapa
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$custom-colors</span><span class="o">:</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#900</span>
-</span></span><span class="line"><span class="cl"><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Fusionar los mapas
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="nv">$custom-colors</span><span class="p">);</span>
-</span></span></code></pre></div><h3 id="quitar-del-mapa">Quitar del mapa</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Crea tu propio mapa
+</span><span class="c1"></span><span class="nv">$custom-colors</span><span class="o">:</span> <span class="p">(</span>
+  <span class="s2">&#34;custom-color&#34;</span><span class="o">:</span> <span class="mh">#900</span>
+<span class="p">);</span>
+
+<span class="c1">// Fusionar los mapas
+</span><span class="c1"></span><span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="nv">$custom-colors</span><span class="p">);</span>
+</code></pre></div><h3 id="quitar-del-mapa">Quitar del mapa</h3>
 <p>Para eliminar colores de <code>$theme-colors</code>, o cualquier otro mapa, usa <code>map-remove</code>. Ten en cuenta que debes insertarlo entre nuestros requisitos y opciones:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Requerido
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/functions&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/maps&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/root&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">&#34;info&#34;</span><span class="o">,</span> <span class="s2">&#34;light&#34;</span><span class="o">,</span> <span class="s2">&#34;dark&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Opcional
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/reboot&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/type&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// etc
-</span></span></span></code></pre></div><h2 id="claves-requeridas">Claves requeridas</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Requerido
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/functions&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/variables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/maps&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/mixins&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/root&#34;</span><span class="p">;</span>
+
+<span class="nv">$theme-colors</span><span class="o">:</span> <span class="nf">map-remove</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="s2">&#34;info&#34;</span><span class="o">,</span> <span class="s2">&#34;light&#34;</span><span class="o">,</span> <span class="s2">&#34;dark&#34;</span><span class="p">);</span>
+
+<span class="c1">// Opcional
+</span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/reboot&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/type&#34;</span><span class="p">;</span>
+<span class="c1">// etc
+</span></code></pre></div><h2 id="claves-requeridas">Claves requeridas</h2>
 <p>Bootstrap asume la presencia de algunas claves específicas dentro de los mapas de Sass tal como las usamos y las ampliamos nosotros mismos. A medida que personalizas los mapas incluidos, es posible que encuentres errores cuando se utiliza la clave de un mapa Sass específico.</p>
 <p>Por ejemplo, usamos las teclas <code>primary</code>, <code>success</code> y <code>danger</code> de <code>$theme-colors</code> para enlaces, botones y estados de formulario. Reemplazar los valores de estas claves no debería presentar problemas, pero eliminarlas puede causar problemas de compilación de Sass. En estos casos, deberás modificar el código Sass que utiliza esos valores.</p>
 <h2 id="funciones">Funciones</h2>
 <h3 id="colores">Colores</h3>
 <p>Además de los <a href="/docs/5.1/customize/color/#color-sass-maps">mapas Sass</a> que tenemos, los colores del tema también se pueden usar como variables independientes, como <code>$primary</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nv">$gray-100</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$dark</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Puedes aclarar u oscurecer los colores con las funciones <code>tint-color()</code> y <code>shade-color()</code> de Bootstrap. Estas funciones mezclarán colores con negro o blanco, a diferencia de las funciones <code>lighten()</code> y <code>darken()</code> nativas de Sass, que cambiarán la luminosidad en una cantidad fija, lo que a menudo no produce el efecto deseado.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Tint a color: mix a color with white
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@function</span><span class="nf"> tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="ni">white</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Shade a color: mix a color with black
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@function</span><span class="nf"> shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="no">black</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Shade the color if the weight is positive, else tint it
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@function</span><span class="nf"> shift-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$weight</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">,</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span><span class="o">,</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="o">-</span><span class="nv">$weight</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nv">$gray-100</span><span class="p">;</span>
+  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$dark</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div><p>Puedes aclarar u oscurecer los colores con las funciones <code>tint-color()</code> y <code>shade-color()</code> de Bootstrap. Estas funciones mezclarán colores con negro o blanco, a diferencia de las funciones <code>lighten()</code> y <code>darken()</code> nativas de Sass, que cambiarán la luminosidad en una cantidad fija, lo que a menudo no produce el efecto deseado.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Tint a color: mix a color with white
+</span><span class="c1"></span><span class="k">@function</span><span class="nf"> tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="ni">white</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Shade a color: mix a color with black
+</span><span class="c1"></span><span class="k">@function</span><span class="nf"> shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">mix</span><span class="p">(</span><span class="no">black</span><span class="o">,</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Shade the color if the weight is positive, else tint it
+</span><span class="c1"></span><span class="k">@function</span><span class="nf"> shift-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@return</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$weight</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">,</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span><span class="o">,</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="o">-</span><span class="nv">$weight</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>En la práctica, llamarías a la función y pasarías los parámetros de color y peso.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nc">.custom-element-2</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$danger</span><span class="o">,</span> <span class="mi">30</span><span class="kt">%</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="contraste-de-color">Contraste de color</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nf">tint-color</span><span class="p">(</span><span class="nv">$primary</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.custom-element-2</span> <span class="p">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$danger</span><span class="o">,</span> <span class="mi">30</span><span class="kt">%</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="contraste-de-color">Contraste de color</h3>
 <p>Para cumplir con los <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">estándares de accesibilidad WCAG 2.0 para contraste de color</a>, los autores <strong>deben</strong> proporcionar <a href="https://www.w3.org/WAI/WCAG20/quickref/20160105/Overview.php#visual-audio-contrast-contrast">una relación de contraste de al menos 4,5:1</a>, con muy pocas excepciones.</p>
 <p>Una función adicional que incluimos en Bootstrap es la función de contraste de color, <code>color-contrast</code>. Utiliza el <a href="https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests">algoritmo WCAG 2.0</a> para calcular umbrales de contraste basados en <a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">luminancia relativa</a> en un espacio de color <code>sRGB</code> para devolver automáticamente un color de contraste claro (<code>#fff</code>), oscuro (<code>#212529</code>) o negro (<code>#000</code>) basado en el color base especificado. Esta función es especialmente útil para mixins o bucles en los que generas varias clases.</p>
 <p>Por ejemplo, para generar muestras de color a partir de nuestro mapa <code>$theme-colors</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>También se puede utilizar para necesidades puntuales de contraste:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// Devuelve `color: #fff`
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span></code></pre></div><p>También puedes especificar un color base con nuestras funciones de mapa de colores:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$dark</span><span class="p">);</span> <span class="c1">// Devuelve `color: #fff`
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span></code></pre></div><h3 id="escapar-svg">Escapar SVG</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+  <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>También se puede utilizar para necesidades puntuales de contraste:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span> <span class="c1">// Devuelve `color: #fff`
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><p>También puedes especificar un color base con nuestras funciones de mapa de colores:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="na">color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$dark</span><span class="p">);</span> <span class="c1">// Devuelve `color: #fff`
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></div><h3 id="escapar-svg">Escapar SVG</h3>
 <p>Usamos la función <code>escape-svg</code> para escapar de los caracteres <code>&lt;</code>, <code>&gt;</code> y <code>#</code> para las imágenes de fondo SVG. Al usar la función <code>escape-svg</code>, se deben citar los URI de datos.</p>
 <h3 id="sumar-y-restar-funciones">Sumar y restar funciones</h3>
 <p>Usamos las funciones <code>add</code> y <code>subtract</code> para envolver la función <code>calc</code> de CSS. El objetivo principal de estas funciones es evitar errores cuando se pasa un valor <code>0</code> &ldquo;sin unidades&rdquo; a una expresión <code>calc</code>. Expresiones como <code>calc(10px - 0)</code> devolverán un error en todos los navegadores, a pesar de ser matemáticamente correctas.</p>
 <p>Ejemplo donde el cálculo es válido:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// El cálculo de salida (.25rem - 1px) es válido
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// Salida de la misma calc(.25rem - 1px) como arriba
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Ejemplo donde el cálculo no es válido:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$border-width</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// El cálculo de salida (.25rem - 0) no es válido
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nc">.element</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// Salida .25rem
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h2 id="mixins">Mixins</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$border-width</span><span class="o">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// El cálculo de salida (.25rem - 1px) es válido
+</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Salida de la misma calc(.25rem - 1px) como arriba
+</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><p>Ejemplo donde el cálculo no es válido:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$border-radius</span><span class="o">:</span> <span class="mf">.25</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$border-width</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// El cálculo de salida (.25rem - 0) no es válido
+</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="nv">$border-radius</span> <span class="o">-</span> <span class="nv">$border-width</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+  <span class="c1">// Salida .25rem
+</span><span class="c1"></span>  <span class="na">border-radius</span><span class="o">:</span> <span class="nf">subtract</span><span class="p">(</span><span class="nv">$border-radius</span><span class="o">,</span> <span class="nv">$border-width</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="mixins">Mixins</h2>
 <p>Nuestro directorio <code>scss/mixins/</code> tiene una tonelada de mixins que potencian partes de Bootstrap y también se pueden usar en tu propio proyecto.</p>
 <h3 id="esquemas-de-color">Esquemas de color</h3>
 <p>Un mixin de atajo para la media query <code>prefers-color-scheme</code> está disponible con soporte para esquemas de color <code>light</code>, <code>dark</code> y personalizado.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> color-scheme</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@media</span> <span class="p">(</span><span class="n">prefers-color-scheme</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$name</span><span class="si">}</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">@content</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.custom-element</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// Inserta estilos de modo oscuro aquí
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="n">custom-named-scheme</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// Inserta estilos de esquemas de colores personalizados aquí
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> color-scheme</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@media</span> <span class="p">(</span><span class="n">prefers-color-scheme</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$name</span><span class="si">}</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">@content</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.custom-element</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Inserta estilos de modo oscuro aquí
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="k">@include</span><span class="nd"> color-scheme</span><span class="p">(</span><span class="n">custom-named-scheme</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Inserta estilos de esquemas de colores personalizados aquí
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
     </div>
     <div class="pt-3">
       <a href="https://bit.ly/3buoWyq" target="_blank">

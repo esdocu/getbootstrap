@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentación y ejemplos para agregar popovers de Bootstrap, como los que se encuentran en iOS, a cualquier elemento de tu sitio.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.101.0">
+<meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="/scss/docs.scss" rel="stylesheet">
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -495,19 +495,19 @@ El efecto de animación de este componente depende de la media query <code>prefe
 <p>Sigue leyendo para ver cómo funcionan los popovers con algunos ejemplos.</p>
 <h2 id="ejemplo-habilitar-popovers-en-todas-partes">Ejemplo: habilitar popovers en todas partes</h2>
 <p>Una forma de inicializar todos los popovers en una página sería seleccionarlos por su atributo <code>data-bs-toggle</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">popoverTriggerList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;popover&#34;]&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">popoverList</span> <span class="o">=</span> <span class="nx">popoverTriggerList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">popoverTriggerEl</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">popoverTriggerEl</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><h2 id="ejemplo-uso-de-la-opción-container">Ejemplo: Uso de la opción <code>container</code></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">popoverTriggerList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;popover&#34;]&#39;</span><span class="p">))</span>
+<span class="kd">var</span> <span class="nx">popoverList</span> <span class="o">=</span> <span class="nx">popoverTriggerList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">popoverTriggerEl</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">popoverTriggerEl</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div><h2 id="ejemplo-uso-de-la-opción-container">Ejemplo: Uso de la opción <code>container</code></h2>
 <p>Cuando tienes algunos estilos en un elemento padre que interfieren con un popover, querrás especificar un <code>container</code> personalizado para que el HTML del popover aparezca dentro de ese elemento.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.example-popover&#39;</span><span class="p">),</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;body&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><h2 id="ejemplo">Ejemplo</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.example-popover&#39;</span><span class="p">),</span> <span class="p">{</span>
+  <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;body&#39;</span>
+<span class="p">})</span>
+</code></pre></div><h2 id="ejemplo">Ejemplo</h2>
 <div class="bd-example">
 <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Clic para alternar el popover</button>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-lg btn-danger&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Popover title&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;And here&#39;s some amazing content. It&#39;s very engaging. Right?&#34;</span><span class="p">&gt;</span>Clic para alternar el popover<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-lg btn-danger&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Popover title&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;And here&#39;s some amazing content. It&#39;s very engaging. Right?&#34;</span><span class="p">&gt;</span>Clic para alternar el popover<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="cuatro-direcciones">Cuatro direcciones</h3>
 <p>Hay cuatro opciones disponibles: alineación superior, derecha, inferior e izquierda. Las direcciones se reflejan cuando se usa Bootstrap en RTL.</p>
 <div class="bd-example">
@@ -523,18 +523,18 @@ El efecto de animación de este componente depende de la media query <code>prefe
 <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
   Popover izquierdo
 </button>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;top&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Top popover&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Popover superior
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;right&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Right popover&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Popover derecho
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;bottom&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Bottom popover&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Popover inferior
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;left&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Left popover&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Popover izquierdo
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;top&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Top popover&#34;</span><span class="p">&gt;</span>
+  Popover superior
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;right&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Right popover&#34;</span><span class="p">&gt;</span>
+  Popover derecho
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;bottom&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Bottom popover&#34;</span><span class="p">&gt;</span>
+  Popover inferior
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;left&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Left popover&#34;</span><span class="p">&gt;</span>
+  Popover izquierdo
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="descartar-cerrar-en-el-siguiente-clic">Descartar (cerrar) en el siguiente clic</h3>
 <p>Usa el disparador <code>focus</code> para descartar popovers en el siguiente clic del usuario en un elemento diferente al elemento de alternancia.</p>
 <div class="bd-callout bd-callout-danger">
@@ -544,51 +544,51 @@ El efecto de animación de este componente depende de la media query <code>prefe
 
 <div class="bd-example">
 <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Descartar popover</a>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-lg btn-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-trigger</span><span class="o">=</span><span class="s">&#34;focus&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Dismissible popover&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;And here&#39;s some amazing content. It&#39;s very engaging. Right?&#34;</span><span class="p">&gt;</span>Descartar popover<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.popover-dismiss&#39;</span><span class="p">),</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">trigger</span><span class="o">:</span> <span class="s1">&#39;focus&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><h3 id="elementos-deshabilitados">Elementos deshabilitados</h3>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-lg btn-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-trigger</span><span class="o">=</span><span class="s">&#34;focus&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Dismissible popover&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;And here&#39;s some amazing content. It&#39;s very engaging. Right?&#34;</span><span class="p">&gt;</span>Descartar popover<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.popover-dismiss&#39;</span><span class="p">),</span> <span class="p">{</span>
+  <span class="nx">trigger</span><span class="o">:</span> <span class="s1">&#39;focus&#39;</span>
+<span class="p">})</span>
+</code></pre></div><h3 id="elementos-deshabilitados">Elementos deshabilitados</h3>
 <p>Los elementos con el atributo <code>disabled</code> no son interactivos, lo que significa que los usuarios no pueden pasar el cursor por encima o hacer clic en ellos para activar un popover (o tooltip). Como solución alternativa, puedes activar el popover desde un contenedor <code>&lt;div&gt;</code> o <code>&lt;span&gt;</code>, idealmente enfocable desde el teclado usando <code>tabindex=&quot;0&quot;</code>.</p>
 <p>Para activadores de popovers deshabilitados, también puedes preferir <code>data-bs-trigger=&quot;hover focus&quot;</code> para que el popover aparezca como una respuesta visual inmediata a tus usuarios, ya que es posible que no esperen hacer <em>clic</em> en un elemento deshabilitado.</p>
 <div class="bd-example">
 <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
   <button class="btn btn-primary" type="button" disabled>Botón deshabilitado</button>
 </span>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-block&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-trigger</span><span class="o">=</span><span class="s">&#34;hover focus&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Disabled popover&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Botón deshabilitado<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-block&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-bs-trigger</span><span class="o">=</span><span class="s">&#34;hover focus&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;Disabled popover&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Botón deshabilitado<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$popover-font-size</span><span class="o">:</span>                 <span class="nv">$font-size-sm</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-bg</span><span class="o">:</span>                        <span class="nv">$white</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-max-width</span><span class="o">:</span>                 <span class="mi">276</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-border-width</span><span class="o">:</span>              <span class="nv">$border-width</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-border-color</span><span class="o">:</span>              <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-border-radius</span><span class="o">:</span>             <span class="nv">$border-radius-lg</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-inner-border-radius</span><span class="o">:</span>       <span class="nf">subtract</span><span class="p">(</span><span class="nv">$popover-border-radius</span><span class="o">,</span> <span class="nv">$popover-border-width</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-box-shadow</span><span class="o">:</span>                <span class="nv">$box-shadow</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-header-bg</span><span class="o">:</span>                 <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$popover-bg</span><span class="o">,</span> <span class="mi">6</span><span class="kt">%</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-header-color</span><span class="o">:</span>              <span class="nv">$headings-color</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-header-padding-y</span><span class="o">:</span>          <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-header-padding-x</span><span class="o">:</span>          <span class="nv">$spacer</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-body-color</span><span class="o">:</span>                <span class="nv">$body-color</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-body-padding-y</span><span class="o">:</span>            <span class="nv">$spacer</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-body-padding-x</span><span class="o">:</span>            <span class="nv">$spacer</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-arrow-width</span><span class="o">:</span>               <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-arrow-height</span><span class="o">:</span>              <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-arrow-color</span><span class="o">:</span>               <span class="nv">$popover-bg</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$popover-arrow-outer-color</span><span class="o">:</span>         <span class="nf">fade-in</span><span class="p">(</span><span class="nv">$popover-border-color</span><span class="o">,</span> <span class="mf">.05</span><span class="p">);</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$popover-font-size</span><span class="o">:</span>                 <span class="nv">$font-size-sm</span><span class="p">;</span>
+<span class="nv">$popover-bg</span><span class="o">:</span>                        <span class="nv">$white</span><span class="p">;</span>
+<span class="nv">$popover-max-width</span><span class="o">:</span>                 <span class="mi">276</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$popover-border-width</span><span class="o">:</span>              <span class="nv">$border-width</span><span class="p">;</span>
+<span class="nv">$popover-border-color</span><span class="o">:</span>              <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.2</span><span class="p">);</span>
+<span class="nv">$popover-border-radius</span><span class="o">:</span>             <span class="nv">$border-radius-lg</span><span class="p">;</span>
+<span class="nv">$popover-inner-border-radius</span><span class="o">:</span>       <span class="nf">subtract</span><span class="p">(</span><span class="nv">$popover-border-radius</span><span class="o">,</span> <span class="nv">$popover-border-width</span><span class="p">);</span>
+<span class="nv">$popover-box-shadow</span><span class="o">:</span>                <span class="nv">$box-shadow</span><span class="p">;</span>
+
+<span class="nv">$popover-header-bg</span><span class="o">:</span>                 <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$popover-bg</span><span class="o">,</span> <span class="mi">6</span><span class="kt">%</span><span class="p">);</span>
+<span class="nv">$popover-header-color</span><span class="o">:</span>              <span class="nv">$headings-color</span><span class="p">;</span>
+<span class="nv">$popover-header-padding-y</span><span class="o">:</span>          <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$popover-header-padding-x</span><span class="o">:</span>          <span class="nv">$spacer</span><span class="p">;</span>
+
+<span class="nv">$popover-body-color</span><span class="o">:</span>                <span class="nv">$body-color</span><span class="p">;</span>
+<span class="nv">$popover-body-padding-y</span><span class="o">:</span>            <span class="nv">$spacer</span><span class="p">;</span>
+<span class="nv">$popover-body-padding-x</span><span class="o">:</span>            <span class="nv">$spacer</span><span class="p">;</span>
+
+<span class="nv">$popover-arrow-width</span><span class="o">:</span>               <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$popover-arrow-height</span><span class="o">:</span>              <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$popover-arrow-color</span><span class="o">:</span>               <span class="nv">$popover-bg</span><span class="p">;</span>
+
+<span class="nv">$popover-arrow-outer-color</span><span class="o">:</span>         <span class="nf">fade-in</span><span class="p">(</span><span class="nv">$popover-border-color</span><span class="o">,</span> <span class="mf">.05</span><span class="p">);</span>
+</code></pre></div>
 <h2 id="uso">Uso</h2>
 <p>Habilitar popovers a través de JavaScript:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
-</span></span></code></pre></div><div class="bd-callout bd-callout-warning">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
+</code></pre></div><div class="bd-callout bd-callout-warning">
 <h3 id="cómo-hacer-que-los-popovers-funcionen-para-los-usuarios-de-teclados-y-tecnología-de-asistencia">Cómo hacer que los popovers funcionen para los usuarios de teclados y tecnología de asistencia</h3>
 <p>Para permitir que los usuarios del teclado activen sus ventanas emergentes, solo debes agregarlas a los elementos HTML que tradicionalmente se pueden enfocar con el teclado e interactivos (como enlaces o controles de formulario). Aunque los elementos HTML arbitrarios (como <code>&lt;span&gt;</code>s) se pueden enfocar agregando el atributo <code>tabindex=&quot;0&quot;</code>, esto agregará tabulaciones potencialmente molestas y confusas en elementos no interactivos para usuarios de teclado, y actualmente la mayoría de las tecnologías de asistencia no anuncian el contenido del popover en esta situación. Además, no confíes únicamente en <code>hover</code> como disparador de tus popovers, ya que esto hará que sea imposible que los usuarios del teclado los activen.</p>
 <p>Si bien puedes insertar HTML enriquecido y estructurado en popovers con la opción <code>html</code>, te recomendamos enfáticamente que evites agregar una cantidad excesiva de contenido. La forma en que funcionan actualmente los popovers es que, una vez que se muestran, su contenido está vinculado al elemento activador con el atributo <code>aria-describedby</code>. Como resultado, la totalidad del contenido de la ventana emergente se anunciará a los usuarios de tecnología de asistencia como una secuencia larga e ininterrumpida.</p>
@@ -759,14 +759,14 @@ Ten en cuenta que, por razones de seguridad, las opciones <code>sanitize</code>,
 </div>
 
 <h4 id="uso-de-la-función-con-popperconfig">Uso de la función con <code>popperConfig</code></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">popperConfig</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">defaultBsPopperConfig</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// var newPopperConfig = {...}
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// usa defaultBsPopperConfig si es necesario...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// return newPopperConfig
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><h3 id="métodos">Métodos</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">popperConfig</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">defaultBsPopperConfig</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// var newPopperConfig = {...}
+</span><span class="c1"></span>    <span class="c1">// usa defaultBsPopperConfig si es necesario...
+</span><span class="c1"></span>    <span class="c1">// return newPopperConfig
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div><h3 id="métodos">Métodos</h3>
 <div class="bd-callout bd-callout-danger">
 <h4 id="transiciones-y-métodos-asíncronos">Transiciones y métodos asíncronos</h4>
 <p>Todos los métodos de la API son <strong>asincrónicos</strong> e inician una <strong>transition</strong>. Regresan al lugar donde se realizó la llamada tan pronto como se inicia la transición, pero <strong>antes de que finalice</strong>. Además, se ignorará una llamada de método en un <strong>componente en medio de una transición</strong>.</p>
@@ -776,47 +776,47 @@ Ten en cuenta que, por razones de seguridad, las opciones <code>sanitize</code>,
 
 <h4 id="show">show</h4>
 <p>Revela el popover de un elemento. <strong>Regresa al punte de la llamada antes de que se haya mostrado realmente el popover</strong> (es decir, antes de que ocurra el evento <code>shown.bs.popover</code>). Esto se considera una activación &ldquo;manual&rdquo; del popover. Los popovers cuyo título y contenido son ambos de longitud cero nunca se muestran.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="hide">hide</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</code></pre></div><h4 id="hide">hide</h4>
 <p>Oculta el popover de un elemento. <strong>Regresa al punte de la llamada antes de que se haya ocultado realmente el popover</strong> (es decir, antes de que ocurra el evento <code>hidden.bs.popover</code>). Esto se considera una activación &ldquo;manual&rdquo; del popover.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="toggle">toggle</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
+</code></pre></div><h4 id="toggle">toggle</h4>
 <p>Alterna el popover de un elemento. <strong>Regresa al punte de la llamada antes de que se muestre u oculte el popover</strong> (es decir, antes de que ocurra el evento <code>shown.bs.popover</code> o <code>hidden.bs.popover</code>). Esto se considera una activación &ldquo;manual&rdquo; del popover.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="dispose">dispose</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
+</code></pre></div><h4 id="dispose">dispose</h4>
 <p>Oculta y destruye el popover de un elemento (elimina los datos almacenados en el elemento DOM). Los popovers que usan delegación (que se crean usando <a href="#options">la opción <code>selector</code></a>) no se pueden destruir individualmente en elementos desencadenantes descendientes.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="enable">enable</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
+</code></pre></div><h4 id="enable">enable</h4>
 <p>Le da al popover de un elemento la capacidad de mostrarse. <strong>Las ventanas emergentes están habilitadas de manera predeterminada.</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">enable</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="disable">disable</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">enable</span><span class="p">()</span>
+</code></pre></div><h4 id="disable">disable</h4>
 <p>Elimina la capacidad de mostrar el popover de un elemento. El popover solo se podrá mostrar si se vuelve a habilitar.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">disable</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="setcontent">setContent</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">disable</span><span class="p">()</span>
+</code></pre></div><h4 id="setcontent">setContent</h4>
 <p>Brinda una forma de cambiar el contenido del popover después de su inicialización.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">setContent</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">  <span class="s1">&#39;.popover-header&#39;</span><span class="o">:</span> <span class="s1">&#39;another title&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s1">&#39;.popover-body&#39;</span><span class="o">:</span> <span class="s1">&#39;another content&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><div class="bd-callout bd-callout-info">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">setContent</span><span class="p">({</span>
+  <span class="s1">&#39;.popover-header&#39;</span><span class="o">:</span> <span class="s1">&#39;another title&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;.popover-body&#39;</span><span class="o">:</span> <span class="s1">&#39;another content&#39;</span>
+<span class="p">})</span>
+</code></pre></div><div class="bd-callout bd-callout-info">
 El método <code>setContent</code> acepta un argumento <code>object</code>, donde cada clave de propiedad es un selector de <code>string</code> válido dentro del popover template, y cada valor de propiedad relacionado puede ser <code>string</code> | <code>element</code> | <code>function</code> | <code>null</code>
 </div>
 
 <h4 id="toggleenabled">toggleEnabled</h4>
 <p>Alterna la capacidad de mostrar u ocultar el popover de un elemento.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">toggleEnabled</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="update">update</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">toggleEnabled</span><span class="p">()</span>
+</code></pre></div><h4 id="update">update</h4>
 <p>Actualiza la posición del popover de un elemento.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">update</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="getinstance">getInstance</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">update</span><span class="p">()</span>
+</code></pre></div><h4 id="getinstance">getInstance</h4>
 <p>Método <em>estático</em> que te permite obtener la instancia de popover asociada con un elemento DOM</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia del popover de Bootstrap
-</span></span></span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia del popover de Bootstrap
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
 <p>Método <em>estático</em> que te permite obtener la instancia emergente asociada con un elemento DOM, o crear uno nuevo en caso de que no se haya inicializado</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia del popover de Bootstrap
-</span></span></span></code></pre></div><h3 id="eventos">Eventos</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia del popover de Bootstrap
+</span></code></pre></div><h3 id="eventos">Eventos</h3>
 <table class="table">
   <thead>
     <tr>
@@ -847,11 +847,11 @@ El método <code>setContent</code> acepta un argumento <code>object</code>, dond
     </tr>
   </tbody>
 </table>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">myPopoverTrigger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myPopover&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nx">myPopoverTrigger</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;hidden.bs.popover&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// hacer algo...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myPopoverTrigger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myPopover&#39;</span><span class="p">)</span>
+<span class="nx">myPopoverTrigger</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;hidden.bs.popover&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// hacer algo...
+</span><span class="c1"></span><span class="p">})</span>
+</code></pre></div>
     </div>
     <div class="pt-3">
       <a href="https://bit.ly/3buoWyq" target="_blank">

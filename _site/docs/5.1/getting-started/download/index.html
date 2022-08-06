@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Descarga Bootstrap para obtener el CSS y JavaScript compilados, el código fuente o inclúyelo con tus administradores de paquetes favoritos como npm, RubyGems y más.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.101.0">
+<meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="/scss/docs.scss" rel="stylesheet">
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -464,17 +464,17 @@
 <p><a href="https://github.com/twbs/bootstrap/releases/download/v5.1.3/bootstrap-5.1.3-examples.zip" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">Descargar ejemplos</a></p>
 <h2 id="cdn-via-jsdelivr">CDN via jsDelivr</h2>
 <p>Omite la descarga con <a href="https://www.jsdelivr.com/">jsDelivr</a> para entregar la versión en caché del CSS y JS compilados de Bootstrap a tu proyecto.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>Si estás utilizando nuestro JavaScript compilado y prefieres incluir Popper por separado, agrega Popper antes de nuestro JS, preferiblemente a través de un CDN.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h2 id="administradores-de-paquetes">Administradores de paquetes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><p>Si estás utilizando nuestro JavaScript compilado y prefieres incluir Popper por separado, agrega Popper antes de nuestro JS, preferiblemente a través de un CDN.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><h2 id="administradores-de-paquetes">Administradores de paquetes</h2>
 <p>Incorpora los <strong>archivos fuente</strong> de Bootstrap en casi cualquier proyecto con algunos de los administradores de paquetes más populares. Independientemente del administrador de paquetes, Bootstrap <strong>requerirá un <a href="/docs/5.1/getting-started/contribute/#sass">compilador Sass</a> y <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></strong> para una configuración que coincida con nuestras versiones compiladas oficiales.</p>
 <h3 id="npm">npm</h3>
 <p>Instala Bootstrap en tus aplicaciones Node.js con <a href="https://www.npmjs.com/package/bootstrap">el paquete npm</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm install bootstrap
-</span></span></code></pre></div><p><code>const bootstrap = require('bootstrap')</code> o <code>import bootstrap from 'bootstrap'</code> cargarán todos los complementos de Bootstrap en un objeto <code>bootstrap</code>.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">npm install bootstrap
+</code></pre></div><p><code>const bootstrap = require('bootstrap')</code> o <code>import bootstrap from 'bootstrap'</code> cargarán todos los complementos de Bootstrap en un objeto <code>bootstrap</code>.
 El propio módulo <code>bootstrap</code> exporta todos nuestros complementos. Puedes cargar manualmente los complementos de Bootstrap individualmente cargando los archivos <code>/js/dist/*.js</code> en el directorio de nivel superior del paquete.</p>
 <p>El <code>package.json</code> de Bootstrap contiene algunos metadatos adicionales bajo las siguientes claves:</p>
 <ul>
@@ -487,21 +487,21 @@ El propio módulo <code>bootstrap</code> exporta todos nuestros complementos. Pu
 
 <h3 id="yarn">yarn</h3>
 <p>Instala Bootstrap en tus aplicaciones de Node.js con <a href="https://yarnpkg.com/en/package/bootstrap">el paquete yarn</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">yarn add bootstrap
-</span></span></code></pre></div><h3 id="rubygems">RubyGems</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">yarn add bootstrap
+</code></pre></div><h3 id="rubygems">RubyGems</h3>
 <p>Instala Bootstrap en tus aplicaciones Ruby usando <a href="https://bundler.io/">Bundler</a> (<strong>recomendado</strong>) y <a href="https://rubygems.org/">RubyGems</a> agregando la siguiente línea a tu <a href="https://bundler.io/gemfile.html"><code>Gemfile</code></a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 5.1.3&#39;</span>
-</span></span></code></pre></div><p>Alternativamente, si no estás utilizando Bundler, puedes instalar la gema ejecutando este comando:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gem install bootstrap -v 5.1.3
-</span></span></code></pre></div><p><a href="https://github.com/twbs/bootstrap-rubygem/blob/master/README.md">Consulta el README de la gema</a> para obtener más detalles.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 5.1.3&#39;</span>
+</code></pre></div><p>Alternativamente, si no estás utilizando Bundler, puedes instalar la gema ejecutando este comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">gem install bootstrap -v 5.1.3
+</code></pre></div><p><a href="https://github.com/twbs/bootstrap-rubygem/blob/master/README.md">Consulta el README de la gema</a> para obtener más detalles.</p>
 <h3 id="composer">Composer</h3>
 <p>También puedes instalar y administrar Sass y JavaScript de Bootstrap usando <a href="https://getcomposer.org/">Composer</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">composer require twbs/bootstrap:5.1.3
-</span></span></code></pre></div><h3 id="nuget">NuGet</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">composer require twbs/bootstrap:5.1.3
+</code></pre></div><h3 id="nuget">NuGet</h3>
 <p>Si desarrollas en .NET Framework, también puedes instalar y administrar <a href="https://www.nuget.org/packages/bootstrap/">CSS</a> de Bootstrap o <a href="https://www.nuget.org/packages/bootstrap.sass/">Sass</a> y JavaScript mediante <a href="https://www.nuget.org/">NuGet</a>. Los proyectos más nuevos deben usar <a href="https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/">libman</a> u otro método, ya que NuGet está diseñado para código compilado, no para recursos de interfaz.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Install-Package</span> <span class="n">bootstrap</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Install-Package</span> <span class="n">bootstrap</span><span class="p">.</span><span class="n">sass</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="nb">Install-Package</span> <span class="n">bootstrap</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="nb">Install-Package</span> <span class="n">bootstrap</span><span class="p">.</span><span class="n">sass</span>
+</code></pre></div>
     </div>
     <div class="pt-3">
       <a href="https://bit.ly/3buoWyq" target="_blank">
