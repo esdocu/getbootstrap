@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Haz que se pueda hacer clic en cualquier elemento HTML o componente de Bootstrap &ldquo;estirando&rdquo; un enlace anidado usando CSS.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.101.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+<link href="/scss/docs.scss" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -36,26 +36,26 @@
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Enlace estirado">
 <meta name="twitter:description" content="Haz que se pueda hacer clic en cualquier elemento HTML o componente de Bootstrap &ldquo;estirando&rdquo; un enlace anidado usando CSS.">
-<meta name="twitter:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta name="twitter:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://getbootstrap-es.xyz/docs/5.1/helpers/stretched-link/">
+<meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.1/helpers/stretched-link/">
 <meta property="og:title" content="Enlace estirado">
 <meta property="og:description" content="Haz que se pueda hacer clic en cualquier elemento HTML o componente de Bootstrap &ldquo;estirando&rdquo; un enlace anidado usando CSS.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XY1F09B9Z"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-1XY1F09B9Z');
+  gtag('config', 'G-DK014C26F7');
 </script>
 
   </head>
@@ -406,7 +406,7 @@
             href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/helpers/stretched-link.md"
             title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
-            href="https://github.com/esdocu/getbootstrap-es/blob/main/site/content/docs/5.1/helpers/stretched-link.md"
+            href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/helpers/stretched-link.md"
             title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
         <h1 class="bd-title" id="content">Enlace estirado</h1>
@@ -435,14 +435,14 @@
     <a href="#" class="btn btn-primary stretched-link">Ir a algún lugar</a>
   </div>
 </div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 18rem;&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-img-top&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>Card con enlace estirado<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>Un texto de ejemplo rápido para colocar próximo al título de la card y componer la mayor parte del contenido de la card.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary stretched-link&#34;</span><span class="p">&gt;</span>Ir a algún lugar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 18rem;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-img-top&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>Card con enlace estirado<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>Un texto de ejemplo rápido para colocar próximo al título de la card y componer la mayor parte del contenido de la card.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary stretched-link&#34;</span><span class="p">&gt;</span>Ir a algún lugar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p>La mayoría de los componentes personalizados no tienen <code>position: relative</code> de forma predeterminada, por lo que debemos agregar <code>.position-relative</code> aquí para evitar que el enlace se extienda fuera del elemento padre.</p>
 <div class="bd-example">
 <div class="d-flex position-relative">
@@ -454,14 +454,14 @@
     <a href="#" class="stretched-link">Ir a algún lugar</a>
   </div>
 </div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex position-relative&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-shrink-0 me-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Componente personalizado con enlace estirado<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un contenido placeholder para el componente personalizado. Tiene la intención de imitar el aspecto que tendría cierto contenido del mundo real, y lo estamos usando aquí para darle al componente un poco de cuerpo y tamaño.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;stretched-link&#34;</span><span class="p">&gt;</span>Ir a algún lugar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex position-relative&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-shrink-0 me-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Componente personalizado con enlace estirado<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un contenido placeholder para el componente personalizado. Tiene la intención de imitar el aspecto que tendría cierto contenido del mundo real, y lo estamos usando aquí para darle al componente un poco de cuerpo y tamaño.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;stretched-link&#34;</span><span class="p">&gt;</span>Ir a algún lugar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <div class="bd-example">
 <div class="row g-0 bg-light position-relative">
   <div class="col-md-6 mb-md-0 p-md-4">
@@ -474,16 +474,16 @@
     <a href="#" class="stretched-link">Ir a algún lugar</a>
   </div>
 </div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row g-0 bg-light position-relative&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-6 mb-md-0 p-md-4&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-6 p-4 ps-md-0&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Columnas con enlace estirado<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Otra instancia de contenido placeholder para este otro componente personalizado. Tiene la intención de imitar el aspecto que tendría cierto contenido del mundo real, y lo estamos usando aquí para darle al componente un poco de cuerpo y tamaño.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;stretched-link&#34;</span><span class="p">&gt;</span>Ir a algún lugar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row g-0 bg-light position-relative&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-6 mb-md-0 p-md-4&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-6 p-4 ps-md-0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Columnas con enlace estirado<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Otra instancia de contenido placeholder para este otro componente personalizado. Tiene la intención de imitar el aspecto que tendría cierto contenido del mundo real, y lo estamos usando aquí para darle al componente un poco de cuerpo y tamaño.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;stretched-link&#34;</span><span class="p">&gt;</span>Ir a algún lugar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h2 id="identificando-el-bloque-contenedor">Identificando el bloque contenedor</h2>
 <p>Si el enlace ampliado no parece funcionar, el <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block">bloque contenedor</a> probablemente sea la causa. Las siguientes propiedades CSS harán que un elemento sea el bloque contenedor:</p>
 <ul>
@@ -507,19 +507,19 @@
     </p>
   </div>
 </div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 18rem;&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-img-top&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>Card con enlaces estirados<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>Un texto de ejemplo rápido para colocar próximo al título de la card y componer la mayor parte del contenido de la card.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;stretched-link text-danger&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position: relative;&#34;</span><span class="p">&gt;</span>El enlace estirado no funcionará aquí, porque <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>position: relative<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> se agrega al enlace<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text bg-light&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;transform: rotate(0);&#34;</span><span class="p">&gt;</span>
-      Este <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-warning stretched-link&#34;</span><span class="p">&gt;</span>enlace estirado<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> solo se extenderá sobre la etiqueta <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>p<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, porque se le aplica una transformación.
-    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 18rem;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-img-top&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-title&#34;</span><span class="p">&gt;</span>Card con enlaces estirados<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>Un texto de ejemplo rápido para colocar próximo al título de la card y componer la mayor parte del contenido de la card.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;stretched-link text-danger&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position: relative;&#34;</span><span class="p">&gt;</span>El enlace estirado no funcionará aquí, porque <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>position: relative<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> se agrega al enlace<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card-text bg-light&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;transform: rotate(0);&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      Este <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-warning stretched-link&#34;</span><span class="p">&gt;</span>enlace estirado<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> solo se extenderá sobre la etiqueta <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>p<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, porque se le aplica una transformación.
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 
     </div>
     <div class="pt-3">

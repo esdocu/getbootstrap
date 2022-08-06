@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Alterna de manera rápida y responsive el valor de visualización de los componentes y más con nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como algunos extras para controlar la visualización al imprimir.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.101.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+<link href="/scss/docs.scss" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -36,26 +36,26 @@
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Propiedad display">
 <meta name="twitter:description" content="Alterna de manera rápida y responsive el valor de visualización de los componentes y más con nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como algunos extras para controlar la visualización al imprimir.">
-<meta name="twitter:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta name="twitter:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://getbootstrap-es.xyz/docs/5.1/utilities/display/">
+<meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.1/utilities/display/">
 <meta property="og:title" content="Propiedad display">
 <meta property="og:description" content="Alterna de manera rápida y responsive el valor de visualización de los componentes y más con nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como algunos extras para controlar la visualización al imprimir.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XY1F09B9Z"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-1XY1F09B9Z');
+  gtag('config', 'G-DK014C26F7');
 </script>
 
   </head>
@@ -406,7 +406,7 @@
             href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/utilities/display.md"
             title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
-            href="https://github.com/esdocu/getbootstrap-es/blob/main/site/content/docs/5.1/utilities/display.md"
+            href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/utilities/display.md"
             title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
         <h1 class="bd-title" id="content">Propiedad display</h1>
@@ -468,13 +468,13 @@
 <div class="bd-example">
 <div class="d-inline p-2 bg-primary text-white">d-inline</div>
 <div class="d-inline p-2 bg-dark text-white">d-inline</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline p-2 bg-primary text-white&#34;</span><span class="p">&gt;</span>d-inline<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline p-2 bg-dark text-white&#34;</span><span class="p">&gt;</span>d-inline<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline p-2 bg-primary text-white&#34;</span><span class="p">&gt;</span>d-inline<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline p-2 bg-dark text-white&#34;</span><span class="p">&gt;</span>d-inline<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <div class="bd-example">
 <span class="d-block p-2 bg-primary text-white">d-block</span>
 <span class="d-block p-2 bg-dark text-white">d-block</span>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block p-2 bg-primary text-white&#34;</span><span class="p">&gt;</span>d-block<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block p-2 bg-dark text-white&#34;</span><span class="p">&gt;</span>d-block<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block p-2 bg-primary text-white&#34;</span><span class="p">&gt;</span>d-block<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-block p-2 bg-dark text-white&#34;</span><span class="p">&gt;</span>d-block<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h2 id="ocultar-elementos">Ocultar elementos</h2>
 <p>Para un desarrollo optimizado para dispositivos móviles más rápido, usa clases de visualización responsive para mostrar y ocultar elementos por dispositivo. Evita crear versiones completamente diferentes del mismo sitio; en su lugar, oculta los elementos de forma que respondan a cada tamaño de pantalla.</p>
 <p>Para ocultar elementos, simplemente usa la clase <code>.d-none</code> o una de las clases <code>.d-{sm,md,lg,xl,xxl}-none</code> para cualquier variación de pantalla responsive.</p>
@@ -548,8 +548,8 @@
 <div class="bd-example">
 <div class="d-lg-none">Oculto en lg y pantallas más anchas</div>
 <div class="d-none d-lg-block">Oculto en pantallas más pequeñas que lg</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-lg-none&#34;</span><span class="p">&gt;</span>Oculto en lg y pantallas más anchas<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-none d-lg-block&#34;</span><span class="p">&gt;</span>Oculto en pantallas más pequeñas que lg<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-lg-none&#34;</span><span class="p">&gt;</span>Oculto en lg y pantallas más anchas<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-none d-lg-block&#34;</span><span class="p">&gt;</span>Oculto en pantallas más pequeñas que lg<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h2 id="display-al-imprimir">Display al imprimir</h2>
 <p>Cambia el valor <code>display</code> de los elementos al imprimir con nuestras clases de utilidad de visualización de impresión. Incluye soporte para los mismos valores <code>display</code> que nuestras utilidades responsive <code>.d-*</code>.</p>
 <ul>
@@ -569,20 +569,20 @@
 <div class="d-print-none">Solo pantallas (Ocultar solo en impresión)</div>
 <div class="d-none d-print-block">Solo imprimir (Ocultar solo en pantallas)</div>
 <div class="d-none d-lg-block d-print-block">Ocultar hasta *large* en la pantallas, pero mostrar siempre en la impresión</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-print-none&#34;</span><span class="p">&gt;</span>Solo pantallas (Ocultar solo en impresión)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-none d-print-block&#34;</span><span class="p">&gt;</span>Solo imprimir (Ocultar solo en pantallas)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-none d-lg-block d-print-block&#34;</span><span class="p">&gt;</span>Ocultar hasta *large* en la pantallas, pero mostrar siempre en la impresión<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-print-none&#34;</span><span class="p">&gt;</span>Solo pantallas (Ocultar solo en impresión)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-none d-print-block&#34;</span><span class="p">&gt;</span>Solo imprimir (Ocultar solo en pantallas)<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-none d-lg-block d-print-block&#34;</span><span class="p">&gt;</span>Ocultar hasta *large* en la pantallas, pero mostrar siempre en la impresión<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <h2 id="sass">Sass</h2>
 <h3 id="api-de-utilidades">API de utilidades</h3>
 <p>Las utilidades de visualización se declaran en nuestra API de utilidades en <code>scss/_utilities.scss</code>. <a href="/docs/5.1/utilities/api/#using-the-api">Aprende a usar la API de utilidades.</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss">    <span class="s2">&#34;display&#34;</span><span class="nd">:</span> <span class="o">(</span>
-      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
-      <span class="nt">print</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
-      <span class="nt">property</span><span class="nd">:</span> <span class="nt">display</span><span class="o">,</span>
-      <span class="nt">class</span><span class="nd">:</span> <span class="nt">d</span><span class="o">,</span>
-      <span class="nt">values</span><span class="nd">:</span> <span class="nt">inline</span> <span class="nt">inline-block</span> <span class="nt">block</span> <span class="nt">grid</span> <span class="nt">table</span> <span class="nt">table-row</span> <span class="nt">table-cell</span> <span class="nt">flex</span> <span class="nt">inline-flex</span> <span class="nt">none</span>
-    <span class="o">),</span>
-    </code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl">    <span class="s2">&#34;display&#34;</span><span class="nd">:</span> <span class="o">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">print</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">property</span><span class="nd">:</span> <span class="nt">display</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">class</span><span class="nd">:</span> <span class="nt">d</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">values</span><span class="nd">:</span> <span class="nt">inline</span> <span class="nt">inline-block</span> <span class="nt">block</span> <span class="nt">grid</span> <span class="nt">table</span> <span class="nt">table-row</span> <span class="nt">table-cell</span> <span class="nt">flex</span> <span class="nt">inline-flex</span> <span class="nt">none</span>
+</span></span><span class="line"><span class="cl">    <span class="o">),</span>
+</span></span><span class="line"><span class="cl">    </span></span></code></pre></div>
 
     </div>
     <div class="pt-3">

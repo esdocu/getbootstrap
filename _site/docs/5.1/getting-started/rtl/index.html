@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Aprende a habilitar la compatibilidad con texto de derecha a izquierda en Bootstrap en nuestro diseño, componentes y utilidades.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.101.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+<link href="/scss/docs.scss" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -36,26 +36,26 @@
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="RTL">
 <meta name="twitter:description" content="Aprende a habilitar la compatibilidad con texto de derecha a izquierda en Bootstrap en nuestro diseño, componentes y utilidades.">
-<meta name="twitter:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta name="twitter:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://getbootstrap-es.xyz/docs/5.1/getting-started/rtl/">
+<meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.1/getting-started/rtl/">
 <meta property="og:title" content="RTL">
 <meta property="og:description" content="Aprende a habilitar la compatibilidad con texto de derecha a izquierda en Bootstrap en nuestro diseño, componentes y utilidades.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XY1F09B9Z"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-1XY1F09B9Z');
+  gtag('config', 'G-DK014C26F7');
 </script>
 
   </head>
@@ -406,7 +406,7 @@
             href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/getting-started/rtl.md"
             title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
-            href="https://github.com/esdocu/getbootstrap-es/blob/main/site/content/docs/5.1/getting-started/rtl.md"
+            href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/getting-started/rtl.md"
             title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
         <h1 class="bd-title" id="content">RTL</h1>
@@ -462,37 +462,37 @@
 <li>Agrega un atributo <code>lang</code> apropiado, como <code>lang=&quot;ar&quot;</code>, en el elemento <code>&lt;html&gt;</code>.</li>
 </ol>
 <p>A partir de ahí, deberás incluir una versión RTL de nuestro CSS. Por ejemplo, aquí está la hoja de estilo para nuestro CSS compilado y minimizado con RTL habilitado:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+qdLaIRZfNu4cVPK/PxJJEy0B0f3Ugv8i482AKY7gwXwhaCroABd086ybrVKTa0q&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="plantilla-de-inicio">Plantilla de inicio</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+qdLaIRZfNu4cVPK/PxJJEy0B0f3Ugv8i482AKY7gwXwhaCroABd086ybrVKTa0q&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="plantilla-de-inicio">Plantilla de inicio</h3>
 <p>Puedes ver los requisitos anteriores reflejados en esta plantilla de inicio de RTL modificada.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;ar&#34;</span> <span class="na">dir</span><span class="o">=</span><span class="s">&#34;rtl&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="c">&lt;!-- Required meta tags --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Bootstrap CSS --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+qdLaIRZfNu4cVPK/PxJJEy0B0f3Ugv8i482AKY7gwXwhaCroABd086ybrVKTa0q&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>مرحبًا بالعالم!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>مرحبًا بالعالم!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
-
-    <span class="c">&lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;</span>
-    <span class="c">&lt;!--
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js&#34; integrity=&#34;sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js&#34; integrity=&#34;sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    --&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="ejemplos-rtl">Ejemplos RTL</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;ar&#34;</span> <span class="na">dir</span><span class="o">=</span><span class="s">&#34;rtl&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Required meta tags --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Bootstrap CSS --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-+qdLaIRZfNu4cVPK/PxJJEy0B0f3Ugv8i482AKY7gwXwhaCroABd086ybrVKTa0q&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>مرحبًا بالعالم!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>مرحبًا بالعالم!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js&#34; integrity=&#34;sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js&#34; integrity=&#34;sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="ejemplos-rtl">Ejemplos RTL</h3>
 <p>Comienza con uno de nuestros varios <a href="/docs/5.1/examples/#rtl">ejemplos de RTL</a>.</p>
 <h2 id="enfoque">Enfoque</h2>
 <p>Nuestro enfoque para incorporar la compatibilidad con RTL en Bootstrap viene con dos decisiones importantes que afectan la forma en que escribimos y usamos nuestro CSS:</p>
@@ -510,60 +510,60 @@
 <p>Cuando se trata de <a href="/docs/5.1/customize/sass/">personalización</a>, la forma preferida es aprovechar las variables, los mapas y los mixins. Este enfoque funciona igual para RTL, incluso si se procesa posteriormente a partir de los archivos compilados, gracias a <a href="https://rtlcss.com/learn/getting-started/why-rtlcss/">cómo funciona RTLCSS</a>.</p>
 <h3 id="valores-rtl-personalizados">Valores RTL personalizados</h3>
 <p>Usando <a href="https://rtlcss.com/learn/usage-guide/value-directives/">directivas de valor RTLCSS</a>, puedes hacer que una variable genere un valor diferente para RTL. Por ejemplo, para disminuir el peso de <code>$font-weight-bold</code> en todo el código base, puedes usar la sintaxis <code>/*rtl: {value}*/</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$font-weight-bold</span><span class="o">:</span> <span class="mi">700</span> <span class="si">#{</span><span class="cm">/* rtl:600 </span><span class="c">*/</span><span class="si">}</span> <span class="k">!default</span><span class="p">;</span>
-</code></pre></div><p>Lo que daría como resultado lo siguiente para nuestro CSS y RTL CSS predeterminados:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/* bootstrap.css */</span>
-<span class="nt">dt</span> <span class="p">{</span>
-  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">700</span> <span class="c">/* rtl:600 */</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c">/* bootstrap.rtl.css */</span>
-<span class="nt">dt</span> <span class="p">{</span>
-  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">600</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="pila-de-fuentes-alternativas">Pila de fuentes alternativas</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$font-weight-bold</span><span class="o">:</span> <span class="mi">700</span> <span class="si">#{</span><span class="cm">/* rtl:600 </span><span class="c">*/</span><span class="si">}</span> <span class="k">!default</span><span class="p">;</span>
+</span></span></code></pre></div><p>Lo que daría como resultado lo siguiente para nuestro CSS y RTL CSS predeterminados:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* bootstrap.css */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">dt</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">700</span> <span class="c">/* rtl:600 */</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* bootstrap.rtl.css */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">dt</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-weight</span><span class="p">:</span> <span class="mi">600</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="pila-de-fuentes-alternativas">Pila de fuentes alternativas</h3>
 <p>En caso de que utilices una fuente personalizada, ten en cuenta que no todas las fuentes admiten el alfabeto no latino. Para cambiar de la familia paneuropea a la árabe, es posible que debas usar <code>/*rtl:insert: {value}*/</code> en tu pila de fuentes para modificar los nombres de las familias de fuentes.</p>
 <p>Por ejemplo, para cambiar de la fuente <code>Helvetica Neue</code> para LTR a <code>Helvetica Neue Arabic</code> para RTL, tu código Sass podría verse así:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$font-family-sans-serif</span><span class="o">:</span>
-  <span class="n">Helvetica</span> <span class="n">Neue</span> <span class="si">#{</span><span class="s2">&#34;/* rtl:insert:Arabic */&#34;</span><span class="si">}</span><span class="o">,</span>
-  <span class="c1">// Cross-platform generic font family (default user interface font)</span>
-  <span class="ni">system-ui</span><span class="o">,</span>
-  <span class="c1">// Safari for macOS and iOS (San Francisco)</span>
-  <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span>
-  <span class="c1">// Chrome &lt; 56 for macOS (San Francisco)</span>
-  <span class="n">BlinkMacSystemFont</span><span class="o">,</span>
-  <span class="c1">// Windows</span>
-  <span class="s2">&#34;Segoe UI&#34;</span><span class="o">,</span>
-  <span class="c1">// Android</span>
-  <span class="n">Roboto</span><span class="o">,</span>
-  <span class="c1">// Basic web fallback</span>
-  <span class="n">Arial</span><span class="o">,</span>
-  <span class="c1">// Linux</span>
-  <span class="s2">&#34;Noto Sans&#34;</span><span class="o">,</span>
-  <span class="c1">// Sans serif fallback</span>
-  <span class="ni">sans-serif</span><span class="o">,</span>
-  <span class="c1">// Emoji fonts</span>
-  <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span> <span class="k">!default</span><span class="p">;</span>
-</code></pre></div><h3 id="ltr-y-rtl-al-mismo-tiempo">LTR y RTL al mismo tiempo</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$font-family-sans-serif</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Helvetica</span> <span class="n">Neue</span> <span class="si">#{</span><span class="s2">&#34;/* rtl:insert:Arabic */&#34;</span><span class="si">}</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Cross-platform generic font family (default user interface font)</span>
+</span></span><span class="line"><span class="cl">  <span class="ni">system-ui</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Safari for macOS and iOS (San Francisco)</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Chrome &lt; 56 for macOS (San Francisco)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">BlinkMacSystemFont</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Windows</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;Segoe UI&#34;</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Android</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Roboto</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Basic web fallback</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Arial</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Linux</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;Noto Sans&#34;</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Sans serif fallback</span>
+</span></span><span class="line"><span class="cl">  <span class="ni">sans-serif</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Emoji fonts</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span> <span class="k">!default</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="ltr-y-rtl-al-mismo-tiempo">LTR y RTL al mismo tiempo</h3>
 <p>¿Necesitas LTR y RTL en la misma página? Gracias a <a href="https://rtlcss.com/learn/usage-guide/string-map/">RTLCSS String Maps</a>, esto es bastante sencillo. Envuelve tus <code>@import</code>s con una clase y establece una regla de cambio de nombre personalizada para RTLCSS:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="cm">/* rtl:begin:options: {
-</span><span class="cm">  &#34;autoRename&#34;: true,
-</span><span class="cm">  &#34;stringMap&#34;:[ {
-</span><span class="cm">    &#34;name&#34;: &#34;ltr-rtl&#34;,
-</span><span class="cm">    &#34;priority&#34;: 100,
-</span><span class="cm">    &#34;search&#34;: [&#34;ltr&#34;],
-</span><span class="cm">    &#34;replace&#34;: [&#34;rtl&#34;],
-</span><span class="cm">    &#34;options&#34;: {
-</span><span class="cm">      &#34;scope&#34;: &#34;*&#34;,
-</span><span class="cm">      &#34;ignoreCase&#34;: false
-</span><span class="cm">    }
-</span><span class="cm">  } ]
-</span><span class="cm">} */</span>
-<span class="nc">.ltr</span> <span class="p">{</span>
-  <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="cm">/*rtl:end:options*/</span>
-</code></pre></div><p>Después de ejecutar Sass y luego RTLCSS, cada selector en tus archivos CSS estará precedido por <code>.ltr</code> y <code>.rtl</code> para archivos RTL. Ahora puedes usar ambos archivos en la misma página y simplemente usar <code>.ltr</code> o <code>.rtl</code> en los contenedores de tus componentes para usar una u otra dirección.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="cm">/* rtl:begin:options: {
+</span></span></span><span class="line"><span class="cl"><span class="cm">  &#34;autoRename&#34;: true,
+</span></span></span><span class="line"><span class="cl"><span class="cm">  &#34;stringMap&#34;:[ {
+</span></span></span><span class="line"><span class="cl"><span class="cm">    &#34;name&#34;: &#34;ltr-rtl&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="cm">    &#34;priority&#34;: 100,
+</span></span></span><span class="line"><span class="cl"><span class="cm">    &#34;search&#34;: [&#34;ltr&#34;],
+</span></span></span><span class="line"><span class="cl"><span class="cm">    &#34;replace&#34;: [&#34;rtl&#34;],
+</span></span></span><span class="line"><span class="cl"><span class="cm">    &#34;options&#34;: {
+</span></span></span><span class="line"><span class="cl"><span class="cm">      &#34;scope&#34;: &#34;*&#34;,
+</span></span></span><span class="line"><span class="cl"><span class="cm">      &#34;ignoreCase&#34;: false
+</span></span></span><span class="line"><span class="cl"><span class="cm">    }
+</span></span></span><span class="line"><span class="cl"><span class="cm">  } ]
+</span></span></span><span class="line"><span class="cl"><span class="cm">} */</span>
+</span></span><span class="line"><span class="cl"><span class="nc">.ltr</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/*rtl:end:options*/</span>
+</span></span></code></pre></div><p>Después de ejecutar Sass y luego RTLCSS, cada selector en tus archivos CSS estará precedido por <code>.ltr</code> y <code>.rtl</code> para archivos RTL. Ahora puedes usar ambos archivos en la misma página y simplemente usar <code>.ltr</code> o <code>.rtl</code> en los contenedores de tus componentes para usar una u otra dirección.</p>
 <div class="bd-callout bd-callout-warning">
 <h4 id="casos-extremos-y-limitaciones-conocidas">Casos extremos y limitaciones conocidas</h4>
 <p>Si bien este enfoque es comprensible, presta atención a lo siguiente:</p>

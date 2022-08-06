@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Si bien no forman parte del sistema de cuadrícula de Bootstrap, los z-index juegan un papel importante en la forma en que nuestros componentes se superponen e interactúan entre sí.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.101.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+<link href="/scss/docs.scss" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -36,26 +36,26 @@
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Z-index">
 <meta name="twitter:description" content="Si bien no forman parte del sistema de cuadrícula de Bootstrap, los z-index juegan un papel importante en la forma en que nuestros componentes se superponen e interactúan entre sí.">
-<meta name="twitter:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta name="twitter:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://getbootstrap-es.xyz/docs/5.1/layout/z-index/">
+<meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.1/layout/z-index/">
 <meta property="og:title" content="Z-index">
 <meta property="og:description" content="Si bien no forman parte del sistema de cuadrícula de Bootstrap, los z-index juegan un papel importante en la forma en que nuestros componentes se superponen e interactúan entre sí.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XY1F09B9Z"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-1XY1F09B9Z');
+  gtag('config', 'G-DK014C26F7');
 </script>
 
   </head>
@@ -406,7 +406,7 @@
             href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/layout/z-index.md"
             title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
-            href="https://github.com/esdocu/getbootstrap-es/blob/main/site/content/docs/5.1/layout/z-index.md"
+            href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/layout/z-index.md"
             title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
         <h1 class="bd-title" id="content">Z-index</h1>
@@ -425,16 +425,16 @@
       <p>Varios componentes de Bootstrap utilizan <code>z-index</code>, la propiedad CSS que ayuda a controlar el diseño al proporcionar un tercer eje para organizar el contenido. Utilizamos una escala de z-index predeterminada en Bootstrap que ha sido diseñada para capas de navegación,tooltips y popovers, modals y más.</p>
 <p>Estos valores más altos comienzan en un número arbitrario, lo suficientemente alto y específico para evitar idealmente conflictos. Necesitamos un conjunto estándar de estos en todos nuestros componentes en capas (tooltips, popovers, navbars, dropdowns, modals) para que podamos ser razonablemente consistentes en los comportamientos. No hay razón por la que no pudiéramos haber usado <code>100</code>+ o <code>500</code>+.</p>
 <p>No fomentamos la personalización de estos valores individuales; si cambias uno, es probable que necesites cambiarlos todos.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$zindex-dropdown</span><span class="o">:</span>                   <span class="mi">1000</span><span class="p">;</span>
-<span class="nv">$zindex-sticky</span><span class="o">:</span>                     <span class="mi">1020</span><span class="p">;</span>
-<span class="nv">$zindex-fixed</span><span class="o">:</span>                      <span class="mi">1030</span><span class="p">;</span>
-<span class="nv">$zindex-offcanvas-backdrop</span><span class="o">:</span>         <span class="mi">1040</span><span class="p">;</span>
-<span class="nv">$zindex-offcanvas</span><span class="o">:</span>                  <span class="mi">1045</span><span class="p">;</span>
-<span class="nv">$zindex-modal-backdrop</span><span class="o">:</span>             <span class="mi">1050</span><span class="p">;</span>
-<span class="nv">$zindex-modal</span><span class="o">:</span>                      <span class="mi">1055</span><span class="p">;</span>
-<span class="nv">$zindex-popover</span><span class="o">:</span>                    <span class="mi">1070</span><span class="p">;</span>
-<span class="nv">$zindex-tooltip</span><span class="o">:</span>                    <span class="mi">1080</span><span class="p">;</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$zindex-dropdown</span><span class="o">:</span>                   <span class="mi">1000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$zindex-sticky</span><span class="o">:</span>                     <span class="mi">1020</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$zindex-fixed</span><span class="o">:</span>                      <span class="mi">1030</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$zindex-offcanvas-backdrop</span><span class="o">:</span>         <span class="mi">1040</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$zindex-offcanvas</span><span class="o">:</span>                  <span class="mi">1045</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$zindex-modal-backdrop</span><span class="o">:</span>             <span class="mi">1050</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$zindex-modal</span><span class="o">:</span>                      <span class="mi">1055</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$zindex-popover</span><span class="o">:</span>                    <span class="mi">1070</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$zindex-tooltip</span><span class="o">:</span>                    <span class="mi">1080</span><span class="p">;</span>
+</span></span></code></pre></div>
 <p>Para manejar los bordes superpuestos dentro de los componentes (por ejemplo, buttons e inputs en input groups), usamos valores bajos de z-index de un solo dígito de <code>1</code>, <code>2</code>, y <code>3</code> para default, hover, y estdos active. En hover/focus/active, traemos un elemento particular al frente con un valor de <code>z-index</code> más alto para mostrar su borde sobre los elementos hermanos.</p>
 
     </div>

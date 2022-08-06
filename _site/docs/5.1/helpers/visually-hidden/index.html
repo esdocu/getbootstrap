@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Utiliza estos helpers para ocultar elementos visualmente, manteniéndolos accesibles para las tecnologías de asistencia.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.101.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -19,7 +19,7 @@
 <!-- Bootstrap core CSS -->
 <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+<link href="/scss/docs.scss" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -36,26 +36,26 @@
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Visualmente oculto">
 <meta name="twitter:description" content="Utiliza estos helpers para ocultar elementos visualmente, manteniéndolos accesibles para las tecnologías de asistencia.">
-<meta name="twitter:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta name="twitter:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
-<meta property="og:url" content="https://getbootstrap-es.xyz/docs/5.1/helpers/visually-hidden/">
+<meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.1/helpers/visually-hidden/">
 <meta property="og:title" content="Visualmente oculto">
 <meta property="og:description" content="Utiliza estos helpers para ocultar elementos visualmente, manteniéndolos accesibles para las tecnologías de asistencia.">
 <meta property="og:type" content="article">
-<meta property="og:image" content="https://getbootstrap-es.xyz/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
 <meta property="og:image:height" content="500">
 
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XY1F09B9Z"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-1XY1F09B9Z');
+  gtag('config', 'G-DK014C26F7');
 </script>
 
   </head>
@@ -406,7 +406,7 @@
             href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/helpers/visually-hidden.md"
             title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
-            href="https://github.com/esdocu/getbootstrap-es/blob/main/site/content/docs/5.1/helpers/visually-hidden.md"
+            href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/helpers/visually-hidden.md"
             title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
         </div>
         <h1 class="bd-title" id="content">Visualmente oculto</h1>
@@ -427,20 +427,20 @@
 <h2 class="visually-hidden">Título para lectores de pantalla</h2>
 <a class="visually-hidden-focusable" href="#content">Saltar al contenido principal</a>
 <div class="visually-hidden-focusable">Un contenedor con un <a href="#">elemento enfocable</a>.</div>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Título para lectores de pantalla<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Saltar al contenido principal<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span><span class="p">&gt;</span>Un contenedor con un <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>elemento enfocable<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Título para lectores de pantalla<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Saltar al contenido principal<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span><span class="p">&gt;</span>Un contenedor con un <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>elemento enfocable<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 <p>Ambos <code>visually-hidden</code> y <code>visually-hidden-focusable</code> pueden ser usados como mixins.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Uso como un mixin
-</span><span class="c1"></span>
-<span class="nc">.visually-hidden-title</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> visually-hidden</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.skip-navigation</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> visually-hidden-focusable</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Uso como un mixin
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nc">.visually-hidden-title</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> visually-hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.skip-navigation</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> visually-hidden-focusable</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
     </div>
     <div class="pt-3">
       <a href="https://bit.ly/3buoWyq" target="_blank">
