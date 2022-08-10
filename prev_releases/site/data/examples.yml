@@ -1,0 +1,93 @@
+- category: Snippets
+  description: "Patrones comunes para crear sitios y aplicaciones que se basan en componentes y utilidades existentes con CSS personalizado y más."
+  examples:
+    - name: Headers
+      description: "Muestra tu marca, navegación, búsqueda y más con estos componentes de encabezado"
+    - name: Heroes
+      description: "Prepara el escenario en tu página de inicio con héroes que presenten claros llamados a la acción."
+    - name: Features
+      description: "Explica las características, los beneficios u otros detalles en tu contenido de marketing."
+    - name: Sidebars
+      description: "Patrones de navegación comunes ideales para diseños offcanvas o de varias columnas."
+    - name: Footers
+      description: "Termina cada página con fuerza con un pie de página impresionante, grande o pequeño."
+    - name: Dropdowns
+      description: "Mejora tus menús desplegables con filtros, íconos, estilos personalizados y más."
+    - name: List groups
+      description: "Amplía grupos de listas con utilidades y estilos personalizados para cualquier contenido."
+    - name: Modals
+      description: "Transforma los modals para que sirvan a cualquier propósito, desde tours de características hasta diálogos."
+
+- category: Componentes personalizados
+  description: "Componentes y plantillas completamente nuevos para ayudar a las personas a comenzar rápidamente con Bootstrap y demostrar las mejores prácticas para agregar al framework."
+  examples:
+    - name: Album
+      description: "Plantilla simple de una sola página para galerías de fotos, portafolios y más."
+    - name: Pricing
+      description: "Página de precios de ejemplo creada con Cards y con un encabezado y pie de página personalizados."
+    - name: Checkout
+      description: "Formulario de pago personalizado que muestra los componentes de nuestro formulario y sus funciones de validación."
+    - name: Product
+      description: "Página de marketing centrada en el producto con una amplia cuadrícula de imágenes."
+    - name: Cover
+      description: "Una plantilla de una sola página para crear páginas de inicio simples y hermosas."
+    - name: Carousel
+      description: "Personaliza la barra de navegación y el carrusel, luego agrega algunos componentes nuevos."
+    - name: Blog
+      description: "Plantilla de blog con encabezado, navegación, contenido destacado."
+    - name: Dashboard
+      description: "Panel de administración básico con una barra lateral fija y barra de navegación."
+    - name: Sign-in
+      description: "Diseño de formulario personalizado y diseño para un formulario de inicio de sesión simple."
+    - name: Sticky footer
+      description: "Agrega un pie de página en la parte inferior del viewport cuando el contenido de la página sea breve."
+    - name: Sticky footer navbar
+      description: "Agrega un pie de página en la parte inferior del viewport con una barra de navegación superior fija."
+    - name: Jumbotron
+      description: "Usa utilidades para recrear y mejorar el jumbotron de Bootstrap 4."
+
+- category: Framework
+  description: "Ejemplos que se centran en la implementación de usos de componentes integrados proporcionados por Bootstrap."
+  examples:
+    - name: "Starter template"
+      description: "Nada más que lo básico: CSS compilado y JavaScript."
+    - name: Grid
+      description: "Múltiples ejemplos de diseños de cuadrícula con los cuatro niveles, anidamiento y más."
+    - name: Cheatsheet
+      description: "Cheatsheet de componentes Bootstrap."
+    - name: Cheatsheet RTL
+      description: "Cheatsheet RTL de componentes Bootstrap, RTL."
+
+- category: Navbars
+  description: "Tomando el componente de barra de navegación predeterminado y vemos cómo se puede mover, colocar y extender."
+  examples:
+    - name: Navbars
+      description: "Demostración de todas las opciones responsive y de contenedores para la barra de navegación."
+    - name: Navbar static
+      description: "Ejemplo de una navbar (barra de navegación) superior estática junto con contenido adicional."
+    - name: Navbar fixed
+      description: "Ejemplo de una navbar única superior fija junto con contenido adicional."
+    - name: Navbar bottom
+      description: "Ejemplo de una navbar única inferior fija junto con contenido adicional."
+    - name: Offcanvas navbar
+      description: "Convierte tu barra de navegación expandible en un menú deslizable fuera del lienzo (offcanvas) (no utiliza nuestro componente offcanvas)."
+
+- category: RTL
+  description: "La versión RTL de Bootstrap en acción, ejemplos de componentes personalizados modificados."
+  examples:
+    - name: Album RTL
+      description: "Plantilla simple de una sola página para galerías de fotos, portafolios y más."
+    - name: Checkout RTL
+      description: "Formulario de pago personalizado que muestra los componentes de nuestro formulario y sus funciones de validación."
+    - name: Carousel RTL
+      description: "Personaliza la barra de navegación y el carrusel, luego agrega algunos componentes nuevos."
+    - name: Blog RTL
+      description: "Plantilla de blog con encabezado, navegación, contenido destacado."
+    - name: Dashboard RTL
+      description: "Panel de administración básico con barra lateral fija y barra de navegación."
+
+- category: Integraciones
+  description: "Integraciones con bibliotecas externas."
+  examples:
+    - name: "Masonry"
+      description: "Combina los poderes del grid de Bootstrap y el diseño Masonry."

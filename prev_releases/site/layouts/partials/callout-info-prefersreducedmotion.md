@@ -1,0 +1,1 @@
+El efecto de animación de este componente depende de la media query `prefers-reduced-motion`. Consulta la [sección de movimiento reducido de nuestra documentación de accesibilidad](/docs/{{ .Site.Params.docs_version }}/getting-started/accessibility/#reduced-motion).

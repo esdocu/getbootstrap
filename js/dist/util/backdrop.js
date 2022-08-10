@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap backdrop.js v5.1.3 (https://getbootstrap.com/)
+  * Bootstrap backdrop.js v5.2.0 (https://getbootstrap.com/)
   * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -16,7 +16,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.3): util/backdrop.js
+   * Bootstrap (v5.2.0): util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -30,19 +30,19 @@
   const EVENT_MOUSEDOWN = `mousedown.bs.${NAME}`;
   const Default = {
     className: 'modal-backdrop',
+    clickCallback: null,
+    isAnimated: false,
     isVisible: true,
     // if false, we use the backdrop helper without adding any element to the dom
-    isAnimated: false,
-    rootElement: 'body',
-    // give the choice to place backdrop under different elements
-    clickCallback: null
+    rootElement: 'body' // give the choice to place backdrop under different elements
+
   };
   const DefaultType = {
     className: 'string',
-    isVisible: 'boolean',
+    clickCallback: '(function|null)',
     isAnimated: 'boolean',
-    rootElement: '(element|string)',
-    clickCallback: '(function|null)'
+    isVisible: 'boolean',
+    rootElement: '(element|string)'
   };
   /**
    * Class definition
@@ -78,11 +78,13 @@
 
       this._append();
 
+      const element = this._getElement();
+
       if (this._config.isAnimated) {
-        index.reflow(this._getElement());
+        index.reflow(element);
       }
 
-      this._getElement().classList.add(CLASS_NAME_SHOW);
+      element.classList.add(CLASS_NAME_SHOW);
 
       this._emulateAnimation(() => {
         index.execute(callback);
@@ -142,9 +144,11 @@
         return;
       }
 
-      this._config.rootElement.append(this._getElement());
+      const element = this._getElement();
 
-      EventHandler__default.default.on(this._getElement(), EVENT_MOUSEDOWN, () => {
+      this._config.rootElement.append(element);
+
+      EventHandler__default.default.on(element, EVENT_MOUSEDOWN, () => {
         index.execute(this._config.clickCallback);
       });
       this._isAppended = true;

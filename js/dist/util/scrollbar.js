@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap scrollbar.js v5.1.3 (https://getbootstrap.com/)
+  * Bootstrap scrollbar.js v5.2.0 (https://getbootstrap.com/)
   * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -16,7 +16,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.3): util/scrollBar.js
+   * Bootstrap (v5.2.0): util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -79,7 +79,7 @@
       this._element.style.overflow = 'hidden';
     }
 
-    _setElementAttributes(selector, styleProp, callback) {
+    _setElementAttributes(selector, styleProperty, callback) {
       const scrollbarWidth = this.getWidth();
 
       const manipulationCallBack = element => {
@@ -87,34 +87,34 @@
           return;
         }
 
-        this._saveInitialAttribute(element, styleProp);
+        this._saveInitialAttribute(element, styleProperty);
 
-        const calculatedValue = window.getComputedStyle(element).getPropertyValue(styleProp);
-        element.style.setProperty(styleProp, `${callback(Number.parseFloat(calculatedValue))}px`);
+        const calculatedValue = window.getComputedStyle(element).getPropertyValue(styleProperty);
+        element.style.setProperty(styleProperty, `${callback(Number.parseFloat(calculatedValue))}px`);
       };
 
       this._applyManipulationCallback(selector, manipulationCallBack);
     }
 
-    _saveInitialAttribute(element, styleProp) {
-      const actualValue = element.style.getPropertyValue(styleProp);
+    _saveInitialAttribute(element, styleProperty) {
+      const actualValue = element.style.getPropertyValue(styleProperty);
 
       if (actualValue) {
-        Manipulator__default.default.setDataAttribute(element, styleProp, actualValue);
+        Manipulator__default.default.setDataAttribute(element, styleProperty, actualValue);
       }
     }
 
-    _resetElementAttributes(selector, styleProp) {
+    _resetElementAttributes(selector, styleProperty) {
       const manipulationCallBack = element => {
-        const value = Manipulator__default.default.getDataAttribute(element, styleProp); // We only want to remove the property if the value is `null`; the value can also be zero
+        const value = Manipulator__default.default.getDataAttribute(element, styleProperty); // We only want to remove the property if the value is `null`; the value can also be zero
 
         if (value === null) {
-          element.style.removeProperty(styleProp);
+          element.style.removeProperty(styleProperty);
           return;
         }
 
-        Manipulator__default.default.removeDataAttribute(element, styleProp);
-        element.style.setProperty(styleProp, value);
+        Manipulator__default.default.removeDataAttribute(element, styleProperty);
+        element.style.setProperty(styleProperty, value);
       };
 
       this._applyManipulationCallback(selector, manipulationCallBack);

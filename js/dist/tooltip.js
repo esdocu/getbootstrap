@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap tooltip.js v5.1.3 (https://getbootstrap.com/)
+  * Bootstrap tooltip.js v5.2.0 (https://getbootstrap.com/)
   * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -13,7 +13,7 @@
 
   function _interopNamespace(e) {
     if (e && e.__esModule) return e;
-    const n = Object.create(null);
+    const n = Object.create(null, { [Symbol.toStringTag]: { value: 'Module' } });
     if (e) {
       for (const k in e) {
         if (k !== 'default') {
@@ -37,7 +37,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.3): tooltip.js
+   * Bootstrap (v5.2.0): tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -46,8 +46,6 @@
    */
 
   const NAME = 'tooltip';
-  const DATA_KEY = 'bs.tooltip';
-  const EVENT_KEY = `.${DATA_KEY}`;
   const DISALLOWED_ATTRIBUTES = new Set(['sanitize', 'allowList', 'sanitizeFn']);
   const CLASS_NAME_FADE = 'fade';
   const CLASS_NAME_MODAL = 'modal';
@@ -59,6 +57,16 @@
   const TRIGGER_FOCUS = 'focus';
   const TRIGGER_CLICK = 'click';
   const TRIGGER_MANUAL = 'manual';
+  const EVENT_HIDE = 'hide';
+  const EVENT_HIDDEN = 'hidden';
+  const EVENT_SHOW = 'show';
+  const EVENT_SHOWN = 'shown';
+  const EVENT_INSERTED = 'inserted';
+  const EVENT_CLICK = 'click';
+  const EVENT_FOCUSIN = 'focusin';
+  const EVENT_FOCUSOUT = 'focusout';
+  const EVENT_MOUSEENTER = 'mouseenter';
+  const EVENT_MOUSELEAVE = 'mouseleave';
   const AttachmentMap = {
     AUTO: 'auto',
     TOP: 'top',
@@ -67,54 +75,42 @@
     LEFT: index.isRTL() ? 'right' : 'left'
   };
   const Default = {
+    allowList: sanitizer.DefaultAllowlist,
     animation: true,
-    template: '<div class="tooltip" role="tooltip">' + '<div class="tooltip-arrow"></div>' + '<div class="tooltip-inner"></div>' + '</div>',
-    trigger: 'hover focus',
-    title: '',
-    delay: 0,
-    html: false,
-    selector: false,
-    placement: 'top',
-    offset: [0, 0],
-    container: false,
-    fallbackPlacements: ['top', 'right', 'bottom', 'left'],
     boundary: 'clippingParents',
+    container: false,
     customClass: '',
+    delay: 0,
+    fallbackPlacements: ['top', 'right', 'bottom', 'left'],
+    html: false,
+    offset: [0, 0],
+    placement: 'top',
+    popperConfig: null,
     sanitize: true,
     sanitizeFn: null,
-    allowList: sanitizer.DefaultAllowlist,
-    popperConfig: null
+    selector: false,
+    template: '<div class="tooltip" role="tooltip">' + '<div class="tooltip-arrow"></div>' + '<div class="tooltip-inner"></div>' + '</div>',
+    title: '',
+    trigger: 'hover focus'
   };
   const DefaultType = {
+    allowList: 'object',
     animation: 'boolean',
-    template: 'string',
-    title: '(string|element|function)',
-    trigger: 'string',
-    delay: '(number|object)',
-    html: 'boolean',
-    selector: '(string|boolean)',
-    placement: '(string|function)',
-    offset: '(array|string|function)',
-    container: '(string|element|boolean)',
-    fallbackPlacements: 'array',
     boundary: '(string|element)',
+    container: '(string|element|boolean)',
     customClass: '(string|function)',
+    delay: '(number|object)',
+    fallbackPlacements: 'array',
+    html: 'boolean',
+    offset: '(array|string|function)',
+    placement: '(string|function)',
+    popperConfig: '(null|object|function)',
     sanitize: 'boolean',
     sanitizeFn: '(null|function)',
-    allowList: 'object',
-    popperConfig: '(null|object|function)'
-  };
-  const Event = {
-    HIDE: `hide${EVENT_KEY}`,
-    HIDDEN: `hidden${EVENT_KEY}`,
-    SHOW: `show${EVENT_KEY}`,
-    SHOWN: `shown${EVENT_KEY}`,
-    INSERTED: `inserted${EVENT_KEY}`,
-    CLICK: `click${EVENT_KEY}`,
-    FOCUSIN: `focusin${EVENT_KEY}`,
-    FOCUSOUT: `focusout${EVENT_KEY}`,
-    MOUSEENTER: `mouseenter${EVENT_KEY}`,
-    MOUSELEAVE: `mouseleave${EVENT_KEY}`
+    selector: '(string|boolean)',
+    template: 'string',
+    title: '(string|element|function)',
+    trigger: 'string'
   };
   /**
    * Class definition
@@ -133,7 +129,8 @@
       this._isHovered = false;
       this._activeTrigger = {};
       this._popper = null;
-      this._templateFactory = null; // Protected
+      this._templateFactory = null;
+      this._newContent = null; // Protected
 
       this.tip = null;
 
@@ -151,10 +148,6 @@
 
     static get NAME() {
       return NAME;
-    }
-
-    static get Event() {
-      return Event;
     } // Public
 
 
@@ -185,15 +178,17 @@
         } else {
           context._leave();
         }
-      } else {
-        if (this._getTipElement().classList.contains(CLASS_NAME_SHOW)) {
-          this._leave();
 
-          return;
-        }
-
-        this._enter();
+        return;
       }
+
+      if (this._isShown()) {
+        this._leave();
+
+        return;
+      }
+
+      this._enter();
     }
 
     dispose() {
@@ -218,12 +213,19 @@
         return;
       }
 
-      const showEvent = EventHandler__default.default.trigger(this._element, this.constructor.Event.SHOW);
+      const showEvent = EventHandler__default.default.trigger(this._element, this.constructor.eventName(EVENT_SHOW));
       const shadowRoot = index.findShadowRoot(this._element);
-      const isInTheDom = shadowRoot === null ? this._element.ownerDocument.documentElement.contains(this._element) : shadowRoot.contains(this._element);
+
+      const isInTheDom = (shadowRoot || this._element.ownerDocument.documentElement).contains(this._element);
 
       if (showEvent.defaultPrevented || !isInTheDom) {
         return;
+      } // todo v6 remove this OR make it optional
+
+
+      if (this.tip) {
+        this.tip.remove();
+        this.tip = null;
       }
 
       const tip = this._getTipElement();
@@ -236,15 +238,13 @@
 
       if (!this._element.ownerDocument.documentElement.contains(this.tip)) {
         container.append(tip);
-        EventHandler__default.default.trigger(this._element, this.constructor.Event.INSERTED);
+        EventHandler__default.default.trigger(this._element, this.constructor.eventName(EVENT_INSERTED));
       }
 
       if (this._popper) {
         this._popper.update();
       } else {
-        const placement = typeof this._config.placement === 'function' ? this._config.placement.call(this, tip, this._element) : this._config.placement;
-        const attachment = AttachmentMap[placement.toUpperCase()];
-        this._popper = Popper__namespace.createPopper(this._element, tip, this._getPopperConfig(attachment));
+        this._popper = this._createPopper(tip);
       }
 
       tip.classList.add(CLASS_NAME_SHOW); // If this is a touch-enabled device we add extra
@@ -259,11 +259,11 @@
       }
 
       const complete = () => {
-        const prevHoverState = this._isHovered;
+        const previousHoverState = this._isHovered;
         this._isHovered = false;
-        EventHandler__default.default.trigger(this._element, this.constructor.Event.SHOWN);
+        EventHandler__default.default.trigger(this._element, this.constructor.eventName(EVENT_SHOWN));
 
-        if (prevHoverState) {
+        if (previousHoverState) {
           this._leave();
         }
       };
@@ -272,11 +272,11 @@
     }
 
     hide() {
-      if (!this._popper) {
+      if (!this._isShown()) {
         return;
       }
 
-      const hideEvent = EventHandler__default.default.trigger(this._element, this.constructor.Event.HIDE);
+      const hideEvent = EventHandler__default.default.trigger(this._element, this.constructor.eventName(EVENT_HIDE));
 
       if (hideEvent.defaultPrevented) {
         return;
@@ -296,6 +296,7 @@
       this._activeTrigger[TRIGGER_CLICK] = false;
       this._activeTrigger[TRIGGER_FOCUS] = false;
       this._activeTrigger[TRIGGER_HOVER] = false;
+      this._isHovered = false;
 
       const complete = () => {
         if (this._isWithActiveTrigger()) {
@@ -308,14 +309,12 @@
 
         this._element.removeAttribute('aria-describedby');
 
-        EventHandler__default.default.trigger(this._element, this.constructor.Event.HIDDEN);
+        EventHandler__default.default.trigger(this._element, this.constructor.eventName(EVENT_HIDDEN));
 
         this._disposePopper();
       };
 
       this._queueCallback(complete, this.tip, this._isAnimated());
-
-      this._isHovered = false;
     }
 
     update() {
@@ -331,7 +330,7 @@
 
     _getTipElement() {
       if (!this.tip) {
-        this.tip = this._createTipElement(this._getContentForTemplate());
+        this.tip = this._createTipElement(this._newContent || this._getContentForTemplate());
       }
 
       return this.tip;
@@ -359,19 +358,11 @@
     }
 
     setContent(content) {
-      let isShown = false;
+      this._newContent = content;
 
-      if (this.tip) {
-        isShown = this.tip.classList.contains(CLASS_NAME_SHOW);
-        this.tip.remove();
-        this.tip = null;
-      }
+      if (this._isShown()) {
+        this._disposePopper();
 
-      this._disposePopper();
-
-      this.tip = this._createTipElement(content);
-
-      if (isShown) {
         this.show();
       }
     }
@@ -398,7 +389,7 @@
     }
 
     _getTitle() {
-      return this._config.title;
+      return this._resolvePossibleFunction(this._config.title) || this._config.originalTitle;
     } // Private
 
 
@@ -410,13 +401,23 @@
       return this._config.animation || this.tip && this.tip.classList.contains(CLASS_NAME_FADE);
     }
 
+    _isShown() {
+      return this.tip && this.tip.classList.contains(CLASS_NAME_SHOW);
+    }
+
+    _createPopper(tip) {
+      const placement = typeof this._config.placement === 'function' ? this._config.placement.call(this, tip, this._element) : this._config.placement;
+      const attachment = AttachmentMap[placement.toUpperCase()];
+      return Popper__namespace.createPopper(this._element, tip, this._getPopperConfig(attachment));
+    }
+
     _getOffset() {
       const {
         offset
       } = this._config;
 
       if (typeof offset === 'string') {
-        return offset.split(',').map(val => Number.parseInt(val, 10));
+        return offset.split(',').map(value => Number.parseInt(value, 10));
       }
 
       if (typeof offset === 'function') {
@@ -474,10 +475,10 @@
 
       for (const trigger of triggers) {
         if (trigger === 'click') {
-          EventHandler__default.default.on(this._element, this.constructor.Event.CLICK, this._config.selector, event => this.toggle(event));
+          EventHandler__default.default.on(this._element, this.constructor.eventName(EVENT_CLICK), this._config.selector, event => this.toggle(event));
         } else if (trigger !== TRIGGER_MANUAL) {
-          const eventIn = trigger === TRIGGER_HOVER ? this.constructor.Event.MOUSEENTER : this.constructor.Event.FOCUSIN;
-          const eventOut = trigger === TRIGGER_HOVER ? this.constructor.Event.MOUSELEAVE : this.constructor.Event.FOCUSOUT;
+          const eventIn = trigger === TRIGGER_HOVER ? this.constructor.eventName(EVENT_MOUSEENTER) : this.constructor.eventName(EVENT_FOCUSIN);
+          const eventOut = trigger === TRIGGER_HOVER ? this.constructor.eventName(EVENT_MOUSELEAVE) : this.constructor.eventName(EVENT_FOCUSOUT);
           EventHandler__default.default.on(this._element, eventIn, this._config.selector, event => {
             const context = this._initializeOnDelegatedTarget(event);
 
@@ -520,7 +521,7 @@
         return;
       }
 
-      if (!this._element.getAttribute('aria-label') && !this._element.textContent) {
+      if (!this._element.getAttribute('aria-label') && !this._element.textContent.trim()) {
         this._element.setAttribute('aria-label', title);
       }
 
@@ -528,7 +529,7 @@
     }
 
     _enter() {
-      if (this._getTipElement().classList.contains(CLASS_NAME_SHOW) || this._isHovered) {
+      if (this._isShown() || this._isHovered) {
         this._isHovered = true;
         return;
       }
@@ -568,9 +569,9 @@
     _getConfig(config) {
       const dataAttributes = Manipulator__default.default.getDataAttributes(this._element);
 
-      for (const dataAttr of Object.keys(dataAttributes)) {
-        if (DISALLOWED_ATTRIBUTES.has(dataAttr)) {
-          delete dataAttributes[dataAttr];
+      for (const dataAttribute of Object.keys(dataAttributes)) {
+        if (DISALLOWED_ATTRIBUTES.has(dataAttribute)) {
+          delete dataAttributes[dataAttribute];
         }
       }
 
@@ -596,7 +597,6 @@
       }
 
       config.originalTitle = this._element.getAttribute('title') || '';
-      config.title = this._resolvePossibleFunction(config.title) || config.originalTitle;
 
       if (typeof config.title === 'number') {
         config.title = config.title.toString();

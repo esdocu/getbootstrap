@@ -1,3 +1,3 @@
-##### Soporte de inputs de fecha y color
+##### Date & color input support
 
-Ten en cuenta que los inputs de fecha [no son totalmente compatibles](https://caniuse.com/input-datetime) por todos los navegadores, a saber, Safari.
+Keep in mind date inputs are [not fully supported](https://caniuse.com/input-datetime) by all browsers, namely Safari.

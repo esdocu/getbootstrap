@@ -1,5 +1,5 @@
 /*!
-  * Bootstrap collapse.js v5.1.3 (https://getbootstrap.com/)
+  * Bootstrap collapse.js v5.2.0 (https://getbootstrap.com/)
   * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
@@ -17,7 +17,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.1.3): collapse.js
+   * Bootstrap (v5.2.0): collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -45,12 +45,12 @@
   const SELECTOR_ACTIVES = '.collapse.show, .collapse.collapsing';
   const SELECTOR_DATA_TOGGLE = '[data-bs-toggle="collapse"]';
   const Default = {
-    toggle: true,
-    parent: null
+    parent: null,
+    toggle: true
   };
   const DefaultType = {
-    toggle: 'boolean',
-    parent: '(null|element)'
+    parent: '(null|element)',
+    toggle: 'boolean'
   };
   /**
    * Class definition
@@ -65,7 +65,7 @@
 
       for (const elem of toggleList) {
         const selector = index.getSelectorFromElement(elem);
-        const filterElement = SelectorEngine__default.default.find(selector).filter(foundElem => foundElem === this._element);
+        const filterElement = SelectorEngine__default.default.find(selector).filter(foundElement => foundElement === this._element);
 
         if (selector !== null && filterElement.length) {
           this._triggerArray.push(elem);
@@ -184,9 +184,9 @@
       this._element.classList.remove(CLASS_NAME_COLLAPSE, CLASS_NAME_SHOW);
 
       for (const trigger of this._triggerArray) {
-        const elem = index.getElementFromSelector(trigger);
+        const element = index.getElementFromSelector(trigger);
 
-        if (elem && !this._isShown(elem)) {
+        if (element && !this._isShown(element)) {
           this._addAriaAndCollapsedClass([trigger], false);
         }
       }
@@ -243,7 +243,7 @@
     _getFirstLevelChildren(selector) {
       const children = SelectorEngine__default.default.find(CLASS_NAME_DEEPER_CHILDREN, this._config.parent); // remove children if greater depth
 
-      return SelectorEngine__default.default.find(selector, this._config.parent).filter(elem => !children.includes(elem));
+      return SelectorEngine__default.default.find(selector, this._config.parent).filter(element => !children.includes(element));
     }
 
     _addAriaAndCollapsedClass(triggerArray, isOpen) {
@@ -251,26 +251,21 @@
         return;
       }
 
-      for (const elem of triggerArray) {
-        if (isOpen) {
-          elem.classList.remove(CLASS_NAME_COLLAPSED);
-        } else {
-          elem.classList.add(CLASS_NAME_COLLAPSED);
-        }
-
-        elem.setAttribute('aria-expanded', isOpen);
+      for (const element of triggerArray) {
+        element.classList.toggle(CLASS_NAME_COLLAPSED, !isOpen);
+        element.setAttribute('aria-expanded', isOpen);
       }
     } // Static
 
 
     static jQueryInterface(config) {
+      const _config = {};
+
+      if (typeof config === 'string' && /show|hide/.test(config)) {
+        _config.toggle = false;
+      }
+
       return this.each(function () {
-        const _config = {};
-
-        if (typeof config === 'string' && /show|hide/.test(config)) {
-          _config.toggle = false;
-        }
-
         const data = Collapse.getOrCreateInstance(this, _config);
 
         if (typeof config === 'string') {

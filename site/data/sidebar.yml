@@ -3,106 +3,120 @@
 
 - title: Getting started
   es_title: Empezando
+  icon: book-half
+  icon_color: indigo
   pages:
     - title: Introduction
       es_title: Introducción
     - title: Download
-      es_title: Descargar
+      es_title: Download
     - title: Contents
-      es_title: Contenido
+      es_title: Contents
     - title: Browsers & devices
-      es_title: Navegadores & dispositivos
+      es_title: Browsers & devices
     - title: JavaScript
       es_title: JavaScript
     - title: Webpack
       es_title: Webpack
     - title: Parcel
       es_title: Parcel
+    - title: Vite
+      es_title: Vite
     - title: Accessibility
-      es_title: Accesibilidad
+      es_title: Accessibility
     - title: RFS
       es_title: RFS
     - title: RTL
       es_title: RTL
     - title: Contribute
-      es_title: Contribuir
+      es_title: Contribute
 
 - title: Customize
-  es_title: Personalizar
+  es_title: Customize
+  icon: palette2
+  icon_color: pink
   pages:
     - title: Overview
       es_title: Overview
     - title: Sass
       es_title: Sass
     - title: Options
-      es_title: Opciones
+      es_title: Options
     - title: Color
       es_title: Color
     - title: Components
-      es_title: Componentes
+      es_title: Components
     - title: CSS variables
-      es_title: Variables CSS
+      es_title: CSS variables
     - title: Optimize
-      es_title: Optimizar
+      es_title: Optimize
 
 - title: Layout
   es_title: Layout
+  icon: grid-fill
+  icon_color: teal
   pages:
     - title: Breakpoints
       es_title: Breakpoints
     - title: Containers
-      es_title: Contenedores
+      es_title: Containers
     - title: Grid
       es_title: Grid
     - title: Columns
-      es_title: Columnas
+      es_title: Columns
     - title: Gutters
       es_title: Gutters
     - title: Utilities
-      es_title: Utilidades
+      es_title: Utilities
     - title: Z-index
       es_title: Z-index
     - title: CSS Grid
-      es_title: Cuadrícula CSS
+      es_title: CSS Grid
 
 - title: Content
-  es_title: Contenido
+  es_title: Content
+  icon: file-earmark-richtext
+  icon_color: gray
   pages:
     - title: Reboot
       es_title: Reboot
     - title: Typography
-      es_title: Tipografía
+      es_title: Typography
     - title: Images
-      es_title: Imágenes
+      es_title: Images
     - title: Tables
-      es_title: Tablas
+      es_title: Tables
     - title: Figures
       es_title: Figures
 
 - title: Forms
   es_title: Formularios
+  icon: ui-radios
+  icon_color: blue
   pages:
     - title: Overview
       es_title: Overview
     - title: Form control
-      es_title: Controles de formulario
+      es_title: Form control
     - title: Select
       es_title: Select
     - title: Checks & radios
       es_title: Checks & radios
     - title: Range
-      es_title: Rango
+      es_title: Range
     - title: Input group
-      es_title: Grupo de inputs
+      es_title: Input group
     - title: Floating labels
-      es_title: Etiquetas flotantes
+      es_title: Floating labels
     - title: Layout
       es_title: Layout
     - title: Validation
-      es_title: Validación
+      es_title: Validation
 
 - title: Components
-  es_title: Componentes
+  es_title: Components
+  icon: menu-button-wide-fill
+  icon_color: cyan
   pages:
     - title: Accordion
       es_title: Accordion
@@ -130,10 +144,10 @@
       es_title: List group
     - title: Modal
       es_title: Modal
-    - title: Navs & tabs
-      es_title: Navs & tabs
     - title: Navbar
       es_title: Navbar
+    - title: Navs & tabs
+      es_title: Navs & tabs
     - title: Offcanvas
       es_title: Offcanvas
     - title: Pagination
@@ -155,37 +169,43 @@
 
 - title: Helpers
   es_title: Helpers
+  icon: magic
+  icon_color: orange
   pages:
     - title: Clearfix
       es_title: Clearfix
+    - title: Color & background
+      es_title: Color & background
     - title: Colored links
-      es_title: Enlaces de colores
-    - title: Ratio
-      es_title: Relación de aspecto
+      es_title: Colored links
     - title: Position
-      es_title: Posición
+      es_title: Position
+    - title: Ratio
+      es_title: Ratio
     - title: Stacks
-      es_title: Pilas
-    - title: Visually hidden
-      es_title: Visualmente oculto
+      es_title: Stacks
     - title: Stretched link
-      es_title: Enlace estirado
+      es_title: Stretched link
     - title: Text truncation
-      es_title: Texto truncado
+      es_title: Text truncation
     - title: Vertical rule
-      es_title: Regla vertical
+      es_title: Vertical rule
+    - title: Visually hidden
+      es_title: Visually hidden
 
 - title: Utilities
-  es_title: Utilidades
+  es_title: Utilities
+  icon: braces-asterisk
+  icon_color: red
   pages:
     - title: API
       es_title: API
     - title: Background
-      es_title: Color de fondo
+      es_title: Background
     - title: Borders
-      es_title: Bordes
+      es_title: Borders
     - title: Colors
-      es_title: Colores
+      es_title: Colors
     - title: Display
       es_title: Display
     - title: Flex
@@ -193,47 +213,51 @@
     - title: Float
       es_title: Float
     - title: Interactions
-      es_title: Interacciones
+      es_title: Interactions
     - title: Opacity
-      es_title: Opacidad
+      es_title: Opacity
     - title: Overflow
-      es_title: Desbordamiento
+      es_title: Overflow
     - title: Position
-      es_title: Posición
+      es_title: Position
     - title: Shadows
-      es_title: Sombras
+      es_title: Shadows
     - title: Sizing
-      es_title: Tamaño
+      es_title: Sizing
     - title: Spacing
-      es_title: Espaciado
+      es_title: Spacing
     - title: Text
-      es_title: Texto
+      es_title: Text
     - title: Vertical align
-      es_title: Alineación vertical
+      es_title: Vertical align
     - title: Visibility
-      es_title: Visibilidad
+      es_title: Visibility
 
 - title: Extend
-  es_title: Ampliar
+  es_title: Extend
+  icon: tools
+  icon_color: blue
   pages:
     - title: Approach
-      es_title: Enfoque
+      es_title: Approach
     - title: Icons
-      es_title: Iconos
+      es_title: Icons
 
 - title: About
-  es_title: Acerca de
+  es_title: About
+  icon: globe2
+  icon_color: indigo
   pages:
     - title: Overview
       es_title: Overview
     - title: Team
-      es_title: Equipo
+      es_title: Team
     - title: Brand
-      es_title: Marca
+      es_title: Brand
     - title: License
-      es_title: Licencia
+      es_title: License
     - title: Translations
-      es_title: Traducciones
+      es_title: Translations
 
 - title: Migration
   es_title: Migración

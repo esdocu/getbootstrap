@@ -1,0 +1,239 @@
+# This file holds all sidebar menu's entries.
+# The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
+
+- title: Getting started
+  es_title: Empezando
+  pages:
+    - title: Introduction
+      es_title: Introducción
+    - title: Download
+      es_title: Descargar
+    - title: Contents
+      es_title: Contenido
+    - title: Browsers & devices
+      es_title: Navegadores & dispositivos
+    - title: JavaScript
+      es_title: JavaScript
+    - title: Webpack
+      es_title: Webpack
+    - title: Parcel
+      es_title: Parcel
+    - title: Accessibility
+      es_title: Accesibilidad
+    - title: RFS
+      es_title: RFS
+    - title: RTL
+      es_title: RTL
+    - title: Contribute
+      es_title: Contribuir
+
+- title: Customize
+  es_title: Personalizar
+  pages:
+    - title: Overview
+      es_title: Overview
+    - title: Sass
+      es_title: Sass
+    - title: Options
+      es_title: Opciones
+    - title: Color
+      es_title: Color
+    - title: Components
+      es_title: Componentes
+    - title: CSS variables
+      es_title: Variables CSS
+    - title: Optimize
+      es_title: Optimizar
+
+- title: Layout
+  es_title: Layout
+  pages:
+    - title: Breakpoints
+      es_title: Breakpoints
+    - title: Containers
+      es_title: Contenedores
+    - title: Grid
+      es_title: Grid
+    - title: Columns
+      es_title: Columnas
+    - title: Gutters
+      es_title: Gutters
+    - title: Utilities
+      es_title: Utilidades
+    - title: Z-index
+      es_title: Z-index
+    - title: CSS Grid
+      es_title: Cuadrícula CSS
+
+- title: Content
+  es_title: Contenido
+  pages:
+    - title: Reboot
+      es_title: Reboot
+    - title: Typography
+      es_title: Tipografía
+    - title: Images
+      es_title: Imágenes
+    - title: Tables
+      es_title: Tablas
+    - title: Figures
+      es_title: Figures
+
+- title: Forms
+  es_title: Formularios
+  pages:
+    - title: Overview
+      es_title: Overview
+    - title: Form control
+      es_title: Controles de formulario
+    - title: Select
+      es_title: Select
+    - title: Checks & radios
+      es_title: Checks & radios
+    - title: Range
+      es_title: Rango
+    - title: Input group
+      es_title: Grupo de inputs
+    - title: Floating labels
+      es_title: Etiquetas flotantes
+    - title: Layout
+      es_title: Layout
+    - title: Validation
+      es_title: Validación
+
+- title: Components
+  es_title: Componentes
+  pages:
+    - title: Accordion
+      es_title: Accordion
+    - title: Alerts
+      es_title: Alerts
+    - title: Badge
+      es_title: Badge
+    - title: Breadcrumb
+      es_title: Breadcrumb
+    - title: Buttons
+      es_title: Buttons
+    - title: Button group
+      es_title: Button group
+    - title: Card
+      es_title: Card
+    - title: Carousel
+      es_title: Carousel
+    - title: Close button
+      es_title: Close button
+    - title: Collapse
+      es_title: Collapse
+    - title: Dropdowns
+      es_title: Dropdowns
+    - title: List group
+      es_title: List group
+    - title: Modal
+      es_title: Modal
+    - title: Navs & tabs
+      es_title: Navs & tabs
+    - title: Navbar
+      es_title: Navbar
+    - title: Offcanvas
+      es_title: Offcanvas
+    - title: Pagination
+      es_title: Pagination
+    - title: Placeholders
+      es_title: Placeholders
+    - title: Popovers
+      es_title: Popovers
+    - title: Progress
+      es_title: Progress
+    - title: Scrollspy
+      es_title: Scrollspy
+    - title: Spinners
+      es_title: Spinners
+    - title: Toasts
+      es_title: Toasts
+    - title: Tooltips
+      es_title: Tooltips
+
+- title: Helpers
+  es_title: Helpers
+  pages:
+    - title: Clearfix
+      es_title: Clearfix
+    - title: Colored links
+      es_title: Enlaces de colores
+    - title: Ratio
+      es_title: Relación de aspecto
+    - title: Position
+      es_title: Posición
+    - title: Stacks
+      es_title: Pilas
+    - title: Visually hidden
+      es_title: Visualmente oculto
+    - title: Stretched link
+      es_title: Enlace estirado
+    - title: Text truncation
+      es_title: Texto truncado
+    - title: Vertical rule
+      es_title: Regla vertical
+
+- title: Utilities
+  es_title: Utilidades
+  pages:
+    - title: API
+      es_title: API
+    - title: Background
+      es_title: Color de fondo
+    - title: Borders
+      es_title: Bordes
+    - title: Colors
+      es_title: Colores
+    - title: Display
+      es_title: Display
+    - title: Flex
+      es_title: Flex
+    - title: Float
+      es_title: Float
+    - title: Interactions
+      es_title: Interacciones
+    - title: Opacity
+      es_title: Opacidad
+    - title: Overflow
+      es_title: Desbordamiento
+    - title: Position
+      es_title: Posición
+    - title: Shadows
+      es_title: Sombras
+    - title: Sizing
+      es_title: Tamaño
+    - title: Spacing
+      es_title: Espaciado
+    - title: Text
+      es_title: Texto
+    - title: Vertical align
+      es_title: Alineación vertical
+    - title: Visibility
+      es_title: Visibilidad
+
+- title: Extend
+  es_title: Ampliar
+  pages:
+    - title: Approach
+      es_title: Enfoque
+    - title: Icons
+      es_title: Iconos
+
+- title: About
+  es_title: Acerca de
+  pages:
+    - title: Overview
+      es_title: Overview
+    - title: Team
+      es_title: Equipo
+    - title: Brand
+      es_title: Marca
+    - title: License
+      es_title: Licencia
+    - title: Translations
+      es_title: Traducciones
+
+- title: Migration
+  es_title: Migración
