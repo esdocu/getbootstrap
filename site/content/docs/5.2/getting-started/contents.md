@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Contents
-description: Discover what's included in Bootstrap, including our precompiled and source code flavors.
+title: Contenidos
+description: Descubre lo que se incluye en Bootstrap, incluidos nuestros tipos de código fuente y precompilados.
 group: getting-started
 toc: true
 ---
 
-## Precompiled Bootstrap
+## Bootstrap precompilado
 
-Once downloaded, unzip the compressed folder and you'll see something like this:
+Una vez descargado, descomprime la carpeta comprimida y verás algo como esto:
 
 <!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too, but be sure to keep in mind to add the `dist` folder. -->
 
@@ -62,35 +62,35 @@ bootstrap/
     └── bootstrap.min.js.map
 ```
 
-This is the most basic form of Bootstrap: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/).
+Esta es la forma más básica de Bootstrap: archivos precompilados para un uso rápido en casi cualquier proyecto web. Proporcionamos CSS y JS compilados (`bootstrap.*`), así como CSS y JS compilados y minimizados (`bootstrap.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) están disponibles para usar con las herramientas de desarrollo de ciertos navegadores. Los archivos JS incluidos (`bootstrap.bundle.js` y `bootstrap.bundle.min.js` minificado) incluyen [Popper](https://popper.js.org/).
 
-## CSS files
+## Archivos CSS
 
-Bootstrap includes a handful of options for including some or all of our compiled CSS.
+Bootstrap incluye un puñado de opciones para incluir parte o la totalidad de nuestro CSS compilado.
 
 {{< bs-table "table" >}}
-| CSS files | Layout | Content | Components | Utilities |
+| Archivos CSS | Layout | Contenido | Componentes | Utilidades |
 | --- | --- | --- | --- | --- |
-| `bootstrap.css`<br> `bootstrap.min.css`<br> `bootstrap.rtl.css`<br> `bootstrap.rtl.min.css` | Included | Included | Included | Included |
-| `bootstrap-grid.css`<br> `bootstrap-grid.rtl.css`<br> `bootstrap-grid.min.css`<br> `bootstrap-grid.rtl.min.css` | [Only grid system]({{< docsref "/layout/grid" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
-| `bootstrap-utilities.css`<br> `bootstrap-utilities.rtl.css`<br> `bootstrap-utilities.min.css`<br> `bootstrap-utilities.rtl.min.css` | — | — | — | Included |
-| `bootstrap-reboot.css`<br> `bootstrap-reboot.rtl.css`<br> `bootstrap-reboot.min.css`<br> `bootstrap-reboot.rtl.min.css` | — | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — |
+| `bootstrap.css`<br> `bootstrap.min.css`<br> `bootstrap.rtl.css`<br> `bootstrap.rtl.min.css` | Incluido | Incluido | Incluido | Incluido |
+| `bootstrap-grid.css`<br> `bootstrap-grid.rtl.css`<br> `bootstrap-grid.min.css`<br> `bootstrap-grid.rtl.min.css` | [Solo grid system]({{< docsref "/layout/grid" >}}) | — | — | [Solo utilidades flex]({{< docsref "/utilities/flex" >}}) |
+| `bootstrap-utilities.css`<br> `bootstrap-utilities.rtl.css`<br> `bootstrap-utilities.min.css`<br> `bootstrap-utilities.rtl.min.css` | — | — | — | Incluido |
+| `bootstrap-reboot.css`<br> `bootstrap-reboot.rtl.css`<br> `bootstrap-reboot.min.css`<br> `bootstrap-reboot.rtl.min.css` | — | [Solo Reboot]({{< docsref "/content/reboot" >}}) | — | — |
 {{< /bs-table >}}
 
-## JS files
+## Archivos JS
 
 Similarly, we have options for including some or all of our compiled JavaScript.
 
 {{< bs-table "table" >}}
-| JS Files | Popper |
+| Archivos JS | Popper |
 | --- | --- |
-| `bootstrap.bundle.js`<br> `bootstrap.bundle.min.js`<br> | Included |
+| `bootstrap.bundle.js`<br> `bootstrap.bundle.min.js`<br> | Incluido |
 | `bootstrap.js`<br> `bootstrap.min.js`<br> | – |
 {{< /bs-table >}}
 
-## Bootstrap source code
+## Código fuente de Bootstrap
 
-The Bootstrap source code download includes the precompiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
+La descarga del código fuente de Bootstrap incluye los assets CSS y JavaScript precompilados, junto con la fuente Sass, JavaScript y documentación. Más específicamente, incluye lo siguiente y más:
 
 ```text
 bootstrap/
@@ -106,4 +106,4 @@ bootstrap/
 └── scss/
 ```
 
-The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the precompiled download section above. The `site/docs/` folder includes the source code for our documentation, and `examples/` of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.
+`scss/` y `js/` son el código fuente de nuestro CSS y JavaScript. La carpeta `dist/` incluye todo lo enumerado en la sección de descarga precompilada anterior. La carpeta `site/docs/` incluye el código fuente de nuestra documentación y `examples/` del uso de Bootstrap. Más allá de eso, cualquier otro archivo incluido brinda soporte para paquetes, información de licencia y desarrollo.
