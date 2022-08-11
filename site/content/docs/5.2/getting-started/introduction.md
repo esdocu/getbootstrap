@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Get started with Bootstrap
-description: Bootstrap is a powerful, feature-packed frontend toolkit. Build anything—from prototype to production—in minutes.
+title: Comenzando con Bootstrap
+description: Bootstrap es un potente conjunto de herramientas de front-end repleto de funciones. Crea cualquier cosa, desde el prototipo hasta la producción, en minutos.
 group: getting-started
 aliases:
   - "/docs/5.2/getting-started/"
@@ -10,13 +10,13 @@ aliases:
 toc: true
 ---
 
-## Quick start
+## Inicio rápido
 
-Get started by including Bootstrap's production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this [Bootstrap CodePen demo](https://codepen.io/team/bootstrap/pen/qBamdLj).
+Comienza incluyendo el CSS y JavaScript listos para producción de Bootstrap a través de CDN sin necesidad de realizar ningún paso de compilación. Velo en la práctica con esta [demostración de Bootstrap en CodePen](https://codepen.io/team/bootstrap/pen/qBamdLj).
 
 <br>
 
-1. **Create a new `index.html` file in your project root.** Include the `<meta name="viewport">` tag as well for [proper responsive behavior](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) in mobile devices.
+1. **Crea un nuevo archivo `index.html` en la raíz de tu proyecto.** Incluye también la etiqueta `<meta name="viewport">` para el [comportamiento responsive adecuado](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) en dispositivos móviles.
 
    ```html
    <!doctype html>
@@ -24,44 +24,44 @@ Get started by including Bootstrap's production-ready CSS and JavaScript via CDN
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Bootstrap demo</title>
+       <title>Demo Bootstrap</title>
      </head>
      <body>
-       <h1>Hello, world!</h1>
+       <h1>¡Hola Mundo!</h1>
      </body>
    </html>
    ```
 
-2. **Include Bootstrap's CSS and JS.** Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle (including Popper for positioning dropdowns, poppers, and tooltips) before the closing `</body>`. Learn more about our [CDN links](#cdn-links).
-
+2. **Incluye CSS y JS de Bootstrap.** Coloca la etiqueta `<link>` en `<head>` para nuestro CSS, y la etiqueta `<script>` para nuestro paquete de JavaScript (incluido Popper para posicionar menús desplegables, poppers y tooltips) antes del `</body>` de cierre. Obtén más información sobre nuestros [enlaces CDN](#cdn-links).
+  
    ```html
    <!doctype html>
    <html lang="en">
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Bootstrap demo</title>
+       <title>Demo Bootstrap</title>
        <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
      </head>
      <body>
-       <h1>Hello, world!</h1>
+       <h1>¡Hola Mundo!</h1>
        <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
      </body>
    </html>
    ```
 
-   You can also include [Popper](https://popper.js.org/) and our JS separately. If you don't plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.
+   También puedes incluir [Popper](https://popper.js.org/) y nuestro JS por separado. Si no planeas usar menús desplegables, ventanas emergentes (popovers) o tooltips, ahorra algunos kilobytes al no incluir Popper.
 
    ```html
    <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
    <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
    ```
 
-3. **Hello, world!** Open the page in your browser of choice to see your Bootstrapped page. Now you can start building with Bootstrap by creating your own [layout]({{< docsref "/layout/grid" >}}), adding dozens of [components]({{< docsref "/components/buttons" >}}), and utilizing [our official examples]({{< docsref "/examples" >}}).
+4. **¡Hola, mundo!** Abre la página en el navegador que prefieras para ver tu página Bootstrapped. Ahora puedes comenzar a construir con Bootstrap creando tu propio [diseño]({{< docsref "/layout/grid" >}}), agregando docenas de [componentes]({{< docsref "/components/buttons" >}}) y utilizando [nuestros ejemplos oficiales]({{< docsref "/examples" >}}).
 
-## CDN links
+## Enlaces CDN
 
-As reference, here are our primary CDN links.
+Como referencia, aquí están nuestros enlaces principales de CDN.
 
 {{< bs-table >}}
 | Description | URL |
@@ -70,47 +70,47 @@ As reference, here are our primary CDN links.
 | JS | `{{< param "cdn.js_bundle" >}}` |
 {{< /bs-table >}}
 
-You can also use the CDN to fetch any of our [additional builds listed in the Contents page]({{< docsref "/getting-started/contents" >}}).
+También puedes usar el CDN para obtener cualquiera de nuestras [compilaciones adicionales enumeradas en la página de contenido]({{< docsref "/getting-started/contents" >}}).
 
-## Next steps
+## Próximos pasos
 
-- Read a bit more about some [important global environment settings](#important-globals) that Bootstrap utilizes.
+- Lee un poco más sobre algunas [configuraciones de entorno global importantes](#important-globals) que utiliza Bootstrap.
 
-- Read about what's included in Bootstrap in our [contents section]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) and the list of [components that require JavaScript](#js-components) below.
+- Lee sobre lo que se incluye en Bootstrap en nuestra [sección de contenido]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) y la lista de [componentes que requieren JavaScript](#js-components) abajo.
 
-- Need a little more power? Consider building with Bootstrap by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
+- ¿Necesitas un poco más de potencia? Considera construir con Bootstrap [incluyendo los archivos fuente a través del administrador de paquetes]({{< docsref "/getting-started/download#package-managers" >}}).
 
-- Looking to use Bootstrap as a module with `<script type="module">`? Please refer to our [using Bootstrap as a module]({{< docsref "/getting-started/javascript#using-bootstrap-as-a-module" >}}) section.
+- ¿Estás buscando usar Bootstrap como un módulo con `<script type="module">`? Consulta nuestra sección [Uso de Bootstrap como módulo]({{< docsref "/getting-started/javascript#using-bootstrap-as-a-module" >}}).
 
-## JS components
+## Componentes JS
 
-Curious which components explicitly require our JavaScript and Popper? Click the show components link below. If you're at all unsure about the general page structure, keep reading for an example page template.
+¿Tienes curiosidad por saber qué componentes requieren explícitamente nuestro JavaScript y Popper? Haz clic en el enlace Mostrar componentes a continuación. Si no estás seguro acerca de la estructura general de la página, sigue leyendo para ver una plantilla de página de ejemplo.
 
 <details>
-<summary class="text-primary mb-3">Show components requiring JavaScript</summary>
+<summary class="text-primary mb-3">Mostrar componentes que requieren JavaScript</summary>
 {{< markdown >}}
-- Alerts for dismissing
-- Buttons for toggling states and checkbox/radio functionality
-- Carousel for all slide behaviors, controls, and indicators
-- Collapse for toggling visibility of content
-- Dropdowns for displaying and positioning (also requires [Popper](https://popper.js.org/))
-- Modals for displaying, positioning, and scroll behavior
-- Navbar for extending our Collapse and Offcanvas plugins to implement responsive behaviors
-- Navs with the Tab plugin for toggling content panes
-- Offcanvases for displaying, positioning, and scroll behavior
-- Scrollspy for scroll behavior and navigation updates
-- Toasts for displaying and dismissing
-- Tooltips and popovers for displaying and positioning (also requires [Popper](https://popper.js.org/))
+- Alerts para poder ocultarlas
+- Buttons para alternar estados y funcionalidad de casilla de verificación/radio
+- Carrusel para todos los comportamientos de diapositivas, controles e indicadores
+- Collapse para alternar la visibilidad del contenido
+- Dropdown para mostrar y posicionar (también requiere [Popper](https://popper.js.org/))
+- Modals para mostrar, posicionar y comportamiento de desplazamiento
+- Navbar para extender nuestros complementos Collapse y Offcanvas para implementar comportamientos responsive
+- Navs con el complemento Tab para alternar paneles de contenido
+- Offcanvas para visualización, posicionamiento y comportamiento de desplazamiento
+- Scrollspy para el comportamiento de desplazamiento y actualizaciones de navegación
+- Toasts para mostrar y ocultar
+- Tooltips y popovers para mostrar y posicionar (también requiere [Popper](https://popper.js.org/))
 {{< /markdown >}}
 </details>
 
-## Important globals
+## Globales importantes
 
-Bootstrap employs a handful of important global styles and settings, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
+Bootstrap emplea un puñado de estilos y configuraciones globales importantes, todos los cuales están orientados casi exclusivamente hacia la *normalización* de estilos entre navegadores. Sumerjámonos.
 
 ### HTML5 doctype
 
-Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some funky and incomplete styling.
+Bootstrap requiere el uso del HTML5 doctype. Sin él, verás un estilo funky e incompleto.
 
 ```html
 <!doctype html>
@@ -119,21 +119,21 @@ Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some fun
 </html>
 ```
 
-### Responsive meta tag
+### Metaetiqueta responsive
 
-Bootstrap is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, add the responsive viewport meta tag to your `<head>`.
+Bootstrap se desarrolla *mobile first*, una estrategia en la que primero optimizamos el código para dispositivos móviles y luego escalamos los componentes según sea necesario utilizando media queries CSS. Para garantizar una representación adecuada y el zoom táctil para todos los dispositivos, agrega la etiqueta meta de viewport responsive a tu `<head>`.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-You can see an example of this in action in the [quick start](#quick-start).
+Puedes ver un ejemplo de esto en acción en el [inicio rápido](#quick-start).
 
 ### Box-sizing
 
-For more straightforward sizing in CSS, we switch the global `box-sizing` value from `content-box` to `border-box`. This ensures `padding` does not affect the final computed width of an element, but it can cause problems with some third-party software like Google Maps and Google Custom Search Engine.
+Para un dimensionamiento más sencillo en CSS, cambiamos el valor global de `box-sizing` de `content-box` a `border-box`. Esto asegura que el `padding` no afecte el ancho calculado final de un elemento, pero puede causar problemas con algún software de terceros como Google Maps y Google Custom Search Engine.
 
-On the rare occasion you need to override it, use something like the following:
+En las raras ocasiones en que necesites anularlo, usa algo como lo siguiente:
 
 ```css
 .selector-for-some-widget {
@@ -141,22 +141,22 @@ On the rare occasion you need to override it, use something like the following:
 }
 ```
 
-With the above snippet, nested elements—including generated content via `::before` and `::after`—will all inherit the specified `box-sizing` for that `.selector-for-some-widget`.
+Con el fragmento anterior, los elementos anidados, incluido el contenido generado a través de `::before` y `::after`, heredarán el `box-sizing` especificado para ese `.selector-for-some-widget`.
 
-Learn more about [box model and sizing at CSS Tricks](https://css-tricks.com/box-sizing/).
+Obtén más información sobre [box model y sizing en CSS Tricks](https://css-tricks.com/box-sizing/).
 
 ### Reboot
 
-For improved cross-browser rendering, we use [Reboot]({{< docsref "/content/reboot" >}}) to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.
+Para mejorar el renderizado entre navegadores, usamos [Reboot]({{< docsref "/content/reboot" >}}) para corregir las incoherencias entre navegadores y dispositivos al tiempo que proporcionamos reinicios ligeramente más obstinados a los elementos HTML comunes.
 
-## Community
+## Comunidad
 
-Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
+Manténte actualizado sobre el desarrollo de Bootstrap y comunícate con la comunidad con estos útiles recursos.
 
-- Read and subscribe to [The Official Bootstrap Blog]({{< param blog >}}).
-- Join [the official Slack room]({{< param slack >}}).
-- Chat with fellow Bootstrappers in IRC. On the `irc.libera.chat` server, in the `#bootstrap` channel.
-- Implementation help may be found at Stack Overflow (tagged [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
-- Developers should use the keyword `bootstrap` on packages that modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/search?q=keywords:bootstrap) or similar delivery mechanisms for maximum discoverability.
+- Lee y suscríbete al [Blog oficial de Bootstrap]({{< param blog >}}).
+- Únete a la [sala oficial de Slack]({{< param slack >}}).
+- Chatea con compañeros Bootstrappers en IRC. En el servidor `irc.libera.chat`, en el canal `#bootstrap`.
+- La ayuda para la implementación se puede encontrar en Stack Overflow (etiquetado [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
+- Los desarrolladores deben usar la palabra clave `bootstrap` en los paquetes que modifican o agregan funcionalidad a Bootstrap cuando se distribuyen a través de [npm](https://www.npmjs.com/search?q=keywords:bootstrap) o mecanismos de entrega similares para máxima capacidad de descubrimiento.
 
-You can also follow [@getbootstrap on Twitter](https://twitter.com/{{< param twitter >}}) for the latest gossip and awesome music videos.
+También puedes seguir a [@getbootstrap en Twitter](https://twitter.com/{{< param twitter >}}) para conocer los últimos chismes y videos musicales increíbles.
