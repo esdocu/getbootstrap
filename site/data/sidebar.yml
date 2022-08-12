@@ -235,5 +235,11 @@
     - title: Translations
       es_title: Traducciones
 
+- title: Hosting
+  es_title: Web Hosting
+  pages:
+    - title: Mejor Web Hosting
+      es_title: Mejor Web Hosting
+
 - title: Migration
   es_title: Migración

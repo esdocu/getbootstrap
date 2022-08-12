@@ -10,18 +10,17 @@
     <div class="bd-intro ps-lg-4">
       <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
         <div class="d-md-flex">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
-            href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` " /" }}"
-            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
             href="{{ .Site.Params.repo_es }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` " /" }}"
-            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
         </div>
         <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
       </div>
       <p class="bd-lead mb-5">{{ .Page.Params.Description | markdownify }}</p>
-      {{ partial "ads" . }}
-    </div>
+      {{ if (ne .Page.Params.ads false) }}
+        {{ partial "ads" . }}
+      {{ end }}
+      </div>
 
     {{ if (eq .Page.Params.toc true) }}
     <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
@@ -47,7 +46,9 @@
       {{ .Content }}
     </div>
     <div class="pt-3">
-      {{ partial "ads2" . }}
+      {{ if (ne .Page.Params.ads false) }}
+        {{ partial "ads2" . }}
+      {{ end }}
     </div>
   </main>
 </div>

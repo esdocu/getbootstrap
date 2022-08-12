@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Actualiza automáticamente la navegación de Bootstrap o enumera los componentes de un grupo en función de la posición de desplazamiento para indicar qué enlace está actualmente activo en el viewport.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.101.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -387,6 +387,17 @@
           </ul>
         </div>
       </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#hosting-collapse" aria-expanded="false">
+          Web Hosting
+        </button>
+
+        <div class="collapse" id="hosting-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/hosting/mejor-web-hosting/" class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
+          </ul>
+        </div>
+      </li>
       <li class="my-3 mx-4 border-top"></li>
       <li>
         <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -402,22 +413,21 @@
     <div class="bd-intro ps-lg-4">
       <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
         <div class="d-md-flex">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
-            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/components/scrollspy.md"
-            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
             href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/components/scrollspy.md"
-            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
         </div>
         <h1 class="bd-title" id="content">Scrollspy</h1>
       </div>
       <p class="bd-lead mb-5">Actualiza automáticamente la navegación de Bootstrap o enumera los componentes de un grupo en función de la posición de desplazamiento para indicar qué enlace está actualmente activo en el viewport.</p>
-      <a href="https://bit.ly/3vS1d2k" target="_blank">
+      
+        <a href="https://bit.ly/3vS1d2k" target="_blank">
     <img src="/img/hostwinds-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
 
 
-    </div>
+      
+      </div>
 
     
     <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
@@ -501,39 +511,39 @@
     <p>Este es un contenido placeholder para la página Scrollspy. Ten en cuenta que a medida que te desplazas hacia abajo en la página, se resalta el enlace de navegación correspondiente. Se repite en todo el ejemplo del componente. Seguimos agregando más copias de ejemplo aquí para enfatizar el desplazamiento y el resaltado.</p>
   </div>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;navbar-example2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar navbar-light bg-light px-3&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-brand&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Navbar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-pills&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading1&#34;</span><span class="p">&gt;</span>Primero<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading2&#34;</span><span class="p">&gt;</span>Segundo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item dropdown&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link dropdown-toggle&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Dropdown<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading3&#34;</span><span class="p">&gt;</span>Tercero<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading4&#34;</span><span class="p">&gt;</span>Cuarto<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">hr</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-divider&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading5&#34;</span><span class="p">&gt;</span>Quinto<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-bs-spy</span><span class="o">=</span><span class="s">&#34;scroll&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#navbar-example2&#34;</span> <span class="na">data-bs-offset</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;scrollspy-example&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading1&#34;</span><span class="p">&gt;</span>Primer encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading2&#34;</span><span class="p">&gt;</span>Segundo encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading3&#34;</span><span class="p">&gt;</span>Tercer encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading4&#34;</span><span class="p">&gt;</span>Cuarto encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading5&#34;</span><span class="p">&gt;</span>Quinto encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="ejemplo-con-navegación-anidada">Ejemplo con navegación anidada</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;navbar-example2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar navbar-light bg-light px-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-brand&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Navbar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-pills&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading1&#34;</span><span class="p">&gt;</span>Primero<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading2&#34;</span><span class="p">&gt;</span>Segundo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item dropdown&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link dropdown-toggle&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>Dropdown<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-menu&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading3&#34;</span><span class="p">&gt;</span>Tercero<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading4&#34;</span><span class="p">&gt;</span>Cuarto<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">hr</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-divider&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#scrollspyHeading5&#34;</span><span class="p">&gt;</span>Quinto<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-bs-spy</span><span class="o">=</span><span class="s">&#34;scroll&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#navbar-example2&#34;</span> <span class="na">data-bs-offset</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;scrollspy-example&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading1&#34;</span><span class="p">&gt;</span>Primer encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading2&#34;</span><span class="p">&gt;</span>Segundo encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading3&#34;</span><span class="p">&gt;</span>Tercer encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading4&#34;</span><span class="p">&gt;</span>Cuarto encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading5&#34;</span><span class="p">&gt;</span>Quinto encabezado<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="ejemplo-con-navegación-anidada">Ejemplo con navegación anidada</h2>
 <p>Scrollspy también funciona con <code>.nav</code>s anidados. Si un <code>.nav</code> anidado es <code>.active</code>, sus padres también serán <code>.active</code>. Desplázate por el área junto a la barra de navegación y observa cómo cambia la clase activa.</p>
 <div class="bd-example">
   <div class="row">
@@ -575,40 +585,40 @@
     </div>
   </div>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;navbar-example3&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar navbar-light bg-light flex-column align-items-stretch p-3&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-brand&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Navbar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-pills flex-column&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-1&#34;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-pills flex-column&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link ms-3 my-1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-1-1&#34;</span><span class="p">&gt;</span>Elemento 1-1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link ms-3 my-1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-1-2&#34;</span><span class="p">&gt;</span>Elemento 1-2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-2&#34;</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-3&#34;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-pills flex-column&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link ms-3 my-1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-3-1&#34;</span><span class="p">&gt;</span>Elemento 3-1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link ms-3 my-1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-3-2&#34;</span><span class="p">&gt;</span>Elemento 3-2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-bs-spy</span><span class="o">=</span><span class="s">&#34;scroll&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#navbar-example3&#34;</span> <span class="na">data-bs-offset</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-1&#34;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-1-1&#34;</span><span class="p">&gt;</span>Elemento 1-1<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-1-2&#34;</span><span class="p">&gt;</span>Elemento 1-2<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-2&#34;</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-3&#34;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-3-1&#34;</span><span class="p">&gt;</span>Elemento 3-1<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-3-2&#34;</span><span class="p">&gt;</span>Elemento 3-2<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="ejemplo-con-list-group">Ejemplo con list-group</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;navbar-example3&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar navbar-light bg-light flex-column align-items-stretch p-3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-brand&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Navbar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-pills flex-column&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-1&#34;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-pills flex-column&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link ms-3 my-1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-1-1&#34;</span><span class="p">&gt;</span>Elemento 1-1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link ms-3 my-1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-1-2&#34;</span><span class="p">&gt;</span>Elemento 1-2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-2&#34;</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-3&#34;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-pills flex-column&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link ms-3 my-1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-3-1&#34;</span><span class="p">&gt;</span>Elemento 3-1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link ms-3 my-1&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#item-3-2&#34;</span><span class="p">&gt;</span>Elemento 3-2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-bs-spy</span><span class="o">=</span><span class="s">&#34;scroll&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#navbar-example3&#34;</span> <span class="na">data-bs-offset</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-1&#34;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-1-1&#34;</span><span class="p">&gt;</span>Elemento 1-1<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-1-2&#34;</span><span class="p">&gt;</span>Elemento 1-2<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-2&#34;</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-3&#34;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-3-1&#34;</span><span class="p">&gt;</span>Elemento 3-1<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-3-2&#34;</span><span class="p">&gt;</span>Elemento 3-2<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="ejemplo-con-list-group">Ejemplo con list-group</h2>
 <p>Scrollspy también funciona con <code>.list-group</code>s. Desplázate por el área junto al grupo de listas y observa cómo cambia la clase activa.</p>
 <div class="bd-example">
   <div class="row">
@@ -634,43 +644,43 @@
     </div>
   </div>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-example&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#list-item-1&#34;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#list-item-2&#34;</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#list-item-3&#34;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#list-item-4&#34;</span><span class="p">&gt;</span>Elemento 4<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-bs-spy</span><span class="o">=</span><span class="s">&#34;scroll&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#list-example&#34;</span> <span class="na">data-bs-offset</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;scrollspy-example&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-item-1&#34;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-item-2&#34;</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-item-3&#34;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-item-4&#34;</span><span class="p">&gt;</span>Elemento 4<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="uso">Uso</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-example&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#list-item-1&#34;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#list-item-2&#34;</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#list-item-3&#34;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-group-item list-group-item-action&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#list-item-4&#34;</span><span class="p">&gt;</span>Elemento 4<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-bs-spy</span><span class="o">=</span><span class="s">&#34;scroll&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#list-example&#34;</span> <span class="na">data-bs-offset</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;scrollspy-example&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-item-1&#34;</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-item-2&#34;</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-item-3&#34;</span><span class="p">&gt;</span>Elemento 3<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-item-4&#34;</span><span class="p">&gt;</span>Elemento 4<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h2 id="uso">Uso</h2>
 <h3 id="a-través-de-atributos-de-datos">A través de atributos de datos</h3>
 <p>Para agregar fácilmente el comportamiento de scrollspy a la navegación de la barra superior, agrega <code>data-bs-spy=&quot;scroll&quot;</code> al elemento que deseas espiar (por lo general, este sería el <code>&lt;body&gt;</code>). A continuación, agrega el atributo <code>data-bs-target</code> con el ID o la clase del elemento padre de cualquier componente <code>.nav</code> de Bootstrap.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
-  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-bs-spy</span><span class="o">=</span><span class="s">&#34;scroll&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#navbar-example&#34;</span><span class="p">&gt;</span>
-  ...
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;navbar-example&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
-      ...
-    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  ...
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="a-través-de-javascript">A través de JavaScript</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">data-bs-spy</span><span class="o">=</span><span class="s">&#34;scroll&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#navbar-example&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;navbar-example&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      ...
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="a-través-de-javascript">A través de JavaScript</h3>
 <p>Después de agregar <code>position: relative;</code> en tu CSS, llama a scrollspy a través de JavaScript:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;#navbar-example&#39;</span>
-<span class="p">})</span>
-</code></pre></div><div class="bd-callout bd-callout-danger">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;#navbar-example&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><div class="bd-callout bd-callout-danger">
 <h4 id="se-requieren-objetivos-de-id-resolubles">Se requieren objetivos de ID resolubles</h4>
 <p>Los enlaces de la barra de navegación deben tener IDs objetivos resolubles. Por ejemplo, <code>&lt;a href=&quot;#home&quot;&gt;home&lt;/a&gt;</code> debe corresponder a algo en el DOM como <code>&lt;div id=&quot;home&quot;&gt;&lt;/div&gt;</code>.
 </div>
@@ -683,22 +693,22 @@
 <h3 id="métodos">Métodos</h3>
 <h4 id="refresh">refresh</h4>
 <p>Cuando uses scrollspy junto con la adición o eliminación de elementos del DOM, deberás llamar al método de actualización de la siguiente manera:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">dataSpyList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-spy=&#34;scroll&#34;]&#39;</span><span class="p">))</span>
-<span class="nx">dataSpyList</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">dataSpyEl</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">dataSpyEl</span><span class="p">)</span>
-    <span class="p">.</span><span class="nx">refresh</span><span class="p">()</span>
-<span class="p">})</span>
-</code></pre></div><h4 id="dispose">dispose</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">dataSpyList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-spy=&#34;scroll&#34;]&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nx">dataSpyList</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">dataSpyEl</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">dataSpyEl</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">refresh</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><h4 id="dispose">dispose</h4>
 <p>Destruye el scrollspy de un elemento. (Elimina los datos almacenados en el elemento DOM)</p>
 <h4 id="getinstance">getInstance</h4>
 <p>Método <em>estático</em> que te permite obtener la instancia de scrollspy asociada con un elemento DOM</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">scrollSpyContentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">scrollSpyContentEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap scrollspy instance
-</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">scrollSpyContentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">scrollSpyContentEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap scrollspy instance
+</span></span></span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
 <p>Método <em>estático</em> que te permite obtener la instancia de scrollspy asociada con un elemento DOM, o crear una nueva en caso de que no se haya inicializado</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">scrollSpyContentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">scrollSpyContentEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap scrollspy instance
-</span></code></pre></div><h3 id="opciones">Opciones</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">scrollSpyContentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">scrollSpyContentEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap scrollspy instance
+</span></span></span></code></pre></div><h3 id="opciones">Opciones</h3>
 <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-bs-</code>, as in <code>data-bs-offset=&quot;&quot;</code>.</p>
 <table class="table">
   <thead>
@@ -745,16 +755,18 @@
     </tr>
   </tbody>
 </table>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">firstScrollSpyEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;[data-bs-spy=&#34;scroll&#34;]&#39;</span><span class="p">)</span>
-<span class="nx">firstScrollSpyEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;activate.bs.scrollspy&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// hacer algo...
-</span><span class="c1"></span><span class="p">})</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">firstScrollSpyEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;[data-bs-spy=&#34;scroll&#34;]&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">firstScrollSpyEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;activate.bs.scrollspy&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// hacer algo...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></code></pre></div>
     </div>
     <div class="pt-3">
-      <a href="https://bit.ly/3vS1d2k" target="_blank">
+      
+        <a href="https://bit.ly/3vS1d2k" target="_blank">
     <img src="/img/hostwinds-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
+      
     </div>
   </main>
 </div>

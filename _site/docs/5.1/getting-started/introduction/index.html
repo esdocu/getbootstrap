@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Comienza con Bootstrap, el framework más popular del mundo para crear sitios adaptables para dispositivos móviles, con jsDelivr y con una plantilla como página de inicio.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.101.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -387,6 +387,17 @@
           </ul>
         </div>
       </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#hosting-collapse" aria-expanded="false">
+          Web Hosting
+        </button>
+
+        <div class="collapse" id="hosting-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/hosting/mejor-web-hosting/" class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
+          </ul>
+        </div>
+      </li>
       <li class="my-3 mx-4 border-top"></li>
       <li>
         <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -402,22 +413,21 @@
     <div class="bd-intro ps-lg-4">
       <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
         <div class="d-md-flex">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
-            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/getting-started/introduction.md"
-            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
             href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/getting-started/introduction.md"
-            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
         </div>
         <h1 class="bd-title" id="content">Introducción</h1>
       </div>
       <p class="bd-lead mb-5">Comienza con Bootstrap, el framework más popular del mundo para crear sitios adaptables para dispositivos móviles, con jsDelivr y con una plantilla como página de inicio.</p>
-      <a href="https://bit.ly/3vS1d2k" target="_blank">
+      
+        <a href="https://bit.ly/3vS1d2k" target="_blank">
     <img src="/img/hostwinds-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
 
 
-    </div>
+      
+      </div>
 
     
     <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
@@ -459,17 +469,22 @@
 <p>¿Estás buscando agregar rápidamente Bootstrap a tu proyecto? Usa jsDelivr, un CDN gratuito de código abierto. ¿Utilizas un administrador de paquetes o necesitas descargar los archivos fuente? <a href="/docs/5.1/getting-started/download/">Dirígete a la página de descargas</a>.</p>
 <h3 id="css">CSS</h3>
 <p>Para cargar nuestro CSS, copia y pega el <code>&lt;link&gt;</code> a la hoja de estilo en tu <code>&lt;head&gt;</code>, justo antes que todas las demás hojas de estilo.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="js">JS</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="js">JS</h3>
 <p>Muchos de nuestros componentes requieren el uso de JavaScript para funcionar. Específicamente, requieren nuestros propios complementos de JavaScript y <a href="https://popper.js.org/">Popper</a>. Coloca <strong>uno de los siguientes <code>&lt;script&gt;</code>s</strong> cerca del final de tus páginas, justo antes de la etiqueta de cierre <code>&lt;/body&gt;</code>, para habilitarlos.</p>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
 <h4 id="bundle">Bundle</h4>
 <p>Puedes añadir cada complemento y dependencia de JavaScript de Bootstrap con uno de nuestros dos paquetes. Tanto <code>bootstrap.bundle.js</code> como <code>bootstrap.bundle.min.js</code> incluyen <a href="https://popper.js.org/">Popper</a> para nuestros tooltips (información emergente) y popovers (ventanas emergentes). Para obtener más información sobre lo que se incluye en Bootstrap, consulta nuestra sección <a href="/docs/5.1/getting-started/contents/#precompiled-bootstrap">contenidos</a>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div><h4 id="separado">Separado</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h4 id="separado">Separado</h4>
 <p>Si decides optar por la solución de scripts separados, Popper debe ser lo primero (si estás utilizando tooltips o popovers) y luego nuestros complementos de JavaScript.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div><h4 id="módulos">Módulos</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h4 id="módulos">Módulos</h4>
 <p>Si usas <code>&lt;script type=&quot;module&quot;&gt;</code>, consulta nuestra sección <a href="/docs/5.1/getting-started/javascript/#using-bootstrap-as-a-module">usando Bootstrap como módulo</a>.</p>
 <h4 id="componentes">Componentes</h4>
 <p>¿Tienes curiosidad por saber qué componentes requieren explícitamente nuestro JavaScript y Popper? Haz clic en el enlace Mostrar componentes a continuación. Si no estás seguro acerca de la estructura general de la página, sigue leyendo para ver una plantilla de página de ejemplo.</p>
@@ -492,56 +507,66 @@
 </details>
 <h2 id="plantilla-de-inicio">Plantilla de inicio</h2>
 <p>Asegúrate de configurar tus páginas con los últimos estándares de diseño y desarrollo. Eso significa usar un HTML5 doctype e incluir una metaetiqueta viewport para comportamientos responsive adecuados. Pon todo junto y tus páginas deberían verse así:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="c">&lt;!-- Required meta tags --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Bootstrap CSS --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
-
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
-
-    <span class="c">&lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-
-    <span class="c">&lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;</span>
-    <span class="c">&lt;!--
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js&#34; integrity=&#34;sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js&#34; integrity=&#34;sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
-</span><span class="c">    --&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div><p>Para conocer los próximos pasos, visita <a href="/docs/5.1/layout/grid/">Layout docs</a> o <a href="/docs/5.1/examples/">nuestros ejemplos oficiales</a> para comenzar a crear el contenido y componentes de tu sitio web.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Required meta tags --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Bootstrap CSS --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, world!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Optional JavaScript; choose one of the two! --&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Option 1: Bootstrap Bundle with Popper --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!-- Option 2: Separate Popper and Bootstrap JS --&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js&#34; integrity=&#34;sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js&#34; integrity=&#34;sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13&#34; crossorigin=&#34;anonymous&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c">    --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Para conocer los próximos pasos, visita <a href="/docs/5.1/layout/grid/">Layout docs</a> o <a href="/docs/5.1/examples/">nuestros ejemplos oficiales</a> para comenzar a crear el contenido y componentes de tu sitio web.</p>
 <h2 id="globales-importantes">Globales importantes</h2>
 <p>Bootstrap emplea un puñado de estilos y configuraciones globales importantes que deberás tener en cuenta al usarlo, todos los cuales están orientados casi exclusivamente a la <em>normalización</em> de estilos entre navegadores. Veámoslo.</p>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
 <h3 id="html5-doctype">HTML5 doctype</h3>
 <p>Bootstrap requiere el uso del HTML5 doctype. Sin él, verás un estilo incompleto, pero incluirlo no debería causar contratiempos considerables.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-  ...
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="responsive-meta-tag">Responsive meta tag</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="responsive-meta-tag">Responsive meta tag</h3>
 <p>Bootstrap se desarrolla <em>mobile first</em>, una estrategia en la que primero optimizamos el código para dispositivos móviles y luego escalamos los componentes según sea necesario utilizando media queries CSS. Para garantizar una representación adecuada y el zoom táctil para todos los dispositivos, <strong>agrega la metaetiqueta responsive viewport</strong> a tu <code>&lt;head&gt;</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
-</code></pre></div><p>Puedes ver un ejemplo de esto en acción en la <a href="#starter-template">plantilla de inicio</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Puedes ver un ejemplo de esto en acción en la <a href="#starter-template">plantilla de inicio</a>.</p>
 <h3 id="box-sizing">Box-sizing</h3>
 <p>Para un dimensionamiento más sencillo en CSS, cambiamos el valor global <code>box-sizing</code> de <code>content-box</code> a <code>border-box</code>. Esto garantiza que el <code>padding</code> no afecte el ancho calculado final de un elemento, pero puede causar problemas con algunos software de terceros como Google Maps y Google Custom Search Engine.</p>
 <p>En las raras ocasiones en que necesites anularlo, utiliza algo como lo siguiente:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">selector-for-some-widget</span> <span class="p">{</span>
-  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">content-box</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div><p>Con el fragmento anterior, los elementos anidados, incluido el contenido generado a través de <code>::before</code> y <code>::after</code>, heredarán el <code>box-sizing</code> especificado para ese <code>.selector-for-some-widget</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">selector-for-some-widget</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">content-box</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Con el fragmento anterior, los elementos anidados, incluido el contenido generado a través de <code>::before</code> y <code>::after</code>, heredarán el <code>box-sizing</code> especificado para ese <code>.selector-for-some-widget</code>.</p>
 <p>Obtén más información sobre el <a href="https://css-tricks.com/box-sizing/">modelo de caja y tamaño en CSS Tricks</a>.</p>
 <h3 id="reboot">Reboot</h3>
 <p>Para mejorar la compatibilidad entre navegadores, usamos <a href="/docs/5.1/content/reboot/">Reboot</a> para corregir las incoherencias entre navegadores.</p>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
 <h2 id="comunidad">Comunidad</h2>
 <p>Mantente actualizado sobre el desarrollo de Bootstrap y comunícate con la comunidad con estos útiles recursos.</p>
 <ul>
@@ -555,9 +580,11 @@
 
     </div>
     <div class="pt-3">
-      <a href="https://bit.ly/3vS1d2k" target="_blank">
+      
+        <a href="https://bit.ly/3vS1d2k" target="_blank">
     <img src="/img/hostwinds-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
+      
     </div>
   </main>
 </div>

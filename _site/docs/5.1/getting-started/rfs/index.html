@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="El motor de cambio de tamaño de Bootstrap escala de manera responsive las propiedades CSS comunes para utilizar mejor el espacio disponible en viewports y los dispositivos.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.101.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -387,6 +387,17 @@
           </ul>
         </div>
       </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#hosting-collapse" aria-expanded="false">
+          Web Hosting
+        </button>
+
+        <div class="collapse" id="hosting-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/hosting/mejor-web-hosting/" class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
+          </ul>
+        </div>
+      </li>
       <li class="my-3 mx-4 border-top"></li>
       <li>
         <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -402,22 +413,21 @@
     <div class="bd-intro ps-lg-4">
       <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
         <div class="d-md-flex">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
-            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/getting-started/rfs.md"
-            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
             href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/getting-started/rfs.md"
-            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
         </div>
         <h1 class="bd-title" id="content">RFS</h1>
       </div>
       <p class="bd-lead mb-5">El motor de cambio de tamaño de Bootstrap escala de manera responsive las propiedades CSS comunes para utilizar mejor el espacio disponible en viewports y los dispositivos.</p>
-      <a href="https://bit.ly/3vS1d2k" target="_blank">
+      
+        <a href="https://bit.ly/3vS1d2k" target="_blank">
     <img src="/img/hostwinds-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
 
 
-    </div>
+      
+      </div>
 
     
     <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
@@ -447,53 +457,55 @@
 <p>Los mixins están incluidos en Bootstrap y están disponibles una vez que incluyes <code>scss</code> de Bootstrap. RFS también se puede <a href="https://github.com/twbs/rfs/tree/v9.0.6#installation">instalar de forma independiente</a> si es necesario.</p>
 <h3 id="uso-de-los-mixins">Uso de los mixins</h3>
 <p>El mixin <code>rfs()</code> tiene abreviaturas para <code>font-size</code>, <code>margin</code>, <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, <code>margin-left</code>, <code>padding</code>, <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, y <code>padding-left</code>. Mira el ejemplo a continuación de la fuente Sass y el CSS compilado.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.title</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">title</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="nb">calc</span><span class="p">(</span><span class="mf">1.525</span><span class="kt">rem</span> <span class="o">+</span> <span class="mf">3.3</span><span class="kt">vw</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1200px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="p">.</span><span class="nc">title</span> <span class="p">{</span>
-    <span class="k">font-size</span><span class="p">:</span> <span class="mi">4</span><span class="kt">rem</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>Cualquier otra propiedad se puede pasar al mixin <code>rfs()</code> de esta manera:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> rfs</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="o">,</span> <span class="n">border-radius</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p><code>!important</code> también se puede agregar a cualquier valor que desees:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> padding</span><span class="p">(</span><span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!important</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><h3 id="uso-de-las-funciones">Uso de las funciones</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.title</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">title</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="nb">calc</span><span class="p">(</span><span class="mf">1.525</span><span class="kt">rem</span> <span class="o">+</span> <span class="mf">3.3</span><span class="kt">vw</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1200px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">title</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-size</span><span class="p">:</span> <span class="mi">4</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Cualquier otra propiedad se puede pasar al mixin <code>rfs()</code> de esta manera:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.selector</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> rfs</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="o">,</span> <span class="n">border-radius</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>!important</code> también se puede agregar a cualquier valor que desees:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.selector</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> padding</span><span class="p">(</span><span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!important</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="uso-de-las-funciones">Uso de las funciones</h3>
 <p>Cuando no deseas utilizar los incluidos, también hay dos funciones:</p>
 <ul>
 <li><code>rfs-value()</code> convierte un valor en un valor <code>rem</code> si se pasa un valor <code>px</code>, en otros casos devuelve el mismo resultado.</li>
 <li><code>rfs-fluid-value()</code> devuelve la versión fluida de un valor si la propiedad necesita un cambio de escala.</li>
 </ul>
 <p>En este ejemplo, usamos uno de los <a href="/docs/5.1/layout/breakpoints/">mixins de breakpoint responsive</a> integrados de Bootstrap para aplicar solo estilo debajo del breakpoint <code>lg</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="na">padding</span><span class="o">:</span> <span class="nf">rfs-fluid-value</span><span class="p">(</span><span class="mi">2</span><span class="kt">rem</span><span class="p">);</span>
-    <span class="na">font-size</span><span class="o">:</span> <span class="nf">rfs-fluid-value</span><span class="p">(</span><span class="mi">1</span><span class="mf">.125</span><span class="kt">rem</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">991</span><span class="p">.</span><span class="nc">98px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="p">.</span><span class="nc">selector</span> <span class="p">{</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="nb">calc</span><span class="p">(</span><span class="mf">1.325</span><span class="kt">rem</span> <span class="o">+</span> <span class="mf">0.9</span><span class="kt">vw</span><span class="p">);</span>
-    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.125</span><span class="kt">rem</span><span class="p">;</span> <span class="c">/* 1.125rem es lo suficientemente pequeño, por lo que RFS no reescalará esto */</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><h2 id="documentación-extendida">Documentación extendida</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.selector</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="na">padding</span><span class="o">:</span> <span class="nf">rfs-fluid-value</span><span class="p">(</span><span class="mi">2</span><span class="kt">rem</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="na">font-size</span><span class="o">:</span> <span class="nf">rfs-fluid-value</span><span class="p">(</span><span class="mi">1</span><span class="mf">.125</span><span class="kt">rem</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">991</span><span class="p">.</span><span class="nc">98px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">selector</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="nb">calc</span><span class="p">(</span><span class="mf">1.325</span><span class="kt">rem</span> <span class="o">+</span> <span class="mf">0.9</span><span class="kt">vw</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.125</span><span class="kt">rem</span><span class="p">;</span> <span class="c">/* 1.125rem es lo suficientemente pequeño, por lo que RFS no reescalará esto */</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="documentación-extendida">Documentación extendida</h2>
 <p>RFS es un proyecto separado bajo la organización Bootstrap. Puedes encontrar más información sobre RFS y su configuración en su <a href="https://github.com/twbs/rfs/tree/v9.0.6">repositorio de GitHub</a>.</p>
 
     </div>
     <div class="pt-3">
-      <a href="https://bit.ly/3vS1d2k" target="_blank">
+      
+        <a href="https://bit.ly/3vS1d2k" target="_blank">
     <img src="/img/hostwinds-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
+      
     </div>
   </main>
 </div>

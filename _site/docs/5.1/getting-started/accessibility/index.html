@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Una breve descripción de las características y limitaciones de Bootstrap para la creación de contenido accesible.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.91.2">
+<meta name="generator" content="Hugo 0.101.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -387,6 +387,17 @@
           </ul>
         </div>
       </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#hosting-collapse" aria-expanded="false">
+          Web Hosting
+        </button>
+
+        <div class="collapse" id="hosting-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/hosting/mejor-web-hosting/" class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
+          </ul>
+        </div>
+      </li>
       <li class="my-3 mx-4 border-top"></li>
       <li>
         <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -402,22 +413,21 @@
     <div class="bd-intro ps-lg-4">
       <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
         <div class="d-md-flex">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0"
-            href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/getting-started/accessibility.md"
-            title="Ver y editar este archivo en GitHub (EN)" target="_blank" rel="noopener">Ver en GitHub</a>
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
             href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/getting-started/accessibility.md"
-            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">ES</a>
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
         </div>
         <h1 class="bd-title" id="content">Accesibilidad</h1>
       </div>
       <p class="bd-lead mb-5">Una breve descripción de las características y limitaciones de Bootstrap para la creación de contenido accesible.</p>
-      <a href="https://bit.ly/3vS1d2k" target="_blank">
+      
+        <a href="https://bit.ly/3vS1d2k" target="_blank">
     <img src="/img/hostwinds-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
 
 
-    </div>
+      
+      </div>
 
     
     <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
@@ -454,13 +464,13 @@
 <p>Algunas combinaciones de colores que actualmente conforman la paleta predeterminada de Bootstrap, que se utilizan en todo el marco para cosas como variaciones de botones, variaciones de alertas, indicadores de validación de formularios, pueden dar lugar a un contraste de color <em>insuficiente</em> (por debajo de la relación de contraste de color de texto recomendada <a href="https://www.w3.org/TR/WCAG/#contrast-minimum">WCAG 2.1 de 4.5:1</a> y la <a href="https://www.w3.org/TR/WCAG/#non-text-contrast">relación de contraste de color sin texto WCAG 2.1 de 3:1</a>), especialmente cuando se utiliza contra un fondo claro. Se alienta a los autores a probar sus usos específicos del color y, cuando sea necesario, modificar/ampliar manualmente estos colores predeterminados para garantizar proporciones de contraste de color adecuadas.</p>
 <h3 id="contenido-oculto-visualmente">Contenido oculto visualmente</h3>
 <p>El contenido que debería ocultarse visualmente, pero permanecer accesible para las tecnologías de asistencia, como los lectores de pantalla, se puede diseñar con la clase <code>.visually-hidden</code>. Esto puede ser útil en situaciones en las que también es necesario transmitir información o pistas visuales adicionales (como el significado denotado mediante el uso de colores) a usuarios no visuales.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Peligro: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-  Esta acción no es reversible
-<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</code></pre></div><p>Para los controles interactivos ocultos visualmente, como los enlaces &ldquo;saltar&rdquo; tradicionales, usa la clase <code>.visually-hidden-focusable</code>. Esto asegurará que el control sea visible una vez enfocado (para usuarios de teclado videntes). <strong>Cuidado, en comparación con las clases equivalentes <code>.sr-only</code> y <code>.sr-only-focusable</code> en versiones anteriores, <code>.visually-hidden-focusable</code> de Bootstrap 5 es una clase independiente y no debe usarse en combinación con la clase <code>.visually-hidden</code>.</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Saltar al contenido principal<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="movimiento-reducido">Movimiento reducido</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Peligro: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  Esta acción no es reversible
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Para los controles interactivos ocultos visualmente, como los enlaces &ldquo;saltar&rdquo; tradicionales, usa la clase <code>.visually-hidden-focusable</code>. Esto asegurará que el control sea visible una vez enfocado (para usuarios de teclado videntes). <strong>Cuidado, en comparación con las clases equivalentes <code>.sr-only</code> y <code>.sr-only-focusable</code> en versiones anteriores, <code>.visually-hidden-focusable</code> de Bootstrap 5 es una clase independiente y no debe usarse en combinación con la clase <code>.visually-hidden</code>.</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Saltar al contenido principal<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div><h3 id="movimiento-reducido">Movimiento reducido</h3>
 <p>Bootstrap incluye soporte para la función de medios <a href="https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion"><code>prefers-reduced-motion</code></a>. En los navegadores/entornos que permiten al usuario especificar su preferencia por el movimiento reducido, la mayoría de los efectos de transición CSS en Bootstrap (por ejemplo, cuando se abre o cierra un cuadro de diálogo modal, o la animación deslizante en carruseles) se desactivarán y las animaciones significativas ( como los hilanderos) se ralentizarán.</p>
 <p>En los navegadores que admiten <code>prefers-reduced-motion</code>, y donde el usuario <em>no</em> ha señalado explícitamente que preferiría un movimiento reducido (es decir, donde <code>prefers-reduced-motion: no-preference</code>), Bootstrap permite un desplazamiento suave usando la propiedad <code>scroll-behavior</code>.</p>
 <h2 id="recursos-adicionales">Recursos adicionales</h2>
@@ -478,9 +488,11 @@
 
     </div>
     <div class="pt-3">
-      <a href="https://bit.ly/3vS1d2k" target="_blank">
+      
+        <a href="https://bit.ly/3vS1d2k" target="_blank">
     <img src="/img/hostwinds-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
+      
     </div>
   </main>
 </div>

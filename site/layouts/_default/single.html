@@ -13,7 +13,9 @@
           {{ end }}
         </div>
         <div class="col-xl-4 d-lg-flex justify-content-xl-end">
-          {{ partial "ads" . }}
+          {{ if (ne .Page.Params.ads false) }}
+            {{ partial "ads" . }}
+          {{ end }}
         </div>
       </div>
     </div>
@@ -43,7 +45,9 @@
         </div>
       {{ end }}
       <div class="pt-3">
-        {{ partial "ads2" . }}
+        {{ if (ne .Page.Params.ads false) }}
+          {{ partial "ads2" . }}
+        {{ end }}
       </div>
   </div>
   </main>

@@ -26,6 +26,10 @@ Para cargar nuestro CSS, copia y pega el `<link>` a la hoja de estilo en tu `<he
 
 Muchos de nuestros componentes requieren el uso de JavaScript para funcionar. Específicamente, requieren nuestros propios complementos de JavaScript y [Popper](https://popper.js.org/). Coloca **uno de los siguientes `<script>`s** cerca del final de tus páginas, justo antes de la etiqueta de cierre `</body>`, para habilitarlos.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 #### Bundle
 
 Puedes añadir cada complemento y dependencia de JavaScript de Bootstrap con uno de nuestros dos paquetes. Tanto `bootstrap.bundle.js` como `bootstrap.bundle.min.js` incluyen [Popper](https://popper.js.org/) para nuestros tooltips (información emergente) y popovers (ventanas emergentes). Para obtener más información sobre lo que se incluye en Bootstrap, consulta nuestra sección [contenidos]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}).
@@ -108,6 +112,10 @@ Para conocer los próximos pasos, visita [Layout docs]({{< docsref "/layout/grid
 
 Bootstrap emplea un puñado de estilos y configuraciones globales importantes que deberás tener en cuenta al usarlo, todos los cuales están orientados casi exclusivamente a la *normalización* de estilos entre navegadores. Veámoslo.
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ### HTML5 doctype
 
 Bootstrap requiere el uso del HTML5 doctype. Sin él, verás un estilo incompleto, pero incluirlo no debería causar contratiempos considerables.
@@ -146,6 +154,10 @@ Obtén más información sobre el [modelo de caja y tamaño en CSS Tricks](https
 ### Reboot
 
 Para mejorar la compatibilidad entre navegadores, usamos [Reboot]({{< docsref "/content/reboot" >}}) para corregir las incoherencias entre navegadores.
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Comunidad
 
