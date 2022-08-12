@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: "Bootstrap & Webpack"
-description: The official guide for how to include and bundle Bootstrap's CSS and JavaScript in your project using Webpack.
+description: La guía oficial sobre cómo incluir y agrupar CSS y JavaScript de Bootstrap en tu proyecto usando Webpack.
 group: getting-started
 toc: true
 ---
@@ -9,50 +9,50 @@ toc: true
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png" width="2000" height="1000" alt="">
 
 {{< callout >}}
-**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/webpack). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) for live editing.
+**¿Quieres saltar hasta el final?** Descarga el código fuente y la demostración funcional de esta guía desde el [repositorio twbs/examples](https://github.com/twbs/examples/tree/main/webpack). También puedes [abrir el ejemplo en StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) para la edición en vivo.
 {{< /callout >}}
 
-## Setup
+## Configuración
 
-We're building a Webpack project with Bootstrap from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
+Estamos creando un proyecto de paquete web con Bootstrap desde cero, por lo que hay algunos requisitos previos y pasos previos antes de que podamos comenzar realmente. Esta guía requiere que tengas instalado Node.js y cierta familiaridad con la terminal.
 
-1. **Create a project folder and setup npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
+1. **Crea una carpeta de proyecto y configura npm.** Crearemos la carpeta `my-project` e inicializaremos npm con el argumento `-y` para evitar que nos haga todas las preguntas interactivas.
 
    ```sh
    mkdir my-project && cd my-project
    npm init -y
    ```
 
-2. **Install Webpack.** Next we need to install our Webpack development dependencies: `webpack` for the core of Webpack, `webpack-cli` so we can run Webpack commands from the terminal, and `webpack-dev-server` so we can run a local development server. We use `--save-dev` to signal that these dependencies are only for development use and not for production.
+2. **Instalar Webpack.** A continuación, debemos instalar nuestras dependencias de desarrollo de Webpack: `webpack` para el núcleo de Webpack, `webpack-cli` para que podamos ejecutar los comandos de Webpack desde la terminal y `webpack-dev-server` para que podamos ejecutar un servidor de desarrollo local. Usamos `--save-dev` para indicar que estas dependencias son solo para uso de desarrollo y no para producción.
 
    ```sh
    npm i --save-dev webpack webpack-cli webpack-dev-server
    ```
 
-3. **Install Bootstrap.** Now we can install Bootstrap. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
+3. **Instalar Bootstrap.** Ahora podemos instalar Bootstrap. También instalaremos Popper, ya que nuestros dropdowns, popovers y tooltips dependen de ello para su posicionamiento. Si no planeas usar esos componentes, puedes omitir Popper aquí.
 
    ```sh
    npm i --save bootstrap @popperjs/core
    ```
 
-4. **Install additional dependencies.** In addition to Webpack and Bootstrap, we need a few more dependencies to properly import and bundle Bootstrap's CSS and JS with Webpack. These include Sass, some loaders, and Autoprefixer.
+4. **Instala dependencias adicionales.** Además de Webpack y Bootstrap, necesitamos algunas dependencias más para importar y agrupar correctamente CSS y JS de Bootstrap con Webpack. Estos incluyen Sass, algunos cargadores y Autoprefixer.
 
    ```sh
    npm i --save-dev autoprefixer css-loader postcss-loader sass sass-loader style-loader
    ```
 
-Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Bootstrap.
+Ahora que tenemos todas las dependencias necesarias instaladas, podemos empezar a trabajar creando los archivos del proyecto e importando Bootstrap.
 
-## Project structure
+## Estructura del proyecto
 
-We've already created the `my-project` folder and initialized npm. Now we'll also create our `src` and `dist` folders to round out the project structure. Run the following from `my-project`, or manually create the folder and file structure shown below.
+Ya creamos la carpeta `my-project` e inicializamos npm. Ahora también crearemos nuestras carpetas `src` y `dist` para completar la estructura del proyecto. Ejecuta lo siguiente desde `my-project`, o crea manualmente la estructura de carpetas y archivos que se muestra a continuación.
 
 ```sh
 mkdir {dist,src,src/js,src/scss}
 touch dist/index.html src/js/main.js src/scss/styles.scss webpack.config.js
 ```
 
-When you're done, your complete project should look like this:
+Cuando hayas terminado, tu proyecto completo debería verse así:
 
 ```text
 my-project/
@@ -68,13 +68,13 @@ my-project/
 └── webpack.config.js
 ```
 
-At this point, everything is in the right place, but Webpack won't work because we haven't filled in our `webpack.config.js` yet.
+En este punto, todo está en el lugar correcto, pero Webpack no funcionará porque aún no hemos completado nuestro `webpack.config.js`.
 
-## Configure Webpack
+## Configurar webpack
 
-With dependencies installed and our project folder ready for us to start coding, we can now configure Webpack and run our project locally.
+Con las dependencias instaladas y nuestra carpeta de proyecto lista para que comencemos a codificar, ahora podemos configurar Webpack y ejecutar nuestro proyecto localmente.
 
-1. **Open `webpack.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Webpack were to look for our project's JavaScript, where to output the compiled code to (`dist`), and how the development server should behave (pulling from the `dist` folder with hot reload).
+1. **Abre `webpack.config.js` en tu editor.** Dado que está en blanco, necesitaremos agregarle algunas configuraciones repetitivas para que podamos iniciar nuestro servidor. Esta parte de la configuración le dice a Webpack que debe buscar el JavaScript de nuestro proyecto, dónde generar el código compilado (`dist`) y cómo debe comportarse el servidor de desarrollo (extrayendo de la carpeta `dist` con recarga en caliente).
 
    ```js
    const path = require('path')
@@ -93,7 +93,7 @@ With dependencies installed and our project folder ready for us to start coding,
    }
    ```
 
-2. **Next we fill in our `dist/index.html`.** This is the HTML page Webpack will load in the browser to utilize the bundled CSS and JS we'll add to it in later steps. Before we can do that, we have to give it something to render and include the `output` JS from the previous step.
+2. **A continuación, completamos nuestro `dist/index.html`.** Esta es la página HTML que Webpack cargará en el navegador para utilizar el CSS y el JS incluidos que agregaremos en pasos posteriores. Antes de que podamos hacer eso, tenemos que darle algo para renderizar e incluir el JS de `salida` del paso anterior.
 
    ```html
    <!doctype html>
@@ -101,21 +101,21 @@ With dependencies installed and our project folder ready for us to start coding,
      <head>
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>Bootstrap w/ Webpack</title>
+       <title>Bootstrap con Webpack</title>
      </head>
      <body>
        <div class="container py-4 px-3 mx-auto">
-         <h1>Hello, Bootstrap and Webpack!</h1>
-         <button class="btn btn-primary">Primary button</button>
+         <h1>Hola, Bootstrap y Webpack!</h1>
+         <button class="btn btn-primary">Botón principal</button>
        </div>
        <script src="./main.js"></script>
      </body>
    </html>
    ```
 
-   We're including a little bit of Bootstrap styling here with the `div class="container"` and `<button>` so that we see when Bootstrap's CSS is loaded by Webpack.
+   Estamos incluyendo un poco de estilo de Bootstrap aquí con `div class="container"` y `<button>` para que podamos ver cuándo Webpack carga el CSS de Bootstrap.
 
-3. **Now we need an npm script to run Webpack.** Open `package.json` and add the `start` script shown below (you should already have the test script). We'll use this script to start our local Webpack dev server.
+3. **Ahora necesitamos un script npm para ejecutar Webpack.** Abre `package.json` y agrega el script `start` que se muestra a continuación (ya deberías tener el script de prueba). Usaremos este script para iniciar nuestro servidor de desarrollo Webpack local.
 
    ```json
    {
@@ -128,7 +128,7 @@ With dependencies installed and our project folder ready for us to start coding,
    }
    ```
 
-4. **And finally, we can start Webpack.** From the `my-project` folder in your terminal, run that newly added npm script:
+4. **Y finalmente, podemos iniciar Webpack.** Desde la carpeta `my-project` en tu terminal, ejecuta el script npm recién agregado:
 
    ```sh
    npm start
@@ -136,13 +136,13 @@ With dependencies installed and our project folder ready for us to start coding,
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server.png" alt="Webpack dev server running">
 
-In the next and final section to this guide, we'll set up the Webpack loaders and import all of Bootstrap's CSS and JavaScript.
+En la siguiente y última sección de esta guía, configuraremos los cargadores de paquetes web e importaremos todo el CSS y JavaScript de Bootstrap.
 
-## Import Bootstrap
+## Importar Bootstrap
 
-Importing Bootstrap into Webpack requires the loaders we installed in the first section. We've installed them with npm, but now Webpack needs to be configured to use them.
+La importación de Bootstrap a Webpack requiere los cargadores que instalamos en la primera sección. Los instalamos con npm, pero ahora se debe configurar Webpack para usarlos.
 
-1. **Set up the loaders in `webpack.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `module` section.
+1. **Configura los cargadores en `webpack.config.js`.** Tu archivo de configuración ahora está completo y debe coincidir con el fragmento de código a continuación. La única parte nueva aquí es la sección `module`.
 
    ```js
    const path = require('path')
@@ -189,45 +189,45 @@ Importing Bootstrap into Webpack requires the loaders we installed in the first 
    }
    ```
 
-   Here's a recap of why we need all these loaders. `style-loader` injects the CSS into a `<style>` element in the `<head>` of the HTML page, `css-loader` helps with using `@import` and `url()`, `postcss-loader` is required for Autoprefixer, and `sass-loader` allows us to use Sass.
+   Aquí hay un resumen de por qué necesitamos todos estos cargadores. `style-loader` inyecta el CSS en un elemento `<style>` en `<head>` de la página HTML, `css-loader` ayuda con el uso de `@import` y `url()`, `postcss-loader` es necesario para Autoprefixer, y `sass-loader` nos permite usar Sass.
 
-2. **Now, let's import Bootstrap's CSS.** Add the following to `src/scss/styles.scss` to import all of Bootstrap's source Sass.
+2. **Ahora, importemos el CSS de Bootstrap.** Agrega lo siguiente a `src/scss/styles.scss` para importar todo el Sass fuente de Bootstrap.
 
    ```scss
-   // Import all of Bootstrap's CSS
+   // Importar todo el CSS de Bootstrap
    @import "~bootstrap/scss/bootstrap";
    ```
 
-   *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
+   *También puedes importar nuestras hojas de estilo individualmente si lo deseas. [Lee nuestros documentos de importación de Sass]({{< docsref "/customize/sass#importing" >}}) para obtener más detalles.*
 
-3. **Next we load the CSS and import Bootstrap's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Bootstrap's JS. Popper will be imported automatically through Bootstrap.
+3. **A continuación, cargamos el CSS e importamos el JavaScript de Bootstrap.** Agrega lo siguiente a `src/js/main.js` para cargar el CSS e importar todo el JS de Bootstrap. Popper se importará automáticamente a través de Bootstrap.
 
    <!-- eslint-skip -->
    ```js
-   // Import our custom CSS
+   // Importa nuestro CSS personalizado
    import '../scss/styles.scss'
 
-   // Import all of Bootstrap's JS
+   // Importar todo el JS de Bootstrap
    import * as bootstrap from 'bootstrap'
    ```
 
-   You can also import JavaScript plugins individually as needed to keep bundle sizes down:
+   También puedes importar complementos de JavaScript individualmente según sea necesario para mantener bajos los tamaños de los paquetes:
 
    <!-- eslint-skip -->
    ```js
    import Alert from 'bootstrap/js/dist/alert'
 
-   // or, specify which plugins you need:
+   // o especifica qué complementos necesitas:
    import { Tooltip, Toast, Popover } from 'bootstrap'
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Bootstrap's plugins.*
+   *[Lee nuestros documentos de JavaScript]({{< docsref "/getting-started/javascript/" >}}) para obtener más información sobre cómo usar los complementos de Bootstrap.*
 
-4. **And you're done! 🎉** With Bootstrap's source Sass and JS fully loaded, your local development server should now look like this.
+4. **¡Y listo! 🎉** Con la fuente de Bootstrap Sass y JS completamente cargada, tu servidor de desarrollo local ahora debería verse así.
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server-bootstrap.png" alt="Webpack dev server running with Bootstrap">
+    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server-bootstrap.png" alt="Servidor de desarrollo Webpack ejecutándose con Bootstrap">
 
-   Now you can start adding any Bootstrap components you want to use. Be sure to [check out the complete Webpack example project](https://github.com/twbs/examples/tree/main/webpack) for how to include additional custom Sass and optimize your build by importing only the parts of Bootstrap's CSS and JS that you need.
+    Ahora puedes comenzar a agregar cualquier componente de Bootstrap que desees usar. Asegúrate de [ver el proyecto de ejemplo de Webpack completo](https://github.com/twbs/examples/tree/main/webpack) para saber cómo incluir Sass personalizado adicional y optimizar tu compilación importando solo las partes del CSS de Bootstrap y JS que necesitas.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}

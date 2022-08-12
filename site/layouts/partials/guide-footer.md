@@ -1,3 +1,3 @@
 <hr class="my-5">
 
-_See something wrong or out of date here? Please [open an issue on GitHub]({{ .Site.Params.repo }}/issues/new/choose). Need help troubleshooting? [Search or start a discussion]({{ .Site.Params.repo }}/discussions) on GitHub._
+_¿Ves algo incorrecto o desactualizado aquí? [abre una issue en GitHub]({{ .Site.Params.repo }}/issues/new/choose). ¿Necesitas ayuda para solucionar problemas? [Buscar o iniciar una discusión]({{ .Site.Params.repo }}/discussions) en GitHub._
