@@ -1,34 +1,34 @@
 ---
 layout: docs
 title: JavaScript
-description: Bring Bootstrap to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.
+description: Dale vida a Bootstrap con nuestros complementos de JavaScript opcionales. Obtén información sobre cada complemento, nuestras opciones de API programáticas y de datos, y más.
 group: getting-started
 toc: true
 ---
 
-## Individual or compiled
+## Individual o compilado
 
-Plugins can be included individually (using Bootstrap's individual `js/dist/*.js`), or all at once using `bootstrap.js` or the minified `bootstrap.min.js` (don't include both).
+Los complementos se pueden incluir individualmente (usando `js/dist/*.js`), o todos a la vez usando `bootstrap.js` o `bootstrap.min.js` minimizado (no incluyas ambos).
 
-If you use a bundler (Webpack, Parcel, Vite...), you can use `/js/dist/*.js` files which are UMD ready.
+Si usas un paquete (Webpack, Parcel, Vite...), puedes usar los archivos `/js/dist/*.js` que están preparados para UMD.
 
-## Usage with JavaScript frameworks
+## Uso con frameworks de JavaScript
 
-While the Bootstrap CSS can be used with any framework, **the Bootstrap JavaScript is not fully compatible with JavaScript frameworks like React, Vue, and Angular** which assume full knowledge of the DOM. Both Bootstrap and the framework may attempt to mutate the same DOM element, resulting in bugs like dropdowns that are stuck in the "open" position.
+Si bien Bootstrap CSS se puede usar con cualquier framework, **Bootstrap JavaScript no es totalmente compatible con frameworks de JavaScript como React, Vue y Angular** que asumen un conocimiento completo del DOM. Tanto Bootstrap como el framework pueden intentar mutar el mismo elemento DOM, lo que genera errores como menús desplegables que se atascan en la posición "abierta".
 
-A better alternative for those using this type of frameworks is to use a framework-specific package **instead of** the Bootstrap JavaScript. Here are some of the most popular options:
+Una mejor alternativa para aquellos que usan este tipo de frameworks es usar un paquete específico del framework **en lugar de** el JavaScript de Bootstrap. Estas son algunas de las opciones más populares:
 
 - React: [React Bootstrap](https://react-bootstrap.github.io/)
-- Vue: [BootstrapVue](https://bootstrap-vue.org/) (currently only supports Vue 2 and Bootstrap 4)
+- Vue: [BootstrapVue](https://bootstrap-vue.org/) (actualmente solo es compatible con Vue 2 y Bootstrap 4)
 - Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
 
-## Using Bootstrap as a module
+## Usar Bootstrap como módulo
 
 {{< callout >}}
-**Try it yourself!** Download the source code and working demo for using Bootstrap as an ES module from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/sass-js-esm). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html).
+**¡Pruébalo tú mismo!** Descarga el código fuente y la demostración de trabajo para usar Bootstrap como un módulo ES del [repositorio twbs/examples](https://github.com/twbs/examples/tree/main/sass-js-esm). También puedes [abrir el ejemplo en StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html).
 {{< /callout >}}
 
-We provide a version of Bootstrap built as `ESM` (`bootstrap.esm.js` and `bootstrap.esm.min.js`) which allows you to use Bootstrap as a module in the browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
+Proporcionamos una versión de Bootstrap creada como `ESM` (`bootstrap.esm.js` y `bootstrap.esm.min.js`) que te permite usar Bootstrap como un módulo en el navegador, si tus [navegadores específicos lo admiten](https://caniuse.com/es6-module).
 
 ```html
 <script type="module">
@@ -39,20 +39,20 @@ We provide a version of Bootstrap built as `ESM` (`bootstrap.esm.js` and `bootst
 </script>
 ```
 
-Compared to JS bundlers, using ESM in the browser requires you to use the full path and filename instead of the module name. [Read more about JS modules in the browser.](https://v8.dev/features/modules#specifiers) That's why we use `'bootstrap.esm.min.js'` instead of `'bootstrap'` above. However, this is further complicated by our Popper dependency, which imports Popper into our JavaScript like so:
+En comparación con los paquetes de JS, el uso de ESM en el navegador requiere que uses la ruta completa y el nombre de archivo en lugar del nombre del módulo. [Lee más sobre los módulos JS en el navegador.](https://v8.dev/features/modules#specifiers) Es por eso que usamos `'bootstrap.esm.min.js'` en lugar de `'bootstrap'` anterior. Sin embargo, esto se complica aún más por nuestra dependencia de Popper, que importa Popper a nuestro JavaScript de la siguiente manera:
 
 <!-- eslint-skip -->
 ```js
 import * as Popper from "@popperjs/core"
 ```
 
-If you try this as-is, you'll see an error in the console like the following:
+Si intentas esto tal como está, verás un error en la consola como el siguiente:
 
 ```text
 Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relative references must start with either "/", "./", or "../".
 ```
 
-To fix this, you can use an `importmap` to resolve the arbitrary module names to complete paths. If your [targeted browsers](https://caniuse.com/?search=importmap) do not support `importmap`, you'll need to use the [es-module-shims](https://github.com/guybedford/es-module-shims) project. Here's how it works for Bootstrap and Popper:
+Para solucionar esto, puedeS usar un `importmap` para resolver los nombres de módulos arbitrarios para completar las rutas. Si tus [navegadores de destino](https://caniuse.com/?search=importmap) no son compatibles con `importmap`, deberás usar [es-module-shims]([https://github.com/ proyecto guybedford/es-module-shims](https://github.com/guybedford/es-module-shims). Así es como funciona para Bootstrap y Popper:
 
 ```html
 <!doctype html>
@@ -61,10 +61,10 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
-    <title>Hello, modularity!</title>
+    <title>¡Hola, modularidad!</title>
   </head>
   <body>
-    <h1>Hello, modularity!</h1>
+    <h1>¡Hola, modularidad!</h1>
     <button id="popoverButton" type="button" class="btn btn-primary btn-lg" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="ESM in Browser" data-bs-content="Bang!">Custom popover</button>
 
     <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
@@ -85,72 +85,72 @@ To fix this, you can use an `importmap` to resolve the arbitrary module names to
 </html>
 ```
 
-## Dependencies
+## Dependencias
 
-Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs.
+Algunos complementos y componentes CSS dependen de otros complementos. Si incluyes plugins individualmente, asegúrate de comprobar si existen estas dependencias en los documentos.
 
-Our dropdowns, popovers, and tooltips also depend on [Popper](https://popper.js.org/).
+Nuestros dropdowns, popovers y tooltips también dependen de [Popper](https://popper.js.org/).
 
-## Data attributes
+## Atributos de datos
 
-Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
+Casi todos los complementos de Bootstrap se pueden habilitar y configurar solo a través de HTML con atributos de datos (nuestra forma preferida de usar la funcionalidad de JavaScript). Asegúrate de **solo usar un conjunto de atributos de datos en un solo elemento** (por ejemplo, no puedes activar un tooltip y un modal desde el mismo botón).
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}
 {{< /markdown >}}
 
-## Selectors
+## Selectores
 
-We use the native `querySelector` and `querySelectorAll` methods to query DOM elements for performance reasons, so you must use [valid selectors](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier). If you use special selectors like `collapse:Example`, be sure to escape them.
+Usamos los métodos nativos `querySelector` y `querySelectorAll` para consultar elementos DOM por motivos de rendimiento, por lo que debes usar [selectores válidos](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier). Si usas selectores especiales como `collapse:Example`, asegúrate de escaparlos.
 
-## Events
+## Eventos
 
-Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
+Bootstrap proporciona eventos personalizados para la mayoría de las acciones únicas de los complementos. En general, estos vienen en forma de infinitivo y participio pasado, donde el infinitivo (p. ej., `show`) se activa al comienzo de un evento, y su forma de participio pasado (p. ej., `shown`) se activa al finalizar un evento.
 
-All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call `preventDefault()`.
+Todos los eventos en infinitivo proporcionan la funcionalidad [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault). Esto proporciona la capacidad de detener la ejecución de una acción antes de que comience. Devolver falso desde un controlador de eventos también llamará automáticamente a `preventDefault()`.
 
 ```js
 const myModal = document.querySelector('#myModal')
 
 myModal.addEventListener('show.bs.modal', event => {
   if (!data) {
-    return event.preventDefault() // stops modal from being shown
+    return event.preventDefault() // evita que se muestre el modal
   }
 })
 ```
 
-## Programmatic API
+## API programática
 
-All constructors accept an optional options object or nothing (which initiates a plugin with its default behavior):
+Todos los constructores aceptan un objeto de opciones opcionales o nada (que inicia un complemento con su comportamiento predeterminado):
 
 ```js
 const myModalEl = document.querySelector('#myModal')
 
-const modal = new bootstrap.Modal(myModalEl) // initialized with defaults
+const modal = new bootstrap.Modal(myModalEl) // inicializado con valores predeterminados
 
 const configObject = { keyboard: false }
-const modal1 = new bootstrap.Modal(myModalEl, configObject) // initialized with no keyboard
+const modal1 = new bootstrap.Modal(myModalEl, configObject) // inicializado sin teclado
 ```
 
-If you'd like to get a particular plugin instance, each plugin exposes a `getInstance` method. For example, to retrieve an instance directly from an element:
+Si deseas obtener una instancia de complemento en particular, cada complemento expone un método `getInstance`. Por ejemplo, para recuperar una instancia directamente de un elemento:
 
 ```js
 bootstrap.Popover.getInstance(myPopoverEl)
 ```
 
-This method will return `null` if an instance is not initiated over the requested element.
+Este método devolverá `null` si no se inicia una instancia sobre el elemento solicitado.
 
-Alternatively, `getOrCreateInstance` can be used to get the instance associated with a DOM element, or create a new one in case it wasn't initialized.
+Alternativamente, se puede usar `getOrCreateInstance` para obtener la instancia asociada con un elemento DOM, o crear una nueva en caso de que no se haya inicializado.
 
 ```js
 bootstrap.Popover.getOrCreateInstance(myPopoverEl, configObject)
 ```
 
-In case an instance wasn't initialized, it may accept and use an optional configuration object as second argument.
+En caso de que una instancia no se haya inicializado, puedes aceptar y usar un objeto de configuración opcional como segundo argumento.
 
-### CSS selectors in constructors
+### Selectores CSS en constructores
 
-In addition to the `getInstance` and `getOrCreateInstance` methods, all plugin constructors can accept a DOM element or a valid [CSS selector](#selectors) as the first argument. Plugin elements are found with the `querySelector` method since our plugins only support a single element.
+Además de los métodos `getInstance` y `getOrCreateInstance`, todos los constructores de complementos pueden aceptar un elemento DOM o un [selector CSS](#selectores) válido como primer argumento. Los elementos del complemento se encuentran con el método `querySelector` ya que nuestros complementos solo admiten un único elemento.
 
 ```js
 const modal = new bootstrap.Modal('#myModal')
@@ -159,83 +159,83 @@ const offcanvas = bootstrap.Offcanvas.getInstance('#myOffcanvas')
 const alert = bootstrap.Alert.getOrCreateInstance('#myAlert')
 ```
 
-### Asynchronous functions and transitions
+### Funciones asíncronas y transiciones
 
-All programmatic API methods are **asynchronous** and return to the caller once the transition is started, but **before it ends**. In order to execute an action once the transition is complete, you can listen to the corresponding event.
+Todos los métodos programáticos de la API son **asíncronos** y regresan al punto de la llamada una vez que se inicia la transición, pero **antes de que finalice**. Para ejecutar una acción una vez completada la transición, puedes escuchar el evento correspondiente.
 
 ```js
 const myCollapseEl = document.querySelector('#myCollapse')
 
 myCollapseEl.addEventListener('shown.bs.collapse', event => {
-  // Action to execute once the collapsible area is expanded
+  // Acción a ejecutar una vez que se expande el área colapsable
 })
 ```
 
-In addition, a method call on a **transitioning component will be ignored**.
+Además, se ignorará una llamada de método en un **componente en transición**.
 
 ```js
 const myCarouselEl = document.querySelector('#myCarousel')
-const carousel = bootstrap.Carousel.getInstance(myCarouselEl) // Retrieve a Carousel instance
+const carousel = bootstrap.Carousel.getInstance(myCarouselEl) // Devuelve una instancia Carousel
 
 myCarouselEl.addEventListener('slid.bs.carousel', event => {
-  carousel.to('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished
+  carousel.to('2') // Se deslizará a la diapositiva 2 tan pronto como finalice la transición a la diapositiva 1
 })
 
-carousel.to('1') // Will start sliding to the slide 1 and returns to the caller
-carousel.to('2') // !! Will be ignored, as the transition to the slide 1 is not finished !!
+carousel.to('1') // Comenzará a deslizarse a la diapositiva 1 y volverá al punto de la llamada
+carousel.to('2') // !! Se ignorará, ya que la transición a la diapositiva 1 no ha finalizado. !!
 ```
 
-#### `dispose` method
+#### Método `dispose`
 
-While it may seem correct to use the `dispose` method immediately after `hide()`, it will lead to incorrect results. Here's an example of the problem use:
+Si bien puede parecer correcto usar el método `dispose` inmediatamente después de `hide()`, conducirá a resultados incorrectos. He aquí un ejemplo del problema de uso:
 
 ```js
 const myModal = document.querySelector('#myModal')
-myModal.hide() // it is asynchronous
+myModal.hide() // esto es asincrónico
 
 myModal.addEventListener('shown.bs.hidden', event => {
   myModal.dispose()
 })
 ```
 
-### Default settings
+### Configuración por defecto
 
-You can change the default settings for a plugin by modifying the plugin's `Constructor.Default` object:
+Puedes cambiar la configuración predeterminada de un complemento modificando el objeto `Constructor.Default` del complemento:
 
 ```js
-// changes default for the modal plugin's `keyboard` option to false
+// cambia el valor predeterminado de la opción `keyboard` del complemento modal a false
 bootstrap.Modal.Default.keyboard = false
 ```
 
-## Methods and properties
+## Métodos y propiedades
 
-Every Bootstrap plugin exposes the following methods and static properties.
+Cada complemento de Bootstrap expone los siguientes métodos y propiedades estáticas.
 
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
-| `getInstance` | *Static* method which allows you to get the modal instance associated with a DOM element. |
-| `getOrCreateInstance` | *Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `dispose` | Destruye el modal de un elemento. (Elimina los datos almacenados en el elemento DOM) |
+| `getInstance` | Método *estático* que te permite obtener la instancia modal asociada con un elemento DOM. |
+| `getOrCreateInstance` | Método *estático* que te permite obtener la instancia modal asociada con un elemento DOM, o crear una nueva en caso de que no lo fuera inicializada. |
 {{< /bs-table >}}
 
 {{< bs-table "table" >}}
 | Static property | Description |
 | --- | --- |
-| `NAME`  | Returns the plugin name. (Example: `bootstrap.Tooltip.NAME`) |
-| `VERSION`  | The version of each of Bootstrap's plugins can be accessed via the `VERSION` property of the plugin's constructor (Example: `bootstrap.Tooltip.VERSION`) |
+| `NAME`  | Devuelve el nombre del complemento. (Ejemplo: `bootstrap.Tooltip.NAME`) |
+| `VERSION`  | Se puede acceder a la versión de cada uno de los complementos de Bootstrap a través de la propiedad `VERSION` del constructor del complemento (Ejemplo: `bootstrap.Tooltip.VERSION`) |
 {{< /bs-table >}}
 
 ## Sanitizer
 
-Tooltips and Popovers use our built-in sanitizer to sanitize options which accept HTML.
+Tooltips y popovers utilizan nuestro desinfectante incorporado para desinfectar las opciones que aceptan HTML.
 
-The default `allowList` value is the following:
+El valor predeterminado de `allowList` es el siguiente:
 
 ```js
 const ARIA_ATTRIBUTE_PATTERN = /^aria-[\w-]*$/i
 const DefaultAllowlist = {
-  // Global attributes allowed on any supplied element below.
+  // Atributos globales permitidos en cualquier elemento proporcionado a continuación.
   '*': ['class', 'dir', 'id', 'lang', 'role', ARIA_ATTRIBUTE_PATTERN],
   a: ['target', 'href', 'title', 'rel'],
   area: [],
@@ -269,24 +269,24 @@ const DefaultAllowlist = {
 }
 ```
 
-If you want to add new values to this default `allowList` you can do the following:
+Si deseas agregar nuevos valores a esta `allowList` predeterminada, puedes hacer lo siguiente:
 
 ```js
 const myDefaultAllowList = bootstrap.Tooltip.Default.allowList
 
-// To allow table elements
+// Para permitir elementos de la tabla
 myDefaultAllowList.table = []
 
-// To allow td elements and data-bs-option attributes on td elements
+// Para permitir elementos td y atributos data-bs-option en elementos td
 myDefaultAllowList.td = ['data-bs-option']
 
-// You can push your custom regex to validate your attributes.
-// Be careful about your regular expressions being too lax
+// Puedes enviar tu expresión regular personalizada para validar sus atributos.
+// Ten cuidado de que tus expresiones regulares sean demasiado laxas
 const myCustomRegex = /^data-my-app-[\w-]+/
 myDefaultAllowList['*'].push(myCustomRegex)
 ```
 
-If you want to bypass our sanitizer because you prefer to use a dedicated library, for example [DOMPurify](https://www.npmjs.com/package/dompurify), you should do the following:
+Si deseas omitir nuestro desinfectante porque prefieres usar una biblioteca dedicada, por ejemplo [DOMPurify](https://www.npmjs.com/package/dompurify), debes hacer lo siguiente:
 
 ```js
 const yourTooltipEl = document.querySelector('#yourTooltip')
@@ -297,41 +297,41 @@ const tooltip = new bootstrap.Tooltip(yourTooltipEl, {
 })
 ```
 
-## Optionally using jQuery
+## Opcionalmente uso de jQuery
 
-**You don't need jQuery in Bootstrap 5**, but it's still possible to use our components with jQuery. If Bootstrap detects `jQuery` in the `window` object, it'll add all of our components in jQuery's plugin system. This allows you to do the following:
-
-```js
-$('[data-bs-toggle="tooltip"]').tooltip() // to enable tooltips, with default configuration
-
-$('[data-bs-toggle="tooltip"]').tooltip({ boundary: 'clippingParents', customClass: 'myClass' }) // to initialize tooltips with given configuration
-
-$('#myTooltip').tooltip('show') // to trigger `show` method
-```
-
-The same goes for our other components.
-
-### No conflict
-
-Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
+**No necesitas jQuery en Bootstrap 5**, pero aún es posible usar nuestros componentes con jQuery. Si Bootstrap detecta `jQuery` en el objeto `window`, agregará todos nuestros componentes en el sistema de complementos de jQuery. Esto te permite hacer lo siguiente:
 
 ```js
-const bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-$.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
+$('[data-bs-toggle="tooltip"]').tooltip() // para habilitar tooltips, con la configuración predeterminada
+
+$('[data-bs-toggle="tooltip"]').tooltip({ boundary: 'clippingParents', customClass: 'myClass' }) // para inicializar tooltips con la configuración dada
+
+$('#myTooltip').tooltip('show') // para activar el método `show`
 ```
 
-Bootstrap does not officially support third-party JavaScript libraries like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
+Lo mismo ocurre con nuestros otros componentes.
 
-### jQuery events
+### Sin conflicto
 
-Bootstrap will detect jQuery if `jQuery` is present in the `window` object and there is no `data-bs-no-jquery` attribute set on `<body>`. If jQuery is found, Bootstrap will emit events thanks to jQuery's event system. So if you want to listen to Bootstrap's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
+A veces es necesario usar complementos de Bootstrap con otros frameworks de interfaz de usuario. En estas circunstancias, ocasionalmente pueden ocurrir colisiones de espacios de nombres. Si esto sucede, puedes llamar a `.noConflict` en el complemento cuyo valor deseas revertir.
+
+```js
+const bootstrapButton = $.fn.button.noConflict() // devuelve $.fn.button al valor previamente asignado
+$.fn.bootstrapBtn = bootstrapButton // da a $().bootstrapBtn la funcionalidad Bootstrap
+```
+
+Bootstrap no admite oficialmente bibliotecas de JavaScript de terceros como Prototype o jQuery UI. A pesar de `.noConflict` y los eventos de espacio de nombres, puede haber problemas de compatibilidad que debas solucionar por tu cuenta.
+
+### Eventos jQuery
+
+Bootstrap detectará jQuery si `jQuery` está presente en el objeto `window` y no hay ningún atributo `data-bs-no-jquery` establecido en `<body>`. Si se encuentra jQuery, Bootstrap emitirá eventos gracias al sistema de eventos de jQuery. Entonces, si deseas escuchar los eventos de Bootstrap, deberás usar los métodos jQuery (`.on`, `.one`) en lugar de `addEventListener`.
 
 ```js
 $('#myTab a').on('shown.bs.tab', () => {
-  // do something...
+  // hacer algo...
 })
 ```
 
-## Disabled JavaScript
+## JavaScript deshabilitado
 
-Bootstrap's plugins have no special fallback when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.
+Los complementos de Bootstrap no tienen un respaldo especial cuando JavaScript está deshabilitado. Si te importa la experiencia del usuario en este caso, usa [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) para explicar la situación (y cómo volver a habilitar JavaScript) para tus usuarios y/o agrega tus propios recursos alternativos personalizados.
