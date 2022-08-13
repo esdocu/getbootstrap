@@ -16,6 +16,10 @@ Bootstrap está construido con flexbox, pero no se ha cambiado la propiedad `dis
 
 Si necesitas agregar `display: flex` a un elemento, hazlo con `.d-flex` o una de las variantes responsive (por ejemplo, `.d-sm-flex`). Necesitarás esta clase o el valor `display` para permitir el uso de nuestras [utilidades flexbox]({{< docsref "/utilities/flex" >}}) adicionales para ajustar el tamaño, la alineación, el espaciado y más.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Margin y padding
 
 Usa `margin` y `padding` [utilidades de espaciado]({{< docsref "/utilities/spacing" >}}) para controlar cómo se espacian y dimensionan los elementos y componentes. Bootstrap incluye una escala de seis niveles para las utilidades de espaciado, basada en una variable `$spacer` predeterminada de valor `1rem`. Elije valores para todos los viewports (p. ej., `.me-3` para `margin-right: 1rem` en LTR) o elije variantes responsive para apuntar a viewports específicos (p. ej., `.me-md-3` para `margin-right: 1rem` —en LTR— comenzando en el punto de interrupción `md`).

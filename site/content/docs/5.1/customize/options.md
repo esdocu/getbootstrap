@@ -9,6 +9,10 @@ Personaliza Bootstrap con nuestro archivo de variables personalizadas incorporad
 
 Puedes encontrar y personalizar estas variables para opciones globales clave en el archivo `scss/_variables.scss` de Bootstrap.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 {{< bs-table "table text-start" >}}
 | Variable                       | Values                             | Description                                                                            |
 | ------------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------- |

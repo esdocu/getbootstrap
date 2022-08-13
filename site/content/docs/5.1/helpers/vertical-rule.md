@@ -30,6 +30,10 @@ Las reglas verticales escalan su altura en diseños flexibles:
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Con pilas (stacks)
 
 También se pueden usar en [stacks]({{< docsref "/helpers/stacks" >}}):

@@ -22,6 +22,10 @@ Nos sumergiremos más a fondo en cada uno de estos puntos, pero en general, esto
 - Siempre que sea posible, se usan utilidades sobre estilos personalizados
 - Siempre que sea posible, se evita aplicar requisitos HTML estrictos (selectores hijos)
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Responsive
 
 Los estilos responsive de Bootstrap están diseñados para ser responsive, un enfoque que a menudo se denomina _mobile-first_. Usamos este término en nuestros documentos y en gran parte estamos de acuerdo con él, pero a veces puede ser demasiado amplio. Si bien no todos los componentes _deben_ ser completamente responsive en Bootstrap, este enfoque responsive trata de reducir las sobrescrituras de CSS al presionarlo para agregar estilos a medida que el viewport se vuelve más grande.
@@ -76,6 +80,10 @@ Específicamente en lo que respecta a CSS personalizado, las utilidades pueden a
 ## HTML flexible
 
 Si bien no siempre es posible, nos esforzamos por evitar ser demasiado dogmáticos en nuestros requisitos HTML para los componentes. Por lo tanto, nos enfocamos en clases individuales en nuestros selectores CSS y tratamos de evitar los selectores hijos inmediatos (`>`). Esto te brinda más flexibilidad en tu implementación y ayuda a mantener nuestro CSS más simple y menos específico.
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Convenciones de código
 

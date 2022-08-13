@@ -114,6 +114,10 @@ Puedes reemplazar el texto dentro de `.navbar-brand` con `<img>`.
 </nav>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 #### Imagen y texto
 
 También puedes hacer uso de algunas utilidades adicionales para agregar una imagen y texto al mismo tiempo. Ten en cuenta la adición de `.d-inline-block` y `.align-text-top` en `<img>`.
@@ -424,6 +428,10 @@ Tematizar la barra de navegación nunca ha sido tan fácil gracias a la combinac
 </nav>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Contenedores
 
 Aunque no es obligatorio, puedes envolver una barra de navegación en un `.container` para centrarla en una página, aunque ten en cuenta que aún se requiere un contenedor interno. O puedes agregar un contenedor dentro de `.navbar` para centrar solo el contenido de una [barra de navegación superior fija o estática](#placement).
@@ -726,6 +734,10 @@ Para crear una barra de navegación fuera del lienzo que se expanda a una barra 
   </div>
 </nav>
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Sass
 

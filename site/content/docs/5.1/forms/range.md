@@ -42,6 +42,10 @@ De forma predeterminada, las entradas de rango se "ajustan" a valores enteros. P
 <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Sass
 
 ### Variables

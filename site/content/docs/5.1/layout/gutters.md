@@ -46,6 +46,10 @@ Una solución alternativa es agregar un contenedor alrededor de `.row` con la cl
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Gutters verticales
 
 Las clases `.gy-*` se pueden usar para controlar los anchos de los gutters verticales. Al igual que los gutters horizontales, los gutters verticales pueden provocar un desbordamiento debajo de la `.row` al final de una página. Si esto ocurre, agrega un contenedor alrededor de `.row` con la clase `.overflow-hidden`:
@@ -132,6 +136,10 @@ Las clases de gutters también se pueden agregar a [columnas de fila]({{< docsre
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Sin gutters
 

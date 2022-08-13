@@ -17,6 +17,10 @@ Ah, ¿y mencionamos que son completamente de código abierto? Con licencia del M
 
 [Obtén más información sobre los íconos de Bootstrap]({{< param icons >}}), incluido cómo instalarlos y el uso recomendado.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Alternativas
 
 Hemos probado y utilizado estos conjuntos de iconos como alternativas preferidas a los iconos de Bootstrap.

@@ -79,6 +79,10 @@ Usar `mix()` no es lo mismo que `lighten()` y `darken()`: el primero combina el 
 
 Nuestras funciones `tint-color()` y `shade-color()` usan `mix()` junto con nuestra variable `$theme-color-interval`, que especifica un valor porcentual escalonado para cada color mezclado que producimos. Consulta los archivos `scss/_functions.scss` y `scss/_variables.scss` para obtener el código fuente completo.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Mapas Sass de colores
 
 Los archivos fuente de Sass de Bootstrap incluyen tres mapas para ayudarte a recorrer rápida y fácilmente una lista de colores y sus valores hexadecimales.
@@ -106,6 +110,10 @@ Así es como puedes usarlos en tu Sass:
 ```
 
 Las clases de utilidad [Color]({{< docsref "/utilities/colors" >}}) y [background]({{< docsref "/utilities/background" >}}) también están disponibles para configurar `color` y `background-color` utilizando los valores de color `500`.
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Generación de utilidades
 

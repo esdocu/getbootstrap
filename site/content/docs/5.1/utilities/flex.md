@@ -137,6 +137,10 @@ También existen variaciones responsive para `justify-content`.
 {{< /flex.inline >}}
 {{< /markdown >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Alinear elementos
 
 Usa las utilidades `align-items` en los contenedores de flexbox para cambiar la alineación de los elementos flexibles en el eje transversal (el eje y para start, el eje x si es `flex-direction: column`). Elije entre `start`, `end`, `center`, `baseline`, or `stretch` (predeterminado del navegador).
@@ -340,6 +344,10 @@ Mueve verticalmente un elemento flexible a la parte superior o inferior de un co
   <div class="mt-auto p-2 bd-highlight">Elemento flex</div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Envoltura
 
@@ -655,6 +663,10 @@ Y digamos que quieres centrar verticalmente el contenido al lado de la imagen:
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Sass
 

@@ -20,4 +20,8 @@ Bootstrap es mantenido por el equipo fundador y un pequeño grupo de valiosos co
 </div>
 {{< /team.inline >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 Participa en el desarrollo de Bootstrap [abriendo un issue]({{< param repo >}}/issues/new) o enviando un pull request. Lee nuestras [directrices de contribución]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) para obtener información sobre cómo desarrollamos.

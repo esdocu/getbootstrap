@@ -33,6 +33,10 @@ Usa una lista ordenada o desordenada con elementos de lista vinculados para crea
 </nav>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Divisores
 
 Los divisores se agregan automáticamente en CSS a través de [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) y [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). Se pueden cambiar modificando una propiedad personalizada CSS local `--bs-breadcrumb-divider`, o a través de la variable Sass `$breadcrumb-divider` y `$breadcrumb-divider-flipped` para su contraparte RTL, si es necesario. Usamos de forma predeterminada nuestra variable Sass, que se establece como una alternativa (fallback) a la propiedad personalizada. De esta manera, obtienes un divisor global que puedes sobrescribir sin volver a compilar CSS en ningún momento.

@@ -79,6 +79,10 @@ Agrega las clases de tamaño de formulario relativo al propio `.input-group` y e
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Checkboxes y radios
 
 Coloca cualquier casilla de verificación u opción de radio dentro de un complemento de grupo de inputs en lugar de texto. Recomendamos agregar `.mt-0` a `.form-check-input` cuando no haya texto visible junto a la entrada.
@@ -203,6 +207,10 @@ Se admiten múltiples complementos y se pueden combinar con versiones de casilla
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Botones segmentados
 
 {{< example >}}
@@ -308,6 +316,10 @@ Los grupos de inputs incluyen soporte para selects personalizadas y entradas de 
   <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Botón</button>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Sass
 

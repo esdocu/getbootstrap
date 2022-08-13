@@ -71,6 +71,10 @@ En el siguiente ejemplo, tomamos un componente de tarjeta típico y lo recreamos
 </div>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## ¿Cómo funciona un placeholder?
 
 Crea marcadores de posición con la clase `.placeholder` y una clase de columna de cuadrícula (por ejemplo, `.col-6`) para establecer el `width`. Pueden reemplazar el texto dentro de un elemento o agregarse como una clase modificadora a un componente existente.
@@ -136,6 +140,10 @@ Anima marcadores de posición con `.placeholder-glow` o `.placeholder-wave` para
   <span class="placeholder col-12"></span>
 </p>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Sass
 

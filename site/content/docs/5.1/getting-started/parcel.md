@@ -33,6 +33,10 @@ project-name/
 └── package.json
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Importación de JavaScript
 
 Importa el [JavaScript de Bootstrap]({{< docsref "/getting-started/javascript" >}}) en el punto de entrada de su aplicación (generalmente `src/index.js`). Puedes importar todos nuestros plugins en un archivo o por separado si necesitas solo un subconjunto de ellos.

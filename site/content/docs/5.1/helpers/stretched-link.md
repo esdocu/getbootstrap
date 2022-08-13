@@ -48,6 +48,10 @@ La mayoría de los componentes personalizados no tienen `position: relative` de 
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Identificando el bloque contenedor
 
 Si el enlace ampliado no parece funcionar, el [bloque contenedor](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block) probablemente sea la causa. Las siguientes propiedades CSS harán que un elemento sea el bloque contenedor:

@@ -70,6 +70,10 @@ Puedes ver los requisitos anteriores reflejados en esta plantilla de inicio de R
 
 Comienza con uno de nuestros varios [ejemplos de RTL]({{< docsref "/examples/#rtl" >}}).
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Enfoque
 
 Nuestro enfoque para incorporar la compatibilidad con RTL en Bootstrap viene con dos decisiones importantes que afectan la forma en que escribimos y usamos nuestro CSS:
@@ -176,6 +180,10 @@ Si bien este enfoque es comprensible, presta atención a lo siguiente:
 ## El caso de la miga de pan
 
 El [separador de migas de pan]({{< docsref "/components/breadcrumb" >}}/#changing-the-separator) es el único caso que requiere tu propia variable nueva, a saber, `$breadcrumb-divider-flipped`, que por defecto es `$breadcrumb-divider`.
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Recursos adicionales
 

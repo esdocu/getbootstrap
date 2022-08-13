@@ -62,6 +62,10 @@ Haz clic en los acordeones a continuación para expandir/contraer el contenido d
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Flush
 
 Agrega `.accordion-flush` para eliminar el `background-color` predeterminado, algunos bordes y algunas esquinas redondeadas para representar los acordeones de borde a borde con su contenedor padre.
@@ -145,6 +149,10 @@ Omite el atributo `data-bs-parent` en cada `.accordion-collapse` para que los el
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Accesibilidad
 

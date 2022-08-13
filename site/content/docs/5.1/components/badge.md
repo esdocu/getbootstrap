@@ -35,6 +35,10 @@ Ten en cuenta que, dependiendo de cómo se utilicen, las insignias pueden result
 
 A menos que el contexto sea claro (como en el ejemplo de "Notificaciones", donde se entiende que el "4" es el número de notificaciones), considera incluir un contexto adicional con un texto adicional oculto visualmente.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Posicionado
 
 Usa las utilidades para modificar un `.badge` y colócalo en la esquina de un enlace o botón.
@@ -87,6 +91,10 @@ Usa la clase de utilidad `.rounded-pill` para hacer que las insignias sean más 
 {{< /example >}}
 
 ## Sass
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### Variables
 

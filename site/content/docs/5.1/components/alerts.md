@@ -78,6 +78,10 @@ Las alertas también pueden contener elementos HTML adicionales como encabezados
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Iconos
 
 De manera similar, puedes usar [utilidades flexbox]({{< docsref "/utilities/flex" >}}) y [Bootstrap Icons]({{< param icons >}}) para crear alertas con íconos. Dependiendo de tus íconos y contenido, es posible que desees agregar más utilidades o estilos personalizados.
@@ -182,6 +186,10 @@ Bucle que genera las clases modificadoras con el mixin `alert-variant()`.
 
 {{< scss-docs name="alert-modifiers" file="scss/_alert.scss" >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Comportamiento de JavaScript
 
 ### Inicializar
@@ -258,6 +266,10 @@ var alertNode = document.querySelector('.alert')
 var alert = bootstrap.Alert.getInstance(alertNode)
 alert.close()
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

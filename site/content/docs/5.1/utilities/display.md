@@ -48,6 +48,10 @@ Las media queries afectan los anchos de pantalla con el breakpoint dado *o mayor
 <span class="d-block p-2 bg-dark text-white">d-block</span>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Ocultar elementos
 
 Para un desarrollo optimizado para dispositivos móviles más rápido, usa clases de visualización responsive para mostrar y ocultar elementos por dispositivo. Evita crear versiones completamente diferentes del mismo sitio; en su lugar, oculta los elementos de forma que respondan a cada tamaño de pantalla.
@@ -127,6 +131,10 @@ Para mostrar un elemento solo en un intervalo dado de tamaños de pantalla, pued
 <div class="d-lg-none">Oculto en lg y pantallas más anchas</div>
 <div class="d-none d-lg-block">Oculto en pantallas más pequeñas que lg</div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Display al imprimir
 

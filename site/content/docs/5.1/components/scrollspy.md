@@ -96,6 +96,10 @@ Desplázate por el área debajo de la barra de navegación y observa cómo cambi
 </div>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Ejemplo con navegación anidada
 
 Scrollspy también funciona con `.nav`s anidados. Si un `.nav` anidado es `.active`, sus padres también serán `.active`. Desplázate por el área junto a la barra de navegación y observa cómo cambia la clase activa.
@@ -225,6 +229,10 @@ Scrollspy también funciona con `.list-group`s. Desplázate por el área junto a
 </div>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Uso
 
 ### A través de atributos de datos
@@ -341,6 +349,10 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
     </tr>
   </tbody>
 </table>
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

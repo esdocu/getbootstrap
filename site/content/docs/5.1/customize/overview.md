@@ -41,6 +41,10 @@ Para aquellos que quieran usar los archivos de distribución, revisen la [págin
 
 A medida que te familiarices con Bootstrap, continúa explorando esta sección para obtener más detalles sobre cómo utilizar nuestras opciones globales, cómo cambiar nuestro sistema de color, cómo construimos nuestros componentes, cómo usar nuestra creciente lista de propiedades personalizadas de CSS y cómo optimizar tu código al construir con Bootstrap.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## CSP y SVG integrados
 
 Varios componentes de Bootstrap incluyen SVG incrustados en nuestro CSS para diseñar componentes de manera consistente y sencilla en todos los navegadores y dispositivos. **Para organizaciones con configuraciones de <abbr title="Content Security Policy">CSP</abbr> más estrictas**, hemos documentado todas las instancias de nuestros SVG integrados (todos los cuales se aplican a través de `background-image`) para que puedas revisar más a fondo sus opciones.

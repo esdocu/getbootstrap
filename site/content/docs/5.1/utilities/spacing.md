@@ -45,6 +45,10 @@ Donde *size* es uno de:
 
 (Puedes agregar más tamaños agregando entradas a la variable de mapa Sass `$spacers`).
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Ejemplos
 
 Estos son algunos ejemplos representativos de estas clases:
@@ -109,6 +113,10 @@ Al usar `display: grid`, puede utilizar las utilidades `gap` en el contenedor de
 {{< /example >}}
 
 El soporte incluye opciones responsive para todos los puntos de interrupción de la cuadrícula de Bootstrap, así como seis tamaños del mapa `$spacers` (`0`–`5`). No hay clase de utilidad `.gap-auto` ya que es efectivamente lo mismo que `.gap-0`.
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Sass
 

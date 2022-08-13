@@ -22,6 +22,10 @@ toc: true
 
 Usa las utilidades de alineación de flexbox para alinear columnas vertical y horizontalmente.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Alineamiento vertical
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
@@ -146,6 +150,10 @@ Si se colocan más de 12 columnas dentro de una sola fila, cada grupo de columna
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### Saltos de columna
 
@@ -282,6 +290,10 @@ Con el cambio a flexbox en v4, puedes usar utilidades de margen como `.me-auto` 
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Clases de columna independientes
 

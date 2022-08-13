@@ -114,6 +114,10 @@ Crea listas de contenido en una tarjeta con un grupo de listas flush.
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Kitchen sink
 
 Mezcla y combina múltiples tipos de contenido para crear la tarjeta que necesitas, o coloca todo allí. A continuación se muestran estilos de imagen, bloques, estilos de texto y un grupo de listas, todo incluido en una tarjeta de ancho fijo.
@@ -388,6 +392,10 @@ Convierte una imagen en un fondo de tarjeta y superpon el texto de tu tarjeta. D
 
 {{< callout info >}}
 Ten en cuenta que el contenido no debe ser más grande que la altura de la imagen. Si el contenido es más grande que la imagen, el contenido se mostrará fuera de la imagen.
+{{< /callout >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
 {{< /callout >}}
 
 ## Horizontal
@@ -717,6 +725,10 @@ Al igual que con los grupos de tarjetas, los pies de página de las tarjetas se 
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Masonry
 

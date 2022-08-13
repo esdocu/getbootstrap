@@ -40,6 +40,10 @@ Generalmente, recomendamos usar un botón con el atributo `data-bs-target`. Si b
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Horizontal
 
 El complemento de Collapse también admite el colapso horizontal. Agrega la clase modificadora `.collapse-horizontal` para cambiar el `width` en lugar de `height` y establece un `width` en el elemento secundario inmediato. Siéntete libre de escribir tu propio Sass personalizado, usar estilos en línea o usar nuestras [utilidades de ancho]({{< docsref "/utilities/sizing" >}}).
@@ -140,6 +144,10 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 })
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ### Opciones
 
 Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega el nombre de la opción a `data-bs-`, como en `data-bs-parent=""`.
@@ -229,6 +237,10 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
     </tr>
   </tbody>
 </table>
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

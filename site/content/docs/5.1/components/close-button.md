@@ -22,6 +22,10 @@ Los botones de cierre deshabilitados cambian su `opacity`. También hemos aplica
 <button type="button" class="btn-close" disabled aria-label="Cerrar"></button>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Variante clara
 
 Cambia el `.btn-close` predeterminado para que sea blanco con la clase `.btn-close-white`. Esta clase usa la propiedad `filter` para invertir la `background-image`.

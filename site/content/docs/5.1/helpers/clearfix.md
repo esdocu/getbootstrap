@@ -26,6 +26,10 @@ Uso del mixin en SCSS:
 }
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 El siguiente ejemplo muestra cómo se puede utilizar clearfix. Sin clearfix, el div envolvente no se extendería alrededor de los botones, lo que causaría un diseño roto.
 
 {{< example >}}

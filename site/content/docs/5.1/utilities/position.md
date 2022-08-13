@@ -48,6 +48,10 @@ Donde *position* es uno de:
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Centrar elementos
 
 Además, también puedes centrar los elementos con la clase de utilidad de transformación `.translate-middle`.
@@ -122,6 +126,10 @@ Puedes usar estas clases con componentes existentes para crear otros nuevos. Rec
 Los valores de utilidad de posición predeterminados se declaran en un mapa Sass y luego se utilizan para generar nuestras utilidades.
 
 {{< scss-docs name="position-map" file="scss/_variables.scss" >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### API de utilidades
 

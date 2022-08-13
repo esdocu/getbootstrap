@@ -37,6 +37,10 @@ Algunos complementos y componentes CSS dependen de otros complementos. Si incluy
 
 Nuestros menús desplegables (dropdowns), popovers y tooltips también dependen de [Popper](https://popper.js.org/).
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## ¿Todavía quieres usar jQuery? ¡Es posible!
 
 Bootstrap 5 está diseñado para usarse sin jQuery, pero aún es posible usar nuestros componentes con jQuery. **Si Bootstrap detecta `jQuery` en el objeto `window`** agregará todos nuestros componentes en el sistema de complementos de jQuery; esto significa que podrás hacer `$('[data-bs-toggle="tooltip"]').tooltip()` para habilitar tooltips. Lo mismo ocurre con nuestros otros componentes.
@@ -102,6 +106,10 @@ var modal = new bootstrap.Modal('#myModal')
 var dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ### Funciones asíncronas y transiciones
 
 Todos los métodos programáticos de la API son **asíncronos** y regresan al de la llamada una vez que se inicia la transición, pero **antes de que finalice**.
@@ -164,6 +172,10 @@ Los complementos de Bootstrap no se recuperan de manera particularmente elegante
 ##### Bibliotecas de terceros
 
 **Bootstrap no admite oficialmente bibliotecas de JavaScript de terceros** como Prototype o jQuery UI. A pesar de `.noConflict` y los eventos con espacio de nombres, puede haber problemas de compatibilidad que debas solucionar por su cuenta.
+{{< /callout >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
 {{< /callout >}}
 
 ## Sanitizer

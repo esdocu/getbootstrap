@@ -154,6 +154,10 @@ Agrega `.list-group-horizontal` para cambiar el diseño de los elementos del gru
 {{< /list-group.inline >}}
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Clases contextuales
 
 Utiliza clases contextuales para aplicar estilo a los elementos de la lista con un color de fondo y de texto.
@@ -392,6 +396,10 @@ Puedes activar la navegación de un grupo de listas sin escribir JavaScript simp
 </div>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ### A través de JavaScript
 
 Habilita el elemento de la lista con pestañas a través de JavaScript (cada elemento de la lista debe activarse individualmente):
@@ -492,6 +500,10 @@ Método *estático* que te permite obtener la instancia de pestaña asociada con
 var triggerEl = document.querySelector('#trigger')
 var tab = bootstrap.Tab.getOrCreateInstance(triggerEl) // Devuelve una instancia de pestaña Bootstrap
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

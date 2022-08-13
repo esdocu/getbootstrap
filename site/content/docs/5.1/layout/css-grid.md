@@ -43,6 +43,10 @@ En comparación con el sistema de cuadrícula predeterminado:
 
 ## Ejemplos
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Tres columnas
 
 Se pueden crear tres columnas de igual ancho en todas los viewports y dispositivos usando las clases `.g-col-4`. Agrega [clases responsive](#responsive) para cambiar el diseño según el tamaño del viewport.
@@ -100,6 +104,10 @@ Las clases *start* tienen como objetivo reemplazar las clases de desplazamiento 
   <div class="g-col-4 g-start-6">.g-col-4 .g-start-6</div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Auto columnas
 
@@ -249,6 +257,10 @@ Por eso, puedes tener diferentes `gap`s verticales y horizontales, que pueden to
   <div class="g-col-6">.g-col-6</div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Sass
 

@@ -29,6 +29,10 @@ Establece alturas usando clases como `.form-control-lg` y `.form-control-sm`.
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Deshabilitado
 
 Agrega el atributo booleano `disabled` en un input para darle una apariencia atenuada y eliminar los eventos de puntero.
@@ -81,6 +85,10 @@ Si deseas tener elementos `<input readonly>` en tu formulario con estilo de text
 </form>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## File input
 
 {{< example >}}
@@ -132,6 +140,10 @@ Obtén más información sobre [soporte para elementos datalist](https://caniuse
 {{< /example >}}
 
 ## Sass
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Variables
 

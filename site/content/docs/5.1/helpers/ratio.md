@@ -45,6 +45,10 @@ Las relaciones de aspecto se pueden personalizar con clases modificadoras. De fo
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Proporciones personalizadas
 
 Cada clase `.ratio-*` incluye una propiedad personalizada CSS (o variable CSS) en el selector. Puedes sobrescribir esta variable CSS para crear relaciones de aspecto personalizadas sobre la marcha con algunos cálculos rápidos de tu parte.
@@ -73,6 +77,9 @@ Esta variable CSS facilita la modificación de la relación de aspecto en los br
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Sass map
 

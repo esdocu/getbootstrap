@@ -23,6 +23,10 @@ Establece la `opacity` de un elemento usando las utilidades `.opacity-{value}`.
 <div class="opacity-25">...</div>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### API de utilidades
 
 Las utilidades de opacidad se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})

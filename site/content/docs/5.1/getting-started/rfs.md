@@ -16,6 +16,10 @@ El mecanismo calcula automáticamente los valores apropiados en función de las 
 
 Los mixins están incluidos en Bootstrap y están disponibles una vez que incluyes `scss` de Bootstrap. RFS también se puede [instalar de forma independiente](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}}#installation) si es necesario.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Uso de los mixins
 
 El mixin `rfs()` tiene abreviaturas para `font-size`, `margin`, `margin-top`, `margin-right`, `margin-bottom`, `margin-left`, `padding`, `padding-top`, `padding-right`, `padding-bottom`, y `padding-left`. Mira el ejemplo a continuación de la fuente Sass y el CSS compilado.
@@ -79,6 +83,10 @@ En este ejemplo, usamos uno de los [mixins de breakpoint responsive]({{< docsref
   }
 }
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Documentación extendida
 

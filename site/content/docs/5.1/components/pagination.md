@@ -24,6 +24,10 @@ Además, como es probable que las páginas tengan más de una de estas secciones
 </nav>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Trabajar con iconos
 
 ¿Deseas utilizar un icono o símbolo en lugar de texto para algunos enlaces de paginación? Asegúrate de proporcionar la compatibilidad adecuada con el lector de pantalla con los atributos `aria`.
@@ -92,6 +96,10 @@ Opcionalmente, puedes cambiar los enlaces *active* o *disabled* por `<span>`, u 
 </nav>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Dimensionamiento
 
 ¿Te apetece una paginación más grande o más pequeña? Agrega `.pagination-lg` o `.pagination-sm` para tamaños adicionales.
@@ -155,6 +163,10 @@ Cambia la alineación de los componentes de paginación con [utilidades flexbox]
   </ul>
 </nav>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Sass
 

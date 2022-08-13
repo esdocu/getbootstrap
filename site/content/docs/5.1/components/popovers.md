@@ -134,6 +134,10 @@ Si bien puedes insertar HTML enriquecido y estructurado en popovers con la opci�
 Además, si bien también es posible incluir controles interactivos (como elementos de formulario o enlaces) en tu ventana emergente (agregando estos elementos a la `allowList` de atributos y etiquetas permitidas), ten en cuenta que actualmente la ventana emergente no administra el enfoque del teclado. Cuando un usuario del teclado abre una ventana emergente, el foco permanece en el elemento activador y, como la ventana emergente generalmente no sigue inmediatamente al activador en la estructura del documento, no hay garantía de que presionando <kbd>TAB</kbd> se moverá un usuario de teclado en el propio popover. En resumen, es probable que el simple hecho de agregar controles interactivos a una ventana emergente haga que estos controles sean inalcanzables o inutilizables para los usuarios de teclados y usuarios de tecnologías de asistencia, o al menos generar un orden de enfoque general ilógico. En estos casos, considera usar un diálogo modal en su lugar.
 {{< /callout >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Opciones
 
 Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega el nombre de la opción a `data-bs-`, como en `data-bs-animation=""`. Asegúrate de cambiar el tipo de caso del nombre de la opción de camelCase a kebab-case al pasar las opciones a través de atributos de datos. Por ejemplo, en lugar de usar `data-bs-customClass="beautifier"`, usa `data-bs-custom-class="beautifier"`.
@@ -300,6 +304,10 @@ Ten en cuenta que, por razones de seguridad, las opciones `sanitize`, `sanitizeF
 Las opciones para popovers individuales se pueden especificar alternativamente mediante el uso de atributos de datos, como se explicó anteriormente.
 {{< /callout >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 #### Uso de la función con `popperConfig`
 
 ```js
@@ -415,6 +423,10 @@ Método *estático* que te permite obtener la instancia emergente asociada con u
 var exampleTriggerEl = document.getElementById('example')
 var popover = bootstrap.Popover.getOrCreateInstance(exampleTriggerEl) // Devuelve una instancia del popover de Bootstrap
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

@@ -89,6 +89,10 @@ Las clases `.h1` a `.h6` también están disponibles, para cuando deseas hacer c
 <p class="h6">h6. Encabezado Bootstrap</p>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Personalizar los encabezados
 
 Utiliza las clases de utilidad incluidas para recrear el pequeño texto de encabezado secundario de Bootstrap 3.
@@ -207,6 +211,10 @@ La especificación HTML requiere que la atribución de comillas en bloque se col
 </figure>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ### Alineación
 
 Use las utilidades de texto según sea necesario para cambiar la alineación de tu blockquote.
@@ -304,6 +312,10 @@ Alinea términos y descripciones horizontalmente utilizando las clases predefini
 En Bootstrap 5, habilitamos tamaños de fuente responsive de forma predeterminada, lo que permite que el texto se escale de forma más natural según los tamaños de dispositivos y viewports. Echa un vistazo a la [página RFS]({{< docsref "/getting-started/rfs" >}}) para averiguar cómo funciona.
 
 ## Sass
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Variables
 

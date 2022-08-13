@@ -24,6 +24,10 @@ Usa `.vstack` para crear diseños verticales. Los elementos apilados ocupan el a
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Horizontal
 
 Usa `.hstack` para diseños horizontales. Los elementos apilados están centrados verticalmente de forma predeterminada y solo ocupan el ancho necesario. Usa las utilidades `.gap-*` para agregar espacio entre elementos.
@@ -78,6 +82,10 @@ Crea un formulario en línea con `.hstack`:
   <button type="button" class="btn btn-outline-danger">Reiniciar</button>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Sass
 

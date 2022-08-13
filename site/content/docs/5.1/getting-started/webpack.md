@@ -33,6 +33,10 @@ import { Tooltip, Toast, Popover } from 'bootstrap';
 Bootstrap depende de [Popper](https://popper.js.org/), que se especifica en la propiedad `peerDependencies`.
 Esto significa que deberás asegurarte de agregarlo a tu `package.json` usando `npm install @popperjs/core`.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Importación de estilos
 
 ### Importación de Sass precompilado

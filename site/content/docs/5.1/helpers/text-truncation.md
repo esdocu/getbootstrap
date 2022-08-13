@@ -21,3 +21,7 @@ Para contenido más largo, puedes agregar una clase `.text-truncate` para trunca
   Este texto es bastante largo y se truncará una vez que se muestre.
 </span>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}

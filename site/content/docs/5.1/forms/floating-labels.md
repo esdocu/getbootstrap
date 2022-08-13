@@ -39,6 +39,10 @@ Los estilos de validación de formularios también funcionan como se espera.
 </form>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Textareas
 
 Por defecto, `<textarea>`s con `.form-control` tendrán la misma altura que `<input>`s.
@@ -100,6 +104,10 @@ Cuando trabajes con el sistema de cuadrícula de Bootstrap, asegúrate de coloca
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Sass
 

@@ -55,6 +55,10 @@ Evita que largas cadenas de texto rompan el diseño de tus componentes usando `.
 Ten en cuenta que [no es posible dividir palabras en árabe](https://rtlstyling.com/posts/rtl-styling#3.-line-break), que es el idioma RTL más utilizado. Por lo tanto, `.text-break` se elimina de nuestro CSS compilado RTL.
 {{< /callout >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Transformación de texto
 
 Transforma texto en componentes con clases de capitalización de texto.
@@ -134,6 +138,10 @@ Decora texto en componentes con clases de decoración de texto.
 <p class="text-decoration-line-through">Este texto tiene una línea que lo atraviesa.</p>
 <a href="#" class="text-decoration-none">Se ha quitado la decoración de texto de este enlace</a>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Sass
 

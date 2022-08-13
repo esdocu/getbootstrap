@@ -33,6 +33,10 @@ your-project/
     └── scss
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Importación
 
 En tu `custom.scss`, importarás los archivos fuente Sass de Bootstrap. Tienes dos opciones: incluir todo Bootstrap o elegir las partes que necesitas. Recomendamos lo último, aunque ten en cuenta que existen algunos requisitos y dependencias entre nuestros componentes. También deberás incluir algo de JavaScript para nuestros complementos.
@@ -125,6 +129,10 @@ Repite según sea necesario para cualquier variable en Bootstrap, incluidas las 
 Bootstrap incluye un puñado de mapas Sass, pares de clave valor que facilitan la generación de familias de CSS relacionadas. Usamos mapas Sass para nuestros colores, breakpoints de cuadrícula (grid) y más. Al igual que las variables de Sass, todos los mapas de Sass incluyen el indicador `!default` y se pueden sobrescribir y ampliar.
 
 Algunos de nuestros mapas Sass se fusionan en mapas vacíos de forma predeterminada. Esto se hace para permitir una fácil expansión de un mapa Sass determinado, pero tiene el costo de hacer _removing_ de elementos de un mapa sea un poco más difícil.
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### Modificar mapa
 
@@ -290,6 +298,10 @@ $border-width: 0;
 ## Mixins
 
 Nuestro directorio `scss/mixins/` tiene una tonelada de mixins que potencian partes de Bootstrap y también se pueden usar en tu propio proyecto.
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Esquemas de color
 

@@ -23,6 +23,10 @@ Si bien las sombras en los componentes están deshabilitadas de forma predetermi
 
 {{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### API de utilidades
 
 Las utilidades ocultas se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a usar la API de utilidades.]({{< docsref "/utilities/api#using-the-api" >}})

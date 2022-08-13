@@ -79,6 +79,10 @@ Puedes usar un enlace con el atributo `href` o un botón con el atributo `data-b
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Colocación
 
 No hay una ubicación predeterminada para los componentes offcanvas, por lo que debes agregar una de las clases modificadoras a continuación;
@@ -174,6 +178,10 @@ Desplazar el elemento `<body>` está deshabilitado cuando un offcanvas y su fond
 
 Dado que el panel offcanvas es conceptualmente un cuadro de diálogo modal, asegúrate de agregar `aria-labelledby="..."`, que hace referencia al título offcanvas, a `.offcanvas`. Ten en cuenta que no necesitas agregar `role="dialog"` ya que ya lo agregamos a través de JavaScript.
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Sass
 
 ### Variables
@@ -256,6 +264,10 @@ var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
 | `getInstance` | Método *estático* que te permite obtener la instancia del offcanvas asociado con un elemento DOM |
 | `getOrCreateInstance` | Método *estático* que te permite obtener la instancia del offcanvas asociado con un elemento DOM, o crear una nueva en caso de que no se haya inicializado |
 {{< /bs-table >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

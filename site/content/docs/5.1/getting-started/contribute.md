@@ -19,6 +19,10 @@ Para usar nuestro sistema de compilación y ejecutar nuestra documentación loca
 
 Cuando hayas terminado, podrás ejecutar los diversos comandos proporcionados desde la línea de comandos.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Uso de los scripts npm
 
 Nuestro [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) incluye numerosas tareas para desarrollar el proyecto. Ejecuta `npm run` para ver todos los scripts de npm en tu terminal. **Las tareas principales incluyen:**
@@ -95,6 +99,10 @@ Ejecutar nuestra documentación localmente requiere el uso de Hugo, que se insta
 3. Abre `http://localhost:9001/` en tu navegador y listo.
 
 Obtén más información sobre el uso de Hugo leyendo su [documentación](https://gohugo.io/documentation/).
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Solución de problemas
 

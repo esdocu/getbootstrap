@@ -242,6 +242,10 @@ Usamos esta clase adicional para reducir el `padding` horizontal a cada lado del
 </div>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Dimensionamiento
 
 Los menús desplegables de botones funcionan con botones de todos los tamaños, incluidos los botones desplegables predeterminados y divididos.
@@ -789,6 +793,10 @@ Agrega un encabezado para etiquetar secciones de acciones en cualquier menú des
 </ul>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ### Divisores
 
 Separa los grupos de elementos de menú relacionados con un divisor.
@@ -1154,6 +1162,10 @@ var dropdown = new bootstrap.Dropdown(element, {
     </tr>
   </tbody>
 </table>
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

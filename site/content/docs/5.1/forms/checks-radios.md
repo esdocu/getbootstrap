@@ -100,6 +100,10 @@ Agrega el atributo `disabled` y las `<label>`s asociadas se diseñarán automát
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Switches
 
 Un switch tiene el marcado de una casilla de verificación personalizada, pero usa la clase `.form-switch` para representar un interruptor de palanca. Considera usar `role="switch"` para transmitir con mayor precisión la naturaleza del control a las tecnologías de asistencia que respaldan este rol. En las tecnologías de asistencia más antiguas, simplemente se anunciará como una casilla de verificación normal como alternativa. Los switches también admiten el atributo `disabled`.
@@ -162,6 +166,10 @@ De forma predeterminada, cualquier número de casillas de verificación y radios
   </label>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## En línea
 
@@ -269,6 +277,10 @@ Se admiten diferentes variantes de `.btn`, como los diversos estilos descritos.
 <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
 <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Sass
 

@@ -208,6 +208,10 @@ Resalta una fila o celda de la tabla agregando una clase `.table-active`.
 </table>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## ¿Cómo funcionan las variantes y las tablas acentuadas?
 
 Para las tablas acentuadas ([filas rayadas](#striped-rows), [filas hover](#hoverable-rows) y [tablas activas](#active-tables)), usamos algunas técnicas para hacer que estos efectos funcionen para todas nuestras [variantes de tabla](#variants):
@@ -495,6 +499,10 @@ De manera similar a las tablas y las tablas oscuras, usa las clases de modificad
 </table>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ### Pie de tabla
 
 <div class="bd-example">
@@ -774,6 +782,10 @@ Usa `.table-responsive{-sm|-md|-lg|-xl|-xxl}` según sea necesario para crear ta
 {{< /highlight >}}
 
 ## Sass
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Variables
 

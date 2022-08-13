@@ -179,6 +179,10 @@ Alternativamente, también puedes agregar controles y componentes adicionales a 
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Esquemas de color
 
 Sobre la base del ejemplo anterior, puedes crear diferentes esquemas de colores con nuestras utilidades de [color]({{< docsref "/utilities/colors" >}}) y [background]({{< docsref "/utilities/background" >}}). Aquí hemos agregado `.bg-primary` y `.text-white` a `.toast`, y luego agregamos `.btn-close-white` a nuestro botón de cierre. Para un borde nítido, eliminamos el borde predeterminado con `.border-0`.
@@ -324,6 +328,10 @@ Al usar `autohide: false`, debes agregar un botón de cierre para permitir que l
 
 Si bien técnicamente es posible agregar controles enfocables/accionables (como botones o enlaces adicionales) en tu toast, debes evitar hacer esto para ocultar automáticamente los toasts. Incluso si das al toast un largo [tiempo de espera `delay`](#options), los usuarios de tecnología de asistencia y teclado pueden tener dificultades para llegar al toast a tiempo para tomar medidas (ya que los toasts no reciben atención cuando se muestran) . Si es absolutamente necesario tener controles adicionales, te recomendamos usar un toast con `autohide: false`.
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Sass
 
 ### Variables
@@ -430,6 +438,10 @@ Método *estático* que te permite obtener la instancia de toast asociada con un
 var myToastEl = document.getElementById('myToastEl')
 var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Devuelve una instancia de toast Bootstrap
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

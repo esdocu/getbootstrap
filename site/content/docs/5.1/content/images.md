@@ -22,6 +22,10 @@ Además de nuestras [utilidades border-radius]({{< docsref "/utilities/borders" 
 {{< placeholder width="200" height="200" class="img-thumbnail" title="Una imagen placeholder cuadrada genérica con un borde blanco alrededor, lo que la hace parecerse a una fotografía tomada con una cámara instantánea antigua" >}}
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Alinear imágenes
 
 Alinea las imágenes con las [clases flotantes auxiliares]({{< docsref "/utilities/float" >}}) o [clases de alineación de texto]({{< docsref "/utilities/text#text-alignment" >}}). Las imágenes a nivel de `block` se pueden centrar usando [la clase de utilidad de margen `.mx-auto`]({{< docsref "/utilities/spacing#horizontal-centering" >}}).
@@ -55,6 +59,10 @@ Si estás utilizando el elemento `<picture>` para especificar múltiples element
 ```
 
 ## Sass
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### Variables
 

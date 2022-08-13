@@ -44,6 +44,10 @@ El spinner de borde usa `currentColor` para su `border-color`, lo que significa 
 **¿Por qué no usar las utilidades `border-color`?** Cada marcador giratorio de borde especifica un borde `transparent` para al menos un lado, por lo que las utilidades `.border-{color}` sobrescribirían eso.
 {{< /callout >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Spinner creciente
 
 Si no te apetece un spinner de borde, cambia al spinner de crecimiento. Si bien técnicamente no gira, ¡crece repetidamente!
@@ -120,6 +124,10 @@ Utiliza las [utilidades flexbox][flex], [utilidades float][float] o [alineación
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Tamaño
 

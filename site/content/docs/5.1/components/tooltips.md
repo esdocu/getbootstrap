@@ -96,6 +96,10 @@ Con un SVG:
   </a>
 </div>
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Sass
 
 ### Variables
@@ -160,6 +164,10 @@ Los elementos con el atributo `disabled` no son interactivos, lo que significa q
 </span>
 {{< /example >}}
 </div>
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### Opciones
 
@@ -435,6 +443,10 @@ Método *estático* que te permite obtener la instancia de tooltip asociado con 
 var exampleTriggerEl = document.getElementById('example')
 var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Devuelve una instancia del tooltip de Bootstrap
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

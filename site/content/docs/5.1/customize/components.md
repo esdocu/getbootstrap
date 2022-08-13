@@ -24,6 +24,10 @@ Aquí hay dos ejemplos de cómo recorremos el mapa `$theme-colors` para generar 
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Responsive
 
 Estos bucles de Sass tampoco se limitan a mapas de colores. También puedes generar variaciones sensibles de tus componentes. Tomemos como ejemplo nuestra alineación responsive de los menús desplegables donde mezclamos un bucle `@each` para el mapa Sass `$grid-breakpoints` con una media query incluida.
@@ -35,6 +39,10 @@ Si modificas tus `$grid-breakpoints`, tus cambios se aplicarán a todos los bucl
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
 
 Para obtener más información y ejemplos sobre cómo modificar nuestros mapas y variables Sass, consulta [la sección Sass de la documentación de Grid]({{< docsref "/layout/grid#sass" >}}).
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Creando el tuyo propio
 

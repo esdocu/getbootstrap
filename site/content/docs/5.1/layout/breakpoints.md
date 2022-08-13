@@ -69,6 +69,10 @@ Estos breakpoints se pueden personalizar a través de Sass; los encontrarás en 
 
 Para obtener más información y ejemplos sobre cómo modificar nuestros mapas y variables Sass, consulta la sección Sass de la [documentación de Grid]({{< docsref "/layout/grid#sass" >}}).
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Media queries
 
 Dado que Bootstrap está desarrollado para ser Mobile first, usamos un puñado de [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) para crear breakpoints sensibles para nuestros diseños e interfaces. Estos breakpoints se basan principalmente en anchos mínimos de viewports y nos permiten aumentar la escala de los elementos a medida que cambia la ventana gráfica.
@@ -121,6 +125,10 @@ Estos mixins de Sass se traducen en nuestro CSS compilado utilizando los valores
 // Dispositivos XX-Large (escritorios más grandes, 1400px y más)
 @media (min-width: 1400px) { ... }
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### Max-width
 
@@ -186,6 +194,10 @@ Por ejemplo, `@include media-breakpoint-only(md) { ... }` dará como resultado:
 ```scss
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Entre breakpoints
 

@@ -132,6 +132,10 @@ Lanza una demostración modal funcional haciendo clic en el botón a continuaci�
 </div>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Backdrop estático
 
 Cuando el fondo se establece en *static*, el modal no se cerrará al hacer clic fuera de él. Haz clic en el botón de abajo para probarlo.
@@ -495,6 +499,10 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
   modalBodyInput.value = recipient
 })
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### Alternar entre modals
 
@@ -905,6 +913,10 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
   keyboard: false
 })
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 #### toggle
 

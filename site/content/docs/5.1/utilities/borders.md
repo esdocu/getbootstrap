@@ -53,6 +53,10 @@ Cambia el color del borde usando utilidades basadas en nuestros colores temátic
 <span class="border border-5"></span>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Radio del borde
 
 Agrega clases a un elemento para redondear fácilmente tus esquinas.
@@ -89,6 +93,10 @@ Utiliza las clases de escala para esquinas redondeadas más grandes o más peque
 ### Mixins
 
 {{< scss-docs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### API de utilidades
 

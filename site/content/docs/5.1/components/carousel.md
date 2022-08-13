@@ -72,6 +72,10 @@ Agreguemos los controles anterior y siguiente. Recomendamos usar elementos `<but
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Con indicadores
 
 También puedes agregar los indicadores al carrusel, junto con los controles.
@@ -279,6 +283,10 @@ Agrega `.carousel-dark` a `.carousel` para obtener controles, indicadores y subt
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Transición personalizada
 
 La duración de la transición de `.carousel-item` se puede cambiar con la variable Sass `$carousel-transition-duration` antes de compilar o estilos personalizados si estás utilizando el CSS compilado. Si se aplican varias transiciones, asegúrate de definir primero la transición de transformación (p. ej., `transition: transform 2s ease, opacity .5s ease-out`).
@@ -431,6 +439,10 @@ var carousel = new bootstrap.Carousel(myCarousel, {
     </tr>
   </tbody>
 </table>
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 

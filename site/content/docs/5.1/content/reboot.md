@@ -18,6 +18,10 @@ Estas son nuestras pautas y razones para elegir qué sobrescribir en Reboot:
 - Para escalar más fácilmente entre tamaños de dispositivos, los elementos de bloque deben usar `rem`s para `margin`s.
 - Mantener al mínimo las declaraciones de propiedades relacionadas con `font`, usando `inherit` siempre que sea posible.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Variables CSS
 
 <small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Añadido en v5.1.1</small>
@@ -246,6 +250,10 @@ Las tablas se ajustan ligeramente al estilo `<caption>`s, colapsan los bordes y 
   </table>
 </div>
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Formularios
 
 Se han reiniciado varios elementos de formulario para estilos básicos más simples. Estos son algunos de los cambios más notables:
@@ -447,6 +455,10 @@ El `cursor` predeterminado en `<summary>` es `text`, por lo que lo restablecemos
     <p>Aquí hay aún más detalles sobre los detalles.</p>
   </details>
 </div>
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Atributo HTML5 `[hidden]`
 

@@ -112,6 +112,10 @@ También se pueden crear diseños más complejos con el sistema de cuadrícula.
 </form>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Formularios horizontales
 
 Crea formularios horizontales con la cuadrícula agregando la clase `.row` para formar grupos y usando las clases `.col-*-*` para especificar el ancho de tus etiquetas y controles. Asegúrate de agregar `.col-form-label` a tus `<label>`s también para que estén centrados verticalmente con tus controles de formulario asociados.
@@ -193,6 +197,10 @@ Asegúrate de usar `.col-form-label-sm` o `.col-form-label-lg` en tus `<label>`s
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Tamaño de columna
 
@@ -289,6 +297,10 @@ Luego puedes mezclar esto una vez más con clases de columna de tamaño específ
   </div>
 </form>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Formularios en línea
 

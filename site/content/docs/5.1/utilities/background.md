@@ -35,6 +35,10 @@ Al agregar una clase `.bg-gradient`, se agrega un degradado lineal como imagen d
 {{< /colors.inline >}}
 {{< /markdown >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Opacidad
 
 <small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Añadido en v5.1.0</small>
@@ -116,6 +120,10 @@ Y las opacidades del color de fondo se basan en esto con su propio mapa que cons
 {{< scss-docs name="gradient-bg-mixin" file="scss/mixins/_gradients.scss" >}}
 
 {{< scss-docs name="gradient-mixins" file="scss/mixins/_gradients.scss" >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### API de utilidades
 

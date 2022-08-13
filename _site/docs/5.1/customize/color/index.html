@@ -807,6 +807,11 @@
 <p>Sass no puede generar variables programáticamente, por lo que creamos variables manualmente para cada tinte y sombreado nosotros mismos. Especificamos el valor del punto medio (por ejemplo, <code>$blue-500</code>) y usamos funciones de color personalizadas para teñir (aclarar) o sombrear (oscurecer) nuestros colores a través de la función de color <code>mix()</code> de Sass.</p>
 <p>Usar <code>mix()</code> no es lo mismo que <code>lighten()</code> y <code>darken()</code>: el primero combina el color especificado con blanco o negro, mientras que el último solo ajusta el valor de luminosidad de cada color. El resultado es un conjunto de colores mucho más completo, como se muestra en esta <a href="https://codepen.io/emdeoh/pen/zYOQOPB">demostración de CodePen</a>.</p>
 <p>Nuestras funciones <code>tint-color()</code> y <code>shade-color()</code> usan <code>mix()</code> junto con nuestra variable <code>$theme-color-interval</code>, que especifica un valor porcentual escalonado para cada color mezclado que producimos. Consulta los archivos <code>scss/_functions.scss</code> y <code>scss/_variables.scss</code> para obtener el código fuente completo.</p>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
 <h2 id="mapas-sass-de-colores">Mapas Sass de colores</h2>
 <p>Los archivos fuente de Sass de Bootstrap incluyen tres mapas para ayudarte a recorrer rápida y fácilmente una lista de colores y sus valores hexadecimales.</p>
 <ul>
@@ -840,6 +845,11 @@
 </span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$indigo-900</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>Las clases de utilidad <a href="/docs/5.1/utilities/colors/">Color</a> y <a href="/docs/5.1/utilities/background/">background</a> también están disponibles para configurar <code>color</code> y <code>background-color</code> utilizando los valores de color <code>500</code>.</p>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
 <h2 id="generación-de-utilidades">Generación de utilidades</h2>
 <p><small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Añadido en v5.1.0</small></p>
 <p>Bootstrap no incluye las utilidades <code>color</code> y <code>background-color</code> para cada variable de color, pero puedes generarlas tú mismo con nuestra <a href="/docs/5.1/utilities/api/">utility API</a> y nuestra mapas Sass extendido añadido en v5.1.0.</p>

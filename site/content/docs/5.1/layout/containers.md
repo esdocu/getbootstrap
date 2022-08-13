@@ -127,6 +127,10 @@ Nuestra clase `.container` predeterminada es un contenedor sensible de ancho fij
 </div>
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Contenedores responsive
 
 Los contenedores responsive te permiten especificar una clase que tiene un 100% de ancho hasta que se alcanza el breakpoint especificado, después de lo cual aplicamos `max-width`s para cada uno de los breakpoints más altos. Por ejemplo, `.container-sm` tiene un 100% de ancho al principio hasta que se alcanza el breakpoint `sm`, donde se escalará con `md`, `lg`, `xl` y `xxl`.
@@ -172,5 +176,9 @@ Además de personalizar el Sass, también puedes crear tus propios contenedores 
   @include make-container();
 }
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 Para obtener más información y ejemplos sobre cómo modificar nuestros mapas y variables Sass, consulta [la sección Sass de la documentación de Grid]({{< docsref "/layout/grid#sass" >}}).

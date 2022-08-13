@@ -22,6 +22,10 @@ Los componentes interactivos de Bootstrap, como los cuadros de diálogo modales,
 
 Debido a que los componentes de Bootstrap están diseñados a propósito para ser bastante genéricos, es posible que los autores deban incluir más funciones y atributos de <abbr title="Accessible Rich Internet Applications">ARIA</abbr>, así como el comportamiento de JavaScript, para transmitir con mayor precisión la naturaleza precisa y funcionalidad de su componente. Esto generalmente se indica en la documentación.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Contraste de color
 
 Algunas combinaciones de colores que actualmente conforman la paleta predeterminada de Bootstrap, que se utilizan en todo el marco para cosas como variaciones de botones, variaciones de alertas, indicadores de validación de formularios, pueden dar lugar a un contraste de color *insuficiente* (por debajo de la relación de contraste de color de texto recomendada [WCAG 2.1 de 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) y la [relación de contraste de color sin texto WCAG 2.1 de 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast)), especialmente cuando se utiliza contra un fondo claro. Se alienta a los autores a probar sus usos específicos del color y, cuando sea necesario, modificar/ampliar manualmente estos colores predeterminados para garantizar proporciones de contraste de color adecuadas.

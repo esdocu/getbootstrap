@@ -42,6 +42,10 @@ Al usar clases de botón en elementos `<a>` que se usan para activar alguna func
 <input class="btn btn-primary" type="reset" value="Reset">
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Botones de contorno
 
 ¿Necesitas un botón, pero no los fuertes colores de fondo que traen? Reemplaza las clases de modificador predeterminadas con `.btn-outline-*` para eliminar todas las imágenes y colores de fondo en cualquier botón.
@@ -141,6 +145,10 @@ Se pueden usar utilidades adicionales para ajustar la alineación de los botones
   <button class="btn btn-primary" type="button">Botón</button>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Complemento de botón
 
@@ -244,6 +252,10 @@ Hay tres mixins para botones: mixins de botón y mixins de variante de contorno 
 {{< scss-docs name="btn-outline-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Loops
 

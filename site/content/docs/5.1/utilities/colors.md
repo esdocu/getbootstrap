@@ -37,6 +37,10 @@ Colorea el texto con utilidades de color. Si deseas colorear los enlaces, puedes
 
 A partir de v5.1.0, las utilidades de color de texto se generan con Sass usando variables CSS. Esto permite cambios de color en tiempo real sin compilación y cambios dinámicos de transparencia alfa.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### ¿Cómo funcionan los colores?
 
 Analicemos nuestra utilidad predeterminada `.text-primary`.
@@ -105,6 +109,10 @@ Los colores RGB se generan a partir de un mapa Sass separado:
 Y las opacidades de color se basan en esto con su propio mapa que consume la API de utilidades:
 
 {{< scss-docs name="utilities-text-colors" file="scss/_maps.scss" >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### API de utilidades
 

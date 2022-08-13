@@ -14,6 +14,10 @@ Oculta visualmente un elemento y, al mismo tiempo, permite que esté expuesto a 
 <div class="visually-hidden-focusable">Un contenedor con un <a href="#">elemento enfocable</a>.</div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 Ambos `visually-hidden` y `visually-hidden-focusable` pueden ser usados como mixins.
 
 ```scss

@@ -59,6 +59,10 @@ Aquí hay un ejemplo rápido para demostrar los estilos de formulario de Bootstr
 </form>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Textos de formulario
 
 Textos de formulario a nivel de bloque o en línea se pueden crear usando `.form-text`.
@@ -136,6 +140,10 @@ Sin embargo, si tu formulario también incluye elementos personalizados similare
 </form>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Accesibilidad
 
 Asegúrate de que todos los controles de formulario tengan un nombre accesible adecuado para que su propósito pueda transmitirse a los usuarios de tecnologías de asistencia. La forma más sencilla de lograr esto es usar un elemento `<label>` o, en el caso de los botones, incluir texto suficientemente descriptivo como parte del contenido `<button>...</button>`.
@@ -150,6 +158,10 @@ Para situaciones en las que no es posible incluir una `<label>` visible o conten
 Si ninguno de estos están presentes, las tecnologías de asistencia pueden recurrir al uso del atributo `placeholder` como respaldo para el nombre accesible en los elementos `<input>` y `<textarea>`. Los ejemplos de esta sección proporcionan algunos enfoques sugeridos para casos específicos.
 
 Si bien el uso de contenido visualmente oculto (`.visually-hidden`, `aria-label` e incluso `placeholder`, que desaparece una vez que un campo de formulario tiene contenido) beneficiará a los usuarios de tecnología de asistencia, la falta de texto de etiqueta visible aún puede ser un problema. problemático para ciertos usuarios. Alguna forma de etiqueta visible es generalmente el mejor enfoque, tanto para la accesibilidad como para la usabilidad.
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Sass
 

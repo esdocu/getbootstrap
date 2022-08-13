@@ -66,6 +66,10 @@ Solo establecemos un valor de `height` en `.progress`, por lo que si cambias ese
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Fondos
 
 Usa clases de utilidad de fondo para cambiar la apariencia de las barras de progreso individuales.
@@ -128,6 +132,10 @@ El degradado rayado también se puede animar. Agrega `.progress-bar-animated` a 
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Sass
 

@@ -107,6 +107,10 @@ Los estilos de feedbacks personalizados aplican colores, bordes, estilos de enfo
 {{< /js.inline >}}
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Valores predeterminados del navegador
 
 ¿No te interesan los mensajes feedback de validación personalizados o escribir JavaScript para cambiar los comportamientos de los formularios? Todo bien, puedes usar los valores predeterminados del navegador. Intenta enviar el formulario a continuación. Dependiendo de tu navegador y sistema operativo, verás un estilo de retroalimentación ligeramente diferente.
@@ -233,6 +237,10 @@ Para solucionar [problemas con los radios de los bordes](https://github.com/twbs
   </div>
 </form>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Elementos compatibles
 
@@ -368,6 +376,10 @@ Este es el mapa Sass de validación de `_variables.scss`. Sobrescribe o amplía 
 {{< scss-docs name="form-validation-states" file="scss/_variables.scss" >}}
 
 Los mapas de `$form-validation-states` pueden contener tres parámetros opcionales para sobrescribir los estilos de tooltips y de enfoque.
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Loop
 

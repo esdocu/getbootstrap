@@ -36,6 +36,10 @@ Estas clases también se pueden agregar a grupos de enlaces, como alternativa a 
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Estilos mixtos
 
 {{< example >}}
@@ -139,6 +143,10 @@ Siéntete libre de mezclar grupos de inputs con grupos de botones en tus barras 
 </div>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ## Dimensionamiento
 
 En lugar de aplicar clases de tamaño de botón a cada botón en un grupo, simplemente agrega `.btn-group-*` a cada `.btn-group`, incluyendo a cada uno al anidar varios grupos.
@@ -189,6 +197,10 @@ Coloca un `.btn-group` dentro de otro `.btn-group` cuando desees que los menús 
   </div>
 </div>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ## Variación vertical
 

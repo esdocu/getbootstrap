@@ -14,6 +14,10 @@ Cuando utilices Sass en tus assets, asegúrate de optimizar Bootstrap solo impor
 
 Si no estás utilizando un componente, coméntalo o elimínalo por completo. Por ejemplo, si no estás utilizando el *carousel*, elimina esa importación para ahorrar algo de tamaño de archivo en tu CSS compilado. Ten en cuenta que existen algunas dependencias en las importaciones de Sass que pueden dificultar la omisión de un archivo.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## JavaScript ligero
 
 El JavaScript de Bootstrap incluye todos los componentes de nuestros archivos de distribución principales (`bootstrap.js` y `bootstrap.min.js`), e incluso nuestra dependencia principal (Popper) con nuestros archivos de paquete (`bootstrap.bundle.js` y `bootstrap.bundle.min.js`). Mientras personalizas a través de Sass, asegúrate de eliminar el JavaScript relacionado.
@@ -69,6 +73,10 @@ Por último, este artículo de [CSS Tricks sobre CSS sin usar](https://css-trick
 ## Minificar y gzip
 
 Siempre que sea posible, asegúrate de comprimir todo el código que ofreces a tus visitantes. Si estás utilizando archivos dist de Bootstrap, intenta inclinarte por las versiones minificadas (indicadas por las extensiones `.min.css` y `.min.js`). Si estás compilando Bootstrap desde la fuente con tu propio sistema de compilación, asegúrate de implementar tus propios minificadores para HTML, CSS y JS.
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Archivos sin bloqueo
 

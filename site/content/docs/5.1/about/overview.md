@@ -24,6 +24,10 @@ Con Bootstrap 4, una vez más reescribimos el proyecto para tener en cuenta dos 
 
 Nuestro último lanzamiento, Bootstrap 5, se enfoca en mejorar la base de código de v4 con la menor cantidad posible de cambios importantes. Mejoramos las funciones y los componentes existentes, eliminamos la compatibilidad con navegadores más antiguos, eliminamos jQuery para JavaScript normal y adoptamos tecnologías más amigables para el futuro, como las propiedades personalizadas de CSS, como parte de nuestras herramientas.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Involucrarse
 
 Participa en el desarrollo de Bootstrap [abriendo un issue]({{< param repo >}}/issues/new) o enviando un pull request. Lee nuestras [directrices de contribución]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) para obtener información sobre cómo desarrollamos.

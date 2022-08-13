@@ -104,6 +104,10 @@ Como una variable de Sass que establece la lista o el mapa, como en nuestras [ut
 values: $position-values
 ```
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Class
 
 Utiliza la opción `class` para cambiar el prefijo de clase utilizado en el CSS compilado. Por ejemplo, para cambiar de `.opacity-*` a `.o-*`:
@@ -364,6 +368,10 @@ Todas las utilidades generadas por la API incluyen `!important` para garantizar 
 
 Ahora que estás familiarizado con el funcionamiento de la API de utilidades, aprende cómo agregar tus propias clases personalizadas y modificar nuestras utilidades predeterminadas.
 
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
+
 ### Sobrescribir utilidades
 
 Sobrescribe las utilidades existentes utilizando la misma clave. Por ejemplo, si deseas clases de utilidad de desbordamiento responsive adicionales, puedes hacer esto:
@@ -526,6 +534,10 @@ $utilities: map-merge(
   )
 );
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 #### Eliminar utilidad en RTL
 

@@ -137,6 +137,10 @@ Como se indicó anteriormente, cada uno de estos breakpoints tienen su propio co
   </tbody>
 </table>
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Columnas con auto-layout
 
 Utiliza clases de columnas de breakpoints específicos para facilitar la asignación de tamaño de las columnas sin una clase numerada explícita como `.col-sm-6`.
@@ -234,6 +238,10 @@ Usa las clases `col-{breakpoint}-auto` para dimensionar las columnas en función
 ## Clases responsive
 
 La cuadrícula de Bootstrap incluye seis niveles de clases predefinidas para crear diseños responsive complejos. Personaliza el tamaño de tus columnas en dispositivos extra pequeños, pequeños, medianos, grandes o extra grandes como mejor te parezca.
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### Todos los breakpoints
 
@@ -412,6 +420,10 @@ Para anidar tu contenido con la cuadrícula predeterminada, agrega un nuevo `.ro
 ## Sass
 
 Al usar los archivos fuente Sass de Bootstrap, tienes la opción de usar variables Sass y mixins para crear diseños de página personalizados, semánticos y responsive. Nuestras clases de cuadrícula predefinidas utilizan estas mismas variables y mixins para proporcionar un conjunto completo de clases listas para usar para rápidos diseños responsive.
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Variables
 

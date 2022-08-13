@@ -47,6 +47,10 @@ Las clases se utilizan en todo momento, por lo que tu marcado puede ser súper f
 </nav>
 {{< /example >}}
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## Estilos disponibles
 
 Cambia el estilo del componente `.nav` con modificadores y utilidades. Mezcla y combina según sea necesario, o construye el tuyo propio.
@@ -303,6 +307,10 @@ Agrega menús desplegables con un poco de HTML adicional y el [complemento JavaS
   </li>
 </ul>
 {{< /example >}}
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Sass
 
@@ -634,6 +642,10 @@ Método *estático* que te permite obtener la instancia de pestaña asociada con
 var triggerEl = document.querySelector('#trigger')
 var tab = bootstrap.Tab.getOrCreateInstance(triggerEl) // Devuelve una instancia de pestaña Bootstrap
 ```
+
+{{< callout info >}}
+{{< partial "maybe-interested-3.md" >}}
+{{< /callout >}}
 
 ### Eventos
 
