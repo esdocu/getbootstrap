@@ -23,6 +23,10 @@ Puedes encontrar nuestra gama de navegadores compatibles y sus versiones [en nue
 
 Usamos [Autoprefixer](https://github.com/postcss/autoprefixer) para manejar la compatibilidad prevista del navegador a través de prefijos CSS, que usa [Browserslist](https://github.com/browserslist/browserslist) para administrar estas versiones del navegador. Consulta su documentación para saber cómo integrar estas herramientas en tus proyectos.
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ### Dispositivos móviles
 
 En términos generales, Bootstrap admite las últimas versiones de los navegadores predeterminados de cada plataforma. Ten en cuenta que los navegadores proxy (como Opera Mini, el modo Turbo de Opera Mobile, UC Browser Mini, Amazon Silk) no son compatibles.
@@ -115,6 +119,10 @@ El elemento `.dropdown-backdrop` no se usa en iOS en la navegación debido a la 
 ## Browser zooming
 
 El zoom de página inevitablemente presenta artefactos de representación en algunos componentes, tanto en Bootstrap como en el resto de la web. Dependiendo del problema, es posible que podamos solucionarlo (busca primero y luego abre un problema si es necesario). Sin embargo, tendemos a ignorarlos, ya que a menudo no tienen una solución directa más que soluciones alternativas.
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ## Validadores
 

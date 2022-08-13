@@ -30,19 +30,21 @@ Lamentablemente existen empresas que intentan ahorrar tiempo respondiendo con co
 
 ### Velocidad de respuesta de los servidores
 
-Este aspecto no lo podemos comprobar hasta después de comprar el servicio, pero existe en internet mucha información (como este artículo), para enterarse de antemano si los servidores responde rápidamente cuando un visitante ingresa al sitio web desde su navegador.
+Este aspecto no lo podemos comprobar hasta después de comprar el servicio, pero existe en internet mucha información (como este artículo), para enterarse de antemano si los servidores responden rápidamente cuando un visitante ingresa al sitio web desde su navegador.
 
 ### Uptime de los servidores
 
-El uptime define la disponibilidad de los servidores, es decir, qué tanto tiempo se mantiene activo. Lo ideal sería un 100% del tiempo pero tratándose de tecnología existen cuestiones como el mantenimiento, algún problema fugaz inesperado.
+El uptime define la disponibilidad de los servidores, es decir, qué tanto tiempo se mantiene activo. Lo ideal sería un 100% del tiempo pero tratándose de tecnología, existen cuestiones como el mantenimiento, algún problema fugaz inesperado, etc.
 
-Las tareas de mantenimiento se suelen realizar cada cierto tiempo (por ejemplo una vez cada 3 meses), por las madrugadas y solamente demora unos minutos, por lo que un uptime decente suele ser de 99.9% o 99.8%.
+Las tareas de mantenimiento se suelen realizar cada cierto tiempo (por ejemplo una vez cada 3 meses), por las madrugadas y solamente demora unos minutos.
+
+Por lo que un **Uptime** decente suele ser de **99.9%** o 99.8%.
 
 ### Seguridad
 
-Los servidores de web hosting suelen estar en el punto de mira de los hacker de sombrero negro, es decir, los hackers malos, los malintencionados. Por esta razón es importante que el servicio cuente con un buen firewall, un antivirus y protección contra ataques DDoS.
+Los servidores de web hosting suelen estar en el punto de mira de los hacker de sombrero negro, es decir, los hackers malintencionados. Por esta razón es importante que el servicio cuente con un buen firewall, un antivirus y protección contra ataques DDoS.
 
-También es nuestra responsabilidad como usuarios elegir contraseñas fuertes, si colocamos "admin123" como contraseña no hay mucho que el sistema de seguridad pueda hacer para defenderse.
+También es nuestra responsabilidad como usuarios elegir contraseñas fuertes, si colocamos "admin123" como contraseña no hay mucho que el sistema de seguridad pueda hacer para defender el servicio.
 
 ### Características del servicio
 
@@ -50,11 +52,9 @@ Las características como la cantidad de bases de datos, subdominios, cuentas de
 
 ### Ubicación de los servidores
 
-La velocidad de internet de los tiempos actuales hace cada vez menos importante considerar la ubicación de los centros de datos donde se encuentran los servidores que alojan un sitio web. Aún menos importante considerando que prácticamente todos los servicios incluyen CDN o la posibilidad de agregar un CDN muy fácilmente, lo cual hace que la mayor cantidad de datos llegue al visitante de la web desde una ubicación cercana.
+La velocidad de internet de los tiempos actuales hace cada vez menos importante considerar la ubicación de los centros de datos donde se encuentran los servidores que alojan un sitio web. Aún menos importante considerando que prácticamente todos los servicios incluyen CDN o la posibilidad de agregar un CDN muy fácilmente, lo cual hace que la mayor cantidad de datos llegue al visitante desde una ubicación cercana.
 
 Por ejemplo desde latinoamérica se puede acceder a cualquier sitio web norteamericano o europeo sin notar ninguna espera en la carga de las páginas. La conectividad entre América del Norte y Europa es óptima y extremadamente veloz.
-
-Un caso problemático podría ser ir al extremo de ingresar desde latinoamérica a una web alojada en Asia y sin CDN, en ese caso podríamos notar que el contenido demora unos segundos en cargar.
 
 Podemos concluir entonces que:
 
@@ -109,13 +109,13 @@ Una de las empresas con mejor puntuación en Hostadvice. Con sede central en Tul
 
 ## ¿Por qué es importante la puntuación en Hostadvice?
 
-[Hostadvice](https://hostadvice.com) es una plataforma web donde clientes de servicios dan su opinión y calificación sobre los servicios que usaron o están usando.
+[Hostadvice](https://hostadvice.com) es una plataforma web donde clientes dan su opinión y calificación sobre los servicios que usaron o están usando.
 
 El **feedback** obtenido de los propios clientes es muy importante ya que es la información más realista que podemos conseguir.
 
 ### Ejemplo de una empresa que debemos evitar
 
-Por mencionar un caso a evitar, podemos analizar la empresa Donweb.com, muy popular en sudamérica por su excelente marketing, pero también tristemente popular entre sus ex-clientes por su mal servicio y su pésima atención al cliente, el cual se caracteriza por respuestas genéricas que no ayudan al cliente y solamente logran que el cliente pierda su tiempo. 
+Por mencionar un caso a evitar, podemos analizar la empresa Donweb.com, muy popular en sudamérica por su excelente marketing, pero también tristemente conocida entre sus ex-clientes como una empresa con un servicio con muchos problemas y una pésima atención al cliente, el cual se caracteriza por respuestas genéricas que no ayudan y solamente logran que el cliente pierda su tiempo. 
 
 Como consecuencia a esta situación la puntuación de **Donweb en Hostadvice es de 1.6 de 5**. Aún así esta empresa lidera el mercado local a base de puro marketing.
 

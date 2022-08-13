@@ -474,6 +474,11 @@ iOS &gt;= 12
 Safari &gt;= 12
 not Explorer &lt;= 11
 </span></span></code></pre></div><p>Usamos <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> para manejar la compatibilidad prevista del navegador a través de prefijos CSS, que usa <a href="https://github.com/browserslist/browserslist">Browserslist</a> para administrar estas versiones del navegador. Consulta su documentación para saber cómo integrar estas herramientas en tus proyectos.</p>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
 <h3 id="dispositivos-móviles">Dispositivos móviles</h3>
 <p>En términos generales, Bootstrap admite las últimas versiones de los navegadores predeterminados de cada plataforma. Ten en cuenta que los navegadores proxy (como Opera Mini, el modo Turbo de Opera Mobile, UC Browser Mini, Amazon Silk) no son compatibles.</p>
 <table class="table">
@@ -548,6 +553,11 @@ not Explorer &lt;= 11
 <p>El elemento <code>.dropdown-backdrop</code> no se usa en iOS en la navegación debido a la complejidad de z-index. Por lo tanto, para cerrar los menús desplegables en las barras de navegación, debes hacer clic directamente en el elemento desplegable (o <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event#Safari_Mobile">cualquier otro elemento que active un evento de clic en iOS</a>).</p>
 <h2 id="browser-zooming">Browser zooming</h2>
 <p>El zoom de página inevitablemente presenta artefactos de representación en algunos componentes, tanto en Bootstrap como en el resto de la web. Dependiendo del problema, es posible que podamos solucionarlo (busca primero y luego abre un problema si es necesario). Sin embargo, tendemos a ignorarlos, ya que a menudo no tienen una solución directa más que soluciones alternativas.</p>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
 <h2 id="validadores">Validadores</h2>
 <p>Para brindar la mejor experiencia posible a los navegadores antiguos y con errores, Bootstrap utiliza <a href="http://browserhacks.com/">hacks de navegador CSS</a> en varios lugares para orientar CSS especial a ciertas versiones del navegador para evitar errores en el los propios navegadores. Es comprensible que estos hacks hagan que los validadores de CSS se quejen de que no son válidos. En un par de lugares, también utilizamos características de CSS de última generación que aún no están completamente estandarizadas, pero se utilizan únicamente para la mejora progresiva.</p>
 <p>Estas advertencias de validación no importan en la práctica, ya que la parte no pirateada de nuestro CSS se valida completamente y las porciones pirateadas no interfieren con el funcionamiento adecuado de la porción no pirateada, por lo que ignoramos deliberadamente estas advertencias en particular.</p>

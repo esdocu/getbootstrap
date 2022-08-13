@@ -34,6 +34,10 @@ Si deseas descargar y examinar nuestros [ejemplos]({{< docsref "/examples" >}}),
 
 <a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">Descargar ejemplos</a>
 
+{{< callout info >}}
+{{< partial "maybe-interested-1.md" >}}
+{{< /callout >}}
+
 ## CDN via jsDelivr
 
 Omite la descarga con [jsDelivr](https://www.jsdelivr.com/) para entregar la versión en caché del CSS y JS compilados de Bootstrap a tu proyecto.
@@ -97,6 +101,10 @@ gem install bootstrap -v {{< param current_ruby_version >}}
 ```
 
 [Consulta el README de la gema](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md) para obtener más detalles.
+
+{{< callout info >}}
+{{< partial "maybe-interested-2.md" >}}
+{{< /callout >}}
 
 ### Composer
 
