@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Documentación y ejemplos para agregar tooltips de Bootstrap personalizados con CSS y JavaScript usando CSS3 para animaciones y data-bs-attributes para el almacenamiento local de títulos.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.101.0">
+<meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -421,8 +421,8 @@
       </div>
       <p class="bd-lead mb-5">Documentación y ejemplos para agregar tooltips de Bootstrap personalizados con CSS y JavaScript usando CSS3 para animaciones y data-bs-attributes para el almacenamiento local de títulos.</p>
       
-        <a href="https://bit.ly/3TOdlvr" target="_blank">
-    <img src="/img/binance-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://bit.ly/3rijinx" target="_blank">
+    <img src="/img/ads-flutter-dev-01.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
 
 
@@ -502,11 +502,11 @@ El efecto de animación de este componente depende de la media query <code>prefe
 <p>¿Lo tienes? Genial, veamos cómo funcionan con algunos ejemplos.</p>
 <h2 id="ejemplo-habilita-los-tooltips-en-todas-partes">Ejemplo: habilita los tooltips en todas partes</h2>
 <p>Una forma de inicializar todos los tooltips en una página sería seleccionarlos por su atributo <code>data-bs-toggle</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tooltipTriggerList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tooltipList</span> <span class="o">=</span> <span class="nx">tooltipTriggerList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">tooltipTriggerEl</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">tooltipTriggerEl</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><h2 id="ejemplos">Ejemplos</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tooltipTriggerList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span><span class="p">))</span>
+<span class="kd">var</span> <span class="nx">tooltipList</span> <span class="o">=</span> <span class="nx">tooltipTriggerList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">tooltipTriggerEl</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">tooltipTriggerEl</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div><h2 id="ejemplos">Ejemplos</h2>
 <p>Pasa el cursor sobre los enlaces a continuación para ver sus tooltips:</p>
 <div class="bd-example tooltip-demo">
   <p class="muted">Texto placeholder para demostrar algunos <a href="#" data-bs-toggle="tooltip" title="Tooltip predeterminada">enlaces en línea</a> con tooltips. Esto ahora es solo un relleno. Contenido colocado aquí solo para imitar la presencia de <a href="#" data-bs-toggle="tooltip" title="Otro tooltip">texto real</a>. Y todo eso solo para darte una idea de cómo se vería el tooltip cuando se usa en situaciones del mundo real. Espero que ahora hayas visto cómo <a href="#" data-bs-toggle="tooltip" title="Otro aquí también">este tooltip en los enlaces</a> puede funcionar en la práctica, una vez que los uses en <a href="#" data-bs-toggle="tooltip" title="¡El último consejo!">tu propio</a> sitio web o proyecto.
@@ -522,23 +522,23 @@ El efecto de animación de este componente depende de la media query <code>prefe
     <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>con</u> <b>HTML</b>">Tooltip con HTML</button>
   </div>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;top&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip superior&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Tooltip superior
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;right&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip derecho&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Tooltip derecho
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;bottom&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip inferior&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Tooltip inferior
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;left&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip izquierdo&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Tooltip izquierdo
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>Y con HTML personalizado:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-html</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;&lt;em&gt;Tooltip&lt;/em&gt; &lt;u&gt;con&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  Tooltip con HTML
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>Con un SVG:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;top&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip superior&#34;</span><span class="p">&gt;</span>
+  Tooltip superior
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;right&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip derecho&#34;</span><span class="p">&gt;</span>
+  Tooltip derecho
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;bottom&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip inferior&#34;</span><span class="p">&gt;</span>
+  Tooltip inferior
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-placement</span><span class="o">=</span><span class="s">&#34;left&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip izquierdo&#34;</span><span class="p">&gt;</span>
+  Tooltip izquierdo
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div><p>Y con HTML personalizado:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-bs-html</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;&lt;em&gt;Tooltip&lt;/em&gt; &lt;u&gt;con&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;&#34;</span><span class="p">&gt;</span>
+  Tooltip con HTML
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div><p>Con un SVG:</p>
 <div class="bd-example tooltip-demo">
   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="Tooltip por defecto">
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
@@ -554,33 +554,33 @@ El efecto de animación de este componente depende de la media query <code>prefe
 
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$tooltip-font-size</span><span class="o">:</span>                 <span class="nv">$font-size-sm</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-max-width</span><span class="o">:</span>                 <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-color</span><span class="o">:</span>                     <span class="nv">$white</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-bg</span><span class="o">:</span>                        <span class="nv">$black</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-border-radius</span><span class="o">:</span>             <span class="nv">$border-radius</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-opacity</span><span class="o">:</span>                   <span class="mf">.9</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-padding-y</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-padding-x</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-margin</span><span class="o">:</span>                    <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-arrow-width</span><span class="o">:</span>               <span class="mf">.8</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-arrow-height</span><span class="o">:</span>              <span class="mf">.4</span><span class="kt">rem</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="nv">$tooltip-arrow-color</span><span class="o">:</span>               <span class="nv">$tooltip-bg</span><span class="p">;</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$tooltip-font-size</span><span class="o">:</span>                 <span class="nv">$font-size-sm</span><span class="p">;</span>
+<span class="nv">$tooltip-max-width</span><span class="o">:</span>                 <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+<span class="nv">$tooltip-color</span><span class="o">:</span>                     <span class="nv">$white</span><span class="p">;</span>
+<span class="nv">$tooltip-bg</span><span class="o">:</span>                        <span class="nv">$black</span><span class="p">;</span>
+<span class="nv">$tooltip-border-radius</span><span class="o">:</span>             <span class="nv">$border-radius</span><span class="p">;</span>
+<span class="nv">$tooltip-opacity</span><span class="o">:</span>                   <span class="mf">.9</span><span class="p">;</span>
+<span class="nv">$tooltip-padding-y</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
+<span class="nv">$tooltip-padding-x</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
+<span class="nv">$tooltip-margin</span><span class="o">:</span>                    <span class="mi">0</span><span class="p">;</span>
+
+<span class="nv">$tooltip-arrow-width</span><span class="o">:</span>               <span class="mf">.8</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$tooltip-arrow-height</span><span class="o">:</span>              <span class="mf">.4</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$tooltip-arrow-color</span><span class="o">:</span>               <span class="nv">$tooltip-bg</span><span class="p">;</span>
+</code></pre></div>
 <h2 id="uso">Uso</h2>
 <p>El complemento de tooltip genera contenido y marcado a pedido y, de forma predeterminada, coloca tooltips después de tu elemento desencadenante.</p>
 <p>Activa el tooltip a través de JavaScript:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
-</span></span></code></pre></div><div class="bd-callout bd-callout-warning">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
+</code></pre></div><div class="bd-callout bd-callout-warning">
 <h5 id="desbordamiento-auto-y-scroll">Desbordamiento <code>auto</code> y <code>scroll</code></h5>
 <p>La posición del tooltip intenta cambiar automáticamente cuando un <strong>contenedor padre</strong> tiene <code>overflow: auto</code> o <code>overflow: scroll</code> como nuestro <code>.table-responsive</code>, pero aún mantiene el posicionamiento de la ubicación original. Para resolver esto, establece la <a href="https://popper.js.org/docs/v2/modifiers/flip/#boundary">opción <code>boundary</code></a> (para el modificador flip usando la opción <code>popperConfig</code>) a cualquier HTMLElement para sobrescribir el valor predeterminado, <code>'clippingParents'</code>, como <code>document.body</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">boundary</span><span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span> <span class="c1">// o document.querySelector(&#39;#boundary&#39;)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">boundary</span><span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span> <span class="c1">// o document.querySelector(&#39;#boundary&#39;)
+</span><span class="c1"></span><span class="p">})</span>
+</code></pre></div>
 </div>
 
 <h3 id="marcado">Marcado</h3>
@@ -590,26 +590,26 @@ El efecto de animación de este componente depende de la media query <code>prefe
 <p>Solo debes agregar el tooltip a los elementos HTML que tradicionalmente se pueden enfocar con el teclado y son interactivos (como enlaces o controles de formulario). Aunque los elementos HTML arbitrarios (como <code>&lt;span&gt;</code>s) se pueden enfocar agregando el atributo <code>tabindex=&quot;0&quot;</code>, esto agregará tabulaciones potencialmente molestas y confusas en elementos no interactivos para usuarios de teclado, y actualmente la mayoría de las tecnologías de asistencia no anuncian el tooltip en esta situación. Además, no confíes únicamente en <code>hover</code> como el disparador de tu tooltip, ya que esto hará que tu tooltip sea imposible de activar para los usuarios del teclado.
 </div>
 
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- HTML a escribir --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Algo de texto tooltip!&#34;</span><span class="p">&gt;</span>Pasa el puntero de mouse aquí<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- Marcado generado por el complemento --&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tooltip bs-tooltip-top&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tooltip-arrow&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tooltip-inner&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    Algo de texto tooltip!
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h3 id="elementos-deshabilitados">Elementos deshabilitados</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- HTML a escribir --&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Algo de texto tooltip!&#34;</span><span class="p">&gt;</span>Pasa el puntero de mouse aquí<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Marcado generado por el complemento --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tooltip bs-tooltip-top&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tooltip-arrow&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tooltip-inner&#34;</span><span class="p">&gt;</span>
+    Algo de texto tooltip!
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="elementos-deshabilitados">Elementos deshabilitados</h3>
 <p>Los elementos con el atributo <code>disabled</code> no son interactivos, lo que significa que los usuarios no pueden enfocarlos, desplazarlos o hacer clic en ellos para activar un tooltip (o un popover). Como solución alternativa, querrás activar el tooltip desde un contenedor <code>&lt;div&gt;</code> o <code>&lt;span&gt;</code>, idealmente enfocable desde el teclado usando <code>tabindex=&quot;0&quot;</code>.</p>
 <div class="tooltip-demo">
 <div class="bd-example">
 <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Tooltip deshabilitado">
   <button class="btn btn-primary" type="button" disabled>Botón deshabilitado</button>
 </span>
-</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-block&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip deshabilitado&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Botón deshabilitado<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-block&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip deshabilitado&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Botón deshabilitado<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></div>
 </div>
 <div class="bd-callout bd-callout-info">
 <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
@@ -777,14 +777,14 @@ Ten en cuenta que, por razones de seguridad, las opciones <code>sanitize</code>,
 </div>
 
 <h4 id="uso-de-la-función-con-popperconfig">Uso de la función con <code>popperConfig</code></h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">popperConfig</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">defaultBsPopperConfig</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// var newPopperConfig = {...}
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// usa defaultBsPopperConfig si es necesario...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// return newPopperConfig
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span></code></pre></div><h3 id="métodos">Métodos</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">popperConfig</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">defaultBsPopperConfig</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// var newPopperConfig = {...}
+</span><span class="c1"></span>    <span class="c1">// usa defaultBsPopperConfig si es necesario...
+</span><span class="c1"></span>    <span class="c1">// return newPopperConfig
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div><h3 id="métodos">Métodos</h3>
 <div class="bd-callout bd-callout-danger">
 <h4 id="transiciones-y-métodos-asíncronos">Transiciones y métodos asíncronos</h4>
 <p>Todos los métodos de la API son <strong>asincrónicos</strong> e inician una <strong>transition</strong>. Regresan al lugar donde se realizó la llamada tan pronto como se inicia la transición, pero <strong>antes de que finalice</strong>. Además, se ignorará una llamada de método en un <strong>componente en medio de una transición</strong>.</p>
@@ -794,44 +794,44 @@ Ten en cuenta que, por razones de seguridad, las opciones <code>sanitize</code>,
 
 <h4 id="show">show</h4>
 <p>Revela el tooltip de un elemento. <strong>Regresa al punto de la llamada antes de que se haya mostrado realmente la tooltip</strong> (es decir, antes de que ocurra el evento <code>shown.bs.tooltip</code>). Esto se considera una activación &ldquo;manual&rdquo; del tooltip. El tooltip con títulos de longitud cero nunca se muestra.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="hide">hide</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</code></pre></div><h4 id="hide">hide</h4>
 <p>Oculta el tooltip de un elemento. <strong>Regresa al punto de la llamada antes de que la tooltip se haya ocultado</strong> (es decir, antes de que ocurra el evento <code>hidden.bs.tooltip</code>). Esto se considera una activación &ldquo;manual&rdquo; del tooltip.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="toggle">toggle</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
+</code></pre></div><h4 id="toggle">toggle</h4>
 <p>Alterna el tooltip de un elemento. <strong>Regresa al punto de la llamada antes de que la tooltip se haya mostrado u ocultado</strong> (es decir, antes de que ocurra el evento <code>shown.bs.tooltip</code> o <code>hidden.bs.tooltip</code>). Esto se considera una activación &ldquo;manual&rdquo; del tooltip.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="dispose">dispose</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
+</code></pre></div><h4 id="dispose">dispose</h4>
 <p>Oculta y destruye el tooltip de un elemento (elimina los datos almacenados en el elemento DOM). El tooltip que utiliza la delegación (que se crea mediante <a href="#options">la opción <code>selector</code></a>) no se puede destruir individualmente en los elementos desencadenantes descendientes.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="enable">enable</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
+</code></pre></div><h4 id="enable">enable</h4>
 <p>Le da al tooltip de un elemento la capacidad de mostrarse. <strong>El tooltip está habilitada de forma predeterminada.</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">enable</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="disable">disable</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">enable</span><span class="p">()</span>
+</code></pre></div><h4 id="disable">disable</h4>
 <p>Elimina la capacidad de mostrar el tooltip de un elemento. El tooltip solo se podrá mostrar si se vuelve a habilitar.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">disable</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="setcontent">setContent</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">disable</span><span class="p">()</span>
+</code></pre></div><h4 id="setcontent">setContent</h4>
 <p>Brinda una forma de cambiar el contenido del tooltip después de su inicialización.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">setContent</span><span class="p">({</span> <span class="s1">&#39;.tooltip-inner&#39;</span><span class="o">:</span> <span class="s1">&#39;another title&#39;</span> <span class="p">})</span>
-</span></span></code></pre></div><div class="bd-callout bd-callout-info">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">setContent</span><span class="p">({</span> <span class="s1">&#39;.tooltip-inner&#39;</span><span class="o">:</span> <span class="s1">&#39;another title&#39;</span> <span class="p">})</span>
+</code></pre></div><div class="bd-callout bd-callout-info">
 El método <code>setContent</code> acepta un argumento <code>object</code>, donde cada clave de propiedad es un selector de <code>string</code> válido dentro de la plantilla emergente, y cada valor de propiedad relacionado puede ser <code>string</code> | <code>element</code> | <code>function</code> | <code>null</code>
 </div>
 
 <h4 id="toggleenabled">toggleEnabled</h4>
 <p>Alterna la capacidad de mostrar u ocultar el tooltip de un elemento.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">toggleEnabled</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="update">update</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">toggleEnabled</span><span class="p">()</span>
+</code></pre></div><h4 id="update">update</h4>
 <p>Actualiza la posición del tooltip de un elemento.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">update</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="getinstance">getInstance</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">update</span><span class="p">()</span>
+</code></pre></div><h4 id="getinstance">getInstance</h4>
 <p>Método <em>estático</em> que te permite obtener la instancia del tooltip asociado con un elemento DOM</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia del tooltip de Bootstrap
-</span></span></span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia del tooltip de Bootstrap
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
 <p>Método <em>estático</em> que te permite obtener la instancia de tooltip asociado con un elemento DOM, o crear uno nuevo en caso de que no se haya inicializado</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia del tooltip de Bootstrap
-</span></span></span></code></pre></div><div class="bd-callout bd-callout-info">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia del tooltip de Bootstrap
+</span></code></pre></div><div class="bd-callout bd-callout-info">
 <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
 <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
 </div>
@@ -867,21 +867,22 @@ El método <code>setContent</code> acepta un argumento <code>object</code>, dond
     </tr>
   </tbody>
 </table>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">myTooltipEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myTooltip&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">myTooltipEl</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">myTooltipEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;hidden.bs.tooltip&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="c1">// hacer algo...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myTooltipEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myTooltip&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">myTooltipEl</span><span class="p">)</span>
+
+<span class="nx">myTooltipEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;hidden.bs.tooltip&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// hacer algo...
+</span><span class="c1"></span><span class="p">})</span>
+
+<span class="nx">tooltip</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
+</code></pre></div>
     </div>
     <div class="pt-3">
       
-        <a href="https://bit.ly/3TOdlvr" target="_blank">
-    <img src="/img/binance-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://bit.ly/3rijinx" target="_blank">
+    <img src="/img/ads-flutter-dev-01.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
+
       
     </div>
   </main>

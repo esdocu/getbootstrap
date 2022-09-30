@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Aprende cómo y por qué construimos casi todos nuestros componentes de forma responsive y con clases y modificadoras base.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.101.0">
+<meta name="generator" content="Hugo 0.91.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.1">
@@ -421,8 +421,8 @@
       </div>
       <p class="bd-lead mb-5">Aprende cómo y por qué construimos casi todos nuestros componentes de forma responsive y con clases y modificadoras base.</p>
       
-        <a href="https://bit.ly/3TOdlvr" target="_blank">
-    <img src="/img/binance-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://bit.ly/3rijinx" target="_blank">
+    <img src="/img/ads-flutter-dev-01.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
 
 
@@ -454,36 +454,36 @@
 <h2 id="modificadores">Modificadores</h2>
 <p>Muchos de los componentes de Bootstrap están construidos con un enfoque de clase de modificador base. Esto significa que la mayor parte del estilo está contenido en una clase base (p. ej., <code>.btn</code>), mientras que las variaciones de estilo se limitan a las clases de modificadores (p. ej., <code>.btn-danger</code>). Estas clases de modificadores se crean a partir del mapa <code>$theme-colors</code> para personalizar el número y el nombre de nuestras clases de modificadores.</p>
 <p>Aquí hay dos ejemplos de cómo recorremos el mapa <code>$theme-colors</code> para generar modificadores para los componentes <code>.alert</code> y <code>.list-group</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Generate contextual modifier classes for colorizing the alert.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$alert-background</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$alert-bg-scale</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$alert-border</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$alert-border-scale</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$alert-color</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$alert-color-scale</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">@if</span> <span class="p">(</span><span class="nf">contrast-ratio</span><span class="p">(</span><span class="nv">$alert-background</span><span class="o">,</span> <span class="nv">$alert-color</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nv">$min-contrast-ratio</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">$alert-color</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$alert-background</span><span class="p">)</span><span class="o">,</span> <span class="nf">abs</span><span class="p">(</span><span class="nv">$alert-color-scale</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="nc">.alert-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> alert-variant</span><span class="p">(</span><span class="nv">$alert-background</span><span class="o">,</span> <span class="nv">$alert-border</span><span class="o">,</span> <span class="nv">$alert-color</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// List group contextual variants
-</span></span></span><span class="line"><span class="cl"><span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1">// Add modifier classes to change text and background color on individual items.
-</span></span></span><span class="line"><span class="cl"><span class="c1">// Organizationally, this must come after the `:hover` states.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$list-group-variant-bg</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-bg-scale</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="nv">$list-group-variant-color</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-color-scale</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@if</span> <span class="p">(</span><span class="nf">contrast-ratio</span><span class="p">(</span><span class="nv">$list-group-variant-bg</span><span class="o">,</span> <span class="nv">$list-group-variant-color</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nv">$min-contrast-ratio</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">$list-group-variant-color</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$list-group-variant-bg</span><span class="p">)</span><span class="o">,</span> <span class="nf">abs</span><span class="p">(</span><span class="nv">$list-group-item-color-scale</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> list-group-item-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$list-group-variant-bg</span><span class="o">,</span> <span class="nv">$list-group-variant-color</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Generate contextual modifier classes for colorizing the alert.
+</span><span class="c1"></span>
+<span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+  <span class="nv">$alert-background</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$alert-bg-scale</span><span class="p">);</span>
+  <span class="nv">$alert-border</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$alert-border-scale</span><span class="p">);</span>
+  <span class="nv">$alert-color</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$alert-color-scale</span><span class="p">);</span>
+
+  <span class="k">@if</span> <span class="p">(</span><span class="nf">contrast-ratio</span><span class="p">(</span><span class="nv">$alert-background</span><span class="o">,</span> <span class="nv">$alert-color</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nv">$min-contrast-ratio</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$alert-color</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$alert-background</span><span class="p">)</span><span class="o">,</span> <span class="nf">abs</span><span class="p">(</span><span class="nv">$alert-color-scale</span><span class="p">));</span>
+  <span class="p">}</span>
+  <span class="nc">.alert-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
+    <span class="k">@include</span><span class="nd"> alert-variant</span><span class="p">(</span><span class="nv">$alert-background</span><span class="o">,</span> <span class="nv">$alert-border</span><span class="o">,</span> <span class="nv">$alert-color</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// List group contextual variants
+</span><span class="c1">//
+</span><span class="c1">// Add modifier classes to change text and background color on individual items.
+</span><span class="c1">// Organizationally, this must come after the `:hover` states.
+</span><span class="c1"></span>
+<span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+  <span class="nv">$list-group-variant-bg</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-bg-scale</span><span class="p">);</span>
+  <span class="nv">$list-group-variant-color</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-color-scale</span><span class="p">);</span>
+  <span class="k">@if</span> <span class="p">(</span><span class="nf">contrast-ratio</span><span class="p">(</span><span class="nv">$list-group-variant-bg</span><span class="o">,</span> <span class="nv">$list-group-variant-color</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nv">$min-contrast-ratio</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$list-group-variant-color</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$list-group-variant-bg</span><span class="p">)</span><span class="o">,</span> <span class="nf">abs</span><span class="p">(</span><span class="nv">$list-group-item-color-scale</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="k">@include</span><span class="nd"> list-group-item-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$list-group-variant-bg</span><span class="o">,</span> <span class="nv">$list-group-variant-color</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
 <div class="bd-callout bd-callout-info">
 <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
 <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
@@ -491,43 +491,43 @@
 
 <h2 id="responsive">Responsive</h2>
 <p>Estos bucles de Sass tampoco se limitan a mapas de colores. También puedes generar variaciones sensibles de tus componentes. Tomemos como ejemplo nuestra alineación responsive de los menús desplegables donde mezclamos un bucle <code>@each</code> para el mapa Sass <code>$grid-breakpoints</code> con una media query incluida.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// We deliberately hardcode the `bs-` prefix because we check
-</span></span></span><span class="line"><span class="cl"><span class="c1">// this custom property in JS to determine Popper&#39;s positioning
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nc">.dropdown-menu</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-start</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="na">--bs-position</span><span class="o">:</span> <span class="ni">start</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="k">&amp;</span><span class="o">[</span><span class="nt">data-bs-popper</span><span class="o">]</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="na">right</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="na">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="nc">.dropdown-menu</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-end</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="na">--bs-position</span><span class="o">:</span> <span class="ni">end</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">      <span class="k">&amp;</span><span class="o">[</span><span class="nt">data-bs-popper</span><span class="o">]</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="na">right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="na">left</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// We deliberately hardcode the `bs-` prefix because we check
+</span><span class="c1">// this custom property in JS to determine Popper&#39;s positioning
+</span><span class="c1"></span>
+<span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
+
+    <span class="nc">.dropdown-menu</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-start</span> <span class="p">{</span>
+      <span class="na">--bs-position</span><span class="o">:</span> <span class="ni">start</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="o">[</span><span class="nt">data-bs-popper</span><span class="o">]</span> <span class="p">{</span>
+        <span class="na">right</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
+        <span class="na">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nc">.dropdown-menu</span><span class="si">#{</span><span class="nv">$infix</span><span class="si">}</span><span class="nc">-end</span> <span class="p">{</span>
+      <span class="na">--bs-position</span><span class="o">:</span> <span class="ni">end</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="o">[</span><span class="nt">data-bs-popper</span><span class="o">]</span> <span class="p">{</span>
+        <span class="na">right</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="na">left</span><span class="o">:</span> <span class="ni">auto</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Si modificas tus <code>$grid-breakpoints</code>, tus cambios se aplicarán a todos los bucles que iteren sobre ese mapa.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">  <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">sm</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">lg</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">xl</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="o">,</span>
-</span></span><span class="line"><span class="cl">  <span class="na">xxl</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span>
-</span></span><span class="line"><span class="cl"><span class="p">);</span>
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
+  <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="na">sm</span><span class="o">:</span> <span class="mi">576</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">md</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">lg</span><span class="o">:</span> <span class="mi">992</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xl</span><span class="o">:</span> <span class="mi">1200</span><span class="kt">px</span><span class="o">,</span>
+  <span class="na">xxl</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span>
+<span class="p">);</span>
+</code></pre></div>
 <p>Para obtener más información y ejemplos sobre cómo modificar nuestros mapas y variables Sass, consulta <a href="/docs/5.1/layout/grid/#sass">la sección Sass de la documentación de Grid</a>.</p>
 <div class="bd-callout bd-callout-info">
 <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
@@ -541,16 +541,16 @@
     <strong>Esto es un callout (texto destacado).</strong> Lo creamos personalizado para nuestros documentos para que nuestros mensajes se destaquen. Tiene tres variantes a través de clases de modificadoras.
   </div>
 </div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;callout&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>En tu CSS, tendrías algo como lo siguiente, donde la mayor parte del estilo se realiza a través de <code>.callout</code>. Luego, los estilos únicos entre cada variante se controlan a través de la clase modificadora.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Clase base
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.callout</span> <span class="p">{}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Clases modificadoras
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.callout-info</span> <span class="p">{}</span>
-</span></span><span class="line"><span class="cl"><span class="nc">.callout-warning</span> <span class="p">{}</span>
-</span></span><span class="line"><span class="cl"><span class="nc">.callout-danger</span> <span class="p">{}</span>
-</span></span></code></pre></div><p>Para los <em>callouts</em>, ese estilo único es simplemente un <code>border-left-color</code>. Cuando combinas esa clase base con una de las clases modificadoras, obtienes tu familia de componentes completa:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;callout&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>En tu CSS, tendrías algo como lo siguiente, donde la mayor parte del estilo se realiza a través de <code>.callout</code>. Luego, los estilos únicos entre cada variante se controlan a través de la clase modificadora.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Clase base
+</span><span class="c1"></span><span class="nc">.callout</span> <span class="p">{}</span>
+
+<span class="c1">// Clases modificadoras
+</span><span class="c1"></span><span class="nc">.callout-info</span> <span class="p">{}</span>
+<span class="nc">.callout-warning</span> <span class="p">{}</span>
+<span class="nc">.callout-danger</span> <span class="p">{}</span>
+</code></pre></div><p>Para los <em>callouts</em>, ese estilo único es simplemente un <code>border-left-color</code>. Cuando combinas esa clase base con una de las clases modificadoras, obtienes tu familia de componentes completa:</p>
 <div class="bd-callout bd-callout-info">
 <strong>Esto es un info callout.</strong> Texto de ejemplo para mostrarlo en acción.
 </div>
@@ -567,9 +567,10 @@
     </div>
     <div class="pt-3">
       
-        <a href="https://bit.ly/3TOdlvr" target="_blank">
-    <img src="/img/binance-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://bit.ly/3rijinx" target="_blank">
+    <img src="/img/ads-flutter-dev-01.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
+
       
     </div>
   </main>
