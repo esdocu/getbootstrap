@@ -22,6 +22,7 @@ Envuelve cualquier inserción, como un `<iframe>`, en un elemento padre con una 
 
 {{< example >}}
 <div class="ratio ratio-16x9">
+  (inserta el iframe del video aquí)
 </div>
 {{< /example >}}
 
