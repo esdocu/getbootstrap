@@ -2,4 +2,4 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
-Sitemap: https://getbootstrap.esdocu.com/sitemap.xml
+Sitemap: https://esdocu.com/sitemap.xml
