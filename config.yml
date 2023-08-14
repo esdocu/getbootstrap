@@ -1,6 +1,6 @@
 languageCode:           "es"
 title:                  "Bootstrap 5 en Español"
-baseURL:                "https://bootstrap-esdocu.com"
+baseURL:                "https://getbootstrap.esdocu.com"
 
 security:
   enableInlineShortcodes: true
