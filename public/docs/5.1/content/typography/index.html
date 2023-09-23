@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación y ejemplos de tipografía Bootstrap, incluidos ajustes globales, encabezados, texto del body, listas y más.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.91.2">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.1">
+
+<title>Tipografía · Bootstrap 5 en Español v5.1</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290" crossorigin="anonymous"></script>
+
+
+
+<!-- Bootstrap core CSS -->
+<link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="Tipografía">
+<meta name="twitter:description" content="Documentación y ejemplos de tipografía Bootstrap, incluidos ajustes globales, encabezados, texto del body, listas y más.">
+<meta name="twitter:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.1/content/typography/">
+<meta property="og:title" content="Tipografía">
+<meta property="og:description" content="Documentación y ejemplos de tipografía Bootstrap, incluidos ajustes globales, encabezados, texto del body, listas y más.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://getbootstrap.esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="500">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DK014C26F7');
+</script>
+
+  </head>
+  <body>
+    <div class="skippy visually-hidden-focusable overflow-hidden">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+  </div>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark bd-navbar">
+  <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+    <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+
+    </button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+      <div class="offcanvas-header pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body pt-0">
+        <hr class="d-md-none text-white-50">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Inicio</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2 active" aria-current="true" href="/docs/5.1/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="/docs/5.1/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Ejemplos</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">Iconos</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Temas</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
+          </li>
+        </ul>
+
+        <hr class="d-md-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+              <small class="d-md-none ms-2">GitHub</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 416.32" role="img"><title>Twitter</title><path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"/></svg>
+              <small class="d-md-none ms-2">Twitter</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 512" role="img"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path fill="currentColor" d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z"/></svg>
+              <small class="d-md-none ms-2">Slack</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 40 41" role="img"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"/><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"/></svg>
+              <small class="d-md-none ms-2">Open Collective</small>
+            </a>
+          </li>
+        </ul>
+
+        <hr class="d-md-none text-white-50">
+
+        <a class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3" href="/docs/5.1/getting-started/download/">Descargar</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+    
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+  <div class="container-xxl d-flex align-items-md-center">
+    <form class="bd-search position-relative me-auto">
+      <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
+    </form>
+
+    <div class="dropdown ms-3">
+  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-none d-lg-inline">Bootstrap</span> v5.1
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
+    <li><a class="dropdown-item current" aria-current="true" href="/docs/5.1/">Latest (5.1.x)</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6/">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+  </ul>
+</div>
+
+
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
+  <title>Expand</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
+</svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16">
+  <title>Collapse</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
+</svg>
+
+    </button>
+  </div>
+</nav>
+
+
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+          Empezando
+        </button>
+
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/getting-started/introduction/" class="d-inline-flex align-items-center rounded">Introducción</a></li>
+              <li><a href="/docs/5.1/getting-started/download/" class="d-inline-flex align-items-center rounded">Descargar</a></li>
+              <li><a href="/docs/5.1/getting-started/contents/" class="d-inline-flex align-items-center rounded">Contenido</a></li>
+              <li><a href="/docs/5.1/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">Navegadores &amp; dispositivos</a></li>
+              <li><a href="/docs/5.1/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
+              <li><a href="/docs/5.1/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
+              <li><a href="/docs/5.1/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
+              <li><a href="/docs/5.1/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">Accesibilidad</a></li>
+              <li><a href="/docs/5.1/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
+              <li><a href="/docs/5.1/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a></li>
+              <li><a href="/docs/5.1/getting-started/contribute/" class="d-inline-flex align-items-center rounded">Contribuir</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
+          Personalizar
+        </button>
+
+        <div class="collapse" id="customize-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/customize/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/customize/sass/" class="d-inline-flex align-items-center rounded">Sass</a></li>
+              <li><a href="/docs/5.1/customize/options/" class="d-inline-flex align-items-center rounded">Opciones</a></li>
+              <li><a href="/docs/5.1/customize/color/" class="d-inline-flex align-items-center rounded">Color</a></li>
+              <li><a href="/docs/5.1/customize/components/" class="d-inline-flex align-items-center rounded">Componentes</a></li>
+              <li><a href="/docs/5.1/customize/css-variables/" class="d-inline-flex align-items-center rounded">Variables CSS</a></li>
+              <li><a href="/docs/5.1/customize/optimize/" class="d-inline-flex align-items-center rounded">Optimizar</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
+          Layout
+        </button>
+
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
+              <li><a href="/docs/5.1/layout/containers/" class="d-inline-flex align-items-center rounded">Contenedores</a></li>
+              <li><a href="/docs/5.1/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
+              <li><a href="/docs/5.1/layout/columns/" class="d-inline-flex align-items-center rounded">Columnas</a></li>
+              <li><a href="/docs/5.1/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a></li>
+              <li><a href="/docs/5.1/layout/utilities/" class="d-inline-flex align-items-center rounded">Utilidades</a></li>
+              <li><a href="/docs/5.1/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
+              <li><a href="/docs/5.1/layout/css-grid/" class="d-inline-flex align-items-center rounded">Cuadrícula CSS</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="true" aria-current="true">
+          Contenido
+        </button>
+
+        <div class="collapse show" id="content-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded active" aria-current="page">Tipografía</a></li>
+              <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Imágenes</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tablas</a></li>
+              <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false">
+          Formularios
+        </button>
+
+        <div class="collapse" id="forms-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/forms/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/forms/form-control/" class="d-inline-flex align-items-center rounded">Controles de formulario</a></li>
+              <li><a href="/docs/5.1/forms/select/" class="d-inline-flex align-items-center rounded">Select</a></li>
+              <li><a href="/docs/5.1/forms/checks-radios/" class="d-inline-flex align-items-center rounded">Checks &amp; radios</a></li>
+              <li><a href="/docs/5.1/forms/range/" class="d-inline-flex align-items-center rounded">Rango</a></li>
+              <li><a href="/docs/5.1/forms/input-group/" class="d-inline-flex align-items-center rounded">Grupo de inputs</a></li>
+              <li><a href="/docs/5.1/forms/floating-labels/" class="d-inline-flex align-items-center rounded">Etiquetas flotantes</a></li>
+              <li><a href="/docs/5.1/forms/layout/" class="d-inline-flex align-items-center rounded">Layout</a></li>
+              <li><a href="/docs/5.1/forms/validation/" class="d-inline-flex align-items-center rounded">Validación</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+          Componentes
+        </button>
+
+        <div class="collapse" id="components-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/components/accordion/" class="d-inline-flex align-items-center rounded">Accordion</a></li>
+              <li><a href="/docs/5.1/components/alerts/" class="d-inline-flex align-items-center rounded">Alerts</a></li>
+              <li><a href="/docs/5.1/components/badge/" class="d-inline-flex align-items-center rounded">Badge</a></li>
+              <li><a href="/docs/5.1/components/breadcrumb/" class="d-inline-flex align-items-center rounded">Breadcrumb</a></li>
+              <li><a href="/docs/5.1/components/buttons/" class="d-inline-flex align-items-center rounded">Buttons</a></li>
+              <li><a href="/docs/5.1/components/button-group/" class="d-inline-flex align-items-center rounded">Button group</a></li>
+              <li><a href="/docs/5.1/components/card/" class="d-inline-flex align-items-center rounded">Card</a></li>
+              <li><a href="/docs/5.1/components/carousel/" class="d-inline-flex align-items-center rounded">Carousel</a></li>
+              <li><a href="/docs/5.1/components/close-button/" class="d-inline-flex align-items-center rounded">Close button</a></li>
+              <li><a href="/docs/5.1/components/collapse/" class="d-inline-flex align-items-center rounded">Collapse</a></li>
+              <li><a href="/docs/5.1/components/dropdowns/" class="d-inline-flex align-items-center rounded">Dropdowns</a></li>
+              <li><a href="/docs/5.1/components/list-group/" class="d-inline-flex align-items-center rounded">List group</a></li>
+              <li><a href="/docs/5.1/components/modal/" class="d-inline-flex align-items-center rounded">Modal</a></li>
+              <li><a href="/docs/5.1/components/navs-tabs/" class="d-inline-flex align-items-center rounded">Navs &amp; tabs</a></li>
+              <li><a href="/docs/5.1/components/navbar/" class="d-inline-flex align-items-center rounded">Navbar</a></li>
+              <li><a href="/docs/5.1/components/offcanvas/" class="d-inline-flex align-items-center rounded">Offcanvas</a></li>
+              <li><a href="/docs/5.1/components/pagination/" class="d-inline-flex align-items-center rounded">Pagination</a></li>
+              <li><a href="/docs/5.1/components/placeholders/" class="d-inline-flex align-items-center rounded">Placeholders</a></li>
+              <li><a href="/docs/5.1/components/popovers/" class="d-inline-flex align-items-center rounded">Popovers</a></li>
+              <li><a href="/docs/5.1/components/progress/" class="d-inline-flex align-items-center rounded">Progress</a></li>
+              <li><a href="/docs/5.1/components/scrollspy/" class="d-inline-flex align-items-center rounded">Scrollspy</a></li>
+              <li><a href="/docs/5.1/components/spinners/" class="d-inline-flex align-items-center rounded">Spinners</a></li>
+              <li><a href="/docs/5.1/components/toasts/" class="d-inline-flex align-items-center rounded">Toasts</a></li>
+              <li><a href="/docs/5.1/components/tooltips/" class="d-inline-flex align-items-center rounded">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
+          Helpers
+        </button>
+
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
+              <li><a href="/docs/5.1/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Enlaces de colores</a></li>
+              <li><a href="/docs/5.1/helpers/ratio/" class="d-inline-flex align-items-center rounded">Relación de aspecto</a></li>
+              <li><a href="/docs/5.1/helpers/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
+              <li><a href="/docs/5.1/helpers/stacks/" class="d-inline-flex align-items-center rounded">Pilas</a></li>
+              <li><a href="/docs/5.1/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded">Visualmente oculto</a></li>
+              <li><a href="/docs/5.1/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Enlace estirado</a></li>
+              <li><a href="/docs/5.1/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Texto truncado</a></li>
+              <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-inline-flex align-items-center rounded">Regla vertical</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
+          Utilidades
+        </button>
+
+        <div class="collapse" id="utilities-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.1/utilities/background/" class="d-inline-flex align-items-center rounded">Color de fondo</a></li>
+              <li><a href="/docs/5.1/utilities/borders/" class="d-inline-flex align-items-center rounded">Bordes</a></li>
+              <li><a href="/docs/5.1/utilities/colors/" class="d-inline-flex align-items-center rounded">Colores</a></li>
+              <li><a href="/docs/5.1/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
+              <li><a href="/docs/5.1/utilities/flex/" class="d-inline-flex align-items-center rounded">Flex</a></li>
+              <li><a href="/docs/5.1/utilities/float/" class="d-inline-flex align-items-center rounded">Float</a></li>
+              <li><a href="/docs/5.1/utilities/interactions/" class="d-inline-flex align-items-center rounded">Interacciones</a></li>
+              <li><a href="/docs/5.1/utilities/opacity/" class="d-inline-flex align-items-center rounded">Opacidad</a></li>
+              <li><a href="/docs/5.1/utilities/overflow/" class="d-inline-flex align-items-center rounded">Desbordamiento</a></li>
+              <li><a href="/docs/5.1/utilities/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
+              <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded">Sombras</a></li>
+              <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded">Tamaño</a></li>
+              <li><a href="/docs/5.1/utilities/spacing/" class="d-inline-flex align-items-center rounded">Espaciado</a></li>
+              <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Texto</a></li>
+              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Alineación vertical</a></li>
+              <li><a href="/docs/5.1/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibilidad</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
+          Ampliar
+        </button>
+
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/extend/approach/" class="d-inline-flex align-items-center rounded">Enfoque</a></li>
+              <li><a href="/docs/5.1/extend/icons/" class="d-inline-flex align-items-center rounded">Iconos</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+          Acerca de
+        </button>
+
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/about/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/about/team/" class="d-inline-flex align-items-center rounded">Equipo</a></li>
+              <li><a href="/docs/5.1/about/brand/" class="d-inline-flex align-items-center rounded">Marca</a></li>
+              <li><a href="/docs/5.1/about/license/" class="d-inline-flex align-items-center rounded">Licencia</a></li>
+              <li><a href="/docs/5.1/about/translations/" class="d-inline-flex align-items-center rounded">Traducciones</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#hosting-collapse" aria-expanded="false">
+          Web Hosting
+        </button>
+
+        <div class="collapse" id="hosting-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/hosting/mejor-web-hosting/" class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="my-3 mx-4 border-top"></li>
+      <li>
+        <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
+          Migración
+        </a>
+      </li>
+  </ul>
+</nav>
+
+  </aside>
+
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
+            href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/content/typography.md"
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
+        </div>
+        <h1 class="bd-title" id="content">Tipografía</h1>
+      </div>
+      <p class="bd-lead mb-5">Documentación y ejemplos de tipografía Bootstrap, incluidos ajustes globales, encabezados, texto del body, listas y más.</p>
+      
+        <a href="https://esdocu.com/python" target="_blank">
+    <img src="/img/esdocu-app-ad-2.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+</a>
+
+
+
+
+
+
+
+      
+      </div>
+
+    
+    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+      <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ajustes-globales">Ajustes globales</a></li>
+    <li><a href="#encabezados">Encabezados</a>
+      <ul>
+        <li><a href="#personalizar-los-encabezados">Personalizar los encabezados</a></li>
+      </ul>
+    </li>
+    <li><a href="#display-headings">Display headings</a></li>
+    <li><a href="#lead">Lead</a></li>
+    <li><a href="#elementos-de-texto-en-línea">Elementos de texto en línea</a></li>
+    <li><a href="#utilidades-de-texto">Utilidades de texto</a></li>
+    <li><a href="#abreviaturas">Abreviaturas</a></li>
+    <li><a href="#blockquotes">Blockquotes</a>
+      <ul>
+        <li><a href="#nombrar-una-fuente">Nombrar una fuente</a></li>
+        <li><a href="#alineación">Alineación</a></li>
+      </ul>
+    </li>
+    <li><a href="#listas">Listas</a>
+      <ul>
+        <li><a href="#sin-estilo">Sin estilo</a></li>
+        <li><a href="#en-línea">En línea</a></li>
+        <li><a href="#alineación-de-la-lista-de-descripciones">Alineación de la lista de descripciones</a></li>
+      </ul>
+    </li>
+    <li><a href="#responsive-font-sizes">Responsive font sizes</a></li>
+    <li><a href="#sass">Sass</a>
+      <ul>
+        <li><a href="#variables">Variables</a></li>
+        <li><a href="#mixins">Mixins</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div class="bd-content ps-lg-4">
+      
+
+      <h2 id="ajustes-globales">Ajustes globales</h2>
+<p>Bootstrap establece estilos básicos de visualización, tipografía y enlaces globales. Cuando se necesita más control, consulta las <a href="/docs/5.1/utilities/text/">clases de utilidades textuales</a>.</p>
+<ul>
+<li>Utiliza una <a href="/docs/5.1/content/reboot/#native-font-stack">pila de fuentes nativas</a> que seleccione la mejor <code>font-family</code> para cada sistema operativo y dispositivo.</li>
+<li>Para una escala de tipos más inclusiva y accesible, utilizamos el <code>font-size</code> raíz predeterminado del navegador (normalmente 16x) para que los visitantes puedan personalizar los valores predeterminados de su navegador según sea necesario.</li>
+<li>Usa los atributos <code>$font-family-base</code>, <code>$font-size-base</code> y <code>$line-height-base</code> como nuestra base tipográfica aplicada al <code>&lt;body&gt;</code>.</li>
+<li>Establece el color global de enlaces a través de <code>$link-color</code>.</li>
+<li>Usa <code>$body-bg</code> para establecer un <code>background-color</code> en <code>&lt;body&gt;</code> (<code>#fff</code> por defecto).</li>
+</ul>
+<p>Estos estilos se pueden encontrar dentro de <code>_reboot.scss</code>, y las variables globales se definen en <code>_variables.scss</code>. Asegúrate de configurar <code>$font-size-base</code> en <code>rem</code>.</p>
+<h2 id="encabezados">Encabezados</h2>
+<p>Todos los encabezados HTML, <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>, están disponibles.</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Encabezado</th>
+      <th>Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>&lt;h1&gt;&lt;/h1&gt;</code>
+      </td>
+      <td><span class="h1">h1. Encabezado Bootstrap</span></td>
+    </tr>
+    <tr>
+      <td>
+        <code>&lt;h2&gt;&lt;/h2&gt;</code>
+      </td>
+      <td><span class="h2">h2. Encabezado Bootstrap</span></td>
+    </tr>
+    <tr>
+      <td>
+        <code>&lt;h3&gt;&lt;/h3&gt;</code>
+      </td>
+      <td><span class="h3">h3. Encabezado Bootstrap</span></td>
+    </tr>
+    <tr>
+      <td>
+        <code>&lt;h4&gt;&lt;/h4&gt;</code>
+      </td>
+      <td><span class="h4">h4. Encabezado Bootstrap</span></td>
+    </tr>
+    <tr>
+      <td>
+        <code>&lt;h5&gt;&lt;/h5&gt;</code>
+      </td>
+      <td><span class="h5">h5. Encabezado Bootstrap</span></td>
+    </tr>
+    <tr>
+      <td>
+        <code>&lt;h6&gt;&lt;/h6&gt;</code>
+      </td>
+      <td><span class="h6">h6. Encabezado Bootstrap</span></td>
+    </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>h1. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>h2. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>h3. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>h4. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>h5. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>h6. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+</code></pre></div><p>Las clases <code>.h1</code> a <code>.h6</code> también están disponibles, para cuando deseas hacer coincidir el estilo de fuentes de un encabezado pero no puedes usar el elemento HTML asociado.</p>
+<div class="bd-example">
+<p class="h1">h1. Encabezado Bootstrap</p>
+<p class="h2">h2. Encabezado Bootstrap</p>
+<p class="h3">h3. Encabezado Bootstrap</p>
+<p class="h4">h4. Encabezado Bootstrap</p>
+<p class="h5">h5. Encabezado Bootstrap</p>
+<p class="h6">h6. Encabezado Bootstrap</p>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h1&#34;</span><span class="p">&gt;</span>h1. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h2&#34;</span><span class="p">&gt;</span>h2. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h3&#34;</span><span class="p">&gt;</span>h3. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h4&#34;</span><span class="p">&gt;</span>h4. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5&#34;</span><span class="p">&gt;</span>h5. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6&#34;</span><span class="p">&gt;</span>h6. Encabezado Bootstrap<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
+<h3 id="personalizar-los-encabezados">Personalizar los encabezados</h3>
+<p>Utiliza las clases de utilidad incluidas para recrear el pequeño texto de encabezado secundario de Bootstrap 3.</p>
+<div class="bd-example">
+<h3>
+  Encabezado de visualización elegante
+  <small class="text-muted">Con texto secundario desvanecido</small>
+</h3>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>
+  Encabezado de visualización elegante
+  <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-muted&#34;</span><span class="p">&gt;</span>Con texto secundario desvanecido<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="display-headings">Display headings</h2>
+<p>Los elementos de encabezado tradicionales están diseñados para funcionar mejor en el cuerpo del contenido de tu página. Cuando necesites que un título destaque, considera usar un <strong>display heading</strong>, un estilo de título más grande y un poco más obstinado.</p>
+<div class="bd-example">
+  <div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
+  <div class="display-2 pb-3 mb-3 border-bottom">Display 2</div>
+  <div class="display-3 pb-3 mb-3 border-bottom">Display 3</div>
+  <div class="display-4 pb-3 mb-3 border-bottom">Display 4</div>
+  <div class="display-5 pb-3 mb-3 border-bottom">Display 5</div>
+  <div class="display-6">Display 6</div>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-1&#34;</span><span class="p">&gt;</span>Display 1<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-2&#34;</span><span class="p">&gt;</span>Display 2<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-3&#34;</span><span class="p">&gt;</span>Display 3<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-4&#34;</span><span class="p">&gt;</span>Display 4<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-5&#34;</span><span class="p">&gt;</span>Display 5<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-6&#34;</span><span class="p">&gt;</span>Display 6<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</code></pre></div><p>Estos encabezados de visualización se configuran mediante el mapa Sass <code>$display-font-sizes</code> y dos variables, <code>$display-font-weight</code> y <code>$display-line-height</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$display-font-sizes</span><span class="o">:</span> <span class="p">(</span>
+  <span class="na">1</span><span class="o">:</span> <span class="mi">5</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">2</span><span class="o">:</span> <span class="mi">4</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">3</span><span class="o">:</span> <span class="mi">4</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">4</span><span class="o">:</span> <span class="mi">3</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">5</span><span class="o">:</span> <span class="mi">3</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">6</span><span class="o">:</span> <span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span>
+<span class="p">);</span>
+
+<span class="nv">$display-font-weight</span><span class="o">:</span> <span class="mi">300</span><span class="p">;</span>
+<span class="nv">$display-line-height</span><span class="o">:</span> <span class="nv">$headings-line-height</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="lead">Lead</h2>
+<p>Haz que un párrafo se destaque agregando <code>.lead</code>.</p>
+<div class="bd-example">
+<p class="lead">
+  Este es un párrafo principal. Se destaca de los párrafos regulares.
+</p>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;lead&#34;</span><span class="p">&gt;</span>
+  Este es un párrafo principal. Se destaca de los párrafos regulares.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="elementos-de-texto-en-línea">Elementos de texto en línea</h2>
+<p>Estilo para elementos HTML5 en línea comunes.</p>
+<div class="bd-example">
+<p>Puedes usar la etiqueta mark para <mark>resaltar</mark> texto.</p>
+<p><del>Esta línea de texto debe tratarse como texto eliminado.</del></p>
+<p><s>Esta línea de texto debe tratarse como si ya no fuera precisa.</s></p>
+<p><ins>Esta línea de texto debe tratarse como una adición al documento.</ins></p>
+<p><u>Esta línea de texto aparecerá subrayada.</u></p>
+<p><small>Esta línea de texto debe tratarse como letra pequeña.</small></p>
+<p><strong>Esta línea aparece en negrita.</strong></p>
+<p><em>Esta línea aparece como texto en cursiva.</em></p>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Puedes usar la etiqueta mark para <span class="p">&lt;</span><span class="nt">mark</span><span class="p">&gt;</span>resaltar<span class="p">&lt;/</span><span class="nt">mark</span><span class="p">&gt;</span> texto.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">del</span><span class="p">&gt;</span>Esta línea de texto debe tratarse como texto eliminado.<span class="p">&lt;/</span><span class="nt">del</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">s</span><span class="p">&gt;</span>Esta línea de texto debe tratarse como si ya no fuera precisa.<span class="p">&lt;/</span><span class="nt">s</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">ins</span><span class="p">&gt;</span>Esta línea de texto debe tratarse como una adición al documento.<span class="p">&lt;/</span><span class="nt">ins</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">u</span><span class="p">&gt;</span>Esta línea de texto aparecerá subrayada.<span class="p">&lt;/</span><span class="nt">u</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">small</span><span class="p">&gt;</span>Esta línea de texto debe tratarse como letra pequeña.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Esta línea aparece en negrita.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Esta línea aparece como texto en cursiva.<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+<p>Ten en cuenta que estas etiquetas deben usarse con fines semánticos:</p>
+<ul>
+<li><code>&lt;mark&gt;</code> representa texto que está marcado o resaltado para fines de referencia o notación.</li>
+<li><code>&lt;small&gt;</code> representa comentarios secundarios y letra pequeña, como derechos de autor y texto legal.</li>
+<li><code>&lt;s&gt;</code> representa elementos que ya no son relevantes o ya no son precisos.</li>
+<li><code>&lt;u&gt;</code> representa un tramo de texto en línea que debe presentarse de manera que indique que tiene una anotación no textual.</li>
+</ul>
+<p>Si deseas aplicar estilo a tu texto, debes usar las siguientes clases en su lugar:</p>
+<ul>
+<li><code>.mark</code> aplicará los mismos estilos que <code>&lt;mark&gt;</code>.</li>
+<li><code>.small</code> aplicará los mismos estilos que <code>&lt;small&gt;</code>.</li>
+<li><code>.text-decoration-underline</code> aplicará los mismos estilos que <code>&lt;u&gt;</code>.</li>
+<li><code>.text-decoration-line-through</code> aplicará los mismos estilos que <code>&lt;s&gt;</code>.</li>
+</ul>
+<p>Si bien no se muestra arriba, siéntete libre de usar <code>&lt;b&gt;</code> y <code>&lt;i&gt;</code> en HTML5. <code>&lt;b&gt;</code> está destinado a resaltar palabras o frases sin transmitir una importancia adicional, mientras que <code>&lt;i&gt;</code> es principalmente para voz, términos técnicos, etc.</p>
+<h2 id="utilidades-de-texto">Utilidades de texto</h2>
+<p>Cambia la alineación, transformación, estilo, grosor, altura de línea, decoración y color del texto con nuestras <a href="/docs/5.1/utilities/text/">utilidades de texto</a> y <a href="/docs/5.1/utilities/colors/">utilidades de color</a>.</p>
+<h2 id="abreviaturas">Abreviaturas</h2>
+<p>Implementación estilizada del elemento <code>&lt;abbr&gt;</code> de HTML para abreviaturas y acrónimos para mostrar la versión ampliada al pasar el mouse. Las abreviaturas tienen un subrayado predeterminado y obtienen un cursor de ayuda para proporcionar contexto adicional al pasar el mouse por encima y para los usuarios de tecnologías de asistencia.</p>
+<p>Agrega <code>.initialism</code> a una abreviatura para un tamaño de fuente ligeramente más pequeño.</p>
+<div class="bd-example">
+<p><abbr title="attribute">attr</abbr></p>
+<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;attribute&#34;</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;HyperText Markup Language&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;initialism&#34;</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="blockquotes">Blockquotes</h2>
+<p>Para citar bloques de contenido de otra fuente dentro de tu documento. Envuelve con <code>&lt;blockquote class=&quot;blockquote&quot;&gt;</code> cualquier HTML como cita.</p>
+<div class="bd-example">
+<blockquote class="blockquote">
+  <p>Una cita conocida, contenida en un elemento blockquote.</p>
+</blockquote>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;blockquote&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Una cita conocida, contenida en un elemento blockquote.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="nombrar-una-fuente">Nombrar una fuente</h3>
+<p>La especificación HTML requiere que la atribución de comillas en bloque se coloque fuera de <code>&lt;blockquote&gt;</code>. Al proporcionar la atribución, envuelve tu <code>&lt;blockquote&gt;</code> en una <code>&lt;figure&gt;</code> y usa un <code>&lt;figcaption&gt;</code> o un elemento de nivel de bloque (por ejemplo, <code>&lt;p&gt;</code>) con la clase <code>.blockquote-footer</code>. Asegúrate de envolver el nombre del trabajo fuente en <code>&lt;cite&gt;</code> también.</p>
+<div class="bd-example">
+<figure>
+  <blockquote class="blockquote">
+    <p>Una cita conocida, contenida en un elemento blockquote.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Alguien fomoso en <cite title="Título fuente">Título fuente</cite>
+  </figcaption>
+</figure>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;blockquote&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Una cita conocida, contenida en un elemento blockquote.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;blockquote-footer&#34;</span><span class="p">&gt;</span>
+    Alguien fomoso en <span class="p">&lt;</span><span class="nt">cite</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Título fuente&#34;</span><span class="p">&gt;</span>Título fuente<span class="p">&lt;/</span><span class="nt">cite</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
+<h3 id="alineación">Alineación</h3>
+<p>Use las utilidades de texto según sea necesario para cambiar la alineación de tu blockquote.</p>
+<div class="bd-example">
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <p>Una cita conocida, contenida en un elemento blockquote.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Alguien fomoso en <cite title="Título fuente">Título fuente</cite>
+  </figcaption>
+</figure>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-center&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;blockquote&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Una cita conocida, contenida en un elemento blockquote.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;blockquote-footer&#34;</span><span class="p">&gt;</span>
+    Alguien fomoso en <span class="p">&lt;</span><span class="nt">cite</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Título fuente&#34;</span><span class="p">&gt;</span>Título fuente<span class="p">&lt;/</span><span class="nt">cite</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-example">
+<figure class="text-end">
+  <blockquote class="blockquote">
+    <p>Una cita conocida, contenida en un elemento blockquote.</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Alguien fomoso en <cite title="Título fuente">Título fuente</cite>
+  </figcaption>
+</figure>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-end&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">blockquote</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;blockquote&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Una cita conocida, contenida en un elemento blockquote.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;blockquote-footer&#34;</span><span class="p">&gt;</span>
+    Alguien fomoso en <span class="p">&lt;</span><span class="nt">cite</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Título fuente&#34;</span><span class="p">&gt;</span>Título fuente<span class="p">&lt;/</span><span class="nt">cite</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="listas">Listas</h2>
+<h3 id="sin-estilo">Sin estilo</h3>
+<p>Elimina el <code>list-style</code> predeterminado y el margen izquierdo en los elementos de la lista (solo elementos secundarios inmediatos). <strong>Esto solo se aplica a los elementos de la lista de elementos secundarios inmediatos</strong>, lo que significa que también deberás agregar la clase para cualquier lista anidada.</p>
+<div class="bd-example">
+<ul class="list-unstyled">
+  <li>Esta es una lista.</li>
+  <li>Parece completamente sin estilo.</li>
+  <li>Estructuralmente, sigue siendo una lista.</li>
+  <li>Sin embargo, este estilo solo se aplica a los elementos secundarios inmediatos.</li>
+  <li>Listas anidadas:
+    <ul>
+      <li>no se ven afectados por este estilo</li>
+      <li>seguirá mostrando una viñeta</li>
+      <li>y tenedrá un margen izquierdo apropiado</li>
+    </ul>
+  </li>
+  <li>Esto aún puede ser útil en algunas situaciones.</li>
+</ul>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-unstyled&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Esta es una lista.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Parece completamente sin estilo.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Estructuralmente, sigue siendo una lista.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Sin embargo, este estilo solo se aplica a los elementos secundarios inmediatos.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Listas anidadas:
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>no se ven afectados por este estilo<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>seguirá mostrando una viñeta<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>y tenedrá un margen izquierdo apropiado<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Esto aún puede ser útil en algunas situaciones.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="en-línea">En línea</h3>
+<p>Elimina las viñetas de una lista y aplica un <code>margin</code> ligero con una combinación de dos clases, <code>.list-inline</code> y <code>.list-inline-item</code>.</p>
+<div class="bd-example">
+<ul class="list-inline">
+  <li class="list-inline-item">Este es un elemento de lista.</li>
+  <li class="list-inline-item">Y otro.</li>
+  <li class="list-inline-item">Pero se muestran en línea.</li>
+</ul>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-inline&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-inline-item&#34;</span><span class="p">&gt;</span>Este es un elemento de lista.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-inline-item&#34;</span><span class="p">&gt;</span>Y otro.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-inline-item&#34;</span><span class="p">&gt;</span>Pero se muestran en línea.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="alineación-de-la-lista-de-descripciones">Alineación de la lista de descripciones</h3>
+<p>Alinea términos y descripciones horizontalmente utilizando las clases predefinidas de nuestro sistema de cuadrícula (o mixins semánticos). Para términos más largos, puedes agregar opcionalmente una clase <code>.text-truncate</code> para truncar el texto con puntos suspensivos.</p>
+<div class="bd-example">
+<dl class="row">
+  <dt class="col-sm-3">Listas de descripción</dt>
+  <dd class="col-sm-9">Una lista de descripciones es perfecta para definir términos.</dd>
+
+  <dt class="col-sm-3">Plazo</dt>
+  <dd class="col-sm-9">
+    <p>Definición del término.</p>
+    <p>Y más texto de definición de marcador de posición.</p>
+  </dd>
+
+  <dt class="col-sm-3">Otro término</dt>
+  <dd class="col-sm-9">Esta definición es corta, así que no hay párrafos adicionales ni nada.</dd>
+
+  <dt class="col-sm-3 text-truncate">El término truncado está truncado</dt>
+  <dd class="col-sm-9">Esto puede ser útil cuando el espacio es reducido. Añade puntos suspensivos al final.</dd>
+
+  <dt class="col-sm-3">Anidamiento</dt>
+  <dd class="col-sm-9">
+    <dl class="row">
+      <dt class="col-sm-4">Lista de definiciones anidadas</dt>
+      <dd class="col-sm-8">Oí que te gustan las listas de definiciones. Déjame poner una lista de definiciones dentro de tu lista de definiciones.</dd>
+    </dl>
+  </dd>
+</dl>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">dl</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">dt</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-3&#34;</span><span class="p">&gt;</span>Listas de descripción<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">dd</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-9&#34;</span><span class="p">&gt;</span>Una lista de descripciones es perfecta para definir términos.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">dt</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-3&#34;</span><span class="p">&gt;</span>Plazo<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">dd</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-9&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Definición del término.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Y más texto de definición de marcador de posición.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">dt</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-3&#34;</span><span class="p">&gt;</span>Otro término<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">dd</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-9&#34;</span><span class="p">&gt;</span>Esta definición es corta, así que no hay párrafos adicionales ni nada.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">dt</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-3 text-truncate&#34;</span><span class="p">&gt;</span>El término truncado está truncado<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">dd</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-9&#34;</span><span class="p">&gt;</span>Esto puede ser útil cuando el espacio es reducido. Añade puntos suspensivos al final.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">dt</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-3&#34;</span><span class="p">&gt;</span>Anidamiento<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">dd</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-9&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dl</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">dt</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-4&#34;</span><span class="p">&gt;</span>Lista de definiciones anidadas<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">dd</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-8&#34;</span><span class="p">&gt;</span>Oí que te gustan las listas de definiciones. Déjame poner una lista de definiciones dentro de tu lista de definiciones.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="responsive-font-sizes">Responsive font sizes</h2>
+<p>En Bootstrap 5, habilitamos tamaños de fuente responsive de forma predeterminada, lo que permite que el texto se escale de forma más natural según los tamaños de dispositivos y viewports. Echa un vistazo a la <a href="/docs/5.1/getting-started/rfs/">página RFS</a> para averiguar cómo funciona.</p>
+<h2 id="sass">Sass</h2>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</div>
+
+<h3 id="variables">Variables</h3>
+<p>Los encabezados tienen algunas variables dedicadas para el tamaño y el espaciado.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$headings-margin-bottom</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
+<span class="nv">$headings-font-family</span><span class="o">:</span>        <span class="n">null</span><span class="p">;</span>
+<span class="nv">$headings-font-style</span><span class="o">:</span>         <span class="n">null</span><span class="p">;</span>
+<span class="nv">$headings-font-weight</span><span class="o">:</span>        <span class="mi">500</span><span class="p">;</span>
+<span class="nv">$headings-line-height</span><span class="o">:</span>        <span class="mi">1</span><span class="mf">.2</span><span class="p">;</span>
+<span class="nv">$headings-color</span><span class="o">:</span>              <span class="n">null</span><span class="p">;</span>
+</code></pre></div>
+<p>Varios elementos tipográficos que se tratan aquí y en <a href="/docs/5.1/content/reboot/">Reboot</a> también tienen variables dedicadas.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$lead-font-size</span><span class="o">:</span>              <span class="nv">$font-size-base</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span>
+<span class="nv">$lead-font-weight</span><span class="o">:</span>            <span class="mi">300</span><span class="p">;</span>
+
+<span class="nv">$small-font-size</span><span class="o">:</span>             <span class="mf">.875</span><span class="kt">em</span><span class="p">;</span>
+
+<span class="nv">$sub-sup-font-size</span><span class="o">:</span>           <span class="mf">.75</span><span class="kt">em</span><span class="p">;</span>
+
+<span class="nv">$text-muted</span><span class="o">:</span>                  <span class="nv">$gray-600</span><span class="p">;</span>
+
+<span class="nv">$initialism-font-size</span><span class="o">:</span>        <span class="nv">$small-font-size</span><span class="p">;</span>
+
+<span class="nv">$blockquote-margin-y</span><span class="o">:</span>         <span class="nv">$spacer</span><span class="p">;</span>
+<span class="nv">$blockquote-font-size</span><span class="o">:</span>        <span class="nv">$font-size-base</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span>
+<span class="nv">$blockquote-footer-color</span><span class="o">:</span>     <span class="nv">$gray-600</span><span class="p">;</span>
+<span class="nv">$blockquote-footer-font-size</span><span class="o">:</span> <span class="nv">$small-font-size</span><span class="p">;</span>
+
+<span class="nv">$hr-margin-y</span><span class="o">:</span>                 <span class="nv">$spacer</span><span class="p">;</span>
+<span class="nv">$hr-color</span><span class="o">:</span>                    <span class="ni">inherit</span><span class="p">;</span>
+<span class="nv">$hr-bg-color</span><span class="o">:</span>                 <span class="ni">currentColor</span><span class="p">;</span>
+<span class="nv">$hr-border-width</span><span class="o">:</span>             <span class="mi">0</span><span class="p">;</span>
+<span class="nv">$hr-height</span><span class="o">:</span>                   <span class="nv">$border-width</span><span class="p">;</span>
+<span class="nv">$hr-opacity</span><span class="o">:</span>                  <span class="mf">.25</span><span class="p">;</span>
+
+<span class="nv">$legend-margin-bottom</span><span class="o">:</span>        <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$legend-font-size</span><span class="o">:</span>            <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="nv">$legend-font-weight</span><span class="o">:</span>          <span class="n">null</span><span class="p">;</span>
+
+<span class="nv">$mark-padding</span><span class="o">:</span>                <span class="mf">.2</span><span class="kt">em</span><span class="p">;</span>
+
+<span class="nv">$dt-font-weight</span><span class="o">:</span>              <span class="nv">$font-weight-bold</span><span class="p">;</span>
+
+<span class="nv">$nested-kbd-font-weight</span><span class="o">:</span>      <span class="nv">$font-weight-bold</span><span class="p">;</span>
+
+<span class="nv">$list-inline-padding</span><span class="o">:</span>         <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
+
+<span class="nv">$mark-bg</span><span class="o">:</span>                     <span class="mh">#fcf8e3</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="mixins">Mixins</h3>
+<p>No hay mixins dedicados para la tipografía, pero Bootstrap usa <a href="/docs/5.1/getting-started/rfs/">Tamaño de fuente responsive (RFS)</a>.</p>
+
+    </div>
+    <div class="pt-3">
+      
+        <a href="https://esdocu.com/python" target="_blank">
+    <img src="/img/esdocu-app-ad-2.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+</a>
+      
+    </div>
+  </main>
+</div>
+
+
+    <footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
+          <span class="fs-5">Bootstrap</span>
+        </a>
+        <ul class="list-unstyled small text-muted">         
+          <li class="mb-2">Diseñado y construido con todo el amor del mundo por el <a href="/docs/5.1/about/team/">equipo de Bootstrap</a> con la ayuda de <a href="https://github.com/twbs/bootstrap/graphs/contributors">nuestros colaboradores</a>.</li>
+          <li class="mb-2">Código con licencia <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          <li class="mb-2">Actualmente v5.1.3.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Enlaces</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/">Ejemplos</a></li>
+          <li class="mb-2"><a href="https://themes.getbootstrap.com/">Temas</a></li>
+          <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Guías</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.1/getting-started/">Guía de inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/starter-template/">Plantilla de inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Projectos</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons">Iconos</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Comunidad</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
+          <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/5.1/assets/js/docs.min.js"></script>
+
+
+    
+
+  </body>
+</html>
