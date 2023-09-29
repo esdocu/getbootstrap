@@ -553,18 +553,18 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#how-it-works">How it works</a></li>
+    <li><a href="#how-it-works">Cómo funciona.</a></li>
     <li><a href="#example">Ejemplo</a></li>
     <li><a href="#horizontal">Horizontal</a></li>
     <li><a href="#multiple-toggles-and-targets">Multiple toggles and targets</a></li>
     <li><a href="#accessibility">Accesibilidad</a></li>
     <li><a href="#css">CSS</a>
       <ul>
-        <li><a href="#sass-variables">Sass variables</a></li>
+        <li><a href="#sass-variables">Variables Sass</a></li>
         <li><a href="#classes">Classes</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#usage">Uso</a>
       <ul>
         <li><a href="#via-data-attributes">Via data attributes</a></li>
         <li><a href="#via-javascript">Via JavaScript</a></li>
@@ -582,7 +582,7 @@
       <div class="bd-content ps-lg-2">
         
 
-        <h2 id="how-it-works">How it works <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
+        <h2 id="how-it-works">Cómo funciona. <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
 <p>The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the <code>height</code> from its current value to <code>0</code>. Given how CSS handles animations, you cannot use <code>padding</code> on a <code>.collapse</code> element. Instead, use the class as an independent wrapping element.</p>
 <div class="bd-callout bd-callout-info">
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.3/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
@@ -738,7 +738,7 @@ Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> eleme
 <p>If your control element is targeting a single collapsible element – i.e. the <code>data-bs-target</code> attribute is pointing to an <code>id</code> selector – you should add the <code>aria-controls</code> attribute to the control element, containing the <code>id</code> of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.</p>
 <p>Note that Bootstrap’s current implementation does not cover the various <em>optional</em> keyboard interactions described in the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/">ARIA Authoring Practices Guide accordion pattern</a> - you will need to include these yourself with custom JavaScript.</p>
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
-<h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
+<h3 id="sass-variables">Variables Sass <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -778,7 +778,7 @@ Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> eleme
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div>
-<h2 id="usage">Usage <a class="anchor-link" href="#usage" aria-label="Link to this section: Usage"></a></h2>
+<h2 id="usage">Uso <a class="anchor-link" href="#usage" aria-label="Link to this section: Usage"></a></h2>
 <p>The collapse plugin utilizes a few classes to handle the heavy lifting:</p>
 <ul>
 <li><code>.collapse</code> hides the content</li>

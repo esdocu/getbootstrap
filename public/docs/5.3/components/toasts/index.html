@@ -569,10 +569,10 @@
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#variables">Variables</a></li>
-        <li><a href="#sass-variables">Sass variables</a></li>
+        <li><a href="#sass-variables">Variables Sass</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#usage">Uso</a>
       <ul>
         <li><a href="#triggers">Triggers</a></li>
         <li><a href="#options">Opciones</a></li>
@@ -1156,7 +1156,7 @@ Previously, our scripts dynamically added the <code>.hide</code> class to comple
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}toast-header-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$toast-header-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}toast-header-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$toast-header-background-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}toast-header-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$toast-header-border-color</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
-<h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
+<h3 id="sass-variables">Variables Sass <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -1181,7 +1181,7 @@ Previously, our scripts dynamically added the <code>.hide</code> class to comple
 </span></span><span class="line"><span class="cl"><span class="nv">$toast-header-background-color</span><span class="o">:</span>     <span class="nf">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">body-bg-rgb</span><span class="p">)</span><span class="o">,</span> <span class="mf">.85</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$toast-header-border-color</span><span class="o">:</span>         <span class="nv">$toast-border-color</span><span class="p">;</span>
 </span></span></code></pre></div></div>
-<h2 id="usage">Usage <a class="anchor-link" href="#usage" aria-label="Link to this section: Usage"></a></h2>
+<h2 id="usage">Uso <a class="anchor-link" href="#usage" aria-label="Link to this section: Usage"></a></h2>
 <p>Initialize toasts via JavaScript:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">toastElList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.toast'</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">toastList</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">toastElList</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nx">toastEl</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">(</span><span class="nx">toastEl</span><span class="p">,</span> <span class="nx">option</span><span class="p">))</span>
