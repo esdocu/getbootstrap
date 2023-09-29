@@ -532,6 +532,9 @@
         </div>
         <p class="bd-lead">Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</p>
         <div id="esdocu-ads">
+<div class="alert alert-info" role="alert">
+  👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 12 días.
+</div>
 <a href="https://bit.ly/patreon-esdocu" target="_blank">
     <img src="/esdocu/img/esdocu-patreon-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
@@ -560,7 +563,7 @@
     <li><a href="#opacity">Opacidad</a>
       <ul>
         <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#example">Example</a></li>
+        <li><a href="#example">Ejemplo</a></li>
       </ul>
     </li>
     <li><a href="#width">Width</a></li>
@@ -740,7 +743,7 @@ Border utilities like <code>.border-*</code> that generated from our original <c
 </span></span><span class="line"><span class="cl">  <span class="k">border-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">success</span><span class="o">-</span><span class="n">rgb</span><span class="p">),</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">border</span><span class="o">-</span><span class="n">opacity</span><span class="p">))</span> <span class="cp">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>We use an RGB version of our <code>--bs-success</code> (with the value of <code>25, 135, 84</code>) CSS variable and attached a second CSS variable, <code>--bs-border-opacity</code>, for the alpha transparency (with a default value <code>1</code> thanks to a local CSS variable). That means anytime you use <code>.border-success</code> now, your computed <code>color</code> value is <code>rgba(25, 135, 84, 1)</code>. The local CSS variable inside each <code>.border-*</code> class avoids inheritance issues so nested instances of the utilities don’t automatically have a modified alpha transparency.</p>
-<h3 id="example">Example <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h3>
+<h3 id="example">Ejemplo <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h3>
 <p>To change that opacity, override <code>--bs-border-opacity</code> via custom styles or inline styles.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="border border-success p-2 mb-2">This is default success border</div>
