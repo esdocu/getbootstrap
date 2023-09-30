@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Learn how to enable, use, and customize our alternate layout system built on CSS Grid with examples and code snippets.">
+<meta name="description" content="Aprende cómo habilitar, usar y personalizar nuestro sistema de diseño layout alternativo creado en CSS Grid con ejemplos y fragmentos de código.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>CSS Grid · Bootstrap v5.3</title>
+<title>CSS Grid · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/layout/css-grid/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="CSS Grid">
-<meta name="twitter:description" content="Learn how to enable, use, and customize our alternate layout system built on CSS Grid with examples and code snippets.">
+<meta name="twitter:description" content="Aprende cómo habilitar, usar y personalizar nuestro sistema de diseño layout alternativo creado en CSS Grid con ejemplos y fragmentos de código.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/layout/css-grid/">
 <meta property="og:title" content="CSS Grid">
-<meta property="og:description" content="Learn how to enable, use, and customize our alternate layout system built on CSS Grid with examples and code snippets.">
+<meta property="og:description" content="Aprende cómo habilitar, usar y personalizar nuestro sistema de diseño layout alternativo creado en CSS Grid con ejemplos y fragmentos de código.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -524,13 +524,13 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">Added in v5.1</small><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.2/site/content/docs/5.3/layout/css-grid.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">Agregado en v5.1</small><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.2/site/content/docs/5.3/layout/css-grid.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">
               Ver en GitHub
             </a>
           </div>
           <h1 class="bd-title mb-0" id="content">CSS Grid</h1>
         </div>
-        <p class="bd-lead">Learn how to enable, use, and customize our alternate layout system built on CSS Grid with examples and code snippets.</p>
+        <p class="bd-lead">Aprende cómo habilitar, usar y personalizar nuestro sistema de diseño layout alternativo creado en CSS Grid con ejemplos y fragmentos de código.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 12 días.
@@ -554,23 +554,23 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#how-it-works">Cómo funciona.</a></li>
-    <li><a href="#key-differences">Key differences</a></li>
+    <li><a href="#key-differences">Diferencias clave</a></li>
     <li><a href="#examples">Ejemplos</a>
       <ul>
-        <li><a href="#three-columns">Three columns</a></li>
+        <li><a href="#three-columns">Tres columnas</a></li>
         <li><a href="#responsive">Responsive</a></li>
       </ul>
     </li>
-    <li><a href="#wrapping">Wrapping</a></li>
-    <li><a href="#starts">Starts</a></li>
-    <li><a href="#auto-columns">Auto columns</a></li>
+    <li><a href="#wrapping">Envolver</a></li>
+    <li><a href="#starts">Comienza</a></li>
+    <li><a href="#auto-columns">Columnas automáticas</a></li>
     <li><a href="#nesting">Anidamiento</a></li>
-    <li><a href="#customizing">Customizing</a>
+    <li><a href="#customizing">Personalización</a>
       <ul>
-        <li><a href="#no-grid-classes">No grid classes</a></li>
-        <li><a href="#columns-and-gaps">Columns and gaps</a></li>
-        <li><a href="#adding-rows">Adding rows</a></li>
-        <li><a href="#gaps">Gaps</a></li>
+        <li><a href="#no-grid-classes">No hay clases en grilla</a></li>
+        <li><a href="#columns-and-gaps">Columnas y huecos</a></li>
+        <li><a href="#adding-rows">Agregar filas</a></li>
+        <li><a href="#gaps">Gaps o huecos</a></li>
       </ul>
     </li>
     <li><a href="#sass">Sass</a></li>
@@ -583,50 +583,50 @@
       <div class="bd-content ps-lg-2">
         
 
-        <p>Bootstrap’s default grid system represents the culmination of over a decade of CSS layout techniques, tried and tested by millions of people. But, it was also created without many of the modern CSS features and techniques we’re seeing in browsers like the new CSS Grid.</p>
+        <p>El sistema de cuadrícula predeterminado de Bootstrap representa la culminación de más de una década de técnicas de diseño CSS, probadas por millones de personas. Pero también se creó sin muchas de las características y técnicas modernas de CSS que vemos en navegadores como el nuevo CSS Grid.</p>
 <div class="bd-callout bd-callout-warning">
-<strong>Heads up—our CSS Grid system is experimental and opt-in as of v5.1.0!</strong> We included it in our documentation’s CSS to demonstrate it for you, but it’s disabled by default. Keep reading to learn how to enable it in your projects.
+<strong>Atención: ¡nuestro sistema CSS Grid es experimental y está habilitado a partir de la versión 5.1.0!</strong> Lo incluimos en el CSS de nuestra documentación para mostrártelo, pero está deshabilitado de forma predeterminada. Continúa leyendo para aprender cómo habilitarlo en tus proyectos.
 </div>
 
 <h2 id="how-it-works">Cómo funciona. <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
-<p>With Bootstrap 5, we’ve added the option to enable a separate grid system that’s built on CSS Grid, but with a Bootstrap twist. You still get classes you can apply on a whim to build responsive layouts, but with a different approach under the hood.</p>
+<p>Con Bootstrap 5, agregamos la opción de habilitar un sistema de cuadrícula separado construido en CSS Grid, pero con un toque de Bootstrap. Aún obtienes clases que puedes aplicar cuando quieras para crear diseños responsive, pero con un enfoque diferente bajo el capó.</p>
 <ul>
 <li>
-<p><strong>CSS Grid is opt-in.</strong> Disable the default grid system by setting <code>$enable-grid-classes: false</code> and enable the CSS Grid by setting <code>$enable-cssgrid: true</code>. Then, recompile your Sass.</p>
+<p><strong>CSS Grid es opcional.</strong> Deshabilita el sistema de cuadrícula predeterminado configurando <code>$enable-grid-classes: false</code> y habilita CSS Grid configurando <code>$enable-cssgrid: true</code>. Luego, vuelve a compilar tu Sass.</p>
 </li>
 <li>
-<p><strong>Replace instances of <code>.row</code> with <code>.grid</code>.</strong> The <code>.grid</code> class sets <code>display: grid</code> and creates a <code>grid-template</code> that you build on with your HTML.</p>
+<p><strong>Reemplaza las instancias de <code>.row</code> con <code>.grid</code>.</strong> La clase <code>.grid</code> establece <code>display: grid</code> y crea una <code>grid-template</code> que puedes desarrollar con tu HTML.</p>
 </li>
 <li>
-<p><strong>Replace <code>.col-*</code> classes with <code>.g-col-*</code> classes.</strong> This is because our CSS Grid columns use the <code>grid-column</code> property instead of <code>width</code>.</p>
+<p><strong>Reemplaza las clases <code>.col-*</code> con clases <code>.g-col-*</code> .</strong> Esto se debe a que nuestras columnas CSS Grid usan el <code>grid-column</code> en lugar de <code>width</code>.</p>
 </li>
 <li>
-<p><strong>Columns and gutter sizes are set via CSS variables.</strong> Set these on the parent <code>.grid</code> and customize however you want, inline or in a stylesheet, with <code>--bs-columns</code> and <code>--bs-gap</code>.</p>
+<p><strong>Los tamaños de columnas y gutter se configuran mediante variables CSS.</strong> Configúralos en el <code>.grid</code> principal y personalízalos como desees, en línea o en una hoja de estilo, con <code>--bs-columns</code> y <code>--bs-gap</code>.</p>
 </li>
 </ul>
-<p>In the future, Bootstrap will likely shift to a hybrid solution as the <code>gap</code> property has achieved nearly full browser support for flexbox.</p>
-<h2 id="key-differences">Key differences <a class="anchor-link" href="#key-differences" aria-label="Link to this section: Key differences"></a></h2>
-<p>Compared to the default grid system:</p>
+<p>En el futuro, Bootstrap probablemente cambiará a una solución híbrida ya que la propiedad <code>gap</code> ha logrado soporte casi total del navegador para flexbox.</p>
+<h2 id="key-differences">Diferencias clave <a class="anchor-link" href="#key-differences" aria-label="Link to this section: Key differences"></a></h2>
+<p>Comparado con el sistema de cuadrícula predeterminado:</p>
 <ul>
 <li>
-<p>Flex utilities don’t affect the CSS Grid columns in the same way.</p>
+<p>Las utilidades Flex no afectan las columnas CSS Grid de la misma manera.</p>
 </li>
 <li>
-<p>Gaps replaces gutters. The <code>gap</code> property replaces the horizontal <code>padding</code> from our default grid system and functions more like <code>margin</code>.</p>
+<p>Los huecos reemplazan los gutters. La propiedad <code>gap</code> reemplaza el <code>padding</code> horizontal de nuestro sistema de cuadrícula predeterminado y funciona más como <code>margin</code>.</p>
 </li>
 <li>
-<p>As such, unlike <code>.row</code>s, <code>.grid</code>s have no negative margins and margin utilities cannot be used to change the grid gutters. Grid gaps are applied horizontally and vertically by default. See the <a href="#customizing">customizing section</a> for more details.</p>
+<p>Como tal, a diferencia de los <code>.row</code>, los <code>.grid</code> no tienen márgenes negativos y las utilidades de márgenes no se pueden utilizar para cambiar los márgenes de la cuadrícula. Los gaps de cuadrícula se aplican horizontal y verticalmente de forma predeterminada. Consulta la <a href="#customizing">sección de personalización</a> para obtener más detalles.</p>
 </li>
 <li>
-<p>Inline and custom styles should be viewed as replacements for modifier classes (e.g., <code>style="--bs-columns: 3;"</code> vs <code>class="row-cols-3"</code>).</p>
+<p>Los estilos en línea y personalizados deben verse como reemplazos de las clases modificadoras (por ejemplo, <code>style="--bs-columns: 3;"</code> vs <code>class="row-cols-3"</code>).</p>
 </li>
 <li>
-<p>Nesting works similarly, but may require you to reset your column counts on each instance of a nested <code>.grid</code>. See the <a href="#nesting">nesting section</a> for details.</p>
+<p>El anidamiento funciona de manera similar, pero puede requerir que restablezcas el recuento de columnas en cada instancia de un <code>.grid</code>anidado. Consulta la <a href="#nesting">sección de anidamiento</a> para obtener más detalles.</p>
 </li>
 </ul>
 <h2 id="examples">Ejemplos <a class="anchor-link" href="#examples" aria-label="Link to this section: Examples"></a></h2>
-<h3 id="three-columns">Three columns <a class="anchor-link" href="#three-columns" aria-label="Link to this section: Three columns"></a></h3>
-<p>Three equal-width columns across all viewports and devices can be created by using the <code>.g-col-4</code> classes. Add <a href="#responsive">responsive classes</a> to change the layout by viewport size.</p>
+<h3 id="three-columns">Tres columnas <a class="anchor-link" href="#three-columns" aria-label="Link to this section: Three columns"></a></h3>
+<p>Se pueden crear tres columnas de igual ancho en todas los viewports y dispositivos usando las clases <code>.g-col-4</code>. Agrega <a href="#responsive">clases responsive</a> para cambiar el diseño por tamaño de viewport.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center">
   <div class="g-col-4">.g-col-4</div>
@@ -650,7 +650,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h3 id="responsive">Responsive <a class="anchor-link" href="#responsive" aria-label="Link to this section: Responsive"></a></h3>
-<p>Use responsive classes to adjust your layout across viewports. Here we start with two columns on the narrowest viewports, and then grow to three columns on medium viewports and above.</p>
+<p>Usa clases responsive para ajustar tu diseño en los viewports. Aquí comenzamos con dos columnas en los viewports más estrechos y luego crecemos hasta tres columnas en los viewports medianos y superiores.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center">
   <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
@@ -673,7 +673,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"g-col-6 g-col-md-4"</span><span class="p">&gt;</span>.g-col-6 .g-col-md-4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Compare that to this two column layout at all viewports.</p>
+<p>Compáralo con este diseño de dos columnas en todos los viewports.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center">
   <div class="g-col-6">.g-col-6</div>
@@ -694,8 +694,8 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"g-col-6"</span><span class="p">&gt;</span>.g-col-6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="wrapping">Wrapping <a class="anchor-link" href="#wrapping" aria-label="Link to this section: Wrapping"></a></h2>
-<p>Grid items automatically wrap to the next line when there’s no more room horizontally. Note that the <code>gap</code> applies to horizontal and vertical gaps between grid items.</p>
+<h2 id="wrapping">Envolver <a class="anchor-link" href="#wrapping" aria-label="Link to this section: Wrapping"></a></h2>
+<p>Los elementos de la cuadrícula pasan automáticamente a la siguiente línea cuando no hay más espacio horizontalmente. Ten en cuenta que el <code>gap</code> se aplica a los espacios horizontales y verticales entre los elementos de la cuadrícula.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center">
   <div class="g-col-6">.g-col-6</div>
@@ -722,8 +722,8 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"g-col-6"</span><span class="p">&gt;</span>.g-col-6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="starts">Starts <a class="anchor-link" href="#starts" aria-label="Link to this section: Starts"></a></h2>
-<p>Start classes aim to replace our default grid’s offset classes, but they’re not entirely the same. CSS Grid creates a grid template through styles that tell browsers to “start at this column” and “end at this column.” Those properties are <code>grid-column-start</code> and <code>grid-column-end</code>. Start classes are shorthand for the former. Pair them with the column classes to size and align your columns however you need. Start classes begin at <code>1</code> as <code>0</code> is an invalid value for these properties.</p>
+<h2 id="starts">Comienza <a class="anchor-link" href="#starts" aria-label="Link to this section: Starts"></a></h2>
+<p>Las clases de inicio tienen como objetivo reemplazar las clases de compensación (offset) predeterminadas de nuestra cuadrícula, pero no son completamente iguales. CSS Grid crea una plantilla de cuadrícula a través de estilos que indican a los navegadores que "comiencen en esta columna" y "terminen en esta columna". Esas propiedades son <code>grid-column-start</code> y <code>grid-column-end</code>. Las clases iniciales son una abreviatura de las primeras. Combínalos con las clases de columnas para dimensionar y alinear sus columnas como lo necesites. Las clases de inicio comienzan en <code>1</code> ya que <code>0</code> es un valor no válido para estas propiedades.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center">
   <div class="g-col-3 g-start-2">.g-col-3 .g-start-2</div>
@@ -744,8 +744,8 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"g-col-4 g-start-6"</span><span class="p">&gt;</span>.g-col-4 .g-start-6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="auto-columns">Auto columns <a class="anchor-link" href="#auto-columns" aria-label="Link to this section: Auto columns"></a></h2>
-<p>When there are no classes on the grid items (the immediate children of a <code>.grid</code>), each grid item will automatically be sized to one column.</p>
+<h2 id="auto-columns">Columnas automáticas <a class="anchor-link" href="#auto-columns" aria-label="Link to this section: Auto columns"></a></h2>
+<p>Cuando no hay clases en los elementos de la cuadrícula (los hijos inmediatos de un <code>.grid</code>), cada elemento de la cuadrícula se ajustará automáticamente a una columna.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center">
   <div>1</div>
@@ -786,7 +786,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>This behavior can be mixed with grid column classes.</p>
+<p>Este comportamiento se puede combinar con clases de columnas de cuadrícula.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center">
   <div class="g-col-6">.g-col-6</div>
@@ -818,32 +818,32 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="nesting">Anidamiento <a class="anchor-link" href="#nesting" aria-label="Link to this section: Nesting"></a></h2>
-<p>Similar to our default grid system, our CSS Grid allows for easy nesting of <code>.grid</code>s. However, unlike the default, this grid inherits changes in the rows, columns, and gaps. Consider the example below:</p>
+<p>Al igual que nuestro sistema de cuadrícula predeterminado, nuestro CSS Grid permite anidar fácilmente <code>.grid</code>. Sin embargo, a diferencia del valor predeterminado, esta cuadrícula hereda los cambios en las filas, columnas y espacios. Considera el siguiente ejemplo:</p>
 <ul>
-<li>We override the default number of columns with a local CSS variable: <code>--bs-columns: 3</code>.</li>
-<li>In the first auto-column, the column count is inherited and each column is one-third of the available width.</li>
-<li>In the second auto-column, we’ve reset the column count on the nested <code>.grid</code> to 12 (our default).</li>
-<li>The third auto-column has no nested content.</li>
+<li>Sobrescribimos el número predeterminado de columnas con una variable CSS local: <code>--bs-columns: 3</code>.</li>
+<li>En la primera columna automática, el recuento de columnas se hereda y cada columna tiene un tercio del ancho disponible.</li>
+<li>En la segunda columna automática, hemos restablecido el recuento de columnas en el <code>.grid</code> anidado a 12 (nuestro valor predeterminado).</li>
+<li>La tercera columna automática no tiene contenido anidado.</li>
 </ul>
-<p>In practice this allows for more complex and custom layouts when compared to our default grid system.</p>
+<p>En la práctica, esto permite diseños más complejos y personalizados en comparación con nuestro sistema de cuadrícula predeterminado.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center" style="--bs-columns: 3;">
   <div>
-    First auto-column
+    Primera columna automática
     <div class="grid">
-      <div>Auto-column</div>
-      <div>Auto-column</div>
+      <div>Columna automática</div>
+      <div>Columna automática</div>
     </div>
   </div>
   <div>
-    Second auto-column
+    Segunda columna automática
     <div class="grid" style="--bs-columns: 12;">
-      <div class="g-col-6">6 of 12</div>
-      <div class="g-col-4">4 of 12</div>
-      <div class="g-col-2">2 of 12</div>
+      <div class="g-col-6">6 de 12</div>
+      <div class="g-col-4">4 de 12</div>
+      <div class="g-col-2">2 de 12</div>
     </div>
   </div>
-  <div>Third auto-column</div>
+  <div>Tercera columna automática</div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -874,13 +874,13 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Third auto-column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="customizing">Customizing <a class="anchor-link" href="#customizing" aria-label="Link to this section: Customizing"></a></h2>
-<p>Customize the number of columns, the number of rows, and the width of the gaps with local CSS variables.</p>
+<h2 id="customizing">Personalización <a class="anchor-link" href="#customizing" aria-label="Link to this section: Customizing"></a></h2>
+<p>Personaliza el número de columnas, el número de filas y el ancho de los espacios con variables CSS locales.</p>
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
 <th>Variable</th>
-<th>Fallback value</th>
+<th>Valor fallback</th>
 <th>Descripción</th>
 </tr>
 </thead>
@@ -888,29 +888,29 @@
 <tr>
 <td><code>--bs-rows</code></td>
 <td><code>1</code></td>
-<td>The number of rows in your grid template</td>
+<td>El número de filas en tu plantilla de cuadrícula.</td>
 </tr>
 <tr>
 <td><code>--bs-columns</code></td>
 <td><code>12</code></td>
-<td>The number of columns in your grid template</td>
+<td>El número de columnas en tu plantilla de cuadrícula.</td>
 </tr>
 <tr>
 <td><code>--bs-gap</code></td>
 <td><code>1.5rem</code></td>
-<td>The size of the gap between columns (vertical and horizontal)</td>
+<td>El tamaño del espacio entre columnas (vertical y horizontal)</td>
 </tr>
 </tbody>
 </table></div>
 
-<p>These CSS variables have no default value; instead, they apply fallback values that are used <em>until</em> a local instance is provided. For example, we use <code>var(--bs-rows, 1)</code> for our CSS Grid rows, which ignores <code>--bs-rows</code> because that hasn’t been set anywhere yet. Once it is, the <code>.grid</code> instance will use that value instead of the fallback value of <code>1</code>.</p>
-<h3 id="no-grid-classes">No grid classes <a class="anchor-link" href="#no-grid-classes" aria-label="Link to this section: No grid classes"></a></h3>
-<p>Immediate children elements of <code>.grid</code> are grid items, so they’ll be sized without explicitly adding a <code>.g-col</code> class.</p>
+<p>Estas variables CSS no tienen valor predeterminado; en su lugar, aplican valores alternativos que se utilizan <em>hasta</em> que se proporciona una instancia local. Por ejemplo, usamos <code>var(--bs-rows, 1)</code> para nuestras filas de CSS Grid, que ignora <code>--bs-rows</code> porque no se ha configurado en ninguna parte todavía. Una vez que lo esté, la instancia <code>.grid</code> usará ese valor en lugar del valor alternativo de <code>1</code>.</p>
+<h3 id="no-grid-classes">No hay clases en grilla <a class="anchor-link" href="#no-grid-classes" aria-label="Link to this section: No grid classes"></a></h3>
+<p>Los elementos secundarios inmediatos de <code>.grid</code> son elementos de cuadrícula, por lo que se les ajustará el tamaño sin agregar explícitamente una clase <code>.g-col</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center" style="--bs-columns: 3;">
-  <div>Auto-column</div>
-  <div>Auto-column</div>
-  <div>Auto-column</div>
+  <div>Auto-columna</div>
+  <div>Auto-columna</div>
+  <div>Auto-columna</div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -928,8 +928,8 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Auto-column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="columns-and-gaps">Columns and gaps <a class="anchor-link" href="#columns-and-gaps" aria-label="Link to this section: Columns and gaps"></a></h3>
-<p>Adjust the number of columns and the gap.</p>
+<h3 id="columns-and-gaps">Columnas y huecos <a class="anchor-link" href="#columns-and-gaps" aria-label="Link to this section: Columns and gaps"></a></h3>
+<p>Ajusta el número de columnas y el espacio.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center" style="--bs-columns: 4; --bs-gap: 5rem;">
   <div class="g-col-2">.g-col-2</div>
@@ -970,13 +970,13 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"g-col-4"</span><span class="p">&gt;</span>.g-col-4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="adding-rows">Adding rows <a class="anchor-link" href="#adding-rows" aria-label="Link to this section: Adding rows"></a></h3>
-<p>Adding more rows and changing the placement of columns:</p>
+<h3 id="adding-rows">Agregar filas <a class="anchor-link" href="#adding-rows" aria-label="Link to this section: Adding rows"></a></h3>
+<p>Agregar más filas y cambiar la ubicación de las columnas:</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center" style="--bs-rows: 3; --bs-columns: 3;">
-  <div>Auto-column</div>
-  <div class="g-start-2" style="grid-row: 2">Auto-column</div>
-  <div class="g-start-3" style="grid-row: 3">Auto-column</div>
+  <div>Auto-columna</div>
+  <div class="g-start-2" style="grid-row: 2">Auto-columna</div>
+  <div class="g-start-3" style="grid-row: 3">Auto-columna</div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -994,8 +994,8 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"g-start-3"</span> <span class="na">style</span><span class="o">=</span><span class="s">"grid-row: 3"</span><span class="p">&gt;</span>Auto-column<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="gaps">Gaps <a class="anchor-link" href="#gaps" aria-label="Link to this section: Gaps"></a></h3>
-<p>Change the vertical gaps only by modifying the <code>row-gap</code>. Note that we use <code>gap</code> on <code>.grid</code>s, but <code>row-gap</code> and <code>column-gap</code> can be modified as needed.</p>
+<h3 id="gaps">Gaps o huecos <a class="anchor-link" href="#gaps" aria-label="Link to this section: Gaps"></a></h3>
+<p>Cambia los espacios verticales solo modificando el <code>row-gap</code>. Ten en cuenta que utilizamos <code>gap</code> en <code>.grid</code>s, pero <code>row-gap</code> y <code>column-gap</code> se pueden modificar cuando sea necesario.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center" style="row-gap: 0;">
   <div class="g-col-6">.g-col-6</div>
@@ -1022,7 +1022,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"g-col-6"</span><span class="p">&gt;</span>.g-col-6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Because of that, you can have different vertical and horizontal <code>gap</code>s, which can take a single value (all sides) or a pair of values (vertical and horizontal). This can be applied with an inline style for <code>gap</code>, or with our <code>--bs-gap</code> CSS variable.</p>
+<p>Por eso, puedes tener diferentes <code>gap</code> verticales y horizontales, que pueden tomar un solo valor (todos los lados) o un par de valores (verticales y horizontales). Esto se puede aplicar con un estilo en línea para <code>gap</code>, o con nuestra variable CSS <code>--bs-gap</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center" style="--bs-gap: .25rem 1rem;">
   <div class="g-col-6">.g-col-6</div>
@@ -1050,15 +1050,15 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="sass">Sass <a class="anchor-link" href="#sass" aria-label="Link to this section: Sass"></a></h2>
-<p>One limitation of the CSS Grid is that our default classes are still generated by two Sass variables, <code>$grid-columns</code> and <code>$grid-gutter-width</code>. This effectively predetermines the number of classes generated in our compiled CSS. You have two options here:</p>
+<p>Una limitación de CSS Grid es que nuestras clases predeterminadas aún se generan mediante dos variables Sass, <code>$grid-columns</code> y <code>$grid-gutter-width</code>. Esto efectivamente predetermina la cantidad de clases generadas en nuestro CSS compilado. Tienes dos opciones aquí:</p>
 <ul>
-<li>Modify those default Sass variables and recompile your CSS.</li>
-<li>Use inline or custom styles to augment the provided classes.</li>
+<li>Modifica esas variables Sass predeterminadas y vuelve a compilar tu CSS.</li>
+<li>Usa estilos en línea o personalizados para aumentar las clases proporcionadas.</li>
 </ul>
-<p>For example, you can increase the column count and change the gap size, and then size your “columns” with a mix of inline styles and predefined CSS Grid column classes (e.g., <code>.g-col-4</code>).</p>
+<p>Por ejemplo, puedes aumentar el número de columnas y cambiar el tamaño del espacio, y luego dimensionar tus “columnas” con una combinación de estilos en línea y clases de columnas CSS Grid predefinidas (por ejemplo, <code>.g-col-4</code>).</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem;">
-  <div style="grid-column: span 14;">14 columns</div>
+  <div style="grid-column: span 14;">14 columnas</div>
   <div class="g-col-4">.g-col-4</div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
