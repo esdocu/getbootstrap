@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Use Bootstrap’s CSS custom properties for fast and forward-looking design and development.">
+<meta name="description" content="Usa las propiedades personalizadas de CSS de Bootstrap para un diseño y desarrollo rápidos y con visión de futuro.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>CSS variables · Bootstrap v5.3</title>
+<title>Variables CSS · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/customize/css-variables/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Variables CSS">
-<meta name="twitter:description" content="Use Bootstrap’s CSS custom properties for fast and forward-looking design and development.">
+<meta name="twitter:description" content="Usa las propiedades personalizadas de CSS de Bootstrap para un diseño y desarrollo rápidos y con visión de futuro.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/customize/css-variables/">
 <meta property="og:title" content="Variables CSS">
-<meta property="og:description" content="Use Bootstrap’s CSS custom properties for fast and forward-looking design and development.">
+<meta property="og:description" content="Usa las propiedades personalizadas de CSS de Bootstrap para un diseño y desarrollo rápidos y con visión de futuro.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -530,7 +530,7 @@
           </div>
           <h1 class="bd-title mb-0" id="content">Variables CSS</h1>
         </div>
-        <p class="bd-lead">Use Bootstrap’s CSS custom properties for fast and forward-looking design and development.</p>
+        <p class="bd-lead">Usa las propiedades personalizadas de CSS de Bootstrap para un diseño y desarrollo rápidos y con visión de futuro.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 12 días.
@@ -553,17 +553,17 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#root-variables">Root variables</a>
+    <li><a href="#root-variables">Variables root</a>
       <ul>
-        <li><a href="#default">Default</a></li>
+        <li><a href="#default">Predeterminado</a></li>
         <li><a href="#dark-mode">Modo oscuro</a></li>
       </ul>
     </li>
-    <li><a href="#component-variables">Component variables</a></li>
-    <li><a href="#prefix">Prefix</a></li>
+    <li><a href="#component-variables">Variables de componentes</a></li>
+    <li><a href="#prefix">Prefijo</a></li>
     <li><a href="#examples">Ejemplos</a></li>
-    <li><a href="#focus-variables">Focus variables</a></li>
-    <li><a href="#grid-breakpoints">Grid breakpoints</a></li>
+    <li><a href="#focus-variables">Variables de enfoque</a></li>
+    <li><a href="#grid-breakpoints">Puntos de interrupción de la cuadrícula</a></li>
   </ul>
 </nav>
           </div>
@@ -573,12 +573,12 @@
       <div class="bd-content ps-lg-2">
         
 
-        <p>Bootstrap includes many <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS custom properties (variables)</a> in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser’s inspector, a code sandbox, or general prototyping.</p>
-<p><strong>All our custom properties are prefixed with <code>bs-</code></strong> to avoid conflicts with third party CSS.</p>
-<h2 id="root-variables">Root variables <a class="anchor-link" href="#root-variables" aria-label="Link to this section: Root variables"></a></h2>
-<p>Here are the variables we include (note that the <code>:root</code> is required) that can be accessed anywhere Bootstrap’s CSS is loaded. They’re located in our <code>_root.scss</code> file and included in our compiled dist files.</p>
-<h3 id="default">Default <a class="anchor-link" href="#default" aria-label="Link to this section: Default"></a></h3>
-<p>These CSS variables are available everywhere, regardless of color mode.</p>
+        <p>Bootstrap incluye muchas <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">propiedades personalizadas de CSS (variables)</a> en su CSS compilado para personalización en tiempo real sin necesidad de recompilar Sass. Estos proporcionan un fácil acceso a los valores de uso común, como los colores de nuestro tema, los puntos de interrupción y las pilas de fuentes principales cuando se trabaja en el inspector de tu navegador, una zona de pruebas de código o la creación de prototipos en general.</p>
+<p><strong>Todas nuestras propiedades personalizadas tienen el prefijo <code>bs-</code></strong> para evitar conflictos con CSS de terceros.</p>
+<h2 id="root-variables">Variables root <a class="anchor-link" href="#root-variables" aria-label="Link to this section: Root variables"></a></h2>
+<p>Aquí están las variables que incluimos (ten en cuenta que <code>:root</code> es obligatorio) a las que se puede acceder desde cualquier lugar donde esté cargado el CSS de Bootstrap. Están ubicados en nuestro archivo <code>_root.scss</code> y se incluyen en nuestros archivos dist compilados.</p>
+<h3 id="default">Predeterminado <a class="anchor-link" href="#default" aria-label="Link to this section: Default"></a></h3>
+<p>Estas variables CSS están disponibles en todas partes, independientemente del modo de color.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">:root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -700,7 +700,7 @@
   --bs-form-invalid-border-color: #dc3545;
 }</span>
 </span></span></code></pre></div><h3 id="dark-mode">Modo oscuro <a class="anchor-link" href="#dark-mode" aria-label="Link to this section: Dark mode"></a></h3>
-<p>These variables are scoped to our built-in dark mode.</p>
+<p>Estas variables tienen como alcance nuestro modo oscuro incorporado.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">[data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
@@ -756,26 +756,26 @@
   --bs-form-invalid-color: #ea868f;
   --bs-form-invalid-border-color: #ea868f;
 }</span>
-</span></span></code></pre></div><h2 id="component-variables">Component variables <a class="anchor-link" href="#component-variables" aria-label="Link to this section: Component variables"></a></h2>
-<p>Bootstrap 5 is increasingly making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren’t inherited in places like nested tables, and allow some basic restyling and extending of Bootstrap components after Sass compilation.</p>
-<p>Have a look at our table documentation for some <a href="/docs/5.3/content/tables/#how-do-the-variants-and-accented-tables-work">insight into how we’re using CSS variables</a>. Our <a href="/docs/5.3/components/navbar/#css">navbars also use CSS variables</a> as of v5.2.0. We’re also using CSS variables across our grids—primarily for gutters the <a href="/docs/5.3/layout/css-grid/">new opt-in CSS grid</a>—with more component usage coming in the future.</p>
-<p>Whenever possible, we’ll assign CSS variables at the base component level (e.g., <code>.navbar</code> for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.</p>
-<h2 id="prefix">Prefix <a class="anchor-link" href="#prefix" aria-label="Link to this section: Prefix"></a></h2>
-<p>Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the <code>--</code> that’s required on every CSS variable.</p>
-<p>Customize the prefix via the <code>$prefix</code> Sass variable. By default, it’s set to <code>bs-</code> (note the trailing dash).</p>
+</span></span></code></pre></div><h2 id="component-variables">Variables de componentes <a class="anchor-link" href="#component-variables" aria-label="Link to this section: Component variables"></a></h2>
+<p>Bootstrap 5 utiliza cada vez más propiedades personalizadas como variables locales para varios componentes. De esta manera reducimos nuestro CSS compilado, garantizamos que los estilos no se hereden en lugares como tablas anidadas y permitimos algunos cambios básicos de estilo y extensión de los componentes Bootstrap después de la compilación de Sass.</p>
+<p>Echa un vistazo a nuestra documentación de tablas para ver la <a href="/docs/5.3/content/tables/#how-do-the-variants-and-accented-tables-work">visión de cómo utilizamos las variables CSS</a>. Nuestras <a href="/docs/5.3/components/navbar/#css">barras de navegación también utilizan variables CSS</a> a partir de v5.2.0. También estamos usando variables CSS en nuestras cuadrículas, principalmente para los gutters, la <a href="/docs/5.3/layout/css-grid/">nueva cuadrícula CSS opcional</a>, con un mayor uso de componentes en camino.</p>
+<p>Siempre que sea posible, asignaremos variables CSS en el nivel del componente base (por ejemplo, <code>.navbar</code> para la barra de navegación y sus subcomponentes). Esto reduce las conjeturas sobre dónde y cómo personalizar, y permite que nuestro equipo realice modificaciones sencillas en futuras actualizaciones.</p>
+<h2 id="prefix">Prefijo <a class="anchor-link" href="#prefix" aria-label="Link to this section: Prefix"></a></h2>
+<p>La mayoría de las variables CSS usan un prefijo para evitar colisiones con tu propio código base. Este prefijo se suma al <code>--</code> que se requiere en cada variable CSS.</p>
+<p>Personaliza el prefijo mediante la variable Sass <code>$prefix</code>. De forma predeterminada, está configurado en <code>bs-</code> (ten en cuenta el guión final).</p>
 <h2 id="examples">Ejemplos <a class="anchor-link" href="#examples" aria-label="Link to this section: Examples"></a></h2>
-<p>CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we’re resetting our page’s font and link styles with CSS variables.</p>
+<p>Las variables CSS ofrecen una flexibilidad similar a las variables de Sass, pero sin la necesidad de compilarlas antes de enviarlas al navegador. Por ejemplo, aquí estamos restableciendo la fuente de nuestra página y los estilos de enlace con variables CSS.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">font</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="o">/</span><span class="mf">1.5</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="kc">sans-serif</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="nt">a</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h2 id="focus-variables">Focus variables <a class="anchor-link" href="#focus-variables" aria-label="Link to this section: Focus variables"></a></h2>
+</span></span></code></pre></div><h2 id="focus-variables">Variables de enfoque <a class="anchor-link" href="#focus-variables" aria-label="Link to this section: Focus variables"></a></h2>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Agregado en v5.3.0</small>
 
-<p>Bootstrap provides custom <code>:focus</code> styles using a combination of Sass and CSS variables that can be optionally added to specific components and elements. We do not yet globally override all <code>:focus</code> styles.</p>
-<p>In our Sass, we set default values that can be customized before compiling.</p>
+<p>Bootstrap proporciona estilos <code>:focus</code> personalizados usando una combinación de variables Sass y CSS que se pueden agregar opcionalmente a componentes y elementos específicos. Todavía no sobrescribimos globalmente todos los estilos <code>:focus</code>.</p>
+<p>En nuestro Sass, configuramos valores predeterminados que se pueden personalizar antes de compilar.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -790,7 +790,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$focus-ring-blur</span><span class="o">:</span>       <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$focus-ring-box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="nv">$focus-ring-blur</span> <span class="nv">$focus-ring-width</span> <span class="nv">$focus-ring-color</span><span class="p">;</span>
 </span></span></code></pre></div></div>
-<p>Those variables are then reassigned to <code>:root</code> level CSS variables that can be customized in real-time, including with options for <code>x</code> and <code>y</code> offsets (which default to their fallback value of <code>0</code>).</p>
+<p>Esas variables luego se reasignan a variables CSS de nivel <code>:root</code> que se pueden personalizar en tiempo real, incluidas opciones para <code>x</code> e <code>y</code> offsets (que por defecto tienen su valor alternativo de <code>0</code>).</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_root.scss">scss/_root.scss</a>
@@ -802,8 +802,8 @@
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-width</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-opacity</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-opacity</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-color</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
-<h2 id="grid-breakpoints">Grid breakpoints <a class="anchor-link" href="#grid-breakpoints" aria-label="Link to this section: Grid breakpoints"></a></h2>
-<p>While we include our grid breakpoints as CSS variables (except for <code>xs</code>), be aware that <strong>CSS variables do not work in media queries</strong>. This is by design in the CSS spec for variables, but may change in coming years with support for <code>env()</code> variables. Check out <a href="https://stackoverflow.com/a/47212942">this Stack Overflow answer</a> for some helpful links. In the meantime, you can use these variables in other CSS situations, as well as in your JavaScript.</p>
+<h2 id="grid-breakpoints">Puntos de interrupción de la cuadrícula <a class="anchor-link" href="#grid-breakpoints" aria-label="Link to this section: Grid breakpoints"></a></h2>
+<p>Aunque incluimos nuestros puntos de interrupción de cuadrícula como variables CSS (excepto <code>xs</code>), ten en cuenta que las <strong>variables CSS no funcionan en media queries</strong>. Esto está diseñado en la especificación CSS para variables, pero puede cambiar en los próximos años con soporte para variables <code>env()</code>. Consulta <a href="https://stackoverflow.com/a/47212942">esta respuesta de Stack Overflow</a> para obtener algunos enlaces útiles. Mientras tanto, puedes utilizar estas variables en otras situaciones de CSS, así como en tu JavaScript.</p>
 
       </div>
     </main>
