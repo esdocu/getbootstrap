@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Bootstrap.">
+<meta name="description" content="Los puntos de interrupción son anchos personalizables que determinan cómo se comporta tu diseño responsive en todos los tamaños de dispositivos o viewports en Bootstrap.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Breakpoints · Bootstrap v5.3</title>
+<title>Breakpoints · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/layout/breakpoints/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Puntos de interrupción">
-<meta name="twitter:description" content="Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Bootstrap.">
+<meta name="twitter:description" content="Los puntos de interrupción son anchos personalizables que determinan cómo se comporta tu diseño responsive en todos los tamaños de dispositivos o viewports en Bootstrap.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/layout/breakpoints/">
 <meta property="og:title" content="Puntos de interrupción">
-<meta property="og:description" content="Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Bootstrap.">
+<meta property="og:description" content="Los puntos de interrupción son anchos personalizables que determinan cómo se comporta tu diseño responsive en todos los tamaños de dispositivos o viewports en Bootstrap.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -530,7 +530,7 @@
           </div>
           <h1 class="bd-title mb-0" id="content">Puntos de interrupción</h1>
         </div>
-        <p class="bd-lead">Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Bootstrap.</p>
+        <p class="bd-lead">Los puntos de interrupción son anchos personalizables que determinan cómo se comporta tu diseño responsive en todos los tamaños de dispositivos o viewports en Bootstrap.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 12 días.
@@ -553,14 +553,14 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#core-concepts">Core concepts</a></li>
-    <li><a href="#available-breakpoints">Available breakpoints</a></li>
+    <li><a href="#core-concepts">Conceptos básicos</a></li>
+    <li><a href="#available-breakpoints">Puntos de interrupción disponibles</a></li>
     <li><a href="#media-queries">Media queries</a>
       <ul>
         <li><a href="#min-width">Min-width</a></li>
         <li><a href="#max-width">Max-width</a></li>
-        <li><a href="#single-breakpoint">Single breakpoint</a></li>
-        <li><a href="#between-breakpoints">Between breakpoints</a></li>
+        <li><a href="#single-breakpoint">Punto de interrupción único</a></li>
+        <li><a href="#between-breakpoints">Entre puntos de interrupción</a></li>
       </ul>
     </li>
   </ul>
@@ -572,64 +572,64 @@
       <div class="bd-content ps-lg-2">
         
 
-        <h2 id="core-concepts">Core concepts <a class="anchor-link" href="#core-concepts" aria-label="Link to this section: Core concepts"></a></h2>
+        <h2 id="core-concepts">Conceptos básicos <a class="anchor-link" href="#core-concepts" aria-label="Link to this section: Core concepts"></a></h2>
 <ul>
 <li>
-<p><strong>Breakpoints are the building blocks of responsive design.</strong> Use them to control when your layout can be adapted at a particular viewport or device size.</p>
+<p><strong>Los puntos de interrupción son los componentes básicos del diseño responsive.</strong> Utilízalos para controlar cuándo se puede adaptar tu diseño a un viewport o tamaño de dispositivo en particular.</p>
 </li>
 <li>
-<p><strong>Use media queries to architect your CSS by breakpoint.</strong> Media queries are a feature of CSS that allow you to conditionally apply styles based on a set of browser and operating system parameters. We most commonly use <code>min-width</code> in our media queries.</p>
+<p><strong>Utiliza media queries para diseñar su CSS por punto de interrupción.</strong> Las media queries son una característica de CSS que te permite aplicar estilos condicionalmente según un conjunto de parámetros del navegador y del sistema operativo. Normalmente utilizamos <code>min-width</code> en nuestras media queries.</p>
 </li>
 <li>
-<p><strong>Mobile first, responsive design is the goal.</strong> Bootstrap’s CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.</p>
+<p><strong>El objetivo es el diseño responsive mobile-first.</strong> El CSS de Bootstrap tiene como objetivo aplicar el mínimo indispensable de estilos para hacer que un diseño funcione en el punto de interrupción más pequeño, y luego aplicar capas de estilos para ajustar ese diseño a tamaños de dispositivos más grandes. Esto optimiza tu CSS, mejora el tiempo de renderizado y brinda una excelente experiencia a tus visitantes.</p>
 </li>
 </ul>
-<h2 id="available-breakpoints">Available breakpoints <a class="anchor-link" href="#available-breakpoints" aria-label="Link to this section: Available breakpoints"></a></h2>
-<p>Bootstrap includes six default breakpoints, sometimes referred to as <em>grid tiers</em>, for building responsively. These breakpoints can be customized if you’re using our source Sass files.</p>
+<h2 id="available-breakpoints">Puntos de interrupción disponibles <a class="anchor-link" href="#available-breakpoints" aria-label="Link to this section: Available breakpoints"></a></h2>
+<p>Bootstrap incluye seis puntos de interrupción predeterminados, a veces denominados <em>niveles de cuadrícula</em>, para crear de manera responsive. Estos puntos de interrupción se pueden personalizar si utilizas nuestros archivos fuente Sass.</p>
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th>Breakpoint</th>
-<th>Class infix</th>
-<th>Dimensions</th>
+<th>Punto de interrupción</th>
+<th>Clase infix</th>
+<th>Dimensiones</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Extra small</td>
-<td><em>None</em></td>
+<td>Extra pequeño</td>
+<td><em>Ninguno</em></td>
 <td>&lt;576px</td>
 </tr>
 <tr>
-<td>Small</td>
+<td>Pequeño</td>
 <td><code>sm</code></td>
 <td>≥576px</td>
 </tr>
 <tr>
-<td>Medium</td>
+<td>Medio</td>
 <td><code>md</code></td>
 <td>≥768px</td>
 </tr>
 <tr>
-<td>Large</td>
+<td>Grande</td>
 <td><code>lg</code></td>
 <td>≥992px</td>
 </tr>
 <tr>
-<td>Extra large</td>
+<td>Extra grande</td>
 <td><code>xl</code></td>
 <td>≥1200px</td>
 </tr>
 <tr>
-<td>Extra extra large</td>
+<td>Extra extra grande</td>
 <td><code>xxl</code></td>
 <td>≥1400px</td>
 </tr>
 </tbody>
 </table></div>
 
-<p>Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don’t specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.</p>
-<p>These breakpoints are customizable via Sass—you’ll find them in a Sass map in our <code>_variables.scss</code> stylesheet.</p>
+<p>Cada punto de interrupción se eligió para contener cómodamente contenedores cuyos anchos son múltiplos de 12. Los puntos de interrupción también son representativos de un subconjunto de tamaños de dispositivos y dimensiones de viewports comunes; no se dirigen específicamente a cada caso de uso o dispositivo. En cambio, las gamas proporcionan una base sólida y consistente sobre la que construir para casi cualquier dispositivo.</p>
+<p>Estos puntos de interrupción se pueden personalizar a través de Sass; los encontrarás en un mapa de Sass en nuestra hoja de estilo <code>_variables.scss</code> .</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -649,9 +649,9 @@
 </span></span></code></pre></div></div>
 <p>Para obtener más información y ejemplos sobre cómo modificar nuestros mapas y variables de Sass, consulta <a href="/docs/5.3/layout/grid/#css">la sección CSS de la documentación de Grid</a>.</p>
 <h2 id="media-queries">Media queries <a class="anchor-link" href="#media-queries" aria-label="Link to this section: Media queries"></a></h2>
-<p>Since Bootstrap is developed to be mobile first, we use a handful of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.</p>
+<p>Dado que Bootstrap está desarrollado para ser mobile-first, usamos un puñado de <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a> para crear puntos de interrupción sensibles para nuestros diseños e interfaces. Estos puntos de interrupción se basan principalmente en anchos mínimos del viewport y nos permiten ampliar los elementos a medida que cambia el viewport.</p>
 <h3 id="min-width">Min-width <a class="anchor-link" href="#min-width" aria-label="Link to this section: Min-width"></a></h3>
-<p>Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.</p>
+<p>Bootstrap utiliza principalmente los siguientes rangos de media query (o puntos de interrupción) en nuestros archivos Sass fuente para nuestro diseño, sistema de cuadrícula y componentes.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Source mixins
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="c1">// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
@@ -672,7 +672,7 @@
 </span></span><span class="line"><span class="cl">    <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>These Sass mixins translate in our compiled CSS using the values declared in our Sass variables. For example:</p>
+</span></span></code></pre></div><p>Estos mixins de Sass se traducen en nuestro CSS compilado usando los valores declarados en nuestras variables de Sass. Por ejemplo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// X-Small devices (portrait phones, less than 576px)
 </span></span></span><span class="line"><span class="cl"><span class="c1">// No media query for `xs` since this is the default in Bootstrap
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -691,7 +691,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">// XX-Large devices (larger desktops, 1400px and up)
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="na">min-width</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 </span></span></code></pre></div><h3 id="max-width">Max-width <a class="anchor-link" href="#max-width" aria-label="Link to this section: Max-width"></a></h3>
-<p>We occasionally use media queries that go in the other direction (the given screen size <em>or smaller</em>):</p>
+<p>Ocasionalmente usamos media queries que van en la otra dirección (el tamaño de pantalla dado <em>o menor</em>):</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// No media query necessary for xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
@@ -705,7 +705,7 @@
 </span></span><span class="line"><span class="cl">    <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>These mixins take those declared breakpoints, subtract <code>.02px</code> from them, and use them as our <code>max-width</code> values. For example:</p>
+</span></span></code></pre></div><p>Estos mixins toman esos puntos de interrupción declarados, les restan <code>.02px</code> y los usan como nuestros valores de <code>max-width</code>. Por ejemplo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// `xs` returns only a ruleset and no media query
 </span></span></span><span class="line"><span class="cl"><span class="c1">// ... { ... }
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
@@ -724,23 +724,23 @@
 </span></span><span class="line"><span class="cl"><span class="c1">// `xxl` applies to x-large devices (large desktops, less than 1400px)
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="na">max-width</span><span class="o">:</span> <span class="mi">1399</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 </span></span></code></pre></div><div class="bd-callout bd-callout-warning">
-<strong>Why subtract .02px?</strong> Browsers don’t currently support <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">range context queries</a>, so we work around the limitations of <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max"><code>min-</code> and <code>max-</code> prefixes</a> and viewports with fractional widths (which can occur under certain conditions on high-dpi devices, for instance) by using values with higher precision.
+<strong>¿Por qué restar .02px?</strong> Los navegadores actualmente no admiten <a href="https://www.w3.org/TR/mediaqueries-4/#range-context">consultas de contexto de rango</a>, por lo que solucionamos las limitaciones de <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max"><code>min-</code> y <code>max-</code> (prefijos)</a> y viewports con anchos fraccionarios (que pueden ocurrir bajo ciertas condiciones en dispositivos de alta resolución, por ejemplo) usando valores con mayor precisión.
 </div>
 
-<h3 id="single-breakpoint">Single breakpoint <a class="anchor-link" href="#single-breakpoint" aria-label="Link to this section: Single breakpoint"></a></h3>
-<p>There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.</p>
+<h3 id="single-breakpoint">Punto de interrupción único <a class="anchor-link" href="#single-breakpoint" aria-label="Link to this section: Single breakpoint"></a></h3>
+<p>También existen media queries y mixins para apuntar a un solo segmento de tamaños de pantalla utilizando los anchos de punto de interrupción mínimo y máximo.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> media-breakpoint-only</span><span class="p">(</span><span class="n">xxl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-</span></span></code></pre></div><p>For example the <code>@include media-breakpoint-only(md) { ... }</code> will result in :</p>
+</span></span></code></pre></div><p>Por ejemplo, <code>@include media-breakpoint-only(md) { ... }</code> dará como resultado:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@media</span> <span class="p">(</span><span class="na">min-width</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="na">max-width</span><span class="o">:</span> <span class="mi">991</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-</span></span></code></pre></div><h3 id="between-breakpoints">Between breakpoints <a class="anchor-link" href="#between-breakpoints" aria-label="Link to this section: Between breakpoints"></a></h3>
-<p>Similarly, media queries may span multiple breakpoint widths:</p>
+</span></span></code></pre></div><h3 id="between-breakpoints">Entre puntos de interrupción <a class="anchor-link" href="#between-breakpoints" aria-label="Link to this section: Between breakpoints"></a></h3>
+<p>De manera similar, las media queries pueden abarcar múltiples anchos de puntos de interrupción:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> media-breakpoint-between</span><span class="p">(</span><span class="n">md</span><span class="o">,</span> <span class="n">xl</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
-</span></span></code></pre></div><p>Which results in:</p>
+</span></span></code></pre></div><p>Lo cual resulta en:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Example
 </span></span></span><span class="line"><span class="cl"><span class="c1">// Apply styles starting from medium devices and up to extra large devices
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@media</span> <span class="p">(</span><span class="na">min-width</span><span class="o">:</span> <span class="mi">768</span><span class="kt">px</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="na">max-width</span><span class="o">:</span> <span class="mi">1199</span><span class="mf">.98</span><span class="kt">px</span><span class="p">)</span> <span class="p">{</span> <span class="nc">...</span> <span class="p">}</span>
