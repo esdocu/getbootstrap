@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Learn how and why we build nearly all our components responsively and with base and modifier classes.">
+<meta name="description" content="Aprende cómo y por qué construimos casi todos nuestros componentes de manera responsive y con clases base y modificadoras.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Components · Bootstrap v5.3</title>
+<title>Componentes · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/customize/components/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Componentes">
-<meta name="twitter:description" content="Learn how and why we build nearly all our components responsively and with base and modifier classes.">
+<meta name="twitter:description" content="Aprende cómo y por qué construimos casi todos nuestros componentes de manera responsive y con clases base y modificadoras.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/customize/components/">
 <meta property="og:title" content="Componentes">
-<meta property="og:description" content="Learn how and why we build nearly all our components responsively and with base and modifier classes.">
+<meta property="og:description" content="Aprende cómo y por qué construimos casi todos nuestros componentes de manera responsive y con clases base y modificadoras.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -530,12 +530,12 @@
           </div>
           <h1 class="bd-title mb-0" id="content">Componentes</h1>
         </div>
-        <p class="bd-lead">Learn how and why we build nearly all our components responsively and with base and modifier classes.</p>
+        <p class="bd-lead">Aprende cómo y por qué construimos casi todos nuestros componentes de manera responsive y con clases base y modificadoras.</p>
         <div id="esdocu-ads">
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 12 días.
 </div>
-<a href="https://bit.ly/patreon-esdocu" target="_blank">
+<a href="https://bit.ly/paypal-esdocu" target="_blank">
     <img src="/esdocu/img/esdocu-patreon-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
 </a>
 </div>
@@ -553,10 +553,10 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#base-classes">Base classes</a></li>
-    <li><a href="#modifiers">Modifiers</a></li>
+    <li><a href="#base-classes">Clases base</a></li>
+    <li><a href="#modifiers">Modificadores</a></li>
     <li><a href="#responsive">Responsive</a></li>
-    <li><a href="#creating-your-own">Creating your own</a></li>
+    <li><a href="#creating-your-own">Crear el tuyo propio</a></li>
   </ul>
 </nav>
           </div>
@@ -566,13 +566,13 @@
       <div class="bd-content ps-lg-2">
         
 
-        <h2 id="base-classes">Base classes <a class="anchor-link" href="#base-classes" aria-label="Link to this section: Base classes"></a></h2>
-<p>Bootstrap’s components are largely built with a base-modifier nomenclature. We group as many shared properties as possible into a base class, like <code>.btn</code>, and then group individual styles for each variant into modifier classes, like <code>.btn-primary</code> or <code>.btn-success</code>.</p>
-<p>To build our modifier classes, we use Sass’s <code>@each</code> loops to iterate over a Sass map. This is especially helpful for generating variants of a component by our <code>$theme-colors</code> and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you’ll automatically see your changes reflected in these loops.</p>
-<p>Check out <a href="/docs/5.3/customize/sass/#maps-and-loops">our Sass maps and loops docs</a> for how to customize these loops and extend Bootstrap’s base-modifier approach to your own code.</p>
-<h2 id="modifiers">Modifiers <a class="anchor-link" href="#modifiers" aria-label="Link to this section: Modifiers"></a></h2>
-<p>Many of Bootstrap’s components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., <code>.btn</code>) while style variations are confined to modifier classes (e.g., <code>.btn-danger</code>). These modifier classes are built from the <code>$theme-colors</code> map to make customizing the number and name of our modifier classes.</p>
-<p>Here are two examples of how we loop over the <code>$theme-colors</code> map to generate modifiers to the <code>.alert</code> and <code>.list-group</code> components.</p>
+        <h2 id="base-classes">Clases base <a class="anchor-link" href="#base-classes" aria-label="Link to this section: Base classes"></a></h2>
+<p>Los componentes de Bootstrap están construidos en gran medida con una nomenclatura de modificador de base. Agrupamos tantas propiedades compartidas como sea posible en una clase base, como <code>.btn</code>, y luego agrupamos estilos individuales para cada variante en clases modificadoras, como <code>.btn-primary</code> o <code>.btn-success</code>.</p>
+<p>Para construir nuestras clases modificadoras, usamos los bucles <code>@each</code> de Sass para iterar sobre un mapa de Sass. Esto es especialmente útil para generar variantes de un componente mediante nuestro <code>$theme-colors</code> y crear variantes responsive para cada punto de interrupción. A medida que personalices estos mapas de Sass y los vuelvas a compilar, verás automáticamente tus cambios reflejados en estos bucles.</p>
+<p>Consulta <a href="/docs/5.3/customize/sass/#maps-and-loops">nuestra documentación de mapas y bucles de Sass</a> para saber cómo personalizar estos bucles y extender el enfoque de modificador de base de Bootstrap a tu propio código.</p>
+<h2 id="modifiers">Modificadores <a class="anchor-link" href="#modifiers" aria-label="Link to this section: Modifiers"></a></h2>
+<p>Muchos de los componentes de Bootstrap están construidos con un enfoque de clase modificadora de base. Esto significa que la mayor parte del estilo está contenido en una clase base (por ejemplo, <code>.btn</code>), mientras que las variaciones de estilo se limitan a clases modificadoras (por ejemplo, <code>.btn-danger</code>). Estas clases modificadoras se crean a partir del mapa <code>$theme-colors</code> para personalizar el número y el nombre de nuestras clases modificadoras.</p>
+<p>Aquí hay dos ejemplos de cómo recorremos el mapa <code>$theme-colors</code> para generar modificadores para los componentes <code>.alert</code> y <code>.list-group</code>.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_alert.scss">scss/_alert.scss</a>
@@ -620,7 +620,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div>
 <h2 id="responsive">Responsive <a class="anchor-link" href="#responsive" aria-label="Link to this section: Responsive"></a></h2>
-<p>These Sass loops aren’t limited to color maps, either. You can also generate responsive variations of your components. Take for example our responsive alignment of the dropdowns where we mix an <code>@each</code> loop for the <code>$grid-breakpoints</code> Sass map with a media query include.</p>
+<p>Estos bucles de Sass tampoco se limitan a mapas de colores. También puedes generar variaciones responsive de tus componentes. Tomemos, por ejemplo, nuestra alineación responsive de los menús desplegables donde mezclamos un bucle <code>@each</code> para el mapa Sass <code>$grid-breakpoints</code> con una media query include.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_dropdown.scss">scss/_dropdown.scss</a>
@@ -656,7 +656,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div>
-<p>Should you modify your <code>$grid-breakpoints</code>, your changes will apply to all the loops iterating over that map.</p>
+<p>Si modificas tus <code>$grid-breakpoints</code>, tus cambios se aplicarán a todos los bucles que se iteren sobre ese mapa.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -674,16 +674,16 @@
 </span></span><span class="line"><span class="cl">  <span class="na">xxl</span><span class="o">:</span> <span class="mi">1400</span><span class="kt">px</span>
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div></div>
-<p>For more information and examples on how to modify our Sass maps and variables, please refer to <a href="/docs/5.3/layout/grid/#css">the CSS section of the Grid documentation</a>.</p>
-<h2 id="creating-your-own">Creating your own <a class="anchor-link" href="#creating-your-own" aria-label="Link to this section: Creating your own"></a></h2>
-<p>We encourage you to adopt these guidelines when building with Bootstrap to create your own components. We’ve extended this approach ourselves to the custom components in our documentation and examples. Components like our callouts are built just like our provided components with base and modifier classes.</p>
+<p>Para obtener más información y ejemplos sobre cómo modificar nuestros mapas y variables de Sass, consulta <a href="/docs/5.3/layout/grid/#css">la sección CSS de la documentación de Grid</a>.</p>
+<h2 id="creating-your-own">Crear el tuyo propio <a class="anchor-link" href="#creating-your-own" aria-label="Link to this section: Creating your own"></a></h2>
+<p>Te animamos a que adoptes estas pautas cuando construyas con Bootstrap para crear tus propios componentes. Nosotros mismos hemos ampliado este enfoque a los componentes personalizados en nuestra documentación y ejemplos. Los componentes como nuestros callouts se construyen igual que los componentes proporcionados, con clases base y modificadoras.</p>
 <div class="bd-example">
   <div class="bd-callout my-0">
-    <strong>This is a callout.</strong> We built it custom for our docs so our messages to you stand out. It has three variants via modifier classes.
+    <strong>Esto es un aviso.</strong> Lo creamos personalizado para nuestros documentación para que nuestros mensajes se destaquen. Tiene tres variantes mediante clases de modificadores.
   </div>
 </div>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"callout"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>In your CSS, you’d have something like the following where the bulk of the styling is done via <code>.callout</code>. Then, the unique styles between each variant is controlled via modifier class.</p>
+</span></span></code></pre></div><p>En tu CSS, tendrías algo como lo siguiente donde la mayor parte del estilo se realiza a través de <code>.callout</code>. Luego, los estilos únicos entre cada variante se controlan mediante una clase modificadora.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Base class
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.callout</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl">
@@ -691,17 +691,17 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.callout-info</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl"><span class="nc">.callout-warning</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl"><span class="nc">.callout-danger</span> <span class="p">{}</span>
-</span></span></code></pre></div><p>For the callouts, that unique styling is just a <code>border-left-color</code>. When you combine that base class with one of those modifier classes, you get your complete component family:</p>
+</span></span></code></pre></div><p>Para las leyendas, ese estilo único es solo un <code>border-left-color</code>. Cuando combinas esa clase base con una de esas clases modificadoras, obtienes tu familia completa de componentes:</p>
 <div class="bd-callout bd-callout-info">
-<strong>This is an info callout.</strong> Example text to show it in action.
+<strong>Esta es una leyenda informativa.</strong> Texto de ejemplo para mostrarlo en acción.
 </div>
 
 <div class="bd-callout bd-callout-warning">
-<strong>This is a warning callout.</strong> Example text to show it in action.
+<strong>Esta es una leyenda de advertencia.</strong> Texto de ejemplo para mostrarlo en acción.
 </div>
 
 <div class="bd-callout bd-callout-danger">
-<strong>This is a danger callout.</strong> Example text to show it in action.
+<strong>Esta es una advertencia de peligro.</strong> Texto de ejemplo para mostrarlo en acción.
 </div>
 
 
