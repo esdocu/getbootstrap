@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="While not a part of Bootstrap’s grid system, z-indexes play an important part in how our components overlay and interact with one another.">
+<meta name="description" content="Si bien no forman parte del sistema de cuadrícula de Bootstrap, los índices z juegan un papel importante en cómo nuestros componentes se superponen e interactúan entre sí.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Z-index · Bootstrap v5.3</title>
+<title>Z-index · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/layout/z-index/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Z-index">
-<meta name="twitter:description" content="While not a part of Bootstrap’s grid system, z-indexes play an important part in how our components overlay and interact with one another.">
+<meta name="twitter:description" content="Si bien no forman parte del sistema de cuadrícula de Bootstrap, los índices z juegan un papel importante en cómo nuestros componentes se superponen e interactúan entre sí.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/layout/z-index/">
 <meta property="og:title" content="Z-index">
-<meta property="og:description" content="While not a part of Bootstrap’s grid system, z-indexes play an important part in how our components overlay and interact with one another.">
+<meta property="og:description" content="Si bien no forman parte del sistema de cuadrícula de Bootstrap, los índices z juegan un papel importante en cómo nuestros componentes se superponen e interactúan entre sí.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -530,7 +530,7 @@
           </div>
           <h1 class="bd-title mb-0" id="content">Z-index</h1>
         </div>
-        <p class="bd-lead">While not a part of Bootstrap’s grid system, z-indexes play an important part in how our components overlay and interact with one another.</p>
+        <p class="bd-lead">Si bien no forman parte del sistema de cuadrícula de Bootstrap, los índices z juegan un papel importante en cómo nuestros componentes se superponen e interactúan entre sí.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 12 días.
@@ -547,9 +547,9 @@
       <div class="bd-content ps-lg-2">
         
 
-        <p>Several Bootstrap components utilize <code>z-index</code>, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that’s been designed to properly layer navigation, tooltips and popovers, modals, and more.</p>
-<p>These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There’s no reason we couldn’t have used <code>100</code>+ or <code>500</code>+.</p>
-<p>We don’t encourage customization of these individual values; should you change one, you likely need to change them all.</p>
+        <p>Varios componentes de Bootstrap utilizan <code>z-index</code>, la propiedad CSS que ayuda a controlar el diseño al proporcionar un tercer eje para organizar el contenido. Utilizamos una escala de índice z predeterminada en Bootstrap que ha sido diseñada para superponer correctamente la navegación, tooltips y ventanas emergentes, modales y más.</p>
+<p>Estos valores más altos comienzan en un número arbitrario, lo suficientemente alto y específico como para evitar conflictos idealmente. Necesitamos un conjunto estándar de estos en todos nuestros componentes en capas (tooltips, ventanas emergentes, barras de navegación, menús desplegables, modales) para que podamos ser razonablemente consistentes en los comportamientos. No hay ninguna razón por la que no pudiéramos haber usado <code>100</code>+ o <code>500</code>+.</p>
+<p>No fomentamos la personalización de estos valores individuales; si cambias uno, es probable que debas cambiarlos todos.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -569,7 +569,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$zindex-tooltip</span><span class="o">:</span>                    <span class="mi">1080</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$zindex-toast</span><span class="o">:</span>                      <span class="mi">1090</span><span class="p">;</span>
 </span></span></code></pre></div></div>
-<p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code>z-index</code> values of <code>1</code>, <code>2</code>, and <code>3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code>z-index</code> value to show their border over the sibling elements.</p>
+<p>Para manejar los bordes superpuestos dentro de los componentes (por ejemplo, botones y entradas en grupos de entrada), utilizamos valores bajos de <code>z-index</code> de un solo dígito de <code>1</code>, <code>2</code> y <code>3</code> para los estados predeterminado, hover y active. Al producirse hover/focus/active, colocamos un elemento en particular en primer plano con un valor de <code>z-index</code> más alto para mostrar su borde sobre los elementos hermanos.</p>
 
       </div>
     </main>
