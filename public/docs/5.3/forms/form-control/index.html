@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Give textual form controls like <input>s and <textarea>s an upgrade with custom styles, sizing, focus states, and more.">
+<meta name="description" content="Actualiza los controles de formularios textuales como <input>s y <textarea>s con estilos, tamaños, estados de enfoque personalizados y más.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Form controls · Bootstrap v5.3</title>
+<title>Controles de formulario · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/forms/form-control/">
 
@@ -34,13 +34,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Form controls">
-<meta name="twitter:description" content="Give textual form controls like <input>s and <textarea>s an upgrade with custom styles, sizing, focus states, and more.">
+<meta name="twitter:title" content="Controles de formulario">
+<meta name="twitter:description" content="Actualiza los controles de formularios textuales como <input>s y <textarea>s con estilos, tamaños, estados de enfoque personalizados y más.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/forms/form-control/">
-<meta property="og:title" content="Form controls">
-<meta property="og:description" content="Give textual form controls like <input>s and <textarea>s an upgrade with custom styles, sizing, focus states, and more.">
+<meta property="og:title" content="Controles de formulario">
+<meta property="og:description" content="Actualiza los controles de formularios textuales como <input>s y <textarea>s con estilos, tamaños, estados de enfoque personalizados y más.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -528,12 +528,12 @@
               Ver en GitHub
             </a>
           </div>
-          <h1 class="bd-title mb-0" id="content">Form controls</h1>
+          <h1 class="bd-title mb-0" id="content">Controles de formulario</h1>
         </div>
-        <p class="bd-lead">Give textual form controls like <code>&lt;input&gt;</code>s and <code>&lt;textarea&gt;</code>s an upgrade with custom styles, sizing, focus states, and more.</p>
+        <p class="bd-lead">Otorga a controles de texto como <code>&lt;input&gt;</code>s y <code>&lt;textarea&gt;</code>s una actualización con estilos, tamaños, estados de enfoque personalizados y más.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
-  👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 12 días.
+  👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 11 días.
 </div>
 <a href="https://bit.ly/paypal-esdocu" target="_blank">
     <img src="/esdocu/img/esdocu-patreon-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
@@ -555,13 +555,13 @@
   <ul>
     <li><a href="#example">Ejemplo</a></li>
     <li><a href="#sizing">Tamaños</a></li>
-    <li><a href="#form-text">Form text</a></li>
-    <li><a href="#disabled">Disabled</a></li>
-    <li><a href="#readonly">Readonly</a></li>
-    <li><a href="#readonly-plain-text">Readonly plain text</a></li>
-    <li><a href="#file-input">File input</a></li>
+    <li><a href="#form-text">Texto del formulario</a></li>
+    <li><a href="#disabled">Deshabilitado</a></li>
+    <li><a href="#readonly">Solo lectura</a></li>
+    <li><a href="#readonly-plain-text">Texto plano de solo lectura</a></li>
+    <li><a href="#file-input">Entrada de archivo</a></li>
     <li><a href="#color">Color</a></li>
-    <li><a href="#datalists">Datalists</a></li>
+    <li><a href="#datalists">Listas de datos</a></li>
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#sass-variables">Variables Sass</a></li>
@@ -577,7 +577,7 @@
         
 
         <h2 id="example">Ejemplo <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h2>
-<p>Form controls are styled with a mix of Sass and CSS variables, allowing them to adapt to color modes and support any customization method.</p>
+<p>Los controles de formulario están diseñados con una combinación de variables Sass y CSS, lo que les permite adaptarse a los modos de color y admitir cualquier método de personalización.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Dirección de correo electrónico</label>
@@ -607,11 +607,11 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="sizing">Tamaños <a class="anchor-link" href="#sizing" aria-label="Link to this section: Sizing"></a></h2>
-<p>Set heights using classes like <code>.form-control-lg</code> and <code>.form-control-sm</code>.</p>
+<p>Establece alturas usando clases como <code>.form-control-lg</code> y <code>.form-control-sm</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-<input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
-<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
+<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg ejemplo">
+<input class="form-control" type="text" placeholder="Entrada predeterminada" aria-label="ejemplo de entrada predeterminada">
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label="ejemplo .form-control-sm">
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -626,18 +626,18 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-control"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Default input"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"default input example"</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-control form-control-sm"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">".form-control-sm"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">".form-control-sm example"</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="form-text">Form text <a class="anchor-link" href="#form-text" aria-label="Link to this section: Form text"></a></h2>
-<p>Block-level or inline-level form text can be created using <code>.form-text</code>.</p>
+<h2 id="form-text">Texto del formulario <a class="anchor-link" href="#form-text" aria-label="Link to this section: Form text"></a></h2>
+<p>Se puede crear texto de formulario a nivel de bloque o a nivel de línea usando <code>.form-text</code>.</p>
 <div class="bd-callout bd-callout-warning">
-Form text should be explicitly associated with the form control it relates to using the <code>aria-describedby</code> attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
+El texto del formulario debe asociarse explícitamente con el control de formulario con el que se relaciona utilizando el atributo <code>aria-describedby</code>. Esto garantizará que las tecnologías de asistencia, como los lectores de pantalla, anuncien el texto de este formulario cuando el usuario se concentre o entre en control.
 </div>
 
-<p>Form text below inputs can be styled with <code>.form-text</code>. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.</p>
+<p>El texto del formulario debajo de las entradas se puede diseñar con <code>.form-text</code>. Si se utilizará un elemento a nivel de bloque, se agrega un margen superior para facilitar el espaciado de las entradas anteriores.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <label for="inputPassword5" class="form-label">Contraseña</label>
 <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
 <div id="passwordHelpBlock" class="form-text">
-  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+  Tu contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener espacios, caracteres especiales ni emoji.
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -655,7 +655,7 @@ Form text should be explicitly associated with the form control it relates to us
 </span></span><span class="line"><span class="cl">  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Inline text can use any typical inline HTML element (be it a <code>&lt;span&gt;</code>, <code>&lt;small&gt;</code>, or something else) with nothing more than the <code>.form-text</code> class.</p>
+<p>El texto en línea puede usar cualquier elemento HTML en línea típico (ya sea <code>&lt;span&gt;</code>, <code>&lt;small&gt;</code>, o algo más) con nada más que la clase <code>.form-text</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="row g-3 align-items-center">
   <div class="col-auto">
@@ -666,7 +666,7 @@ Form text should be explicitly associated with the form control it relates to us
   </div>
   <div class="col-auto">
     <span id="passwordHelpInline" class="form-text">
-      Must be 8-20 characters long.
+      Debe tener entre 8 y 20 caracteres.
     </span>
   </div>
 </div>
@@ -694,11 +694,11 @@ Form text should be explicitly associated with the form control it relates to us
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="disabled">Disabled <a class="anchor-link" href="#disabled" aria-label="Link to this section: Disabled"></a></h2>
-<p>Add the <code>disabled</code> boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.</p>
+<h2 id="disabled">Deshabilitado <a class="anchor-link" href="#disabled" aria-label="Link to this section: Disabled"></a></h2>
+<p>Agrega el atributo booleano <code>disabled</code> en una entrada para darle una apariencia atenuada, eliminar eventos de puntero y evitar el enfoque.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<input class="form-control" type="text" placeholder="Entrada deshabilitada" aria-label="Disabled input example" disabled="">
-<input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled="" readonly="">
+<input class="form-control" type="text" placeholder="Entrada deshabilitada" aria-label="Ejemplo de entrada deshabilitada" disabled="">
+<input class="form-control" type="text" value="Disabled readonly input" aria-label="Ejemplo de entrada deshabilitada" disabled="" readonly="">
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -712,10 +712,10 @@ Form text should be explicitly associated with the form control it relates to us
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-control"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"Disabled input"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Disabled input example"</span> <span class="na">disabled</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-control"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Disabled readonly input"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Disabled input example"</span> <span class="na">disabled</span> <span class="na">readonly</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="readonly">Readonly <a class="anchor-link" href="#readonly" aria-label="Link to this section: Readonly"></a></h2>
-<p>Add the <code>readonly</code> boolean attribute on an input to prevent modification of the input’s value. <code>readonly</code> inputs can still be focused and selected, while <code>disabled</code> inputs cannot.</p>
+<h2 id="readonly">Solo lectura <a class="anchor-link" href="#readonly" aria-label="Link to this section: Readonly"></a></h2>
+<p>Agrega el atributo booleano <code>readonly</code> en una entrada para evitar la modificación del valor de la entrada. Las entradas <code>readonly</code> aún se pueden enfocar y seleccionar, mientras que las entradas <code>disabled</code> no.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly="">
+<input class="form-control" type="text" value="Readonly input here..." aria-label="ejemplo de entrada de solo lectura" readonly="">
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -728,8 +728,8 @@ Form text should be explicitly associated with the form control it relates to us
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-control"</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Readonly input here..."</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"readonly input example"</span> <span class="na">readonly</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="readonly-plain-text">Readonly plain text <a class="anchor-link" href="#readonly-plain-text" aria-label="Link to this section: Readonly plain text"></a></h2>
-<p>If you want to have <code>&lt;input readonly&gt;</code> elements in your form styled as plain text, replace <code>.form-control</code> with <code>.form-control-plaintext</code> to remove the default form field styling and preserve the correct <code>margin</code> and <code>padding</code>.</p>
+<h2 id="readonly-plain-text">Texto plano de solo lectura <a class="anchor-link" href="#readonly-plain-text" aria-label="Link to this section: Readonly plain text"></a></h2>
+<p>Si quieres que los elementos <code>&lt;input readonly&gt;</code> en tu formulario tengan el estilo de texto sin formato, reemplaza <code>.form-control</code> con <code>.form-control-plaintext</code> para eliminar el estilo predeterminado del campo del formulario y preservar el <code>margin</code> y el <code>padding</code> correctos.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
   <div class="mb-3 row">
     <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
@@ -777,7 +777,7 @@ Form text should be explicitly associated with the form control it relates to us
     <input type="password" class="form-control" id="inputPassword2" placeholder="Contraseña">
   </div>
   <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+    <button type="submit" class="btn btn-primary mb-3">Confirmar identidad</button>
   </div>
 </form>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -804,26 +804,26 @@ Form text should be explicitly associated with the form control it relates to us
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="file-input">File input <a class="anchor-link" href="#file-input" aria-label="Link to this section: File input"></a></h2>
+<h2 id="file-input">Entrada de archivo <a class="anchor-link" href="#file-input" aria-label="Link to this section: File input"></a></h2>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="mb-3">
-  <label for="formFile" class="form-label">Default file input example</label>
+  <label for="formFile" class="form-label">Ejemplo de entrada de archivo predeterminado</label>
   <input class="form-control" type="file" id="formFile">
 </div>
 <div class="mb-3">
-  <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+  <label for="formFileMultiple" class="form-label">Ejemplo de entrada de varios archivos</label>
   <input class="form-control" type="file" id="formFileMultiple" multiple="">
 </div>
 <div class="mb-3">
-  <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+  <label for="formFileDisabled" class="form-label">Ejemplo de entrada de archivo deshabilitado</label>
   <input class="form-control" type="file" id="formFileDisabled" disabled="">
 </div>
 <div class="mb-3">
-  <label for="formFileSm" class="form-label">Small file input example</label>
+  <label for="formFileSm" class="form-label">Ejemplo de entrada de archivo pequeño</label>
   <input class="form-control form-control-sm" id="formFileSm" type="file">
 </div>
 <div>
-  <label for="formFileLg" class="form-label">Large file input example</label>
+  <label for="formFileLg" class="form-label">Ejemplo de entrada de archivo grande</label>
   <input class="form-control form-control-lg" id="formFileLg" type="file">
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -858,9 +858,9 @@ Form text should be explicitly associated with the form control it relates to us
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="color">Color <a class="anchor-link" href="#color" aria-label="Link to this section: Color"></a></h2>
-<p>Set the <code>type="color"</code> and add <code>.form-control-color</code> to the <code>&lt;input&gt;</code>. We use the modifier class to set fixed <code>height</code>s and override some inconsistencies between browsers.</p>
+<p>Establece el <code>type="color"</code> y agrega <code>.form-control-color</code> al <code>&lt;input&gt;</code>. Usamos la clase modificadora para establecer <code>height</code> fijo y sobrescribir algunas inconsistencias entre navegadores.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<label for="exampleColorInput" class="form-label">Color picker</label>
+<label for="exampleColorInput" class="form-label">Selector de color</label>
 <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -875,11 +875,11 @@ Form text should be explicitly associated with the form control it relates to us
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"exampleColorInput"</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-label"</span><span class="p">&gt;</span>Color picker<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"color"</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-control form-control-color"</span> <span class="na">id</span><span class="o">=</span><span class="s">"exampleColorInput"</span> <span class="na">value</span><span class="o">=</span><span class="s">"#563d7c"</span> <span class="na">title</span><span class="o">=</span><span class="s">"Choose your color"</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="datalists">Datalists <a class="anchor-link" href="#datalists" aria-label="Link to this section: Datalists"></a></h2>
-<p>Datalists allow you to create a group of <code>&lt;option&gt;</code>s that can be accessed (and autocompleted) from within an <code>&lt;input&gt;</code>. These are similar to <code>&lt;select&gt;</code> elements, but come with more menu styling limitations and differences. While most browsers and operating systems include some support for <code>&lt;datalist&gt;</code> elements, their styling is inconsistent at best.</p>
-<p>Learn more about <a href="https://caniuse.com/datalist">support for datalist elements</a>.</p>
+<h2 id="datalists">Listas de datos <a class="anchor-link" href="#datalists" aria-label="Link to this section: Datalists"></a></h2>
+<p>Las listas de datos te permiten crear un grupo de <code>&lt;option&gt;</code> a los que se puede acceder (y autocompletar) desde un <code>&lt;input&gt;</code>. Estos son similares a los elementos <code>&lt;select&gt;</code>, pero vienen con más limitaciones y diferencias en el estilo del menú. Si bien la mayoría de los navegadores y sistemas operativos incluyen cierto soporte para elementos <code>&lt;datalist&gt;</code>, su estilo es, en el mejor de los casos, inconsistente.</p>
+<p>Obtén más información sobre <a href="https://caniuse.com/datalist">soporte para elementos de lista de datos</a>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<label for="exampleDataList" class="form-label">Datalist example</label>
+<label for="exampleDataList" class="form-label">Ejemplo de lista de datos</label>
 <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
 <datalist id="datalistOptions">
   <option value="San Francisco">
@@ -910,7 +910,7 @@ Form text should be explicitly associated with the form control it relates to us
 
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-variables">Variables Sass <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
-<p><code>$input-*</code> are shared across most of our form controls (and not buttons).</p>
+<p><code>$input-*</code> se comparten en la mayoría de nuestros controles de formulario (y no en los botones).</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -971,7 +971,7 @@ Form text should be explicitly associated with the form control it relates to us
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$form-color-width</span><span class="o">:</span>                      <span class="mi">3</span><span class="kt">rem</span><span class="p">;</span>
 </span></span></code></pre></div></div>
-<p><code>$form-label-*</code> and <code>$form-text-*</code> are for our <code>&lt;label&gt;</code>s and <code>.form-text</code> component.</p>
+<p><code>$form-label-*</code> y <code>$form-text-*</code> son para nuestro <code>&lt;label&gt;</code>s y componente <code>.form-text</code>.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -1000,7 +1000,7 @@ Form text should be explicitly associated with the form control it relates to us
 </span></span><span class="line"><span class="cl"><span class="nv">$form-text-font-weight</span><span class="o">:</span>                 <span class="n">null</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$form-text-color</span><span class="o">:</span>                       <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">secondary-color</span><span class="p">);</span>
 </span></span></code></pre></div></div>
-<p><code>$form-file-*</code> are for file input.</p>
+<p><code>$form-file-*</code> son para entrada de archivos.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
