@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A slideshow component for cycling through elements—images or slides of text—like a carousel.">
+<meta name="description" content="Un componente de presentación de diapositivas para recorrer elementos (imágenes o diapositivas de texto) como un carrusel.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Carousel · Bootstrap v5.3</title>
+<title>Carrusel · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/components/carousel/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Carrusel">
-<meta name="twitter:description" content="A slideshow component for cycling through elements—images or slides of text—like a carousel.">
+<meta name="twitter:description" content="Un componente de presentación de diapositivas para recorrer elementos (imágenes o diapositivas de texto) como un carrusel.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/components/carousel/">
 <meta property="og:title" content="Carrusel">
-<meta property="og:description" content="A slideshow component for cycling through elements—images or slides of text—like a carousel.">
+<meta property="og:description" content="Un componente de presentación de diapositivas para recorrer elementos (imágenes o diapositivas de texto) como un carrusel.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -530,10 +530,10 @@
           </div>
           <h1 class="bd-title mb-0" id="content">Carrusel</h1>
         </div>
-        <p class="bd-lead">A slideshow component for cycling through elements—images or slides of text—like a carousel.</p>
+        <p class="bd-lead">Un componente de presentación de diapositivas para recorrer elementos (imágenes o diapositivas de texto) como un carrusel.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
-  👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 11 días.
+  👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 10 días.
 </div>
 <a href="https://bit.ly/paypal-esdocu" target="_blank">
     <img src="/esdocu/img/esdocu-patreon-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
@@ -554,22 +554,22 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#how-it-works">Cómo funciona.</a></li>
-    <li><a href="#basic-examples">Basic examples</a>
+    <li><a href="#basic-examples">Ejemplos básicos</a>
       <ul>
-        <li><a href="#indicators">Indicators</a></li>
+        <li><a href="#indicators">Indicadores</a></li>
         <li><a href="#captions">Subtítulos</a></li>
         <li><a href="#crossfade">Crossfade</a></li>
       </ul>
     </li>
-    <li><a href="#autoplaying-carousels">Autoplaying carousels</a>
+    <li><a href="#autoplaying-carousels">Carruseles de reproducción automática</a>
       <ul>
-        <li><a href="#individual-carousel-item-interval">Individual <code>.carousel-item</code> interval</a></li>
-        <li><a href="#autoplaying-carousels-without-controls">Autoplaying carousels without controls</a></li>
+        <li><a href="#individual-carousel-item-interval">Intervalo <code>.carousel-item</code> individual</a></li>
+        <li><a href="#autoplaying-carousels-without-controls">Carruseles de reproducción automática sin controles</a></li>
       </ul>
     </li>
-    <li><a href="#disable-touch-swiping">Disable touch swiping</a></li>
-    <li><a href="#dark-variant">Dark variant</a></li>
-    <li><a href="#custom-transition">Custom transition</a></li>
+    <li><a href="#disable-touch-swiping">Desactivar el deslizamiento táctil</a></li>
+    <li><a href="#dark-variant">Variante oscura</a></li>
+    <li><a href="#custom-transition">Transición personalizada</a></li>
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#sass-variables">Variables Sass</a></li>
@@ -577,8 +577,8 @@
     </li>
     <li><a href="#usage">Uso</a>
       <ul>
-        <li><a href="#via-data-attributes">Via data attributes</a></li>
-        <li><a href="#via-javascript">Via JavaScript</a></li>
+        <li><a href="#via-data-attributes">Vía atributos de datos</a></li>
+        <li><a href="#via-javascript">Vía JavaScript</a></li>
         <li><a href="#options">Opciones</a></li>
         <li><a href="#methods">Métodos</a></li>
         <li><a href="#events">Eventos</a></li>
@@ -596,42 +596,42 @@
         <h2 id="how-it-works">Cómo funciona. <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
 <ul>
 <li>
-<p>The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.</p>
+<p>El carrusel es una presentación de diapositivas para recorrer una serie de contenido, creada con transformaciones CSS 3D y un poco de JavaScript. Funciona con una serie de imágenes, texto o marcas personalizadas. También incluye soporte para controles e indicadores anteriores/siguientes.</p>
 </li>
 <li>
-<p>For performance reasons, <strong>carousels must be manually initialized</strong> using the <a href="#methods">carousel constructor method</a>. Without initialization, some of the event listeners (specifically, the events needed touch/swipe support) will not be registered until a user has explicitly activated a control or indicator.</p>
-<p>The only exception are <a href="#autoplaying-carousels">autoplaying carousels</a> with the <code>data-bs-ride="carousel"</code> attribute as these are initialized automatically on page load. If you’re using autoplaying carousels with the data attribute, <strong>don’t explicitly initialize the same carousels with the constructor method.</strong></p>
+<p>Por razones de rendimiento, los <strong>carruseles deben inicializarse manualmente</strong> usando el <a href="#methods">método constructor de carrusel</a>. Sin inicialización, algunos de los detectores de eventos (específicamente, los eventos que necesitan soporte táctil/deslizante) no se registrarán hasta que un usuario haya activado explícitamente un control o indicador.</p>
+<p>La única excepción son los <a href="#autoplaying-carousels">carruseles de reproducción automática</a> con el atributo <code>data-bs-ride="carousel"</code> ya que se inicializan automáticamente al cargar la página. Si utilizas carruseles de reproducción automática con el atributo de datos, <strong>no inicialices explícitamente los mismos carruseles con el método constructor.</strong></p>
 </li>
 <li>
-<p>Nested carousels are not supported. You should also be aware that carousels in general can often cause usability and accessibility challenges.</p>
+<p>Los carruseles anidados no son compatibles. También debes tener en cuenta que los carruseles en general a menudo pueden causar problemas de usabilidad y accesibilidad.</p>
 </li>
 </ul>
 <div class="bd-callout bd-callout-info">
-The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.3/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
+El efecto de animación de este componente depende de la media query <code>prefers-reduced-motion</code>. Consulta la <a href="/docs/5.3/getting-started/accessibility/#reduced-motion">sección de movimiento reducido de nuestra documentación de accesibilidad</a>.
 </div>
 
-<h2 id="basic-examples">Basic examples <a class="anchor-link" href="#basic-examples" aria-label="Link to this section: Basic examples"></a></h2>
-<p>Here is a basic example of a carousel with three slides. Note the previous/next controls. We recommend using <code>&lt;button&gt;</code> elements, but you can also use <code>&lt;a&gt;</code> elements with <code>role="button"</code>.</p>
+<h2 id="basic-examples">Ejemplos básicos <a class="anchor-link" href="#basic-examples" aria-label="Link to this section: Basic examples"></a></h2>
+<p>Aquí tienes un ejemplo básico de un carrusel con tres diapositivas. Ten en cuenta los controles anteriores/siguientes. Recomendamos usar elementos <code>&lt;button&gt;</code>, pero también puedes usar elementos <code>&lt;a&gt;</code> con <code>role="button"</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -666,35 +666,35 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Carousels don’t automatically normalize slide dimensions. As such, you may need to use additional utilities or custom styles to appropriately size content. While carousels support previous/next controls and indicators, they’re not explicitly required. Add and customize as you see fit.</p>
-<p><strong>You must add the <code>.active</code> class to one of the slides</strong>, otherwise the carousel will not be visible. Also be sure to set a unique <code>id</code> on the <code>.carousel</code> for optional controls, especially if you’re using multiple carousels on a single page. Control and indicator elements must have a <code>data-bs-target</code> attribute (or <code>href</code> for links) that matches the <code>id</code> of the <code>.carousel</code> element.</p>
-<h3 id="indicators">Indicators <a class="anchor-link" href="#indicators" aria-label="Link to this section: Indicators"></a></h3>
-<p>You can add indicators to the carousel, alongside the previous/next controls. The indicators let users jump directly to a particular slide.</p>
+<p>Los carruseles no normalizan automáticamente las dimensiones de las diapositivas. Como tal, es posible que necesites utilizar utilidades adicionales o estilos personalizados para dimensionar adecuadamente el contenido. Si bien los carruseles admiten controles e indicadores anteriores y siguientes, no son necesarios explícitamente. Agrega y personaliza como mejor te parezca.</p>
+<p><strong>Debes agregar la clase <code>.active</code> a una de las diapositivas</strong>, de lo contrario el carrusel no será visible. También asegúrate de establecer un <code>id</code> único en <code>.carousel</code> para controles opcionales, especialmente si estás utilizando varios carruseles en una sola página. Los elementos de control e indicador deben tener un atributo <code>data-bs-target</code> (o <code>href</code> para enlaces) que coincida con el <code>id</code> del <code>.carousel</code>.</p>
+<h3 id="indicators">Indicadores <a class="anchor-link" href="#indicators" aria-label="Link to this section: Indicators"></a></h3>
+<p>Puedes agregar indicadores al carrusel, junto con los controles anterior/siguiente. Los indicadores permiten a los usuarios saltar directamente a una diapositiva en particular.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -735,44 +735,44 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h3 id="captions">Subtítulos <a class="anchor-link" href="#captions" aria-label="Link to this section: Captions"></a></h3>
-<p>You can add captions to your slides with the <code>.carousel-caption</code> element within any <code>.carousel-item</code>. They can be easily hidden on smaller viewports, as shown below, with optional <a href="/docs/5.3/utilities/display/">display utilities</a>. We hide them initially with <code>.d-none</code> and bring them back on medium-sized devices with <code>.d-md-block</code>.</p>
+<p>Puedes agregar títulos a tus diapositivas con el elemento <code>.carousel-caption</code> dentro de cualquier <code>.carousel-item</code>. Se pueden ocultar fácilmente en viewports más pequeñas, como se muestra a continuación, con <a href="/docs/5.3/utilities/display/">utilidades de visualización</a> opcionales. Los ocultamos inicialmente con <code>.d-none</code> y los recuperamos en dispositivos de tamaño mediano con <code>.d-md-block</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>Primera etiqueta de diapositiva</h5>
+        <p>Algún contenido de marcador de posición representativo para la primera diapositiva.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>Etiqueta de la segunda diapositiva</h5>
+        <p>Algún contenido de marcador de posición representativo para la segunda diapositiva.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>Etiqueta de la tercera diapositiva</h5>
+        <p>Algún contenido de marcador de posición representativo para la tercera diapositiva.</p>
       </div>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -825,27 +825,27 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h3 id="crossfade">Crossfade <a class="anchor-link" href="#crossfade" aria-label="Link to this section: Crossfade"></a></h3>
-<p>Add <code>.carousel-fade</code> to your carousel to animate slides with a fade transition instead of a slide. Depending on your carousel content (e.g., text only slides), you may want to add <code>.bg-body</code> or some custom CSS to the <code>.carousel-item</code>s for proper crossfading.</p>
+<p>Agrega <code>.carousel-fade</code> a tu carrusel para animar diapositivas con una transición de desvanecimiento en lugar de un desplazamiento. Dependiendo del contenido de su carrusel (por ejemplo, diapositivas de solo texto), es posible que desees agregar <code>.bg-body</code> o algún CSS personalizado a los <code>.carousel-item</code> para lograr un fundido cruzado adecuado.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div id="carouselExampleFade" class="carousel slide carousel-fade">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -880,11 +880,11 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="autoplaying-carousels">Autoplaying carousels <a class="anchor-link" href="#autoplaying-carousels" aria-label="Link to this section: Autoplaying carousels"></a></h2>
-<p>You can make your carousels autoplay on page load by setting the <code>ride</code> option to <code>carousel</code>. Autoplaying carousels automatically pause while hovered with the mouse. This behavior can be controlled with the <code>pause</code> option. In browsers that support the <a href="https://www.w3.org/TR/page-visibility/">Page Visibility API</a>, the carousel will stop cycling when the webpage is not visible to the user (such as when the browser tab is inactive, or when the browser window is minimized).</p>
+<h2 id="autoplaying-carousels">Carruseles de reproducción automática <a class="anchor-link" href="#autoplaying-carousels" aria-label="Link to this section: Autoplaying carousels"></a></h2>
+<p>Puedes hacer que tus carruseles se reproduzcan automáticamente al cargar la página configurando la opción <code>ride</code> en <code>carousel</code>. Los carruseles de reproducción automática se detienen automáticamente mientras se pasa el mouse. Este comportamiento se puede controlar con la opción <code>pause</code>. En los navegadores que admiten la <a href="https://www.w3.org/TR/page-visibility/">API de visibilidad de página</a>, el carrusel dejará de funcionar cuando la página web no sea visible para el usuario (como cuando la pestaña del navegador está inactiva o cuando la ventana del navegador está minimizada).</p>
 <div class="bd-callout bd-callout-info">
-<p>For accessibility reasons, we recommend avoiding the use of autoplaying carousels. If your page does include an autoplaying carousel, we recommend providing an additional button or control to explicitly pause/stop the carousel.</p>
-<p>See <a href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">WCAG 2.1 Success Criterion 2.2.2 Pause, Stop, Hide</a>.</p>
+<p>Por razones de accesibilidad, recomendamos evitar el uso de carruseles de reproducción automática. Si tu página incluye un carrusel de reproducción automática, te recomendamos proporcionar un botón o control adicional para pausar/detener explícitamente el carrusel.</p>
+<p>Ver <a href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">WCAG 2.1 Criterio de éxito 2.2.2 Pausa, Detener , Ocultar</a>.</p>
 
 </div>
 
@@ -892,22 +892,22 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -942,27 +942,27 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>When the <code>ride</code> option is set to <code>true</code>, rather than <code>carousel</code>, the carousel won’t automatically start to cycle on page load. Instead, it will only start after the first user interaction.</p>
+<p>Cuando la opción <code>ride</code> está configurada en <code>true</code>, en lugar de <code>carousel</code>, el carrusel no comenzará a circular automáticamente al cargar la página. En cambio, solo comenzará después de la primera interacción del usuario.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -997,28 +997,28 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="individual-carousel-item-interval">Individual <code>.carousel-item</code> interval <a class="anchor-link" href="#individual-carousel-item-interval" aria-label="Link to this section: Individual .carousel-item interval"></a></h3>
-<p>Add <code>data-bs-interval=""</code> to a <code>.carousel-item</code> to change the amount of time to delay between automatically cycling to the next item.</p>
+<h3 id="individual-carousel-item-interval">Intervalo <code>.carousel-item</code> individual<a class="anchor-link" href="#individual-carousel-item-interval" aria-label="Link to this section: Individual .carousel-item interval"></a></h3>
+<p>Agrega <code>data-bs-interval=""</code> a un <code>.carousel-item</code> para cambiar la cantidad de tiempo de retraso entre cada paso automático al siguiente elemento.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -1053,19 +1053,19 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="autoplaying-carousels-without-controls">Autoplaying carousels without controls <a class="anchor-link" href="#autoplaying-carousels-without-controls" aria-label="Link to this section: Autoplaying carousels without controls"></a></h3>
-<p>Here’s a carousel with slides only. Note the presence of the <code>.d-block</code> and <code>.w-100</code> on carousel images to prevent browser default image alignment.</p>
+<h3 id="autoplaying-carousels-without-controls">Carruseles de reproducción automática sin controles <a class="anchor-link" href="#autoplaying-carousels-without-controls" aria-label="Link to this section: Autoplaying carousels without controls"></a></h3>
+<p>Aquí tienes un carrusel solo con diapositivas. Ten en cuenta la presencia de <code>.d-block</code> y <code>.w-100</code> en las imágenes del carrusel para evitar la alineación de imágenes predeterminada del navegador.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
     </div>
   </div>
 </div>
@@ -1093,28 +1093,28 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="disable-touch-swiping">Disable touch swiping <a class="anchor-link" href="#disable-touch-swiping" aria-label="Link to this section: Disable touch swiping"></a></h2>
-<p>Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled by setting the <code>touch</code> option to <code>false</code>.</p>
+<h2 id="disable-touch-swiping">Desactivar el deslizamiento táctil <a class="anchor-link" href="#disable-touch-swiping" aria-label="Link to this section: Disable touch swiping"></a></h2>
+<p>Los carruseles admiten deslizar el dedo hacia la izquierda o hacia la derecha en dispositivos con pantalla táctil para pasar de una diapositiva a otra. Esto se puede desactivar configurando la opción <code>touch</code> en <code>false</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -1149,53 +1149,53 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="dark-variant">Dark variant <a class="anchor-link" href="#dark-variant" aria-label="Link to this section: Dark variant"></a></h2>
+<h2 id="dark-variant">Variante oscura <a class="anchor-link" href="#dark-variant" aria-label="Link to this section: Dark variant"></a></h2>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2">Obsoleto en v5.3.0</small>
 
-<p>Add <code>.carousel-dark</code> to the <code>.carousel</code> for darker controls, indicators, and captions. Controls are inverted compared to their default white fill with the <code>filter</code> CSS property. Captions and controls have additional Sass variables that customize the <code>color</code> and <code>background-color</code>.</p>
+<p>Agrega <code>.carousel-dark</code> al <code>.carousel</code> para obtener controles, indicadores y subtítulos más oscuros. Los controles se invierten en comparación con su relleno blanco predeterminado con la propiedad CSS <code>filter</code>. Los títulos y controles tienen variables Sass adicionales que personalizan el <code>color</code> y el <code>background-color</code>.</p>
 <div class="bd-callout bd-callout-warning">
   <p>
-    <strong>Heads up!</strong> Dark variants for components were deprecated in v5.3.0 with the introduction of color modes. Instead of adding <code>.carousel-dark</code>, set <code>data-bs-theme="dark"</code> on the root element, a parent wrapper, or the component itself.
+    <strong>¡Atención!</strong> Las variantes oscuras para componentes quedaron obsoletas en la versión 5.3.0 con la introducción de modos de color. En lugar de agregar <code>.carousel-dark</code>, establece <code>data-bs-theme="dark"</code> en el elemento raíz, un contenedor principal o el componente mismo.
   </p>
 </div>
 
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div id="carouselExampleDark" class="carousel carousel-dark slide">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: First slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#f5f5f5"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">First slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#f5f5f5"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">Primera diapositiva</text></svg>
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>Primera etiqueta de diapositiva</h5>
+        <p>Algún contenido de marcador de posición representativo para la primera diapositiva.</p>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Second slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#bbb" dy=".3em">Second slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#bbb" dy=".3em">Segunda diapositiva</text></svg>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>Etiqueta de la segunda diapositiva</h5>
+        <p>Algún contenido de marcador de posición representativo para la segunda diapositiva.</p>
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Placeholder: Third slide" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#e5e5e5"></rect><text x="50%" y="50%" fill="#999" dy=".3em">Third slide</text></svg>
+      <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#e5e5e5"></rect><text x="50%" y="50%" fill="#999" dy=".3em">Tercera diapositiva</text></svg>
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5>Etiqueta de la tercera diapositiva</h5>
+        <p>Algún contenido de marcador de posición representativo para la tercera diapositiva.</p>
       </div>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Anterior</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -1247,11 +1247,11 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="custom-transition">Custom transition <a class="anchor-link" href="#custom-transition" aria-label="Link to this section: Custom transition"></a></h2>
-<p>The transition duration of <code>.carousel-item</code> can be changed with the <code>$carousel-transition-duration</code> Sass variable before compiling or custom styles if you’re using the compiled CSS. If multiple transitions are applied, make sure the transform transition is defined first (e.g. <code>transition: transform 2s ease, opacity .5s ease-out</code>).</p>
+<h2 id="custom-transition">Transición personalizada <a class="anchor-link" href="#custom-transition" aria-label="Link to this section: Custom transition"></a></h2>
+<p>La duración de la transición de <code>.carousel-item</code> se puede cambiar con la variable Sass <code>$carousel-transition-duration</code> antes de compilar o estilos personalizados si estás utilizando el CSS compilado. Si se aplican varias transiciones, asegúrate de que la transición de transformación esté definida primero (por ejemplo, <code>transition: transform 2s ease, opacity .5s ease-out</code>).</p>
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-variables">Variables Sass <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
-<p>Variables for all carousels:</p>
+<p>Variables para todos los carruseles:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -1288,7 +1288,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl"><span class="nv">$carousel-transition-duration</span><span class="o">:</span>       <span class="mf">.6</span><span class="kt">s</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$carousel-transition</span><span class="o">:</span>                <span class="ni">transform</span> <span class="nv">$carousel-transition-duration</span> <span class="ni">ease-in-out</span><span class="p">;</span> <span class="c1">// Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
 </span></span></span></code></pre></div></div>
-<p>Variables for the <a href="#dark-variant">dark carousel</a>:</p>
+<p>Variables para el <a href="#dark-variant">carrusel oscuro</a>:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -1302,10 +1302,10 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span></span><span class="line"><span class="cl"><span class="nv">$carousel-dark-control-icon-filter</span><span class="o">:</span>  <span class="nf">invert</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="nf">grayscale</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 </span></span></code></pre></div></div>
 <h2 id="usage">Uso <a class="anchor-link" href="#usage" aria-label="Link to this section: Usage"></a></h2>
-<h3 id="via-data-attributes">Via data attributes <a class="anchor-link" href="#via-data-attributes" aria-label="Link to this section: Via data attributes"></a></h3>
-<p>Use data attributes to easily control the position of the carousel. <code>data-bs-slide</code> accepts the keywords <code>prev</code> or <code>next</code>, which alters the slide position relative to its current position. Alternatively, use <code>data-bs-slide-to</code> to pass a raw slide index to the carousel <code>data-bs-slide-to="2"</code>, which shifts the slide position to a particular index beginning with <code>0</code>.</p>
-<h3 id="via-javascript">Via JavaScript <a class="anchor-link" href="#via-javascript" aria-label="Link to this section: Via JavaScript"></a></h3>
-<p>Call carousel manually with:</p>
+<h3 id="via-data-attributes">Vía atributos de datos <a class="anchor-link" href="#via-data-attributes" aria-label="Link to this section: Via data attributes"></a></h3>
+<p>Utiliza atributos de datos para controlar fácilmente la posición del carrusel. <code>data-bs-slide</code> acepta las palabras clave <code>prev</code> o <code>next</code>, que alteran la posición de la diapositiva en relación con su posición actual. Alternativamente, usa <code>data-bs-slide-to</code> para pasar un índice de diapositiva sin formato al carrusel <code>data-bs-slide-to="2"</code>, que cambia la posición de la diapositiva a un índice particular que comienza con <code>0</code>.</p>
+<h3 id="via-javascript">Vía JavaScript <a class="anchor-link" href="#via-javascript" aria-label="Link to this section: Via JavaScript"></a></h3>
+<p>Llama al carrusel manualmente con:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">carousel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Carousel</span><span class="p">(</span><span class="s1">'#myCarousel'</span><span class="p">)</span>
 </span></span></code></pre></div><h3 id="options">Opciones <a class="anchor-link" href="#options" aria-label="Link to this section: Options"></a></h3>
 <p>Como las opciones se pueden pasar a través de atributos de datos o JavaScript, puedes agregar un nombre de opción a <code>data-bs-</code>, como en <code>data-bs-animation="{value}"</code>. Asegúrate de cambiar el tipo de caso del nombre de la opción de “<em>camelCase</em>” a “<em>kebab-case</em>” al pasar las opciones a través de atributos de datos. Por ejemplo, utiliza <code>data-bs-custom-class="beautifier"</code> en lugar de <code>data-bs-customClass="beautifier"</code>.</p>
@@ -1316,7 +1316,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <thead>
 <tr>
 <th>Nombre</th>
-<th>Type</th>
+<th>Tipo</th>
 <th>Predeterminado</th>
 <th>Descripción</th>
 </tr>
@@ -1324,49 +1324,49 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <tbody>
 <tr>
 <td><code>interval</code></td>
-<td>number</td>
+<td>número</td>
 <td><code>5000</code></td>
-<td>The amount of time to delay between automatically cycling an item.</td>
+<td>La cantidad de tiempo que se debe demorar entre el ciclo automático de un elemento.</td>
 </tr>
 <tr>
 <td><code>keyboard</code></td>
-<td>boolean</td>
+<td>booleano</td>
 <td><code>true</code></td>
-<td>Whether the carousel should react to keyboard events.</td>
+<td>Si el carrusel debe reaccionar a los eventos del teclado.</td>
 </tr>
 <tr>
 <td><code>pause</code></td>
 <td>string, boolean</td>
 <td><code>"hover"</code></td>
-<td>If set to <code>"hover"</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>false</code>, hovering over the carousel won’t pause it. On touch-enabled devices, when set to <code>"hover"</code>, cycling will pause on <code>touchend</code> (once the user finished interacting with the carousel) for two intervals, before automatically resuming. This is in addition to the mouse behavior.</td>
+<td>Si se configura en <code>"hover"</code>, pausa el ciclo del carrusel en <code>mouseenter</code> y reanuda el ciclo del carrusel en <code>mouseleave</code>. Si se establece en <code>false</code>, al pasar el cursor sobre el carrusel no se detendrá. En dispositivos táctiles, cuando se configura en <code>"hover"</code>, el ciclo se detendrá en <code>touchend</code> (una vez que el usuario termine de interactuar con el carrusel) durante dos intervalos, antes de reanudarse automáticamente. Esto se suma al comportamiento del mouse.</td>
 </tr>
 <tr>
 <td><code>ride</code></td>
 <td>string, boolean</td>
 <td><code>false</code></td>
-<td>If set to <code>true</code>, autoplays the carousel after the user manually cycles the first item. If set to <code>"carousel"</code>, autoplays the carousel on load.</td>
+<td>Si se establece en <code>true</code>, el carrusel se reproduce automáticamente después de que el usuario recorre manualmente el primer elemento. Si se establece en <code>"carousel"</code>, reproduce automáticamente el carrusel al cargar.</td>
 </tr>
 <tr>
 <td><code>touch</code></td>
-<td>boolean</td>
+<td>booleano</td>
 <td><code>true</code></td>
-<td>Whether the carousel should support left/right swipe interactions on touchscreen devices.</td>
+<td>Si el carrusel debe admitir interacciones de deslizamiento hacia la izquierda o hacia la derecha en dispositivos con pantalla táctil.</td>
 </tr>
 <tr>
 <td><code>wrap</code></td>
-<td>boolean</td>
+<td>booleano</td>
 <td><code>true</code></td>
-<td>Whether the carousel should cycle continuously or have hard stops.</td>
+<td>Si el carrusel debe realizar ciclos continuos o tener paradas bruscas.</td>
 </tr>
 </tbody>
 </table></div>
 
 <h3 id="methods">Métodos <a class="anchor-link" href="#methods" aria-label="Link to this section: Methods"></a></h3>
 <div class="bd-callout bd-callout-danger">
-<strong>All API methods are asynchronous and start a transition.</strong> They return to the caller as soon as the transition is started, but before it ends. In addition, a method call on a transitioning component will be ignored. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">Learn more in our JavaScript docs.</a>
+<strong>Todos los métodos API son asincrónicos e inician una transición.</strong> Regresan al punto de la llamada tan pronto como se inicia la transición, pero antes de que finalice. Además, se ignorará una llamada a un método en un componente en transición. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">Obtén más información en nuestra documentación de JavaScript.</a>
 </div>
 
-<p>You can create a carousel instance with the carousel constructor, and pass on any additional options. For example, to manually initialize an autoplaying carousel (assuming you’re not using the <code>data-bs-ride="carousel"</code> attribute in the markup itself) with a specific interval and with touch support disabled, you can use:</p>
+<p>Puedes crear una instancia de carrusel con el constructor de carrusel y pasar cualquier opción adicional. Por ejemplo, para inicializar manualmente un carrusel de reproducción automática (suponiendo que no esté usando el atributo <code>data-bs-ride="carousel"</code> en el marcado en sí) con un intervalo específico y con la compatibilidad táctil deshabilitada, puedes usar:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myCarouselElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#myCarousel'</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">carousel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Carousel</span><span class="p">(</span><span class="nx">myCarouselElement</span><span class="p">,</span> <span class="p">{</span>
@@ -1383,67 +1383,67 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <tbody>
 <tr>
 <td><code>cycle</code></td>
-<td>Starts cycling through the carousel items from left to right.</td>
+<td>Comienza a recorrer los elementos del carrusel de izquierda a derecha.</td>
 </tr>
 <tr>
 <td><code>dispose</code></td>
-<td>Destroys an element’s carousel. (Removes stored data on the DOM element)</td>
+<td>Destruye el carrusel de un elemento. (Elimina los datos almacenados en el elemento DOM)</td>
 </tr>
 <tr>
 <td><code>getInstance</code></td>
-<td>Static method which allows you to get the carousel instance associated to a DOM element. You can use it like this: <code>bootstrap.Carousel.getInstance(element)</code>.</td>
+<td>Método estático que te permite obtener la instancia del carrusel asociada a un elemento DOM. Puedes usarlo así: <code>bootstrap.Carousel.getInstance(element)</code>.</td>
 </tr>
 <tr>
 <td><code>getOrCreateInstance</code></td>
-<td>Static method which returns a carousel instance associated to a DOM element, or creates a new one in case it wasn’t initialized. You can use it like this: <code>bootstrap.Carousel.getOrCreateInstance(element)</code>.</td>
+<td>Método estático que devuelve una instancia de carrusel asociada a un elemento DOM, o crea una nueva en caso de que no haya sido inicializada. Puedes usarlo así: <code>bootstrap.Carousel.getOrCreateInstance(element)</code>.</td>
 </tr>
 <tr>
 <td><code>next</code></td>
-<td>Cycles to the next item. <strong>Returns to the caller before the next item has been shown</strong> (e.g., before the <code>slid.bs.carousel</code> event occurs).</td>
+<td>Pasa al siguiente elemento. <strong>Vuelve al punto de la llamada antes de que se muestre el siguiente elemento</strong> (por ejemplo, antes de que ocurra el evento <code>slid.bs.carousel</code>).</td>
 </tr>
 <tr>
 <td><code>nextWhenVisible</code></td>
-<td>Don’t cycle carousel to next when the page, the carousel, or the carousel’s parent aren’t visible. <strong>Returns to the caller before the target item has been shown</strong>.</td>
+<td>No pases del carrusel al siguiente cuando la página, el carrusel o el padre del carrusel no estén visibles. <strong>Vuelve al punto de la llamada antes de que se haya mostrado el elemento de destino</strong>.</td>
 </tr>
 <tr>
 <td><code>pause</code></td>
-<td>Stops the carousel from cycling through items.</td>
+<td>Evita que el carrusel recorra los elementos.</td>
 </tr>
 <tr>
 <td><code>prev</code></td>
-<td>Cycles to the previous item. <strong>Returns to the caller before the previous item has been shown</strong> (e.g., before the <code>slid.bs.carousel</code> event occurs).</td>
+<td>Vuelve al elemento anterior. <strong>Vuelve al punto de la llamada antes de que se haya mostrado el elemento anterior</strong> (por ejemplo, antes de que ocurra el evento <code>slid.bs.carousel</code>).</td>
 </tr>
 <tr>
 <td><code>to</code></td>
-<td>Cycles the carousel to a particular frame (0 based, similar to an array). <strong>Returns to the caller before the target item has been shown</strong> (e.g., before the <code>slid.bs.carousel</code> event occurs).</td>
+<td>Cicla el carrusel a un cuadro particular (basado en 0, similar a una matriz). <strong>Vuelve al punto de la llamada antes de que se haya mostrado el elemento de destino</strong> (por ejemplo, antes de que ocurra el evento <code>slid.bs.carousel</code>).</td>
 </tr>
 </tbody>
 </table></div>
 
 <h3 id="events">Eventos <a class="anchor-link" href="#events" aria-label="Link to this section: Events"></a></h3>
-<p>Bootstrap’s carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:</p>
+<p>La clase de carrusel de Bootstrap expone dos eventos para conectarse a la funcionalidad del carrusel. Ambos eventos tienen las siguientes propiedades adicionales:</p>
 <ul>
-<li><code>direction</code>: The direction in which the carousel is sliding (either <code>"left"</code> or <code>"right"</code>).</li>
-<li><code>relatedTarget</code>: The DOM element that is being slid into place as the active item.</li>
-<li><code>from</code>: The index of the current item</li>
-<li><code>to</code>: The index of the next item</li>
+<li><code>direction</code>: La dirección en la que se desliza el carrusel (ya sea <code>"left"</code> o <code>"right"</code>).</li>
+<li><code>relatedTarget</code>: el elemento DOM que se desliza en su lugar como elemento activo.</li>
+<li><code>from</code>: El índice del elemento actual</li>
+<li><code>to</code>: El índice del siguiente elemento</li>
 </ul>
-<p>All carousel events are fired at the carousel itself (i.e. at the <code>&lt;div class="carousel"&gt;</code>).</p>
+<p>Todos los eventos del carrusel se activan en el propio carrusel (es decir, en el <code>&lt;div class="carousel"&gt;</code>).</p>
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th>Event type</th>
+<th>Tipo de evento</th>
 <th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>slid.bs.carousel</code></td>
-<td>Fired when the carousel has completed its slide transition.</td>
+<td>Se activa cuando el carrusel ha completado su transición de diapositivas.</td>
 </tr>
 <tr>
 <td><code>slide.bs.carousel</code></td>
-<td>Fires immediately when the <code>slide</code> instance method is invoked.</td>
+<td>Se activa inmediatamente cuando se invoca el método de instancia <code>slide</code>.</td>
 </tr>
 </tbody>
 </table></div>
