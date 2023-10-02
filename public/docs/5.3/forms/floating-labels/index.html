@@ -8,7 +8,7 @@
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Floating labels · Bootstrap v5.3</title>
+<title>Etiquetas flotantes · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/forms/floating-labels/">
 
@@ -557,8 +557,8 @@
     <li><a href="#textareas">Textareas</a></li>
     <li><a href="#selects">Selects</a></li>
     <li><a href="#disabled">Deshabilitado</a></li>
-    <li><a href="#readonly-plaintext">Readonly plaintext</a></li>
-    <li><a href="#input-groups">Input groups</a></li>
+    <li><a href="#readonly-plaintext">Texto sin formato de solo lectura</a></li>
+    <li><a href="#input-groups">Grupos de entradas</a></li>
     <li><a href="#layout">Layout</a></li>
     <li><a href="#css">CSS</a>
       <ul>
@@ -575,7 +575,7 @@
         
 
         <h2 id="example">Ejemplo <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h2>
-<p>Wrap a pair of <code>&lt;input class="form-control"&gt;</code> and <code>&lt;label&gt;</code> elements in <code>.form-floating</code> to enable floating labels with Bootstrap’s textual form fields. A <code>placeholder</code> is required on each <code>&lt;input&gt;</code> as our method of CSS-only floating labels uses the <code>:placeholder-shown</code> pseudo-element. Also note that the <code>&lt;input&gt;</code> must come first so we can utilize a sibling selector (e.g., <code>~</code>).</p>
+<p>Envuelve un par de elementos <code>&lt;input class="form-control"&gt;</code> y <code>&lt;label&gt;</code> en <code>.form-floating</code> para habilitar etiquetas flotantes con los campos de formulario textuales de Bootstrap. Se requiere un <code>placeholder</code> en cada <code>&lt;input&gt;</code> ya que nuestro método de etiquetas flotantes solo CSS utiliza el pseudoelemento <code>:placeholder-shown</code>. También ten en cuenta que <code>&lt;input&gt;</code> debe ir primero para que podamos utilizar un selector de hermanos (por ejemplo, <code>~</code>).</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-floating mb-3">
   <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -604,11 +604,11 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"floatingPassword"</span><span class="p">&gt;</span>Password<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>When there’s a <code>value</code> already defined, <code>&lt;label&gt;</code>s will automatically adjust to their floated position.</p>
+<p>Cuando ya hay un <code>value</code> definido, los <code>&lt;label&gt;</code>s se ajustarán automáticamente a su posición flotante.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <form class="form-floating">
   <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" value="test@example.com">
-  <label for="floatingInputValue">Input with value</label>
+  <label for="floatingInputValue">Entrada con valor</label>
 </form>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -625,11 +625,11 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"floatingInputValue"</span><span class="p">&gt;</span>Input with value<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Form validation styles also work as expected.</p>
+<p>Los estilos de validación de formularios también funcionan como se esperaba.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <form class="form-floating">
   <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
-  <label for="floatingInputInvalid">Invalid input</label>
+  <label for="floatingInputInvalid">Entrada no válida</label>
 </form>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -647,11 +647,11 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="textareas">Textareas <a class="anchor-link" href="#textareas" aria-label="Link to this section: Textareas"></a></h2>
-<p>By default, <code>&lt;textarea&gt;</code>s with <code>.form-control</code> will be the same height as <code>&lt;input&gt;</code>s.</p>
+<p>Por defecto, <code>&lt;textarea&gt;</code>s con <code>.form-control</code> tendrán la misma altura que <code>&lt;input&gt;</code>s.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-  <label for="floatingTextarea">Comments</label>
+  <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextarea"></textarea>
+  <label for="floatingTextarea">Comentarios</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -668,11 +668,11 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"floatingTextarea"</span><span class="p">&gt;</span>Comments<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>To set a custom height on your <code>&lt;textarea&gt;</code>, do not use the <code>rows</code> attribute. Instead, set an explicit <code>height</code> (either inline or via custom CSS).</p>
+<p>Para establecer una altura personalizada en tu <code>&lt;textarea&gt;</code>, no uses el atributo <code>rows</code>. En su lugar, establece una <code>height</code> explícita (ya sea en línea o mediante CSS personalizado).</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-  <label for="floatingTextarea2">Comments</label>
+  <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextarea2" style="height: 100px"></textarea>
+  <label for="floatingTextarea2">Comentarios</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -690,16 +690,16 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="selects">Selects <a class="anchor-link" href="#selects" aria-label="Link to this section: Selects"></a></h2>
-<p>Other than <code>.form-control</code>, floating labels are only available on <code>.form-select</code>s. They work in the same way, but unlike <code>&lt;input&gt;</code>s, they’ll always show the <code>&lt;label&gt;</code> in its floated state. <strong>Selects with <code>size</code> and <code>multiple</code> are not supported.</strong></p>
+<p>Aparte de <code>.form-control</code>, las etiquetas flotantes solo están disponibles en <code>.form-select</code>. Funcionan de la misma manera, pero a diferencia de los <code>&lt;input&gt;</code>, siempre mostrarán el <code>&lt;label&gt;</code> en su estado flotante. <strong>No se admiten selects con <code>size</code> y <code>multiple</code>.</strong></p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-floating">
-  <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+  <select class="form-select" id="floatingSelect" aria-label="Ejemplo de select de etiqueta flotante">
     <option selected="">Abre este menú de selección</option>
     <option value="1">Uno</option>
     <option value="2">Dos</option>
     <option value="3">Tres</option>
   </select>
-  <label for="floatingSelect">Works with selects</label>
+  <label for="floatingSelect">Funciona con selects</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -722,28 +722,28 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="disabled">Deshabilitado <a class="anchor-link" href="#disabled" aria-label="Link to this section: Disabled"></a></h2>
-<p>Add the <code>disabled</code> boolean attribute on an input, a textarea or a select to give it a grayed out appearance, remove pointer events, and prevent focusing.</p>
+<p>Agrega el atributo booleano <code>disabled</code> en una entrada, un área de texto o un select para darle una apariencia atenuada, eliminar eventos de puntero y evitar el enfoque.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-floating mb-3">
   <input type="email" class="form-control" id="floatingInputDisabled" placeholder="name@example.com" disabled="">
   <label for="floatingInputDisabled">Dirección de correo electrónico</label>
 </div>
 <div class="form-floating mb-3">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled" disabled=""></textarea>
-  <label for="floatingTextareaDisabled">Comments</label>
+  <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextareaDisabled" disabled=""></textarea>
+  <label for="floatingTextareaDisabled">Comentarios</label>
 </div>
 <div class="form-floating mb-3">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 100px" disabled="">Disabled textarea with some text inside</textarea>
-  <label for="floatingTextarea2Disabled">Comments</label>
+  <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextarea2Disabled" style="height: 100px" disabled="">Área de texto deshabilitada con algo de texto dentro</textarea>
+  <label for="floatingTextarea2Disabled">Comentarios</label>
 </div>
 <div class="form-floating">
-  <select class="form-select" id="floatingSelectDisabled" aria-label="Floating label disabled select example" disabled="">
+  <select class="form-select" id="floatingSelectDisabled" aria-label="Ejemplo de select de etiqueta flotante deshabilitada" disabled="">
     <option selected="">Abre este menú de selección</option>
     <option value="1">Uno</option>
     <option value="2">Dos</option>
     <option value="3">Tres</option>
   </select>
-  <label for="floatingSelectDisabled">Works with selects</label>
+  <label for="floatingSelectDisabled">Funciona con selects</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -777,16 +777,16 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"floatingSelectDisabled"</span><span class="p">&gt;</span>Works with selects<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="readonly-plaintext">Readonly plaintext <a class="anchor-link" href="#readonly-plaintext" aria-label="Link to this section: Readonly plaintext"></a></h2>
-<p>Floating labels also support <code>.form-control-plaintext</code>, which can be helpful for toggling from an editable <code>&lt;input&gt;</code> to a plaintext value without affecting the page layout.</p>
+<h2 id="readonly-plaintext">Texto sin formato de solo lectura <a class="anchor-link" href="#readonly-plaintext" aria-label="Link to this section: Readonly plaintext"></a></h2>
+<p>Las etiquetas flotantes también admiten <code>.form-control-plaintext</code>, lo que puede ser útil para alternar entre un <code>&lt;input&gt;</code> editable a un valor de texto sin formato sin afectar el diseño de la página.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-floating mb-3">
   <input type="email" readonly="" class="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="name@example.com">
-  <label for="floatingEmptyPlaintextInput">Empty input</label>
+  <label for="floatingEmptyPlaintextInput">Entrada vacía</label>
 </div>
 <div class="form-floating mb-3">
   <input type="email" readonly="" class="form-control-plaintext" id="floatingPlaintextInput" placeholder="name@example.com" value="name@example.com">
-  <label for="floatingPlaintextInput">Input with value</label>
+  <label for="floatingPlaintextInput">Entrada con valor</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -807,14 +807,14 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"floatingPlaintextInput"</span><span class="p">&gt;</span>Input with value<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="input-groups">Input groups <a class="anchor-link" href="#input-groups" aria-label="Link to this section: Input groups"></a></h2>
-<p>Floating labels also support <code>.input-group</code>.</p>
+<h2 id="input-groups">Grupos de entradas <a class="anchor-link" href="#input-groups" aria-label="Link to this section: Input groups"></a></h2>
+<p>Las etiquetas flotantes también admiten <code>.input-group</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="input-group mb-3">
   <span class="input-group-text">@</span>
   <div class="form-floating">
-    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-    <label for="floatingInputGroup1">Username</label>
+    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nombre de usuario">
+    <label for="floatingInputGroup1">Nombre de usuario</label>
   </div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -835,16 +835,16 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>When using <code>.input-group</code> and <code>.form-floating</code> along with form validation, the <code>-feedback</code> should be placed outside of the <code>.form-floating</code>, but inside of the <code>.input-group</code>. This means that the feedback will need to be shown using javascript.</p>
+<p>Cuando usas <code>.input-group</code> y <code>.form-floating</code> junto con la validación del formulario, el <code>-feedback</code> debe colocarse fuera de <code>.form-floating</code>, pero dentro de <code>.input-group</code>. Esto significa que los comentarios deberán mostrarse mediante javascript.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="input-group has-validation">
   <span class="input-group-text">@</span>
   <div class="form-floating is-invalid">
-    <input type="text" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Username" required="">
-    <label for="floatingInputGroup2">Username</label>
+    <input type="text" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Nombre de usuario" required="">
+    <label for="floatingInputGroup2">Nombre de usuario</label>
   </div>
   <div class="invalid-feedback">
-    Please choose a username.
+    Elige un nombre de usuario.
   </div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -869,7 +869,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="layout">Layout <a class="anchor-link" href="#layout" aria-label="Link to this section: Layout"></a></h2>
-<p>When working with the Bootstrap grid system, be sure to place form elements within column classes.</p>
+<p>Cuando trabajes con el sistema de cuadrícula Bootstrap, asegúrate de colocar los elementos del formulario dentro de las clases de columnas.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="row g-2">
   <div class="col-md">
@@ -886,7 +886,7 @@
         <option value="2">Dos</option>
         <option value="3">Tres</option>
       </select>
-      <label for="floatingSelectGrid">Works with selects</label>
+      <label for="floatingSelectGrid">Funciona con selects</label>
     </div>
   </div>
 </div>

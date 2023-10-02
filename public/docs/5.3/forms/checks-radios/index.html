@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.">
+<meta name="description" content="Crea casillas de verificación y radios consistentes en todos los navegadores y dispositivos con nuestro componente de verificación completamente reescrito.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Checks and radios · Bootstrap v5.3</title>
+<title>Checks y radios · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/forms/checks-radios/">
 
@@ -34,13 +34,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Checks and radios">
-<meta name="twitter:description" content="Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.">
+<meta name="twitter:title" content="Checks y radios">
+<meta name="twitter:description" content="Crea casillas de verificación y radios consistentes en todos los navegadores y dispositivos con nuestro componente de verificación completamente reescrito.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/forms/checks-radios/">
-<meta property="og:title" content="Checks and radios">
-<meta property="og:description" content="Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.">
+<meta property="og:title" content="Checks y radios">
+<meta property="og:description" content="Crea casillas de verificación y radios consistentes en todos los navegadores y dispositivos con nuestro componente de verificación completamente reescrito.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -528,9 +528,9 @@
               Ver en GitHub
             </a>
           </div>
-          <h1 class="bd-title mb-0" id="content">Checks and radios</h1>
+          <h1 class="bd-title mb-0" id="content">Checks y radios</h1>
         </div>
-        <p class="bd-lead">Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.</p>
+        <p class="bd-lead">Crea casillas de verificación y radios consistentes en todos los navegadores y dispositivos con nuestro componente de verificación completamente reescrito.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 11 días.
@@ -556,7 +556,7 @@
     <li><a href="#approach">Acercarse</a></li>
     <li><a href="#checks">Checks</a>
       <ul>
-        <li><a href="#indeterminate">Indeterminate</a></li>
+        <li><a href="#indeterminate">Indeterminado</a></li>
         <li><a href="#disabled">Deshabilitado</a></li>
       </ul>
     </li>
@@ -566,15 +566,15 @@
       </ul>
     </li>
     <li><a href="#switches">Switches</a></li>
-    <li><a href="#default-stacked">Default (stacked)</a></li>
+    <li><a href="#default-stacked">Predeterminado (apilado)</a></li>
     <li><a href="#inline">Inline</a></li>
-    <li><a href="#reverse">Reverse</a></li>
-    <li><a href="#without-labels">Without labels</a></li>
-    <li><a href="#toggle-buttons">Toggle buttons</a>
+    <li><a href="#reverse">Reverso</a></li>
+    <li><a href="#without-labels">Sin etiquetas</a></li>
+    <li><a href="#toggle-buttons">Botones de alternancia</a>
       <ul>
-        <li><a href="#checkbox-toggle-buttons">Checkbox toggle buttons</a></li>
-        <li><a href="#radio-toggle-buttons">Radio toggle buttons</a></li>
-        <li><a href="#outlined-styles">Outlined styles</a></li>
+        <li><a href="#checkbox-toggle-buttons">Botones de alternancia de casilla de verificación</a></li>
+        <li><a href="#radio-toggle-buttons">Botones de alternancia de radio</a></li>
+        <li><a href="#outlined-styles">Estilos delineados</a></li>
       </ul>
     </li>
     <li><a href="#css">CSS</a>
@@ -592,21 +592,21 @@
         
 
         <h2 id="approach">Acercarse <a class="anchor-link" href="#approach" aria-label="Link to this section: Approach"></a></h2>
-<p>Browser default checkboxes and radios are replaced with the help of <code>.form-check</code>, a series of classes for both input types that improves the layout and behavior of their HTML elements, that provide greater customization and cross browser consistency. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
-<p>Structurally, our <code>&lt;input&gt;</code>s and <code>&lt;label&gt;</code>s are sibling elements as opposed to an <code>&lt;input&gt;</code> within a <code>&lt;label&gt;</code>. This is slightly more verbose as you must specify <code>id</code> and <code>for</code> attributes to relate the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code>. We use the sibling selector (<code>~</code>) for all our <code>&lt;input&gt;</code> states, like <code>:checked</code> or <code>:disabled</code>. When combined with the <code>.form-check-label</code> class, we can easily style the text for each item based on the <code>&lt;input&gt;</code>’s state.</p>
-<p>Our checks use custom Bootstrap icons to indicate checked or indeterminate states.</p>
+<p>Las casillas de verificación y radios predeterminadas del navegador se reemplazan con la ayuda de <code>.form-check</code>, una serie de clases para ambos tipos de entrada que mejora el diseño y el comportamiento de tus elementos HTML, que proporcionan una mayor personalización y coherencia entre navegadores. Las casillas de verificación sirven para seleccionar una o varias opciones en una lista, mientras que las radios sirven para seleccionar una opción entre muchas.</p>
+<p>Estructuralmente, nuestros <code>&lt;input&gt;</code>s y <code>&lt;label&gt;</code>s son elementos hermanos en lugar de un <code>&lt;input&gt;</code> dentro de un <code>&lt;label&gt;</code>. Esto es un poco más detallado ya que debes especificar los atributos <code>id</code> y <code>for</code> para relacionar los <code>&lt;input&gt;</code> y <code>&lt;label&gt;</code>. Usamos el selector de hermanos (<code>~</code>) para todos nuestros estados <code>&lt;input&gt;</code>, como <code>:checked</code> o <code>:disabled</code>. Cuando se combina con la clase <code>.form-check-label</code>, podemos diseñar fácilmente el texto de cada elemento según el estado del <code>&lt;input&gt;</code>.</p>
+<p>Nuestras comprobaciones utilizan íconos Bootstrap personalizados para indicar estados marcados o indeterminados.</p>
 <h2 id="checks">Checks <a class="anchor-link" href="#checks" aria-label="Link to this section: Checks"></a></h2>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
   <label class="form-check-label" for="flexCheckDefault">
-    Default checkbox
+    Casilla de verificación predeterminada
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
   <label class="form-check-label" for="flexCheckChecked">
-    Checked checkbox
+    Casilla marcada
   </label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -632,13 +632,13 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="indeterminate">Indeterminate <a class="anchor-link" href="#indeterminate" aria-label="Link to this section: Indeterminate"></a></h3>
-<p>Checkboxes can utilize the <code>:indeterminate</code> pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).</p>
+<h3 id="indeterminate">Indeterminado <a class="anchor-link" href="#indeterminate" aria-label="Link to this section: Indeterminate"></a></h3>
+<p>Las casillas de verificación pueden utilizar la pseudoclase <code>:indeterminate</code> cuando se configuran manualmente a través de JavaScript (no hay ningún atributo HTML disponible para especificarlo).</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-indeterminate">
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
   <label class="form-check-label" for="flexCheckIndeterminate">
-    Indeterminate checkbox
+    Casilla de verificación indeterminada
   </label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -659,24 +659,24 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h3 id="disabled">Deshabilitado <a class="anchor-link" href="#disabled" aria-label="Link to this section: Disabled"></a></h3>
-<p>Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input’s state.</p>
+<p>Agrega el atributo <code>disabled</code> y los <code>&lt;label&gt;</code> asociados reciben un estilo automático para que coincida con un color más claro para ayudar a indicar el estado de la entrada.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-indeterminate">
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled="">
   <label class="form-check-label" for="flexCheckIndeterminateDisabled">
-    Disabled indeterminate checkbox
+    Casilla de verificación indeterminada deshabilitada
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled="">
   <label class="form-check-label" for="flexCheckDisabled">
-    Disabled checkbox
+    Casilla de verificación deshabilitada
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked="" disabled="">
   <label class="form-check-label" for="flexCheckCheckedDisabled">
-    Disabled checked checkbox
+    Casilla de verificación marcada deshabilitada
   </label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -713,13 +713,13 @@
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
   <label class="form-check-label" for="flexRadioDefault1">
-    Default radio
+    Radio predeterminada
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked="">
   <label class="form-check-label" for="flexRadioDefault2">
-    Default checked radio
+    Radio marcada por defecto
   </label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -746,18 +746,18 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h3 id="disabled-1">Deshabilitado <a class="anchor-link" href="#disabled-1" aria-label="Link to this section: Disabled"></a></h3>
-<p>Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input’s state.</p>
+<p>Agrega el atributo <code>disabled</code> y los <code>&lt;label&gt;</code> asociados reciben un estilo automático para que coincida con un color más claro para ayudar a indicar el estado de la entrada.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled="">
   <label class="form-check-label" for="flexRadioDisabled">
-    Disabled radio
+    Radio deshabilitada
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked="" disabled="">
   <label class="form-check-label" for="flexRadioCheckedDisabled">
-    Disabled checked radio
+    Radio marcada deshabilitada
   </label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -784,23 +784,23 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="switches">Switches <a class="anchor-link" href="#switches" aria-label="Link to this section: Switches"></a></h2>
-<p>A switch has the markup of a custom checkbox but uses the <code>.form-switch</code> class to render a toggle switch. Consider using <code>role="switch"</code> to more accurately convey the nature of the control to assistive technologies that support this role. In older assistive technologies, it will simply be announced as a regular checkbox as a fallback. Switches also support the <code>disabled</code> attribute.</p>
+<p>Un interruptor (switch) tiene el marcado de una casilla de verificación personalizada pero usa la clase <code>.form-switch</code> para representar un interruptor de palanca. Considera utilizar <code>role="switch"</code> para transmitir con mayor precisión la naturaleza del control a las tecnologías de asistencia que respaldan esta función. En tecnologías de asistencia más antiguas, simplemente se anunciará como una casilla de verificación normal. Estos conmutadores también admiten el atributo <code>disabled</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckDefault">Entrada de casilla de verificación de interruptor predeterminada</label>
 </div>
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked="">
-  <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckChecked">Entrada de casilla de verificación de interruptor marcada</label>
 </div>
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled="">
-  <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckDisabled">Entrada de casilla de verificación de interruptor deshabilitada</label>
 </div>
 <div class="form-check form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked="" disabled="">
-  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Entrada de casilla de verificación de interruptor marcada deshabilitada</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -829,19 +829,19 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-label"</span> <span class="na">for</span><span class="o">=</span><span class="s">"flexSwitchCheckCheckedDisabled"</span><span class="p">&gt;</span>Disabled checked switch checkbox input<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="default-stacked">Default (stacked) <a class="anchor-link" href="#default-stacked" aria-label="Link to this section: Default (stacked)"></a></h2>
-<p>By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with <code>.form-check</code>.</p>
+<h2 id="default-stacked">Predeterminado (apilado) <a class="anchor-link" href="#default-stacked" aria-label="Link to this section: Default (stacked)"></a></h2>
+<p>De forma predeterminada, cualquier número de casillas de verificación y radios que sean hermanos inmediatos se apilarán verticalmente y se espaciarán adecuadamente con <code>.form-check</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
   <label class="form-check-label" for="defaultCheck1">
-    Default checkbox
+    Casilla de verificación predeterminada
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled="">
   <label class="form-check-label" for="defaultCheck2">
-    Disabled checkbox
+    Casilla de verificación deshabilitada
   </label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -871,19 +871,19 @@
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
   <label class="form-check-label" for="exampleRadios1">
-    Default radio
+    Radio predeterminada
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
   <label class="form-check-label" for="exampleRadios2">
-    Second default radio
+    Segunda radio predeterminada
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled="">
   <label class="form-check-label" for="exampleRadios3">
-    Disabled radio
+    Radio deshabilitada
   </label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -916,7 +916,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="inline">Inline <a class="anchor-link" href="#inline" aria-label="Link to this section: Inline"></a></h2>
-<p>Group checkboxes or radios on the same horizontal row by adding <code>.form-check-inline</code> to any <code>.form-check</code>.</p>
+<p>Agrupa casillas de verificación o radios en la misma fila horizontal agregando <code>.form-check-inline</code> a cualquier <code>.form-check</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
@@ -928,7 +928,7 @@
 </div>
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled="">
-  <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+  <label class="form-check-label" for="inlineCheckbox3">3 (deshabilitado)</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -964,7 +964,7 @@
 </div>
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled="">
-  <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+  <label class="form-check-label" for="inlineRadio3">3 (deshabilitado)</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -989,25 +989,25 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-label"</span> <span class="na">for</span><span class="o">=</span><span class="s">"inlineRadio3"</span><span class="p">&gt;</span>3 (disabled)<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="reverse">Reverse <a class="anchor-link" href="#reverse" aria-label="Link to this section: Reverse"></a></h2>
-<p>Put your checkboxes, radios, and switches on the opposite side with the <code>.form-check-reverse</code> modifier class.</p>
+<h2 id="reverse">Reverso <a class="anchor-link" href="#reverse" aria-label="Link to this section: Reverse"></a></h2>
+<p>Pon tus casillas de verificación, radios e interruptores en el lado opuesto con la clase modificadora <code>.form-check-reverse</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-check form-check-reverse">
   <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
   <label class="form-check-label" for="reverseCheck1">
-    Reverse checkbox
+    Casilla de verificación inversa
   </label>
 </div>
 <div class="form-check form-check-reverse">
   <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled="">
   <label class="form-check-label" for="reverseCheck2">
-    Disabled reverse checkbox
+    Casilla de verificación inversa deshabilitada
   </label>
 </div>
 
 <div class="form-check form-switch form-check-reverse">
   <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
-  <label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input</label>
+  <label class="form-check-label" for="flexSwitchCheckReverse">Entrada de casilla de verificación switch inverso</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -1037,8 +1037,8 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-label"</span> <span class="na">for</span><span class="o">=</span><span class="s">"flexSwitchCheckReverse"</span><span class="p">&gt;</span>Reverse switch checkbox input<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="without-labels">Without labels <a class="anchor-link" href="#without-labels" aria-label="Link to this section: Without labels"></a></h2>
-<p>Omit the wrapping <code>.form-check</code> for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using <code>aria-label</code>). See the <a href="/docs/5.3/forms/overview/#accessibility">forms overview accessibility</a> section for details.</p>
+<h2 id="without-labels">Sin etiquetas <a class="anchor-link" href="#without-labels" aria-label="Link to this section: Without labels"></a></h2>
+<p>Omite el ajuste <code>.form-check</code> para casillas de verificación y radios que no tienen texto de etiqueta. Recuerde proporcionar algún tipo de nombre accesible para las tecnologías de asistencia (por ejemplo, usando <code>aria-label</code>). Consulta la sección <a href="/docs/5.3/forms/overview/#accessibility">accesibilidad general de formularios</a> para obtener más detalles.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div>
   <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
@@ -1065,15 +1065,15 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input"</span> <span class="na">type</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">name</span><span class="o">=</span><span class="s">"radioNoLabel"</span> <span class="na">id</span><span class="o">=</span><span class="s">"radioNoLabel1"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="toggle-buttons">Toggle buttons <a class="anchor-link" href="#toggle-buttons" aria-label="Link to this section: Toggle buttons"></a></h2>
-<p>Create button-like checkboxes and radio buttons by using <code>.btn</code> styles rather than <code>.form-check-label</code> on the <code>&lt;label&gt;</code> elements. These toggle buttons can further be grouped in a <a href="/docs/5.3/components/button-group/">button group</a> if needed.</p>
-<h3 id="checkbox-toggle-buttons">Checkbox toggle buttons <a class="anchor-link" href="#checkbox-toggle-buttons" aria-label="Link to this section: Checkbox toggle buttons"></a></h3>
+<h2 id="toggle-buttons">Botones de alternancia <a class="anchor-link" href="#toggle-buttons" aria-label="Link to this section: Toggle buttons"></a></h2>
+<p>Crea casillas de verificación y botones de opción similares a botones usando estilos <code>.btn</code> en lugar de <code>.form-check-label</code> en los elementos <code>&lt;label&gt;</code>. Estos botones de alternancia se pueden agrupar además en un <a href="/docs/5.3/components/button-group/">grupo de botones</a> si es necesario.</p>
+<h3 id="checkbox-toggle-buttons">Botones de alternancia de casilla de verificación <a class="anchor-link" href="#checkbox-toggle-buttons" aria-label="Link to this section: Checkbox toggle buttons"></a></h3>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-<label class="btn btn-primary" for="btn-check">Single toggle</label>
+<label class="btn btn-primary" for="btn-check">Alternancia única</label>
 
 <input type="checkbox" class="btn-check" id="btn-check-2" checked="" autocomplete="off">
-<label class="btn btn-primary" for="btn-check-2">Checked</label>
+<label class="btn btn-primary" for="btn-check-2">Marcado</label>
 
 <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled="">
 <label class="btn btn-primary" for="btn-check-3">Deshabilitado</label>
@@ -1098,10 +1098,10 @@
 
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
-<label class="btn" for="btn-check-4">Single toggle</label>
+<label class="btn" for="btn-check-4">Alternancia única</label>
 
 <input type="checkbox" class="btn-check" id="btn-check-5" checked="" autocomplete="off">
-<label class="btn" for="btn-check-5">Checked</label>
+<label class="btn" for="btn-check-5">Marcado</label>
 
 <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled="">
 <label class="btn" for="btn-check-6">Deshabilitado</label>
@@ -1125,13 +1125,13 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn"</span> <span class="na">for</span><span class="o">=</span><span class="s">"btn-check-6"</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <div class="bd-callout bd-callout-info">
-Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/components/buttons/#button-plugin">button plugin toggle buttons</a>. However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as “checked”/“not checked” (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as “button”/“button pressed”. The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
+Visualmente, estos botones de alternancia de casillas de verificación son idénticos a los <a href="/docs/5.3/components/buttons/#button-plugin">botones de alternancia del complemento de botones</a>. Sin embargo, las tecnologías de asistencia los transmiten de manera diferente: los lectores de pantalla anunciarán las casillas de verificación como "marcadas"/"no marcadas" (ya que, a pesar de su apariencia, siguen siendo fundamentalmente casillas de verificación), mientras que los botones de alternancia del complemento de botones serán anunciado como “botón”/“botón presionado”. La elección entre estos dos enfoques dependerá del tipo de alternancia que estés creando y de si la alternancia tendrá sentido para los usuarios cuando se anuncie como una casilla de verificación o como un botón real.
 </div>
 
-<h3 id="radio-toggle-buttons">Radio toggle buttons <a class="anchor-link" href="#radio-toggle-buttons" aria-label="Link to this section: Radio toggle buttons"></a></h3>
+<h3 id="radio-toggle-buttons">Botones de alternancia de radio <a class="anchor-link" href="#radio-toggle-buttons" aria-label="Link to this section: Radio toggle buttons"></a></h3>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked="">
-<label class="btn btn-secondary" for="option1">Checked</label>
+<label class="btn btn-secondary" for="option1">Marcado</label>
 
 <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
 <label class="btn btn-secondary" for="option2">Radio</label>
@@ -1165,7 +1165,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked="">
-<label class="btn" for="option5">Checked</label>
+<label class="btn" for="option5">Marcado</label>
 
 <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
 <label class="btn" for="option6">Radio</label>
@@ -1197,20 +1197,20 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"radio"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-check"</span> <span class="na">name</span><span class="o">=</span><span class="s">"options-base"</span> <span class="na">id</span><span class="o">=</span><span class="s">"option8"</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">"off"</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn"</span> <span class="na">for</span><span class="o">=</span><span class="s">"option8"</span><span class="p">&gt;</span>Radio<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="outlined-styles">Outlined styles <a class="anchor-link" href="#outlined-styles" aria-label="Link to this section: Outlined styles"></a></h3>
-<p>Different variants of <code>.btn</code>, such at the various outlined styles, are supported.</p>
+<h3 id="outlined-styles">Estilos delineados <a class="anchor-link" href="#outlined-styles" aria-label="Link to this section: Outlined styles"></a></h3>
+<p>Se admiten diferentes variantes de <code>.btn</code>, como los distintos estilos descritos.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+<label class="btn btn-outline-primary" for="btn-check-outlined">Alternancia única</label><br>
 
 <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked="" autocomplete="off">
-<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Marcado</label><br>
 
 <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked="">
-<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+<label class="btn btn-outline-success" for="success-outlined">Radio de éxito marcado.</label>
 
 <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
-<label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+<label class="btn btn-outline-danger" for="danger-outlined">Radio de peligro</label>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -1235,7 +1235,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-variables">Variables Sass <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
-<p>Variables for checks:</p>
+<p>Variables para checks:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -1278,7 +1278,7 @@ Visually, these checkbox toggle buttons are identical to the <a href="/docs/5.3/
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nv">$form-check-inline-margin-end</span><span class="o">:</span>    <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
 </span></span></code></pre></div></div>
-<p>Variables for switches:</p>
+<p>Variables para interruptores:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
