@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Toggle the visibility of content across your project with a few classes and our JavaScript plugins.">
+<meta name="description" content="Alterna la visibilidad del contenido en tu proyecto con algunas clases y nuestros complementos de JavaScript.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Collapse · Bootstrap v5.3</title>
+<title>Contraer · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/components/collapse/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Collapse">
-<meta name="twitter:description" content="Toggle the visibility of content across your project with a few classes and our JavaScript plugins.">
+<meta name="twitter:description" content="Alterna la visibilidad del contenido en tu proyecto con algunas clases y nuestros complementos de JavaScript.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/components/collapse/">
 <meta property="og:title" content="Collapse">
-<meta property="og:description" content="Toggle the visibility of content across your project with a few classes and our JavaScript plugins.">
+<meta property="og:description" content="Alterna la visibilidad del contenido en tu proyecto con algunas clases y nuestros complementos de JavaScript.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -530,7 +530,7 @@
           </div>
           <h1 class="bd-title mb-0" id="content">Collapse</h1>
         </div>
-        <p class="bd-lead">Toggle the visibility of content across your project with a few classes and our JavaScript plugins.</p>
+        <p class="bd-lead">Alterna la visibilidad del contenido en tu proyecto con algunas clases y nuestros complementos de JavaScript.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 10 días.
@@ -556,12 +556,12 @@
     <li><a href="#how-it-works">Cómo funciona.</a></li>
     <li><a href="#example">Ejemplo</a></li>
     <li><a href="#horizontal">Horizontal</a></li>
-    <li><a href="#multiple-toggles-and-targets">Multiple toggles and targets</a></li>
+    <li><a href="#multiple-toggles-and-targets">Múltiples opciones y objetivos</a></li>
     <li><a href="#accessibility">Accesibilidad</a></li>
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#sass-variables">Variables Sass</a></li>
-        <li><a href="#classes">Classes</a></li>
+        <li><a href="#classes">Clases</a></li>
       </ul>
     </li>
     <li><a href="#usage">Uso</a>
@@ -583,31 +583,31 @@
         
 
         <h2 id="how-it-works">Cómo funciona. <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
-<p>The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the <code>height</code> from its current value to <code>0</code>. Given how CSS handles animations, you cannot use <code>padding</code> on a <code>.collapse</code> element. Instead, use the class as an independent wrapping element.</p>
+<p>El complemento JavaScript para contraer se utiliza para mostrar y ocultar contenido. Los botones o anclajes se utilizan como activadores que se asignan a elementos específicos que alterna. Colapsar un elemento animará el <code>height</code> desde su valor actual a <code>0</code>. Dado cómo CSS maneja las animaciones, no puedes usar <code>padding</code> en un elemento <code>.collapse</code>. En su lugar, utiliza la clase como elemento envolvente independiente.</p>
 <div class="bd-callout bd-callout-info">
 El efecto de animación de este componente depende de la media query <code>prefers-reduced-motion</code>. Consulta la <a href="/docs/5.3/getting-started/accessibility/#reduced-motion">sección de movimiento reducido de nuestra documentación de accesibilidad</a>.
 </div>
 
 <h2 id="example">Ejemplo <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h2>
-<p>Click the buttons below to show and hide another element via class changes:</p>
+<p>Haz clic en los botones a continuación para mostrar y ocultar otro elemento mediante cambios de clase:</p>
 <ul>
-<li><code>.collapse</code> hides content</li>
-<li><code>.collapsing</code> is applied during transitions</li>
-<li><code>.collapse.show</code> shows content</li>
+<li><code>.collapse</code> oculta contenido</li>
+<li><code>.collapsing</code> se aplica durante las transiciones</li>
+<li><code>.collapse.show</code> muestra contenido</li>
 </ul>
-<p>Generally, we recommend using a <code>&lt;button&gt;</code> with the <code>data-bs-target</code> attribute. While not recommended from a semantic point of view, you can also use an <code>&lt;a&gt;</code> link with the <code>href</code> attribute (and a <code>role="button"</code>). In both cases, the <code>data-bs-toggle="collapse"</code> is required.</p>
+<p>Generalmente, recomendamos usar un <code>&lt;button&gt;</code> con el atributo <code>data-bs-target</code>. Aunque no se recomienda desde un punto de vista semántico, también puedes usar un enlace <code>&lt;a&gt;</code> con el atributo <code>href</code> (y un <code>role="button"</code>). En ambos casos, se requiere <code>data-bs-toggle="collapse"</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <p class="d-inline-flex gap-1">
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Link with href
+    Enlace con href
   </a>
   <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-bs-target
+    Botón con data-bs-target
   </button>
 </p>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+    Algún contenido de marcador de posición para el componente de colapso. Este panel está oculto de forma predeterminada, pero se revela cuando el usuario activa el activador correspondiente.
   </div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -635,21 +635,21 @@ El efecto de animación de este componente depende de la media query <code>prefe
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="horizontal">Horizontal <a class="anchor-link" href="#horizontal" aria-label="Link to this section: Horizontal"></a></h2>
-<p>The collapse plugin supports horizontal collapsing. Add the <code>.collapse-horizontal</code> modifier class to transition the <code>width</code> instead of <code>height</code> and set a <code>width</code> on the immediate child element. Feel free to write your own custom Sass, use inline styles, or use our <a href="/docs/5.3/utilities/sizing/">width utilities</a>.</p>
+<p>El complemento de colapso admite el colapso horizontal. Agrea la clase modificadora <code>.collapse-horizontal</code> para realizar la transición del <code>width</code> en lugar de <code>height</code> y establece un <code>width</code> en el elemento hijo inmediato. Siéntete libre de escribir tu propio Sass personalizado, usar estilos en línea o usar nuestras <a href="/docs/5.3/utilities/sizing/">utilidades de ancho</a>.</p>
 <div class="bd-callout bd-callout-info">
-Please note that while the example below has a <code>min-height</code> set to avoid excessive repaints in our docs, this is not explicitly required. <strong>Only the <code>width</code> on the child element is required.</strong>
+Ten en cuenta que, si bien el siguiente ejemplo tiene un <code>min-height</code> configurado para evitar repintados excesivos en nuestra documentación, esto no es un requisito explícito. <strong>Solo se requiere el <code>width</code> en el elemento secundario.</strong>
 </div>
 
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <p>
   <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-    Toggle width collapse
+    Alternar colapso a lo ancho
   </button>
 </p>
 <div style="min-height: 120px;">
   <div class="collapse collapse-horizontal" id="collapseWidthExample">
     <div class="card card-body" style="width: 300px;">
-      This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+      Este es un contenido de marcador de posición para un colapso horizontal. Está oculto de forma predeterminada y se muestra cuando se activa.
     </div>
   </div>
 </div>
@@ -676,27 +676,27 @@ Please note that while the example below has a <code>min-height</code> set to av
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="multiple-toggles-and-targets">Multiple toggles and targets <a class="anchor-link" href="#multiple-toggles-and-targets" aria-label="Link to this section: Multiple toggles and targets"></a></h2>
-<p>A <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element can show and hide multiple elements by referencing them with a selector in its <code>data-bs-target</code> or <code>href</code> attribute.
-Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> elements can show and hide the same element if they each reference it with their <code>data-bs-target</code> or <code>href</code> attribute.</p>
+<h2 id="multiple-toggles-and-targets">Múltiples opciones y objetivos <a class="anchor-link" href="#multiple-toggles-and-targets" aria-label="Link to this section: Multiple toggles and targets"></a></h2>
+<p>Un elemento <code>&lt;button&gt;</code> o <code>&lt;a&gt;</code> puede mostrar y ocultar múltiples elementos haciendo referencia a ellos con un selector en su atributo <code>data-bs-target</code> o <code>href</code>.
+Por el contrario, varios elementos <code>&lt;button&gt;</code> o <code>&lt;a&gt;</code> pueden mostrar y ocultar el mismo elemento si cada uno de ellos hace referencia a él con su <code>data-bs-target</code> o <code>href</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <p class="d-inline-flex gap-1">
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Alternar el primer elemento</a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Alternar segundo elemento</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Alterna ambos elementos</button>
 </p>
 <div class="row">
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample1">
       <div class="card card-body">
-        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        Contenido de marcador de posición para el primer componente de colapso de este ejemplo de colapso múltiple. Este panel está oculto de forma predeterminada, pero se revela cuando el usuario activa el activador correspondiente.
       </div>
     </div>
   </div>
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample2">
       <div class="card card-body">
-        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        Contenido de marcador de posición para el segundo componente de colapso de este ejemplo de colapso múltiple. Este panel está oculto de forma predeterminada, pero se revela cuando el usuario activa el activador correspondiente.
       </div>
     </div>
   </div>
@@ -734,9 +734,9 @@ Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> eleme
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="accessibility">Accesibilidad <a class="anchor-link" href="#accessibility" aria-label="Link to this section: Accessibility"></a></h2>
-<p>Be sure to add <code>aria-expanded</code> to the control element. This attribute explicitly conveys the current state of the collapsible element tied to the control to screen readers and similar assistive technologies. If the collapsible element is closed by default, the attribute on the control element should have a value of <code>aria-expanded="false"</code>. If you’ve set the collapsible element to be open by default using the <code>show</code> class, set <code>aria-expanded="true"</code> on the control instead. The plugin will automatically toggle this attribute on the control based on whether or not the collapsible element has been opened or closed (via JavaScript, or because the user triggered another control element also tied to the same collapsible element). If the control element’s HTML element is not a button (e.g., an <code>&lt;a&gt;</code> or <code>&lt;div&gt;</code>), the attribute <code>role="button"</code> should be added to the element.</p>
-<p>If your control element is targeting a single collapsible element – i.e. the <code>data-bs-target</code> attribute is pointing to an <code>id</code> selector – you should add the <code>aria-controls</code> attribute to the control element, containing the <code>id</code> of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.</p>
-<p>Note that Bootstrap’s current implementation does not cover the various <em>optional</em> keyboard interactions described in the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/">ARIA Authoring Practices Guide accordion pattern</a> - you will need to include these yourself with custom JavaScript.</p>
+<p>Asegúrate de agregar <code>aria-expanded</code> al elemento de control. Este atributo transmite explícitamente el estado actual del elemento plegable vinculado al control a lectores de pantalla y tecnologías de asistencia similares. Si el elemento plegable está cerrado de forma predeterminada, el atributo del elemento de control debe tener un valor de <code>aria-expanded="false"</code>. Si has configurado el elemento plegable para que se abra de forma predeterminada usando la clase <code>show</code>, configura <code>aria-expanded="true"</code> en el control. El complemento alternará automáticamente este atributo en el control en función de si el elemento plegable se ha abierto o cerrado (a través de JavaScript, o porque el usuario activó otro elemento de control también vinculado al mismo elemento plegable). Si el elemento HTML del elemento de control no es un botón (por ejemplo, un <code>&lt;a&gt;</code> o <code>&lt;div&gt;</code>), el atributo <code>role="button"</code> debe agregarse al elemento.</p>
+<p>Si tu elemento de control apunta a un único elemento plegable, es decir, el atributo <code>data-bs-target</code> apunta a un selector <code>id</code>, debes agregar el atributo <code>aria-controls</code> al elemento de control, que contiene el <code>id</code> del elemento plegable. Los lectores de pantalla modernos y tecnologías de asistencia similares utilizan este atributo para proporcionar a los usuarios accesos directos adicionales para navegar directamente al elemento plegable.</p>
+<p>Ten en cuenta que la implementación actual de Bootstrap no cubre las diversas interacciones de teclado <em>opcionales</em> descritas en <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/">Patrón de acordeón de la Guía de prácticas de creación de ARIA</a>, deberás incluirlos tú mismo con JavaScript personalizado.</p>
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-variables">Variables Sass <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
@@ -750,8 +750,8 @@ Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> eleme
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$transition-collapse</span><span class="o">:</span>         <span class="n">height</span> <span class="mf">.35</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$transition-collapse-width</span><span class="o">:</span>   <span class="ni">width</span> <span class="mf">.35</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
 </span></span></code></pre></div></div>
-<h3 id="classes">Classes <a class="anchor-link" href="#classes" aria-label="Link to this section: Classes"></a></h3>
-<p>Collapse transition classes can be found in <code>scss/_transitions.scss</code> as these are shared across multiple components (collapse and accordion).</p>
+<h3 id="classes">Clases <a class="anchor-link" href="#classes" aria-label="Link to this section: Classes"></a></h3>
+<p>Las clases de transición de collapse se pueden encontrar en <code>scss/_transitions.scss</code> ya que se comparten entre múltiples componentes (collapse y accordion).</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_transitions.scss">scss/_transitions.scss</a>
@@ -779,18 +779,18 @@ Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> eleme
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div>
 <h2 id="usage">Uso <a class="anchor-link" href="#usage" aria-label="Link to this section: Usage"></a></h2>
-<p>The collapse plugin utilizes a few classes to handle the heavy lifting:</p>
+<p>El complemento de colapso utiliza algunas clases para manejar el trabajo pesado:</p>
 <ul>
-<li><code>.collapse</code> hides the content</li>
-<li><code>.collapse.show</code> shows the content</li>
-<li><code>.collapsing</code> is added when the transition starts, and removed when it finishes</li>
+<li><code>.collapse</code> oculta el contenido</li>
+<li><code>.collapse.show</code> muestra el contenido</li>
+<li><code>.collapsing</code> se agrega cuando comienza la transición y se elimina cuando finaliza</li>
 </ul>
-<p>These classes can be found in <code>_transitions.scss</code>.</p>
+<p>Estas clases se pueden encontrar en <code>_transitions.scss</code>.</p>
 <h3 id="via-data-attributes">Vía atributos de datos <a class="anchor-link" href="#via-data-attributes" aria-label="Link to this section: Via data attributes"></a></h3>
-<p>Just add <code>data-bs-toggle="collapse"</code> and a <code>data-bs-target</code> to the element to automatically assign control of one or more collapsible elements. The <code>data-bs-target</code> attribute accepts a CSS selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you’d like it to default open, add the additional class <code>show</code>.</p>
-<p>To add accordion-like group management to a collapsible area, add the data attribute <code>data-bs-parent="#selector"</code>. Refer to the <a href="/docs/5.3/components/accordion/">accordion page</a> for more information.</p>
+<p>Simplemente agrega <code>data-bs-toggle="collapse"</code> y un <code>data-bs-target</code> al elemento para asignar automáticamente control de uno o más elementos plegables. El atributo <code>data-bs-target</code> acepta un selector CSS al que aplicar el colapso. Asegúrate de agregar la clase <code>collapse</code> al elemento plegable. Si deseas que se abra de forma predeterminada, agrega la clase adicional <code>show</code>.</p>
+<p>Para agregar administración de grupos tipo acordeón a un área plegable, agrega el atributo de datos <code>data-bs-parent="#selector"</code>. Consulta la <a href="/docs/5.3/components/accordion/">página del acordeón</a> para obtener más información.</p>
 <h3 id="via-javascript">Vía JavaScript <a class="anchor-link" href="#via-javascript" aria-label="Link to this section: Via JavaScript"></a></h3>
-<p>Enable manually with:</p>
+<p>Habilitar manualmente con:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">collapseElementList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.collapse'</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">collapseList</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">collapseElementList</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nx">collapseEl</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Collapse</span><span class="p">(</span><span class="nx">collapseEl</span><span class="p">))</span>
 </span></span></code></pre></div><h3 id="options">Opciones <a class="anchor-link" href="#options" aria-label="Link to this section: Options"></a></h3>
@@ -810,15 +810,15 @@ Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> eleme
 <tbody>
 <tr>
 <td><code>parent</code></td>
-<td>selector, DOM element</td>
+<td>selector, elemento DOM</td>
 <td><code>null</code></td>
-<td>If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the <code>card</code> class). The attribute has to be set on the target collapsible area.</td>
+<td>Si se proporciona el elemento padre, todos los elementos plegables bajo el elemento padre especificado se cerrarán cuando se muestre este elemento plegable. (similar al comportamiento tradicional del acordeón; esto depende de la clase <code>card</code>). El atributo debe establecerse en el área plegable de destino.</td>
 </tr>
 <tr>
 <td><code>toggle</code></td>
 <td>booleano</td>
 <td><code>true</code></td>
-<td>Toggles the collapsible element on invocation.</td>
+<td>Alterna el elemento plegable al invocarlo.</td>
 </tr>
 </tbody>
 </table></div>
@@ -828,8 +828,8 @@ Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> eleme
 <strong>Todos los métodos API son asincrónicos e inician una transición.</strong> Regresan al punto de la llamada tan pronto como se inicia la transición, pero antes de que finalice. Además, se ignorará una llamada a un método en un componente en transición. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">Obtén más información en nuestra documentación de JavaScript.</a>
 </div>
 
-<p>Activates your content as a collapsible element. Accepts an optional options <code>object</code>.</p>
-<p>You can create a collapse instance with the constructor, for example:</p>
+<p>Activa tu contenido como un elemento plegable. Acepta opciones opcionales <code>object</code>.</p>
+<p>Puedes crear una instancia colapsada con el constructor, por ejemplo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bsCollapse</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Collapse</span><span class="p">(</span><span class="s1">'#myCollapse'</span><span class="p">,</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">toggle</span><span class="o">:</span> <span class="kc">false</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
@@ -843,33 +843,33 @@ Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> eleme
 <tbody>
 <tr>
 <td><code>dispose</code></td>
-<td>Destroys an element’s collapse. (Removes stored data on the DOM element)</td>
+<td>Destruye el collapse de un elemento. (Elimina los datos almacenados en el elemento DOM)</td>
 </tr>
 <tr>
 <td><code>getInstance</code></td>
-<td>Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: <code>bootstrap.Collapse.getInstance(element)</code>.</td>
+<td>Método estático que te permite obtener la instancia de colapso asociada a un elemento DOM, puedes usarlo así: <code>bootstrap.Collapse.getInstance(element)</code>.</td>
 </tr>
 <tr>
 <td><code>getOrCreateInstance</code></td>
-<td>Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn’t initialized. You can use it like this: <code>bootstrap.Collapse.getOrCreateInstance(element)</code>.</td>
+<td>Método estático que devuelve una instancia colapsada asociada a un elemento DOM o crea una nueva en caso de que no haya sido inicializada. Puedes usarlo así: <code>bootstrap.Collapse.getOrCreateInstance(element)</code>.</td>
 </tr>
 <tr>
 <td><code>hide</code></td>
-<td>Hides a collapsible element. <strong>Returns to the caller before the collapsible element has actually been hidden</strong> (e.g., before the <code>hidden.bs.collapse</code> event occurs).</td>
+<td>Oculta un elemento plegable. <strong>Vuelve a la persona que llama antes de que el elemento contraíble se haya ocultado</strong> (por ejemplo, antes de que ocurra el evento <code>hidden.bs.collapse</code>).</td>
 </tr>
 <tr>
 <td><code>show</code></td>
-<td>Shows a collapsible element. <strong>Returns to the caller before the collapsible element has actually been shown</strong> (e.g., before the <code>shown.bs.collapse</code> event occurs).</td>
+<td>Muestra un elemento plegable. <strong>Vuelve a la persona que llama antes de que el elemento plegable se haya mostrado realmente</strong> (por ejemplo, antes de que ocurra el evento <code>shown.bs.collapse</code>).</td>
 </tr>
 <tr>
 <td><code>toggle</code></td>
-<td>Toggles a collapsible element to shown or hidden. <strong>Returns to the caller before the collapsible element has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.collapse</code> or <code>hidden.bs.collapse</code> event occurs).</td>
+<td>Cambia un elemento plegable para mostrarlo u ocultarlo. <strong>Vuelve a la persona que llama antes de que el elemento plegable se haya mostrado u ocultado</strong> (es decir, antes de que el evento <code>shown.bs.collapse</code> o <code>hidden.bs.collapse</code> ocurra).</td>
 </tr>
 </tbody>
 </table></div>
 
 <h3 id="events">Eventos <a class="anchor-link" href="#events" aria-label="Link to this section: Events"></a></h3>
-<p>Bootstrap’s collapse class exposes a few events for hooking into collapse functionality.</p>
+<p>La clase de colapso de Bootstrap expone algunos eventos para conectarse a la funcionalidad de colapso.</p>
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
@@ -880,19 +880,19 @@ Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> eleme
 <tbody>
 <tr>
 <td><code>hide.bs.collapse</code></td>
-<td>This event is fired immediately when the <code>hide</code> method has been called.</td>
+<td>Este evento se activa inmediatamente cuando se llama al método <code>hide</code>.</td>
 </tr>
 <tr>
 <td><code>hidden.bs.collapse</code></td>
-<td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
+<td>Este evento se activa cuando un elemento de colapso se ha ocultado al usuario (esperará a que se completen las transiciones CSS).</td>
 </tr>
 <tr>
 <td><code>show.bs.collapse</code></td>
-<td>This event fires immediately when the <code>show</code> instance method is called.</td>
+<td>Este evento se activa inmediatamente cuando se llama al método de instancia <code>show</code>.</td>
 </tr>
 <tr>
 <td><code>shown.bs.collapse</code></td>
-<td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
+<td>Este evento se activa cuando un elemento colapsado se hace visible para el usuario (esperará a que se completen las transiciones CSS).</td>
 </tr>
 </tbody>
 </table></div>

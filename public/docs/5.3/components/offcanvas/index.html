@@ -651,10 +651,10 @@ El efecto de animación de este componente depende de la media query <code>prefe
 <p>You can use a link with the <code>href</code> attribute, or a button with the <code>data-bs-target</code> attribute. In both cases, the <code>data-bs-toggle="offcanvas"</code> is required.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-  Link with href
+  Enlace con href
 </a>
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-  Button with data-bs-target
+  Botón con data-bs-target
 </button>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -1108,7 +1108,7 @@ While both ways to dismiss an offcanvas are supported, keep in mind that dismiss
 </div>
 
 <h3 id="via-javascript">Vía JavaScript <a class="anchor-link" href="#via-javascript" aria-label="Link to this section: Via JavaScript"></a></h3>
-<p>Enable manually with:</p>
+<p>Habilitar manualmente con:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">offcanvasElementList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.offcanvas'</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">offcanvasList</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">offcanvasElementList</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nx">offcanvasEl</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Offcanvas</span><span class="p">(</span><span class="nx">offcanvasEl</span><span class="p">))</span>
 </span></span></code></pre></div><h3 id="options">Opciones <a class="anchor-link" href="#options" aria-label="Link to this section: Options"></a></h3>
@@ -1198,7 +1198,7 @@ While both ways to dismiss an offcanvas are supported, keep in mind that dismiss
 <tbody>
 <tr>
 <td><code>hide.bs.offcanvas</code></td>
-<td>This event is fired immediately when the <code>hide</code> method has been called.</td>
+<td>Este evento se activa inmediatamente cuando se llama al método <code>hide</code>.</td>
 </tr>
 <tr>
 <td><code>hidden.bs.offcanvas</code></td>
@@ -1210,7 +1210,7 @@ While both ways to dismiss an offcanvas are supported, keep in mind that dismiss
 </tr>
 <tr>
 <td><code>show.bs.offcanvas</code></td>
-<td>This event fires immediately when the <code>show</code> instance method is called.</td>
+<td>Este evento se activa inmediatamente cuando se llama al método de instancia <code>show</code>.</td>
 </tr>
 <tr>
 <td><code>shown.bs.offcanvas</code></td>
