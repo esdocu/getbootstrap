@@ -564,10 +564,10 @@
     <li><a href="#examples">Ejemplos</a>
       <ul>
         <li><a href="#offcanvas-components">Offcanvas components</a></li>
-        <li><a href="#live-demo">Live demo</a></li>
+        <li><a href="#live-demo">Demostración en vivo</a></li>
         <li><a href="#body-scrolling">Body scrolling</a></li>
         <li><a href="#body-scrolling-and-backdrop">Body scrolling and backdrop</a></li>
-        <li><a href="#static-backdrop">Static backdrop</a></li>
+        <li><a href="#static-backdrop">Fondo estático</a></li>
       </ul>
     </li>
     <li><a href="#dark-offcanvas">Dark offcanvas</a></li>
@@ -584,8 +584,8 @@
       <ul>
         <li><a href="#via-data-attributes">Vía atributos de datos</a>
           <ul>
-            <li><a href="#toggle">Toggle</a></li>
-            <li><a href="#dismiss">Dismiss</a></li>
+            <li><a href="#toggle">Alternar</a></li>
+            <li><a href="#dismiss">Descartar</a></li>
           </ul>
         </li>
         <li><a href="#via-javascript">Vía JavaScript</a></li>
@@ -649,7 +649,7 @@ El efecto de animación de este componente depende de la media query <code>prefe
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="live-demo">Live demo <a class="anchor-link" href="#live-demo" aria-label="Link to this section: Live demo"></a></h3>
+<h3 id="live-demo">Demostración en vivo <a class="anchor-link" href="#live-demo" aria-label="Link to this section: Live demo"></a></h3>
 <p>Use the buttons below to show and hide an offcanvas element via JavaScript that toggles the <code>.show</code> class on an element with the <code>.offcanvas</code> class.</p>
 <ul>
 <li><code>.offcanvas</code> hides content (default)</li>
@@ -796,7 +796,7 @@ El efecto de animación de este componente depende de la media query <code>prefe
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h3 id="static-backdrop">Static backdrop <a class="anchor-link" href="#static-backdrop" aria-label="Link to this section: Static backdrop"></a></h3>
+<h3 id="static-backdrop">Fondo estático <a class="anchor-link" href="#static-backdrop" aria-label="Link to this section: Static backdrop"></a></h3>
 <p>When backdrop is set to static, the offcanvas will not close when clicking outside of it.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
@@ -1103,9 +1103,9 @@ Heads up! Dark variants for components were deprecated in v5.3.0 with the introd
 </ul>
 <p>Add a dismiss button with the <code>data-bs-dismiss="offcanvas"</code> attribute, which triggers the JavaScript functionality. Be sure to use the <code>&lt;button&gt;</code> element with it for proper behavior across all devices.</p>
 <h3 id="via-data-attributes">Vía atributos de datos <a class="anchor-link" href="#via-data-attributes" aria-label="Link to this section: Via data attributes"></a></h3>
-<h4 id="toggle">Toggle <a class="anchor-link" href="#toggle" aria-label="Link to this section: Toggle"></a></h4>
+<h4 id="toggle">Alternar <a class="anchor-link" href="#toggle" aria-label="Link to this section: Toggle"></a></h4>
 <p>Add <code>data-bs-toggle="offcanvas"</code> and a <code>data-bs-target</code> or <code>href</code> to the element to automatically assign control of one offcanvas element. The <code>data-bs-target</code> attribute accepts a CSS selector to apply the offcanvas to. Be sure to add the class <code>offcanvas</code> to the offcanvas element. If you’d like it to default open, add the additional class <code>show</code>.</p>
-<h4 id="dismiss">Dismiss <a class="anchor-link" href="#dismiss" aria-label="Link to this section: Dismiss"></a></h4>
+<h4 id="dismiss">Descartar <a class="anchor-link" href="#dismiss" aria-label="Link to this section: Dismiss"></a></h4>
 <p>Dismissal can be achieved with the <code>data-bs-dismiss</code> attribute on a button <strong>within the offcanvas</strong> as demonstrated below:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"offcanvas"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Close"</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span></code></pre></div><p>or on a button <strong>outside the offcanvas</strong> using the additional <code>data-bs-target</code> as demonstrated below:</p>
