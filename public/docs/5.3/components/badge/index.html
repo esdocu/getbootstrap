@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Documentation and examples for badges, our small count and labeling component.">
+<meta name="description" content="Documentación y ejemplos para insignias, nuestro componente de etiquetado y recuento.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Badges · Bootstrap v5.3</title>
+<title>Insignias · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/components/badge/">
 
@@ -34,13 +34,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Badges">
-<meta name="twitter:description" content="Documentation and examples for badges, our small count and labeling component.">
+<meta name="twitter:title" content="Insignias">
+<meta name="twitter:description" content="Documentación y ejemplos para insignias, nuestro componente de etiquetado y recuento.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/components/badge/">
-<meta property="og:title" content="Badges">
-<meta property="og:description" content="Documentation and examples for badges, our small count and labeling component.">
+<meta property="og:title" content="Insignias">
+<meta property="og:description" content="Documentación y ejemplos para insignias, nuestro componente de etiquetado y recuento.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -469,7 +469,7 @@
             <li><a href="/docs/5.3/utilities/flex/" class="bd-links-link d-inline-block rounded">Flex</a></li>
             <li><a href="/docs/5.3/utilities/float/" class="bd-links-link d-inline-block rounded">Float</a></li>
             <li><a href="/docs/5.3/utilities/interactions/" class="bd-links-link d-inline-block rounded">Interacciones</a></li>
-            <li><a href="/docs/5.3/utilities/link/" class="bd-links-link d-inline-block rounded">Link</a></li>
+            <li><a href="/docs/5.3/utilities/link/" class="bd-links-link d-inline-block rounded">Enlace</a></li>
             <li><a href="/docs/5.3/utilities/object-fit/" class="bd-links-link d-inline-block rounded">Ajuste de objeto</a></li>
             <li><a href="/docs/5.3/utilities/opacity/" class="bd-links-link d-inline-block rounded">Opacidad</a></li>
             <li><a href="/docs/5.3/utilities/overflow/" class="bd-links-link d-inline-block rounded">Overflow</a></li>
@@ -528,27 +528,12 @@
               Ver en GitHub
             </a>
           </div>
-          <h1 class="bd-title mb-0" id="content">Badges</h1>
+          <h1 class="bd-title mb-0" id="content">Insignias</h1>
         </div>
-        <p class="bd-lead">Documentation and examples for badges, our small count and labeling component.</p>
+        <p class="bd-lead">Documentación y ejemplos para insignias, nuestro componente de etiquetado y recuento.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
-  👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 9 días.
-</div>
-<a href="https://bit.ly/paypal-esdocu" target="_blank">
-    <img src="/esdocu/img/esdocu-donar-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
-</a>
-<div class="alert alert-warning mt-0" role="alert" style="display:flex;flex-wrap:wrap;">
-    DONAR a Esdocu:&nbsp;
-    <span>
-        <a href="https://bit.ly/paypal-esdocu" target="_blank">PayPal</a>
-        |
-        <a href="https://bit.ly/mercadopago-esdocu" target="_blank">Mercado Pago</a>.
-    </span>
-    <span style="margin-left:auto;">¡Gracias! 🙌</span>
-    <span style="display:flex; margin-left:auto;">
-        <a href="https://esdocu.com" target="_blank">¿Qué es Esdocu?</a>
-    </span>
+  👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 8 días.
 </div>
 </div>
 
@@ -569,11 +554,11 @@
       <ul>
         <li><a href="#headings">Títulos</a></li>
         <li><a href="#buttons">Botones</a></li>
-        <li><a href="#positioned">Positioned</a></li>
+        <li><a href="#positioned">Posicionado</a></li>
       </ul>
     </li>
-    <li><a href="#background-colors">Background colors</a></li>
-    <li><a href="#pill-badges">Pill badges</a></li>
+    <li><a href="#background-colors">Colores de fondo</a></li>
+    <li><a href="#pill-badges">Insignias de pastillas</a></li>
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#variables">Variables</a></li>
@@ -590,15 +575,15 @@
         
 
         <h2 id="examples">Ejemplos <a class="anchor-link" href="#examples" aria-label="Link to this section: Examples"></a></h2>
-<p>Badges scale to match the size of the immediate parent element by using relative font sizing and <code>em</code> units. As of v5, badges no longer have focus or hover styles for links.</p>
+<p>Las insignias se escalan para que coincidan con el tamaño del elemento padre inmediato usando el tamaño de fuente relativo y las unidades <code>em</code>. A partir de la versión 5, las insignias ya no tienen estilos focus o hover para los enlaces.</p>
 <h3 id="headings">Títulos <a class="anchor-link" href="#headings" aria-label="Link to this section: Headings"></a></h3>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<h1>Example heading <span class="badge bg-secondary">New</span></h1>
-<h2>Example heading <span class="badge bg-secondary">New</span></h2>
-<h3>Example heading <span class="badge bg-secondary">New</span></h3>
-<h4>Example heading <span class="badge bg-secondary">New</span></h4>
-<h5>Example heading <span class="badge bg-secondary">New</span></h5>
-<h6>Example heading <span class="badge bg-secondary">New</span></h6>
+<h1>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h1>
+<h2>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h2>
+<h3>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h3>
+<h4>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h4>
+<h5>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h5>
+<h6>Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></h6>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -617,10 +602,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>Example heading <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge bg-secondary"</span><span class="p">&gt;</span>New<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h3 id="buttons">Botones <a class="anchor-link" href="#buttons" aria-label="Link to this section: Buttons"></a></h3>
-<p>Badges can be used as part of links or buttons to provide a counter.</p>
+<p>Las insignias se pueden usar como parte de enlaces o botones para proporcionar un contador.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <button type="button" class="btn btn-primary">
-  Notifications <span class="badge text-bg-secondary">4</span>
+  Notificaciones <span class="badge text-bg-secondary">4</span>
 </button>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -636,16 +621,16 @@
 </span></span><span class="line"><span class="cl">  Notifications <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-secondary"</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.</p>
-<p>Unless the context is clear (as with the “Notifications” example, where it is understood that the “4” is the number of notifications), consider including additional context with a visually hidden piece of additional text.</p>
-<h3 id="positioned">Positioned <a class="anchor-link" href="#positioned" aria-label="Link to this section: Positioned"></a></h3>
-<p>Use utilities to modify a <code>.badge</code> and position it in the corner of a link or button.</p>
+<p>Ten en cuenta que, dependiendo de cómo se utilicen, las insignias pueden resultar confusas para los usuarios de lectores de pantalla y tecnologías de asistencia similares. Si bien el estilo de las insignias proporciona una pista visual sobre su propósito, a estos usuarios simplemente se les presentará el contenido de la insignia. Dependiendo de la situación específica, estas insignias pueden parecer palabras o números adicionales aleatorios al final de una oración, enlace o botón.</p>
+<p>A menos que el contexto sea claro (como en el ejemplo de “Notificaciones”, donde se entiende que el “4” es el número de notificaciones), considera incluir contexto adicional con una pieza de información adicional visualmente oculta.</p>
+<h3 id="positioned">Posicionado <a class="anchor-link" href="#positioned" aria-label="Link to this section: Positioned"></a></h3>
+<p>Usa utilidades para modificar un <code>.badge</code> y posicionarlo en la esquina de un enlace o botón.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <button type="button" class="btn btn-primary position-relative">
-  Inbox
+  Bandeja de entrada
   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
     99+
-    <span class="visually-hidden">unread messages</span>
+    <span class="visually-hidden">mensajes no leídos</span>
   </span>
 </button>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -666,12 +651,12 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>You can also replace the <code>.badge</code> class with a few more utilities without a count for a more generic indicator.</p>
+<p>También puedes reemplazar la clase <code>.badge</code> con algunas utilidades más sin contar para un indicador más genérico.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <button type="button" class="btn btn-primary position-relative">
-  Profile
+  Perfil
   <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-    <span class="visually-hidden">New alerts</span>
+    <span class="visually-hidden">Nuevas alertas</span>
   </span>
 </button>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -691,10 +676,10 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="background-colors">Background colors <a class="anchor-link" href="#background-colors" aria-label="Link to this section: Background colors"></a></h2>
+<h2 id="background-colors">Colores de fondo <a class="anchor-link" href="#background-colors" aria-label="Link to this section: Background colors"></a></h2>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Agregado en v5.2.0</small>
 
-<p>Set a <code>background-color</code> with contrasting foreground <code>color</code> with <a href="/docs/5.3/helpers/color-background/">our <code>.text-bg-{color}</code> helpers</a>. Previously it was required to manually pair your choice of <a href="/docs/5.3/utilities/colors/"><code>.text-{color}</code></a> and <a href="/docs/5.3/utilities/background/"><code>.bg-{color}</code></a> utilities for styling, which you still may use if you prefer.</p>
+<p>Establece un <code>background-color</code> con un <code>color</code> de primer plano contrastante con <a href="/docs/5.3/helpers/color-background/">nuestros <code>.text-bg-{color}</code> ayudantes</a>. Anteriormente era necesario emparejar manualmente tu elección de utilidades para diseñar <a href="/docs/5.3/utilities/colors/"><code>.text-{color}</code></a> y <a href="/docs/5.3/utilities/background/"><code>.bg-{color}</code></a>, que aún puedes usar si lo prefieres.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 
 <span class="badge text-bg-primary">Primary</span>
@@ -728,8 +713,8 @@
 <strong>Consejo de accesibilidad:</strong> El uso de colores para agregar significado solo proporciona una indicación visual, que no se transmitirá a los usuarios de tecnologías de asistencia como lectores de pantalla. Asegúrate de que el significado sea obvio a partir del contenido mismo (por ejemplo, el texto visible con un <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>suficiente</em> contraste de color</a>) o se incluye a través de medios alternativos, como texto adicional oculto con la clase <code>.visually-hidden</code>.
 </div>
 
-<h2 id="pill-badges">Pill badges <a class="anchor-link" href="#pill-badges" aria-label="Link to this section: Pill badges"></a></h2>
-<p>Use the <code>.rounded-pill</code> utility class to make badges more rounded with a larger <code>border-radius</code>.</p>
+<h2 id="pill-badges">Insignias de pastillas <a class="anchor-link" href="#pill-badges" aria-label="Link to this section: Pill badges"></a></h2>
+<p>Utiliza la clase de utilidad <code>.rounded-pill</code> para hacer insignias más redondeadas con un <code>border-radius</code> más grande.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 
 <span class="badge rounded-pill text-bg-primary">Primary</span>
@@ -763,7 +748,7 @@
 <h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Agregado en v5.2.0</small>
 
-<p>As part of Bootstrap’s evolving CSS variables approach, badges now use local CSS variables on <code>.badge</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>Como parte del enfoque de variables CSS en evolución de Bootstrap, las insignias ahora usan variables CSS locales en <code>.badge</code> para una personalización mejorada en tiempo real. Los valores de las variables CSS se establecen a través de Sass, por lo que la personalización de Sass también es compatible.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_badge.scss">scss/_badge.scss</a>

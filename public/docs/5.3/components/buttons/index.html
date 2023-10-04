@@ -469,7 +469,7 @@
             <li><a href="/docs/5.3/utilities/flex/" class="bd-links-link d-inline-block rounded">Flex</a></li>
             <li><a href="/docs/5.3/utilities/float/" class="bd-links-link d-inline-block rounded">Float</a></li>
             <li><a href="/docs/5.3/utilities/interactions/" class="bd-links-link d-inline-block rounded">Interacciones</a></li>
-            <li><a href="/docs/5.3/utilities/link/" class="bd-links-link d-inline-block rounded">Link</a></li>
+            <li><a href="/docs/5.3/utilities/link/" class="bd-links-link d-inline-block rounded">Enlace</a></li>
             <li><a href="/docs/5.3/utilities/object-fit/" class="bd-links-link d-inline-block rounded">Ajuste de objeto</a></li>
             <li><a href="/docs/5.3/utilities/opacity/" class="bd-links-link d-inline-block rounded">Opacidad</a></li>
             <li><a href="/docs/5.3/utilities/overflow/" class="bd-links-link d-inline-block rounded">Overflow</a></li>
@@ -533,22 +533,7 @@
         <p class="bd-lead">Usa los estilos de botones personalizados de Bootstrap para acciones en formularios, cuadros de diálogo y más con soporte para múltiples tamaños, estados y más.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
-  👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 9 días.
-</div>
-<a href="https://bit.ly/paypal-esdocu" target="_blank">
-    <img src="/esdocu/img/esdocu-donar-ad-1.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
-</a>
-<div class="alert alert-warning mt-0" role="alert" style="display:flex;flex-wrap:wrap;">
-    DONAR a Esdocu:&nbsp;
-    <span>
-        <a href="https://bit.ly/paypal-esdocu" target="_blank">PayPal</a>
-        |
-        <a href="https://bit.ly/mercadopago-esdocu" target="_blank">Mercado Pago</a>.
-    </span>
-    <span style="margin-left:auto;">¡Gracias! 🙌</span>
-    <span style="display:flex; margin-left:auto;">
-        <a href="https://esdocu.com" target="_blank">¿Qué es Esdocu?</a>
-    </span>
+  👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 8 días.
 </div>
 </div>
 
@@ -634,7 +619,7 @@ Si estás utilizando la clase <code>.btn</code> por sí sola, recuerda definir a
 <button type="button" class="btn btn-light">Light</button>
 <button type="button" class="btn btn-dark">Dark</button>
 
-<button type="button" class="btn btn-link">Link</button>
+<button type="button" class="btn btn-link">Enlace</button>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -666,7 +651,7 @@ Si estás utilizando la clase <code>.btn</code> por sí sola, recuerda definir a
 <p>Las clases <code>.btn</code> están diseñadas para usarse con el elemento <code>&lt;button&gt;</code>. Sin embargo, también puedes utilizar estas clases en elementos <code>&lt;a&gt;</code> o <code>&lt;input&gt;</code> (aunque algunos navegadores pueden aplicar una representación ligeramente diferente).</p>
 <p>Cuando usas clases de botones en elementos <code>&lt;a&gt;</code> que se usan para activar la funcionalidad en la página (como contraer contenido), en lugar de vincular a páginas nuevas o secciones dentro de la página actual, a estos enlaces se les debe asignar un <code>role="button"</code> para transmitir adecuadamente su propósito a tecnologías de asistencia como lectores de pantalla.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<a class="btn btn-primary" href="#" role="button">Link</a>
+<a class="btn btn-primary" href="#" role="button">Enlace</a>
 <button class="btn btn-primary" type="submit">Botón</button>
 <input class="btn btn-primary" type="button" value="Input">
 <input class="btn btn-primary" type="submit" value="Submit">
@@ -807,7 +792,7 @@ Algunos de los estilos de botones usan un color de primer plano relativamente cl
 </ul>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <a class="btn btn-primary disabled" role="button" aria-disabled="true">Enlace principal</a>
-<a class="btn btn-secondary disabled" role="button" aria-disabled="true">Link</a>
+<a class="btn btn-secondary disabled" role="button" aria-disabled="true">Enlace</a>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -825,7 +810,7 @@ Algunos de los estilos de botones usan un color de primer plano relativamente cl
 <p>Para cubrir casos en los que tienes que mantener el atributo <code>href</code> en un enlace deshabilitado, la clase <code>.disabled</code> usa <code>pointer-events: none</code> para intentar deshabilitar la funcionalidad de enlace de <code>&lt;a&gt;</code>s. Ten en cuenta que esta propiedad CSS aún no está estandarizada para HTML, pero todos los navegadores modernos la admiten. Además, incluso en los navegadores que admiten <code>pointer-events: none</code>, la navegación con el teclado no se ve afectada, lo que significa que los usuarios de teclados videntes y los usuarios de tecnologías de asistencia aún podrán activar estos enlaces. Por lo tanto, para estar seguro, además de <code>aria-disabled="true"</code>, incluya también un atributo <code>tabindex="-1"</code> en estos enlaces para evitar que reciban el foco del teclado y utiliza JavaScript personalizado para desactivar su funcionalidad por completo.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Enlace principal</a>
-<a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+<a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Enlace</a>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
