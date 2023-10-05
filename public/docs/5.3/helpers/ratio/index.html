@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Use generated pseudo elements to make an element maintain the aspect ratio of your choosing. Perfect for responsively handling video or slideshow embeds based on the width of the parent.">
+<meta name="description" content="Usa pseudoelementos generados para hacer que un elemento mantenga la relación de aspecto que elijas. Perfecto para manejar de manera responsive incrustaciones de videos o presentaciones de diapositivas según el ancho del elemento principal.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Ratios · Bootstrap v5.3</title>
+<title>Ratios · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/helpers/ratio/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Ratios">
-<meta name="twitter:description" content="Use generated pseudo elements to make an element maintain the aspect ratio of your choosing. Perfect for responsively handling video or slideshow embeds based on the width of the parent.">
+<meta name="twitter:description" content="Usa pseudoelementos generados para hacer que un elemento mantenga la relación de aspecto que elijas. Perfecto para manejar de manera responsive incrustaciones de videos o presentaciones de diapositivas según el ancho del elemento principal.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/helpers/ratio/">
 <meta property="og:title" content="Ratios">
-<meta property="og:description" content="Use generated pseudo elements to make an element maintain the aspect ratio of your choosing. Perfect for responsively handling video or slideshow embeds based on the width of the parent.">
+<meta property="og:description" content="Usa pseudoelementos generados para hacer que un elemento mantenga la relación de aspecto que elijas. Perfecto para manejar de manera responsive incrustaciones de videos o presentaciones de diapositivas según el ancho del elemento principal.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -530,7 +530,7 @@
           </div>
           <h1 class="bd-title mb-0" id="content">Ratios</h1>
         </div>
-        <p class="bd-lead">Use generated pseudo elements to make an element maintain the aspect ratio of your choosing. Perfect for responsively handling video or slideshow embeds based on the width of the parent.</p>
+        <p class="bd-lead">Usa pseudoelementos generados para hacer que un elemento mantenga la relación de aspecto que elijas. Perfecto para manejar de manera responsive incrustaciones de videos o presentaciones de diapositivas según el ancho del elemento principal.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 8 días.
@@ -552,8 +552,8 @@
   <ul>
     <li><a href="#about">Acerca de</a></li>
     <li><a href="#example">Ejemplo</a></li>
-    <li><a href="#aspect-ratios">Aspect ratios</a></li>
-    <li><a href="#custom-ratios">Custom ratios</a></li>
+    <li><a href="#aspect-ratios">Relaciones de aspecto</a></li>
+    <li><a href="#custom-ratios">Proporciones personalizadas</a></li>
     <li><a href="#sass-maps">Mapas de Sass</a></li>
   </ul>
 </nav>
@@ -565,17 +565,17 @@
         
 
         <h2 id="about">Acerca de <a class="anchor-link" href="#about" aria-label="Link to this section: About"></a></h2>
-<p>Use the ratio helper to manage the aspect ratios of external content like <code>&lt;iframe&gt;</code>s, <code>&lt;embed&gt;</code>s, <code>&lt;video&gt;</code>s, and <code>&lt;object&gt;</code>s. These helpers also can be used on any standard HTML child element (e.g., a <code>&lt;div&gt;</code> or <code>&lt;img&gt;</code>). Styles are applied from the parent <code>.ratio</code> class directly to the child.</p>
-<p>Aspect ratios are declared in a Sass map and included in each class via CSS variable, which also allows <a href="#custom-ratios">custom aspect ratios</a>.</p>
+<p>Utiliza el asistente de proporciones para administrar las proporciones de contenido externo como <code>&lt;iframe&gt;</code>s, <code>&lt;embed&gt;</code>s, <code>&lt;video&gt;</code>s y <code>&lt;object&gt;</code>s. Estos ayudantes también se pueden utilizar en cualquier elemento secundario HTML estándar (por ejemplo, un <code>&lt;div&gt;</code> o <code>&lt;img&gt;</code>). Los estilos se aplican desde la clase padre <code>.ratio</code> directamente al hijo.</p>
+<p>Las relaciones de aspecto se declaran en un mapa Sass y se incluyen en cada clase a través de una variable CSS, que también permite <a href="#custom-ratios">relaciones de aspecto personalizadas</a>.</p>
 <div class="bd-callout bd-callout-info">
-<strong>Pro-Tip!</strong> You don’t need <code>frameborder="0"</code> on your <code>&lt;iframe&gt;</code>s as we override that for you in <a href="/docs/5.3/content/reboot/">Reboot</a>.
+<strong>¡Consejo profesional!</strong> No necesitas <code>frameborder="0"</code> en tus <code>&lt;iframe&gt;</code>s, ya que lo sobrescribimos en <a href="/docs/5.3/content/reboot/">Reboot</a>.
 </div>
 
 <h2 id="example">Ejemplo <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h2>
-<p>Wrap any embed, like an <code>&lt;iframe&gt;</code>, in a parent element with <code>.ratio</code> and an aspect ratio class. The immediate child element is automatically sized thanks to our universal selector <code>.ratio &gt; *</code>.</p>
+<p>Envuelve cualquier incrustación, como un <code>&lt;iframe&gt;</code>, en un elemento padre con <code>.ratio</code> y una clase de relación de aspecto. El tamaño del elemento hijo inmediato se ajusta automáticamente gracias a nuestro selector universal <code>.ratio &gt; *</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="ratio ratio-16x9">
-  <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen=""></iframe>
+  <iframe src="https://www.youtube.com/embed/mUxzKVrSAjs?rel=0" title="Video de YouTube" allowfullscreen=""></iframe>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -591,8 +591,8 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://www.youtube.com/embed/zpOULjyy-n8?rel=0"</span> <span class="na">title</span><span class="o">=</span><span class="s">"YouTube video"</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="aspect-ratios">Aspect ratios <a class="anchor-link" href="#aspect-ratios" aria-label="Link to this section: Aspect ratios"></a></h2>
-<p>Aspect ratios can be customized with modifier classes. By default the following ratio classes are provided:</p>
+<h2 id="aspect-ratios">Relaciones de aspecto <a class="anchor-link" href="#aspect-ratios" aria-label="Link to this section: Aspect ratios"></a></h2>
+<p>Las relaciones de aspecto se pueden personalizar con clases de modificadores. De forma predeterminada, se proporcionan las siguientes clases de relación:</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-ratios">
 <div class="ratio ratio-1x1">
   <div>1x1</div>
@@ -629,9 +629,9 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>21x9<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="custom-ratios">Custom ratios <a class="anchor-link" href="#custom-ratios" aria-label="Link to this section: Custom ratios"></a></h2>
-<p>Each <code>.ratio-*</code> class includes a CSS custom property (or CSS variable) in the selector. You can override this CSS variable to create custom aspect ratios on the fly with some quick math on your part.</p>
-<p>For example, to create a 2x1 aspect ratio, set <code>--bs-aspect-ratio: 50%</code> on the <code>.ratio</code>.</p>
+<h2 id="custom-ratios">Proporciones personalizadas <a class="anchor-link" href="#custom-ratios" aria-label="Link to this section: Custom ratios"></a></h2>
+<p>Cada clase <code>.ratio-*</code> incluye una propiedad personalizada CSS (o variable CSS) en el selector. Puedes sobrescribir esta variable CSS para crear relaciones de aspecto personalizadas sobre la marcha con algunos cálculos rápidos de tu parte.</p>
+<p>Por ejemplo, para crear una relación de aspecto de 2x1, establece <code>--bs-aspect-ratio: 50%</code> en <code>.ratio</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-ratios">
 <div class="ratio" style="--bs-aspect-ratio: 50%;">
   <div>2x1</div>
@@ -650,7 +650,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>2x1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>This CSS variable makes it easy to modify the aspect ratio across breakpoints. The following is 4x3 to start, but changes to a custom 2x1 at the medium breakpoint.</p>
+<p>Esta variable CSS facilita la modificación de la relación de aspecto entre puntos de interrupción. Lo siguiente es 4x3 para comenzar, pero cambia a un 2x1 personalizado en el punto de interrupción medio.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.ratio-4x3</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="na">--bs-aspect-ratio</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 2x1
@@ -658,7 +658,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-ratios bd-example-ratios-breakpoint">
 <div class="ratio ratio-4x3">
-  <div>4x3, then 2x1</div>
+  <div>4x3, luego 2x1</div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -675,7 +675,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="sass-maps">Mapas de Sass <a class="anchor-link" href="#sass-maps" aria-label="Link to this section: Sass maps"></a></h2>
-<p>Within <code>_variables.scss</code>, you can change the aspect ratios you want to use. Here’s our default <code>$ratio-aspect-ratios</code> map. Modify the map as you like and recompile your Sass to put them to use.</p>
+<p>Dentro de <code>_variables.scss</code>, puedes cambiar las relaciones de aspecto que deseas usar. Aquí está nuestro mapa <code>$ratio-aspect-ratios</code> predeterminado. Modifica el mapa como quieras y vuelve a compilar tu Sass para usarlo.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>

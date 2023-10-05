@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Set a background color with contrasting foreground color.">
+<meta name="description" content="Establece un color de fondo con un color de primer plano que contraste.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Color and background · Bootstrap v5.3</title>
+<title>Color y fondo · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/helpers/color-background/">
 
@@ -34,13 +34,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Color and background">
-<meta name="twitter:description" content="Set a background color with contrasting foreground color.">
+<meta name="twitter:title" content="Color y fondo.">
+<meta name="twitter:description" content="Establece un color de fondo con un color de primer plano que contraste.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/helpers/color-background/">
-<meta property="og:title" content="Color and background">
-<meta property="og:description" content="Set a background color with contrasting foreground color.">
+<meta property="og:title" content="Color y fondo.">
+<meta property="og:description" content="Establece un color de fondo con un color de primer plano que contraste.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -524,13 +524,13 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">Added in v5.2</small><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.2/site/content/docs/5.3/helpers/color-background.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">Agregado en v5.2</small><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.2/site/content/docs/5.3/helpers/color-background.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">
               Ver en GitHub
             </a>
           </div>
-          <h1 class="bd-title mb-0" id="content">Color and background</h1>
+          <h1 class="bd-title mb-0" id="content">Color y fondo.</h1>
         </div>
-        <p class="bd-lead">Set a background color with contrasting foreground color.</p>
+        <p class="bd-lead">Establece un color de fondo con un color de primer plano que contraste.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 8 días.
@@ -551,7 +551,7 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Descripción general</a></li>
-    <li><a href="#with-components">With components</a></li>
+    <li><a href="#with-components">Con componentes</a></li>
   </ul>
 </nav>
           </div>
@@ -562,21 +562,21 @@
         
 
         <h2 id="overview">Descripción general <a class="anchor-link" href="#overview" aria-label="Link to this section: Overview"></a></h2>
-<p>Color and background helpers combine the power of our <a href="/docs/5.3/utilities/colors/"><code>.text-*</code> utilities</a> and <a href="/docs/5.3/utilities/background/"><code>.bg-*</code> utilities</a> in one class. Using our Sass <code>color-contrast()</code> function, we automatically determine a contrasting <code>color</code> for a particular <code>background-color</code>.</p>
+<p>Los ayudantes de color y fondo combinan el poder de nuestras <a href="/docs/5.3/utilities/colors/"><code>.text-*</code> (utilidades)</a> y <a href="/docs/5.3/utilities/background/"><code>.bg-*</code> (utilidades)</a> en una clase. Usando nuestra función Sass <code>color-contrast()</code>, determinamos automáticamente un <code>color</code> de contraste para un <code>background-color</code> particular.</p>
 <div class="bd-callout bd-callout-warning">
-<strong>Heads up!</strong> There’s currently no support for a CSS-native <code>color-contrast</code> function, so we use our own via Sass. This means that customizing our theme colors via CSS variables may cause color contrast issues with these utilities.
+<strong>¡Atención!</strong> Actualmente no hay soporte para una función <code>color-contrast</code> nativa de CSS, por lo que usamos la nuestra a través de Sass. Esto significa que personalizar los colores de nuestro tema mediante variables CSS puede causar problemas de contraste de color con estas utilidades.
 </div>
 
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 
-<div class="text-bg-primary p-3">Primary with contrasting color</div>
-<div class="text-bg-secondary p-3">Secondary with contrasting color</div>
-<div class="text-bg-success p-3">Success with contrasting color</div>
-<div class="text-bg-danger p-3">Danger with contrasting color</div>
-<div class="text-bg-warning p-3">Warning with contrasting color</div>
-<div class="text-bg-info p-3">Info with contrasting color</div>
-<div class="text-bg-light p-3">Light with contrasting color</div>
-<div class="text-bg-dark p-3">Dark with contrasting color</div>
+<div class="text-bg-primary p-3">Primaria con color contrastante</div>
+<div class="text-bg-secondary p-3">Secundaria con color contrastante</div>
+<div class="text-bg-success p-3">Éxito con color contrastante</div>
+<div class="text-bg-danger p-3">Peligro con color contrastante</div>
+<div class="text-bg-warning p-3">Advertencia con color contrastante</div>
+<div class="text-bg-info p-3">Información con color contrastante</div>
+<div class="text-bg-light p-3">Claro con color contrastante.</div>
+<div class="text-bg-dark p-3">Oscuro con color contrastante.</div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -600,8 +600,8 @@
 <strong>Consejo de accesibilidad:</strong> El uso de colores para agregar significado solo proporciona una indicación visual, que no se transmitirá a los usuarios de tecnologías de asistencia como lectores de pantalla. Asegúrate de que el significado sea obvio a partir del contenido mismo (por ejemplo, el texto visible con un <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>suficiente</em> contraste de color</a>) o se incluye a través de medios alternativos, como texto adicional oculto con la clase <code>.visually-hidden</code>.
 </div>
 
-<h2 id="with-components">With components <a class="anchor-link" href="#with-components" aria-label="Link to this section: With components"></a></h2>
-<p>Use them in place of combined <code>.text-*</code> and <code>.bg-*</code> classes, like on <a href="/docs/5.3/components/badge/#background-colors">badges</a>:</p>
+<h2 id="with-components">Con componentes <a class="anchor-link" href="#with-components" aria-label="Link to this section: With components"></a></h2>
+<p>Úsalos en lugar de las clases combinadas <code>.text-*</code> y <code>.bg-*</code> , como en <a href="/docs/5.3/components/badge/#background-colors">insignias</a>:</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <span class="badge text-bg-primary">Primary</span>
 <span class="badge text-bg-info">Info</span>
@@ -618,7 +618,7 @@
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-primary"</span><span class="p">&gt;</span>Primary<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge text-bg-info"</span><span class="p">&gt;</span>Info<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Or on <a href="/docs/5.3/components/card/#background-and-color">cards</a>:</p>
+<p>O en <a href="/docs/5.3/components/card/#background-and-color">tarjetas</a>:</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
   <div class="card-header">Encabezado</div>
