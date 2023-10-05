@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.">
+<meta name="description" content="Documentación y ejemplos para mostrar la paginación para indicar que existe una serie de contenido relacionado en varias páginas.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Pagination · Bootstrap v5.3</title>
+<title>Paginación · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/components/pagination/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Paginación">
-<meta name="twitter:description" content="Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.">
+<meta name="twitter:description" content="Documentación y ejemplos para mostrar la paginación para indicar que existe una serie de contenido relacionado en varias páginas.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/components/pagination/">
 <meta property="og:title" content="Paginación">
-<meta property="og:description" content="Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.">
+<meta property="og:description" content="Documentación y ejemplos para mostrar la paginación para indicar que existe una serie de contenido relacionado en varias páginas.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -530,7 +530,7 @@
           </div>
           <h1 class="bd-title mb-0" id="content">Paginación</h1>
         </div>
-        <p class="bd-lead">Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.</p>
+        <p class="bd-lead">Documentación y ejemplos para mostrar la paginación para indicar que existe una serie de contenido relacionado en varias páginas.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 8 días.
@@ -551,8 +551,8 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Descripción general</a></li>
-    <li><a href="#working-with-icons">Working with icons</a></li>
-    <li><a href="#disabled-and-active-states">Disabled and active states</a></li>
+    <li><a href="#working-with-icons">Trabajar con íconos</a></li>
+    <li><a href="#disabled-and-active-states">Estados deshabilitados y activos</a></li>
     <li><a href="#sizing">Tamaños</a></li>
     <li><a href="#alignment">Alineación</a></li>
     <li><a href="#css">CSS</a>
@@ -572,10 +572,10 @@
         
 
         <h2 id="overview">Descripción general <a class="anchor-link" href="#overview" aria-label="Link to this section: Overview"></a></h2>
-<p>We use a large block of connected links for our pagination, making links hard to miss and easily scalable—all while providing large hit areas. Pagination is built with list HTML elements so screen readers can announce the number of available links. Use a wrapping <code>&lt;nav&gt;</code> element to identify it as a navigation section to screen readers and other assistive technologies.</p>
-<p>In addition, as pages likely have more than one such navigation section, it’s advisable to provide a descriptive <code>aria-label</code> for the <code>&lt;nav&gt;</code> to reflect its purpose. For example, if the pagination component is used to navigate between a set of search results, an appropriate label could be <code>aria-label="Search results pages"</code>.</p>
+<p>Utilizamos un gran bloque de enlaces conectados para nuestra paginación, lo que hace que los enlaces sean difíciles de pasar por alto y fácilmente escalables, y al mismo tiempo proporcionamos grandes áreas de impacto. La paginación se construye con elementos HTML de lista para que los lectores de pantalla puedan anunciar la cantidad de enlaces disponibles. Utiliza un elemento envolvente <code>&lt;nav&gt;</code> para identificarlo como una sección de navegación para lectores de pantalla y otras tecnologías de asistencia.</p>
+<p>Además, como las páginas probablemente tengan más de una sección de navegación, es recomendable proporcionar una <code>aria-label</code> descriptiva para <code>&lt;nav&gt;</code> para reflejar su propósito. Por ejemplo, si el componente de paginación se utiliza para navegar entre un conjunto de resultados de búsqueda, una etiqueta adecuada podría ser <code>aria-label="Search results pages"</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<nav aria-label="Page navigation example">
+<nav aria-label="Ejemplo de navegación de página">
   <ul class="pagination">
     <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
     <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -604,10 +604,10 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="working-with-icons">Working with icons <a class="anchor-link" href="#working-with-icons" aria-label="Link to this section: Working with icons"></a></h2>
-<p>Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with <code>aria</code> attributes.</p>
+<h2 id="working-with-icons">Trabajar con íconos <a class="anchor-link" href="#working-with-icons" aria-label="Link to this section: Working with icons"></a></h2>
+<p>¿Quieres usar un ícono o símbolo en lugar de texto para algunos enlaces de paginación? Asegúrate de proporcionar compatibilidad adecuada con el lector de pantalla con los atributos <code>aria</code>.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<nav aria-label="Page navigation example">
+<nav aria-label="Ejemplo de navegación de página">
   <ul class="pagination">
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Anterior">
@@ -652,9 +652,9 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="disabled-and-active-states">Disabled and active states <a class="anchor-link" href="#disabled-and-active-states" aria-label="Link to this section: Disabled and active states"></a></h2>
-<p>Pagination links are customizable for different circumstances. Use <code>.disabled</code> for links that appear un-clickable and <code>.active</code> to indicate the current page.</p>
-<p>While the <code>.disabled</code> class uses <code>pointer-events: none</code> to <em>try</em> to disable the link functionality of <code>&lt;a&gt;</code>s, that CSS property is not yet standardized and doesn’t account for keyboard navigation. As such, you should always add <code>tabindex="-1"</code> on disabled links and use custom JavaScript to fully disable their functionality.</p>
+<h2 id="disabled-and-active-states">Estados deshabilitados y activos <a class="anchor-link" href="#disabled-and-active-states" aria-label="Link to this section: Disabled and active states"></a></h2>
+<p>Los enlaces de paginación se pueden personalizar para diferentes circunstancias. Utiliza <code>.disabled</code> para enlaces en los que no se puedes hacer clic y <code>.active</code> para indicar la página actual.</p>
+<p>Mientras que la clase <code>.disabled</code> usa <code>pointer-events: none</code> para <em>intentar</em> deshabilitar el enlace funcionalidad de <code>&lt;a&gt;</code>s, esa propiedad CSS aún no está estandarizada y no tiene en cuenta la navegación con el teclado. Como tal, siempre debes agregar <code>tabindex="-1"</code> en los enlaces deshabilitados y usar JavaScript personalizado para deshabilitar completamente su funcionalidad.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <nav aria-label="...">
   <ul class="pagination">
@@ -697,7 +697,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>You can optionally swap out active or disabled anchors for <code>&lt;span&gt;</code>, or omit the anchor in the case of the prev/next arrows, to remove click functionality and prevent keyboard focus while retaining intended styles.</p>
+<p>Opcionalmente, puedes cambiar los anclajes activos o deshabilitados por <code>&lt;span&gt;</code>, u omitir el anclaje en el caso de las flechas anterior/siguiente, para eliminar haz clic en la funcionalidad y evita el foco del teclado manteniendo los estilos deseados.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <nav aria-label="...">
   <ul class="pagination">
@@ -741,7 +741,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="sizing">Tamaños <a class="anchor-link" href="#sizing" aria-label="Link to this section: Sizing"></a></h2>
-<p>Fancy larger or smaller pagination? Add <code>.pagination-lg</code> or <code>.pagination-sm</code> for additional sizes.</p>
+<p>¿Te apetece una paginación más grande o más pequeña? Agrega <code>.pagination-lg</code> o <code>.pagination-sm</code> para tamaños adicionales.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <nav aria-label="...">
   <ul class="pagination pagination-lg">
@@ -803,9 +803,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h2 id="alignment">Alineación <a class="anchor-link" href="#alignment" aria-label="Link to this section: Alignment"></a></h2>
-<p>Change the alignment of pagination components with <a href="/docs/5.3/utilities/flex/">flexbox utilities</a>. For example, with <code>.justify-content-center</code>:</p>
+<p>Cambiar la alineación de los componentes de paginación con <a href="/docs/5.3/utilities/flex/">utilidades flexbox</a>. Por ejemplo, con <code>.justify-content-center</code>:</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<nav aria-label="Page navigation example">
+<nav aria-label="Ejemplo de navegación de página">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
       <a class="page-link">Anterior</a>
@@ -842,9 +842,9 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Or with <code>.justify-content-end</code>:</p>
+<p>O con <code>.justify-content-end</code>:</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<nav aria-label="Page navigation example">
+<nav aria-label="Ejemplo de navegación de página">
   <ul class="pagination justify-content-end">
     <li class="page-item disabled">
       <a class="page-link">Anterior</a>
@@ -885,7 +885,7 @@
 <h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">Agregado en v5.2.0</small>
 
-<p>As part of Bootstrap’s evolving CSS variables approach, pagination now uses local CSS variables on <code>.pagination</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>Como parte del enfoque en evolución de variables CSS de Bootstrap, la paginación ahora usa variables CSS locales en <code>.pagination</code> para una personalización mejorada en tiempo real. Los valores de las variables CSS se establecen a través de Sass, por lo que la personalización de Sass también es compatible.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_pagination.scss">scss/_pagination.scss</a>
