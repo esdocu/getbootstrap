@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.">
+<meta name="description" content="Alterna de manera rápida y responsive el valor de visualización de los componentes y más con nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como algunos extras para controlar la visualización al imprimir.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Display property · Bootstrap v5.3</title>
+<title>Propiedad display · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/utilities/display/">
 
@@ -34,13 +34,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Display property">
-<meta name="twitter:description" content="Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.">
+<meta name="twitter:title" content="Propiedad display">
+<meta name="twitter:description" content="Alterna de manera rápida y responsive el valor de visualización de los componentes y más con nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como algunos extras para controlar la visualización al imprimir.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/utilities/display/">
-<meta property="og:title" content="Display property">
-<meta property="og:description" content="Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.">
+<meta property="og:title" content="Propiedad display">
+<meta property="og:description" content="Alterna de manera rápida y responsive el valor de visualización de los componentes y más con nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como algunos extras para controlar la visualización al imprimir.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -528,9 +528,9 @@
               Ver en GitHub
             </a>
           </div>
-          <h1 class="bd-title mb-0" id="content">Display property</h1>
+          <h1 class="bd-title mb-0" id="content">Propiedad display</h1>
         </div>
-        <p class="bd-lead">Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.</p>
+        <p class="bd-lead">Alterna de manera rápida y responsive el valor de visualización de los componentes y más con nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como algunos extras para controlar la visualización al imprimir.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 8 días.
@@ -551,10 +551,10 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#how-it-works">Cómo funciona.</a></li>
-    <li><a href="#notation">Notation</a></li>
+    <li><a href="#notation">Notación</a></li>
     <li><a href="#examples">Ejemplos</a></li>
-    <li><a href="#hiding-elements">Hiding elements</a></li>
-    <li><a href="#display-in-print">Display in print</a></li>
+    <li><a href="#hiding-elements">Ocultar elementos</a></li>
+    <li><a href="#display-in-print">Mostrar en forma impresa</a></li>
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#sass-utilities-api">API de utilidades de Sass</a></li>
@@ -570,15 +570,15 @@
         
 
         <h2 id="how-it-works">Cómo funciona. <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
-<p>Change the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"><code>display</code> property</a> with our responsive display utility classes. We purposely support only a subset of all possible values for <code>display</code>. Classes can be combined for various effects as you need.</p>
-<h2 id="notation">Notation <a class="anchor-link" href="#notation" aria-label="Link to this section: Notation"></a></h2>
-<p>Display utility classes that apply to all <a href="/docs/5.3/layout/breakpoints/">breakpoints</a>, from <code>xs</code> to <code>xxl</code>, have no breakpoint abbreviation in them. This is because those classes are applied from <code>min-width: 0;</code> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.</p>
-<p>As such, the classes are named using the format:</p>
+<p>Cambiar el valor de <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"><code>display</code> (propiedad)</a> con nuestras clases de utilidad de visualización responsive. Admitimos deliberadamente solo un subconjunto de todos los valores posibles para <code>display</code>. Las clases se pueden combinar para obtener varios efectos según sea necesario.</p>
+<h2 id="notation">Notación <a class="anchor-link" href="#notation" aria-label="Link to this section: Notation"></a></h2>
+<p>Mostrar clases de utilidad que se aplican a todos los <a href="/docs/5.3/layout/breakpoints/">puntos de interrupción</a>, desde <code>xs</code> a <code>xxl</code>, no tienen abreviaturas de punto de interrupción. Esto se debe a que esas clases se aplican desde <code>min-width: 0;</code> en adelante y, por lo tanto, no están vinculadas a una media query. Los puntos de interrupción restantes, sin embargo, incluyen una abreviatura de punto de interrupción.</p>
+<p>Como tal, las clases se nombran usando el formato:</p>
 <ul>
-<li><code>.d-{value}</code> for <code>xs</code></li>
-<li><code>.d-{breakpoint}-{value}</code> for <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>.</li>
+<li><code>.d-{value}</code> para <code>xs</code></li>
+<li><code>.d-{breakpoint}-{value}</code> para <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code> y <code>xxl</code>.</li>
 </ul>
-<p>Where <em>value</em> is one of:</p>
+<p>Donde <em>valor</em> es uno de:</p>
 <ul>
 <li><code>none</code></li>
 <li><code>inline</code></li>
@@ -592,8 +592,8 @@
 <li><code>flex</code></li>
 <li><code>inline-flex</code></li>
 </ul>
-<p>The display values can be altered by changing the <code>display</code> values defined in <code>$utilities</code> and recompiling the SCSS.</p>
-<p>The media queries affect screen widths with the given breakpoint <em>or larger</em>. For example, <code>.d-lg-none</code> sets <code>display: none;</code> on <code>lg</code>, <code>xl</code>, and <code>xxl</code> screens.</p>
+<p>Los valores de visualización se pueden modificar cambiando los valores de <code>display</code> definidos en <code>$utilities</code> y recompilando el SCSS.</p>
+<p>Las media queries afectan los anchos de pantalla con el punto de interrupción dado <em>o mayor</em>. Por ejemplo, <code>.d-lg-none</code> establece <code>display: none;</code> en pantallas <code>lg</code>, <code>xl</code> y <code>xxl</code>.</p>
 <h2 id="examples">Ejemplos <a class="anchor-link" href="#examples" aria-label="Link to this section: Examples"></a></h2>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="d-inline p-2 text-bg-primary">d-inline</div>
@@ -627,80 +627,80 @@
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-block p-2 text-bg-primary"</span><span class="p">&gt;</span>d-block<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-block p-2 text-bg-dark"</span><span class="p">&gt;</span>d-block<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="hiding-elements">Hiding elements <a class="anchor-link" href="#hiding-elements" aria-label="Link to this section: Hiding elements"></a></h2>
-<p>For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.</p>
-<p>To hide elements simply use the <code>.d-none</code> class or one of the <code>.d-{sm,md,lg,xl,xxl}-none</code> classes for any responsive screen variation.</p>
-<p>To show an element only on a given interval of screen sizes you can combine one <code>.d-*-none</code> class with a <code>.d-*-*</code> class, for example <code>.d-none .d-md-block .d-xl-none .d-xxl-none</code> will hide the element for all screen sizes except on medium and large devices.</p>
+<h2 id="hiding-elements">Ocultar elementos <a class="anchor-link" href="#hiding-elements" aria-label="Link to this section: Hiding elements"></a></h2>
+<p>Para un desarrollo más rápido y compatible con dispositivos móviles, usa clases de visualización responsive para mostrar y ocultar elementos por dispositivo. Evita crear versiones completamente diferentes del mismo sitio; en su lugar, oculta elementos de manera responsive para cada tamaño de pantalla.</p>
+<p>Para ocultar elementos simplemente usa la clase <code>.d-none</code> o una de las clases <code>.d-{sm,md,lg,xl,xxl}-none</code> para cualquier variación de pantalla responsive.</p>
+<p>Para mostrar un elemento solo en un intervalo determinado de tamaños de pantalla, puedes combinar una clase <code>.d-*-none</code> con una clase clase <code>.d-*-*</code>, por ejemplo <code>.d-none .d-md-block .d-xl-none .d-xxl-none</code> ocultará el elemento para todos los tamaños de pantalla excepto en dispositivos medianos y grandes.</p>
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th>Screen size</th>
+<th>Tamaño de pantalla</th>
 <th>Clase</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Hidden on all</td>
+<td>Oculto en todos</td>
 <td><code>.d-none</code></td>
 </tr>
 <tr>
-<td>Hidden only on xs</td>
+<td>Oculto solo en xs</td>
 <td><code>.d-none .d-sm-block</code></td>
 </tr>
 <tr>
-<td>Hidden only on sm</td>
+<td>Oculto solo en sm</td>
 <td><code>.d-sm-none .d-md-block</code></td>
 </tr>
 <tr>
-<td>Hidden only on md</td>
+<td>Oculto solo en md</td>
 <td><code>.d-md-none .d-lg-block</code></td>
 </tr>
 <tr>
-<td>Hidden only on lg</td>
+<td>Oculto solo en lg</td>
 <td><code>.d-lg-none .d-xl-block</code></td>
 </tr>
 <tr>
-<td>Hidden only on xl</td>
+<td>Oculto solo en xl</td>
 <td><code>.d-xl-none .d-xxl-block</code></td>
 </tr>
 <tr>
-<td>Hidden only on xxl</td>
+<td>Oculto solo en xxl</td>
 <td><code>.d-xxl-none</code></td>
 </tr>
 <tr>
-<td>Visible on all</td>
+<td>Visible en todos</td>
 <td><code>.d-block</code></td>
 </tr>
 <tr>
-<td>Visible only on xs</td>
+<td>Visible solo en xs</td>
 <td><code>.d-block .d-sm-none</code></td>
 </tr>
 <tr>
-<td>Visible only on sm</td>
+<td>Visible solo en sm</td>
 <td><code>.d-none .d-sm-block .d-md-none</code></td>
 </tr>
 <tr>
-<td>Visible only on md</td>
+<td>Visible solo en md</td>
 <td><code>.d-none .d-md-block .d-lg-none</code></td>
 </tr>
 <tr>
-<td>Visible only on lg</td>
+<td>Visible solo en lg</td>
 <td><code>.d-none .d-lg-block .d-xl-none</code></td>
 </tr>
 <tr>
-<td>Visible only on xl</td>
+<td>Visible solo en xl</td>
 <td><code>.d-none .d-xl-block .d-xxl-none</code></td>
 </tr>
 <tr>
-<td>Visible only on xxl</td>
+<td>Visible solo en xxl</td>
 <td><code>.d-none .d-xxl-block</code></td>
 </tr>
 </tbody>
 </table></div>
 
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<div class="d-lg-none">hide on lg and wider screens</div>
-<div class="d-none d-lg-block">hide on screens smaller than lg</div>
+<div class="d-lg-none">ocultar en pantallas lg y más anchas</div>
+<div class="d-none d-lg-block">ocultar en pantallas más pequeñas que lg</div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -714,8 +714,8 @@
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-lg-none"</span><span class="p">&gt;</span>hide on lg and wider screens<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-none d-lg-block"</span><span class="p">&gt;</span>hide on screens smaller than lg<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<h2 id="display-in-print">Display in print <a class="anchor-link" href="#display-in-print" aria-label="Link to this section: Display in print"></a></h2>
-<p>Change the <code>display</code> value of elements when printing with our print display utility classes. Includes support for the same <code>display</code> values as our responsive <code>.d-*</code> utilities.</p>
+<h2 id="display-in-print">Mostrar en forma impresa <a class="anchor-link" href="#display-in-print" aria-label="Link to this section: Display in print"></a></h2>
+<p>Cambia el valor <code>display</code> de los elementos al imprimir con nuestras clases de utilidad de visualización de impresión. Incluye soporte para los mismos valores <code>display</code> que nuestras utilidades responsive <code>.d-*</code>.</p>
 <ul>
 <li><code>.d-print-none</code></li>
 <li><code>.d-print-inline</code></li>
@@ -729,11 +729,11 @@
 <li><code>.d-print-flex</code></li>
 <li><code>.d-print-inline-flex</code></li>
 </ul>
-<p>The print and display classes can be combined.</p>
+<p>Las clases print y display se pueden combinar.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
-<div class="d-print-none">Screen Only (Hide on print only)</div>
-<div class="d-none d-print-block">Print Only (Hide on screen only)</div>
-<div class="d-none d-lg-block d-print-block">Hide up to large on screen, but always show on print</div>
+<div class="d-print-none">Solo pantalla (Ocultar solo en impresión)</div>
+<div class="d-none d-print-block">Solo imprimir (Ocultar solo en pantalla)</div>
+<div class="d-none d-lg-block d-print-block">Ocultar en pantalla grande, pero mostrar siempre en impresión</div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
@@ -750,7 +750,7 @@
 
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-utilities-api">API de utilidades de Sass <a class="anchor-link" href="#sass-utilities-api" aria-label="Link to this section: Sass utilities API"></a></h3>
-<p>Display utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<p>Las utilidades de visualización se declaran en nuestra API de utilidades en <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api/#using-the-api">Aprende a utilizar la API de utilidades.</a></p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_utilities.scss">scss/_utilities.scss</a>
