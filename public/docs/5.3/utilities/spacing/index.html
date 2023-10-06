@@ -1,14 +1,14 @@
 <!DOCTYPE html><html lang="es" data-bs-theme="auto"><head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bootstrap includes a wide range of shorthand responsive margin, padding, and gap utility classes to modify an element’s appearance.">
+<meta name="description" content="Bootstrap incluye una amplia gama de clases de utilidad responsive de margen, relleno y espacio gap para modificar la apariencia de un elemento.">
 <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 <meta name="generator" content="Hugo 0.118.2">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.3">
 
-<title>Spacing · Bootstrap v5.3</title>
+<title>Espaciado · Bootstrap en Español v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/utilities/spacing/">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Espaciado">
-<meta name="twitter:description" content="Bootstrap includes a wide range of shorthand responsive margin, padding, and gap utility classes to modify an element’s appearance.">
+<meta name="twitter:description" content="Bootstrap incluye una amplia gama de clases de utilidad responsive de margen, relleno y espacio gap para modificar la apariencia de un elemento.">
 <meta name="twitter:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/utilities/spacing/">
 <meta property="og:title" content="Espaciado">
-<meta property="og:description" content="Bootstrap includes a wide range of shorthand responsive margin, padding, and gap utility classes to modify an element’s appearance.">
+<meta property="og:description" content="Bootstrap incluye una amplia gama de clases de utilidad responsive de margen, relleno y espacio gap para modificar la apariencia de un elemento.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -530,7 +530,7 @@
           </div>
           <h1 class="bd-title mb-0" id="content">Espaciado</h1>
         </div>
-        <p class="bd-lead">Bootstrap includes a wide range of shorthand responsive margin, padding, and gap utility classes to modify an element’s appearance.</p>
+        <p class="bd-lead">Bootstrap incluye una amplia gama de clases de utilidad responsive de margen, relleno y espacio gap para modificar la apariencia de un elemento.</p>
         <div id="esdocu-ads">
 <div class="alert alert-info mt-4" role="alert">
   👋 Esta traducción de Bootstrap 5.3 está en proceso, finalizará en aproximadamente 8 días.
@@ -554,10 +554,10 @@
       <ul>
         <li><a href="#notation">Notación</a></li>
         <li><a href="#examples">Ejemplos</a></li>
-        <li><a href="#horizontal-centering">Horizontal centering</a></li>
+        <li><a href="#horizontal-centering">Centrado horizontal</a></li>
       </ul>
     </li>
-    <li><a href="#negative-margin">Negative margin</a></li>
+    <li><a href="#negative-margin">Margen negativo</a></li>
     <li><a href="#gap">Gap</a>
       <ul>
         <li><a href="#row-gap">row-gap</a></li>
@@ -580,42 +580,42 @@
         
 
         <h2 id="margin-and-padding">Margen y relleno <a class="anchor-link" href="#margin-and-padding" aria-label="Link to this section: Margin and padding"></a></h2>
-<p>Assign responsive-friendly <code>margin</code> or <code>padding</code> values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from <code>.25rem</code> to <code>3rem</code>.</p>
+<p>Asigna valores responsive <code>margin</code> o <code>padding</code> a un elemento o un subconjunto de sus lados con clases abreviadas. Incluye soporte para propiedades individuales, todas las propiedades, y propiedades verticales y horizontales. Las clases se crean a partir de un mapa Sass predeterminado que va desde <code>.25rem</code> hasta <code>3rem</code>.</p>
 <div class="bd-callout bd-callout-info">
-<strong>Using the CSS Grid layout module?</strong> Consider using <a href="#gap">the gap utility</a> instead.
+<strong>¿Usando el módulo de diseño CSS Grid?</strong> Considera usar <a href="#gap">la utilidad gap</a> en su lugar.
 </div>
 
 <h3 id="notation">Notación <a class="anchor-link" href="#notation" aria-label="Link to this section: Notation"></a></h3>
-<p>Spacing utilities that apply to all breakpoints, from <code>xs</code> to <code>xxl</code>, have no breakpoint abbreviation in them. This is because those classes are applied from <code>min-width: 0</code> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.</p>
-<p>The classes are named using the format <code>{property}{sides}-{size}</code> for <code>xs</code> and <code>{property}{sides}-{breakpoint}-{size}</code> for <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>.</p>
-<p>Donde <em>propiedad</em> es una de:</p>
+<p>Las utilidades de espaciado que se aplican a todos los puntos de interrupción, desde <code>xs</code> hasta <code>xxl</code>, no tienen abreviaturas de punto de interrupción. Esto se debe a que esas clases se aplican desde <code>min-width: 0</code> en adelante y, por lo tanto, no están vinculadas a una media query. Los puntos de interrupción restantes, sin embargo, incluyen una abreviatura de punto de interrupción.</p>
+<p>Las clases se nombran usando el formato <code>{property}{sides}-{size}</code> para <code>xs</code> y <code>{property}{sides}-{breakpoint}-{size}</code> para <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code> y <code>xxl</code>.</p>
+<p>Donde <em>property</em> es una de:</p>
 <ul>
-<li><code>m</code> - for classes that set <code>margin</code></li>
-<li><code>p</code> - for classes that set <code>padding</code></li>
+<li><code>m</code> - para clases que establecen <code>margin</code></li>
+<li><code>p</code> - para clases que configuran <code>padding</code></li>
 </ul>
-<p>Where <em>sides</em> is one of:</p>
+<p>Donde <em>sides</em> es uno de:</p>
 <ul>
-<li><code>t</code> - for classes that set <code>margin-top</code> or <code>padding-top</code></li>
-<li><code>b</code> - for classes that set <code>margin-bottom</code> or <code>padding-bottom</code></li>
-<li><code>s</code> - (start) for classes that set <code>margin-left</code> or <code>padding-left</code> in LTR, <code>margin-right</code> or <code>padding-right</code> in RTL</li>
-<li><code>e</code> - (end) for classes that set <code>margin-right</code> or <code>padding-right</code> in LTR, <code>margin-left</code> or <code>padding-left</code> in RTL</li>
-<li><code>x</code> - for classes that set both <code>*-left</code> and <code>*-right</code></li>
-<li><code>y</code> - for classes that set both <code>*-top</code> and <code>*-bottom</code></li>
-<li>blank - for classes that set a <code>margin</code> or <code>padding</code> on all 4 sides of the element</li>
+<li><code>t</code> - para clases que establecen <code>margin-top</code> o <code>padding-top</code></li>
+<li><code>b</code> - para clases que establecen <code>margin-bottom</code> o <code>padding-bottom</code></li>
+<li><code>s</code> - (start) para clases que establecen <code>margin-left</code> o <code>padding-left</code> en LTR, <code>margin-right</code> o <code>padding-right</code> en RTL</li>
+<li><code>e</code> - (end) para clases que establecen <code>margin-right</code> o <code>padding-right</code> en LTR, <code>margin-left</code> o <code>padding-left</code> en RTL</li>
+<li><code>x</code> - para clases que configuran tanto <code>*-left</code> como <code>*-right</code></li>
+<li><code>y</code> - para clases que configuran tanto <code>*-top</code> como <code>*-bottom</code></li>
+<li>en blanco - para clases que establecen un <code>margin</code> o <code>padding</code> en los 4 lados del elemento</li>
 </ul>
-<p>Where <em>size</em> is one of:</p>
+<p>Donde <em>size</em> es uno de:</p>
 <ul>
-<li><code>0</code> - for classes that eliminate the <code>margin</code> or <code>padding</code> by setting it to <code>0</code></li>
-<li><code>1</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer * .25</code></li>
-<li><code>2</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer * .5</code></li>
-<li><code>3</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer</code></li>
-<li><code>4</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer * 1.5</code></li>
-<li><code>5</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer * 3</code></li>
-<li><code>auto</code> - for classes that set the <code>margin</code> to auto</li>
+<li><code>0</code> - para clases que eliminan el <code>margin</code> o el <code>padding</code> configurándolo en <code>0</code></li>
+<li><code>1</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en <code>$spacer * .25</code></li>
+<li><code>2</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en <code>$spacer * .5</code></li>
+<li><code>3</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en <code>$spacer</code></li>
+<li><code>4</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en <code>$spacer * 1.5</code></li>
+<li><code>5</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en <code>$spacer * 3</code></li>
+<li><code>auto</code> - para clases que establecen el <code>margin</code> en auto</li>
 </ul>
-<p>(You can add more sizes by adding entries to the <code>$spacers</code> Sass map variable.)</p>
+<p>(Puedes agregar más tamaños agregando entradas a la variable de mapa Sass <code>$spacers</code>).</p>
 <h3 id="examples">Ejemplos <a class="anchor-link" href="#examples" aria-label="Link to this section: Examples"></a></h3>
-<p>Here are some representative examples of these classes:</p>
+<p>Aquí tienes algunos ejemplos representativos de estas clases:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.mt-0</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">margin-top</span><span class="o">:</span> <span class="mi">0</span> <span class="k">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -632,30 +632,30 @@
 </span></span><span class="line"><span class="cl"><span class="nc">.p-3</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">padding</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="k">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="horizontal-centering">Horizontal centering <a class="anchor-link" href="#horizontal-centering" aria-label="Link to this section: Horizontal centering"></a></h3>
-<p>Additionally, Bootstrap also includes an <code>.mx-auto</code> class for horizontally centering fixed-width block level content—that is, content that has <code>display: block</code> and a <code>width</code> set—by setting the horizontal margins to <code>auto</code>.</p>
+</span></span></code></pre></div><h3 id="horizontal-centering">Centrado horizontal <a class="anchor-link" href="#horizontal-centering" aria-label="Link to this section: Horizontal centering"></a></h3>
+<p>Además, Bootstrap también incluye una clase <code>.mx-auto</code> para centrar horizontalmente contenido a nivel de bloque de ancho fijo, es decir, contenido que tiene <code>display: block</code> y un conjunto de <code>width</code>, estableciendo los márgenes horizontales en <code>auto</code>.</p>
 <div class="bd-example">
   <div class="mx-auto p-2" style="width: 200px; background-color: rgba(var(--bd-violet-rgb),.15); border: rgba(var(--bd-violet-rgb),.3) solid 1px;">
-    Centered element
+    Elemento centrado
   </div>
 </div>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"mx-auto p-2"</span> <span class="na">style</span><span class="o">=</span><span class="s">"width: 200px;"</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  Centered element
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h2 id="negative-margin">Negative margin <a class="anchor-link" href="#negative-margin" aria-label="Link to this section: Negative margin"></a></h2>
-<p>In CSS, <code>margin</code> properties can utilize negative values (<code>padding</code> cannot). These negative margins are <strong>disabled by default</strong>, but can be enabled in Sass by setting <code>$enable-negative-margins: true</code>.</p>
-<p>The syntax is nearly the same as the default, positive margin utilities, but with the addition of <code>n</code> before the requested size. Here’s an example class that’s the opposite of <code>.mt-1</code>:</p>
+</span></span></code></pre></div><h2 id="negative-margin">Margen negativo <a class="anchor-link" href="#negative-margin" aria-label="Link to this section: Negative margin"></a></h2>
+<p>En CSS, las propiedades <code>margin</code> pueden utilizar valores negativos (<code>padding</code> no). Estos márgenes negativos están <strong>deshabilitados de forma predeterminada</strong>, pero se pueden habilitar en Sass configurando <code>$enable-negative-margins: true</code>.</p>
+<p>La sintaxis es casi la misma que la de las utilidades de margen positivo predeterminadas, pero con la adición de <code>n</code> antes del tamaño solicitado. Aquí hay una clase de ejemplo que es lo opuesto a <code>.mt-1</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.mt-n1</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">margin-top</span><span class="o">:</span> <span class="o">-</span><span class="mi">0</span><span class="mf">.25</span><span class="kt">rem</span> <span class="k">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h2 id="gap">Gap <a class="anchor-link" href="#gap" aria-label="Link to this section: Gap"></a></h2>
-<p>When using <code>display: grid</code> or <code>display: flex</code>, you can make use of <code>gap</code> utilities on the parent element. This can save on having to add margin utilities to individual children of a grid or flex container. Gap utilities are responsive by default, and are generated via our utilities API, based on the <code>$spacers</code> Sass map.</p>
+<p>Cuando usas <code>display: grid</code> o <code>display: flex</code>, puedes hacer uso de las utilidades <code>gap</code> en el elemento padre. Esto puede ahorrarte la necesidad de agregar utilidades de margen a elementos secundarios individuales de una cuadrícula o contenedor flexible. Las utilidades Gap son responsive de forma predeterminada y se generan a través de nuestra API de utilidades, basada en el mapa <code>$spacers</code> Sass.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid gap-3">
-  <div class="p-2 g-col-6">Grid item 1</div>
-  <div class="p-2 g-col-6">Grid item 2</div>
-  <div class="p-2 g-col-6">Grid item 3</div>
-  <div class="p-2 g-col-6">Grid item 4</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 1</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 2</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 3</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 4</div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -674,15 +674,15 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"p-2 g-col-6"</span><span class="p">&gt;</span>Grid item 4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Support includes responsive options for all of Bootstrap’s grid breakpoints, as well as six sizes from the <code>$spacers</code> map (<code>0</code>–<code>5</code>). There is no <code>.gap-auto</code> utility class as it’s effectively the same as <code>.gap-0</code>.</p>
+<p>El soporte incluye opciones responsive para todos los puntos de interrupción de la cuadrícula de Bootstrap, así como seis tamaños del mapa <code>$spacers</code> (<code>0</code>–<code>5</code>). No existe una clase de utilidad <code>.gap-auto</code>, ya que en realidad es lo mismo que <code>.gap-0</code>.</p>
 <h3 id="row-gap">row-gap <a class="anchor-link" href="#row-gap" aria-label="Link to this section: row-gap"></a></h3>
-<p><code>row-gap</code> sets the vertical space between children items in the specified container.</p>
+<p><code>row-gap</code> establece el espacio vertical entre elementos secundarios en el contenedor especificado.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid gap-0 row-gap-3">
-  <div class="p-2 g-col-6">Grid item 1</div>
-  <div class="p-2 g-col-6">Grid item 2</div>
-  <div class="p-2 g-col-6">Grid item 3</div>
-  <div class="p-2 g-col-6">Grid item 4</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 1</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 2</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 3</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 4</div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -702,13 +702,13 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
 <h3 id="column-gap">column-gap <a class="anchor-link" href="#column-gap" aria-label="Link to this section: column-gap"></a></h3>
-<p><code>column-gap</code> sets the horizontal space between children items in the specified container.</p>
+<p><code>column-gap</code> establece el espacio horizontal entre elementos secundarios en el contenedor especificado.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bd-example-cssgrid">
 <div class="grid gap-0 column-gap-3">
-  <div class="p-2 g-col-6">Grid item 1</div>
-  <div class="p-2 g-col-6">Grid item 2</div>
-  <div class="p-2 g-col-6">Grid item 3</div>
-  <div class="p-2 g-col-6">Grid item 4</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 1</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 2</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 3</div>
+  <div class="p-2 g-col-6">Elemento de cuadrícula 4</div>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
@@ -729,7 +729,7 @@
 
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-maps">Mapas de Sass <a class="anchor-link" href="#sass-maps" aria-label="Link to this section: Sass maps"></a></h3>
-<p>Spacing utilities are declared via Sass map and then generated with our utilities API.</p>
+<p>Las utilidades de espaciado se declaran a través del mapa Sass y luego se generan con nuestra API de utilidades.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_variables.scss">scss/_variables.scss</a>
@@ -749,7 +749,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div></div>
 <h3 id="sass-utilities-api">API de utilidades de Sass <a class="anchor-link" href="#sass-utilities-api" aria-label="Link to this section: Sass utilities API"></a></h3>
-<p>Spacing utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<p>Las utilidades de espaciado se declaran en nuestra API de utilidades en <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api/#using-the-api">Aprende a utilizar la API de utilidades.</a></p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.2/scss/_utilities.scss">scss/_utilities.scss</a>
