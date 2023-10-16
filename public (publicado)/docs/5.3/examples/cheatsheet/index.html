@@ -1,0 +1,1926 @@
+<!DOCTYPE html><html lang="es" data-bs-theme="auto"><head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Cheatsheet · Bootstrap en Español v5.3</title>
+
+    <link rel="canonical" href="https://bootstrap-esdocu.com/docs/5.3/examples/cheatsheet/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cheatsheet.css" rel="stylesheet">
+  <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290" crossorigin="anonymous"></script></head>
+  <body class="bg-body-tertiary">
+    <svg class="d-none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Alternar tema (automático)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Alternar tema</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+  <div class="container-fluid d-flex align-items-center">
+    <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+      <img src="/docs/5.3/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap">
+      Cheatsheet
+    </h1>
+    <a href="/docs/5.3/examples/cheatsheet-rtl/" class="ms-auto link-light" hreflang="ar">Hoja de trucos RTL</a>
+  </div>
+</header>
+<aside class="bd-aside sticky-xl-top text-body-secondary align-self-start mb-3 mb-xl-5 px-2">
+  <h2 class="h6 pt-4 pb-3 mb-4 border-bottom">En esta página</h2>
+  <nav class="small" id="toc">
+    <ul class="list-unstyled">
+      <li class="my-2">
+        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contenidos</button>
+        <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#typography">Tipografía</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#images">Imágenes</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#tables">Tablas</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#figures">Figuras</a></li>
+        </ul>
+      </li>
+      <li class="my-2">
+        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Formularios</button>
+        <ul class="list-unstyled ps-3 collapse" id="forms-collapse">
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#overview">Descripción general</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#disabled-forms">Formularios deshabilitados</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#sizing">Tamaños</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#input-group">Grupo de entrada</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#floating-labels">Etiquetas flotantes</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#validation">Validación</a></li>
+        </ul>
+      </li>
+      <li class="my-2">
+        <button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Componentes</button>
+        <ul class="list-unstyled ps-3 collapse" id="components-collapse">
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#accordion">Acordeón</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#alerts">Alertas</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#badge">Insignia</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#breadcrumb">Breadcrumb</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#buttons">Botones</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#button-group">Grupo de botones</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#card">Tarjeta</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#carousel">Carrusel</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#dropdowns">Desplegables</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#list-group">Grupo de lista</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#modal">Modal</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#navs">Navs</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#navbar">Barra de navegación</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#pagination">Paginación</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#popovers">Popovers</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#progress">Progreso</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#scrollspy">Scrollspy</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#spinners">Spinners</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#toasts">Toasts</a></li>
+          <li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
+<div class="bd-cheatsheet container-fluid bg-body">
+  <section id="content">
+    <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Contenidos</h2>
+
+    <article class="my-3" id="typography">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Tipografía</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/content/typography/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <p class="display-1">Display 1</p>
+        <p class="display-2">Display 2</p>
+        <p class="display-3">Display 3</p>
+        <p class="display-4">Display 4</p>
+        <p class="display-5">Display 5</p>
+        <p class="display-6">Display 6</p>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <p class="h1">Título 1</p>
+        <p class="h2">Título 2</p>
+        <p class="h3">Título 3</p>
+        <p class="h4">Título 4</p>
+        <p class="h5">Título 5</p>
+        <p class="h6">Título 6</p>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <p class="lead">
+          Este es un párrafo inicial. Se destaca de los párrafos habituales.
+        </p>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <p>Puedes usar la etiqueta de mark para <mark>resaltar</mark> texto.</p>
+        <p><del>Esta línea de texto debe tratarse como texto eliminado.</del></p>
+        <p><s>Esta línea de texto debe tratarse como si ya no fuera precisa.</s></p>
+        <p><ins>Esta línea de texto debe tratarse como una adición al documento.</ins></p>
+        <p><u>Esta línea de texto se mostrará subrayada.</u></p>
+        <p><small>Esta línea de texto debe tratarse como letra pequeña.</small></p>
+        <p><strong>Esta línea aparece como texto en negrita.</strong></p>
+        <p><em>Esta línea se muestra como texto en cursiva.</em></p>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <hr>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <blockquote class="blockquote">
+          <p>Una cita muy conocida, contenida en un elemento blockquote.</p>
+          <footer class="blockquote-footer">Alguien famoso en <cite title="Source Title">Source Title</cite></footer>
+        </blockquote>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <ul class="list-unstyled">
+          <li>Esta es una lista.</li>
+          <li>Parece completamente sin estilo.</li>
+          <li>Estructuralmente, sigue siendo una lista.</li>
+          <li>Sin embargo, este estilo solo se aplica a elementos secundarios inmediatos.</li>
+          <li>Listas anidadas:
+    <ul>
+              <li>no se ven afectados por este estilo</li>
+              <li>seguirá mostrando una viñeta</li>
+              <li>y tener un margen izquierdo apropiado</li>
+            </ul>
+          </li>
+          <li>Esto aún puede resultar útil en algunas situaciones.</li>
+        </ul>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <ul class="list-inline">
+          <li class="list-inline-item">Este es un elemento de la lista.</li>
+          <li class="list-inline-item">Y otro más.</li>
+          <li class="list-inline-item">Pero se muestran en línea.</li>
+        </ul>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="images">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Imágenes</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/content/images/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" role="img" aria-label="Marcador de posición: Imagen responsive" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Imagen responsive</text></svg>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <svg class="bd-placeholder-img img-thumbnail" width="200" height="200" role="img" aria-label="Una imagen de marcador de posición (placeholder) cuadrada genérica con un borde blanco alrededor, que parece una fotografía tomada con una cámara instantánea antigua: 200x200" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Una imagen genérica de marcador de posición cuadrado con un borde blanco alrededor, lo que la hace parecerse a una fotografía tomada con una vieja cámara instantánea.</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200</text></svg>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="tables">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Tablas</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/content/tables/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Primero</th>
+            <th scope="col">Último</th>
+            <th scope="col">Manejar</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <table class="table table-dark table-borderless">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Primero</th>
+            <th scope="col">Último</th>
+            <th scope="col">Manejar</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th scope="col">Clase</th>
+            <th scope="col">Título</th>
+            <th scope="col">Título</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Predeterminado</th>
+            <td>Celda</td>
+            <td>Celda</td>
+          </tr>
+          
+          <tr class="table-primary">
+            <th scope="row">Primary</th>
+            <td>Celda</td>
+            <td>Celda</td>
+          </tr>
+          <tr class="table-secondary">
+            <th scope="row">Secondary</th>
+            <td>Celda</td>
+            <td>Celda</td>
+          </tr>
+          <tr class="table-success">
+            <th scope="row">Success</th>
+            <td>Celda</td>
+            <td>Celda</td>
+          </tr>
+          <tr class="table-danger">
+            <th scope="row">Danger</th>
+            <td>Celda</td>
+            <td>Celda</td>
+          </tr>
+          <tr class="table-warning">
+            <th scope="row">Warning</th>
+            <td>Celda</td>
+            <td>Celda</td>
+          </tr>
+          <tr class="table-info">
+            <th scope="row">Info</th>
+            <td>Celda</td>
+            <td>Celda</td>
+          </tr>
+          <tr class="table-light">
+            <th scope="row">Light</th>
+            <td>Celda</td>
+            <td>Celda</td>
+          </tr>
+          <tr class="table-dark">
+            <th scope="row">Dark</th>
+            <td>Celda</td>
+            <td>Celda</td>
+          </tr>
+          </tbody>
+        </table>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <table class="table table-sm table-bordered">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Primero</th>
+            <th scope="col">Último</th>
+            <th scope="col">Manejar</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </table>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="figures">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Figuras</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/content/figures/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <figure class="figure">
+          <svg class="bd-placeholder-img figure-img img-fluid rounded" width="400" height="300" role="img" aria-label="Marcador de posición: 400x300" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x300</text></svg>
+          <figcaption class="figure-caption">Un título para la imagen de arriba.</figcaption>
+        </figure>
+        </div></div>
+
+      </div>
+    </article>
+  </section>
+
+  <section id="forms">
+    <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Formularios</h2>
+
+    <article class="my-3" id="overview">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Descripción general</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/forms/overview/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Dirección de correo electrónico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleSelect" class="form-label">Menú de selección</label>
+            <select class="form-select" id="exampleSelect">
+              <option selected="">Abre este menú de selección</option>
+              <option value="1">Uno</option>
+              <option value="2">Dos</option>
+              <option value="3">Tres</option>
+            </select>
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Échame un vistazo</label>
+          </div>
+          <fieldset class="mb-3">
+            <legend>Botones de radios</legend>
+            <div class="form-check">
+              <input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
+              <label class="form-check-label" for="exampleRadio1">Radio predeterminada</label>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
+              <label class="form-check-label" for="exampleRadio2">Otro radio</label>
+            </div>
+          </fieldset>
+          <div class="mb-3">
+            <label class="form-label" for="customFile">Subir</label>
+            <input type="file" class="form-control" id="customFile">
+          </div>
+          <div class="mb-3 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked="">
+            <label class="form-check-label" for="flexSwitchCheckChecked">Entrada de casilla de verificación de interruptor marcada</label>
+          </div>
+          <div class="mb-3">
+            <label for="customRange3" class="form-label">Rango de ejemplo</label>
+            <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="disabled-forms">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Formularios deshabilitados</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/forms/overview/#disabled-forms">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <form>
+          <fieldset disabled="" aria-label="Ejemplo de conjunto de campos deshabilitado">
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Entrada deshabilitada</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Entrada deshabilitada">
+            </div>
+            <div class="mb-3">
+              <label for="disabledSelect" class="form-label">Menú de selección deshabilitado</label>
+              <select id="disabledSelect" class="form-select">
+                <option>Select deshabilitado</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled="">
+                <label class="form-check-label" for="disabledFieldsetCheck">
+                  No puedo marcar esto
+                </label>
+              </div>
+            </div>
+            <fieldset class="mb-3">
+              <legend>Botones de radios deshabilitados</legend>
+              <div class="form-check">
+                <input type="radio" name="radios" class="form-check-input" id="disabledRadio1" disabled="">
+                <label class="form-check-label" for="disabledRadio1">Radio deshabilitada</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="radio" name="radios" class="form-check-input" id="disabledRadio2" disabled="">
+                <label class="form-check-label" for="disabledRadio2">Otro radio</label>
+              </div>
+            </fieldset>
+            <div class="mb-3">
+              <label class="form-label" for="disabledCustomFile">Subir</label>
+              <input type="file" class="form-control" id="disabledCustomFile" disabled="">
+            </div>
+            <div class="mb-3 form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="disabledSwitchCheckChecked" checked="" disabled="">
+              <label class="form-check-label" for="disabledSwitchCheckChecked">Entrada de casilla de verificación de interruptor marcada deshabilitada</label>
+            </div>
+            <div class="mb-3">
+              <label for="disabledRange" class="form-label">Rango deshabilitado</label>
+              <input type="range" class="form-range" min="0" max="5" step="0.5" id="disabledRange">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </fieldset>
+        </form>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="sizing">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Tamaños</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/forms/form-control/#sizing">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="mb-3">
+          <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg ejemplo">
+        </div>
+        <div class="mb-3">
+          <select class="form-select form-select-lg" aria-label="Ejemplo .form-select-lg">
+            <option selected="">Abre este menú de selección</option>
+            <option value="1">Uno</option>
+            <option value="2">Dos</option>
+            <option value="3">Tres</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <input type="file" class="form-control form-control-lg" aria-label="Ejemplo de entrada de archivo grande">
+        </div>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="mb-3">
+          <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label="ejemplo .form-control-sm">
+        </div>
+        <div class="mb-3">
+          <select class="form-select form-select-sm" aria-label="Ejemplo .form-select-sm">
+            <option selected="">Abre este menú de selección</option>
+            <option value="1">Uno</option>
+            <option value="2">Dos</option>
+            <option value="3">Tres</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <input type="file" class="form-control form-control-sm" aria-label="Ejemplo de entrada de archivo pequeño">
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="input-group">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Grupo de entrada</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/forms/input-group/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">@</span>
+          <input type="text" class="form-control" placeholder="Nombre de usuario" aria-label="Nombre de usuario" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Nombre de usuario del destinatario" aria-label="Nombre de usuario del destinatario" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2">@ejemplo.com</span>
+        </div>
+        <label for="basic-url" class="form-label">Tu URL personalizada</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">https://ejemplos.com/usuarios/</span>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text">$</span>
+          <input type="text" class="form-control" aria-label="Monto (al dólar más cercano)">
+          <span class="input-group-text">.00</span>
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Con textarea</span>
+          <textarea class="form-control" aria-label="Con textarea"></textarea>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="floating-labels">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Etiquetas flotantes</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/forms/floating-labels/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <form>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Dirección de correo electrónico</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+            <label for="floatingPassword">Contraseña</label>
+          </div>
+        </form>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="validation">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Validación</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/forms/validation/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <label for="validationServer01" class="form-label">Nombre</label>
+            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required="">
+            <div class="valid-feedback">
+              ¡Se ve bien!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationServer02" class="form-label">Apellido</label>
+            <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" required="">
+            <div class="valid-feedback">
+              ¡Se ve bien!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationServerUsername" class="form-label">Nombre de usuario</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend3">@</span>
+              <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required="">
+              <div class="invalid-feedback">
+                Elige un nombre de usuario.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationServer03" class="form-label">Ciudad</label>
+            <input type="text" class="form-control is-invalid" id="validationServer03" required="">
+            <div class="invalid-feedback">
+              Proporciona una ciudad válida.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationServer04" class="form-label">Estado</label>
+            <select class="form-select is-invalid" id="validationServer04" required="">
+              <option selected="" disabled="" value="">Elige...</option>
+              <option>...</option>
+            </select>
+            <div class="invalid-feedback">
+              Selecciona un estado válido.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationServer05" class="form-label">Zip</label>
+            <input type="text" class="form-control is-invalid" id="validationServer05" required="">
+            <div class="invalid-feedback">
+              Proporciona un código postal válido.
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required="">
+              <label class="form-check-label" for="invalidCheck3">
+                Acepta los términos y condiciones
+              </label>
+              <div class="invalid-feedback">
+                Debes aceptar antes de enviar.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar formulario</button>
+          </div>
+        </form>
+        </div></div>
+
+      </div>
+    </article>
+  </section>
+
+  <section id="components">
+    <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Componentes</h2>
+
+    <article class="my-3" id="accordion">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Acordeón</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/accordion/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h4 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Acordeón Item #1
+              </button>
+            </h4>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Este es el cuerpo de acordeón del primer elemento.</strong> Está oculto de forma predeterminada, hasta que el complemento contraer agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como mostrar y ocultar mediante transiciones CSS. Puede modificar todo esto con CSS personalizado o sobrescribendo nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Acordeón Item #2
+              </button>
+            </h4>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Este es el cuerpo de acordeón del segundo elemento.</strong> Está oculto de forma predeterminada, hasta que el complemento collapse agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como mostrar y ocultar mediante transiciones CSS. Puedes modificar todo esto con CSS personalizado o sobrescribendo nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+      </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Acordeón Item #3
+              </button>
+            </h4>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Este es el cuerpo de acordeón del tercer elemento.</strong> Está oculto de forma predeterminada, hasta que el complemento collapse agrega las clases apropiadas que usamos para diseñar cada elemento. Estas clases controlan la apariencia general, así como mostrar y ocultar mediante transiciones CSS. Puedes modificar todo esto con CSS personalizado o sobrescribendo nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+      </div>
+            </div>
+          </div>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="alerts">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Alertas</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/alerts/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+  Una alerta principal sencilla con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+        <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+  Una alerta secundaria simple con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+  Una alerta de éxito sencilla con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+  Una alerta de peligro sencilla con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  Una alerta de advertencia simple con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+  Una alerta de información sencilla con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+        <div class="alert alert-light alert-dismissible fade show" role="alert">
+  Una alerta clara sencilla con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+        <div class="alert alert-dark alert-dismissible fade show" role="alert">
+  Una alerta oscura simple con <a href="#" class="alert-link">un enlace de ejemplo</a>. Dale un clic si quieres.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">¡Bien hecho!</h4>
+          <p>Ah sí, leíste correctamente este importante mensaje de alerta. Este texto de ejemplo se extenderá un poco más para que puedas ver cómo funciona el espaciado dentro de una alerta con este tipo de contenido.</p>
+          <hr>
+          <p class="mb-0">Siempre que lo necesites, asegúrate de usar utilidades de margen para mantener todo limpio y ordenado.</p>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="badge">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Insignia</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/badge/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <p class="h1">Encabezado de ejemplo <span class="badge bg-primary">Nuevo</span></p>
+        <p class="h2">Encabezado de ejemplo <span class="badge bg-secondary">Nuevo</span></p>
+        <p class="h3">Encabezado de ejemplo <span class="badge bg-success">Nuevo</span></p>
+        <p class="h4">Encabezado de ejemplo <span class="badge bg-danger">Nuevo</span></p>
+        <p class="h5">Encabezado de ejemplo <span class="badge text-bg-warning">Nuevo</span></p>
+        <p class="h6">Encabezado de ejemplo <span class="badge text-bg-info">Nuevo</span></p>
+        <p class="h6">Encabezado de ejemplo <span class="badge text-bg-light">Nuevo</span></p>
+        <p class="h6">Encabezado de ejemplo <span class="badge bg-dark">Nuevo</span></p>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        
+        <span class="badge rounded-pill bg-primary">Primary</span>
+        <span class="badge rounded-pill bg-secondary">Secondary</span>
+        <span class="badge rounded-pill bg-success">Success</span>
+        <span class="badge rounded-pill bg-danger">Danger</span>
+        <span class="badge rounded-pill text-bg-warning">Warning</span>
+        <span class="badge rounded-pill text-bg-info">Info</span>
+        <span class="badge rounded-pill text-bg-light">Light</span>
+        <span class="badge rounded-pill bg-dark">Dark</span>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="breadcrumb">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Breadcrumb</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/breadcrumb/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#">Biblioteca</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Datos</li>
+          </ol>
+        </nav>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="buttons">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Botones</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/buttons/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+
+        <button type="button" class="btn btn-link">Enlace</button>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <button type="button" class="btn btn-primary btn-sm">Botón pequeño</button>
+        <button type="button" class="btn btn-primary">Botón estándar</button>
+        <button type="button" class="btn btn-primary btn-lg">Botón grande</button>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="button-group">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Grupo de botones</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/button-group/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="btn-toolbar" role="toolbar" aria-label="Barra de herramientas con grupos de botones">
+          <div class="btn-group me-2" role="group" aria-label="Primer grupo">
+            <button type="button" class="btn btn-secondary">1</button>
+            <button type="button" class="btn btn-secondary">2</button>
+            <button type="button" class="btn btn-secondary">3</button>
+            <button type="button" class="btn btn-secondary">4</button>
+          </div>
+          <div class="btn-group me-2" role="group" aria-label="Segundo grupo">
+            <button type="button" class="btn btn-secondary">5</button>
+            <button type="button" class="btn btn-secondary">6</button>
+            <button type="button" class="btn btn-secondary">7</button>
+          </div>
+          <div class="btn-group" role="group" aria-label="Tercer grupo">
+            <button type="button" class="btn btn-secondary">8</button>
+          </div>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="card">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Tarjeta</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/card/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="row  row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="180" role="img" aria-label="Marcador de posición: Cap de imagen" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+              <div class="card-body">
+                <h5 class="card-title">Título de la tarjeta</h5>
+                <p class="card-text">Un texto de ejemplo rápido para desarrollar el título de la tarjeta y constituir la mayor parte del contenido de la tarjeta.</p>
+                <a href="#" class="btn btn-primary">Ve a algún lado</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                Destacados
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Título de la tarjeta</h5>
+                <p class="card-text">Un texto de ejemplo rápido para desarrollar el título de la tarjeta y constituir la mayor parte del contenido de la tarjeta.</p>
+                <a href="#" class="btn btn-primary">Ve a algún lado</a>
+              </div>
+              <div class="card-footer text-body-secondary">
+                Hace 2 días
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Título de la tarjeta</h5>
+                <p class="card-text">Un texto de ejemplo rápido para desarrollar el título de la tarjeta y constituir la mayor parte del contenido de la tarjeta.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Un elemento</li>
+                <li class="list-group-item">Un segundo elemento</li>
+                <li class="list-group-item">Un tercer elemento</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Enlace de tarjeta</a>
+                <a href="#" class="card-link">Otro enlace</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <svg class="bd-placeholder-img" width="100%" height="250" role="img" aria-label="Marcador de posición: Imagen" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Imagen</text></svg>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Título de la tarjeta</h5>
+                    <p class="card-text">Esta es una tarjeta más amplia con texto de respaldo a continuación como introducción natural al contenido adicional. Este contenido es un poco más largo.</p>
+                    <p class="card-text"><small class="text-body-secondary">Última actualización hace 3 minutos</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="carousel">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Carrusel</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/carousel/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Primera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">Primera diapositiva</text></svg>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Primera etiqueta de diapositiva</h5>
+                <p>Algún contenido de marcador de posición representativo para la primera diapositiva.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Segunda diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Segunda diapositiva</text></svg>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Etiqueta de la segunda diapositiva</h5>
+                <p>Algún contenido de marcador de posición representativo para la segunda diapositiva.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" role="img" aria-label="Marcador de posición: Tercera diapositiva" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Marcador de posición</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Tercera diapositiva</text></svg>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Etiqueta de la tercera diapositiva</h5>
+                <p>Algún contenido de marcador de posición representativo para la tercera diapositiva.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="dropdowns">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Desplegables</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/dropdowns/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
+          <div class="dropdown">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Botón desplegable
+            </button>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Encabezado de dropdown</h6></li>
+              <li><a class="dropdown-item" href="#">Acción</a></li>
+              <li><a class="dropdown-item" href="#">Otra acción</a></li>
+              <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Enlace separado</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Botón desplegable
+            </button>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Encabezado de dropdown</h6></li>
+              <li><a class="dropdown-item" href="#">Acción</a></li>
+              <li><a class="dropdown-item" href="#">Otra acción</a></li>
+              <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Enlace separado</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Botón desplegable
+            </button>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Encabezado de dropdown</h6></li>
+              <li><a class="dropdown-item" href="#">Acción</a></li>
+              <li><a class="dropdown-item" href="#">Otra acción</a></li>
+              <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Enlace separado</a></li>
+            </ul>
+          </div>
+        </div>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Acción</a></li>
+            <li><a class="dropdown-item" href="#">Otra acción</a></li>
+            <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Acción</a></li>
+            <li><a class="dropdown-item" href="#">Otra acción</a></li>
+            <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Acción</a></li>
+            <li><a class="dropdown-item" href="#">Otra acción</a></li>
+            <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Acción</a></li>
+            <li><a class="dropdown-item" href="#">Otra acción</a></li>
+            <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Acción</a></li>
+            <li><a class="dropdown-item" href="#">Otra acción</a></li>
+            <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Acción</a></li>
+            <li><a class="dropdown-item" href="#">Otra acción</a></li>
+            <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
+          <div class="dropend">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Botón Dropend
+            </button>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Encabezado de dropdown</h6></li>
+              <li><a class="dropdown-item" href="#">Acción</a></li>
+              <li><a class="dropdown-item" href="#">Otra acción</a></li>
+              <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Enlace separado</a></li>
+            </ul>
+          </div>
+          <div class="dropup">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Botón desplegable
+            </button>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Encabezado de dropdown</h6></li>
+              <li><a class="dropdown-item" href="#">Acción</a></li>
+              <li><a class="dropdown-item" href="#">Otra acción</a></li>
+              <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Enlace separado</a></li>
+            </ul>
+          </div>
+          <div class="dropstart">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Botón Dropstart
+            </button>
+            <ul class="dropdown-menu">
+              <li><h6 class="dropdown-header">Encabezado de dropdown</h6></li>
+              <li><a class="dropdown-item" href="#">Acción</a></li>
+              <li><a class="dropdown-item" href="#">Otra acción</a></li>
+              <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Enlace separado</a></li>
+            </ul>
+          </div>
+        </div>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="btn-group">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menú alineado al final
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><h6 class="dropdown-header">Encabezado de dropdown</h6></li>
+              <li><a class="dropdown-item" href="#">Acción</a></li>
+              <li><a class="dropdown-item" href="#">Otra acción</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Enlace separado</a></li>
+            </ul>
+          </div>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="list-group">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Grupo de lista</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/list-group/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <ul class="list-group">
+          <li class="list-group-item disabled" aria-disabled="true">Un elemento deshabilitado</li>
+          <li class="list-group-item">Un segundo elemento</li>
+          <li class="list-group-item">Un tercer elemento</li>
+          <li class="list-group-item">Un cuarto elemento</li>
+          <li class="list-group-item">Y un quinto</li>
+        </ul>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Un elemento</li>
+          <li class="list-group-item">Un segundo elemento</li>
+          <li class="list-group-item">Un tercer elemento</li>
+          <li class="list-group-item">Un cuarto elemento</li>
+          <li class="list-group-item">Y un quinto</li>
+        </ul>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">Un elemento de grupo de lista predeterminado simple</a>
+          
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Un elemento de grupo de lista principal simple</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">Un simple elemento de grupo de lista secundaria</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-success">Un elemento de grupo de lista de éxito simple</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Un elemento de grupo de lista de peligros simple</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Un elemento de grupo de lista de advertencia simple</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-info">Un elemento de grupo de lista de información simple</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-light">Un elemento de grupo de lista claro simple</a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Un simple elemento de grupo de lista oscura</a>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="modal">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Modal</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/modal/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="d-flex justify-content-between flex-wrap">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalDefault">
+            Iniciar modo de demostración
+          </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropLive">
+            Iniciar modo de fondo estático
+          </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
+            Modal desplazable centrado verticalmente
+          </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">
+            Pantalla completa
+          </button>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="navs">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Navs</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/navs-tabs/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <nav class="nav">
+          <a class="nav-link active" aria-current="page" href="#">Activo</a>
+          <a class="nav-link" href="#">Enlace</a>
+          <a class="nav-link" href="#">Enlace</a>
+          <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
+        </nav>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <nav>
+          <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Inicio</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Perfil</button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contacto</button>
+          </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <p>Este es un contenido de marcador de posición asociado a la <strong>pestaña Inicio</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta para la siguiente. La pestaña JavaScript intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra navegación basada en <code>.nav</code>.</p>
+          </div>
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <p>Este es un contenido de marcador de posición asociado a la <strong>pestaña Perfil</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta para la siguiente. La pestaña JavaScript intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra navegación basada en <code>.nav</code>.</p>
+          </div>
+          <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <p>Este es un contenido de marcador de posición asociado a la <strong>pestaña Contacto</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta para la siguiente. La pestaña JavaScript intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra navegación basada en <code>.nav</code>.</p>
+          </div>
+        </div>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Activo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Enlace</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Enlace</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
+          </li>
+        </ul>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="navbar">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Barra de navegación</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/navbar/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="/docs/5.3/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy" style="filter: invert(1) grayscale(100%) brightness(200%);">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegación">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Enlace</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Desplegable
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Acción</a></li>
+                    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-dark" type="submit">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-5">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="/docs/5.3/assets/brand/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Alternar navegación">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Enlace</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Desplegable
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Acción</a></li>
+                    <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Algo más aquí.</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-outline-light" type="submit">Buscar</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="pagination">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Paginación</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/pagination/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <nav aria-label="Ejemplo de paginación">
+          <ul class="pagination pagination-sm">
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+          </ul>
+        </nav>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <nav aria-label="Ejemplo de paginación estándar">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Anterior">
+                <span aria-hidden="true">«</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Siguiente">
+                <span aria-hidden="true">»</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <nav aria-label="Otro ejemplo de paginación">
+          <ul class="pagination pagination-lg flex-wrap">
+            <li class="page-item disabled">
+              <a class="page-link">Anterior</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Siguiente</a>
+            </li>
+          </ul>
+        </nav>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="popovers">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Popovers</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/popovers/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Título de popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Haz clic para alternar la ventana emergente</button>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          Popover superior
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          Popover on end
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          Popover en la parte inferior
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+          Popover on start
+        </button>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="progress">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Progreso</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/progress/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="progress mb-3" role="progressbar" aria-label="Ejemplo con etiqueta" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar">0%</div>
+        </div>
+        <div class="progress mb-3" role="progressbar" aria-label="Ejemplo de éxito con etiqueta" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar bg-success w-25">25%</div>
+        </div>
+        <div class="progress mb-3" role="progressbar" aria-label="Ejemplo de información con etiqueta" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar text-bg-info w-50">50%</div>
+        </div>
+        <div class="progress mb-3" role="progressbar" aria-label="Ejemplo de advertencia con etiqueta" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar text-bg-warning w-75">75%</div>
+        </div>
+        <div class="progress" role="progressbar" aria-label="Ejemplo de peligro con etiqueta" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar bg-danger w-100">100%</div>
+        </div>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        <div class="progress-stacked">
+          <div class="progress" role="progressbar" aria-label="Segmento uno: ejemplo predeterminado" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar"></div>
+          </div>
+          <div class="progress" role="progressbar" aria-label="Segmento dos: ejemplo de éxito con rayas animadas" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"></div>
+          </div>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="scrollspy">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Scrollspy</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/scrollspy/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example">
+          <nav id="navbar-example2" class="navbar bg-body-tertiary px-3">
+            <a class="navbar-brand" href="#">Barra de navegación</a>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" href="#scrollspyHeading1">Primero</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Segundo</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Desplegable</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#scrollspyHeading3">Tercero</a></li>
+                  <li><a class="dropdown-item" href="#scrollspyHeading4">Cuarto</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#scrollspyHeading5">Quinto</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example position-relative mt-2 overflow-auto" tabindex="0">
+            <h4 id="scrollspyHeading1">Primer encabezado</h4>
+            <p>Este es un contenido de marcador de posición para la página de scrollspy. Ten en cuenta que a medida que te desplazas hacia abajo en la página, se resalta el enlace de navegación apropiado. Se repite a lo largo del ejemplo del componente. Seguimos agregando más copias de ejemplo aquí para enfatizar el desplazamiento y el resaltado.</p>
+            <h4 id="scrollspyHeading2">Segundo encabezado</h4>
+            <p>Este es un contenido de marcador de posición para la página de scrollspy. Ten en cuenta que a medida que te desplazas hacia abajo en la página, se resalta el enlace de navegación apropiado. Se repite a lo largo del ejemplo del componente. Seguimos agregando más copias de ejemplo aquí para enfatizar el desplazamiento y el resaltado.</p>
+            <h4 id="scrollspyHeading3">Tercer encabezado</h4>
+            <p>Este es un contenido de marcador de posición para la página de scrollspy. Ten en cuenta que a medida que te desplazas hacia abajo en la página, se resalta el enlace de navegación apropiado. Se repite a lo largo del ejemplo del componente. Seguimos agregando más copias de ejemplo aquí para enfatizar el desplazamiento y el resaltado.</p>
+            <h4 id="scrollspyHeading4">Cuarto encabezado</h4>
+            <p>Este es un contenido de marcador de posición para la página de scrollspy. Ten en cuenta que a medida que te desplazas hacia abajo en la página, se resalta el enlace de navegación apropiado. Se repite a lo largo del ejemplo del componente. Seguimos agregando más copias de ejemplo aquí para enfatizar el desplazamiento y el resaltado.</p>
+            <h4 id="scrollspyHeading5">Quinto encabezado</h4>
+            <p>Este es un contenido de marcador de posición para la página de scrollspy. Ten en cuenta que a medida que te desplazas hacia abajo en la página, se resalta el enlace de navegación apropiado. Se repite a lo largo del ejemplo del componente. Seguimos agregando más copias de ejemplo aquí para enfatizar el desplazamiento y el resaltado.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="my-3" id="spinners">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Spinners</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/spinners/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-border text-secondary" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-border text-danger" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-border text-warning" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-border text-info" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-border text-light" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-border text-dark" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        </div></div>
+
+
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+        
+        <div class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-grow text-secondary" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-grow text-success" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-grow text-danger" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-grow text-warning" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-grow text-info" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-grow text-light" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <div class="spinner-grow text-dark" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="my-3" id="toasts">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Toasts</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/toasts/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 bg-dark p-5 align-items-center">
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+            <strong class="me-auto">Bootstrap</strong>
+            <small class="text-body-secondary">Hace 11 minutos</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+          </div>
+          <div class="toast-body">
+            ¡Hola mundo! Este es un mensaje de toast.
+          </div>
+        </div>
+        </div></div>
+
+      </div>
+    </article>
+    <article class="mt-3 mb-5 pb-5" id="tooltips">
+      <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        <h3>Tooltips</h3>
+        <a class="d-flex align-items-center" href="/docs/5.3/components/tooltips/">Documentación</a>
+      </div>
+
+      <div>
+        <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0 tooltip-demo">
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltips en la parte superior">Tooltips en la parte superior</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltips al final">Tooltips al final</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltips en la parte inferior">Tooltips en la parte inferior</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltips al iniciar">Tooltips al iniciar</button>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>con</u> <b>HTML</b>">Tooltips con HTML</button>
+        </div></div>
+
+      </div>
+    </article>
+  </section>
+</div>
+
+<div class="modal fade" id="exampleModalDefault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Título modal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLiveLabel">Título modal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>No me cerraré si haces clic fuera de mí. Ni siquiera intentes presionar la tecla Escape.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Entendido.</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">Título modal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p>Este es un contenido de marcador de posición para mostrar el comportamiento de desplazamiento de los modales. Usamos saltos de línea repetidos para demostrar cómo el contenido puede exceder la altura interna mínima, mostrando así el desplazamiento interno. Cuando el contenido supera la altura máxima predefinida del modal, el contenido se recortará y se podrá desplazar dentro del modal.</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p>Este contenido debería aparecer en la parte inferior después de que te desplaces.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Modal de pantalla completa</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="cheatsheet.js"></script>
+
+</body></html>

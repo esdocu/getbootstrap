@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Realiza un seguimiento y revisa los cambios en los archivos fuente, la documentación y los componentes de Bootstrap para ayudarte a migrar de la v4 a v5.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.91.2">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.1">
+
+<title>Migración a v5 · Bootstrap 5 en Español v5.1</title>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290" crossorigin="anonymous"></script>
+
+
+
+<!-- Bootstrap core CSS -->
+<link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="Migración a v5">
+<meta name="twitter:description" content="Realiza un seguimiento y revisa los cambios en los archivos fuente, la documentación y los componentes de Bootstrap para ayudarte a migrar de la v4 a v5.">
+<meta name="twitter:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://bootstrap-esdocu.com/docs/5.1/migration/">
+<meta property="og:title" content="Migración a v5">
+<meta property="og:description" content="Realiza un seguimiento y revisa los cambios en los archivos fuente, la documentación y los componentes de Bootstrap para ayudarte a migrar de la v4 a v5.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="500">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DK014C26F7');
+</script>
+
+  </head>
+  <body>
+    <div class="skippy visually-hidden-focusable overflow-hidden">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
+  </div>
+</div>
+
+
+    <header class="navbar navbar-expand-md navbar-dark bd-navbar">
+  <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+    <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+
+    </button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+      <div class="offcanvas-header pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body pt-0">
+        <hr class="d-md-none text-white-50">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Inicio</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2 active" aria-current="true" href="/docs/5.1/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="/docs/5.1/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Ejemplos</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">Iconos</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Temas</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
+          </li>
+        </ul>
+
+        <hr class="d-md-none text-white-50">
+
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+              <small class="d-md-none ms-2">GitHub</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 416.32" role="img"><title>Twitter</title><path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"/></svg>
+              <small class="d-md-none ms-2">Twitter</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 512" role="img"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path fill="currentColor" d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z"/></svg>
+              <small class="d-md-none ms-2">Slack</small>
+            </a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 40 41" role="img"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"/><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"/></svg>
+              <small class="d-md-none ms-2">Open Collective</small>
+            </a>
+          </li>
+        </ul>
+
+        <hr class="d-md-none text-white-50">
+
+        <a class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3" href="/docs/5.1/getting-started/download/">Descargar</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+    
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+  <div class="container-xxl d-flex align-items-md-center">
+    <form class="bd-search position-relative me-auto">
+      <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
+    </form>
+
+    <div class="dropdown ms-3">
+  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-none d-lg-inline">Bootstrap</span> v5.1
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
+    <li><a class="dropdown-item current" aria-current="true" href="/docs/5.1/">Latest (5.1.x)</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6/">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+  </ul>
+</div>
+
+
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
+  <title>Expand</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
+</svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16">
+  <title>Collapse</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
+</svg>
+
+    </button>
+  </div>
+</nav>
+
+
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+          Empezando
+        </button>
+
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/getting-started/introduction/" class="d-inline-flex align-items-center rounded">Introducción</a></li>
+              <li><a href="/docs/5.1/getting-started/download/" class="d-inline-flex align-items-center rounded">Descargar</a></li>
+              <li><a href="/docs/5.1/getting-started/contents/" class="d-inline-flex align-items-center rounded">Contenido</a></li>
+              <li><a href="/docs/5.1/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">Navegadores &amp; dispositivos</a></li>
+              <li><a href="/docs/5.1/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
+              <li><a href="/docs/5.1/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
+              <li><a href="/docs/5.1/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
+              <li><a href="/docs/5.1/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">Accesibilidad</a></li>
+              <li><a href="/docs/5.1/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
+              <li><a href="/docs/5.1/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a></li>
+              <li><a href="/docs/5.1/getting-started/contribute/" class="d-inline-flex align-items-center rounded">Contribuir</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
+          Personalizar
+        </button>
+
+        <div class="collapse" id="customize-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/customize/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/customize/sass/" class="d-inline-flex align-items-center rounded">Sass</a></li>
+              <li><a href="/docs/5.1/customize/options/" class="d-inline-flex align-items-center rounded">Opciones</a></li>
+              <li><a href="/docs/5.1/customize/color/" class="d-inline-flex align-items-center rounded">Color</a></li>
+              <li><a href="/docs/5.1/customize/components/" class="d-inline-flex align-items-center rounded">Componentes</a></li>
+              <li><a href="/docs/5.1/customize/css-variables/" class="d-inline-flex align-items-center rounded">Variables CSS</a></li>
+              <li><a href="/docs/5.1/customize/optimize/" class="d-inline-flex align-items-center rounded">Optimizar</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
+          Layout
+        </button>
+
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
+              <li><a href="/docs/5.1/layout/containers/" class="d-inline-flex align-items-center rounded">Contenedores</a></li>
+              <li><a href="/docs/5.1/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
+              <li><a href="/docs/5.1/layout/columns/" class="d-inline-flex align-items-center rounded">Columnas</a></li>
+              <li><a href="/docs/5.1/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a></li>
+              <li><a href="/docs/5.1/layout/utilities/" class="d-inline-flex align-items-center rounded">Utilidades</a></li>
+              <li><a href="/docs/5.1/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
+              <li><a href="/docs/5.1/layout/css-grid/" class="d-inline-flex align-items-center rounded">Cuadrícula CSS</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
+          Contenido
+        </button>
+
+        <div class="collapse" id="content-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
+              <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Imágenes</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tablas</a></li>
+              <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false">
+          Formularios
+        </button>
+
+        <div class="collapse" id="forms-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/forms/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/forms/form-control/" class="d-inline-flex align-items-center rounded">Controles de formulario</a></li>
+              <li><a href="/docs/5.1/forms/select/" class="d-inline-flex align-items-center rounded">Select</a></li>
+              <li><a href="/docs/5.1/forms/checks-radios/" class="d-inline-flex align-items-center rounded">Checks &amp; radios</a></li>
+              <li><a href="/docs/5.1/forms/range/" class="d-inline-flex align-items-center rounded">Rango</a></li>
+              <li><a href="/docs/5.1/forms/input-group/" class="d-inline-flex align-items-center rounded">Grupo de inputs</a></li>
+              <li><a href="/docs/5.1/forms/floating-labels/" class="d-inline-flex align-items-center rounded">Etiquetas flotantes</a></li>
+              <li><a href="/docs/5.1/forms/layout/" class="d-inline-flex align-items-center rounded">Layout</a></li>
+              <li><a href="/docs/5.1/forms/validation/" class="d-inline-flex align-items-center rounded">Validación</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+          Componentes
+        </button>
+
+        <div class="collapse" id="components-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/components/accordion/" class="d-inline-flex align-items-center rounded">Accordion</a></li>
+              <li><a href="/docs/5.1/components/alerts/" class="d-inline-flex align-items-center rounded">Alerts</a></li>
+              <li><a href="/docs/5.1/components/badge/" class="d-inline-flex align-items-center rounded">Badge</a></li>
+              <li><a href="/docs/5.1/components/breadcrumb/" class="d-inline-flex align-items-center rounded">Breadcrumb</a></li>
+              <li><a href="/docs/5.1/components/buttons/" class="d-inline-flex align-items-center rounded">Buttons</a></li>
+              <li><a href="/docs/5.1/components/button-group/" class="d-inline-flex align-items-center rounded">Button group</a></li>
+              <li><a href="/docs/5.1/components/card/" class="d-inline-flex align-items-center rounded">Card</a></li>
+              <li><a href="/docs/5.1/components/carousel/" class="d-inline-flex align-items-center rounded">Carousel</a></li>
+              <li><a href="/docs/5.1/components/close-button/" class="d-inline-flex align-items-center rounded">Close button</a></li>
+              <li><a href="/docs/5.1/components/collapse/" class="d-inline-flex align-items-center rounded">Collapse</a></li>
+              <li><a href="/docs/5.1/components/dropdowns/" class="d-inline-flex align-items-center rounded">Dropdowns</a></li>
+              <li><a href="/docs/5.1/components/list-group/" class="d-inline-flex align-items-center rounded">List group</a></li>
+              <li><a href="/docs/5.1/components/modal/" class="d-inline-flex align-items-center rounded">Modal</a></li>
+              <li><a href="/docs/5.1/components/navs-tabs/" class="d-inline-flex align-items-center rounded">Navs &amp; tabs</a></li>
+              <li><a href="/docs/5.1/components/navbar/" class="d-inline-flex align-items-center rounded">Navbar</a></li>
+              <li><a href="/docs/5.1/components/offcanvas/" class="d-inline-flex align-items-center rounded">Offcanvas</a></li>
+              <li><a href="/docs/5.1/components/pagination/" class="d-inline-flex align-items-center rounded">Pagination</a></li>
+              <li><a href="/docs/5.1/components/placeholders/" class="d-inline-flex align-items-center rounded">Placeholders</a></li>
+              <li><a href="/docs/5.1/components/popovers/" class="d-inline-flex align-items-center rounded">Popovers</a></li>
+              <li><a href="/docs/5.1/components/progress/" class="d-inline-flex align-items-center rounded">Progress</a></li>
+              <li><a href="/docs/5.1/components/scrollspy/" class="d-inline-flex align-items-center rounded">Scrollspy</a></li>
+              <li><a href="/docs/5.1/components/spinners/" class="d-inline-flex align-items-center rounded">Spinners</a></li>
+              <li><a href="/docs/5.1/components/toasts/" class="d-inline-flex align-items-center rounded">Toasts</a></li>
+              <li><a href="/docs/5.1/components/tooltips/" class="d-inline-flex align-items-center rounded">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
+          Helpers
+        </button>
+
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
+              <li><a href="/docs/5.1/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Enlaces de colores</a></li>
+              <li><a href="/docs/5.1/helpers/ratio/" class="d-inline-flex align-items-center rounded">Relación de aspecto</a></li>
+              <li><a href="/docs/5.1/helpers/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
+              <li><a href="/docs/5.1/helpers/stacks/" class="d-inline-flex align-items-center rounded">Pilas</a></li>
+              <li><a href="/docs/5.1/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded">Visualmente oculto</a></li>
+              <li><a href="/docs/5.1/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Enlace estirado</a></li>
+              <li><a href="/docs/5.1/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Texto truncado</a></li>
+              <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-inline-flex align-items-center rounded">Regla vertical</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
+          Utilidades
+        </button>
+
+        <div class="collapse" id="utilities-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.1/utilities/background/" class="d-inline-flex align-items-center rounded">Color de fondo</a></li>
+              <li><a href="/docs/5.1/utilities/borders/" class="d-inline-flex align-items-center rounded">Bordes</a></li>
+              <li><a href="/docs/5.1/utilities/colors/" class="d-inline-flex align-items-center rounded">Colores</a></li>
+              <li><a href="/docs/5.1/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
+              <li><a href="/docs/5.1/utilities/flex/" class="d-inline-flex align-items-center rounded">Flex</a></li>
+              <li><a href="/docs/5.1/utilities/float/" class="d-inline-flex align-items-center rounded">Float</a></li>
+              <li><a href="/docs/5.1/utilities/interactions/" class="d-inline-flex align-items-center rounded">Interacciones</a></li>
+              <li><a href="/docs/5.1/utilities/opacity/" class="d-inline-flex align-items-center rounded">Opacidad</a></li>
+              <li><a href="/docs/5.1/utilities/overflow/" class="d-inline-flex align-items-center rounded">Desbordamiento</a></li>
+              <li><a href="/docs/5.1/utilities/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
+              <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded">Sombras</a></li>
+              <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded">Tamaño</a></li>
+              <li><a href="/docs/5.1/utilities/spacing/" class="d-inline-flex align-items-center rounded">Espaciado</a></li>
+              <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Texto</a></li>
+              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Alineación vertical</a></li>
+              <li><a href="/docs/5.1/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibilidad</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
+          Ampliar
+        </button>
+
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/extend/approach/" class="d-inline-flex align-items-center rounded">Enfoque</a></li>
+              <li><a href="/docs/5.1/extend/icons/" class="d-inline-flex align-items-center rounded">Iconos</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+          Acerca de
+        </button>
+
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/about/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/about/team/" class="d-inline-flex align-items-center rounded">Equipo</a></li>
+              <li><a href="/docs/5.1/about/brand/" class="d-inline-flex align-items-center rounded">Marca</a></li>
+              <li><a href="/docs/5.1/about/license/" class="d-inline-flex align-items-center rounded">Licencia</a></li>
+              <li><a href="/docs/5.1/about/translations/" class="d-inline-flex align-items-center rounded">Traducciones</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#hosting-collapse" aria-expanded="false">
+          Web Hosting
+        </button>
+
+        <div class="collapse" id="hosting-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/hosting/mejor-web-hosting/" class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="my-3 mx-4 border-top"></li>
+      <li>
+        <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded active" aria-current="page">
+          Migración
+        </a>
+      </li>
+  </ul>
+</nav>
+
+  </aside>
+
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
+            href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/migration.md"
+            title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
+        </div>
+        <h1 class="bd-title" id="content">Migración a v5</h1>
+      </div>
+      <p class="bd-lead mb-5">Realiza un seguimiento y revisa los cambios en los archivos fuente, la documentación y los componentes de Bootstrap para ayudarte a migrar de la v4 a v5.</p>
+      
+        <div class="alert alert-success" style="max-width: 800px;" role="alert">
+    🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
+    (Estás en Bootstrap 5.1) <br />
+    😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
+</div>
+
+
+
+
+
+
+
+
+
+      
+      </div>
+
+    
+    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+      <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#v520">v5.2.0</a>
+      <ul>
+        <li><a href="#nuevo-_mapsscss">Nuevo <code>_maps.scss</code></a></li>
+        <li><a href="#cambios-clave">Cambios clave</a></li>
+      </ul>
+    </li>
+    <li><a href="#dependencias">Dependencias</a></li>
+    <li><a href="#compatibilidad-con-navegador">Compatibilidad con navegador</a></li>
+    <li><a href="#cambios-en-la-documentación">Cambios en la documentación</a></li>
+    <li><a href="#sass">Sass</a></li>
+    <li><a href="#sistema-de-colores">Sistema de colores</a></li>
+    <li><a href="#actualizaciones-de-cuadrícula">Actualizaciones de cuadrícula</a></li>
+    <li><a href="#contenido-reboot-etc">Contenido, Reboot, etc.</a></li>
+    <li><a href="#rtl">RTL</a></li>
+    <li><a href="#formularios">Formularios</a></li>
+    <li><a href="#componentes">Componentes</a>
+      <ul>
+        <li><a href="#accordion">Accordion</a></li>
+        <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#badges">Badges</a></li>
+        <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#card">Card</a></li>
+        <li><a href="#carousel">Carousel</a></li>
+        <li><a href="#close-button">Close button</a></li>
+        <li><a href="#collapse">Collapse</a></li>
+        <li><a href="#dropdowns">Dropdowns</a></li>
+        <li><a href="#jumbotron">Jumbotron</a></li>
+        <li><a href="#list-group">List group</a></li>
+        <li><a href="#navs-and-tabs">Navs and tabs</a></li>
+        <li><a href="#navbars">Navbars</a></li>
+        <li><a href="#offcanvas">Offcanvas</a></li>
+        <li><a href="#pagination">Pagination</a></li>
+        <li><a href="#popovers">Popovers</a></li>
+        <li><a href="#spinners">Spinners</a></li>
+        <li><a href="#toasts">Toasts</a></li>
+        <li><a href="#tooltips">Tooltips</a></li>
+      </ul>
+    </li>
+    <li><a href="#utilidades">Utilidades</a></li>
+    <li><a href="#helpers">Helpers</a></li>
+    <li><a href="#javascript">JavaScript</a></li>
+  </ul>
+</nav>
+    </div>
+    
+
+    <div class="bd-content ps-lg-4">
+      
+
+      <h2 id="v520">v5.2.0</h2>
+<h3 id="nuevo-_mapsscss">Nuevo <code>_maps.scss</code></h3>
+<p>Bootstrap v5.2.0 introdujo un nuevo archivo Sass, <code>_maps.scss</code>, que sacó varios mapas Sass de <code>_variables.scss</code> para solucionar un problema donde las actualizaciones de un mapa original no se aplicaban a los mapas secundarios que los amplían. Por ejemplo, las actualizaciones de <code>$theme-colors</code> no se aplicaban a otros mapas temáticos que dependían de <code>$theme-colors</code>, lo que interrumpía los flujos de trabajo de personalización clave. En resumen, Sass tiene una limitación en la que una vez que se ha <em>usado</em> una variable o mapa predeterminado, no se puede actualizar.</p>
+<p>Esta es la razón por la cual las personalizaciones de variables en Bootstrap tienen que venir después de <code>@import &quot;functions&quot;</code>, pero antes de <code>@import &quot;variables&quot;</code> y el resto de nuestra pila de importación. Lo mismo se aplica a los mapas de Sass: debes sobrescribir los valores predeterminados antes de que se utilicen los valores predeterminados. Los siguientes mapas se han movido al nuevo <code>_maps.scss</code>:</p>
+<ul>
+<li><code>$theme-colors-rgb</code></li>
+<li><code>$utilities-colors</code></li>
+<li><code>$utilities-text</code></li>
+<li><code>$utilities-text-colors</code></li>
+<li><code>$utilities-bg</code></li>
+<li><code>$utilities-bg-colors</code></li>
+<li><code>$negative-spacers</code></li>
+<li><code>$gutters</code></li>
+</ul>
+<p>Tus compilaciones personalizadas de Bootstrap CSS ahora deberían verse así con una importación de mapas separada.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">  // Functions come first
+  @import &#34;functions&#34;;
+
+  // Optional variable overrides here
+<span class="gi">+ $custom-color: #df711b;
+</span><span class="gi">+ $custom-theme-colors: (
+</span><span class="gi">+   &#34;custom&#34;: $custom-color
+</span><span class="gi">+ );
+</span><span class="gi"></span>
+  // Variables come next
+  @import &#34;variables&#34;;
+
+<span class="gi">+ // Optional Sass map overrides here
+</span><span class="gi">+ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
+</span><span class="gi">+
+</span><span class="gi">+ // Followed by our default maps
+</span><span class="gi">+ @import &#34;maps&#34;;
+</span><span class="gi">+
+</span><span class="gi"></span>  // Rest of our imports
+  @import &#34;mixins&#34;;
+  @import &#34;utilities&#34;;
+  @import &#34;root&#34;;
+  @import &#34;reboot&#34;;
+  // etc
+</code></pre></div><h3 id="cambios-clave">Cambios clave</h3>
+<ul>
+<li><strong>Se introdujo la nueva opción <code>$enable-container-classes</code>.</strong> Ahora, al optar por el diseño experimental de CSS Grid, las clases <code>.container-*</code> aún se compilarán, a menos que esta opción se establezca en <code>false</code>.</li>
+</ul>
+<h2 id="dependencias">Dependencias</h2>
+<ul>
+<li>Se eliminó jQuery.</li>
+<li>Se actualizó de Popper v1.x a Popper v2.x.</li>
+<li>Se reemplazó Libsass con Dart Sass ya que nuestro compilador de Sass, Libsass estaba obsoleto.</li>
+<li>Se migró de Jekyll a Hugo para construir nuestra documentación.</li>
+</ul>
+<h2 id="compatibilidad-con-navegador">Compatibilidad con navegador</h2>
+<ul>
+<li>Se eliminó Internet Explorer 10 y 11</li>
+<li>Se eliminó Microsoft Edge &lt;16 (Legacy Edge)</li>
+<li>Se eliminó Firefox &lt; 60</li>
+<li>Se eliminó Safari &lt; 12</li>
+<li>Se eliminó iOS Safari &lt; 12</li>
+<li>Se eliminó Chrome &lt; 60</li>
+</ul>
+<hr class="my-5">
+<h2 id="cambios-en-la-documentación">Cambios en la documentación</h2>
+<ul>
+<li>Página de inicio, diseño de documentos y pie de página rediseñados.</li>
+<li>Se agregó <a href="/docs/5.1/getting-started/parcel/">nueva guía de paquetes</a>.</li>
+<li>Se agregó <a href="/docs/5.1/customize/overview/">nueva sección Personalizar</a>, reemplazando <a href="https://getbootstrap.com/docs/4.6/getting-started/theming/">página de temas de v4</a>, con nuevos detalles sobre Sass, opciones de configuración global, esquemas de color, variables CSS y más.</li>
+<li>Se reorganizó toda la documentación de los formularios en <a href="/docs/5.1/forms/overview/">nueva sección de formularios</a>, dividiendo el contenido en páginas más enfocadas.</li>
+<li>Del mismo modo, se actualizó <a href="/docs/5.1/layout/breakpoints/">la sección Diseño</a>, para desarrollar el contenido de la cuadrícula con mayor claridad.</li>
+<li>Cambió el nombre de la página del componente &ldquo;Navs&rdquo; a &ldquo;Navs &amp; Tabs&rdquo;.</li>
+<li>Cambió el nombre de la página &ldquo;Checks&rdquo; a &ldquo;Checks &amp; radios&rdquo;.</li>
+<li>Se rediseñó la barra de navegación y se agregó una nueva subnavegación para facilitar la navegación por nuestros sitios y versiones de documentos.</li>
+<li>Se agregó un nuevo método abreviado de teclado para el campo de búsqueda: <kbd>Ctrl + /</kbd>.</li>
+</ul>
+<h2 id="sass">Sass</h2>
+<ul>
+<li>
+<p>Hemos eliminado las fusiones de mapas de Sass predeterminadas para facilitar la eliminación de valores redundantes. Ten en cuenta que ahora debes definir todos los valores en los mapas de Sass como <code>$theme-colors</code>. Mira cómo lidiar con <a href="/docs/5.1/customize/sass/#maps-and-loops">Mapas Sass</a>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se cambió el nombre de la función <code>color-yiq()</code> y las variables relacionadas a <code>color-contrast()</code> ya que ya no está relacionado con el espacio de color YIQ. <a href="https://github.com/twbs/bootstrap/pull/30168/">Ver #30168.</a></p>
+<ul>
+<li>Se cambia el nombre de <code>$yiq-contrasted-threshold</code> a <code>$min-contrast-ratio</code>.</li>
+<li><code>$yiq-text-dark</code> y <code>$yiq-text-light</code> se renombran respectivamente a <code>$color-contrast-dark</code> y <code>$color-contrast-light</code>.</li>
+</ul>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Los parámetros mixins de media queries han cambiado para un enfoque más lógico.</p>
+<ul>
+<li><code>media-breakpoint-down()</code> usa el propio breakpoint en lugar del siguiente breakpoint (p. ej., <code>media-breakpoint-down(lg)</code> en lugar de <code>media-breakpoint-down(md)</code> apunta a viewports más pequeños que <code>lg </code>).</li>
+<li>De manera similar, el segundo parámetro en <code>media-breakpoint-between()</code> también usa el breakpoint en sí mismo en lugar del siguiente breakpoint (por ejemplo, <code>media-between(sm, lg)</code> en lugar de <code>media-breakpoint-between(sm, md)</code> apunta a viewports entre <code>sm</code> y <code>lg</code>).</li>
+</ul>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminaron los estilos de impresión y la variable <code>$enable-print-styles</code>. Las clases de visualización de impresión todavía existen. <a href="https://github.com/twbs/bootstrap/pull/28339">Ver #28339</a>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminaron las funciones <code>color()</code>, <code>theme-color()</code> y <code>gray()</code> en favor de las variables. <a href="https://github.com/twbs/bootstrap/pull/29083">Ver #29083</a>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se renombró la función <code>theme-color-level()</code> a <code>color-level()</code> y ahora acepta cualquier color que desees en lugar de solo colores <code>$theme-color</code>. <a href="https://github.com/twbs/bootstrap/pull/29083">Ver #29083</a> <strong>Cuidado:</strong> <code>color-level()</code> se eliminó más tarde en <code>v5.0.0-alpha3</code>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Renombrado <code>$enable-prefers-reduced-motion-media-query</code> y <code>$enable-pointer-cursor-for-buttons</code> a <code>$enable-reduced-motion</code> y <code>$enable-button-pointers</code> por brevedad.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Eliminado el mixin <code>bg-gradient-variant()</code>. Utiliza la clase <code>.bg-gradient</code> para agregar degradados a los elementos en lugar de las clases <code>.bg-gradient-*</code> generadas.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <strong>Se eliminaron los mixins anteriormente obsoletos:</strong></p>
+<ul>
+<li><code>hover</code>, <code>hover-focus</code>, <code>plain-hover-focus</code>, and <code>hover-focus-active</code></li>
+<li><code>float()</code></li>
+<li><code>form-control-mixin()</code></li>
+<li><code>nav-divider()</code></li>
+<li><code>retina-img()</code></li>
+<li><code>text-hide()</code> (también eliminó la clase de utilidad asociada, <code>.text-hide</code>)</li>
+<li><code>visibility()</code></li>
+<li><code>form-control-focus()</code></li>
+</ul>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se cambió el nombre de la función <code>scale-color()</code> a <code>shift-color()</code> para evitar la colisión con la propia función de escalado de color de Sass.</p>
+</li>
+<li>
+<p>Los mixins <code>box-shadow</code> ahora permiten valores <code>null</code> y eliminan <code>none</code> de múltiples argumentos. <a href="https://github.com/twbs/bootstrap/pull/30394">Ver #30394</a>.</p>
+</li>
+<li>
+<p>El mixin <code>border-radius()</code> ahora tiene un valor predeterminado.</p>
+</li>
+</ul>
+<h2 id="sistema-de-colores">Sistema de colores</h2>
+<ul>
+<li>
+<p>El sistema de color que funcionaba con <code>color-level()</code> y <code>$theme-color-interval</code> se eliminó en favor de un nuevo sistema de color. Todas las funciones <code>lighten()</code> y <code>darken()</code> en nuestro código base se reemplazan por <code>tint-color()</code> y <code>shade-color()</code>. Estas funciones mezclarán el color con blanco o negro en lugar de cambiar su luminosidad en una cantidad fija. El <code>shift-color()</code> teñirá o sombreará un color dependiendo de si su parámetro de peso es positivo o negativo. <a href="https://github.com/twbs/bootstrap/pull/30622">Ver #30622</a> para más detalles.</p>
+</li>
+<li>
+<p>Se agregaron nuevos tintes y sombras para cada color, proporcionando nueve colores separados para cada color base, como nuevas variables de Sass.</p>
+</li>
+<li>
+<p>Mejora del contraste de color. Relación de contraste de color mejorada de 3:1 a 4.5:1 y colores azul, verde, cian y rosa actualizados para garantizar el contraste WCAG 2.1 AA. También cambiamos nuestro color de contraste de <code>$gray-900</code> a <code>$black</code>.</p>
+</li>
+<li>
+<p>Para soportar nuestro sistema de color, hemos agregamos nuevas funciones personalizadas <code>tint-color()</code> y <code>shade-color()</code> para mezclar nuestros colores apropiadamente.</p>
+</li>
+</ul>
+<h2 id="actualizaciones-de-cuadrícula">Actualizaciones de cuadrícula</h2>
+<ul>
+<li>
+<p><strong>¡Nuevo breakpoint!</strong> Se agregó un nuevo breakpoint <code>xxl</code> para <code>1400px</code> y superiores. No hay cambios en todos los demás breakpoints.</p>
+</li>
+<li>
+<p><strong>Gutters mejorados.</strong> Los gutters ahora se configuran en rems, y son más angostas que v4 (<code>1.5rem</code>, o alrededor de <code>24px</code>, menos que <code>30px</code>). Esto alinea las gutters de nuestro sistema de cuadrícula con nuestras utilidades de espaciado.</p>
+<ul>
+<li>Se agregó una nueva <a href="/docs/5.1/layout/gutters/">clase de gutter</a> (<code>.g-*</code>, <code>.gx-*</code> y <code>.gy-*</code>) para controlar gutters horizontal/vertical, gutters horizontales y gutters verticales.</li>
+<li><span class="badge bg-danger">Breaking</span> Se cambió el nombre de <code>.no-gutters</code> a <code>.g-0</code> para que coincida con las nuevas utilidades de gutters.</li>
+</ul>
+</li>
+<li>
+<p>Las columnas ya no tienen aplicada <code>position: relative</code>, por lo que es posible que debas agregar <code>position: relative</code> a algunos elementos para restaurar ese comportamiento.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminaron varias clases <code>.order-*</code> que a menudo no se usaban. Ahora solo proporcionamos <code>.order-1</code> a <code>.order-5</code>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminó el componente <code>.media</code> ya que se puede replicar fácilmente con utilidades. <a href="https://github.com/twbs/bootstrap/pull/28265">Consulta #28265</a> y la <a href="/docs/5.1/utilities/flex/#media-object">página de utilidades flexibles para ver un ejemplo</a>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <code>bootstrap-grid.css</code> ahora solo aplica <code>box-sizing: border-box</code> a la columna en lugar de restablecer el box-sizing global. De esta manera, nuestros estilos de cuadrícula se pueden usar en más lugares sin interferencias.</p>
+</li>
+<li>
+<p><code>$enable-grid-classes</code> ya no deshabilita la generación de clases contenedoras. <a href="https://github.com/twbs/bootstrap/pull/29146">Ver #29146.</a></p>
+</li>
+<li>
+<p>Se actualizó el mixin <code>make-col</code> por defecto a columnas iguales sin un tamaño específico.</p>
+</li>
+</ul>
+<h2 id="contenido-reboot-etc">Contenido, Reboot, etc.</h2>
+<ul>
+<li>
+<p><strong><a href="/docs/5.1/getting-started/rfs/">RFS</a> ahora está habilitado de manera predeterminada.</strong> Los encabezados que usan el mixin <code>font-size()</code> ajustarán automáticamente su <code>font-size</code> para escalar con el viewport. <em>Esta característica se incorporó previamente con v4.</em></p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Revisamos nuestra tipografía de visualización para reemplazar nuestras variables <code>$display-*</code> y con un mapa Sass <code>$display-font-sizes</code>. También se eliminaron las variables <code>$display-*-weight</code> individuales para un único <code>$display-font-weight</code> y se ajustó el <code>font-size</code>s.</p>
+</li>
+<li>
+<p>Se agregaron dos nuevos tamaños de encabezado <code>.display-*</code>, <code>.display-5</code> y <code>.display-6</code>.</p>
+</li>
+<li>
+<p><strong>Los enlaces están subrayados de manera predeterminada</strong> (no solo al pasar el mouse), a menos que formen parte de componentes específicos.</p>
+</li>
+<li>
+<p><strong>Tablas rediseñadas</strong> para actualizar sus estilos y reconstruirlas con variables CSS para un mayor control sobre el estilo.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Las tablas anidadas ya no heredan estilos.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <code>.thead-light</code> y <code>.thead-dark</code> se eliminan en favor de las clases variantes <code>.table-*</code> que se pueden usar para todos elementos de la tabla (<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> y <code>td</code>).</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> El mixin <code>table-row-variant()</code> se renombra a <code>table-variant()</code> y acepta solo 2 parámetros: <code>$color</code> (color nombre) y <code>$value</code> (código de color). El color del borde y los colores de énfasis se calculan automáticamente en función de las variables de factor de la tabla.</p>
+</li>
+<li>
+<p>Dividimos las variables de padding de las celdas de la tabla en <code>-y</code> y <code>-x</code>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminó la clase <code>.pre-scrollable</code>. <a href="https://github.com/twbs/bootstrap/pull/29135">Ver #29135</a></p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Las utilidades <code>.text-*</code> ya no agregan estados focus y hover a los enlaces. En su lugar, se pueden usar las clases auxiliares <code>.link-*</code>. <a href="https://github.com/twbs/bootstrap/pull/29267">Ver #29267</a></p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminó la clase <code>.text-justify</code>. <a href="https://github.com/twbs/bootstrap/pull/29793">Ver #29793</a></p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Los elementos <code>&lt;hr&gt;</code> ahora usan <code>height</code> en lugar de <code>border</code> para admitir mejor el atributo <code>size</code>. Esto también permite el uso de utilidades de relleno para crear divisores más gruesos (por ejemplo, <code>&lt;hr class=&quot;py-1&quot;&gt;</code>).</p>
+</li>
+<li>
+<p>Se restablece el <code>padding-left</code> horizontal predeterminado en los elementos <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code> del valor predeterminado del navegador <code>40px</code> a <code>2rem</code>.</p>
+</li>
+<li>
+<p>Se agregó <code>$enable-smooth-scroll</code>, que aplica <code>scroll-behavior: smooth</code> globalmente, excepto para los usuarios que solicitan movimiento reducido a través de la media query <code>prefers-reduced-motion</code>. <a href="https://github.com/twbs/bootstrap/pull/31877">Ver #31877</a></p>
+</li>
+</ul>
+<h2 id="rtl">RTL</h2>
+<ul>
+<li>Las variables específicas de dirección horizontal, las utilidades y los mixins se han renombrado para usar propiedades lógicas como las que se encuentran en los diseños de flexbox, por ejemplo, <code>start</code> y <code>end</code> en lugar de <code>left</code> y <code>right</code>.</li>
+</ul>
+<h2 id="formularios">Formularios</h2>
+<ul>
+<li>
+<p><strong>¡Se agregaron nuevos formularios flotantes!</strong> Hemos promovido el ejemplo de etiquetas flotantes a componentes de formulario totalmente compatibles. <a href="/docs/5.1/forms/floating-labels/">Vea la nueva página de etiquetas flotantes.</a></p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <strong>Elementos de formulario nativos y personalizados consolidados.</strong> Se han consolidado casillas de verificación, radios, selecciones y otras entradas que tenían clases nativas y personalizadas en v4. Ahora, casi todos nuestros elementos de formulario son totalmente personalizados, la mayoría sin necesidad de HTML personalizado.</p>
+<ul>
+<li><code>.custom-control.custom-checkbox</code> ahora es <code>.form-check</code>.</li>
+<li><code>.custom-control.custom-custom-radio</code> ahora es <code>.form-check</code>.</li>
+<li><code>.custom-control.custom-switch</code> ahora es <code>.form-check.form-switch</code>.</li>
+<li><code>.custom-select</code> ahora es <code>.form-select</code>.</li>
+<li><code>.custom-file</code> y <code>.form-file</code> han sido reemplazados por estilos personalizados encima de <code>.form-control</code>.</li>
+<li><code>.custom-range</code> ahora es <code>.form-range</code>.</li>
+<li>Se eliminaron <code>.form-control-file</code> y <code>.form-control-range</code> nativos.</li>
+</ul>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Eliminado <code>.input-group-append</code> y <code>.input-group-prepend</code>. Ahora puede simplemente agregar botones y <code>.input-group-text</code> como elementos secundarios directos de los grupos de entrada.</p>
+</li>
+<li>
+<p>El antiguo <a href="https://github.com/twbs/bootstrap/issues/25110">Falta el radio del borde en el grupo de entrada con el error de retroalimentación de validación</a> finalmente se corrige al agregar una clase adicional <code>.has-validation</code> a los grupos de entrada con validación.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <strong>Clases de diseño específicas de formulario eliminadas para nuestro sistema de cuadrícula.</strong> Use nuestra cuadrícula y utilidades en lugar de <code>.form-group</code>, <code>.form-row</code>, o <code>.form-inline</code>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Las etiquetas de formulario ahora requieren <code>.form-label</code>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <code>.form-text</code> ya no establece <code>display</code>, lo que le permite crear texto de ayuda en línea o en bloque como desee simplemente cambiando el elemento HTML.</p>
+</li>
+<li>
+<p>Los íconos de validación ya no se aplican a <code>&lt;select&gt;</code>s con <code>multiple</code>.</p>
+</li>
+<li>
+<p>Archivos Sass de origen reorganizados en <code>scss/forms/</code>, incluidos los estilos de grupo de entrada.</p>
+</li>
+</ul>
+<hr class="my-5">
+<h2 id="componentes">Componentes</h2>
+<ul>
+<li>Los valores de <code>padding</code> unificados para alertas, breadcrumbs, tarjetas, menús desplegables, grupos de listas, modales, popovers y tooltips se basarán en nuestra variable <code>$spacer</code>. <a href="https://github.com/twbs/bootstrap/pull/30564">Ver #30564</a>.</li>
+</ul>
+<h3 id="accordion">Accordion</h3>
+<ul>
+<li>Se agregó <a href="/docs/5.1/components/accordion/">nuevo componente de acordeón</a>.</li>
+</ul>
+<h3 id="alerts">Alerts</h3>
+<ul>
+<li>
+<p>Las alertas ahora tienen <a href="/docs/5.1/components/alerts/#icons">ejemplos con íconos</a>.</p>
+</li>
+<li>
+<p>Se eliminaron los estilos personalizados para <code>&lt;hr&gt;</code>s en cada alerta, ya que ya usan <code>currentColor</code>.</p>
+</li>
+</ul>
+<h3 id="badges">Badges</h3>
+<ul>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminaron todas las clases de color <code>.badge-*</code> para las utilidades de fondo (por ejemplo, use <code>.bg-primary</code> en lugar de <code>.badge-primary</code>).</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminó <code>.badge-pill</code>: use la utilidad <code>.rounded-pill</code> en su lugar.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminaron los estilos de hover y focus para los elementos <code>&lt;a&gt;</code> y <code>&lt;button&gt;</code>.</p>
+</li>
+<li>
+<p>Se aumentó el padding predeterminado para las insignias de <code>.25em</code>/<code>.5em</code> a <code>.35em</code>/<code>.65em</code>.</p>
+</li>
+</ul>
+<h3 id="breadcrumbs">Breadcrumbs</h3>
+<ul>
+<li>
+<p>Simplificó la apariencia predeterminada de las migas de pan eliminando <code>padding</code>, <code>background-color</code> y <code>border-radius</code>.</p>
+</li>
+<li>
+<p>Se agregó una nueva propiedad personalizada de CSS <code>--bs-breadcrumb-divider</code> para una fácil personalización sin necesidad de volver a compilar CSS.</p>
+</li>
+</ul>
+<h3 id="buttons">Buttons</h3>
+<ul>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <strong><a href="/docs/5.1/forms/checks-radios/#toggle-buttons">Botones de alternar</a>, con casillas de verificación o radios, ya no requiere JavaScript y tiene un nuevo marcado.</strong> Ya no requerimos un elemento de ajuste, agregue <code>.btn-check</code> a <code>&lt;input&gt;</code> y empareje con cualquier clase <code>.btn</code> en <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">Ver #30650</a>. <em>Los documentos para esto se han movido de nuestra página de Botones a la nueva sección de Formularios.</em></p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <strong>Eliminó <code>.btn-block</code> para utilidades.</strong> En lugar de usar <code>.btn-block</code> en <code>.btn</code>, ajuste sus botones con <code>.d-grid</code> y una utilidad <code>.gap-*</code> para espaciarlos según sea necesario. Cambie a clases receptivas para tener aún más control sobre ellas. <a href="/docs/5.1/components/buttons/#block-buttons">Lea los documentos para ver algunos ejemplos.</a></p>
+</li>
+<li>
+<p>Se actualizaron nuestros mixins <code>button-variant()</code> y <code>button-outline-variant()</code> para admitir parámetros adicionales.</p>
+</li>
+<li>
+<p>Botones actualizados para garantizar un mayor contraste en los estados active y hover.</p>
+</li>
+<li>
+<p>Los botones deshabilitados ahora tienen <code>pointer-events: none;</code>.</p>
+</li>
+</ul>
+<h3 id="card">Card</h3>
+<ul>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminó <code>.card-deck</code> a favor de nuestra cuadrícula. Envuelva sus cartas en clases de columnas y agregue un contenedor principal <code>.row-cols-*</code> para recrear mazos de cartas (pero con más control sobre la alineación responsive).</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminó <code>.card-columns</code> a favor de Masonry. <a href="https://github.com/twbs/bootstrap/pull/28922">Ver #28922</a>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se reemplazó el acordeón basado en <code>.card</code> con un <a href="/docs/5.1/components/accordion/">nuevo componente Accordion</a>.</p>
+</li>
+</ul>
+<h3 id="carousel">Carousel</h3>
+<ul>
+<li>
+<p>Se agregó una nueva <a href="/docs/5.1/components/carousel/#dark-variant">variante <code>.carousel-dark</code></a> para texto, controles e indicadores oscuros (ideal para fondos más claros).</p>
+</li>
+<li>
+<p>Se reemplazaron los íconos de chevron para los controles de carrusel con nuevos SVG de [Iconos de Bootstrap] (https://icons.getbootstrap.com/).</p>
+</li>
+</ul>
+<h3 id="close-button">Close button</h3>
+<ul>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Renombrado <code>.close</code> a <code>.btn-close</code> para un nombre menos genérico.</p>
+</li>
+<li>
+<p>Los botones de cierre ahora usan una <code>background-image</code> (SVG incrustado) en lugar de <code>&amp;times;</code> en el HTML, lo que permite una personalización más sencilla sin necesidad de tocar el marcado.</p>
+</li>
+<li>
+<p>Se agregó la nueva variante <code>.btn-close-white</code> que usa <code>filter: invert(1)</code> para habilitar íconos de descarte de mayor contraste contra fondos más oscuros.</p>
+</li>
+</ul>
+<h3 id="collapse">Collapse</h3>
+<ul>
+<li>Se eliminó el anclaje de scroll para acordeones.</li>
+</ul>
+<h3 id="dropdowns">Dropdowns</h3>
+<ul>
+<li>
+<p>Se agregó la nueva variante <code>.dropdown-menu-dark</code> y las variables asociadas para los menús desplegables oscuros bajo demanda.</p>
+</li>
+<li>
+<p>Se agregó una nueva variable para <code>$dropdown-padding-x</code>.</p>
+</li>
+<li>
+<p>Se oscureció el divisor desplegable para mejorar el contraste.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Todos los eventos del menú desplegable ahora se activan en el botón de alternancia del menú desplegable y luego se expanden al elemento principal.</p>
+</li>
+<li>
+<p>Los menús desplegables ahora tienen un atributo <code>data-bs-popper=&quot;static&quot;</code> establecido cuando el posicionamiento del menú desplegable es estático, o el menú desplegable está en la barra de navegación. Esto lo agrega nuestro JavaScript y nos ayuda a usar estilos de posición personalizados sin interferir con el posicionamiento de Popper.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminó la opción <code>flip</code> para el complemento desplegable a favor de la configuración nativa de Popper. Ahora puede deshabilitar el comportamiento de volteo pasando una matriz vacía para la opción <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a> en [flip](https:// popper.js.org/docs/v2/modifiers/flip/) modificador.</p>
+</li>
+<li>
+<p>Ahora se puede hacer clic en los menús desplegables con una nueva opción <code>autoClose</code> para manejar el <a href="/docs/5.1/components/dropdowns/#auto-close-behavior">comportamiento de cierre automático</a>. Puede usar esta opción para aceptar el clic dentro o fuera del menú desplegable para hacerlo interactivo.</p>
+</li>
+<li>
+<p>Los menús desplegables ahora admiten <code>.dropdown-item</code>s envueltos en <code>&lt;li&gt;</code>s.</p>
+</li>
+</ul>
+<h3 id="jumbotron">Jumbotron</h3>
+<ul>
+<li><span class="badge bg-danger">Breaking</span> Se eliminó el componente jumbotron, ya que se puede replicar con utilidades. <a href="/docs/5.1/examples/jumbotron/">Vea nuestro nuevo ejemplo de Jumbotron para ver una demostración.</a></li>
+</ul>
+<h3 id="list-group">List group</h3>
+<ul>
+<li>Se agregó el nuevo <a href="/docs/5.1/components/list-group/#numbered">modificador <code>.list-group-numbered</code></a> para enumerar grupos.</li>
+</ul>
+<h3 id="navs-and-tabs">Navs and tabs</h3>
+<ul>
+<li>Se agregaron nuevas variables <code>null</code> para <code>font-size</code>, <code>font-weight</code>, <code>color</code> y <code>:hover</code> <code>color</code> a la clase <code>.nav-link</code>.</li>
+</ul>
+<h3 id="navbars">Navbars</h3>
+<ul>
+<li><span class="badge bg-danger">Breaking</span> Las barras de navegación ahora requieren un contenedor dentro (para simplificar drásticamente los requisitos de espacio y CSS requerido).</li>
+</ul>
+<h3 id="offcanvas">Offcanvas</h3>
+<ul>
+<li>Se agregó el nuevo <a href="/docs/5.1/components/offcanvas/">componente offcanvas</a>.</li>
+</ul>
+<h3 id="pagination">Pagination</h3>
+<ul>
+<li>
+<p>Los enlaces de paginación ahora tienen un <code>margin-left</code> personalizable que se redondea dinámicamente en todas las esquinas cuando se separan entre sí.</p>
+</li>
+<li>
+<p>Se agregaron <code>transition</code>s a los enlaces de paginación.</p>
+</li>
+</ul>
+<h3 id="popovers">Popovers</h3>
+<ul>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Renombrado <code>.arrow</code> a <code>.popover-arrow</code> en nuestra plantilla de popover predeterminada.</p>
+</li>
+<li>
+<p>Se renombró la opción <code>whiteList</code> a <code>allowList</code>.</p>
+</li>
+</ul>
+<h3 id="spinners">Spinners</h3>
+<ul>
+<li>
+<p>Los giradores ahora respetan <code>preferers-reduced-motion: reduce</code> al ralentizar las animaciones. <a href="https://github.com/twbs/bootstrap/pull/31882">Ver #31882</a>.</p>
+</li>
+<li>
+<p>Alineación vertical de la ruleta mejorada.</p>
+</li>
+</ul>
+<h3 id="toasts">Toasts</h3>
+<ul>
+<li>
+<p>Los toast ahora se pueden posicionar <a href="/docs/5.1/components/toasts/#placement">positioned</a> en un <code>.toast-container</code> con la ayuda de <a href="/docs/5.1/utilities/position/">posicionamiento de utilidades</a>.</p>
+</li>
+<li>
+<p>Se cambió la duración predeterminada del toast a 5 segundos.</p>
+</li>
+<li>
+<p>Se eliminó <code>overflow: hidden</code> de los toasts y se reemplazó con <code>border-radius</code>s apropiados con funciones <code>calc()</code>.</p>
+</li>
+</ul>
+<h3 id="tooltips">Tooltips</h3>
+<ul>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Renombrado <code>.arrow</code> a <code>.tooltip-arrow</code> en nuestra plantilla de tooltips predeterminada.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> El valor predeterminado para <code>fallbackPlacements</code> se cambió a <code>['top', 'right', 'bottom', 'left']</code> para una mejor ubicación de elementos popper.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se cambió el nombre de la opción <code>whiteList</code> a <code>allowList</code>.</p>
+</li>
+</ul>
+<h2 id="utilidades">Utilidades</h2>
+<ul>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se cambiaron los nombres de varias utilidades para usar nombres de propiedades lógicas en lugar de nombres direccionales con la adición de compatibilidad con RTL:</p>
+<ul>
+<li>Renombrado <code>.left-*</code> y <code>.right-*</code> a <code>.start-*</code> y <code>.end-*</code>.</li>
+<li>Renombrado <code>.float-left</code> y <code>.float-right</code> a <code>.float-start</code> y <code>.float-end</code>.</li>
+<li>Renombrado <code>.border-left</code> y <code>.border-right</code> a <code>.border-start</code> y <code>.border-end</code>.</li>
+<li>Renombrado <code>.rounded-left</code> y <code>.rounded-right</code> a <code>.rounded-start</code> y <code>.rounded-end</code>.</li>
+<li>Renombrado <code>.ml-*</code> y <code>.mr-*</code> a <code>.ms-*</code> y <code>.me-*</code>.</li>
+<li>Renombrado <code>.pl-*</code> y <code>.pr-*</code> a <code>.ps-*</code> y <code>.pe-*</code>.</li>
+<li>Renombrado <code>.text-left</code> y <code>.text-right</code> a <code>.text-start</code> y <code>.text-end</code>.</li>
+</ul>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Márgenes negativos deshabilitados de forma predeterminada.</p>
+</li>
+<li>
+<p>Se agregó una nueva clase <code>.bg-body</code> para configurar rápidamente el fondo <code>&lt;body&gt;</code> en elementos adicionales.</p>
+</li>
+<li>
+<p>Se agregaron nuevas <a href="/docs/5.1/utilities/position/#arrange-elements">utilidades de posición</a> para <code>top</code>, <code>right</code>, <code>bottom</code>, y <code>left</code>. Los valores incluyen <code>0</code>, <code>50%</code> y <code>100%</code> para cada propiedad.</p>
+</li>
+<li>
+<p>Se agregaron nuevas utilidades <code>.translate-middle-x</code> y <code>.translate-middle-y</code> para centrar horizontal o verticalmente elementos de posición absoluta/fija.</p>
+</li>
+<li>
+<p>Se agregaron nuevas <a href="/docs/5.1/utilities/borders/#border-width">utilidades <code>border-width</code></a>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Renombrado <code>.text-monospace</code> a <code>.font-monospace</code>.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminó <code>.text-hide</code> ya que es un método anticuado para ocultar texto que ya no debería usarse.</p>
+</li>
+<li>
+<p>Se agregaron las utilidades <code>.fs-*</code> para las utilidades <code>font-size</code> (con RFS habilitado). Estos usan la misma escala que los encabezados predeterminados de HTML (1-6, de grande a pequeño) y se pueden modificar a través del mapa de Sass.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se cambió el nombre de las utilidades <code>.font-weight-*</code> a <code>.fw-*</code> por brevedad y consistencia.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Renombradas utilidades <code>.font-style-*</code> como <code>.fst-*</code> por brevedad y consistencia.</p>
+</li>
+<li>
+<p>Se agregó <code>.d-grid</code> para mostrar las utilidades y nuevas utilidades <code>gap</code> (<code>.gap</code>) para diseños CSS Grid y flexbox.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Se eliminaron <code>.rounded-sm</code> y <code>rounded-lg</code>, y se introdujo una nueva escala de clases, <code>.rounded-0</code> a <code>.rounded- 3</code>. <a href="https://github.com/twbs/bootstrap/pull/31687">Ver #31687</a>.</p>
+</li>
+<li>
+<p>Se agregaron nuevas utilidades <code>line-height</code>: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code> y <code>.lh-lg</code>. Consulta <a href="/docs/5.1/utilities/text/#line-height">aquí</a>.</p>
+</li>
+<li>
+<p>Se movió la utilidad <code>.d-none</code> en nuestro CSS para darle más peso sobre otras utilidades de visualización.</p>
+</li>
+<li>
+<p>Extendido el ayudante <code>.visually-hidden-focusable</code> para que también funcione en contenedores, usando <code>:focus-within</code>.</p>
+</li>
+</ul>
+<h2 id="helpers">Helpers</h2>
+<ul>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <strong>Se ha cambiado el nombre de los asistentes integrados responsive a <a href="/docs/5.1/helpers/ratio/">ayudantes de relación</a></strong> con una nueva clase nombres y comportamientos mejorados, así como una útil variable CSS.</p>
+<ul>
+<li>Se ha cambiado el nombre de las clases para cambiar <code>by</code> a <code>x</code> en la relación de aspecto. Por ejemplo, <code>.ratio-16by9</code> ahora es <code>.ratio-16x9</code>.</li>
+<li>Eliminamos el selector <code>.embed-responsive-item</code> y el grupo de elementos en favor de un selector <code>.ratio &gt; *</code> más simple. No se necesita más clase, y el ayudante de relación ahora funciona con cualquier elemento HTML.</li>
+<li>Se cambió el nombre del mapa Sass <code>$embed-responsive-aspect-ratios</code> a <code>$aspect-ratios</code> y sus valores se simplificaron para incluir el nombre de la clase y el porcentaje como el par <code>key: value</code>.</li>
+<li>Las variables CSS ahora se generan e incluyen para cada valor en el mapa Sass. Modifique la variable <code>--bs-aspect-ratio</code> en <code>.ratio</code> para crear cualquier <a href="/docs/5.1/helpers/ratio/#custom-ratios">relación de aspecto personalizada</a>.</li>
+</ul>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> <strong>Las clases de &ldquo;lector de pantalla&rdquo; ahora son <a href="/docs/5.1/helpers/visually-hidden/">clases &ldquo;visualmente ocultas&rdquo;</a> .</strong></p>
+<ul>
+<li>Se cambió el archivo Sass de <code>scss/helpers/_screenreaders.scss</code> a <code>scss/helpers/_visually-hidden.scss</code></li>
+<li>Renombrado <code>.sr-only</code> y <code>.sr-only-focusable</code> a <code>.visually-hidden</code> y <code>.visually-hidden-focusable</code></li>
+<li>Se cambió el nombre de los mixins <code>sr-only()</code> y <code>sr-only-focusable()</code> a <code>visually-hidden()</code> y <code>visually-hidden-focusable()</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>bootstrap-utilities.css</code> ahora también incluye nuestros ayudantes. Ya no es necesario importar ayudantes en compilaciones personalizadas.</p>
+</li>
+</ul>
+<h2 id="javascript">JavaScript</h2>
+<ul>
+<li>
+<p><strong>Se eliminó la dependencia de jQuery</strong> y se reescribieron los complementos para que estén en JavaScript normal.</p>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> Los atributos de datos para todos los complementos de JavaScript ahora tienen un espacio de nombres para ayudar a distinguir la funcionalidad de Bootstrap de terceros y de su propio código. Por ejemplo, usamos <code>data-bs-toggle</code> en lugar de <code>data-toggle</code>.</p>
+</li>
+<li>
+<p><strong>Todos los complementos ahora pueden aceptar un selector CSS como primer argumento.</strong> Puede pasar un elemento DOM o cualquier selector CSS válido para crear una nueva instancia del complemento:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">dropdown</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Dropdown</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;dropdown&#34;]&#39;</span><span class="p">)</span>
+</code></pre></div></li>
+<li>
+<p><code>popperConfig</code> se puede pasar como una función que acepta la configuración predeterminada de Popper de Bootstrap como argumento, para que pueda fusionar esta configuración predeterminada a su manera. <strong>Se aplica a los menús desplegables, popovers y tooltips.</strong></p>
+</li>
+<li>
+<p>El valor predeterminado para <code>fallbackPlacements</code> se cambia a <code>['top', 'right', 'bottom', 'left']</code> para una mejor ubicación de los elementos Popper. <strong>Se aplica a los menús desplegables, popovers y tooltips.</strong></p>
+</li>
+<li>
+<p>Se eliminó el guión bajo de los métodos estáticos públicos como <code>_getInstance()</code> → <code>getInstance()</code>.</p>
+</li>
+</ul>
+
+    </div>
+    <div class="pt-3">
+      
+        <div class="alert alert-success" style="max-width: 800px;" role="alert">
+    🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
+    (Estás en Bootstrap 5.1) <br />
+    😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
+</div>
+
+      
+    </div>
+  </main>
+</div>
+
+
+    <footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
+          <span class="fs-5">Bootstrap</span>
+        </a>
+        <ul class="list-unstyled small text-muted">         
+          <li class="mb-2">Diseñado y construido con todo el amor del mundo por el <a href="/docs/5.1/about/team/">equipo de Bootstrap</a> con la ayuda de <a href="https://github.com/twbs/bootstrap/graphs/contributors">nuestros colaboradores</a>.</li>
+          <li class="mb-2">Código con licencia <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          <li class="mb-2">Actualmente v5.1.3.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Enlaces</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/">Ejemplos</a></li>
+          <li class="mb-2"><a href="https://themes.getbootstrap.com/">Temas</a></li>
+          <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Guías</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.1/getting-started/">Guía de inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/starter-template/">Plantilla de inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Projectos</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons">Iconos</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Comunidad</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
+          <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/5.1/assets/js/docs.min.js"></script>
+
+
+    
+
+  </body>
+</html>
