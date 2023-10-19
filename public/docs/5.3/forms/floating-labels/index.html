@@ -58,7 +58,166 @@ window.dataLayer = window.dataLayer || [];
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
 
 
-  <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290" crossorigin="anonymous"></script></head>
+  <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290" crossorigin="anonymous"></script><script type="text/javascript" async="true">
+(function() {
+  var host = 'www.themoneytizer.com';
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.quantcast.com'
+    .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = { ...args[3], tag_version: 'V2' };
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script></head>
   <body data-bs-spy="scroll" data-bs-target="#TableOfContents">
     <div class="skippy visually-hidden-focusable overflow-hidden">
   <div class="container-xl">
@@ -177,7 +336,7 @@ window.dataLayer = window.dataLayer || [];
     <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
       <div class="offcanvas-header px-4 pb-0">
         <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar" data-bs-target="#bdNavbar"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
       </div>
 
       <div class="offcanvas-body p-4 pt-0 p-lg-0">
@@ -307,7 +466,7 @@ window.dataLayer = window.dataLayer || [];
       <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
           <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Explorar docs</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar" data-bs-target="#bdSidebar"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button>
         </div>
 
         <div class="offcanvas-body">
@@ -577,7 +736,7 @@ window.dataLayer = window.dataLayer || [];
   <label for="floatingInput">Dirección de correo electrónico</label>
 </div>
 <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
   <label for="floatingPassword">Contraseña</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -645,7 +804,7 @@ window.dataLayer = window.dataLayer || [];
 <p>Por defecto, <code>&lt;textarea&gt;</code>s con <code>.form-control</code> tendrán la misma altura que <code>&lt;input&gt;</code>s.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextarea"></textarea>
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
   <label for="floatingTextarea">Comentarios</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -666,7 +825,7 @@ window.dataLayer = window.dataLayer || [];
 <p>Para establecer una altura personalizada en tu <code>&lt;textarea&gt;</code>, no uses el atributo <code>rows</code>. En su lugar, establece una <code>height</code> explícita (ya sea en línea o mediante CSS personalizado).</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextarea2" style="height: 100px"></textarea>
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
   <label for="floatingTextarea2">Comentarios</label>
 </div>
 </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
@@ -724,7 +883,7 @@ window.dataLayer = window.dataLayer || [];
   <label for="floatingInputDisabled">Dirección de correo electrónico</label>
 </div>
 <div class="form-floating mb-3">
-  <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextareaDisabled" disabled=""></textarea>
+  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled" disabled=""></textarea>
   <label for="floatingTextareaDisabled">Comentarios</label>
 </div>
 <div class="form-floating mb-3">
@@ -808,7 +967,7 @@ window.dataLayer = window.dataLayer || [];
 <div class="input-group mb-3">
   <span class="input-group-text">@</span>
   <div class="form-floating">
-    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nombre de usuario">
+    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
     <label for="floatingInputGroup1">Nombre de usuario</label>
   </div>
 </div>
@@ -835,7 +994,7 @@ window.dataLayer = window.dataLayer || [];
 <div class="input-group has-validation">
   <span class="input-group-text">@</span>
   <div class="form-floating is-invalid">
-    <input type="text" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Nombre de usuario" required="">
+    <input type="text" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Username" required="">
     <label for="floatingInputGroup2">Nombre de usuario</label>
   </div>
   <div class="invalid-feedback">
