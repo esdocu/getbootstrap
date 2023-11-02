@@ -241,21 +241,21 @@ window.dataLayer = window.dataLayer || [];
       </a>
     </li>
     <li>
-        <a class="dropdown-item" href="https://getbootstrap.com/ttps://getbootstrap.com/docs/5.2/components/navbar/" rel="nofollow" target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/5.2/components/navbar" rel="nofollow" target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
     </li>
     <li>
-        <a class="dropdown-item" href="https://bootstrap-esdocu.com/docs/5.1/components/navbar/">v5.1.3</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/components/navbar" rel="nofollow" target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
     </li>
     <li>
-        <a class="dropdown-item" href="https://getbootstrap.com/ttps://getbootstrap.com/docs/5.0/components/navbar/" rel="nofollow" target="_blank" title="Página todavía no traducida">v5.0.2 ⬀</a>
+        <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/components/navbar" rel="nofollow" target="_blank" title="Página todavía no traducida">v5.0.2 ⬀</a>
     </li>
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header">Lanzamientos anteriores</h6></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/ttps://getbootstrap.com/docs/4.6/" rel="nofollow" target="_blank" title="Página todavía no traducida">v4.6.x ⬀</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/ttps://getbootstrap.com/docs/3.4/" rel="nofollow" target="_blank" title="Página todavía no traducida">v3.4.1 ⬀</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/ttps://getbootstrap.com/2.3.2/" rel="nofollow" target="_blank" title="Página todavía no traducida">v2.3.2 ⬀</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6" rel="nofollow" target="_blank" title="Página todavía no traducida">v4.6.x ⬀</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4" rel="nofollow" target="_blank" title="Página todavía no traducida">v3.4.1 ⬀</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2" rel="nofollow" target="_blank" title="Página todavía no traducida">v2.3.2 ⬀</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="/docs/versions/">Todas las versiones</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow" target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
   </ul>
 </li>
 
@@ -602,7 +602,7 @@ window.dataLayer = window.dataLayer || [];
 <li>Las barras de navegación requieren un ajuste <code>.navbar</code> con <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> para un colapsamiento responsive y clases de <a href="#color-schemes">esquema de colores</a> .</li>
 <li>Las barras de navegación y sus contenidos son fluid de forma predeterminada. Cambia el <a href="#containers">contenedor</a> para limitar su ancho horizontal de diferentes maneras.</li>
 <li>Usa nuestro <a href="/docs/5.3/utilities/spacing/">espaciado</a> y clases <a href="/docs/5.3/utilities/flex/">flex</a> de utilidad para controlar el espaciado y la alineación dentro de las barras de navegación.</li>
-<li>Las barras de navegación responden de manera predeterminada, pero puedes modificarlas fácilmente para cambiar eso. El comportamiento responsive depende de nuestro complemento Collapse JavaScript.</li>
+<li>Las barras de navegación responden de manera predeterminada, pero puedes modificarlas fácilmente para cambiar eso. El comportamiento responsive depende de nuestro complemento Collapse <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu." title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</li>
 <li>Asegura la accesibilidad usando un elemento <code>&lt;nav&gt;</code> o, si usas un elemento más genérico como un <code>&lt;div&gt;</code>, agrega un <code>role="navigation"</code> a cada barra de navegación para identificarla explícitamente como una región emblemática para los usuarios de tecnologías de asistencia.</li>
 <li>Indica el elemento actual usando <code>aria-current="page"</code> para la página actual o <code>aria-current="true"</code> para el elemento actual en un conjunto.</li>
 <li><strong>Nuevo en v5.2.0:</strong> las barras de navegación pueden tener un tema con variables CSS que tienen como ámbito la clase base <code>.navbar</code>. <code>.navbar-light</code> ha quedado obsoleto y <code>.navbar-dark</code> se ha reescrito para sobrescribir las variables CSS en lugar de agregar estilos adicionales.</li>
@@ -1788,7 +1788,7 @@ El efecto de animación de este componente depende de la media query <code>prefe
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></div></div>
 
-<p>Cuando hagas esto, te recomendamos incluir JavaScript adicional para mover el foco mediante programación al contenedor cuando se abra. De lo contrario, los usuarios de teclados y de tecnologías de asistencia probablemente tendrán dificultades para encontrar el contenido recién revelado, especialmente si el contenedor que se abrió aparece <em>antes</em> del conmutador en la estructura del documento. También recomendamos asegurarse de que el conmutador tenga el atributo <code>aria-controls</code>, apuntando al <code>id</code> del contenedor de contenido. En teoría, esto permite a los usuarios de tecnología de asistencia saltar directamente desde el conmutador al contenedor que controla, pero actualmente la compatibilidad con esto es bastante irregular.</p>
+<p>Cuando hagas esto, te recomendamos incluir <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu." title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> adicional para mover el foco mediante programación al contenedor cuando se abra. De lo contrario, los usuarios de teclados y de tecnologías de asistencia probablemente tendrán dificultades para encontrar el contenido recién revelado, especialmente si el contenedor que se abrió aparece <em>antes</em> del conmutador en la estructura del documento. También recomendamos asegurarse de que el conmutador tenga el atributo <code>aria-controls</code>, apuntando al <code>id</code> del contenedor de contenido. En teoría, esto permite a los usuarios de tecnología de asistencia saltar directamente desde el conmutador al contenedor que controla, pero actualmente la compatibilidad con esto es bastante irregular.</p>
 <h3 id="offcanvas">Offcanvas <a class="anchor-link" href="#offcanvas" aria-label="Link to this section: Offcanvas"></a></h3>
 <p>Transforma tu barra de navegación desplegable y contraíble en un cajón offcanvas con el <a href="/docs/5.3/components/offcanvas/">componente offcanvas</a>. Ampliamos los estilos predeterminados offcanvas y utilizamos nuestras clases <code>.navbar-expand-*</code> para crear una barra lateral de navegación dinámica y flexible.</p>
 <p>En el siguiente ejemplo, para crear una barra de navegación offcanvas que siempre esté colapsada en todos los puntos de interrupción, omite la clase <code>.navbar-expand-*</code> por completo.</p>

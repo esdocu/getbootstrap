@@ -1049,7 +1049,13 @@ Si bien se admiten ambas formas de descartar un lienzo externo, ten en cuenta qu
       const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
       myModal.show();
     }, 140000);
+
+    var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
   }
+
 </script>
     <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
