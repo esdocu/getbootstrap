@@ -783,11 +783,9 @@
         <p class="bd-lead">Aprende sobre los principios rectores, las estrategias y las técnicas utilizadas para crear y
           mantener Bootstrap para que puedas personalizarlo y ampliarlo tú mismo más fácilmente.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -833,7 +831,8 @@
           consultas <code>min-width</code> que comienzan a aplicarse en un punto de interrupción específico y continúan
           hasta los puntos de interrupción más altos. Por ejemplo, un <code>.d-none</code> se aplica desde
           <code>min-width: 0</code> hasta el infinito. Por otro lado, se aplica un <code>.d-md-none</code> desde el
-          punto de interrupción medio en adelante.</p>
+          punto de interrupción medio en adelante.
+        </p>
         <p>A veces usamos <code>max-width</code> cuando la complejidad inherente de un componente lo requiere. En
           ocasiones, estas sobrescrituras son funcional y mentalmente más claras de implementar y respaldar que
           reescribir la funcionalidad principal de nuestros componentes. Nos esforzamos por limitar este enfoque, pero
@@ -843,7 +842,8 @@
         <p>Aparte de nuestro Reboot, una hoja de estilo de normalización entre navegadores, todos nuestros estilos
           apuntan a usar clases como selectores. Esto significa mantenerse alejado de selectores de tipo (p. ej.,
           <code>input[type="text"]</code>) y clases principales extrañas (p. ej., <code>.parent .child</code>) que hacen
-          que los estilos sean demasiado específicos para sobrescribirse fácilmente.</p>
+          que los estilos sean demasiado específicos para sobrescribirse fácilmente.
+        </p>
         <p>Como tal, los componentes deben construirse con una clase base que albergue pares propiedad-valor comunes que
           no deben sobrescribirse. Por ejemplo, <code>.btn</code> y <code>.btn-primary</code>. Usamos <code>.btn</code>
           para todos los estilos comunes como <code>display</code>, <code>padding</code> y <code>border-width</code>.
@@ -864,9 +864,11 @@
             sin modificar la propiedad <code>border</code>. Por ejemplo, grupos de botones, grupos de entrada y
             paginación.</li>
           <li>Estos componentes comparten una escala de <code>z-index</code> estándar de <code>0</code> a
-            <code>3</code>.</li>
+            <code>3</code>.
+          </li>
           <li><code>0</code> es predeterminado (inicial), <code>1</code> es <code>:hover</code>, <code>2</code> es
-            <code>:active</code>/<code>.active</code> y <code>3</code> es <code>:focus</code>.</li>
+            <code>:active</code>/<code>.active</code> y <code>3</code> es <code>:focus</code>.
+          </li>
           <li>Este enfoque coincide con nuestras expectativas de máxima prioridad para el usuario. Si un elemento está
             enfocado, está a la vista y bajo la atención del usuario. Los elementos activos ocupan el segundo lugar en
             importancia porque indican el estado. Pasar el cursor (hover) es el tercero más alto porque indica la
@@ -878,7 +880,8 @@
           orden de <code>z-index</code> más alto, menús desplegables, barras de navegación fijas y pegajosas, modales,
           tooltips y ventanas emergentes. Estos componentes tienen su propia escala <code>z-index</code> que comienza en
           <code>1000</code>. Este número inicial se eligió arbitrariamente y sirve como un pequeño amortiguador entre
-          nuestros estilos y los estilos personalizados de tu proyecto.</p>
+          nuestros estilos y los estilos personalizados de tu proyecto.
+        </p>
         <p>Cada componente superpuesto aumenta ligeramente su valor <code>z-index</code> de tal manera que los
           principios comunes de la interfaz de usuario permiten que los elementos enfocados en el usuario o suspendidos
           permanezcan a la vista en todo momento. Por ejemplo, un modal bloquea el documento (por ejemplo, no puede
@@ -910,23 +913,27 @@
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>; en su lugar, escriba HTML. Lee más
           sobre esto en <a href="/docs/5.3/getting-started/javascript/#data-attributes">nuestra página de descripción
-            general de JavaScript</a>.</p>
+            general de JavaScript</a>.
+        </p>
         <p>Por último, nuestros estilos se basan en los comportamientos fundamentales de los elementos web comunes.
           Siempre que sea posible, preferimos utilizar lo que proporciona el navegador. Por ejemplo, puede colocar una
           clase <code>.btn</code> en casi cualquier elemento, pero la mayoría de los elementos no proporcionan ningún
           valor semántico ni funcionalidad del navegador. Entonces, en su lugar, usamos <code>&lt;button&gt;</code>s y
-          <code>&lt;a&gt;</code>s.</p>
+          <code>&lt;a&gt;</code>s.
+        </p>
         <p>Lo mismo ocurre con los componentes más complejos. Si bien <em>podríamos</em> escribir nuestro propio
           complemento de validación de formularios para agregar clases a un elemento principal en función del estado de
           una entrada, permitiéndonos así darle estilo al texto, digamos rojo, preferimos usar los pseudoelementos
-          <code>:valid</code>/<code>:invalid</code> que nos proporciona cada navegador.</p>
+          <code>:valid</code>/<code>:invalid</code> que nos proporciona cada navegador.
+        </p>
         <h2 id="utilities">Utilidades <a class="anchor-link" href="#utilities"
             aria-label="Link to this section: Utilities"></a></h2>
         <p>Las clases de utilidad (anteriormente ayudantes en Bootstrap 3) son un poderoso aliado para combatir la
           sobrecarga de CSS y el bajo rendimiento de la página. Una clase de utilidad suele ser un par propiedad-valor
           único e inmutable expresado como una clase (por ejemplo, <code>.d-block</code> representa
           <code>display: block;</code>). Su principal atractivo es la velocidad de uso al escribir HTML y limitar la
-          cantidad de CSS personalizado que tienes que escribir.</p>
+          cantidad de CSS personalizado que tienes que escribir.
+        </p>
         <p>Específicamente con respecto a CSS personalizado, las utilidades pueden ayudar a combatir el aumento del
           tamaño de los archivos al reducir los pares propiedad-valor que se repiten con más frecuencia en clases
           únicas. Esto puede tener un efecto dramático a escala en sus proyectos.</p>

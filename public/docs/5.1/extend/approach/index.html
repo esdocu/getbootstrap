@@ -585,11 +585,9 @@
         <p class="bd-lead mb-5">Conoce las principales directrices, las estrategias y las técnicas utilizadas para crear
           y mantener Bootstrap para que puedas personalizarlo y ampliarlo más fácilmente.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -646,7 +644,8 @@
           <em>mobile-first</em>. Usamos este término en nuestros documentos y en gran parte estamos de acuerdo con él,
           pero a veces puede ser demasiado amplio. Si bien no todos los componentes <em>deben</em> ser completamente
           responsive en Bootstrap, este enfoque responsive trata de reducir las sobrescrituras de CSS al presionarlo
-          para agregar estilos a medida que el viewport se vuelve más grande.</p>
+          para agregar estilos a medida que el viewport se vuelve más grande.
+        </p>
         <p>En Bootstrap, verás esto más claramente en nuestras media queries. En la mayoría de los casos, usamos
           consultas <code>min-width</code> que comienzan a aplicarse en un breakpoint específico y continúan a través de
           los breakpoints más altos. Por ejemplo, un <code>.d-none</code> se aplica desde <code>min-width: 0</code>
@@ -660,12 +659,14 @@
         <p>Además de nuestro Reboot, una hoja de estilo de normalización entre navegadores, todos nuestros estilos
           apuntan a usar clases como selectores. Esto significa evitar los selectores de tipo (p. ej.,
           <code>input[type="text"]</code>) y las clases primarias extrañas (p. ej., <code>.parent .child</code>) que
-          hacen que los estilos sean demasiado específicos para ser sobrescritos fácilmente.</p>
+          hacen que los estilos sean demasiado específicos para ser sobrescritos fácilmente.
+        </p>
         <p>Como tales, los componentes deben construirse con una clase base que albergue pares de valor de propiedad
           comunes, que no deben sobrescribirse. Por ejemplo, <code>.btn</code> y <code>.btn-primary</code>. Usamos
           <code>.btn</code> para todos los estilos comunes como <code>display</code>, <code>padding</code> y
           <code>border-width</code>. Luego usamos modificadores como <code>.btn-primary</code> para agregar el color,
-          color de fondo, color de borde, etc.</p>
+          color de fondo, color de borde, etc.
+        </p>
         <p>Las clases modificadoras solo deben usarse cuando hay múltiples propiedades o valores para cambiar en
           múltiples variantes. Los modificadores no siempre son necesarios, así que asegúrate de ahorrar líneas de
           código y evitar sobrescrituras innecesarias al crearlas. Buenos ejemplos de modificadores son nuestras clases
@@ -679,9 +680,11 @@
             sin modificar la propiedad <code>border</code>. Por ejemplo, grupos de botones, grupos de inputs y
             paginación.</li>
           <li>Estos componentes comparten una escala de <code>z-index</code> estándar de <code>0</code> a
-            <code>3</code>.</li>
+            <code>3</code>.
+          </li>
           <li><code>0</code> es el predeterminado (inicial), <code>1</code> es <code>:hover</code>, <code>2</code> es
-            <code>:active</code>/<code>.active</code>, y <code>3</code> es <code>:focus</code>.</li>
+            <code>:active</code>/<code>.active</code>, y <code>3</code> es <code>:focus</code>.
+          </li>
           <li>Este enfoque coincide con nuestras expectativas de máxima prioridad de usuario. Si un elemento está
             enfocado, está a la vista y a la atención del usuario. Los elementos activos son los segundos más altos
             porque indican estado. El desplazamiento es el tercero más alto porque indica la intención del usuario, pero
@@ -692,7 +695,8 @@
           orden de <code>z-index</code> más alto, menús desplegables, barras de navegación fijas y pegajosas, modales,
           tooltips y popovers. Estos componentes tienen su propia escala de <code>z-index</code> que comienza en
           <code>1000</code>. Este número inicial se eligió arbitrariamente y sirve como un pequeño búfer entre nuestros
-          estilos y los estilos personalizados de tu proyecto.</p>
+          estilos y los estilos personalizados de tu proyecto.
+        </p>
         <p>Cada componente de superposición aumenta ligeramente su valor de <code>z-index</code> de tal manera que los
           principios comunes de la interfaz de usuario permiten que los elementos centrados o sobrevolados por el
           usuario permanezcan a la vista en todo momento. Por ejemplo, un modal es un bloqueo de documentos (por
@@ -723,22 +727,26 @@
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>; en su lugar, escribe HTML. Lee más
           sobre esto en <a href="/docs/5.1/getting-started/javascript/#data-attributes">nuestra página de descripción
-            general de JavaScript</a>.</p>
+            general de JavaScript</a>.
+        </p>
         <p>Por último, nuestros estilos se basan en los comportamientos fundamentales de los elementos web comunes.
           Siempre que sea posible, preferimos utilizar lo que proporciona el navegador. Por ejemplo, puedes poner una
           clase <code>.btn</code> en casi cualquier elemento, pero la mayoría de los elementos no proporcionan ningún
           valor semántico o funcionalidad de navegador. Entonces, en su lugar, usamos <code>&lt;button&gt;</code>s y
-          <code>&lt;a&gt;</code>s.</p>
+          <code>&lt;a&gt;</code>s.
+        </p>
         <p>Lo mismo ocurre con los componentes más complejos. Si bien <em>podríamos</em> escribir nuestro propio
           complemento de validación de formularios para agregar clases a un elemento padre en función del estado de un
           input, lo que nos permite diseñar el texto como rojo, preferimos usar los pseudoelementos
-          <code>:valid</code>/<code>:invalid</code> que cada navegador nos proporciona.</p>
+          <code>:valid</code>/<code>:invalid</code> que cada navegador nos proporciona.
+        </p>
         <h2 id="utilidades">Utilidades</h2>
         <p>Las clases de utilidad, anteriormente helpers en Bootstrap 3, son un poderoso aliado para combatir la
           sobrecarga de CSS y el bajo rendimiento de la página. Una clase de utilidad suele ser un par propiedad-valor
           único e inmutable expresado como una clase (por ejemplo, <code>.d-block</code> representa
           <code>display: block;</code>). Su atractivo principal es la velocidad de uso al escribir HTML y limitar la
-          cantidad de CSS personalizado que tienes que escribir.</p>
+          cantidad de CSS personalizado que tienes que escribir.
+        </p>
         <p>Específicamente en lo que respecta a CSS personalizado, las utilidades pueden ayudar a combatir el aumento
           del tamaño del archivo al reducir los pares de propiedad-valor que se repiten con más frecuencia en clases
           únicas. Esto puede tener un efecto dramático a escala en tus proyectos.</p>
@@ -766,11 +774,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

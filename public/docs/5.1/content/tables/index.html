@@ -589,11 +589,9 @@
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>) con Bootstrap.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -673,7 +671,8 @@
           selectores de fechas, las tablas de Bootstrap son <strong>opt-in</strong>. Agrega la clase base
           <code>.table</code> a cualquier <code>&lt;table&gt;</code>, luego amplía con nuestras clases de modificadores
           opcionales o estilos personalizados. No todos los estilos de tabla se heredan en Bootstrap, lo que significa
-          que cualquier tabla anidada se puede diseñar independientemente del padre.</p>
+          que cualquier tabla anidada se puede diseñar independientemente del padre.
+        </p>
         <p>Usando el marcado de tabla más básico, así es como se ven las tablas basadas en <code>.table</code> en
           Bootstrap.</p>
         <div class="bd-example">
@@ -846,7 +845,8 @@
         <h2 id="tablas-acentuadas">Tablas acentuadas</h2>
         <h3 id="filas-de-rayas">Filas de rayas</h3>
         <p>Usa <code>.table-striped</code> para agregar rayas de cebra a cualquier fila de la tabla dentro de
-          <code>&lt;tbody&gt;</code>.</p>
+          <code>&lt;tbody&gt;</code>.
+        </p>
         <div class="bd-example">
           <table class="table table-striped">
             <thead>
@@ -961,7 +961,8 @@
         </div>
         <h3 id="filas-con-estado-hover">Filas con estado <em>hover</em></h3>
         <p>Agrega <code>.table-hover</code> para habilitar un estado <em>hover</em> en las filas de la tabla dentro de
-          <code>&lt;tbody&gt;</code>.</p>
+          <code>&lt;tbody&gt;</code>.
+        </p>
         <div class="bd-example">
           <table class="table table-hover">
             <thead>
@@ -1195,18 +1196,22 @@
           <li>Comenzamos configurando el fondo de una celda de tabla con la propiedad personalizada
             <code>--bs-table-bg</code>. Todas las variantes de la tabla establecen esa propiedad personalizada para
             colorear las celdas de la tabla. De esta forma, no nos meteremos en problemas si se utilizan colores
-            semitransparentes como fondos de tablas.</li>
+            semitransparentes como fondos de tablas.
+          </li>
           <li>Luego agregamos una sombra en las celdas de la tabla con
             <code>box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);</code> para superponer cualquier
             <code>background-color</code> especificado. Debido a que usamos una gran extensión y sin desenfoque, el
             color será monótono. Dado que <code>--bs-table-accent-bg</code> no está configurado de forma predeterminada,
-            no tenemos una sombra predeterminada.</li>
+            no tenemos una sombra predeterminada.
+          </li>
           <li>Cuando se agregan las clases <code>.table-striped</code>, <code>.table-hover</code> o
             <code>.table-active</code>, <code>--bs-table-accent-bg</code> se establece en un color semitransparente para
-            colorear el fondo.</li>
+            colorear el fondo.
+          </li>
           <li>Para cada variante de tabla, generamos un color <code>--bs-table-accent-bg</code> con el mayor contraste
             según ese color. Por ejemplo, el accent color para <code>.table-primary</code> es más oscuro mientras que
-            <code>.table-dark</code> tiene un accent color más claro.</li>
+            <code>.table-dark</code> tiene un accent color más claro.
+          </li>
           <li>Los colores del texto y del borde se generan de la misma manera y sus colores se heredan de forma
             predeterminada.</li>
         </ul>
@@ -1393,7 +1398,8 @@
         </div>
         <h2 id="tablas-compactas">Tablas compactas</h2>
         <p>Agrega <code>.table-sm</code> para hacer que cualquier <code>.table</code> sea más compacta cortando todo el
-          <code>padding</code> de las celdas por la mitad.</p>
+          <code>padding</code> de las celdas por la mitad.
+        </p>
         <div class="bd-example">
           <table class="table table-sm">
             <thead>
@@ -1620,15 +1626,18 @@
           <code>th</code>s en <code>thead</code>, <code>tbody</code> y <code>tfoot</code>, nuestro selector se vería
           bastante largo sin él. Como tal, usamos el selector <code>.table &gt; :not(caption) &gt; * &gt; *</code> de
           aspecto bastante extraño para apuntar a todos los <code>td</code>s y <code>th</code>s de <code>.table</code>,
-          pero no a ninguna de las posibles tablas anidadas.</p>
+          pero no a ninguna de las posibles tablas anidadas.
+        </p>
         <p>Ten en cuenta que si agregas <code>&lt;tr&gt;</code>s como elementos secundarios directos de una tabla, esos
           <code>&lt;tr&gt;</code> se incluirán en un <code>&lt;tbody&gt;</code> de forma predeterminada, lo que hará que
-          nuestros selectores funcionen según lo previsto.</p>
+          nuestros selectores funcionen según lo previsto.
+        </p>
         <h2 id="anatomía">Anatomía</h2>
         <h3 id="encabezado-de-tabla">Encabezado de tabla</h3>
         <p>De manera similar a las tablas y las tablas oscuras, usa las clases de modificadores
           <code>.table-light</code> o <code>.table-dark</code> para hacer que <code>&lt;thead&gt;</code>s aparezca gris
-          claro u oscuro.</p>
+          claro u oscuro.
+        </p>
         <div class="bd-example">
           <table class="table">
             <thead class="table-light">
@@ -1826,7 +1835,8 @@
 </code></pre>
         </div>
         <p>También puedes colocar <code>&lt;caption&gt;</code> en la parte superior de la tabla con
-          <code>.caption-top</code>.</p>
+          <code>.caption-top</code>.
+        </p>
         <div class="bd-example">
           <table class="table caption-top">
             <caption>Lista de usuarios</caption>
@@ -1897,7 +1907,8 @@
         <p>Las tablas responsive permiten que las tablas se desplacen horizontalmente con facilidad. Haz que cualquier
           tabla responda en todas los viewports envolviendo una <code>.table</code> con <code>.table-responsive</code>.
           O elije un breakpoint máximo con el que tener una tabla responsive usando
-          <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>.</p>
+          <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>.
+        </p>
         <div class="bd-callout bd-callout-warning">
           <h5 id="recortetruncamiento-vertical">Recorte/truncamiento vertical</h5>
           <p>Las tablas responsive utilizan <code>overflow-y: hidden</code>, que recorta cualquier contenido que vaya
@@ -2422,17 +2433,16 @@
             <code>$table-hover-bg-factor</code>) se utilizan para determinar el contraste en las variantes de la tabla.
           </li>
           <li>Además de las variantes de tablas claras y oscuras, los colores del tema se aclaran con la variable
-            <code>$table-bg-scale</code>.</li>
+            <code>$table-bg-scale</code>.
+          </li>
         </ul>
 
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

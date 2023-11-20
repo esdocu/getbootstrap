@@ -785,11 +785,9 @@
           las formas y tamaños gracias a un sistema de doce columnas, seis niveles responsive predeterminados, variables
           y mixins Sass, y docenas de clases predefinidas.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -917,7 +915,8 @@
 
         <p>El ejemplo anterior crea tres columnas de igual ancho en todos los dispositivos y viewports utilizando
           nuestras clases de cuadrícula predefinidas. Esas columnas están centradas en la página con el
-          <code>.container</code> principal.</p>
+          <code>.container</code> principal.
+        </p>
         <h2 id="how-it-works">Cómo funciona. <a class="anchor-link" href="#how-it-works"
             aria-label="Link to this section: How it works"></a></h2>
         <p>Desglosándolo, así es como se integra el sistema de grilla:</p>
@@ -928,13 +927,15 @@
               queries, lo que significa que afectan ese punto de interrupción y todos los que están por encima de él
               (por ejemplo, <code>.col-sm-4</code> se aplica a <code>sm</code>, <code>md</code>, <code>lg</code>,
               <code>xl</code> y <code>xxl</code>). Esto significa que puedes controlar el tamaño y el comportamiento del
-              contenedor y la columna según cada punto de interrupción.</p>
+              contenedor y la columna según cada punto de interrupción.
+            </p>
           </li>
           <li>
             <p><strong>Los contenedores centran y rellenan horizontalmente su contenido.</strong> Utiliza
               <code>.container</code> para un ancho de píxel responsive, <code>.container-fluid</code> para un ancho de
               <code>width: 100%</code> en todas los viewports y dispositivos, o un contenedor responsive (por ejemplo,
-              <code>.container-md</code>) para una combinación de anchos fluidos y de píxeles.</p>
+              <code>.container-md</code>) para una combinación de anchos fluidos y de píxeles.
+            </p>
           </li>
           <li>
             <p><strong>Las filas son envoltorios para las columnas.</strong> Cada columna tiene un <code>padding</code>
@@ -949,7 +950,8 @@
               fila, lo que te permite crear diferentes combinaciones de elementos que abarcan cualquier número de
               columnas. Las clases de columnas indican el número de columnas de plantilla que se abarcan (por ejemplo,
               <code>col-4</code> abarca cuatro). Los <code>width</code> se establecen en porcentajes para que siempre
-              tengas el mismo tamaño relativo.</p>
+              tengas el mismo tamaño relativo.
+            </p>
           </li>
           <li>
             <p><strong>Los gutters también son responsive y personalizables.</strong> <a
@@ -1066,7 +1068,8 @@
             aria-label="Link to this section: Equal-width"></a></h3>
         <p>Por ejemplo, aquí hay dos diseños de cuadrícula que se aplican a cada dispositivo y viewport, desde
           <code>xs</code> hasta <code>xxl</code>. Agrega cualquier cantidad de clases sin unidades para cada punto de
-          interrupción que necesites y cada columna tendrá el mismo ancho.</p>
+          interrupción que necesites y cada columna tendrá el mismo ancho.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0 bd-example-row">
             <div class="container text-center">
@@ -1294,7 +1297,8 @@
             aria-label="Link to this section: All breakpoints"></a></h3>
         <p>Para grids que son iguales desde el dispositivo más pequeño hasta el más grande, usa las clases
           <code>.col</code> y <code>.col-*</code>. Especifica una clase numerada cuando necesites una columna de tamaño
-          particular; de lo contrario, siéntete libre de seguir con <code>.col</code>.</p>
+          particular; de lo contrario, siéntete libre de seguir con <code>.col</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0 bd-example-row">
             <div class="container text-center">
@@ -1946,7 +1950,8 @@
           se utiliza para generar los anchos (en porcentaje) de cada columna individual, mientras que
           <code>$grid-gutter-width</code> establece el ancho de los gutteres de las columnas.
           <code>$grid-row-columns</code> se utiliza para establecer el número máximo de columnas de
-          <code>.row-cols-*</code>; cualquier número que supere este límite se ignora.</p>
+          <code>.row-cols-*</code>; cualquier número que supere este límite se ignora.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$grid-columns</span><span class="o">:</span> <span class="mi">12</span> <span class="k">!default</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$grid-gutter-width</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!default</span><span class="p">;</span>
@@ -1957,7 +1962,8 @@
             aria-label="Link to this section: Grid tiers"></a></h3>
         <p>Más allá de las columnas mismas, también puedes personalizar el número de niveles de la cuadrícula. Si
           quisieras solo cuatro niveles de cuadrícula, actualizarías <code>$grid-breakpoints</code> y
-          <code>$container-max-widths</code> a algo como esto:</p>
+          <code>$container-max-widths</code> a algo como esto:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>

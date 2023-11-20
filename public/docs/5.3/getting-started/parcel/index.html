@@ -786,11 +786,9 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de Bootstrap en tu proyecto usando
           Parcel.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -845,7 +843,8 @@
           <li>
             <p><strong>Crea una carpeta de proyecto y configura npm.</strong> Crearemos la carpeta
               <code>my-project</code> e inicializaremos npm con el argumento <code>-y</code> para evitar que nos haga
-              todas las preguntas interactivas.</p>
+              todas las preguntas interactivas.
+            </p>
             <div class="highlight">
               <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir my-project <span class="o">&amp;&amp;</span> <span class="nb">cd</span> my-project
 </span></span><span class="line"><span class="cl">npm init -y
@@ -882,7 +881,8 @@
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para completar la estructura del
           proyecto. Ejecuta lo siguiente desde <code>my-project</code> o crea manualmente la carpeta y la estructura de
-          archivos que se muestran a continuación.</p>
+          archivos que se muestran a continuación.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir <span class="o">{</span>src,src/js,src/scss<span class="o">}</span>
 </span></span><span class="line"><span class="cl">touch src/index.html src/js/main.js src/scss/styles.scss
@@ -937,7 +937,8 @@
 </span></span></code></pre>
             </div>
             <p>Estamos incluyendo un poco de estilo Bootstrap aquí con el <code>div class="container"</code> y
-              <code>&lt;button&gt;</code> para que podamos ver cuándo Parcel carga el CSS de Bootstrap.</p>
+              <code>&lt;button&gt;</code> para que podamos ver cuándo Parcel carga el CSS de Bootstrap.
+            </p>
             <p>Parcel detectará automáticamente que estamos usando Sass e instalará el <a
                 href="https://parceljs.org/languages/sass/">complemento Sass de Parcel</a> para apoyarlo. Sin embargo,
               si lo deseas, también puedes ejecutar manualmente <code>npm i --save-dev @parcel/transformer-sass</code>.

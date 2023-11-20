@@ -783,11 +783,9 @@
         <p class="bd-lead">Documentación y ejemplos para usar barras de progreso personalizadas de Bootstrap que admiten
           barras apiladas, fondos animados y etiquetas de texto.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -856,7 +854,8 @@
           <li>Usamos <code>.progress</code> como contenedor para indicar el valor máximo de la barra de progreso.</li>
           <li>El contenedor <code>.progress</code> también requiere los atributos <code>role="progressbar"</code> y
             <code>aria</code> para crear sea accesible, incluido un nombre accesible (usando <code>aria-label</code>,
-            <code>aria-labelledby</code> o similar).</li>
+            <code>aria-labelledby</code> o similar).
+          </li>
           <li>Usamos el <code>.progress-bar</code> interno únicamente para la barra visual y la etiqueta.</li>
           <li>El <code>.progress-bar</code> requiere un estilo en línea, una clase de utilidad o CSS personalizado para
             establecer su ancho.</li>
@@ -927,7 +926,8 @@
         <h3 id="width">Ancho <a class="anchor-link" href="#width" aria-label="Link to this section: Width"></a></h3>
         <p>Bootstrap proporciona un puñado de <a href="/docs/5.3/utilities/sizing/">utilidades para configurar el
             ancho</a>. Dependiendo de tus necesidades, estos pueden ayudarte a configurar rápidamente el ancho de la
-          <code>.progress-bar</code>.</p>
+          <code>.progress-bar</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <div class="progress" role="progressbar" aria-label="Ejemplo básico" aria-valuenow="75" aria-valuemin="0"
@@ -1037,7 +1037,8 @@
           puedes utilizar <code>.overflow-visible</code> de las <a href="/docs/5.3/utilities/overflow/">utilidades de
             desbordamiento</a>, pero asegúrate de definir también un <a href="/docs/5.3/utilities/colors/#colors">color
             de texto</a> explícito para que el texto siga siendo legible. Sin embargo, ten en cuenta que actualmente
-          este enfoque no tiene en cuenta los <a href="/docs/5.3/customize/color-modes/">modos de color</a>.</p>
+          este enfoque no tiene en cuenta los <a href="/docs/5.3/customize/color-modes/">modos de color</a>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <div class="progress" role="progressbar" aria-label="Ejemplo con etiqueta" aria-valuenow="10"
@@ -1338,7 +1339,8 @@
         <h2 id="animated-stripes">Rayas animadas <a class="anchor-link" href="#animated-stripes"
             aria-label="Link to this section: Animated stripes"></a></h2>
         <p>El degradado rayado también se puede animar. Añade <code>.progress-bar-animated</code> a
-          <code>.progress-bar</code> para animar las franjas de derecha a izquierda mediante animaciones CSS3.</p>
+          <code>.progress-bar</code> para animar las franjas de derecha a izquierda mediante animaciones CSS3.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <div class="progress" role="progressbar" aria-label="Ejemplo de rayas animadas" aria-valuenow="75"
@@ -1434,7 +1436,8 @@
         <h3 id="keyframes">Fotogramas clave <a class="anchor-link" href="#keyframes"
             aria-label="Link to this section: Keyframes"></a></h3>
         <p>Se utiliza para crear animaciones CSS para <code>.progress-bar-animated</code>. Incluido en
-          <code>scss/_progress-bar.scss</code>.</p>
+          <code>scss/_progress-bar.scss</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet bd-file-ref">
           <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
             <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small"

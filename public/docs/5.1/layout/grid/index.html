@@ -587,11 +587,9 @@
           formas y tamaños gracias a un sistema de doce columnas, seis niveles responsive (breakpoints) predeterminados,
           variables Sass y mixins, y docenas de clases predefinidas.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -702,7 +700,8 @@
         </div>
         <p>El ejemplo anterior crea tres columnas de igual ancho en todos los dispositivos y viewports utilizando
           nuestras clases de cuadrícula predefinidas. Esas columnas están centradas en la página con el
-          <code>.container</code> principal.</p>
+          <code>.container</code> principal.
+        </p>
         <h2 id="cómo-funciona-el-sistema-de-cuadrícula-grid">¿Cómo funciona el sistema de cuadrícula (Grid)?</h2>
         <p>Desglosándolo, así es como se compone el sistema de cuadrícula:</p>
         <ul>
@@ -717,7 +716,8 @@
             <p><strong>Los contenedores centran y rellenan horizontalmente su contenido.</strong> Usa
               <code>.container</code> para un ancho de píxel responsive, <code>.container-fluid</code> para
               <code>width: 100%</code> en todos los viewports y dispositivos, o un contenedor responsive (p. ej.,
-              <code>.container-md</code>) para una combinación entre fluido y anchos en píxeles.</p>
+              <code>.container-md</code>) para una combinación entre fluido y anchos en píxeles.
+            </p>
           </li>
           <li>
             <p><strong>Las filas son envoltorios para las columnas.</strong> Cada columna tiene un <code>padding</code>
@@ -733,7 +733,8 @@
               fila, lo que te permite crear diferentes combinaciones de elementos que abarcan cualquier número de
               columnas. Las clases de columna indican el número de columnas de plantilla que abarcan (por ejemplo,
               <code>col-4</code> abarca cuatro). <code>width</code>s se establecen en porcentajes para que siempre
-              tengas el mismo tamaño relativo.</p>
+              tengas el mismo tamaño relativo.
+            </p>
           </li>
           <li>
             <p><strong>Los gutters también son responsive y personalizables.</strong> <a
@@ -849,7 +850,8 @@
         <h3 id="anchos-iguales">Anchos iguales</h3>
         <p>Por ejemplo, aquí hay dos diseños de cuadrícula que se aplican a cada dispositivo y viewport, desde
           <code>xs</code> hasta <code>xxl</code>. Agrega cualquier número de clases sin unidades para cada breakpoint
-          que necesites y cada columna tendrá el mismo ancho.</p>
+          que necesites y cada columna tendrá el mismo ancho.
+        </p>
         <div class="bd-example bd-example-row">
           <div class="container">
             <div class="row">
@@ -1022,7 +1024,8 @@
         <h3 id="todos-los-breakpoints">Todos los breakpoints</h3>
         <p>Para cuadrículas que son iguales desde el dispositivo más pequeño hasta el más grande, usa las clases
           <code>.col</code> y <code>.col-*</code>. Especifica una clase numerada cuando necesites una columna de tamaño
-          particular; de lo contrario, siéntate libre de apegarte a <code>.col</code>.</p>
+          particular; de lo contrario, siéntate libre de apegarte a <code>.col</code>.
+        </p>
         <div class="bd-example bd-example-row">
           <div class="container">
             <div class="row">
@@ -1443,7 +1446,8 @@
         <h3 id="niveles-de-cuadrícula">Niveles de cuadrícula</h3>
         <p>Yendo más allá de las columnas en sí, también puedes personalizar la cantidad de niveles de cuadrícula. Si
           quisieras solo cuatro niveles de cuadrícula, actualizarías <code>$grid-breakpoints</code> y
-          <code>$container-max-widths</code> a algo como esto:</p>
+          <code>$container-max-widths</code> a algo como esto:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
   <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
@@ -1463,16 +1467,15 @@
           hacerlo, se generará un nuevo conjunto de clases de cuadrícula predefinidas para anchos de columna,
           compensaciones y ordenación. Las utilidades de visibilidad responsive también se actualizarán para usar los
           breakpoints personalizados. Asegúrate de establecer los valores de cuadrícula en <code>px</code> (no en
-          <code>rem</code>, <code>em</code> o <code>%</code>).</p>
+          <code>rem</code>, <code>em</code> o <code>%</code>).
+        </p>
 
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

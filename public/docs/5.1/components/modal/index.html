@@ -588,11 +588,9 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de Bootstrap para agregar cuadros de
           diálogo a tu sitio para lightboxes, notificaciones de usuario o contenido completamente personalizado.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -694,7 +692,8 @@
           <li>Los modales usan <code>position: fixed</code>, que a veces puede ser un poco particular sobre su
             representación. Siempre que sea posible, coloca tu HTML modal en una posición de nivel superior para evitar
             posibles interferencias de otros elementos. Es probable que tengas problemas al anidar un
-            <code>.modal</code> dentro de otro elemento fixed.</li>
+            <code>.modal</code> dentro de otro elemento fixed.
+          </li>
           <li>Una vez más, debido al <code>position: fixed</code>, existen algunas advertencias con el uso de modales en
             dispositivos móviles. <a
               href="/docs/5.1/getting-started/browsers-devices/#modals-and-dropdowns-on-mobile">Consulta nuestros
@@ -704,7 +703,8 @@
               <code>autofocus</code></a> no tiene ningún efecto en modales Bootstrap. Para lograr el mismo efecto, usa
             <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
               data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado:</li>
+              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado:
+          </li>
         </ul>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myModal'</span><span class="p">)</span>
@@ -727,7 +727,8 @@
         <p>A continuación se muestra un ejemplo modal <em>static</em> (lo que significa que su <code>position</code> y
           <code>display</code> han sido sobrescritas). Se incluyen el encabezado modal, el cuerpo modal (requerido para
           <code>padding</code>) y el pie de página modal (opcional). Te pedimos que incluyas encabezados modales con
-          acciones de descarte (cierre) siempre que sea posible, o proporciones otra acción de descarte explícita.</p>
+          acciones de descarte (cierre) siempre que sea posible, o proporciones otra acción de descarte explícita.
+        </p>
         <div class="bd-example bd-example-modal">
           <div class="modal" tabindex="-1">
             <div class="modal-dialog">
@@ -908,7 +909,8 @@
           </button>
         </div>
         <p>También puedes crear un modal desplazable que permita desplazar el cuerpo modal agregando
-          <code>.modal-dialog-scrollable</code> a <code>.modal-dialog</code>.</p>
+          <code>.modal-dialog-scrollable</code> a <code>.modal-dialog</code>.
+        </p>
         <div class="modal fade" id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableTitle"
           aria-hidden="true">
           <div class="modal-dialog modal-dialog-scrollable">
@@ -1142,13 +1144,15 @@
         <p>¿Tienes un montón de botones que activan el mismo modal con contenidos ligeramente diferentes? Usa
           <code>event.relatedTarget</code> y <a
             href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">atributos HTML
-            <code>data-bs-*</code></a> para variar el contenido del modal según en qué botón se hizo clic.</p>
+            <code>data-bs-*</code></a> para variar el contenido del modal según en qué botón se hizo clic.
+        </p>
         <p>A continuación se muestra una demostración en vivo seguida de un ejemplo de HTML y <a
             href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para obtener más información, <a
             href="#events">lee los documentos de eventos modales</a> para obtener detalles sobre
-          <code>relatedTarget</code>.</p>
+          <code>relatedTarget</code>.
+        </p>
         <div class="bd-example">
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
             data-bs-whatever="@mdo">Abrir modal para @mdo</button>
@@ -1246,7 +1250,8 @@
         <p>Alterna entre múltiples modales con una colocación inteligente de los atributos <code>data-bs-target</code> y
           <code>data-bs-toggle</code>. Por ejemplo, podrías alternar un modal de restablecimiento de contraseña desde un
           modal de inicio de sesión ya abierto. <strong>Ten en cuenta que no se pueden abrir múltiples modales al mismo
-            tiempo</strong>; este método simplemente alterna entre dos modales separados.</p>
+            tiempo</strong>; este método simplemente alterna entre dos modales separados.
+        </p>
         <div class="bd-example">
           <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
             tabindex="-1">
@@ -1327,9 +1332,11 @@
         <p>La variable <code>$modal-fade-transform</code> determina el estado de transformación de
           <code>.modal-dialog</code> antes de la animación de aparición gradual del modal, la variable
           <code>$modal-show-transform</code> determina la transformación de <code>.modal-dialog</code> en el final de la
-          animación fade-in del modal.</p>
+          animación fade-in del modal.
+        </p>
         <p>Si deseas, por ejemplo, una animación de acercamiento, puede establecer
-          <code>$modal-fade-transform: scale(.8)</code>.</p>
+          <code>$modal-fade-transform: scale(.8)</code>.
+        </p>
         <h3 id="eliminar-la-animación">Eliminar la animación</h3>
         <p>Para modales que simplemente aparecen en lugar de aparecer gradualmente, elimina la clase <code>.fade</code>
           de tu marcado modal.</p>
@@ -1349,7 +1356,8 @@
           a través de <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
             data-bs-placement="top" data-bs-custom-class="custom-tooltip"
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</p>
+            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.
+        </p>
         <h3 id="incrustación-de-videos-de-youtube">Incrustación de videos de YouTube</h3>
         <p>Incrustar videos de YouTube en modales requiere <a href="https://esdocu.dev/javascript" target="_blank"
             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
@@ -1654,7 +1662,8 @@
         </div>
         <h3 id="loop">Loop</h3>
         <p><a href="#fullscreen-modal">Los modales de pantalla completa responsive</a> se generan a través del mapa
-          <code>$breakpoints</code> y un bucle en <code>scss/_modal.scss</code>.</p>
+          <code>$breakpoints</code> y un bucle en <code>scss/_modal.scss</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
   <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
@@ -1695,7 +1704,8 @@
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. También sobrescribe el comportamiento
           <strong>hover</strong> predeterminado y genera un <code>.modal-backdrop</code> para proporcionar un área de
-          clic para descartar los modales mostrados al hacer clic fuera del modal.</p>
+          clic para descartar los modales mostrados al hacer clic fuera del modal.
+        </p>
         <h3 id="a-través-de-atributos-de-datos">A través de atributos de datos</h3>
         <h4 id="toggle">Toggle</h4>
         <p>Activa un modal sin escribir <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
@@ -1704,7 +1714,8 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Establece
           <code>data-bs-toggle="modal"</code> en un elemento controlador, como un botón, junto con
           <code>data-bs-target="#foo"</code> o <code>href="#foo"</code> para apuntar a un modal específico para
-          alternar.</p>
+          alternar.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"modal"</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">"#myModal"</span><span class="p">&gt;</span>Lanzar modal<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre>
@@ -1806,7 +1817,8 @@
         <h4 id="toggle-1">toggle</h4>
         <p>Cambia manualmente un modal. <strong>Regresa al punto de la llamada antes de que el modal se haya mostrado u
             ocultado</strong> (es decir, antes de que ocurra el evento <code>shown.bs.modal</code> o
-          <code>hidden.bs.modal</code>).</p>
+          <code>hidden.bs.modal</code>).
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myModal</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
 </code></pre>
@@ -1875,7 +1887,8 @@
               <td><code>show.bs.modal</code></td>
               <td>Este evento se activa inmediatamente cuando se llama al método de instancia <code>show</code>. Si es
                 causado por un clic, el elemento en el que se hizo clic estará disponible como la propiedad
-                <code>relatedTarget</code> del evento.</td>
+                <code>relatedTarget</code> del evento.
+              </td>
             </tr>
             <tr>
               <td><code>shown.bs.modal</code></td>
@@ -1910,11 +1923,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

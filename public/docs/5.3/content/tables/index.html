@@ -784,13 +784,12 @@
         <p class="bd-lead">Documentación y ejemplos para el diseño de tablas (dado su uso frecuente en complementos de
           <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>) con Bootstrap.</p>
+            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>) con Bootstrap.
+        </p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -871,7 +870,8 @@
           selectores de fechas, las tablas de Bootstrap son <strong>opt-in</strong>. Agrega la clase base
           <code>.table</code> a cualquier <code>&lt;table&gt;</code> y luego extiéndela con nuestras clases
           modificadoras opcionales o estilos personalizados. No todos los estilos de tabla se heredan en Bootstrap, lo
-          que significa que cualquier tabla anidada puede tener un estilo independiente del padre.</p>
+          que significa que cualquier tabla anidada puede tener un estilo independiente del padre.
+        </p>
         <p>Usando el marcado de tabla más básico, así es como se ven las tablas basadas en <code>.table</code> en
           Bootstrap.</p>
         <div class="bd-example">
@@ -1053,7 +1053,8 @@
         <h3 id="striped-rows">Filas rayadas <a class="anchor-link" href="#striped-rows"
             aria-label="Link to this section: Striped rows"></a></h3>
         <p>Usa <code>.table-striped</code> para agregar rayas de cebra a cualquier fila de la tabla dentro del
-          <code>&lt;tbody&gt;</code>.</p>
+          <code>&lt;tbody&gt;</code>.
+        </p>
         <div class="bd-example">
           <table class="table table-striped">
             <thead>
@@ -1523,20 +1524,23 @@
           <li>Comenzamos configurando el fondo de una celda de la tabla con la propiedad personalizada
             <code>--bs-table-bg</code>. Luego, todas las variantes de la tabla establecen esa propiedad personalizada
             para colorear las celdas de la tabla. De esta forma, no nos meteremos en problemas si se utilizan colores
-            semitransparentes como fondo de tabla.</li>
+            semitransparentes como fondo de tabla.
+          </li>
           <li>Luego agregamos una sombra de cuadro insertado en las celdas de la tabla con
             <code>box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));</code>
             para colocarlo encima de cualquier <code>background-color</code> especificado. Utiliza una cascada
             personalizada para sobrescribir <code>box-shadow</code>, independientemente de la especificidad de CSS.
             Debido a que utilizamos una extensión enorme y sin desenfoque, el color será monótono. Dado que
             <code>--bs-table-accent-bg</code> está configurado en <code>transparent</code> de forma predeterminada, no
-            tenemos una sombra de cuadro predeterminada.</li>
+            tenemos una sombra de cuadro predeterminada.
+          </li>
           <li>Cuando se agregan las clases <code>.table-striped</code>, <code>.table-striped-columns</code>,
             <code>.table-hover</code> o <code>.table-active</code>, ya sea <code>--bs-table-bg-type</code> o
             <code>--bs-table-bg-state</code> (por defecto configurado en <code>initial</code>) están configurados en un
             color semitransparente (<code>--bs-table-striped-bg</code>, <code>--bs-table-active-bg</code> o
             <code>--bs-table-hover-bg</code>) para colorear el fondo y sobrescribir el <code>--bs-table-accent-bg</code>
-            predeterminado.</li>
+            predeterminado.
+          </li>
           <li>Para cada variante de tabla, generamos un color <code>--bs-table-accent-bg</code> con el mayor contraste
             dependiendo de ese color. Por ejemplo, el color de acento de <code>.table-primary</code> es más oscuro,
             mientras que <code>.table-dark</code> tiene un color de acento más claro.</li>
@@ -1747,7 +1751,8 @@
         <h2 id="small-tables">Tablas pequeñas <a class="anchor-link" href="#small-tables"
             aria-label="Link to this section: Small tables"></a></h2>
         <p>Agrega <code>.table-sm</code> para hacer cualquier <code>.table</code> más compacta cortando todo el
-          <code>padding</code> de la celda por la mitad.</p>
+          <code>padding</code> de la celda por la mitad.
+        </p>
         <div class="bd-example">
           <table class="table table-sm">
             <thead>
@@ -1829,7 +1834,8 @@
         <p>Agrega un borde más grueso y más oscuro entre los grupos de tablas—<code>&lt;thead&gt;</code>,
           <code>&lt;tbody&gt;</code> y <code>&lt;tfoot&gt;</code>— con <code>.table-group-divider</code>. Personaliza el
           color cambiando el <code>border-top-color</code> (para el cual actualmente no proporcionamos una clase de
-          utilidad).</p>
+          utilidad).
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <table class="table">
@@ -2065,16 +2071,19 @@
           <code>th</code>s en <code>thead</code>, <code>tbody</code> y <code>tfoot</code>, nuestro selector parecería
           bastante largo sin él. Como tal, utilizamos el <code>.table &gt; :not(caption) &gt; * &gt; *</code> selector
           para apuntar a todos los <code>td</code> y <code>th</code> de <code>.table</code>, pero a ninguna de las
-          posibles tablas anidadas.</p>
+          posibles tablas anidadas.
+        </p>
         <p>Ten en cuenta que si agregas <code>&lt;tr&gt;</code>s como hijos directos de una tabla, esos
           <code>&lt;tr&gt;</code> serán envuelto en un <code>&lt;tbody&gt;</code> de forma predeterminada, lo que hace
-          que nuestros selectores funcionen según lo previsto.</p>
+          que nuestros selectores funcionen según lo previsto.
+        </p>
         <h2 id="anatomy">Anatomía <a class="anchor-link" href="#anatomy" aria-label="Link to this section: Anatomy"></a>
         </h2>
         <h3 id="table-head">Cabecera de tabla <a class="anchor-link" href="#table-head"
             aria-label="Link to this section: Table head"></a></h3>
         <p>Similar a las tablas y las tablas oscuras, usa las clases modificadoras <code>.table-light</code> o
-          <code>.table-dark</code> para hacer <code>&lt;thead&gt;</code> aparezcan en gris claro u oscuro.</p>
+          <code>.table-dark</code> para hacer <code>&lt;thead&gt;</code> aparezcan en gris claro u oscuro.
+        </p>
         <div class="bd-example">
           <table class="table">
             <thead class="table-light">
@@ -2268,7 +2277,8 @@
 </span></span></code></pre>
         </div>
         <p>También puedes poner el <code>&lt;caption&gt;</code> en la parte superior de la tabla con
-          <code>.caption-top</code>.</p>
+          <code>.caption-top</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <table class="table caption-top">
@@ -2359,7 +2369,8 @@
         <p>Las tablas responsive permiten desplazarse horizontalmente con facilidad. Haz que cualquier tabla responda en
           todas las viewports envolviendo un <code>.table</code> con <code>.table-responsive</code>. O elige un punto de
           interrupción máximo con el cual tener una tabla responsive usando
-          <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>.</p>
+          <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>.
+        </p>
         <div class="bd-callout bd-callout-warning">
           <h5 id="vertical-clippingtruncation">Recorte/truncamiento vertical <a class="anchor-link"
               href="#vertical-clippingtruncation" aria-label="Link to this section: Vertical clipping/truncation"></a>
@@ -2914,7 +2925,8 @@
             <code>$table-hover-bg-factor</code>) se utilizan para determinar el contraste en las variantes de la tabla.
           </li>
           <li>Aparte de las variantes claro y oscuro de tabla, los colores del tema se aclaran con la variable
-            <code>$table-bg-scale</code>.</li>
+            <code>$table-bg-scale</code>.
+          </li>
         </ul>
 
       </div>

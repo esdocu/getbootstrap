@@ -586,11 +586,9 @@
           la barra de navegación. Incluye soporte para marca, navegación y más, incluido soporte para nuestro
           complemento Collapse.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -661,7 +659,8 @@
         <ul>
           <li>Las barras de navegación requieren un contenedor <code>.navbar</code> con
             <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> para colapsar con capacidad responsive y clases de <a
-              href="#color-schemes">esquema de color</a>.</li>
+              href="#color-schemes">esquema de color</a>.
+          </li>
           <li>Las barras de navegación y su contenido son fluidos por defecto. Cambia el <a
               href="#containers">contenedor</a> para limitar su ancho horizontal de diferentes maneras.</li>
           <li>Usa nuestras clases de utilidad <a href="/docs/5.1/utilities/spacing/">spacing</a> y <a
@@ -676,7 +675,8 @@
             como <code>&lt;div&gt;</code>, agrega un <code>role="navigation"</code> a cada barra de navegación para
             identificarla explícitamente como una región de referencia para usuarios de tecnologías de asistencia.</li>
           <li>Indica el elemento actual usando <code>aria-current="page"</code> para la página actual o
-            <code>aria-current="true"</code> para el elemento actual en un conjunto.</li>
+            <code>aria-current="true"</code> para el elemento actual en un conjunto.
+          </li>
         </ul>
         <div class="bd-callout bd-callout-info">
           El efecto de animación de este componente depende de la media query <code>prefers-reduced-motion</code>.
@@ -785,7 +785,8 @@
         </div>
         <p>Este ejemplo usa las clases de utilidad de <a href="/docs/5.1/utilities/background/">background</a>
           (<code>bg-light</code>) y de <a href="/docs/5.1/utilities/spacing/">spacing</a> (<code>me-auto</code>,
-          <code>mb-2</code>, <code>mb-lg-0</code>, <code>me-2</code>).</p>
+          <code>mb-2</code>, <code>mb-lg-0</code>, <code>me-2</code>).
+        </p>
         <h3 id="tu-marca">Tu marca</h3>
         <p>El <code>.navbar-brand</code> se puede aplicar a la mayoría de los elementos, pero un enlace funciona mejor,
           ya que algunos elementos pueden requerir clases de utilidad o estilos personalizados.</p>
@@ -850,7 +851,8 @@
         <h4 id="imagen-y-texto">Imagen y texto</h4>
         <p>También puedes hacer uso de algunas utilidades adicionales para agregar una imagen y texto al mismo tiempo.
           Ten en cuenta la adición de <code>.d-inline-block</code> y <code>.align-text-top</code> en
-          <code>&lt;img&gt;</code>.</p>
+          <code>&lt;img&gt;</code>.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
@@ -876,7 +878,8 @@
         <p>Los enlaces de navegación de Navbar se basan en nuestras opciones <code>.nav</code> con su propia clase
           modificadora y requieren el uso de <a href="#toggler">toggler classes</a> para un estilo responsive adecuado.
           <strong>La navegación en las navbars también crecerá para ocupar tanto espacio horizontal como sea
-            posible</strong> para mantener el contenido de la barra de navegación alineado de forma segura.</p>
+            posible</strong> para mantener el contenido de la barra de navegación alineado de forma segura.
+        </p>
         <p>Agrega la clase <code>.active</code> en <code>.nav-link</code> para indicar la página actual.</p>
         <p>Ten en cuenta que también debes agregar el atributo <code>aria-current</code> en el <code>.nav-link</code>
           activo.</p>
@@ -975,7 +978,8 @@
         </div>
         <p>También puedes usar menús desplegables en tu barra de navegación. Los menús desplegables requieren un
           elemento envolvente para el posicionamiento, así que asegúrate de usar elementos separados y anidados para
-          <code>.nav-item</code> y <code>.nav-link</code> como se muestra a continuación.</p>
+          <code>.nav-item</code> y <code>.nav-link</code> como se muestra a continuación.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -1212,7 +1216,8 @@
         <p>Tematizar la barra de navegación nunca ha sido tan fácil gracias a la combinación de clases de temas y
           utilidades de <code>background-color</code>. Elije entre <code>.navbar-light</code> para usar con colores de
           fondo claros o <code>.navbar-dark</code> para colores de fondo oscuros. Luego, personaliza con las utilidades
-          <code>.bg-*</code>.</p>
+          <code>.bg-*</code>.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -1368,7 +1373,8 @@
           fijo en la parte inferior (se desplaza con la página hasta que llega al final y luego permanece allí).</p>
         <p>Las barras de navegación fijas usan <code>position: fixed</code>, lo que significa que se extraen del flujo
           normal del DOM y pueden requerir CSS personalizado (por ejemplo, <code>padding-top</code> en el
-          <code>&lt;body&gt;</code>) para evitar la superposición con otros elementos.</p>
+          <code>&lt;body&gt;</code>) para evitar la superposición con otros elementos.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
@@ -1445,13 +1451,15 @@
           navegación. De forma predeterminada, el desplazamiento se inicia en <code>75vh</code> (o el 75% de la altura
           del viewport), pero puedes sobrescribirlo con la propiedad personalizada CSS local
           <code>--bs-navbar-height</code> o estilos personalizados. En viewports más grandes, cuando se expande la barra
-          de navegación, el contenido aparecerá como en una barra de navegación predeterminada.</p>
+          de navegación, el contenido aparecerá como en una barra de navegación predeterminada.
+        </p>
         <p>Ten en cuenta que este comportamiento viene con un inconveniente potencial de <code>overflow</code>: al
           configurar <code>overflow-y: auto</code> (requerido para desplazar el contenido aquí), <code>overflow-x</code>
           es el equivalente de <code>auto</code>, que recortará algo de contenido horizontal.</p>
         <p>Aquí hay un ejemplo de barra de navegación que usa <code>.navbar-nav-scroll</code> con
           <code>style="--bs-scroll-height: 100px;"</code>, con algunas utilidades de margen adicionales para un espacio
-          óptimo.</p>
+          óptimo.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -1536,10 +1544,12 @@
         <p>Las barras de navegación pueden usar las clases <code>.navbar-toggler</code>, <code>.navbar-collapse</code> y
           <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> para determinar cuándo su contenido colapsa detrás de un
           botón. En combinación con otras utilidades, puedes elegir fácilmente cuándo mostrar u ocultar elementos
-          particulares.</p>
+          particulares.
+        </p>
         <p>Para las barras de navegación que nunca colapsan, agrega la clase <code>.navbar-expand</code> en la barra de
           navegación. Para las barras de navegación que siempre colapsan, no agregues ninguna clase
-          <code>.navbar-expand</code>.</p>
+          <code>.navbar-expand</code>.
+        </p>
         <h3 id="toggler">Toggler</h3>
         <p>Los togglers de la barra de navegación están alineados a la izquierda de forma predeterminada, pero si siguen
           a un elemento hermano como <code>.navbar-brand</code>, se alinearán automáticamente en el extremo derecho. Al
@@ -1766,7 +1776,8 @@
         <h3 id="offcanvas">Offcanvas</h3>
         <p>Transforma tu barra de navegación que se expande y contrae en un cajón fuera del lienzo con el complemento
           Offcanvas. Extendemos los estilos predeterminados de offcanvas y usamos nuestras clases
-          <code>.navbar-expand-*</code> para crear una barra lateral de navegación dinámica y flexible.</p>
+          <code>.navbar-expand-*</code> para crear una barra lateral de navegación dinámica y flexible.
+        </p>
         <p>En el siguiente ejemplo, para crear una barra de navegación Offcanvas que siempre está colapsada en todos los
           brakpoints, omite por completo la clase <code>.navbar-expand-*</code>.</p>
         <div class="bd-example">
@@ -2006,11 +2017,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

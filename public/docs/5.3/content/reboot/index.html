@@ -785,11 +785,9 @@
           inicio de Bootstrap para proporcionar una línea de base elegante, consistente y simple sobre la cual
           construir.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -855,18 +853,22 @@
         <p>Reboot se basa en Normalize, proporcionando muchos elementos HTML con estilos un tanto obstinados usando solo
           selectores de elementos. El estilo adicional se realiza solo con clases. Por ejemplo, reiniciamos algunos
           estilos <code>&lt;table&gt;</code> para obtener una línea base más simple y luego proporcionamos
-          <code>.table</code>, <code>.table-bordered</code> y más.</p>
+          <code>.table</code>, <code>.table-bordered</code> y más.
+        </p>
         <p>Aquí están nuestras pautas y razones para elegir qué sobrescribir en Reboot:</p>
         <ul>
           <li>Actualiza algunos valores predeterminados del navegador para usar <code>rem</code>s en lugar de
-            <code>em</code>s para lograr un espaciado escalable entre componentes.</li>
+            <code>em</code>s para lograr un espaciado escalable entre componentes.
+          </li>
           <li>Evita <code>margin-top</code>. Los márgenes verticales pueden colapsar y producir resultados inesperados.
             Sin embargo, lo más importante es que una única dirección de <code>margin</code> es un modelo mental más
             simple.</li>
           <li>Para facilitar el escalado entre tamaños de dispositivos, los elementos de bloque deben usar
-            <code>rem</code>s para los <code>margin</code>s.</li>
+            <code>rem</code>s para los <code>margin</code>s.
+          </li>
           <li>Mantén las declaraciones de propiedades relacionadas con <code>font</code> al mínimo, usando
-            <code>inherit</code> siempre que sea posible.</li>
+            <code>inherit</code> siempre que sea posible.
+          </li>
         </ul>
         <h2 id="css-variables">Variables CSS <a class="anchor-link" href="#css-variables"
             aria-label="Link to this section: CSS variables"></a></h2>
@@ -984,9 +986,11 @@
           </li>
           <li>El <code>&lt;body&gt;</code> también establece un <code>font-family</code>global,
             <code>font-weight</code>, <code>line-height</code> y <code>color</code>. Esto lo heredan más adelante
-            algunos elementos del formulario para evitar inconsistencias en las fuentes.</li>
+            algunos elementos del formulario para evitar inconsistencias en las fuentes.
+          </li>
           <li>Por seguridad, el <code>&lt;body&gt;</code> tiene un <code>background-color</code> declarado, por defecto
-            <code>#fff</code>.</li>
+            <code>#fff</code>.
+          </li>
         </ul>
         <h2 id="native-font-stack">Pila de fuentes nativas <a class="anchor-link" href="#native-font-stack"
             aria-label="Link to this section: Native font stack"></a></h2>
@@ -1022,7 +1026,8 @@
         <p>Ten en cuenta que debido a que la pila de fuentes incluye fuentes emoji, muchos símbolos comunes/caracteres
           dingbat Unicode se representarán como pictografías multicolores. Su apariencia variará, dependiendo del estilo
           utilizado en la fuente emoji nativa del navegador/plataforma, y no se verán afectados por ningún estilo de
-          <code>color</code> de CSS.</p>
+          <code>color</code> de CSS.
+        </p>
         <p>Esta <code>font-family</code> se aplica al <code>&lt;body&gt;</code> y se hereda automáticamente de forma
           global en Bootstrap. Para cambiar la <code>font-family</code> global, actualiza <code>$font-family-base</code>
           y vuelve a compilar Bootstrap.</p>
@@ -1031,7 +1036,8 @@
         <p>Todos los elementos de encabezado—<code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> tienen su
           <code>margin-top</code> eliminado, <code>margin-bottom: .5rem</code> establecido y <code>line-height</code>
           ajustado. Aunque los encabezados heredan su <code>color</code> de forma predeterminada, también puedes
-          sobrescribirlo mediante la variable CSS opcional, <code>--bs-heading-color</code>.</p>
+          sobrescribirlo mediante la variable CSS opcional, <code>--bs-heading-color</code>.
+        </p>
         <div class="table-responsive">
           <table class="table">
             <thead>
@@ -1072,7 +1078,8 @@
         <h2 id="paragraphs">Párrafos <a class="anchor-link" href="#paragraphs"
             aria-label="Link to this section: Paragraphs"></a></h2>
         <p>Todos los elementos <code>&lt;p&gt;</code> tienen su <code>margin-top</code> eliminado y
-          <code>margin-bottom: 1rem</code> configurado para facilitar el espaciado.</p>
+          <code>margin-bottom: 1rem</code> configurado para facilitar el espaciado.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <p>Este es un párrafo de ejemplo.</p>
@@ -1189,7 +1196,8 @@
           navegador, los <code>&lt;hr&gt;</code> tienen estilo mediante <code>border-top</code>, tienen una
           <code>opacity: .25</code> y heredan automáticamente su <code>border-color</code> a través de
           <code>color</code>, incluso cuando <code>color</code> se establece a través del padre. Se pueden modificar con
-          utilidades de texto, bordes y opacidad.</p>
+          utilidades de texto, bordes y opacidad.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <hr>
@@ -1233,7 +1241,8 @@
         <p>Todas las listas—<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> y <code>&lt;dl&gt;</code>—eliminan el
           <code>margin-top</code> y el <code>margin-bottom: 1rem</code>. Las listas anidadas no tienen
           <code>margin-bottom</code>. También hemos restablecido el <code>padding-left</code> en los elementos
-          <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code>.</p>
+          <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code>.
+        </p>
         <div class="bd-example">
           <ul>
             <li>A todas las listas se les elimina el margen superior.</li>
@@ -1257,7 +1266,8 @@
         <p>Para un estilo más simple, una jerarquía clara y un mejor espaciado, las listas de descripciones tienen
           <code>margin</code>s actualizados. <code>&lt;dd&gt;</code> restablece <code>margin-left</code> a
           <code>0</code> y agrega <code>margin-bottom: .5rem</code>. Los <code>&lt;dt&gt;</code> están en
-          <strong>negrita</strong>.</p>
+          <strong>negrita</strong>.
+        </p>
         <div class="bd-example">
           <dl>
             <dt>Listas de descripción</dt>
@@ -1422,7 +1432,8 @@
         <h2 id="tables">Tablas <a class="anchor-link" href="#tables" aria-label="Link to this section: Tables"></a></h2>
         <p>Las tablas se ajustan ligeramente para diseñar <code>&lt;caption&gt;</code>, contraer bordes y garantizar una
           <code>text-align</code> consistente en todas partes. Los cambios adicionales para bordes, relleno y más vienen
-          <a href="/docs/5.3/content/tables/"> con <code>.table</code> (clase) </a>.</p>
+          <a href="/docs/5.3/content/tables/"> con <code>.table</code> (clase) </a>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <table>
@@ -1522,14 +1533,17 @@
           <li><code>&lt;legend&gt;</code>, al igual que los conjuntos de campos (fieldsets), también han sido
             rediseñados para que se muestren como una especie de encabezado.</li>
           <li><code>&lt;label&gt;</code> están configurados en <code>display: inline-block</code> para permitir que
-            <code>margin</code> sea aplicado.</li>
+            <code>margin</code> sea aplicado.
+          </li>
           <li><code>&lt;input&gt;</code>s, <code>&lt;select&gt;</code>s, <code>&lt;textarea&gt;</code>s , y los
             <code>&lt;button&gt;</code> se solucionan principalmente con Normalize, pero Reboot elimina su
-            <code>margin</code> y establece <code>line-height: inherit</code> también.</li>
+            <code>margin</code> y establece <code>line-height: inherit</code> también.
+          </li>
           <li><code>&lt;textarea&gt;</code> se modifican para que solo se puedan cambiar de tamaño verticalmente, ya que
             el cambio de tamaño horizontal a menudo "rompe" el diseño de la página.</li>
           <li><code>&lt;button&gt;</code>s (elementos del botón) y <code>&lt;input&gt;</code> tienen
-            <code>cursor: pointer</code> cuando <code>:not(:disabled)</code>.</li>
+            <code>cursor: pointer</code> cuando <code>:not(:disabled)</code>.
+          </li>
         </ul>
         <p>Estos cambios y más se muestran a continuación.</p>
         <div class="bd-callout bd-callout-warning">
@@ -1664,7 +1678,8 @@
         <p>Reboot incluye una mejora para que <code>role="button"</code> cambie el cursor predeterminado a
           <code>pointer</code>. Agrega este atributo a los elementos para ayudar a indicar que los elementos son
           interassets. Esta función no es necesaria para los elementos <code>&lt;button&gt;</code>, que obtienen su
-          propio cambio de <code>cursor</code>.</p>
+          propio cambio de <code>cursor</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <span role="button" tabindex="0">Botón de elemento sin botón</span>
@@ -1698,7 +1713,8 @@
           predeterminado del navegador de <code>italic</code> a <code>normal</code>. Ahora también se hereda
           <code>line-height</code> y se ha agregado <code>margin-bottom: 1rem</code>. Los <code>&lt;address&gt;</code>
           sirven para presentar información de contacto del antepasado más cercano (o de todo un trabajo). Conserva el
-          formato terminando las líneas con <code>&lt;br&gt;</code>.</p>
+          formato terminando las líneas con <code>&lt;br&gt;</code>.
+        </p>
         <div class="bd-example">
           <address>
             <strong>ACME Corporation</strong><br>
@@ -1714,7 +1730,8 @@
         <h3 id="blockquote">Blockquote <a class="anchor-link" href="#blockquote"
             aria-label="Link to this section: Blockquote"></a></h3>
         <p>El <code>margin</code> predeterminado en blockquotes es <code>1em 40px</code>, así que lo restablecemos a
-          <code>0 0 1rem</code> para algo más consistente con otros elementos.</p>
+          <code>0 0 1rem</code> para algo más consistente con otros elementos.
+        </p>
         <div class="bd-example">
           <blockquote class="blockquote">
             <p>Una cita muy conocida, contenida en un elemento blockquote.</p>
@@ -1731,7 +1748,8 @@
         <h3 id="summary">Resumen <a class="anchor-link" href="#summary" aria-label="Link to this section: Summary"></a>
         </h3>
         <p>El <code>cursor</code> predeterminado en el resumen es <code>text</code>, así que lo restablecemos a
-          <code>pointer</code> para transmitirlo. Se puede interactuar con el elemento haciendo clic en él.</p>
+          <code>pointer</code> para transmitirlo. Se puede interactuar con el elemento haciendo clic en él.
+        </p>
         <div class="bd-example">
           <details>
             <summary>Algunos detalles</summary>
@@ -1748,7 +1766,8 @@
             atributo global llamado <code>[hidden]</code></a>, que tiene el estilo <code>display: none</code> de forma
           predeterminada. Tomando prestada una idea de <a href="https://purecss.io/">PureCSS</a>, mejoramos este valor
           predeterminado haciendo <code>[hidden] { display: none !important; }</code> para ayudar a evitar que su
-          <code>display</code> se sobrescriba accidentalmente.</p>
+          <code>display</code> se sobrescriba accidentalmente.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">hidden</span><span class="p">&gt;</span>
 </span></span></code></pre>

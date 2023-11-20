@@ -784,11 +784,9 @@
         <p class="bd-lead">Bootstrap está respaldado por un extenso sistema de colores que tematiza nuestros estilos y
           componentes. Esto permite una personalización y extensión más completas para cualquier proyecto.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -847,10 +845,12 @@
           través de variables Sass y CSS (pero no nuestros mapas de colores o clases de utilidad) con el objetivo
           expreso de facilitar la personalización en múltiples modos de colores, como claro y oscuro. Estas nuevas
           variables se configuran globalmente en <code>:root</code> y se adaptan a nuestro nuevo modo de color oscuro,
-          mientras que los colores de nuestro tema original permanecen sin cambios.</p>
+          mientras que los colores de nuestro tema original permanecen sin cambios.
+        </p>
         <p>Los colores que terminan en <code>-rgb</code> proporcionan los valores <code>red, green, blue</code> para ser
           usados en los modos de color <code>rgb()</code> y <code>rgba()</code>. Por ejemplo,
-          <code>rgba(var(--bs-secondary-bg-rgb), .5)</code>.</p>
+          <code>rgba(var(--bs-secondary-bg-rgb), .5)</code>.
+        </p>
         <div class="bd-callout bd-callout-warning">
           <strong>¡Atención!</strong> Existe cierta confusión potencial con nuestros nuevos colores secundarios y
           terciarios, y nuestro color de tema secundario existente, así como nuestros colores de tema claro y oscuro.
@@ -1202,7 +1202,8 @@
           <code>--bs-primary-bg-subtle</code> y <code>.bg-primary-subtle</code>: te permite componer tus propias reglas
           CSS con las variables o aplicar estilos rápidamente a través de clases. Las utilidades se crean con las
           variables CSS asociadas al color y, dado que personalizamos esas variables CSS para el modo oscuro, también se
-          adaptan al modo de color de forma predeterminada.</p>
+          adaptan al modo de color de forma predeterminada.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
@@ -1236,7 +1237,8 @@
             aria-label="Link to this section: Theme colors"></a></h3>
         <p>Usamos un subconjunto de todos los colores para crear una paleta de colores más pequeña para generar esquemas
           de color, también disponible como variables Sass y un mapa Sass en el archivo
-          <code>scss/_variables.scss</code>.</p>
+          <code>scss/_variables.scss</code>.
+        </p>
         <div class="row">
 
           <div class="col-md-4">
@@ -1306,7 +1308,8 @@
         <p>Todos los colores de Bootstrap están disponibles como variables Sass y un mapa Sass en el archivo
           <code>scss/_variables.scss</code>. Para evitar un aumento en el tamaño de los archivos, no creamos clases de
           texto o color de fondo para cada una de estas variables. En su lugar, elegimos un subconjunto de estos colores
-          para una <a href="#theme-colors">paleta de tema</a>.</p>
+          para una <a href="#theme-colors">paleta de tema</a>.
+        </p>
         <p>Asegúrate de controlar las relaciones de contraste mientras personalizas los colores. Como se muestra a
           continuación, hemos agregado tres relaciones de contraste a cada uno de los colores principales: una para los
           colores actuales de la muestra, otra para el blanco y otra para el negro.</p>
@@ -1611,7 +1614,8 @@
         <p>Sass no puede generar variables mediante programación, por lo que nosotros mismos creamos variables
           manualmente para cada tinte y tono. Especificamos el valor del punto medio (por ejemplo,
           <code>$blue-500</code>) y utilizamos funciones de color personalizadas para teñir (aclarar) o sombrear
-          (oscurecer) nuestros colores a través de la función de color <code>mix()</code> de Sass.</p>
+          (oscurecer) nuestros colores a través de la función de color <code>mix()</code> de Sass.
+        </p>
         <p>Usar <code>mix()</code> no es lo mismo que <code>lighten()</code> y <code>darken()</code>— el primero combina
           el color especificado con blanco o negro, mientras que el segundo solo ajusta el valor de luminosidad de cada
           color. El resultado es un conjunto de colores mucho más completo, como <a
@@ -1619,7 +1623,8 @@
         <p>Nuestras funciones <code>tint-color()</code> y <code>shade-color()</code> usan <code>mix()</code> junto con
           nuestra variable <code>$theme-color-interval</code>, que especifica un valor de porcentaje escalonado para
           cada color mezclado que producimos. Consulta los archivos <code>scss/_functions.scss</code> y
-          <code>scss/_variables.scss</code> para obtener el código fuente completo.</p>
+          <code>scss/_variables.scss</code> para obtener el código fuente completo.
+        </p>
         <h2 id="color-sass-maps">Mapas de Color Sass <a class="anchor-link" href="#color-sass-maps"
             aria-label="Link to this section: Color Sass maps"></a></h2>
         <p>Los archivos fuente Sass de Bootstrap incluyen tres mapas para ayudarte a recorrer rápida y fácilmente una
@@ -1667,7 +1672,8 @@
         <p>Agrega, elimina o modifica valores dentro del mapa para actualizar cómo se usan en muchos otros componentes.
           Desafortunadamente, en este momento, no <em>todos</em> los componentes utilizan este mapa Sass. Las
           actualizaciones futuras se esforzarán por mejorar esto. Hasta entonces, planea utilizar las variables
-          <code>${color}</code> y este mapa de Sass.</p>
+          <code>${color}</code> y este mapa de Sass.
+        </p>
         <h3 id="example">Ejemplo <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a>
         </h3>
         <p>Así es como puedes usarlos en tu Sass:</p>
@@ -1681,7 +1687,8 @@
         </div>
         <p><a href="/docs/5.3/utilities/colors/">Color</a> y <a href="/docs/5.3/utilities/background/">background</a>
           son clases de utilidad que también están disponibles para configurar <code>color</code> y
-          <code>background-color</code> usando <code>500</code> los valores de color.</p>
+          <code>background-color</code> usando <code>500</code> los valores de color.
+        </p>
         <h2 id="generating-utilities">Generando utilidades <a class="anchor-link" href="#generating-utilities"
             aria-label="Link to this section: Generating utilities"></a></h2>
         <small
@@ -1696,7 +1703,8 @@
           <li>Utiliza nuestra función <code>map-merge-multiple()</code> para fusionar rápidamente varios mapas de Sass
             en un nuevo mapa.</li>
           <li>Combina este nuevo mapa combinado para ampliar cualquier utilidad con un nombre de clase
-            <code>{color}-{level}</code>.</li>
+            <code>{color}-{level}</code>.
+          </li>
         </ol>
         <p>Aquí tienes un ejemplo que genera utilidades de color de texto (por ejemplo, <code>.text-purple-500</code>)
           siguiendo los pasos anteriores.</p>

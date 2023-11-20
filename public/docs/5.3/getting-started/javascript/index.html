@@ -789,11 +789,9 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> opcionales. Obtén más información sobre
           cada complemento, nuestras opciones de API programática y de datos, y más.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -880,7 +878,8 @@
             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> Bootstrap. Estas son algunas de las
-          opciones más populares:</p>
+          opciones más populares:
+        </p>
         <ul>
           <li>React: <a href="https://react-bootstrap.github.io/">React Bootstrap</a>
             <div class="bd-callout bd-callout-info">
@@ -908,7 +907,8 @@
 
         <p>Proporcionamos una versión de Bootstrap creada como <code>ESM</code> (<code>bootstrap.esm.js</code> y
           <code>bootstrap.esm.min.js</code>) que te permite utilizar Bootstrap como módulo en el navegador, si tus <a
-            href="https://caniuse.com/es6-module">navegadores utilizados lo admiten</a>.</p>
+            href="https://caniuse.com/es6-module">navegadores utilizados lo admiten</a>.
+        </p>
         <!-- eslint-skip -->
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"module"</span><span class="p">&gt;</span>
@@ -926,7 +926,8 @@
           importa Popper a nuestro <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
             data-bs-placement="top" data-bs-custom-class="custom-tooltip"
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de esta manera:</p>
+            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de esta manera:
+        </p>
         <!-- eslint-skip -->
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">Popper</span> <span class="nx">from</span> <span class="s2">"@popperjs/core"</span>
@@ -996,16 +997,19 @@
           <code>data-bs-</code>, como en <code>data-bs-animation="{value}"</code>. Asegúrate de cambiar el tipo de caso
           del nombre de la opción de “<em>camelCase</em>” a “<em>kebab-case</em>” al pasar las opciones a través de
           atributos de datos. Por ejemplo, utiliza <code>data-bs-custom-class="beautifier"</code> en lugar de
-          <code>data-bs-customClass="beautifier"</code>.</p>
+          <code>data-bs-customClass="beautifier"</code>.
+        </p>
         <p>A partir de Bootstrap 5.2.0, todos los componentes admiten un atributo de datos <strong>experimental</strong>
           reservado <code>data-bs-config</code> que puede albergar datos simples de configuración del componente como
           una cadena JSON. Cuando un elemento tiene los atributos <code>data-bs-config='{"delay":0, "title":123}'</code>
           y <code>data-bs-title="456"</code>, el valor final de <code>title</code> será <code>456</code> y los atributos
           de datos separados sobrescribirán los valores proporcionados en <code>data-bs-config</code>. Además, los
           atributos de datos existentes pueden albergar valores JSON como
-          <code>data-bs-delay='{"show":0,"hide":150}'</code>.</p>
+          <code>data-bs-delay='{"show":0,"hide":150}'</code>.
+        </p>
         <p>El objeto de configuración final es el resultado combinado de <code>data-bs-config</code>,
-          <code>data-bs-</code> y <code>js object</code> donde el último valor-clave dado sobrescribe los demás.</p>
+          <code>data-bs-</code> y <code>js object</code> donde el último valor-clave dado sobrescribe los demás.
+        </p>
 
         <h2 id="selectors">Selectores <a class="anchor-link" href="#selectors"
             aria-label="Link to this section: Selectors"></a></h2>
@@ -1018,7 +1022,8 @@
         <p>Bootstrap proporciona eventos personalizados para las acciones únicas de la mayoría de los complementos.
           Generalmente, estos vienen en forma de infinitivo y participio pasado, donde el infinitivo (ej.
           <code>show</code>) se activa al comienzo de un evento, y su forma de participio pasado (ej.
-          <code>shown</code>) se activa al finalizar una acción.</p>
+          <code>shown</code>) se activa al finalizar una acción.
+        </p>
         <p>Todos los eventos infinitivos proporcionan la funcionalidad <a
             href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a>.
           Esto proporciona la capacidad de detener la ejecución de una acción antes de que comience. Devolver false
@@ -1044,7 +1049,8 @@
 </span></span></span></code></pre>
         </div>
         <p>Si deseas obtener una instancia de complemento en particular, cada complemento expone un método
-          <code>getInstance</code>. Por ejemplo, para recuperar una instancia directamente de un elemento:</p>
+          <code>getInstance</code>. Por ejemplo, para recuperar una instancia directamente de un elemento:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">myPopoverEl</span><span class="p">)</span>
 </span></span></code></pre>
@@ -1103,7 +1109,8 @@
             aria-label="Link to this section: dispose method"></a></h4>
         <p>Si bien puede parecer correcto usar el método <code>dispose</code> inmediatamente después de
           <code>hide()</code>, conducirá a resultados incorrectos. A continuación se muestra un ejemplo del uso
-          problemático:</p>
+          problemático:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nx">myModal</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span> <span class="c1">// it is asynchronous
@@ -1116,7 +1123,8 @@
         <h3 id="default-settings">Configuración predeterminada <a class="anchor-link" href="#default-settings"
             aria-label="Link to this section: Default settings"></a></h3>
         <p>Puedes cambiar la configuración predeterminada de un complemento modificando el objeto
-          <code>Constructor.Default</code> del complemento:</p>
+          <code>Constructor.Default</code> del complemento:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// changes default for the modal plugin's `keyboard` option to false
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span>
@@ -1282,7 +1290,8 @@
             aria-label="Link to this section: No conflict"></a></h3>
         <p>A veces es necesario usar complementos Bootstrap con otros marcos de UI. En estas circunstancias,
           ocasionalmente pueden ocurrir colisiones de espacios de nombres. Si esto sucede, puedes llamar a
-          <code>.noConflict</code> en el complemento cuyo valor deseas revertir.</p>
+          <code>.noConflict</code> en el complemento cuyo valor deseas revertir.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span> <span class="c1">// give $().bootstrapBtn the Bootstrap functionality
@@ -1300,7 +1309,8 @@
           atributo <code>data-bs-no-jquery</code> establecido en <code>&lt;body&gt;</code>. Si se encuentra jQuery,
           Bootstrap emitirá eventos gracias al sistema de eventos de jQuery. Entonces, si deseas escuchar los eventos de
           Bootstrap, deberás usar los métodos jQuery (<code>.on</code>, <code>.one</code>) en lugar de
-          <code>addEventListener</code>.</p>
+          <code>addEventListener</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown.bs.tab'</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// do something...

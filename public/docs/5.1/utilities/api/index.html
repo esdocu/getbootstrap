@@ -586,11 +586,9 @@
         <p class="bd-lead mb-5">La API de utilidad es una herramienta basada en Sass para generar clases de utilidad.
         </p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -661,7 +659,8 @@
             href="https://sass-lang.com/documentation/values/maps">documentación oficial de Sass</a> para comenzar.</p>
         <p>El mapa <code>$utilities</code> contiene todas nuestras utilidades y luego se fusiona con tu mapa
           <code>$utilities</code> personalizado, si está presente. El mapa de utilidades contiene una lista codificada
-          de grupos de utilidades que aceptan las siguientes opciones:</p>
+          de grupos de utilidades que aceptan las siguientes opciones:
+        </p>
         <table class="table text-start">
           <thead>
             <tr>
@@ -684,7 +683,8 @@
               <td><strong>Requerido</strong></td>
               <td>–</td>
               <td>Lista de valores o un mapa si no deseas que el nombre de la clase sea el mismo que el valor. Si se usa
-                <code>null</code> como clave de mapa, <code>class</code> no se antepone al nombre de la clase.</td>
+                <code>null</code> como clave de mapa, <code>class</code> no se antepone al nombre de la clase.
+              </td>
             </tr>
             <tr>
               <td><a href="#class"><code>class</code></a></td>
@@ -693,7 +693,8 @@
               <td>Nombre de la clase generada. Si no se proporciona y <code>property</code> es un array de strings,
                 <code>class</code> tomará por defecto el primer elemento del array <code>property</code>. Si no se
                 proporciona y <code>property</code> es un string, las claves de <code>values</code> se utilizan para los
-                nombres de <code>class</code>.</td>
+                nombres de <code>class</code>.
+              </td>
             </tr>
             <tr>
               <td><a href="#css-variable-utilities"><code>css-var</code></a></td>
@@ -773,7 +774,8 @@
         <p>La clave de <code>property</code> requerida debe configurarse para cualquier utilidad y debe contener una
           propiedad CSS válida. Esta propiedad se utiliza en el conjunto de reglas de la utilidad generada. Cuando se
           omite la clave <code>class</code>, también sirve como el nombre de clase predeterminado. Considera la utilidad
-          <code>text-decoration</code>:</p>
+          <code>text-decoration</code>:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">"text-decoration"</span><span class="o">:</span> <span class="p">(</span>
@@ -902,7 +904,8 @@
         <p>Utiliza la opción <code>local-vars</code> para especificar un mapa Sass que generará variables CSS locales
           dentro del conjunto de reglas de la clase de utilidad. Ten en cuenta que puede requerir trabajo adicional
           consumir esas variables CSS locales en las reglas CSS generadas. Por ejemplo, considera nuestras utilidades
-          <code>.bg-*</code>:</p>
+          <code>.bg-*</code>:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">"background-color"</span><span class="o">:</span> <span class="p">(</span>
@@ -933,9 +936,11 @@
         <p>Usa la opción <code>state</code> para generar variaciones de pseudo-clase. Ejemplos de pseudo-clases son
           <code>:hover</code> y <code>:focus</code>. Cuando se proporciona una lista de estados, se crean nombres de
           clase para esa pseudoclase. Por ejemplo, para cambiar la opacidad al pasar el mouse, agrega
-          <code>state: hover</code> y obtendrás <code>.opacity-hover:hover</code> en tu CSS compilado.</p>
+          <code>state: hover</code> y obtendrás <code>.opacity-hover:hover</code> en tu CSS compilado.
+        </p>
         <p>¿Necesita varias pseudoclases? Usa una lista de estados separados por espacios:
-          <code>state: hover focus</code>.</p>
+          <code>state: hover focus</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">"opacity"</span><span class="o">:</span> <span class="p">(</span>
@@ -964,7 +969,8 @@
         </div>
         <h3 id="responsive">Responsive</h3>
         <p>Agrega el booleano <code>responsive</code> para generar utilidades responsive (p. ej.,
-          <code>.opacity-md-25</code>) en <a href="/docs/5.1/layout/breakpoints/">todos los breakpoints</a>.</p>
+          <code>.opacity-md-25</code>) en <a href="/docs/5.1/layout/breakpoints/">todos los breakpoints</a>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">"opacity"</span><span class="o">:</span> <span class="p">(</span>
@@ -1096,7 +1102,8 @@
         <p>Se pueden agregar nuevas utilidades al mapa <code>$utilities</code> predeterminado con un
           <code>map-merge</code>. Asegúrate de que nuestros archivos Sass requeridos y <code>_utilities.scss</code> se
           importen primero, luego usa <code>map-merge</code> para agregar tus utilidades adicionales. Por ejemplo, aquí
-          se explica cómo agregar una utilidad responsive de <code>cursor</code> con tres valores.</p>
+          se explica cómo agregar una utilidad responsive de <code>cursor</code> con tres valores.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">"bootstrap/scss/functions"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"bootstrap/scss/variables"</span><span class="p">;</span>
@@ -1123,7 +1130,8 @@
           <code>map-get</code> y <code>map-merge</code>. En el siguiente ejemplo, estamos agregando un valor adicional a
           las utilidades <code>width</code>. Comienza con un <code>map-merge</code> inicial y luego especifica qué
           utilidad deseas modificar. A partir de ahí, busca el mapa <code>"width"</code> anidado con
-          <code>map-get</code> para acceder y modificar las opciones y valores de la utilidad.</p>
+          <code>map-get</code> para acceder y modificar las opciones y valores de la utilidad.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">"bootstrap/scss/functions"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"bootstrap/scss/variables"</span><span class="p">;</span>
@@ -1227,7 +1235,8 @@
         <h3 id="eliminar-utilidades">Eliminar utilidades</h3>
         <p>Elimina cualquiera de las utilidades predeterminadas configurando la clave de grupo en <code>null</code>. Por
           ejemplo, para eliminar todas nuestras utilidades <code>width</code>, crea <code>$utilities</code>
-          <code>map-merge</code> y agrega <code>"width": null</code> dentro.</p>
+          <code>map-merge</code> y agrega <code>"width": null</code> dentro.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">"bootstrap/scss/functions"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"bootstrap/scss/variables"</span><span class="p">;</span>
@@ -1283,11 +1292,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

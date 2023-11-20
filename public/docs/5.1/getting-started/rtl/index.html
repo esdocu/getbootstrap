@@ -585,11 +585,9 @@
         <p class="bd-lead mb-5">Aprende a habilitar la compatibilidad con texto de derecha a izquierda en Bootstrap en
           nuestro diseño, componentes y utilidades.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -659,7 +657,8 @@
         <ol>
           <li>Configura <code>dir="rtl"</code> en el elemento <code>&lt;html&gt;</code>.</li>
           <li>Agrega un atributo <code>lang</code> apropiado, como <code>lang="ar"</code>, en el elemento
-            <code>&lt;html&gt;</code>.</li>
+            <code>&lt;html&gt;</code>.
+          </li>
         </ol>
         <p>A partir de ahí, deberás incluir una versión RTL de nuestro CSS. Por ejemplo, aquí está la hoja de estilo
           para nuestro CSS compilado y minimizado con RTL habilitado:</p>
@@ -721,7 +720,8 @@
                 enfoque de propiedades lógicas.</strong> La mayoría de ustedes ya ha interactuado con propiedades
               lógicas gracias a nuestras utilidades flexibles: reemplazan propiedades de dirección como
               <code>left</code> y <code>right</code> a favor <code>start</code> y <code>end</code>. Eso hace que los
-              nombres y valores de clase sean apropiados para LTR y RTL sin sobrecarga.</p>
+              nombres y valores de clase sean apropiados para LTR y RTL sin sobrecarga.
+            </p>
             <p>Por ejemplo, en lugar de <code>.ml-3</code> para <code>margin-left</code>, use <code>.ms-3</code>.</p>
           </li>
         </ol>
@@ -758,9 +758,11 @@
         <p>En caso de que utilices una fuente personalizada, ten en cuenta que no todas las fuentes admiten el alfabeto
           no latino. Para cambiar de la familia paneuropea a la árabe, es posible que debas usar
           <code>/*rtl:insert: {value}*/</code> en tu pila de fuentes para modificar los nombres de las familias de
-          fuentes.</p>
+          fuentes.
+        </p>
         <p>Por ejemplo, para cambiar de la fuente <code>Helvetica Neue</code> para LTR a
-          <code>Helvetica Neue Arabic</code> para RTL, tu código Sass podría verse así:</p>
+          <code>Helvetica Neue Arabic</code> para RTL, tu código Sass podría verse así:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$font-family-sans-serif</span><span class="o">:</span>
   <span class="n">Helvetica</span> <span class="n">Neue</span> <span class="si">#{</span><span class="s2">"/* rtl:insert:Arabic */"</span><span class="si">}</span><span class="o">,</span>
@@ -812,13 +814,15 @@
         <p>Después de ejecutar Sass y luego RTLCSS, cada selector en tus archivos CSS estará precedido por
           <code>.ltr</code> y <code>.rtl</code> para archivos RTL. Ahora puedes usar ambos archivos en la misma página y
           simplemente usar <code>.ltr</code> o <code>.rtl</code> en los contenedores de tus componentes para usar una u
-          otra dirección.</p>
+          otra dirección.
+        </p>
         <div class="bd-callout bd-callout-warning">
           <h4 id="casos-extremos-y-limitaciones-conocidas">Casos extremos y limitaciones conocidas</h4>
           <p>Si bien este enfoque es comprensible, presta atención a lo siguiente:</p>
           <ol>
             <li>Al cambiar <code>.ltr</code> y <code>.rtl</code>, asegúrate de agregar los atributos <code>dir</code> y
-              <code>lang</code> en consecuencia.</li>
+              <code>lang</code> en consecuencia.
+            </li>
             <li>Cargar ambos archivos puede ser un cuello de botella de rendimiento real: considera alguna <a
                 href="/docs/5.1/customize/optimize/">optimización</a>, y tal vez intenta <a
                 href="https://www.filamentgroup.com/lab/load-css-simpler/">cargar uno de esos archivos de forma
@@ -849,11 +853,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

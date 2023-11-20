@@ -585,11 +585,9 @@
         <p class="bd-lead mb-5">Documentación y ejemplos para agregar popovers de Bootstrap, como los que se encuentran
           en iOS, a cualquier elemento de tu sitio.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -706,7 +704,8 @@
         <p>Sigue leyendo para ver cómo funcionan los popovers con algunos ejemplos.</p>
         <h2 id="ejemplo-habilitar-popovers-en-todas-partes">Ejemplo: habilitar popovers en todas partes</h2>
         <p>Una forma de inicializar todos los popovers en una página sería seleccionarlos por su atributo
-          <code>data-bs-toggle</code>:</p>
+          <code>data-bs-toggle</code>:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">popoverTriggerList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'[data-bs-toggle="popover"]'</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">popoverList</span> <span class="o">=</span> <span class="nx">popoverTriggerList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">popoverTriggerEl</span><span class="p">)</span> <span class="p">{</span>
@@ -716,7 +715,8 @@
         </div>
         <h2 id="ejemplo-uso-de-la-opción-container">Ejemplo: Uso de la opción <code>container</code></h2>
         <p>Cuando tienes algunos estilos en un elemento padre que interfieren con un popover, querrás especificar un
-          <code>container</code> personalizado para que el HTML del popover aparezca dentro de ese elemento.</p>
+          <code>container</code> personalizado para que el HTML del popover aparezca dentro de ese elemento.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.example-popover'</span><span class="p">),</span> <span class="p">{</span>
   <span class="nx">container</span><span class="o">:</span> <span class="s1">'body'</span>
@@ -800,10 +800,12 @@
         <p>Los elementos con el atributo <code>disabled</code> no son interactivos, lo que significa que los usuarios no
           pueden pasar el cursor por encima o hacer clic en ellos para activar un popover (o tooltip). Como solución
           alternativa, puedes activar el popover desde un contenedor <code>&lt;div&gt;</code> o
-          <code>&lt;span&gt;</code>, idealmente enfocable desde el teclado usando <code>tabindex="0"</code>.</p>
+          <code>&lt;span&gt;</code>, idealmente enfocable desde el teclado usando <code>tabindex="0"</code>.
+        </p>
         <p>Para activadores de popovers deshabilitados, también puedes preferir
           <code>data-bs-trigger="hover focus"</code> para que el popover aparezca como una respuesta visual inmediata a
-          tus usuarios, ya que es posible que no esperen hacer <em>clic</em> en un elemento deshabilitado.</p>
+          tus usuarios, ya que es posible que no esperen hacer <em>clic</em> en un elemento deshabilitado.
+        </p>
         <div class="bd-example">
           <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
             data-bs-content="Disabled popover">
@@ -897,7 +899,8 @@
           nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-animation=""</code>. Asegúrate de cambiar
           el tipo de caso del nombre de la opción de camelCase a kebab-case al pasar las opciones a través de atributos
           de datos. Por ejemplo, en lugar de usar <code>data-bs-customClass="beautifier"</code>, usa
-          <code>data-bs-custom-class="beautifier"</code>.</p>
+          <code>data-bs-custom-class="beautifier"</code>.
+        </p>
         <div class="bd-callout bd-callout-warning">
           Ten en cuenta que, por razones de seguridad, las opciones <code>sanitize</code>, <code>sanitizeFn</code> y
           <code>allowList</code> no se pueden proporcionar mediante atributos de datos.
@@ -963,7 +966,8 @@
               <td><code>'right'</code></td>
               <td>
                 <p>Cómo colocar el popover - auto | top | bottom | left | right.<br>Cuando se especifica
-                  <code>auto</code>, reorientará dinámicamente la ventana emergente.</p>
+                  <code>auto</code>, reorientará dinámicamente la ventana emergente.
+                </p>
                 <p>Cuando se usa una función para determinar la ubicación, se la llama con el nodo DOM emergente como
                   primer argumento y el nodo DOM del elemento activador como segundo. El contexto <code>this</code> se
                   establece en la instancia emergente.</p>
@@ -1038,7 +1042,8 @@
               <td>
                 <p>Agrega clases al popover cuando se muestre. Ten en cuenta que estas clases se agregarán además de las
                   clases especificadas enl template. Para agregar varias clases, sepáralas con espacios:
-                  <code>'class-1 class-2'</code>.</p>
+                  <code>'class-1 class-2'</code>.
+                </p>
                 <p>También puedes pasar una función que debería devolver una sola cadena que contenga nombres de clases
                   adicionales.</p>
               </td>
@@ -1050,7 +1055,8 @@
               <td>Habilita o deshabilita la desinfección. Si se activan las opciones <code>'template'</code>,
                 <code>'content'</code> y <code>'title'</code>, serán desinfectadas. Consulta la <a
                   href="/docs/5.1/getting-started/javascript/#sanitizer">sección de desinfección en nuestra
-                  documentación de JavaScript</a>.</td>
+                  documentación de JavaScript</a>.
+              </td>
             </tr>
             <tr>
               <td><code>allowList</code></td>
@@ -1153,7 +1159,8 @@
         <h4 id="toggle">toggle</h4>
         <p>Alterna el popover de un elemento. <strong>Regresa al punte de la llamada antes de que se muestre u oculte el
             popover</strong> (es decir, antes de que ocurra el evento <code>shown.bs.popover</code> o
-          <code>hidden.bs.popover</code>). Esto se considera una activación “manual” del popover.</p>
+          <code>hidden.bs.popover</code>). Esto se considera una activación “manual” del popover.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
 </code></pre>
@@ -1272,11 +1279,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

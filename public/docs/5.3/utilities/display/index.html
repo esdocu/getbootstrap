@@ -784,11 +784,9 @@
           nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como
           algunos extras para controlar la visualización al imprimir.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -847,7 +845,8 @@
         <ul>
           <li><code>.d-{value}</code> para <code>xs</code></li>
           <li><code>.d-{breakpoint}-{value}</code> para <code>sm</code>, <code>md</code>, <code>lg</code>,
-            <code>xl</code> y <code>xxl</code>.</li>
+            <code>xl</code> y <code>xxl</code>.
+          </li>
         </ul>
         <p>Donde <em>valor</em> es uno de:</p>
         <ul>
@@ -864,10 +863,12 @@
           <li><code>inline-flex</code></li>
         </ul>
         <p>Los valores de visualización se pueden modificar cambiando los valores de <code>display</code> definidos en
-          <code>$utilities</code> y recompilando el SCSS.</p>
+          <code>$utilities</code> y recompilando el SCSS.
+        </p>
         <p>Las media queries afectan los anchos de pantalla con el punto de interrupción dado <em>o mayor</em>. Por
           ejemplo, <code>.d-lg-none</code> establece <code>display: none;</code> en pantallas <code>lg</code>,
-          <code>xl</code> y <code>xxl</code>.</p>
+          <code>xl</code> y <code>xxl</code>.
+        </p>
         <h2 id="examples">Ejemplos <a class="anchor-link" href="#examples"
             aria-label="Link to this section: Examples"></a></h2>
         <div class="bd-example-snippet bd-code-snippet">
@@ -930,11 +931,13 @@
           para mostrar y ocultar elementos por dispositivo. Evita crear versiones completamente diferentes del mismo
           sitio; en su lugar, oculta elementos de manera responsive para cada tamaño de pantalla.</p>
         <p>Para ocultar elementos simplemente usa la clase <code>.d-none</code> o una de las clases
-          <code>.d-{sm,md,lg,xl,xxl}-none</code> para cualquier variación de pantalla responsive.</p>
+          <code>.d-{sm,md,lg,xl,xxl}-none</code> para cualquier variación de pantalla responsive.
+        </p>
         <p>Para mostrar un elemento solo en un intervalo determinado de tamaños de pantalla, puedes combinar una clase
           <code>.d-*-none</code> con una clase clase <code>.d-*-*</code>, por ejemplo
           <code>.d-none .d-md-block .d-xl-none .d-xxl-none</code> ocultará el elemento para todos los tamaños de
-          pantalla excepto en dispositivos medianos y grandes.</p>
+          pantalla excepto en dispositivos medianos y grandes.
+        </p>
         <div class="table-responsive">
           <table class="table">
             <thead>
@@ -1085,7 +1088,8 @@
             aria-label="Link to this section: Sass utilities API"></a></h3>
         <p>Las utilidades de visualización se declaran en nuestra API de utilidades en
           <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api/#using-the-api">Aprende a utilizar la API
-            de utilidades.</a></p>
+            de utilidades.</a>
+        </p>
         <div class="bd-example-snippet bd-code-snippet bd-file-ref">
           <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
             <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small"

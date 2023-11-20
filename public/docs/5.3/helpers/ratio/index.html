@@ -785,11 +785,9 @@
           elijas. Perfecto para manejar de manera responsive incrustaciones de videos o presentaciones de diapositivas
           según el ancho del elemento principal.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -831,7 +829,8 @@
           <code>&lt;iframe&gt;</code>s, <code>&lt;embed&gt;</code>s, <code>&lt;video&gt;</code>s y
           <code>&lt;object&gt;</code>s. Estos ayudantes también se pueden utilizar en cualquier elemento secundario HTML
           estándar (por ejemplo, un <code>&lt;div&gt;</code> o <code>&lt;img&gt;</code>). Los estilos se aplican desde
-          la clase padre <code>.ratio</code> directamente al hijo.</p>
+          la clase padre <code>.ratio</code> directamente al hijo.
+        </p>
         <p>Las relaciones de aspecto se declaran en un mapa Sass y se incluyen en cada clase a través de una variable
           CSS, que también permite <a href="#custom-ratios">relaciones de aspecto personalizadas</a>.</p>
         <div class="bd-callout bd-callout-info">
@@ -843,7 +842,8 @@
         </h2>
         <p>Envuelve cualquier incrustación, como un <code>&lt;iframe&gt;</code>, en un elemento padre con
           <code>.ratio</code> y una clase de relación de aspecto. El tamaño del elemento hijo inmediato se ajusta
-          automáticamente gracias a nuestro selector universal <code>.ratio &gt; *</code>.</p>
+          automáticamente gracias a nuestro selector universal <code>.ratio &gt; *</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <div class="ratio ratio-16x9">
@@ -931,7 +931,8 @@
           Puedes sobrescribir esta variable CSS para crear relaciones de aspecto personalizadas sobre la marcha con
           algunos cálculos rápidos de tu parte.</p>
         <p>Por ejemplo, para crear una relación de aspecto de 2x1, establece <code>--bs-aspect-ratio: 50%</code> en
-          <code>.ratio</code>.</p>
+          <code>.ratio</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0 bd-example-ratios">
             <div class="ratio" style="--bs-aspect-ratio: 50%;">

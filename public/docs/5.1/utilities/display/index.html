@@ -586,11 +586,9 @@
           con nuestras utilidades de visualización. Incluye soporte para algunos de los valores más comunes, así como
           algunos extras para controlar la visualización al imprimir.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -649,7 +647,8 @@
         <ul>
           <li><code>.d-{value}</code> para <code>xs</code></li>
           <li><code>.d-{breakpoint}-{value}</code> para <code>sm</code>, <code>md</code>, <code>lg</code>,
-            <code>xl</code>, y <code>xxl</code>.</li>
+            <code>xl</code>, y <code>xxl</code>.
+          </li>
         </ul>
         <p>Donde <em>value</em> es uno de:</p>
         <ul>
@@ -668,7 +667,8 @@
           el SCSS.</p>
         <p>Las media queries afectan los anchos de pantalla con el breakpoint dado <em>o mayor</em>. Por ejemplo,
           <code>.d-lg-none</code> establece <code>display: none;</code> en las pantallas <code>lg</code>,
-          <code>xl</code> y <code>xxl</code>.</p>
+          <code>xl</code> y <code>xxl</code>.
+        </p>
         <h2 id="ejemplos">Ejemplos</h2>
         <div class="bd-example">
           <div class="d-inline p-2 bg-primary text-white">d-inline</div>
@@ -699,11 +699,13 @@
           para mostrar y ocultar elementos por dispositivo. Evita crear versiones completamente diferentes del mismo
           sitio; en su lugar, oculta los elementos de forma que respondan a cada tamaño de pantalla.</p>
         <p>Para ocultar elementos, simplemente usa la clase <code>.d-none</code> o una de las clases
-          <code>.d-{sm,md,lg,xl,xxl}-none</code> para cualquier variación de pantalla responsive.</p>
+          <code>.d-{sm,md,lg,xl,xxl}-none</code> para cualquier variación de pantalla responsive.
+        </p>
         <p>Para mostrar un elemento solo en un intervalo dado de tamaños de pantalla, puedes combinar una clase
           <code>.d-*-none</code> con una clase <code>.d-*-*</code>, por ejemplo
           <code>.d-none .d-md-block .d-xl-none .d-xxl-none</code> ocultará el elemento para todos los tamaños de
-          pantalla excepto en dispositivos medianos y grandes.</p>
+          pantalla excepto en dispositivos medianos y grandes.
+        </p>
         <table class="table">
           <thead>
             <tr>
@@ -818,7 +820,8 @@
         <h3 id="api-de-utilidades">API de utilidades</h3>
         <p>Las utilidades de visualización se declaran en nuestra API de utilidades en
           <code>scss/_utilities.scss</code>. <a href="/docs/5.1/utilities/api/#using-the-api">Aprende a usar la API de
-            utilidades.</a></p>
+            utilidades.</a>
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss">    <span class="s2">"display"</span><span class="nd">:</span> <span class="o">(</span>
       <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
@@ -833,11 +836,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

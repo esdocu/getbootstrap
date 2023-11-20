@@ -585,11 +585,9 @@
         <p class="bd-lead mb-5">Un componente de presentación de diapositivas para recorrer elementos (imágenes o
           diapositivas de texto) como un carrusel.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -679,11 +677,13 @@
           carrusel no será visible. También asegúrate de configurar un <code>id</code> único en el
           <code>.carrusel</code> para controles opcionales, especialmente si estás utilizando varios carruseles en una
           sola página. Los elementos de control e indicadores deben tener un atributo <code>data-bs-target</code> (o
-          <code>href</code> para enlaces) que coincida con el <code>id</code> del elemento <code>.carousel</code>.</p>
+          <code>href</code> para enlaces) que coincida con el <code>id</code> del elemento <code>.carousel</code>.
+        </p>
         <h3 id="solo-slides">Solo slides</h3>
         <p>Aquí hay un carrusel solo con diapositivas. Ten en cuenta la presencia de <code>.d-block</code> y
           <code>.w-100</code> en las imágenes del carrusel para evitar la alineación de imágenes predeterminada del
-          navegador.</p>
+          navegador.
+        </p>
         <div class="bd-example">
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -902,7 +902,8 @@
           cualquier <code>.carousel-item</code>. Se pueden ocultar fácilmente en viewports más pequeños, como se muestra
           a continuación, con las <a href="/docs/5.1/utilities/display/">utilidades de visualización</a> opcionales. Los
           ocultamos inicialmente con <code>.d-none</code> y los recuperamos en dispositivos de tamaño mediano con
-          <code>.d-md-block</code>.</p>
+          <code>.d-md-block</code>.
+        </p>
         <div class="bd-example">
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -1013,7 +1014,8 @@
         <p>Agrega <code>.carousel-fade</code> a tu carrusel para animar las diapositivas con una transición de fundido
           en lugar de una diapositiva. Dependiendo del contenido de tu carrusel (por ejemplo, diapositivas de solo
           texto), es posible que desees agregar <code>.bg-body</code> o algún CSS personalizado a los
-          <code>.carousel-item</code>s para un fundido cruzado adecuado.</p>
+          <code>.carousel-item</code>s para un fundido cruzado adecuado.
+        </p>
         <div class="bd-example">
           <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -1159,7 +1161,8 @@
         <p>Los carruseles admiten deslizar hacia la izquierda o hacia la derecha en dispositivos con pantalla táctil
           para moverse entre diapositivas. Esto se puede deshabilitar usando el atributo <code>data-bs-touch</code>. El
           siguiente ejemplo tampoco incluye el atributo <code>data-bs-ride</code> y tiene
-          <code>data-bs-interval="false"</code>, por lo que no se reproduce automáticamente.</p>
+          <code>data-bs-interval="false"</code>, por lo que no se reproduce automáticamente.
+        </p>
         <div class="bd-example">
           <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"
             data-bs-interval="false">
@@ -1234,7 +1237,8 @@
         <p>Agrega <code>.carousel-dark</code> a <code>.carousel</code> para obtener controles, indicadores y subtítulos
           más oscuros. Los controles se han invertido de su relleno blanco predeterminado con la propiedad CSS
           <code>filter</code>. Los subtítulos y los controles tienen variables Sass adicionales que personalizan el
-          <code>color</code> y el <code>background-color</code>.</p>
+          <code>color</code> y el <code>background-color</code>.
+        </p>
         <div class="bd-example">
           <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -1351,7 +1355,8 @@
         <p>La duración de la transición de <code>.carousel-item</code> se puede cambiar con la variable Sass
           <code>$carousel-transition-duration</code> antes de compilar o estilos personalizados si estás utilizando el
           CSS compilado. Si se aplican varias transiciones, asegúrate de definir primero la transición de transformación
-          (p. ej., <code>transition: transform 2s ease, opacity .5s ease-out</code>).</p>
+          (p. ej., <code>transition: transform 2s ease, opacity .5s ease-out</code>).
+        </p>
         <h2 id="sass">Sass</h2>
         <h3 id="variables">Variables</h3>
         <div class="highlight">
@@ -1452,7 +1457,8 @@
                 <p>En dispositivos táctiles, cuando se establece en <code>'hover'</code>, el ciclo se detendrá en
                   <code>touchend</code> durante dos intervalos (una vez que el usuario termine de interactuar con el
                   carrusel), antes reanudarse automáticamente. Ten en cuenta que esto se suma al comportamiento del
-                  mouse anterior.</p>
+                  mouse anterior.
+                </p>
               </td>
             </tr>
             <tr>
@@ -1525,7 +1531,8 @@
               <td><code>next</code></td>
               <td>Cicla al siguiente elemento. <strong>Regresa al punto de la llamada antes de que se muestre el
                   siguiente elemento</strong> (por ejemplo, antes de que ocurra el evento
-                <code>slid.bs.carousel</code>).</td>
+                <code>slid.bs.carousel</code>).
+              </td>
             </tr>
             <tr>
               <td><code>nextWhenVisible</code></td>
@@ -1576,13 +1583,15 @@
           eventos tienen las siguientes propiedades adicionales:</p>
         <ul>
           <li><code>direction</code>: La dirección en la que se desliza el carrusel (ya sea <code>"left"</code> o
-            <code>"right"</code>).</li>
+            <code>"right"</code>).
+          </li>
           <li><code>relatedTarget</code>: el elemento DOM que se desliza en su lugar como el elemento activo.</li>
           <li><code>from</code>: el índice del elemento actual</li>
           <li><code>to</code>: el índice del siguiente elemento</li>
         </ul>
         <p>Todos los eventos del carrusel se activan en el propio carrusel (es decir, en
-          <code>&lt;div class="carousel"&gt;</code>).</p>
+          <code>&lt;div class="carousel"&gt;</code>).
+        </p>
         <table class="table">
           <thead>
             <tr>
@@ -1612,11 +1621,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

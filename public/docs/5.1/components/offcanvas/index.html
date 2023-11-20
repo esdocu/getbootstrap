@@ -588,11 +588,9 @@
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -679,7 +677,8 @@
         </ul>
         <p><strong>¡Cuidado!</strong> Dada la forma en que CSS maneja las animaciones, no puedes usar
           <code>margin</code> o <code>translate</code> en un elemento <code>.offcanvas</code>. En su lugar, utiliza la
-          clase como un elemento envolvente independiente.</p>
+          clase como un elemento envolvente independiente.
+        </p>
         <div class="bd-callout bd-callout-info">
           El efecto de animación de este componente depende de la media query <code>prefers-reduced-motion</code>.
           Consulta la <a href="/docs/5.1/getting-started/accessibility/#reduced-motion">sección de movimiento reducido
@@ -692,7 +691,8 @@
           <code>.show</code> en <code>.offcanvas</code>). Offcanvas incluye soporte para un encabezado con un botón de
           cierre y una clase <em>body</em> opcional para un <code>padding</code> inicial. Te sugerimos que incluyas
           encabezados con acciones de descarte (cierre) siempre que sea posible en tus offcanvas, o proporciona una
-          acción de descarte explícita.</p>
+          acción de descarte explícita.
+        </p>
         <div class="bd-example bd-example-offcanvas p-0 bg-light overflow-hidden">
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
             <div class="offcanvas-header">
@@ -727,7 +727,8 @@
           <li><code>.offcanvas.show</code> muestra el contenido</li>
         </ul>
         <p>Puedes usar un enlace con el atributo <code>href</code> o un botón con el atributo
-          <code>data-bs-target</code>. En ambos casos, se requiere <code>data-bs-toggle="offcanvas"</code>.</p>
+          <code>data-bs-target</code>. En ambos casos, se requiere <code>data-bs-toggle="offcanvas"</code>.
+        </p>
         <div class="bd-example">
           <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
             aria-controls="offcanvasExample">
@@ -894,7 +895,8 @@
         <h2 id="backdrop">Backdrop</h2>
         <p>Desplazar el elemento <code>&lt;body&gt;</code> está deshabilitado cuando un offcanvas y su fondo están
           visibles. Utiliza el atributo <code>data-bs-scroll</code> para alternar el desplazamiento
-          <code>&lt;body&gt;</code> y <code>data-bs-backdrop</code> para alternar el fondo.</p>
+          <code>&lt;body&gt;</code> y <code>data-bs-backdrop</code> para alternar el fondo.
+        </p>
         <div class="bd-example">
           <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
             aria-controls="offcanvasScrolling">Habilitar el scrolling del body</button>
@@ -975,7 +977,8 @@
           cuenta que no necesitas agregar <code>role="dialog"</code> ya que ya lo agregamos a través de <a
             href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</p>
+            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.
+        </p>
         <div class="bd-callout bd-callout-info">
           <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
           <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
@@ -1015,7 +1018,8 @@
             data-bs-placement="top" data-bs-custom-class="custom-tooltip"
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Asegúrate de usar el elemento
-          <code>&lt;button&gt;</code> para un comportamiento adecuado en todos los dispositivos.</p>
+          <code>&lt;button&gt;</code> para un comportamiento adecuado en todos los dispositivos.
+        </p>
         <h3 id="a-través-de-atributos-de-datos">A través de atributos de datos</h3>
         <h4 id="toggle">Toggle</h4>
         <p>Agrega <code>data-bs-toggle="offcanvas"</code> y <code>data-bs-target</code> o <code>href</code> al elemento
@@ -1127,13 +1131,15 @@
               <td><code>show</code></td>
               <td>Muestra un elemento offcanvas. <strong>Regresa al punto de la llamada antes de que se haya mostrado
                   realmente el elemento offcanvas</strong> (es decir, antes de que ocurra el evento
-                <code>shown.bs.offcanvas</code>).</td>
+                <code>shown.bs.offcanvas</code>).
+              </td>
             </tr>
             <tr>
               <td><code>hide</code></td>
               <td>Oculta un elemento offcanvas. <strong>Regresa al punto de la llamada antes de que el elemento
                   offcanvas se haya ocultado</strong> (es decir, antes de que ocurra el evento
-                <code>hidden.bs.offcanvas</code>).</td>
+                <code>hidden.bs.offcanvas</code>).
+              </td>
             </tr>
             <tr>
               <td><code>getInstance</code></td>
@@ -1195,11 +1201,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

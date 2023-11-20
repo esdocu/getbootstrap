@@ -783,11 +783,9 @@
         <p class="bd-lead">Ejemplos y pautas de uso para estilos de control de formularios, opciones de diseño y
           componentes personalizados para crear una amplia variedad de formularios.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -911,7 +909,8 @@
         <p>Asegúrate de usar un atributo <code>type</code> apropiado en todas las entradas (por ejemplo,
           <code>email</code> para la dirección de correo electrónico o <code>number</code> para obtener información
           numérica) para aprovechar los controles de entrada más nuevos, como verificación de correo electrónico,
-          selección de números y más.</p>
+          selección de números y más.
+        </p>
         <p>Aquí tienes un ejemplo rápido para demostrar los estilos de formulario de Bootstrap. Continúa leyendo para
           obtener documentación sobre las clases requeridas, el diseño de formularios y más.</p>
         <div class="bd-example-snippet bd-code-snippet">
@@ -981,13 +980,15 @@
           controles que contiene. Los navegadores tratan todos los controles de formulario nativos
           (elementos<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> y <code>&lt;button&gt;</code>) dentro de un
           <code>&lt;fieldset disabled&gt;</code> como deshabilitado, lo que impide la interacción con el teclado y el
-          mouse.</p>
+          mouse.
+        </p>
         <p>Sin embargo, si tu formulario también incluye elementos personalizados tipo botón como
           <code>&lt;a class="btn btn-*"&gt;...&lt;/a&gt;</code>, a estos solo se les dará un estilo de
           <code>pointer-events: none</code>, lo que significa que aún se pueden enfocar y operar usando el teclado. En
           este caso, debes modificar manualmente estos controles agregando <code>tabindex="-1"</code> para evitar que
           reciban el foco y <code>aria-disabled="disabled"</code> para señalar su estado a las tecnologías de
-          asistencia.</p>
+          asistencia.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <form>
@@ -1076,7 +1077,8 @@
         <p>Si ninguno de estos está presente, las tecnologías de asistencia pueden recurrir al uso del atributo
           <code>placeholder</code> como alternativa para el nombre accesible en <code>&lt;input&gt;</code> y
           <code>&lt;textarea&gt;</code>. Los ejemplos de esta sección proporcionan algunos enfoques sugeridos para casos
-          específicos.</p>
+          específicos.
+        </p>
         <p>Al usar contenido visualmente oculto (<code>.visually-hidden</code>, <code>aria-label</code> e incluso
           contenido <code>placeholder</code>, que desaparece una vez que un campo de formulario tiene contenido)
           beneficiará a los usuarios de tecnología de asistencia, la falta de texto de etiqueta visible aún puede ser
@@ -1085,7 +1087,8 @@
         <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
         <p>Muchas variables de formulario se configuran a nivel general para ser reutilizadas y ampliadas por
           componentes de formulario individuales. Los verás con mayor frecuencia como variables
-          <code>$input-btn-*</code> y <code>$input-*</code>.</p>
+          <code>$input-btn-*</code> y <code>$input-*</code>.
+        </p>
         <h3 id="sass-variables">Variables Sass <a class="anchor-link" href="#sass-variables"
             aria-label="Link to this section: Sass variables"></a></h3>
         <p><code>$input-btn-*</code> son variables globales compartidas entre nuestros <a

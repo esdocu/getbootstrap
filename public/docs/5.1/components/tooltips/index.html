@@ -588,11 +588,9 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> usando CSS3 para animaciones y
           data-bs-attributes para el almacenamiento local de títulos.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -680,7 +678,8 @@
           <li>Los tooltips para los elementos <code>.disabled</code> o <code>disabled</code> deben activarse en un
             elemento contenedor.</li>
           <li>Cuando se activa desde hipervínculos que abarcan varias líneas, el tooltip se centrará. Usa
-            <code>white-space: nowrap;</code> en tus <code>&lt;a&gt;</code>s para evitar este comportamiento.</li>
+            <code>white-space: nowrap;</code> en tus <code>&lt;a&gt;</code>s para evitar este comportamiento.
+          </li>
           <li>Los tooltips deben ocultarse antes de que sus elementos correspondientes se eliminen del DOM.</li>
           <li>Los tooltips se puede activar gracias a un elemento dentro del shadow DOM.</li>
         </ul>
@@ -700,7 +699,8 @@
         <p>¿Lo tienes? Genial, veamos cómo funcionan con algunos ejemplos.</p>
         <h2 id="ejemplo-habilita-los-tooltips-en-todas-partes">Ejemplo: habilita los tooltips en todas partes</h2>
         <p>Una forma de inicializar todos los tooltips en una página sería seleccionarlos por su atributo
-          <code>data-bs-toggle</code>:</p>
+          <code>data-bs-toggle</code>:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tooltipTriggerList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'[data-bs-toggle="tooltip"]'</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">tooltipList</span> <span class="o">=</span> <span class="nx">tooltipTriggerList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">tooltipTriggerEl</span><span class="p">)</span> <span class="p">{</span>
@@ -811,7 +811,8 @@
             pero aún mantiene el posicionamiento de la ubicación original. Para resolver esto, establece la <a
               href="https://popper.js.org/docs/v2/modifiers/flip/#boundary">opción <code>boundary</code></a> (para el
             modificador flip usando la opción <code>popperConfig</code>) a cualquier HTMLElement para sobrescribir el
-            valor predeterminado, <code>'clippingParents'</code>, como <code>document.body</code>:</p>
+            valor predeterminado, <code>'clippingParents'</code>, como <code>document.body</code>:
+          </p>
           <div class="highlight">
             <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'example'</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="p">{</span>
@@ -855,7 +856,8 @@
         <p>Los elementos con el atributo <code>disabled</code> no son interactivos, lo que significa que los usuarios no
           pueden enfocarlos, desplazarlos o hacer clic en ellos para activar un tooltip (o un popover). Como solución
           alternativa, querrás activar el tooltip desde un contenedor <code>&lt;div&gt;</code> o
-          <code>&lt;span&gt;</code>, idealmente enfocable desde el teclado usando <code>tabindex="0"</code>.</p>
+          <code>&lt;span&gt;</code>, idealmente enfocable desde el teclado usando <code>tabindex="0"</code>.
+        </p>
         <div class="tooltip-demo">
           <div class="bd-example">
             <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Tooltip deshabilitado">
@@ -882,7 +884,8 @@
           nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-animation=""</code>. Asegúrate de cambiar
           el tipo de caso del nombre de la opción de camelCase a kebab-case al pasar las opciones a través de atributos
           de datos. Por ejemplo, en lugar de usar <code>data-bs-customClass="beautifier"</code>, usa
-          <code>data-bs-custom-class="beautifier"</code>.</p>
+          <code>data-bs-custom-class="beautifier"</code>.
+        </p>
         <div class="bd-callout bd-callout-warning">
           Ten en cuenta que, por razones de seguridad, las opciones <code>sanitize</code>, <code>sanitizeFn</code> y
           <code>allowList</code> no se pueden proporcionar mediante atributos de datos.
@@ -942,7 +945,8 @@
               <td><code>'top'</code></td>
               <td>
                 <p>Cómo colocar el tooltip - auto | top | bottom | left | right.<br>Cuando se especifica
-                  <code>auto</code>, reorientará dinámicamente el tooltip.</p>
+                  <code>auto</code>, reorientará dinámicamente el tooltip.
+                </p>
                 <p>Cuando se usa una función para determinar la ubicación, se llama con el nodo DOM del tooltip como
                   primer argumento y el nodo DOM del elemento desencadenante como segundo. El contexto <code>this</code>
                   se establece en la instancia del tooltip.</p>
@@ -969,7 +973,8 @@
                 <p>El <code>title</code> del tooltip se insertará en <code>.tooltip-inner</code>.</p>
                 <p><code>.tooltip-arrow</code> se convertirá en la flecha del tooltip.</p>
                 <p>El elemento envolvente más externo debe tener la clase <code>.tooltip</code> y
-                  <code>role="tooltip"</code>.</p>
+                  <code>role="tooltip"</code>.
+                </p>
               </td>
             </tr>
             <tr>
@@ -991,7 +996,8 @@
                   sepáralas con un espacio.</p>
                 <p><code>'manual'</code> indica que el tooltip se activará mediante programación a través de los métodos
                   <code>.show()</code>, <code>.hide()</code> y <code>.toggle()</code>; este valor no se puede combinar
-                  con ningún otro disparador.</p>
+                  con ningún otro disparador.
+                </p>
                 <p><code>'hover'</code> por sí solo, dará como resultado un tooltip que no se puede activar a través del
                   teclado, y solo debe usarse si existen métodos alternativos para transmitir la misma información a los
                   usuarios del teclado.</p>
@@ -1026,7 +1032,8 @@
               <td>
                 <p>Agrega clases al tooltip cuando se muestre. Ten en cuenta que estas clases se agregarán además de las
                   clases especificadas en el template. Para agregar varias clases, sepáralas con espacios:
-                  <code>'class-1 class-2'</code>.</p>
+                  <code>'class-1 class-2'</code>.
+                </p>
                 <p>También puedes pasar una función que debería devolver una sola cadena que contenga nombres de clases
                   adicionales.</p>
               </td>
@@ -1038,7 +1045,8 @@
               <td>Habilita o deshabilita la desinfección. Si está activado, las opciones <code>'template'</code> y
                 <code>'title'</code> se desinfectarán. Consulta la <a
                   href="/docs/5.1/getting-started/javascript/#sanitizer">sección de desinfección en nuestra
-                  documentación de JavaScript</a>.</td>
+                  documentación de JavaScript</a>.
+              </td>
             </tr>
             <tr>
               <td><code>allowList</code></td>
@@ -1135,7 +1143,8 @@
         <h4 id="toggle">toggle</h4>
         <p>Alterna el tooltip de un elemento. <strong>Regresa al punto de la llamada antes de que la tooltip se haya
             mostrado u ocultado</strong> (es decir, antes de que ocurra el evento <code>shown.bs.tooltip</code> o
-          <code>hidden.bs.tooltip</code>). Esto se considera una activación “manual” del tooltip.</p>
+          <code>hidden.bs.tooltip</code>). Esto se considera una activación “manual” del tooltip.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
 </code></pre>
@@ -1255,11 +1264,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

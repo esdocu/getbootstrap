@@ -783,11 +783,9 @@
         </div>
         <p class="bd-lead">La API de utilidad es una herramienta basada en Sass para generar clases de utilidad.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -857,7 +855,8 @@
             href="https://sass-lang.com/documentation/values/maps">documentación oficial de Sass</a> para comenzar.</p>
         <p>El mapa <code>$utilities</code> contiene todas nuestras utilidades y luego se fusiona con tu mapa
           <code>$utilities</code> personalizado, si está presente. El mapa de utilidades contiene una lista clave de
-          grupos de utilidades que aceptan las siguientes opciones:</p>
+          grupos de utilidades que aceptan las siguientes opciones:
+        </p>
         <div class="table-responsive">
           <table class="table table-utilities">
             <thead>
@@ -891,7 +890,8 @@
                 <td>Nombre de la clase generada. Si no se proporciona y <code>property</code> es una matriz de cadenas,
                   <code>class</code> utilizará de forma predeterminada el primer elemento de la matriz
                   <code>property</code>. Si no se proporciona y <code>property</code> es una cadena, las claves
-                  <code>values</code> se utilizan para los nombres de <code>class</code>.</td>
+                  <code>values</code> se utilizan para los nombres de <code>class</code>.
+                </td>
               </tr>
               <tr>
                 <td><a href="#css-variable-utilities"><code>css-var</code></a></td>
@@ -980,7 +980,8 @@
         <p>La clave <code>property</code> requerida debe estar configurada para cualquier utilidad y debe contener una
           propiedad CSS válida. Esta propiedad se utiliza en el conjunto de reglas de la utilidad generada. Cuando se
           omite la clave <code>class</code>, también sirve como nombre de clase predeterminado. Considera la utilidad
-          <code>text-decoration</code>:</p>
+          <code>text-decoration</code>:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">"text-decoration"</span><span class="o">:</span> <span class="p">(</span>
@@ -1078,9 +1079,11 @@
         <p>Establece la opción booleana <code>css-var</code> en <code>true</code> y la API generará variables CSS
           locales para el selector dado en lugar del reglas habituales de <code>property: value</code>. Agrega un
           <code>css-variable-name</code> opcional para establecer un nombre de variable CSS diferente al nombre de la
-          clase.</p>
+          clase.
+        </p>
         <p>Considera nuestras utilidades <code>.text-opacity-*</code>. Si agregamos la opción
-          <code>css-variable-name</code> obtendremos un resultado personalizado.</p>
+          <code>css-variable-name</code> obtendremos un resultado personalizado.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">"text-opacity"</span><span class="o">:</span> <span class="p">(</span>
@@ -1110,7 +1113,8 @@
         <p>Usa la opción <code>local-vars</code> para especificar un mapa Sass que generará variables CSS locales dentro
           del conjunto de reglas de la clase de utilidad. Ten en cuenta que puede requerir trabajo adicional consumir
           esas variables CSS locales en las reglas CSS generadas. Por ejemplo, considera nuestras utilidades
-          <code>.bg-*</code>:</p>
+          <code>.bg-*</code>:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">"background-color"</span><span class="o">:</span> <span class="p">(</span>
@@ -1142,9 +1146,11 @@
         <p>Usa la opción <code>state</code> para generar variaciones de pseudoclases. Ejemplos de pseudoclases son
           <code>:hover</code> y <code>:focus</code>. Cuando se proporciona una lista de estados, se crean nombres de
           clase para esa pseudoclase. Por ejemplo, para cambiar la opacidad al pasar el mouse, agrega
-          <code>state: hover</code> y obtendrás <code>.opacity-hover:hover</code> en tu CSS compilado.</p>
+          <code>state: hover</code> y obtendrás <code>.opacity-hover:hover</code> en tu CSS compilado.
+        </p>
         <p>¿Necesitas múltiples pseudoclases? Utiliza una lista de estados separados por espacios:
-          <code>state: hover focus</code>.</p>
+          <code>state: hover focus</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">"opacity"</span><span class="o">:</span> <span class="p">(</span>
@@ -1282,7 +1288,8 @@
         <p>Todas las utilidades generadas por la API incluyen <code>!important</code> para garantizar que se
           sobrescriben los componentes y las clases modificadoras según lo previsto. Puedes alternar esta configuración
           globalmente con la variable <code>$enable-important-utilities</code> (el valor predeterminado es
-          <code>true</code>).</p>
+          <code>true</code>).
+        </p>
         <h2 id="using-the-api">Usando la API <a class="anchor-link" href="#using-the-api"
             aria-label="Link to this section: Using the API"></a></h2>
         <p>Ahora que estás familiarizado con cómo funciona la API de utilidades, aprende cómo agregar tus propias clases
@@ -1306,7 +1313,8 @@
         <p>Se pueden agregar nuevas utilidades al mapa predeterminado <code>$utilities</code> con un
           <code>map-merge</code>. Asegúrate de que nuestros archivos Sass requeridos y <code>_utilities.scss</code> se
           importen primero, luego usa <code>map-merge</code> para agregar tus utilidades adicionales. Por ejemplo, aquí
-          se explica cómo agregar una utilidad <code>cursor</code> responsive con tres valores.</p>
+          se explica cómo agregar una utilidad <code>cursor</code> responsive con tres valores.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">"bootstrap/scss/functions"</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">"bootstrap/scss/variables"</span><span class="p">;</span>
@@ -1336,7 +1344,8 @@
           <code>map-get</code> y <code>map-merge</code>. En el siguiente ejemplo, agregamos un valor adicional a las
           utilidades <code>width</code>. Comienza con un <code>map-merge</code> inicial y luego especifica qué utilidad
           deseas modificar. Desde allí, obtén el mapa <code>"width"</code> anidado con <code>map-get</code> para acceder
-          y modificar las opciones y valores de la utilidad.</p>
+          y modificar las opciones y valores de la utilidad.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">"bootstrap/scss/functions"</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">"bootstrap/scss/variables"</span><span class="p">;</span>

@@ -585,11 +585,9 @@
         <p class="bd-lead mb-5">Aprende a habilitar, usar y personalizar nuestro sistema de diseño alternativo basado en
           CSS Grid con ejemplos y fragmentos de código.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -661,22 +659,26 @@
           <li>
             <p><strong>CSS Grid es opcional.</strong> Desactiva el sistema de cuadrícula predeterminado configurando
               <code>$enable-grid-classes: false</code> y habilita CSS Grid configurando
-              <code>$enable-cssgrid: true</code>. Luego, vuelve a compilar tu Sass.</p>
+              <code>$enable-cssgrid: true</code>. Luego, vuelve a compilar tu Sass.
+            </p>
           </li>
           <li>
             <p><strong>Reemplaza las instancias de <code>.row</code> con <code>.grid</code>.</strong> La clase
               <code>.grid</code> establece <code>display: grid</code> y crea un <code>grid-template</code> que se
-              construye con tu HTML.</p>
+              construye con tu HTML.
+            </p>
           </li>
           <li>
             <p><strong>Reemplaza las clases <code>.col-*</code> con las clases <code>.g-col-*</code>.</strong> Esto se
               debe a que nuestras columnas CSS Grid usan la propiedad <code>grid-column</code> en lugar de
-              <code>width</code>.</p>
+              <code>width</code>.
+            </p>
           </li>
           <li>
             <p><strong>Los tamaños de columnas y gutters se establecen a través de variables CSS.</strong> Establécelos
               en el <code>.grid</code> principal y personalízalos como lo desees, en línea o en una hoja de estilo, con
-              <code>--bs-columns</code> y <code>--bs-gap</code>.</p>
+              <code>--bs-columns</code> y <code>--bs-gap</code>.
+            </p>
           </li>
         </ul>
         <p>En el futuro, es probable que Bootstrap cambie a una solución híbrida, ya que la propiedad <code>gap</code>
@@ -690,7 +692,8 @@
           <li>
             <p>Los huecos (gaps) reemplazan a los gutters. La propiedad <code>gap</code> reemplaza el
               <code>padding</code> horizontal de nuestro sistema de cuadrícula predeterminado y funciona más como
-              <code>margin</code>.</p>
+              <code>margin</code>.
+            </p>
           </li>
           <li>
             <p>Como tal, a diferencia de <code>.row</code>s, <code>.grid</code>s no tienen márgenes negativos y las
@@ -718,7 +721,8 @@
         <h3 id="tres-columnas">Tres columnas</h3>
         <p>Se pueden crear tres columnas de igual ancho en todas los viewports y dispositivos usando las clases
           <code>.g-col-4</code>. Agrega <a href="#responsive">clases responsive</a> para cambiar el diseño según el
-          tamaño del viewport.</p>
+          tamaño del viewport.
+        </p>
         <div class="bd-example bd-example-cssgrid">
           <div class="grid">
             <div class="g-col-4">.g-col-4</div>
@@ -813,7 +817,8 @@
 
         <h2 id="auto-columnas">Auto columnas</h2>
         <p>Cuando no hay clases en los elementos de la cuadrícula (los elementos hijos inmediatos de un
-          <code>.grid</code>), cada elemento de la cuadrícula se dimensionará automáticamente en una columna.</p>
+          <code>.grid</code>), cada elemento de la cuadrícula se dimensionará automáticamente en una columna.
+        </p>
         <div class="bd-example bd-example-cssgrid">
           <div class="grid">
             <div>1</div>
@@ -872,10 +877,12 @@
         <h2 id="anidamiento">Anidamiento</h2>
         <p>Similar a nuestro sistema de cuadrícula predeterminado, nuestra CSS Grid permite anidar fácilmente
           <code>.grid</code>s. Sin embargo, a diferencia de la predeterminada, esta cuadrícula hereda los cambios en las
-          filas, columnas y espacios. Considera el siguiente ejemplo:</p>
+          filas, columnas y espacios. Considera el siguiente ejemplo:
+        </p>
         <ul>
           <li>Sobrescribimos el número predeterminado de columnas con una variable CSS local:
-            <code>--bs-columns: 3</code>.</li>
+            <code>--bs-columns: 3</code>.
+          </li>
           <li>En la primera columna automática, el recuento de columnas se hereda y cada columna es un tercio del ancho
             disponible.</li>
           <li>En la segunda columna automática, hemos restablecido el recuento de columnas en el <code>.grid</code>
@@ -958,7 +965,8 @@
           que se usan <em>hasta</em> que se proporcione una instancia local. Por ejemplo, usamos
           <code>var(--bs-rows, 1)</code> para nuestras filas de CSS Grid, que ignora <code>--bs-rows</code> porque aún
           no se ha configurado en ninguna parte. Una vez que lo esté, la instancia <code>.grid</code> usará ese valor en
-          lugar del valor alternativo de <code>1</code>.</p>
+          lugar del valor alternativo de <code>1</code>.
+        </p>
         <h3 id="sin-clases-de-cuadrícula">Sin clases de cuadrícula</h3>
         <p>Los elementos hijos inmediatos de <code>.grid</code> son elementos de cuadrícula, por lo que se dimensionarán
           sin agregar explícitamente una clase <code>.g-col</code>.</p>
@@ -1021,7 +1029,8 @@
         <h3 id="gaps">Gaps</h3>
         <p>Cambia los espacios verticales solo modificando <code>row-gap</code>. Ten en cuenta que usamos
           <code>gap</code> en <code>.grid</code>s, pero <code>row-gap</code> y <code>column-gap</code> se pueden
-          modificar según sea necesario.</p>
+          modificar según sea necesario.
+        </p>
         <div class="bd-example bd-example-cssgrid">
           <div class="grid" style="row-gap: 0;">
             <div class="g-col-6">.g-col-6</div>
@@ -1070,14 +1079,16 @@
         <h2 id="sass">Sass</h2>
         <p>Una limitación de CSS Grid es que nuestras clases predeterminadas aún son generadas por dos variables Sass,
           <code>$grid-columns</code> y <code>$grid-gutter-width</code>. Esto predetermina efectivamente el número de
-          clases generadas en nuestro CSS compilado. Tienes dos opciones aquí:</p>
+          clases generadas en nuestro CSS compilado. Tienes dos opciones aquí:
+        </p>
         <ul>
           <li>Modifica esas variables Sass predeterminadas y vuelve a compilar tu CSS.</li>
           <li>Usa estilos en línea o personalizados para aumentar las clases proporcionadas.</li>
         </ul>
         <p>Por ejemplo, puedes aumentar el número de columnas y cambiar el tamaño del espacio, y luego dimensionar sus
           “columnas” con una combinación de estilos en línea y clases de columna de CSS Grid predefinidas (por ejemplo,
-          <code>.g-col-4</code>).</p>
+          <code>.g-col-4</code>).
+        </p>
         <div class="bd-example bd-example-cssgrid">
           <div class="grid" style="--bs-columns: 18; --bs-gap: .5rem;">
             <div style="grid-column: span 14;">14 columnas</div>
@@ -1094,11 +1105,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

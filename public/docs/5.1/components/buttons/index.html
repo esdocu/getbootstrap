@@ -585,11 +585,9 @@
         <p class="bd-lead mb-5">Usa los estilos de botones personalizados de Bootstrap para acciones en formularios,
           cuadros de diálogo y más con soporte para múltiples tamaños, estados y más.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -777,7 +775,8 @@
           aplicado, lo que evita que se activen los estados <em>active</em> y <em>hover</em>.</p>
         <p>Make buttons look inactive by adding the <code>disabled</code> boolean attribute to any
           <code>&lt;button&gt;</code> element. Disabled buttons have <code>pointer-events: none</code> applied to,
-          preventing hover and active states from triggering.</p>
+          preventing hover and active states from triggering.
+        </p>
         <div class="bd-example">
           <button type="button" class="btn btn-lg btn-primary" disabled="">Botón primary</button>
           <button type="button" class="btn btn-secondary btn-lg" disabled="">Botón</button>
@@ -792,11 +791,14 @@
           <li>Los <code>&lt;a&gt;</code>s no admiten el atributo <code>disabled</code>, por lo que debes agregar la
             clase <code>.disabled</code> para que aparezca visualmente deshabilitado.</li>
           <li>Se incluyen algunos estilos amigables (para el futuro) para deshabilitar todos los
-            <code>pointer-events</code> en los botones de <code>&lt;a&gt;</code>s.</li>
+            <code>pointer-events</code> en los botones de <code>&lt;a&gt;</code>s.
+          </li>
           <li>Los botones deshabilitados que usan <code>&lt;a&gt;</code> deben incluir el atributo
-            <code>aria-disabled="true"</code> para indicar el estado del elemento a las tecnologías de asistencia.</li>
+            <code>aria-disabled="true"</code> para indicar el estado del elemento a las tecnologías de asistencia.
+          </li>
           <li>Los botones deshabilitados que usan <code>&lt;a&gt;</code> <em>no deben</em> incluir el atributo
-            <code>href</code>.</li>
+            <code>href</code>.
+          </li>
         </ul>
         <div class="bd-example">
           <a class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Enlace primary</a>
@@ -819,7 +821,8 @@
             href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado para deshabilitar tu
-          funcionalidad por completo .</p>
+          funcionalidad por completo .
+        </p>
         <div class="bd-example">
           <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Enlace
             primary</a>
@@ -849,7 +852,8 @@
         </div>
         <p>Aquí creamos una variación responsive, comenzando con botones apilados verticalmente hasta el breakpoint
           <code>md</code>, donde <code>.d-md-block</code> reemplaza a la clase <code>.d-grid</code>, sobrescribiendo así
-          la utilidad <code>gap-2</code>. Cambia el tamaño de tu navegador para verlos cambiar.</p>
+          la utilidad <code>gap-2</code>. Cambia el tamaño de tu navegador para verlos cambiar.
+        </p>
         <div class="bd-example">
           <div class="d-grid gap-2 d-md-block">
             <button class="btn btn-primary" type="button">Botón</button>
@@ -864,7 +868,8 @@
         </div>
         <p>Puedes ajustar el ancho de tus botones de bloque con clases de ancho de columna de cuadrícula. Por ejemplo,
           para un “botón de bloque” de ancho medio, usa <code>.col-6</code>. Céntralo horizontalmente con
-          <code>.mx-auto</code>, también.</p>
+          <code>.mx-auto</code>, también.
+        </p>
         <div class="bd-example">
           <div class="d-grid gap-2 col-6 mx-auto">
             <button class="btn btn-primary" type="button">Botón</button>
@@ -915,7 +920,8 @@
         <p>Agrega <code>data-bs-toggle="button"</code> para alternar el estado <code>active</code> de un botón. Si estás
           alternando previamente un botón, debes agregar manualmente la clase <code>.active</code> <strong>y</strong>
           <code>aria-pressed="true"</code> para asegurarte de que se transmita de manera adecuada a las tecnologías de
-          asistencia.</p>
+          asistencia.
+        </p>
         <div class="bd-example">
           <button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Botón toggle</button>
           <button type="button" class="btn btn-primary active" data-bs-toggle="button" autocomplete="off"
@@ -1053,7 +1059,8 @@
         </div>
         <h3 id="mixins">Mixins</h3>
         <p>Hay tres mixins para botones: mixins de botón y mixins de variante de contorno de botón (ambos basados en
-          <code>$theme-colors</code>), más un mixin de tamaño de botón.</p>
+          <code>$theme-colors</code>), más un mixin de tamaño de botón.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> button-variant</span><span class="p">(</span>
   <span class="nv">$background</span><span class="o">,</span>
@@ -1191,7 +1198,8 @@
 
         <h3 id="loops">Loops</h3>
         <p>Las variantes de botón (para botones regulares y de contorno) usan sus respectivos mixins con nuestro mapa
-          <code>$theme-colors</code> para generar las clases modificadoras en <code>scss/_buttons.scss</code>.</p>
+          <code>$theme-colors</code> para generar las clases modificadoras en <code>scss/_buttons.scss</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
   <span class="nc">.btn-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
@@ -1210,11 +1218,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

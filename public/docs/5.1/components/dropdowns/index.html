@@ -585,11 +585,9 @@
         <p class="bd-lead mb-5">Alterna la visibilidad de superposiciones contextuales para mostrar listas de enlaces y
           más con el complemento desplegable Bootstrap.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -702,7 +700,8 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de Bootstrap o usa
           <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> que contiene Popper. Popper no se usa
           para posicionar los menús desplegables en las barras de navegación, ya que no se requiere un posicionamiento
-          dinámico.</p>
+          dinámico.
+        </p>
         <h2 id="accesibilidad">Accesibilidad</h2>
         <p>El estándar <a href="https://www.w3.org/TR/wai-aria/"><abbr
               title="Iniciativa de Accesibilidad Web">WAI</abbr> <abbr
@@ -718,7 +717,8 @@
           sesión. Por esta razón, Bootstrap no espera (ni agrega automáticamente) ninguno de los atributos
           <code>role</code> y <code>aria-</code> requeridos para los verdaderos menús <abbr
             title="Accessible Rich Internet Applications">ARIA</abbr>. Los autores tendrán que incluir ellos mismos
-          estos atributos más específicos.</p>
+          estos atributos más específicos.
+        </p>
         <p>Sin embargo, Bootstrap agrega soporte incorporado para la mayoría de las interacciones estándar del menú del
           teclado, como la capacidad de moverse a través de elementos individuales <code>.dropdown-item</code> usando
           las teclas de flecha del teclado y cerrar el menú con la tecla <kbd>ESC</kbd> .</p>
@@ -727,7 +727,8 @@
           <code>.dropdown</code>, u otro elemento que declare <code>position: relative;</code>. Los menús desplegables
           se pueden activar desde los elementos <code>&lt;a&gt;</code> o <code>&lt;button&gt;</code> para adaptarse
           mejor a tus necesidades potenciales. Los ejemplos que se muestran aquí usan elementos semánticos
-          <code>&lt;ul&gt;</code> cuando corresponde, pero se admite el marcado personalizado.</p>
+          <code>&lt;ul&gt;</code> cuando corresponde, pero se admite el marcado personalizado.
+        </p>
         <h3 id="botón-único">Botón único</h3>
         <p>Cualquier <code>.btn</code> individual se puede convertir en un menú desplegable con algunos cambios de
           marcado. Así es como puedes ponerlos a trabajar con cualquiera de los elementos <code>&lt;button&gt;</code>:
@@ -1462,7 +1463,8 @@
         <p>Agrega <code>.active</code> a los elementos en el menú desplegable para <strong>mostrarlos como
             activos</strong>. Para transmitir el estado active a las tecnologías de asistencia, usa el atributo
           <code>aria-current</code> — usando el valor <code>page</code> para la página actual, o <code>true</code> para
-          el elemento actual en un conjunto.</p>
+          el elemento actual en un conjunto.
+        </p>
         <div class="bd-example">
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Enlace regular</a></li>
@@ -1497,10 +1499,12 @@
         <h2 id="alineación-del-menú">Alineación del menú</h2>
         <p>De forma predeterminada, un menú desplegable se coloca automáticamente al 100% desde la parte superior y a lo
           largo del lado izquierdo de su elemento padre. Puedes cambiar esto con las clases direccionales
-          <code>.drop*</code>, pero también puedes controlarlas con clases modificadoras adicionales.</p>
+          <code>.drop*</code>, pero también puedes controlarlas con clases modificadoras adicionales.
+        </p>
         <p>Agrega <code>.dropdown-menu-end</code> a un <code>.dropdown-menu</code> para alinear a la derecha el menú
           desplegable. Las direcciones se reflejan cuando se usa Bootstrap en RTL, lo que significa que
-          <code>.dropdown-menu-end</code> aparecerá en el lado izquierdo.</p>
+          <code>.dropdown-menu-end</code> aparecerá en el lado izquierdo.
+        </p>
         <div class="bd-callout bd-callout-info">
           <strong>¡Cuidado!</strong> Los menús desplegables se posicionan gracias a Popper, excepto cuando están
           contenidos en una barra de navegación.
@@ -1533,9 +1537,11 @@
         </div>
         <h3 id="alineación-responsive">Alineación responsive</h3>
         <p>Si deseas utilizar la alineación responsive, deshabilita el posicionamiento dinámico agregando el atributo
-          <code>data-bs-display="static"</code> y usa las clases de variación responsive.</p>
+          <code>data-bs-display="static"</code> y usa las clases de variación responsive.
+        </p>
         <p>Para alinear <strong>a la derecha</strong> el menú desplegable con el breakpoint dado o más grande, agrea
-          <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end</code>.</p>
+          <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end</code>.
+        </p>
         <div class="bd-example">
           <div class="btn-group">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
@@ -1562,7 +1568,8 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
         </div>
         <p>Para alinear <strong>a la izquierda</strong> el menú desplegable con el breakpoint dado o más grande, agrega
-          <code>.dropdown-menu-end</code> y <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start</code>.</p>
+          <code>.dropdown-menu-end</code> y <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start</code>.
+        </p>
         <div class="bd-example">
           <div class="btn-group">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
@@ -2144,7 +2151,8 @@
         </div>
         <h3 id="mixins">Mixins</h3>
         <p>Los mixins se utilizan para generar los símbolos de despliegue basados en CSS y se pueden encontrar en
-          <code>scss/mixins/_caret.scss</code>.</p>
+          <code>scss/mixins/_caret.scss</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> caret-down</span> <span class="p">{</span>
   <span class="na">border-top</span><span class="o">:</span> <span class="nv">$caret-width</span> <span class="ni">solid</span><span class="p">;</span>
@@ -2217,7 +2225,8 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>, el complemento dropdown alterna el
           contenido oculto (menús desplegables) al alternar la clase <code>.show</code> en el
           <code>.dropdown-menu</code> padre. Se confía en el atributo <code>data-bs-toggle="dropdown"</code> para cerrar
-          los menús desplegables a nivel de aplicación, por lo que es una buena idea usarlo siempre.</p>
+          los menús desplegables a nivel de aplicación, por lo que es una buena idea usarlo siempre.
+        </p>
         <div class="bd-callout bd-callout-info">
           En los dispositivos táctiles, al abrir un menú desplegable se agregan controladores vacíos
           <code>mouseover</code> a los elementos secundarios inmediatos del elemento <code>&lt;body&gt;</code>. Este
@@ -2276,7 +2285,8 @@
           nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-offset=""</code>. Asegúrate de cambiar el
           tipo de caso del nombre de la opción de camelCase a kebab-case al pasar las opciones a través de atributos de
           datos. Por ejemplo, en lugar de usar <code>data-bs-autoClose="false"</code>, usa
-          <code>data-bs-auto-close="false"</code>.</p>
+          <code>data-bs-auto-close="false"</code>.
+        </p>
         <table class="table">
           <thead>
             <tr>
@@ -2308,7 +2318,8 @@
                 <code>'parent'</code>, una referencia HTMLElement o un objeto que proporciona
                 <code>getBoundingClientRect</code>. Para obtener más información, consulta las <a
                   href="https://popper.js.org/docs/v2/constructors/#createpopper">documentos de construcción</a> y <a
-                  href="https://popper.js.org/docs/v2/virtual-elements/">documentos de elementos virtuales</a>.</td>
+                  href="https://popper.js.org/docs/v2/virtual-elements/">documentos de elementos virtuales</a>.
+              </td>
             </tr>
             <tr>
               <td><code>display</code></td>
@@ -2450,7 +2461,8 @@
           también puedes agregar detectores de eventos en el elemento padre <code>.dropdown-menu</code>. Los eventos
           <code>hide.bs.dropdown</code> y <code>hidden.bs.dropdown</code> tienen una propiedad <code>clickEvent</code>
           (solo cuando el tipo de evento original es <code>click</code>) que contiene un objeto <em>Event</em> para el
-          evento de clic.</p>
+          evento de clic.
+        </p>
         <table class="table">
           <thead>
             <tr>
@@ -2505,11 +2517,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

@@ -586,11 +586,9 @@
         <p class="bd-lead mb-5">Reboot, una colección de cambios CSS a elementos específicos en un solo archivo, punto
           de partida de Bootstrap para proporcionar una base elegante, consistente y simple sobre la cual construir.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -654,18 +652,22 @@
         <p>Reboot se basa en Normalize, proporcionando muchos elementos HTML con estilos un tanto obstinados utilizando
           solo selectores de elementos. El estilo adicional se realiza solo con clases. Por ejemplo, reiniciamos algunos
           estilos <code>&lt;table&gt;</code> para una línea base más simple y luego proporcionamos <code>.table</code>,
-          <code>.table-bordered</code> y más.</p>
+          <code>.table-bordered</code> y más.
+        </p>
         <p>Estas son nuestras pautas y razones para elegir qué sobrescribir en Reboot:</p>
         <ul>
           <li>Actualizar algunos valores predeterminados del navegador para usar <code>rem</code>s en lugar de
-            <code>em</code>s para el espaciado de componentes escalables.</li>
+            <code>em</code>s para el espaciado de componentes escalables.
+          </li>
           <li>Evitar <code>margin-top</code>. Los márgenes verticales pueden contraerse y producir resultados
             inesperados. Sin embargo, lo que es más importante, una sola dirección de <code>margin</code> es un modelo
             mental más simple.</li>
           <li>Para escalar más fácilmente entre tamaños de dispositivos, los elementos de bloque deben usar
-            <code>rem</code>s para <code>margin</code>s.</li>
+            <code>rem</code>s para <code>margin</code>s.
+          </li>
           <li>Mantener al mínimo las declaraciones de propiedades relacionadas con <code>font</code>, usando
-            <code>inherit</code> siempre que sea posible.</li>
+            <code>inherit</code> siempre que sea posible.
+          </li>
         </ul>
         <div class="bd-callout bd-callout-info">
           <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
@@ -686,7 +688,8 @@
           incluso si no usas variables CSS, todavía tienes todo el poder de Sass. <strong>Esto aún está en progreso y
             llevará tiempo implementarlo por completo.</strong></p>
         <p>Por ejemplo, considera estas variables CSS <code>:root</code> para los estilos comunes
-          <code>&lt;body&gt;</code>:</p>
+          <code>&lt;body&gt;</code>:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss">  <span class="k">@if</span> <span class="nv">$font-size-root</span> <span class="o">!=</span> <span class="n">null</span> <span class="p">{</span>
     <span class="na">--#{$variable-prefix}root-font-size</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$font-size-root</span><span class="si">}</span><span class="p">;</span>
@@ -737,14 +740,17 @@
                 <code>16px</code> (el valor predeterminado del navegador). <code>font-size: 1rem</code> se aplica en el
                 <code>&lt;body&gt;</code> para facilitar el escalado de tipos responsive a través de media queries,
                 respetando las preferencias del usuario y asegurando un enfoque más accesible. Este valor predeterminado
-                del navegador se puede sobrescribir modificando la variable <code>$font-size-root</code>.</li>
+                del navegador se puede sobrescribir modificando la variable <code>$font-size-root</code>.
+              </li>
             </ul>
           </li>
           <li>El <code>&lt;body&gt;</code> también establece de forma global <code>font-family</code>,
             <code>font-weight</code>, <code>line-height</code> y <code>color</code>. Esto lo heredan más adelante
-            algunos elementos de formulario para evitar inconsistencias en las fuentes.</li>
+            algunos elementos de formulario para evitar inconsistencias en las fuentes.
+          </li>
           <li>Por seguridad, <code>&lt;body&gt;</code> tiene un <code>background-color</code> declarado, por defecto es
-            <code>#fff</code>.</li>
+            <code>#fff</code>.
+          </li>
         </ul>
         <h2 id="pila-de-fuentes-nativas">Pila de fuentes nativas</h2>
         <p>Bootstrap utiliza una “pila de fuentes nativa” o “pila de fuentes del sistema” para una reproducción de texto
@@ -777,10 +783,12 @@
         <p>Ten en cuenta que debido a que la pila de fuentes incluye fuentes emoji, muchos caracteres unicode comunes
           símbolos/dingbat, se representarán como pictogramas de varios colores. Su apariencia variará, según el estilo
           utilizado en la fuente emoji nativa del navegador/plataforma, y no se verán afectados por ningún estilo de
-          <code>color</code> de CSS.</p>
+          <code>color</code> de CSS.
+        </p>
         <p>Esta <code>font-family</code> se aplica al <code>&lt;body&gt;</code> y se hereda automáticamente de forma
           global a través de Bootstrap. Para cambiar la <code>font-family</code> global, actualiza
-          <code>$font-family-base</code> y vuelve a compilar Bootstrap.</p>
+          <code>$font-family-base</code> y vuelve a compilar Bootstrap.
+        </p>
         <h2 id="títulos-y-párrafos">Títulos y párrafos</h2>
         <p>Todos los elementos de encabezado, por ejemplo <code>&lt;h1&gt;</code>, y párrafos <code>&lt;p&gt;</code> se
           restablecen para eliminar su <code>margin-top</code>. Los encabezados tienen <code>margin-bottom: .5rem</code>
@@ -835,7 +843,8 @@
         <p>Todas las listas, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> y <code>&lt;dl&gt;</code>, tienen su
           <code>margin-top</code> eliminado y un <code>margin-bottom: 1rem</code>. Las listas anidadas no tienen un
           <code>margin-bottom</code>. También hemos reiniciado el <code>padding-left</code> en los elementos
-          <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code>.</p>
+          <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code>.
+        </p>
         <div class="bd-example">
           <ul>
             <li>Todas las listas tienen su margen superior eliminado</li>
@@ -859,7 +868,8 @@
         <p>Para un estilo más simple, una jerarquía clara y un mejor espaciado, las listas de descripción han
           actualizado sus <code>margin</code>s. <code>&lt;dd&gt;</code>s restablece <code>margin-left</code> a
           <code>0</code> y agrega <code>margin-bottom: .5rem</code>. Los <code>&lt;dt&gt;</code> están <strong>en
-            negrita</strong>.</p>
+            negrita</strong>.
+        </p>
         <div class="bd-example">
           <dl>
             <dt>Listas de descripción</dt>
@@ -885,7 +895,8 @@
         <p>Usa <code>&lt;pre&gt;</code>s para múltiples líneas de código. Una vez más, asegúrate de escapar los
           corchetes angulares en el código para una representación adecuada. El elemento <code>&lt;pre&gt;</code> se
           restablece para eliminar su <code>margin-top</code> y usar unidades <code>rem</code> para su
-          <code>margin-bottom</code>.</p>
+          <code>margin-bottom</code>.
+        </p>
         <div class="bd-example">
           <pre><code>&lt;p&gt;Texto de ejemplo...&lt;/p&gt;
 &lt;p&gt;Y otra línea de ejemplo...&lt;/p&gt;
@@ -929,7 +940,8 @@ Para editar la configuración, presiona <span class="p">&lt;</span><span class="
         <h2 id="tablas">Tablas</h2>
         <p>Las tablas se ajustan ligeramente al estilo <code>&lt;caption&gt;</code>s, colapsan los bordes y aseguran una
           <code>text-align</code> consistente en todas partes. Los cambios adicionales para bordes, padding y más vienen
-          con <a href="/docs/5.1/content/tables/">la clase <code>.table</code></a>.</p>
+          con <a href="/docs/5.1/content/tables/">la clase <code>.table</code></a>.
+        </p>
         <div class="bd-example">
           <table>
             <caption>
@@ -983,11 +995,13 @@ Para editar la configuración, presiona <span class="p">&lt;</span><span class="
             aplique <code>margin</code>.</li>
           <li>Los <code>&lt;input&gt;</code>s, <code>&lt;select&gt;</code>s, <code>&lt;textarea&gt;</code>s y
             <code>&lt;button&gt;</code>s son abordados principalmente por Normalize, pero Reboot elimina su
-            <code>margin</code> y establece <code>line-height: inherit</code> también.</li>
+            <code>margin</code> y establece <code>line-height: inherit</code> también.
+          </li>
           <li><code>&lt;textarea&gt;</code>s se modifican para que solo se pueda cambiar el tamaño verticalmente, ya que
             el cambio de tamaño horizontal a menudo “rompe” el diseño de la página.</li>
           <li>Los elementos de botón <code>&lt;button&gt;</code>s y <code>&lt;input&gt;</code> tienen
-            <code>cursor: pointer</code> cuando <code>:not(:disabled)</code>.</li>
+            <code>cursor: pointer</code> cuando <code>:not(:disabled)</code>.
+          </li>
         </ul>
         <p>Estos cambios, y más, se muestran a continuación.</p>
         <form class="bd-example">
@@ -1123,7 +1137,8 @@ Para editar la configuración, presiona <span class="p">&lt;</span><span class="
         <p>Reboot incluye una mejora para <code>role="button"</code> para cambiar el cursor predeterminado a
           <code>pointer</code>. Agrega este atributo a los elementos para ayudar a indicar que los elementos son
           interactivos. Este rol no es necesario para los elementos <code>&lt;button&gt;</code>, que obtienen su propio
-          cambio de <code>cursor</code>.</p>
+          cambio de <code>cursor</code>.
+        </p>
         <div class="bd-example">
           <span role="button" tabindex="0">Botón que no es un elemento button</span>
         </div>
@@ -1137,7 +1152,8 @@ Para editar la configuración, presiona <span class="p">&lt;</span><span class="
           predeterminado del navegador de <code>italic</code> a <code>normal</code>. <code>line-height</code> ahora
           también se hereda, y se ha agregado <code>margin-bottom: 1rem</code>. Las <code>&lt;address&gt;</code> son
           para presentar la información de contacto. Preserva el formato terminando las líneas con
-          <code>&lt;br&gt;</code>.</p>
+          <code>&lt;br&gt;</code>.
+        </p>
         <div class="bd-example">
           <address>
             <strong>Twitter, Inc.</strong><br>
@@ -1190,7 +1206,8 @@ Para editar la configuración, presiona <span class="p">&lt;</span><span class="
             atributo global llamado <code>[hidden]</code></a>, que tiene el estilo <code>display: none</code> por
           defecto. Tomando prestada una idea de <a href="https://purecss.io/">PureCSS</a>, mejoramos este valor
           predeterminado haciendo <code>[hidden] { display: none !important; }</code> para ayudar a evitar que su
-          <code>display</code> se sobrescriba accidentalmente.</p>
+          <code>display</code> se sobrescriba accidentalmente.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">hidden</span><span class="p">&gt;</span>
 </code></pre>
@@ -1210,11 +1227,9 @@ Para editar la configuración, presiona <span class="p">&lt;</span><span class="
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

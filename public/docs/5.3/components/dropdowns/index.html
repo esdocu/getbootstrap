@@ -783,11 +783,9 @@
         <p class="bd-lead">Alterna superposiciones contextuales para mostrar listas de enlaces y más con el complemento
           desplegable de Bootstrap.</p>
         <div id="esdocu-ads">
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-          </a>
-          <a href="https://milei2023.com.ar" target="_blank">
-            <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+          <a href="https://esdocu.dev/javascript" target="_blank">
+            <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+              style="width: 100%; max-width: 800px; padding: 20px 0">
           </a>
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -902,7 +900,8 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de Bootstrap o usa
           <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> que contiene Popper. Sin embargo,
           Popper no se utiliza para posicionar menús desplegables en las barras de navegación, ya que no se requiere
-          posicionamiento dinámico.</p>
+          posicionamiento dinámico.
+        </p>
         <h2 id="accessibility">Accesibilidad <a class="anchor-link" href="#accessibility"
             aria-label="Link to this section: Accessibility"></a></h2>
         <p>Es estándar <a href="https://www.w3.org/TR/wai-aria/"><abbr title="Web Accessibility Initiative">WAI</abbr>
@@ -918,7 +917,8 @@
           sesión. Por este motivo, Bootstrap no espera (ni agrega automáticamente) ninguno de los atributos
           <code>role</code> y <code>aria-</code> necesarios para menús verdaderamente <abbr
             title="Accessible Rich Internet Applications">ARIA</abbr>. Los autores deberán incluir ellos mismos estos
-          atributos más específicos.</p>
+          atributos más específicos.
+        </p>
         <p>Sin embargo, Bootstrap agrega soporte integrado para la mayoría de las interacciones estándar del menú del
           teclado, como la capacidad de moverse a través de elementos <code>.dropdown-item</code> individuales usando el
           teclas del cursor y cierre el menú con la tecla <kbd>Esc</kbd>.</p>
@@ -928,7 +928,8 @@
           otro elemento que declare <code>position: relative;</code>. Lo ideal sería utilizar un elemento
           <code>&lt;button&gt;</code> como activador del menú desplegable, pero el complemento también funcionará con
           elementos <code>&lt;a&gt;</code>. Los ejemplos que se muestran aquí utilizan elementos semánticos
-          <code>&lt;ul&gt;</code> cuando corresponde, pero se admite el marcado personalizado.</p>
+          <code>&lt;ul&gt;</code> cuando corresponde, pero se admite el marcado personalizado.
+        </p>
         <h3 id="single-button">Botón único <a class="anchor-link" href="#single-button"
             aria-label="Link to this section: Single button"></a></h3>
         <p>Cualquier <code>.btn</code> se puede convertir en un menú desplegable con algunos cambios de marcado. Así es
@@ -1881,7 +1882,8 @@
         <p>Agrega <code>.active</code> a los elementos en el menú desplegable para <strong>diseñarlos como
             activos</strong>. Para transmitir el estado activo a las tecnologías de asistencia, utiliza el atributo
           <code>aria-current</code>, utilizando el valor <code>page</code> para la página actual o <code>true</code>
-          para la elemento actual en un conjunto.</p>
+          para la elemento actual en un conjunto.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <ul class="dropdown-menu">
@@ -1959,7 +1961,8 @@
           pero también puedes controlarlas con clases modificadoras adicionales.</p>
         <p>Agrega <code>.dropdown-menu-end</code> a un <code>.dropdown-menu</code> para alinear a la derecha el menú
           desplegable. Las instrucciones se reflejan cuando se usa Bootstrap en RTL, lo que significa que
-          <code>.dropdown-menu-end</code> aparecerá en el lado izquierdo.</p>
+          <code>.dropdown-menu-end</code> aparecerá en el lado izquierdo.
+        </p>
         <div class="bd-callout bd-callout-info">
           <strong>¡Atención!</strong> Los menús desplegables se posicionan gracias a Popper, excepto cuando están
           contenidos en una barra de navegación.
@@ -2012,7 +2015,8 @@
         <h3 id="responsive-alignment">Alineación responsive <a class="anchor-link" href="#responsive-alignment"
             aria-label="Link to this section: Responsive alignment"></a></h3>
         <p>Si quieres usar alineación responsive, deshabilita el posicionamiento dinámico agregando el atributo
-          <code>data-bs-display="static"</code> y usa las clases de variación responsive.</p>
+          <code>data-bs-display="static"</code> y usa las clases de variación responsive.
+        </p>
         <p>Para alinear <strong>a la derecha</strong> el menú desplegable con el punto de interrupción dado o mayor,
           agrega <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end</code>.</p>
         <div class="bd-example-snippet bd-code-snippet">
@@ -2822,7 +2826,8 @@
         <div class="bd-callout bd-callout-info">
           <p>Los elementos desplegables incluyen al menos una variable que no está configurada en
             <code>.dropdown</code>. Esto te permite proporcionar un nuevo valor mientras que Bootstrap utiliza de forma
-            predeterminada un valor alternativo.</p>
+            predeterminada un valor alternativo.
+          </p>
           <ul>
             <li><code>--bs-dropdown-item-border-radius</code></li>
           </ul>
@@ -2964,7 +2969,8 @@
         <h3 id="sass-mixins">Sass mixins <a class="anchor-link" href="#sass-mixins"
             aria-label="Link to this section: Sass mixins"></a></h3>
         <p>Los mixins se usan para generar los carets basados en CSS y se pueden encontrar en
-          <code>scss/mixins/_caret.scss</code>.</p>
+          <code>scss/mixins/_caret.scss</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet bd-file-ref">
           <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
             <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small"
@@ -3055,7 +3061,8 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>, el complemento desplegable alterna el
           contenido oculto (menús desplegables) alternando la clase <code>.show</code> en el
           <code>.dropdown-menu</code>. El atributo <code>data-bs-toggle="dropdown"</code> se utiliza para cerrar menús
-          desplegables a nivel de aplicación, por lo que es una buena idea usarlo siempre.</p>
+          desplegables a nivel de aplicación, por lo que es una buena idea usarlo siempre.
+        </p>
         <div class="bd-callout bd-callout-info">
           En dispositivos táctiles, abrir un menú desplegable agrega controladores <code>mouseover</code> vacíos a los
           elementos secundarios inmediatos del elemento <code>&lt;body&gt;</code>. Este truco ciertamente feo es
@@ -3111,16 +3118,19 @@
           <code>data-bs-</code>, como en <code>data-bs-animation="{value}"</code>. Asegúrate de cambiar el tipo de caso
           del nombre de la opción de “<em>camelCase</em>” a “<em>kebab-case</em>” al pasar las opciones a través de
           atributos de datos. Por ejemplo, utiliza <code>data-bs-custom-class="beautifier"</code> en lugar de
-          <code>data-bs-customClass="beautifier"</code>.</p>
+          <code>data-bs-customClass="beautifier"</code>.
+        </p>
         <p>A partir de Bootstrap 5.2.0, todos los componentes admiten un atributo de datos <strong>experimental</strong>
           reservado <code>data-bs-config</code> que puede albergar datos simples de configuración del componente como
           una cadena JSON. Cuando un elemento tiene los atributos <code>data-bs-config='{"delay":0, "title":123}'</code>
           y <code>data-bs-title="456"</code>, el valor final de <code>title</code> será <code>456</code> y los atributos
           de datos separados sobrescribirán los valores proporcionados en <code>data-bs-config</code>. Además, los
           atributos de datos existentes pueden albergar valores JSON como
-          <code>data-bs-delay='{"show":0,"hide":150}'</code>.</p>
+          <code>data-bs-delay='{"show":0,"hide":150}'</code>.
+        </p>
         <p>El objeto de configuración final es el resultado combinado de <code>data-bs-config</code>,
-          <code>data-bs-</code> y <code>js object</code> donde el último valor-clave dado sobrescribe los demás.</p>
+          <code>data-bs-</code> y <code>js object</code> donde el último valor-clave dado sobrescribe los demás.
+        </p>
 
         <div class="table-responsive">
           <table class="table">
@@ -3167,7 +3177,8 @@
                 <td>string</td>
                 <td><code>'dynamic'</code></td>
                 <td>De forma predeterminada, usamos Popper para el posicionamiento dinámico. Desactiva esto con
-                  <code>static</code>.</td>
+                  <code>static</code>.
+                </td>
               </tr>
               <tr>
                 <td><code>offset</code></td>
@@ -3247,7 +3258,8 @@
                 <td><code>getOrCreateInstance</code></td>
                 <td>Método estático que devuelve una instancia desplegable asociada a un elemento DOM o crea una nueva
                   en caso de que no haya sido inicializada. Puedes usarlo así:
-                  <code>bootstrap.Dropdown.getOrCreateInstance(element)</code>.</td>
+                  <code>bootstrap.Dropdown.getOrCreateInstance(element)</code>.
+                </td>
               </tr>
               <tr>
                 <td><code>hide</code></td>
@@ -3276,7 +3288,8 @@
           también puedes agregar detectores de eventos en el elemento padre del <code>.dropdown-menu</code>. Los eventos
           <code>hide.bs.dropdown</code> y <code>hidden.bs.dropdown</code> tienen una propiedad <code>clickEvent</code>
           (solo cuando el tipo de evento original es <code>click</code>) que contiene un objeto de evento para el evento
-          de clic.</p>
+          de clic.
+        </p>
         <div class="table-responsive">
           <table class="table">
             <thead>

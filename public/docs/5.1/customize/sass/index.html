@@ -586,11 +586,9 @@
         <p class="bd-lead mb-5">Utiliza nuestros archivos fuente Sass para aprovechar variables, mapas, mixins y
           funciones para ayudarte a construir más rápido y personalizar tu proyecto.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -736,7 +734,8 @@
         <p>Con esta configuración, puedes comenzar a modificar cualquiera de las variables y mapas de Sass en tu
           <code>custom.scss</code>. También puedes comenzar a agregar partes de Bootstrap en las secciones
           <code>// Opcionalmente</code> según sea necesario. Sugerimos usar la pila de importación completa de nuestro
-          archivo <code>bootstrap.scss</code> como punto de partida.</p>
+          archivo <code>bootstrap.scss</code> como punto de partida.
+        </p>
         <h2 id="valores-predeterminados-de-variables">Valores predeterminados de variables</h2>
         <p>Cada variable de Sass en Bootstrap incluye el indicador <code>!default</code> que te permite sobrescribir el
           valor predeterminado de la variable en tu propio Sass sin modificar el código fuente de Bootstrap. Copia y
@@ -748,7 +747,8 @@
         <p>Las sobrescrituras de variables deben realizarse después de importar nuestras funciones, pero antes del resto
           de las importaciones.</p>
         <p>Aquí hay un ejemplo que cambia <code>background-color</code> y <code>color</code> para
-          <code>&lt;body&gt;</code> al importar y compilar Bootstrap a través de npm:</p>
+          <code>&lt;body&gt;</code> al importar y compilar Bootstrap a través de npm:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Requerido
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
@@ -813,7 +813,8 @@
         <h3 id="añadir-al-mapa">Añadir al mapa</h3>
         <p>Agrega nuevos colores a <code>$theme-colors</code>, o cualquier otro mapa, creando un nuevo mapa Sass con sus
           valores personalizados y combinándolo con el mapa original. En este caso, crearemos un nuevo mapa
-          <code>$custom-colors</code> y lo fusionaremos con <code>$theme-colors</code>.</p>
+          <code>$custom-colors</code> y lo fusionaremos con <code>$theme-colors</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Crea tu propio mapa
 </span><span class="c1"></span><span class="nv">$custom-colors</span><span class="o">:</span> <span class="p">(</span>
@@ -850,7 +851,8 @@
         <p>Por ejemplo, usamos las teclas <code>primary</code>, <code>success</code> y <code>danger</code> de
           <code>$theme-colors</code> para enlaces, botones y estados de formulario. Reemplazar los valores de estas
           claves no debería presentar problemas, pero eliminarlas puede causar problemas de compilación de Sass. En
-          estos casos, deberás modificar el código Sass que utiliza esos valores.</p>
+          estos casos, deberás modificar el código Sass que utiliza esos valores.
+        </p>
         <h2 id="funciones">Funciones</h2>
         <h3 id="colores">Colores</h3>
         <p>Además de los <a href="/docs/5.1/customize/color/#color-sass-maps">mapas Sass</a> que tenemos, los colores
@@ -865,7 +867,8 @@
         <p>Puedes aclarar u oscurecer los colores con las funciones <code>tint-color()</code> y
           <code>shade-color()</code> de Bootstrap. Estas funciones mezclarán colores con negro o blanco, a diferencia de
           las funciones <code>lighten()</code> y <code>darken()</code> nativas de Sass, que cambiarán la luminosidad en
-          una cantidad fija, lo que a menudo no produce el efecto deseado.</p>
+          una cantidad fija, lo que a menudo no produce el efecto deseado.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Tint a color: mix a color with white
 </span><span class="c1"></span><span class="k">@function</span><span class="nf"> tint-color</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$weight</span><span class="p">)</span> <span class="p">{</span>
@@ -906,7 +909,8 @@
           de contraste basados en <a href="https://www.w3.org/WAI/GL/wiki/Relative_luminance">luminancia relativa</a> en
           un espacio de color <code>sRGB</code> para devolver automáticamente un color de contraste claro
           (<code>#fff</code>), oscuro (<code>#212529</code>) o negro (<code>#000</code>) basado en el color base
-          especificado. Esta función es especialmente útil para mixins o bucles en los que generas varias clases.</p>
+          especificado. Esta función es especialmente útil para mixins o bucles en los que generas varias clases.
+        </p>
         <p>Por ejemplo, para generar muestras de color a partir de nuestro mapa <code>$theme-colors</code>:</p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
@@ -1006,11 +1010,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">

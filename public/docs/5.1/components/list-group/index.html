@@ -585,11 +585,9 @@
         <p class="bd-lead mb-5">Los grupos de listas son un componente flexible y potente para mostrar una serie de
           contenidos. Modifícalos y amplíalos para que admitan prácticamente cualquier contenido.</p>
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
 
         <br>
@@ -729,7 +727,8 @@
           <em>accionables</em> con estados <em>hover</em>, <em>disabled</em> y <em>active</em> agregando
           <code>.list-group-item-action</code>. Separamos estas pseudoclases para garantizar que los grupos de listas
           hechos de elementos no interactivos (como <code>&lt;li&gt;</code>s o <code>&lt;div&gt;</code>s) no
-          proporcionen la posibilidad de hacer clic o tocar.</p>
+          proporcionen la posibilidad de hacer clic o tocar.
+        </p>
         <p>Asegúrate de <strong>no usar las clases <code>.btn</code> estándar aquí</strong>.</p>
         <div class="bd-example">
           <div class="list-group">
@@ -803,10 +802,12 @@
         <p>Agrega la clase modificadora <code>.list-group-numbered</code> (y, opcionalmente, usa un elemento
           <code>&lt;ol&gt;</code>) para optar por elementos del grupo de listas numeradas. Los números se generan a
           través de CSS (a diferencia del estilo de navegador predeterminado para <code>&lt;ol&gt;</code>) para una
-          mejor ubicación dentro de los elementos del grupo de listas y para permitir una mejor personalización.</p>
+          mejor ubicación dentro de los elementos del grupo de listas y para permitir una mejor personalización.
+        </p>
         <p>Los números son generados por <code>counter-reset</code> en <code>&lt;ol&gt;</code>, y luego se les da estilo
           y se colocan con un pseudo-elemento <code>::before</code> en <code>&lt;li&gt;</code> con
-          <code>counter-increment</code> y <code>content</code>.</p>
+          <code>counter-increment</code> y <code>content</code>.
+        </p>
         <div class="bd-example">
           <ol class="list-group list-group-numbered">
             <li class="list-group-item">Un elemento de lista</li>
@@ -877,9 +878,11 @@
           vertical a horizontal en todos los breakpoints. Alternativamente, elije una variante responsive
           <code>.list-group-horizontal-{sm|md|lg|xl|xxl}</code> para hacer que un grupo de listas sea horizontal
           comenzando en el <code>min-width</code> de ese breakpoint. Actualmente, <strong>los grupos de listas
-            horizontales no se pueden combinar con grupos de listas flush.</strong></p>
+            horizontales no se pueden combinar con grupos de listas flush.</strong>
+        </p>
         <p><strong>ProTip:</strong> ¿Quieres elementos de grupo de lista de igual ancho en posición horizontal? Agrega
-          <code>.flex-fill</code> a cada elemento del grupo de listas.</p>
+          <code>.flex-fill</code> a cada elemento del grupo de listas.
+        </p>
         <div class="bd-example">
 
           <ul class="list-group list-group-horizontal">
@@ -1383,7 +1386,8 @@
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> simplemente especificando
           <code>data-bs-toggle="list"</code> o en un elemento. Utiliza estos atributos de datos en
-          <code>.list-group-item</code>.</p>
+          <code>.list-group-item</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>
   <span class="c">&lt;!-- List group --&gt;</span>
@@ -1456,7 +1460,8 @@
         <h3 id="métodos">Métodos</h3>
         <h4 id="constructor">constructor</h4>
         <p>Activa un elemento de lista y un contenedor de contenido. La pestaña debe tener un
-          <code>data-bs-target</code> o un <code>href</code> dirigido a un nodo contenedor en el DOM.</p>
+          <code>data-bs-target</code> o un <code>href</code> dirigido a un nodo contenedor en el DOM.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span> <span class="na">id</span><span class="o">=</span><span class="s">"myList"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tablist"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action active"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#home"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span><span class="p">&gt;</span>Inicio<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -1521,9 +1526,11 @@
           <li><code>hide.bs.tab</code> (en la pestaña activa actual)</li>
           <li><code>show.bs.tab</code> (en la pestaña que se mostrará)</li>
           <li><code>hidden.bs.tab</code> (en la pestaña activa anterior, la misma que para el evento
-            <code>hide.bs.tab</code>)</li>
+            <code>hide.bs.tab</code>)
+          </li>
           <li><code>shown.bs.tab</code> (en la pestaña recién activa recién mostrada, la misma que para el evento
-            <code>show.bs.tab</code>)</li>
+            <code>show.bs.tab</code>)
+          </li>
         </ol>
         <p>Si ninguna pestaña estaba activa, los eventos <code>hide.bs.tab</code> y <code>hidden.bs.tab</code> no se
           activarán.</p>
@@ -1539,13 +1546,15 @@
               <td><code>show.bs.tab</code></td>
               <td>Este evento se activa al mostrar la pestaña, pero antes de que se muestre la nueva pestaña. Usa
                 <code>event.target</code> y <code>event.relatedTarget</code> para referenciar la pestaña activa y la
-                pestaña activa anterior (si está disponible) respectivamente.</td>
+                pestaña activa anterior (si está disponible) respectivamente.
+              </td>
             </tr>
             <tr>
               <td><code>shown.bs.tab</code></td>
               <td>Este evento se activa en la presentación de pestañas después de que se haya mostrado una pestaña. Usa
                 <code>event.target</code> y <code>event.relatedTarget</code> para referenciar la pestaña activa y la
-                pestaña activa anterior (si está disponible) respectivamente.</td>
+                pestaña activa anterior (si está disponible) respectivamente.
+              </td>
             </tr>
             <tr>
               <td><code>hide.bs.tab</code></td>
@@ -1574,11 +1583,9 @@
       </div>
       <div class="pt-3">
 
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/milei-2023-banner-2.svg" style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-        <a href="https://milei2023.com.ar" target="_blank">
-          <img src="/esdocu/img/verdades-de-milei.jpg" style="width: 100%; max-width: 800px; padding: 20px 0">
+        <a href="https://esdocu.dev/javascript" target="_blank">
+          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
+            style="width: 100%; max-width: 800px; padding: 20px 0">
         </a>
         <br>
         <div class="alert alert-success" style="max-width: 800px;" role="alert">
