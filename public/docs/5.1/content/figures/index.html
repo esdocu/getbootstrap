@@ -1,860 +1,645 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Documentación y ejemplos para mostrar imágenes y texto relacionados con el componente de figure en Bootstrap.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.91.2">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Documentación y ejemplos para mostrar imágenes y texto relacionados con el componente de figure en Bootstrap.">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.91.2">
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.1">
 
-  <meta name="docsearch:language" content="en">
-  <meta name="docsearch:version" content="5.1">
+<title>Figuras · Bootstrap 5 en Español v5.1</title>
 
-  <title>Figuras · Bootstrap 5 en Español v5.1</title>
-
-  <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290"
-    crossorigin="anonymous"></script>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290" crossorigin="anonymous"></script>
 
 
 
-  <!-- Bootstrap core CSS -->
-  <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-  <meta name="theme-color" content="#7952b3">
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@getbootstrap">
-  <meta name="twitter:creator" content="@getbootstrap">
-  <meta name="twitter:title" content="Figuras">
-  <meta name="twitter:description"
-    content="Documentación y ejemplos para mostrar imágenes y texto relacionados con el componente de figure en Bootstrap.">
-  <meta name="twitter:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="Figuras">
+<meta name="twitter:description" content="Documentación y ejemplos para mostrar imágenes y texto relacionados con el componente de figure en Bootstrap.">
+<meta name="twitter:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 
-  <!-- Facebook -->
-  <meta property="og:url" content="https://bootstrap-esdocu.com/docs/5.1/content/figures/">
-  <meta property="og:title" content="Figuras">
-  <meta property="og:description"
-    content="Documentación y ejemplos para mostrar imágenes y texto relacionados con el componente de figure en Bootstrap.">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1000">
-  <meta property="og:image:height" content="500">
+<!-- Facebook -->
+<meta property="og:url" content="https://bootstrap-esdocu.com/docs/5.1/content/figures/">
+<meta property="og:title" content="Figuras">
+<meta property="og:description" content="Documentación y ejemplos para mostrar imágenes y texto relacionados con el componente de figure en Bootstrap.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="500">
 
 
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-DK014C26F7');
-  </script>
+  gtag('config', 'G-DK014C26F7');
+</script>
 
-</head>
-
-<body>
-  <div class="skippy visually-hidden-focusable overflow-hidden">
-    <div class="container-xl">
-      <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
-      <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
-    </div>
+  </head>
+  <body>
+    <div class="skippy visually-hidden-focusable overflow-hidden">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
   </div>
+</div>
 
 
-  <header class="navbar navbar-expand-md navbar-dark bd-navbar">
-    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
-      <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
-        <svg width="40" height="32" class="d-block my-1" role="img" viewBox="0 0 118 94"
-          xmlns="http://www.w3.org/2000/svg">
-          <title>Bootstrap</title>
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
-            fill="currentColor"></path>
-        </svg>
-      </a>
+    <header class="navbar navbar-expand-md navbar-dark bd-navbar">
+  <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+    <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
+      <svg width="40" height="32" class="d-block my-1" role="img" viewBox="0 0 118 94" xmlns="http://www.w3.org/2000/svg"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+    </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar"
-        aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <svg width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
-          </path>
-        </svg>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <svg width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+</svg>
 
-      </button>
+    </button>
 
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-        <div class="offcanvas-header pb-0">
-          <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body pt-0">
-          <hr class="d-md-none text-white-50">
-          <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Inicio</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2 active" aria-current="true" href="/docs/5.1/getting-started/introduction/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="/docs/5.1/examples/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Ejemplos</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://icons.getbootstrap.com/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank"
-                rel="noopener">Iconos</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://themes.getbootstrap.com/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank"
-                rel="noopener">Temas</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://blog.getbootstrap.com/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank"
-                rel="noopener">Blog</a>
-            </li>
-          </ul>
-
-          <hr class="d-md-none text-white-50">
-
-          <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
-                <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img"
-                  viewBox="0 0 512 499.36" xmlns="http://www.w3.org/2000/svg">
-                  <title>GitHub</title>
-                  <path fill="currentColor" fill-rule="evenodd"
-                    d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
-                  </path>
-                </svg>
-                <small class="d-md-none ms-2">GitHub</small>
-              </a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener">
-                <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img"
-                  viewBox="0 0 512 416.32" xmlns="http://www.w3.org/2000/svg">
-                  <title>Twitter</title>
-                  <path fill="currentColor"
-                    d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92">
-                  </path>
-                </svg>
-                <small class="d-md-none ms-2">Twitter</small>
-              </a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener">
-                <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img"
-                  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                  <title>Slack</title>
-                  <path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"></path>
-                  <path fill="currentColor"
-                    d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z">
-                  </path>
-                </svg>
-                <small class="d-md-none ms-2">Slack</small>
-              </a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">
-                <svg width="36" height="36" fill="currentColor" fill-rule="evenodd"
-                  class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 40 41"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <title>Open Collective</title>
-                  <path fill-opacity=".4"
-                    d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z">
-                  </path>
-                  <path
-                    d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z">
-                  </path>
-                </svg>
-                <small class="d-md-none ms-2">Open Collective</small>
-              </a>
-            </li>
-          </ul>
-
-          <hr class="d-md-none text-white-50">
-
-          <a class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3"
-            href="/docs/5.1/getting-started/download/">Descargar</a>
-        </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+      <div class="offcanvas-header pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-    </nav>
-  </header>
 
-
-
-  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
-    <div class="container-xxl d-flex align-items-md-center">
-      <form class="bd-search position-relative me-auto">
-        <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..."
-          aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
-      </form>
-
-      <div class="dropdown ms-3">
-        <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown"
-          aria-expanded="false" data-bs-display="static">
-          <span class="d-none d-lg-inline">Bootstrap</span> v5.1
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
-          <li><a class="dropdown-item current" aria-current="true" href="/docs/5.1/">Latest (5.1.x)</a></li>
-          <li>
-            <hr class="dropdown-divider">
+      <div class="offcanvas-body pt-0">
+        <hr class="d-md-none text-white-50">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Inicio</a>
           </li>
-          <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6/">v4.6.x</a></li>
-          <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
-          <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
-          <li>
-            <hr class="dropdown-divider">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2 active" aria-current="true" href="/docs/5.1/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
           </li>
-          <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="/docs/5.1/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Ejemplos</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">Iconos</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Temas</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
+          </li>
         </ul>
-      </div>
 
+        <hr class="d-md-none text-white-50">
 
-      <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button"
-        data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false"
-        aria-label="Toggle docs navigation">
-        <svg width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg">
-          <title>Expand</title>
-          <path fill-rule="evenodd"
-            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z">
-          </path>
-        </svg>
-
-        <svg width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg">
-          <title>Collapse</title>
-          <path fill-rule="evenodd"
-            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z">
-          </path>
-        </svg>
-
-      </button>
-    </div>
-  </nav>
-
-
-  <div class="container-xxl my-md-4 bd-layout">
-    <aside class="bd-sidebar">
-      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
-        <ul class="list-unstyled mb-0 py-3 pt-md-1">
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#getting-started-collapse" aria-expanded="false">
-              Empezando
-            </button>
-
-            <div class="collapse" id="getting-started-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/getting-started/introduction/"
-                    class="d-inline-flex align-items-center rounded">Introducción</a></li>
-                <li><a href="/docs/5.1/getting-started/download/"
-                    class="d-inline-flex align-items-center rounded">Descargar</a></li>
-                <li><a href="/docs/5.1/getting-started/contents/"
-                    class="d-inline-flex align-items-center rounded">Contenido</a></li>
-                <li><a href="/docs/5.1/getting-started/browsers-devices/"
-                    class="d-inline-flex align-items-center rounded">Navegadores &amp; dispositivos</a></li>
-                <li><a href="/docs/5.1/getting-started/javascript/"
-                    class="d-inline-flex align-items-center rounded">JavaScript</a></li>
-                <li><a href="/docs/5.1/getting-started/webpack/"
-                    class="d-inline-flex align-items-center rounded">Webpack</a></li>
-                <li><a href="/docs/5.1/getting-started/parcel/"
-                    class="d-inline-flex align-items-center rounded">Parcel</a></li>
-                <li><a href="/docs/5.1/getting-started/accessibility/"
-                    class="d-inline-flex align-items-center rounded">Accesibilidad</a></li>
-                <li><a href="/docs/5.1/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a>
-                </li>
-                <li><a href="/docs/5.1/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a>
-                </li>
-                <li><a href="/docs/5.1/getting-started/contribute/"
-                    class="d-inline-flex align-items-center rounded">Contribuir</a></li>
-              </ul>
-            </div>
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+              <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 512 499.36" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path></svg>
+              <small class="d-md-none ms-2">GitHub</small>
+            </a>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#customize-collapse" aria-expanded="false">
-              Personalizar
-            </button>
-
-            <div class="collapse" id="customize-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/customize/overview/"
-                    class="d-inline-flex align-items-center rounded">Overview</a></li>
-                <li><a href="/docs/5.1/customize/sass/" class="d-inline-flex align-items-center rounded">Sass</a></li>
-                <li><a href="/docs/5.1/customize/options/" class="d-inline-flex align-items-center rounded">Opciones</a>
-                </li>
-                <li><a href="/docs/5.1/customize/color/" class="d-inline-flex align-items-center rounded">Color</a></li>
-                <li><a href="/docs/5.1/customize/components/"
-                    class="d-inline-flex align-items-center rounded">Componentes</a></li>
-                <li><a href="/docs/5.1/customize/css-variables/"
-                    class="d-inline-flex align-items-center rounded">Variables CSS</a></li>
-                <li><a href="/docs/5.1/customize/optimize/"
-                    class="d-inline-flex align-items-center rounded">Optimizar</a></li>
-              </ul>
-            </div>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener">
+              <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 512 416.32" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"></path></svg>
+              <small class="d-md-none ms-2">Twitter</small>
+            </a>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#layout-collapse" aria-expanded="false">
-              Layout
-            </button>
-
-            <div class="collapse" id="layout-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/layout/breakpoints/"
-                    class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
-                <li><a href="/docs/5.1/layout/containers/"
-                    class="d-inline-flex align-items-center rounded">Contenedores</a></li>
-                <li><a href="/docs/5.1/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
-                <li><a href="/docs/5.1/layout/columns/" class="d-inline-flex align-items-center rounded">Columnas</a>
-                </li>
-                <li><a href="/docs/5.1/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a>
-                </li>
-                <li><a href="/docs/5.1/layout/utilities/"
-                    class="d-inline-flex align-items-center rounded">Utilidades</a></li>
-                <li><a href="/docs/5.1/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a>
-                </li>
-                <li><a href="/docs/5.1/layout/css-grid/" class="d-inline-flex align-items-center rounded">Cuadrícula
-                    CSS</a></li>
-              </ul>
-            </div>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener">
+              <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"></path><path fill="currentColor" d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z"></path></svg>
+              <small class="d-md-none ms-2">Slack</small>
+            </a>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse"
-              data-bs-target="#content-collapse" aria-expanded="true" aria-current="true">
-              Contenido
-            </button>
-
-            <div class="collapse show" id="content-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
-                <li><a href="/docs/5.1/content/typography/"
-                    class="d-inline-flex align-items-center rounded">Tipografía</a></li>
-                <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Imágenes</a>
-                </li>
-                <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tablas</a></li>
-                <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded active"
-                    aria-current="page">Figures</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#forms-collapse" aria-expanded="false">
-              Formularios
-            </button>
-
-            <div class="collapse" id="forms-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/forms/overview/" class="d-inline-flex align-items-center rounded">Overview</a>
-                </li>
-                <li><a href="/docs/5.1/forms/form-control/" class="d-inline-flex align-items-center rounded">Controles
-                    de formulario</a></li>
-                <li><a href="/docs/5.1/forms/select/" class="d-inline-flex align-items-center rounded">Select</a></li>
-                <li><a href="/docs/5.1/forms/checks-radios/" class="d-inline-flex align-items-center rounded">Checks
-                    &amp; radios</a></li>
-                <li><a href="/docs/5.1/forms/range/" class="d-inline-flex align-items-center rounded">Rango</a></li>
-                <li><a href="/docs/5.1/forms/input-group/" class="d-inline-flex align-items-center rounded">Grupo de
-                    inputs</a></li>
-                <li><a href="/docs/5.1/forms/floating-labels/"
-                    class="d-inline-flex align-items-center rounded">Etiquetas flotantes</a></li>
-                <li><a href="/docs/5.1/forms/layout/" class="d-inline-flex align-items-center rounded">Layout</a></li>
-                <li><a href="/docs/5.1/forms/validation/"
-                    class="d-inline-flex align-items-center rounded">Validación</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#components-collapse" aria-expanded="false">
-              Componentes
-            </button>
-
-            <div class="collapse" id="components-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/components/accordion/"
-                    class="d-inline-flex align-items-center rounded">Accordion</a></li>
-                <li><a href="/docs/5.1/components/alerts/" class="d-inline-flex align-items-center rounded">Alerts</a>
-                </li>
-                <li><a href="/docs/5.1/components/badge/" class="d-inline-flex align-items-center rounded">Badge</a>
-                </li>
-                <li><a href="/docs/5.1/components/breadcrumb/"
-                    class="d-inline-flex align-items-center rounded">Breadcrumb</a></li>
-                <li><a href="/docs/5.1/components/buttons/" class="d-inline-flex align-items-center rounded">Buttons</a>
-                </li>
-                <li><a href="/docs/5.1/components/button-group/" class="d-inline-flex align-items-center rounded">Button
-                    group</a></li>
-                <li><a href="/docs/5.1/components/card/" class="d-inline-flex align-items-center rounded">Card</a></li>
-                <li><a href="/docs/5.1/components/carousel/"
-                    class="d-inline-flex align-items-center rounded">Carousel</a></li>
-                <li><a href="/docs/5.1/components/close-button/" class="d-inline-flex align-items-center rounded">Close
-                    button</a></li>
-                <li><a href="/docs/5.1/components/collapse/"
-                    class="d-inline-flex align-items-center rounded">Collapse</a></li>
-                <li><a href="/docs/5.1/components/dropdowns/"
-                    class="d-inline-flex align-items-center rounded">Dropdowns</a></li>
-                <li><a href="/docs/5.1/components/list-group/" class="d-inline-flex align-items-center rounded">List
-                    group</a></li>
-                <li><a href="/docs/5.1/components/modal/" class="d-inline-flex align-items-center rounded">Modal</a>
-                </li>
-                <li><a href="/docs/5.1/components/navs-tabs/" class="d-inline-flex align-items-center rounded">Navs
-                    &amp; tabs</a></li>
-                <li><a href="/docs/5.1/components/navbar/" class="d-inline-flex align-items-center rounded">Navbar</a>
-                </li>
-                <li><a href="/docs/5.1/components/offcanvas/"
-                    class="d-inline-flex align-items-center rounded">Offcanvas</a></li>
-                <li><a href="/docs/5.1/components/pagination/"
-                    class="d-inline-flex align-items-center rounded">Pagination</a></li>
-                <li><a href="/docs/5.1/components/placeholders/"
-                    class="d-inline-flex align-items-center rounded">Placeholders</a></li>
-                <li><a href="/docs/5.1/components/popovers/"
-                    class="d-inline-flex align-items-center rounded">Popovers</a></li>
-                <li><a href="/docs/5.1/components/progress/"
-                    class="d-inline-flex align-items-center rounded">Progress</a></li>
-                <li><a href="/docs/5.1/components/scrollspy/"
-                    class="d-inline-flex align-items-center rounded">Scrollspy</a></li>
-                <li><a href="/docs/5.1/components/spinners/"
-                    class="d-inline-flex align-items-center rounded">Spinners</a></li>
-                <li><a href="/docs/5.1/components/toasts/" class="d-inline-flex align-items-center rounded">Toasts</a>
-                </li>
-                <li><a href="/docs/5.1/components/tooltips/"
-                    class="d-inline-flex align-items-center rounded">Tooltips</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#helpers-collapse" aria-expanded="false">
-              Helpers
-            </button>
-
-            <div class="collapse" id="helpers-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a>
-                </li>
-                <li><a href="/docs/5.1/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Enlaces
-                    de colores</a></li>
-                <li><a href="/docs/5.1/helpers/ratio/" class="d-inline-flex align-items-center rounded">Relación de
-                    aspecto</a></li>
-                <li><a href="/docs/5.1/helpers/position/" class="d-inline-flex align-items-center rounded">Posición</a>
-                </li>
-                <li><a href="/docs/5.1/helpers/stacks/" class="d-inline-flex align-items-center rounded">Pilas</a></li>
-                <li><a href="/docs/5.1/helpers/visually-hidden/"
-                    class="d-inline-flex align-items-center rounded">Visualmente oculto</a></li>
-                <li><a href="/docs/5.1/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Enlace
-                    estirado</a></li>
-                <li><a href="/docs/5.1/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Texto
-                    truncado</a></li>
-                <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-inline-flex align-items-center rounded">Regla
-                    vertical</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#utilities-collapse" aria-expanded="false">
-              Utilidades
-            </button>
-
-            <div class="collapse" id="utilities-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
-                <li><a href="/docs/5.1/utilities/background/" class="d-inline-flex align-items-center rounded">Color de
-                    fondo</a></li>
-                <li><a href="/docs/5.1/utilities/borders/" class="d-inline-flex align-items-center rounded">Bordes</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/colors/" class="d-inline-flex align-items-center rounded">Colores</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/flex/" class="d-inline-flex align-items-center rounded">Flex</a></li>
-                <li><a href="/docs/5.1/utilities/float/" class="d-inline-flex align-items-center rounded">Float</a></li>
-                <li><a href="/docs/5.1/utilities/interactions/"
-                    class="d-inline-flex align-items-center rounded">Interacciones</a></li>
-                <li><a href="/docs/5.1/utilities/opacity/" class="d-inline-flex align-items-center rounded">Opacidad</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/overflow/"
-                    class="d-inline-flex align-items-center rounded">Desbordamiento</a></li>
-                <li><a href="/docs/5.1/utilities/position/"
-                    class="d-inline-flex align-items-center rounded">Posición</a></li>
-                <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded">Sombras</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded">Tamaño</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/spacing/"
-                    class="d-inline-flex align-items-center rounded">Espaciado</a></li>
-                <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Texto</a></li>
-                <li><a href="/docs/5.1/utilities/vertical-align/"
-                    class="d-inline-flex align-items-center rounded">Alineación vertical</a></li>
-                <li><a href="/docs/5.1/utilities/visibility/"
-                    class="d-inline-flex align-items-center rounded">Visibilidad</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#extend-collapse" aria-expanded="false">
-              Ampliar
-            </button>
-
-            <div class="collapse" id="extend-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/extend/approach/" class="d-inline-flex align-items-center rounded">Enfoque</a>
-                </li>
-                <li><a href="/docs/5.1/extend/icons/" class="d-inline-flex align-items-center rounded">Iconos</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#about-collapse" aria-expanded="false">
-              Acerca de
-            </button>
-
-            <div class="collapse" id="about-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/about/overview/" class="d-inline-flex align-items-center rounded">Overview</a>
-                </li>
-                <li><a href="/docs/5.1/about/team/" class="d-inline-flex align-items-center rounded">Equipo</a></li>
-                <li><a href="/docs/5.1/about/brand/" class="d-inline-flex align-items-center rounded">Marca</a></li>
-                <li><a href="/docs/5.1/about/license/" class="d-inline-flex align-items-center rounded">Licencia</a>
-                </li>
-                <li><a href="/docs/5.1/about/translations/"
-                    class="d-inline-flex align-items-center rounded">Traducciones</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="my-3 mx-4 border-top"></li>
-          <li>
-            <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
-              Migración
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">
+              <svg width="36" height="36" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 40 41" xmlns="http://www.w3.org/2000/svg"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+              <small class="d-md-none ms-2">Open Collective</small>
             </a>
           </li>
         </ul>
-      </nav>
 
-    </aside>
+        <hr class="d-md-none text-white-50">
 
-    <main class="bd-main order-1">
-      <div class="bd-intro ps-lg-4">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="d-md-flex">
-            <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
-              href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/content/figures.md"
-              title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
-          </div>
-          <h1 class="bd-title" id="content">Figuras</h1>
-        </div>
-        <p class="bd-lead mb-5">Documentación y ejemplos para mostrar imágenes y texto relacionados con el componente de
-          figure en Bootstrap.</p>
-
-        <a href="https://esdocu.dev/javascript" target="_blank">
-          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
-            style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-
-        <br>
-        <div class="alert alert-success" style="max-width: 800px;" role="alert">
-          🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
-          (Estás en Bootstrap 5.1) <br>
-          😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-        </div>
-
-
-
-
-
-
-
-
-
-
+        <a class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3" href="/docs/5.1/getting-started/download/">Descargar</a>
       </div>
+    </div>
+  </nav>
+</header>
 
 
-      <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-        <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
-        <nav id="TableOfContents">
-          <ul>
-            <li><a href="#sass">Sass</a>
-              <ul>
-                <li><a href="#variables">Variables</a></li>
-              </ul>
-            </li>
+    
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+  <div class="container-xxl d-flex align-items-md-center">
+    <form class="bd-search position-relative me-auto">
+      <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
+    </form>
+
+    <div class="dropdown ms-3">
+  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-none d-lg-inline">Bootstrap</span> v5.1
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
+    <li><a class="dropdown-item current" aria-current="true" href="/docs/5.1/">Latest (5.1.x)</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6/">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+  </ul>
+</div>
+
+
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <title>Expand</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"></path>
+</svg>
+
+      <svg width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <title>Collapse</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"></path>
+</svg>
+
+    </button>
+  </div>
+</nav>
+
+
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+          Empezando
+        </button>
+
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/getting-started/introduction/" class="d-inline-flex align-items-center rounded">Introducción</a></li>
+              <li><a href="/docs/5.1/getting-started/download/" class="d-inline-flex align-items-center rounded">Descargar</a></li>
+              <li><a href="/docs/5.1/getting-started/contents/" class="d-inline-flex align-items-center rounded">Contenido</a></li>
+              <li><a href="/docs/5.1/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">Navegadores &amp; dispositivos</a></li>
+              <li><a href="/docs/5.1/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
+              <li><a href="/docs/5.1/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
+              <li><a href="/docs/5.1/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
+              <li><a href="/docs/5.1/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">Accesibilidad</a></li>
+              <li><a href="/docs/5.1/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
+              <li><a href="/docs/5.1/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a></li>
+              <li><a href="/docs/5.1/getting-started/contribute/" class="d-inline-flex align-items-center rounded">Contribuir</a></li>
           </ul>
-        </nav>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
+          Personalizar
+        </button>
+
+        <div class="collapse" id="customize-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/customize/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/customize/sass/" class="d-inline-flex align-items-center rounded">Sass</a></li>
+              <li><a href="/docs/5.1/customize/options/" class="d-inline-flex align-items-center rounded">Opciones</a></li>
+              <li><a href="/docs/5.1/customize/color/" class="d-inline-flex align-items-center rounded">Color</a></li>
+              <li><a href="/docs/5.1/customize/components/" class="d-inline-flex align-items-center rounded">Componentes</a></li>
+              <li><a href="/docs/5.1/customize/css-variables/" class="d-inline-flex align-items-center rounded">Variables CSS</a></li>
+              <li><a href="/docs/5.1/customize/optimize/" class="d-inline-flex align-items-center rounded">Optimizar</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
+          Layout
+        </button>
+
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
+              <li><a href="/docs/5.1/layout/containers/" class="d-inline-flex align-items-center rounded">Contenedores</a></li>
+              <li><a href="/docs/5.1/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
+              <li><a href="/docs/5.1/layout/columns/" class="d-inline-flex align-items-center rounded">Columnas</a></li>
+              <li><a href="/docs/5.1/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a></li>
+              <li><a href="/docs/5.1/layout/utilities/" class="d-inline-flex align-items-center rounded">Utilidades</a></li>
+              <li><a href="/docs/5.1/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
+              <li><a href="/docs/5.1/layout/css-grid/" class="d-inline-flex align-items-center rounded">Cuadrícula CSS</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="true" aria-current="true">
+          Contenido
+        </button>
+
+        <div class="collapse show" id="content-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
+              <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Imágenes</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tablas</a></li>
+              <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded active" aria-current="page">Figures</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false">
+          Formularios
+        </button>
+
+        <div class="collapse" id="forms-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/forms/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/forms/form-control/" class="d-inline-flex align-items-center rounded">Controles de formulario</a></li>
+              <li><a href="/docs/5.1/forms/select/" class="d-inline-flex align-items-center rounded">Select</a></li>
+              <li><a href="/docs/5.1/forms/checks-radios/" class="d-inline-flex align-items-center rounded">Checks &amp; radios</a></li>
+              <li><a href="/docs/5.1/forms/range/" class="d-inline-flex align-items-center rounded">Rango</a></li>
+              <li><a href="/docs/5.1/forms/input-group/" class="d-inline-flex align-items-center rounded">Grupo de inputs</a></li>
+              <li><a href="/docs/5.1/forms/floating-labels/" class="d-inline-flex align-items-center rounded">Etiquetas flotantes</a></li>
+              <li><a href="/docs/5.1/forms/layout/" class="d-inline-flex align-items-center rounded">Layout</a></li>
+              <li><a href="/docs/5.1/forms/validation/" class="d-inline-flex align-items-center rounded">Validación</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+          Componentes
+        </button>
+
+        <div class="collapse" id="components-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/components/accordion/" class="d-inline-flex align-items-center rounded">Accordion</a></li>
+              <li><a href="/docs/5.1/components/alerts/" class="d-inline-flex align-items-center rounded">Alerts</a></li>
+              <li><a href="/docs/5.1/components/badge/" class="d-inline-flex align-items-center rounded">Badge</a></li>
+              <li><a href="/docs/5.1/components/breadcrumb/" class="d-inline-flex align-items-center rounded">Breadcrumb</a></li>
+              <li><a href="/docs/5.1/components/buttons/" class="d-inline-flex align-items-center rounded">Buttons</a></li>
+              <li><a href="/docs/5.1/components/button-group/" class="d-inline-flex align-items-center rounded">Button group</a></li>
+              <li><a href="/docs/5.1/components/card/" class="d-inline-flex align-items-center rounded">Card</a></li>
+              <li><a href="/docs/5.1/components/carousel/" class="d-inline-flex align-items-center rounded">Carousel</a></li>
+              <li><a href="/docs/5.1/components/close-button/" class="d-inline-flex align-items-center rounded">Close button</a></li>
+              <li><a href="/docs/5.1/components/collapse/" class="d-inline-flex align-items-center rounded">Collapse</a></li>
+              <li><a href="/docs/5.1/components/dropdowns/" class="d-inline-flex align-items-center rounded">Dropdowns</a></li>
+              <li><a href="/docs/5.1/components/list-group/" class="d-inline-flex align-items-center rounded">List group</a></li>
+              <li><a href="/docs/5.1/components/modal/" class="d-inline-flex align-items-center rounded">Modal</a></li>
+              <li><a href="/docs/5.1/components/navs-tabs/" class="d-inline-flex align-items-center rounded">Navs &amp; tabs</a></li>
+              <li><a href="/docs/5.1/components/navbar/" class="d-inline-flex align-items-center rounded">Navbar</a></li>
+              <li><a href="/docs/5.1/components/offcanvas/" class="d-inline-flex align-items-center rounded">Offcanvas</a></li>
+              <li><a href="/docs/5.1/components/pagination/" class="d-inline-flex align-items-center rounded">Pagination</a></li>
+              <li><a href="/docs/5.1/components/placeholders/" class="d-inline-flex align-items-center rounded">Placeholders</a></li>
+              <li><a href="/docs/5.1/components/popovers/" class="d-inline-flex align-items-center rounded">Popovers</a></li>
+              <li><a href="/docs/5.1/components/progress/" class="d-inline-flex align-items-center rounded">Progress</a></li>
+              <li><a href="/docs/5.1/components/scrollspy/" class="d-inline-flex align-items-center rounded">Scrollspy</a></li>
+              <li><a href="/docs/5.1/components/spinners/" class="d-inline-flex align-items-center rounded">Spinners</a></li>
+              <li><a href="/docs/5.1/components/toasts/" class="d-inline-flex align-items-center rounded">Toasts</a></li>
+              <li><a href="/docs/5.1/components/tooltips/" class="d-inline-flex align-items-center rounded">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
+          Helpers
+        </button>
+
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
+              <li><a href="/docs/5.1/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Enlaces de colores</a></li>
+              <li><a href="/docs/5.1/helpers/ratio/" class="d-inline-flex align-items-center rounded">Relación de aspecto</a></li>
+              <li><a href="/docs/5.1/helpers/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
+              <li><a href="/docs/5.1/helpers/stacks/" class="d-inline-flex align-items-center rounded">Pilas</a></li>
+              <li><a href="/docs/5.1/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded">Visualmente oculto</a></li>
+              <li><a href="/docs/5.1/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Enlace estirado</a></li>
+              <li><a href="/docs/5.1/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Texto truncado</a></li>
+              <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-inline-flex align-items-center rounded">Regla vertical</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
+          Utilidades
+        </button>
+
+        <div class="collapse" id="utilities-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.1/utilities/background/" class="d-inline-flex align-items-center rounded">Color de fondo</a></li>
+              <li><a href="/docs/5.1/utilities/borders/" class="d-inline-flex align-items-center rounded">Bordes</a></li>
+              <li><a href="/docs/5.1/utilities/colors/" class="d-inline-flex align-items-center rounded">Colores</a></li>
+              <li><a href="/docs/5.1/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
+              <li><a href="/docs/5.1/utilities/flex/" class="d-inline-flex align-items-center rounded">Flex</a></li>
+              <li><a href="/docs/5.1/utilities/float/" class="d-inline-flex align-items-center rounded">Float</a></li>
+              <li><a href="/docs/5.1/utilities/interactions/" class="d-inline-flex align-items-center rounded">Interacciones</a></li>
+              <li><a href="/docs/5.1/utilities/opacity/" class="d-inline-flex align-items-center rounded">Opacidad</a></li>
+              <li><a href="/docs/5.1/utilities/overflow/" class="d-inline-flex align-items-center rounded">Desbordamiento</a></li>
+              <li><a href="/docs/5.1/utilities/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
+              <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded">Sombras</a></li>
+              <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded">Tamaño</a></li>
+              <li><a href="/docs/5.1/utilities/spacing/" class="d-inline-flex align-items-center rounded">Espaciado</a></li>
+              <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Texto</a></li>
+              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Alineación vertical</a></li>
+              <li><a href="/docs/5.1/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibilidad</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
+          Ampliar
+        </button>
+
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/extend/approach/" class="d-inline-flex align-items-center rounded">Enfoque</a></li>
+              <li><a href="/docs/5.1/extend/icons/" class="d-inline-flex align-items-center rounded">Iconos</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+          Acerca de
+        </button>
+
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/about/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/about/team/" class="d-inline-flex align-items-center rounded">Equipo</a></li>
+              <li><a href="/docs/5.1/about/brand/" class="d-inline-flex align-items-center rounded">Marca</a></li>
+              <li><a href="/docs/5.1/about/license/" class="d-inline-flex align-items-center rounded">Licencia</a></li>
+              <li><a href="/docs/5.1/about/translations/" class="d-inline-flex align-items-center rounded">Traducciones</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#hosting-collapse" aria-expanded="false">
+          Web Hosting
+        </button>
+
+        <div class="collapse" id="hosting-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/hosting/mejor-web-hosting/" class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="my-3 mx-4 border-top"></li>
+      <li>
+        <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
+          Migración
+        </a>
+      </li>
+  </ul>
+</nav>
+
+  </aside>
+
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1" href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/content/figures.md" title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
+        </div>
+        <h1 class="bd-title" id="content">Figuras</h1>
+      </div>
+      <p class="bd-lead mb-5">Documentación y ejemplos para mostrar imágenes y texto relacionados con el componente de figure en Bootstrap.</p>
+      
+        <a href="https://esdocu.dev/javascript" target="_blank">
+    <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg" style="width: 100%; max-width: 800px">
+</a>
+<br><br>
+<div class="alert alert-success" style="max-width: 800px;" role="alert">
+    🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
+    (Estás en Bootstrap 5.1) <br>
+    😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
+</div>
+
+
+
+
+
+
+
+
+
+      
       </div>
 
+    
+    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+      <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sass">Sass</a>
+      <ul>
+        <li><a href="#variables">Variables</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
 
-      <div class="bd-content ps-lg-4">
+    <div class="bd-content ps-lg-4">
+      
 
+      <p>Cada vez que necesites mostrar una parte del contenido, como una imagen con un título opcional, considera usar <code>&lt;figure&gt;</code>.</p>
+<p>Utiliza las clases incluidas <code>.figure</code>, <code>.figure-img</code> y <code>.figure-caption</code> para proporcionar algunos estilos básicos para los elementos HTML5 <code>&lt;figure&gt;</code> y <code>&lt;figcaption&gt;</code>. Las imágenes en las figuras no tienen un tamaño explícito, así que asegúrate de agregar la clase <code>.img-fluid</code> a tu <code>&lt;img&gt;</code> para que sea responsive.</p>
+<div class="bd-example">
+<figure class="figure">
+  <svg class="bd-placeholder-img figure-img img-fluid rounded" width="400" height="300" role="img" aria-label="Placeholder: 400x300" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x300</text></svg>
 
-        <p>Cada vez que necesites mostrar una parte del contenido, como una imagen con un título opcional, considera
-          usar <code>&lt;figure&gt;</code>.</p>
-        <p>Utiliza las clases incluidas <code>.figure</code>, <code>.figure-img</code> y <code>.figure-caption</code>
-          para proporcionar algunos estilos básicos para los elementos HTML5 <code>&lt;figure&gt;</code> y
-          <code>&lt;figcaption&gt;</code>. Las imágenes en las figuras no tienen un tamaño explícito, así que asegúrate
-          de agregar la clase <code>.img-fluid</code> a tu <code>&lt;img&gt;</code> para que sea responsive.
-        </p>
-        <div class="bd-example">
-          <figure class="figure">
-            <svg class="bd-placeholder-img figure-img img-fluid rounded" width="400" height="300" role="img"
-              aria-label="Placeholder: 400x300" focusable="false" preserveAspectRatio="xMidYMid slice"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">400x300</text>
-            </svg>
-
-            <figcaption class="figure-caption">Un título para la imagen de arriba.</figcaption>
-          </figure>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">"figure"</span><span class="p">&gt;</span>
+  <figcaption class="figure-caption">Un título para la imagen de arriba.</figcaption>
+</figure>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">"figure"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"..."</span> <span class="na">class</span><span class="o">=</span><span class="s">"figure-img img-fluid rounded"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">"figure-caption"</span><span class="p">&gt;</span>Un título para la imagen de arriba.<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <p>Alinear el título de la figura es fácil con nuestras <a
-            href="/docs/5.1/utilities/text/#text-alignment">utilidades de texto</a>.</p>
-        <div class="bd-example">
-          <figure class="figure">
-            <svg class="bd-placeholder-img figure-img img-fluid rounded" width="400" height="300" role="img"
-              aria-label="Placeholder: 400x300" focusable="false" preserveAspectRatio="xMidYMid slice"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                dy=".3em">400x300</text>
-            </svg>
+<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre></div>
+<p>Alinear el título de la figura es fácil con nuestras <a href="/docs/5.1/utilities/text/#text-alignment">utilidades de texto</a>.</p>
+<div class="bd-example">
+<figure class="figure">
+  <svg class="bd-placeholder-img figure-img img-fluid rounded" width="400" height="300" role="img" aria-label="Placeholder: 400x300" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x300</text></svg>
 
-            <figcaption class="figure-caption text-end">Un título para la imagen de arriba.</figcaption>
-          </figure>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">"figure"</span><span class="p">&gt;</span>
+  <figcaption class="figure-caption text-end">Un título para la imagen de arriba.</figcaption>
+</figure>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">"figure"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"..."</span> <span class="na">class</span><span class="o">=</span><span class="s">"figure-img img-fluid rounded"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">"figure-caption text-end"</span><span class="p">&gt;</span>Un título para la imagen de arriba.<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <h2 id="sass">Sass</h2>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="sass">Sass</h2>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</p></div>
 
-        <h3 id="variables">Variables</h3>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$figure-caption-font-size</span><span class="o">:</span>          <span class="nv">$small-font-size</span><span class="p">;</span>
+<h3 id="variables">Variables</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$figure-caption-font-size</span><span class="o">:</span>          <span class="nv">$small-font-size</span><span class="p">;</span>
 <span class="nv">$figure-caption-color</span><span class="o">:</span>              <span class="nv">$gray-600</span><span class="p">;</span>
-</code></pre>
-        </div>
+</code></pre></div>
 
-      </div>
-      <div class="pt-3">
-
+    </div>
+    <div class="pt-3">
+      
         <a href="https://esdocu.dev/javascript" target="_blank">
-          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
-            style="width: 100%; max-width: 800px; padding: 20px 0">
+    <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg" style="width: 100%; max-width: 800px">
+</a>
+<br><br>
+<div class="alert alert-success" style="max-width: 800px;" role="alert">
+    🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
+    (Estás en Bootstrap 5.1) <br>
+    😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
+</div>
+      
+    </div>
+  </main>
+</div>
+
+
+    <footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          <svg width="40" height="32" class="d-block me-2" role="img" viewBox="0 0 118 94" xmlns="http://www.w3.org/2000/svg"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+          <span class="fs-5">Bootstrap</span>
         </a>
-        <br>
-        <div class="alert alert-success" style="max-width: 800px;" role="alert">
-          🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
-          (Estás en Bootstrap 5.1) <br>
-          😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-        </div>
-
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2">Diseñado y construido con todo el amor del mundo por el <a href="/docs/5.1/about/team/">equipo de Bootstrap</a> con la ayuda de <a href="https://github.com/twbs/bootstrap/graphs/contributors">nuestros colaboradores</a>.</li>
+          <li class="mb-2">Código con licencia <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          <li class="mb-2">Actualmente v5.1.3.</li>
+        </ul>
       </div>
-    </main>
-  </div>
-
-
-  <footer class="bd-footer py-5 mt-5 bg-light">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-3 mb-3">
-          <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
-            aria-label="Bootstrap">
-            <svg width="40" height="32" class="d-block me-2" role="img" viewBox="0 0 118 94"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>Bootstrap</title>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
-                fill="currentColor"></path>
-            </svg>
-            <span class="fs-5">Bootstrap</span>
-          </a>
-          <ul class="list-unstyled small text-muted">
-            <li class="mb-2">Diseñado y construido con todo el amor del mundo por el <a
-                href="/docs/5.1/about/team/">equipo de Bootstrap</a> con la ayuda de <a
-                href="https://github.com/twbs/bootstrap/graphs/contributors">nuestros colaboradores</a>.</li>
-            <li class="mb-2">Código con licencia <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
-                target="_blank" rel="license noopener">MIT</a>, docs <a
-                href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY
-                3.0</a>.</li>
-            <li class="mb-2">Actualmente v5.1.3.</li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-          <h5>Enlaces</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/">Inicio</a></li>
-            <li class="mb-2"><a href="/docs/5.1/">Docs</a></li>
-            <li class="mb-2"><a href="/docs/5.1/examples/">Ejemplos</a></li>
-            <li class="mb-2"><a href="https://themes.getbootstrap.com/">Temas</a></li>
-            <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Guías</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/docs/5.1/getting-started/">Guía de inicio</a></li>
-            <li class="mb-2"><a href="/docs/5.1/examples/starter-template/">Plantilla de
-                inicio</a></li>
-            <li class="mb-2"><a href="/docs/5.1/getting-started/webpack/">Webpack</a></li>
-            <li class="mb-2"><a href="/docs/5.1/getting-started/parcel/">Parcel</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Projectos</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/icons">Iconos</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Comunidad</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
-            <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
-            <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
-            <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
-            <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
-          </ul>
-        </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Enlaces</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/">Ejemplos</a></li>
+          <li class="mb-2"><a href="https://themes.getbootstrap.com/">Temas</a></li>
+          <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+        </ul>
       </div>
-    </div>
-  </footer>
-
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://bootstrap-esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Guías</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.1/getting-started/">Guía de inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/starter-template/">Plantilla de
+              inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Projectos</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons">Iconos</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Comunidad</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
+          <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+        </ul>
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-    // window.onload = () => {
-    //   setTimeout(function () {
-    //     const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-    //     myModal.show();
-    //   }, 140000);
+</footer>
 
-    //   var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    //   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    //     return new bootstrap.Tooltip(tooltipTriggerEl);
-    //   });
-    // }
+<div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 opacity-75">
+        <p>
+          De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
+          experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
+        </p>
+        <p>
+          Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
+          años.
+        </p>
+        <p>
+          Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
+          <a href="https://esdocu.com" target="_blank">Esdocu</a>.
+        </p>
+        <p>
+          Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E" target="_blank">software</a> que facilita la tarea de traducir sitios web de
+          documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
+          <strong>siempre actualizadas</strong>.
+        </p>
+        <p>
+          Esta traducción de <strong>Bootstrap</strong> está actualizada
+          (<a href="https://bootstrap-esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a v5.3</a>)
+          y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
+          <strong>Go</strong>.
+          Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
+          los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
+        </p>
+        <p>
+          Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
+          donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
+          anuncios.
+        </p>
+        <p>
+          ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
+        <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  window.onload = () => {
+    setTimeout(function () {
+      const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
+      myModal.show();
+    }, 140000);
 
-  </script>
-  <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
+    var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  }
+
+</script>
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 
-  <script src="/docs/5.1/assets/js/docs.min.js"></script>
-
-
+<script src="/docs/5.1/assets/js/docs.min.js"></script>
 
 
+    
 
+  
 
-</body>
-
-</html>
+</body></html>

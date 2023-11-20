@@ -1,704 +1,521 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Envía notificaciones a tus visitantes con un toast, un mensaje de alerta ligero y fácilmente personalizable.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.91.2">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Envía notificaciones a tus visitantes con un toast, un mensaje de alerta ligero y fácilmente personalizable.">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.91.2">
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.1">
 
-  <meta name="docsearch:language" content="en">
-  <meta name="docsearch:version" content="5.1">
+<title>Toasts · Bootstrap 5 en Español v5.1</title>
 
-  <title>Toasts · Bootstrap 5 en Español v5.1</title>
-
-  <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290"
-    crossorigin="anonymous"></script>
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5376430835440290" crossorigin="anonymous"></script>
 
 
 
-  <!-- Bootstrap core CSS -->
-  <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-  <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
-  <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-  <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-  <meta name="theme-color" content="#7952b3">
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@getbootstrap">
-  <meta name="twitter:creator" content="@getbootstrap">
-  <meta name="twitter:title" content="Toasts">
-  <meta name="twitter:description"
-    content="Envía notificaciones a tus visitantes con un toast, un mensaje de alerta ligero y fácilmente personalizable.">
-  <meta name="twitter:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="Toasts">
+<meta name="twitter:description" content="Envía notificaciones a tus visitantes con un toast, un mensaje de alerta ligero y fácilmente personalizable.">
+<meta name="twitter:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
 
-  <!-- Facebook -->
-  <meta property="og:url" content="https://bootstrap-esdocu.com/docs/5.1/components/toasts/">
-  <meta property="og:title" content="Toasts">
-  <meta property="og:description"
-    content="Envía notificaciones a tus visitantes con un toast, un mensaje de alerta ligero y fácilmente personalizable.">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1000">
-  <meta property="og:image:height" content="500">
+<!-- Facebook -->
+<meta property="og:url" content="https://bootstrap-esdocu.com/docs/5.1/components/toasts/">
+<meta property="og:title" content="Toasts">
+<meta property="og:description" content="Envía notificaciones a tus visitantes con un toast, un mensaje de alerta ligero y fácilmente personalizable.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://bootstrap-esdocu.com/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="500">
 
 
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-DK014C26F7');
-  </script>
+  gtag('config', 'G-DK014C26F7');
+</script>
 
-</head>
-
-<body>
-  <div class="skippy visually-hidden-focusable overflow-hidden">
-    <div class="container-xl">
-      <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
-      <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
-    </div>
+  </head>
+  <body>
+    <div class="skippy visually-hidden-focusable overflow-hidden">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Skip to docs navigation</a>
   </div>
+</div>
 
 
-  <header class="navbar navbar-expand-md navbar-dark bd-navbar">
-    <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
-      <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
-        <svg width="40" height="32" class="d-block my-1" role="img" viewBox="0 0 118 94"
-          xmlns="http://www.w3.org/2000/svg">
-          <title>Bootstrap</title>
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
-            fill="currentColor"></path>
-        </svg>
-      </a>
+    <header class="navbar navbar-expand-md navbar-dark bd-navbar">
+  <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
+    <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap">
+      <svg width="40" height="32" class="d-block my-1" role="img" viewBox="0 0 118 94" xmlns="http://www.w3.org/2000/svg"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+    </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar"
-        aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <svg width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
-          </path>
-        </svg>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <svg width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+</svg>
 
-      </button>
+    </button>
 
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-        <div class="offcanvas-header pb-0">
-          <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
-        </div>
-
-        <div class="offcanvas-body pt-0">
-          <hr class="d-md-none text-white-50">
-          <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Inicio</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2 active" aria-current="true" href="/docs/5.1/getting-started/introduction/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="/docs/5.1/examples/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Ejemplos</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://icons.getbootstrap.com/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank"
-                rel="noopener">Iconos</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://themes.getbootstrap.com/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank"
-                rel="noopener">Temas</a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://blog.getbootstrap.com/"
-                onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank"
-                rel="noopener">Blog</a>
-            </li>
-          </ul>
-
-          <hr class="d-md-none text-white-50">
-
-          <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
-                <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img"
-                  viewBox="0 0 512 499.36" xmlns="http://www.w3.org/2000/svg">
-                  <title>GitHub</title>
-                  <path fill="currentColor" fill-rule="evenodd"
-                    d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
-                  </path>
-                </svg>
-                <small class="d-md-none ms-2">GitHub</small>
-              </a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener">
-                <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img"
-                  viewBox="0 0 512 416.32" xmlns="http://www.w3.org/2000/svg">
-                  <title>Twitter</title>
-                  <path fill="currentColor"
-                    d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92">
-                  </path>
-                </svg>
-                <small class="d-md-none ms-2">Twitter</small>
-              </a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener">
-                <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img"
-                  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                  <title>Slack</title>
-                  <path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"></path>
-                  <path fill="currentColor"
-                    d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z">
-                  </path>
-                </svg>
-                <small class="d-md-none ms-2">Slack</small>
-              </a>
-            </li>
-            <li class="nav-item col-6 col-md-auto">
-              <a class="nav-link p-2" href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">
-                <svg width="36" height="36" fill="currentColor" fill-rule="evenodd"
-                  class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 40 41"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <title>Open Collective</title>
-                  <path fill-opacity=".4"
-                    d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z">
-                  </path>
-                  <path
-                    d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z">
-                  </path>
-                </svg>
-                <small class="d-md-none ms-2">Open Collective</small>
-              </a>
-            </li>
-          </ul>
-
-          <hr class="d-md-none text-white-50">
-
-          <a class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3"
-            href="/docs/5.1/getting-started/download/">Descargar</a>
-        </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+      <div class="offcanvas-header pb-0">
+        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-    </nav>
-  </header>
 
-
-
-  <nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
-    <div class="container-xxl d-flex align-items-md-center">
-      <form class="bd-search position-relative me-auto">
-        <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..."
-          aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
-      </form>
-
-      <div class="dropdown ms-3">
-        <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown"
-          aria-expanded="false" data-bs-display="static">
-          <span class="d-none d-lg-inline">Bootstrap</span> v5.1
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
-          <li><a class="dropdown-item current" aria-current="true" href="/docs/5.1/">Latest (5.1.x)</a></li>
-          <li>
-            <hr class="dropdown-divider">
+      <div class="offcanvas-body pt-0">
+        <hr class="d-md-none text-white-50">
+        <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Inicio</a>
           </li>
-          <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6/">v4.6.x</a></li>
-          <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
-          <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
-          <li>
-            <hr class="dropdown-divider">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2 active" aria-current="true" href="/docs/5.1/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Docs</a>
           </li>
-          <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="/docs/5.1/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Ejemplos</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">Iconos</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Temas</a>
+          </li>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Blog</a>
+          </li>
         </ul>
-      </div>
 
+        <hr class="d-md-none text-white-50">
 
-      <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button"
-        data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false"
-        aria-label="Toggle docs navigation">
-        <svg width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg">
-          <title>Expand</title>
-          <path fill-rule="evenodd"
-            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z">
-          </path>
-        </svg>
-
-        <svg width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16"
-          xmlns="http://www.w3.org/2000/svg">
-          <title>Collapse</title>
-          <path fill-rule="evenodd"
-            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z">
-          </path>
-        </svg>
-
-      </button>
-    </div>
-  </nav>
-
-
-  <div class="container-xxl my-md-4 bd-layout">
-    <aside class="bd-sidebar">
-      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation">
-        <ul class="list-unstyled mb-0 py-3 pt-md-1">
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#getting-started-collapse" aria-expanded="false">
-              Empezando
-            </button>
-
-            <div class="collapse" id="getting-started-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/getting-started/introduction/"
-                    class="d-inline-flex align-items-center rounded">Introducción</a></li>
-                <li><a href="/docs/5.1/getting-started/download/"
-                    class="d-inline-flex align-items-center rounded">Descargar</a></li>
-                <li><a href="/docs/5.1/getting-started/contents/"
-                    class="d-inline-flex align-items-center rounded">Contenido</a></li>
-                <li><a href="/docs/5.1/getting-started/browsers-devices/"
-                    class="d-inline-flex align-items-center rounded">Navegadores &amp; dispositivos</a></li>
-                <li><a href="/docs/5.1/getting-started/javascript/"
-                    class="d-inline-flex align-items-center rounded">JavaScript</a></li>
-                <li><a href="/docs/5.1/getting-started/webpack/"
-                    class="d-inline-flex align-items-center rounded">Webpack</a></li>
-                <li><a href="/docs/5.1/getting-started/parcel/"
-                    class="d-inline-flex align-items-center rounded">Parcel</a></li>
-                <li><a href="/docs/5.1/getting-started/accessibility/"
-                    class="d-inline-flex align-items-center rounded">Accesibilidad</a></li>
-                <li><a href="/docs/5.1/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a>
-                </li>
-                <li><a href="/docs/5.1/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a>
-                </li>
-                <li><a href="/docs/5.1/getting-started/contribute/"
-                    class="d-inline-flex align-items-center rounded">Contribuir</a></li>
-              </ul>
-            </div>
+        <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener">
+              <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 512 499.36" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path></svg>
+              <small class="d-md-none ms-2">GitHub</small>
+            </a>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#customize-collapse" aria-expanded="false">
-              Personalizar
-            </button>
-
-            <div class="collapse" id="customize-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/customize/overview/"
-                    class="d-inline-flex align-items-center rounded">Overview</a></li>
-                <li><a href="/docs/5.1/customize/sass/" class="d-inline-flex align-items-center rounded">Sass</a></li>
-                <li><a href="/docs/5.1/customize/options/" class="d-inline-flex align-items-center rounded">Opciones</a>
-                </li>
-                <li><a href="/docs/5.1/customize/color/" class="d-inline-flex align-items-center rounded">Color</a></li>
-                <li><a href="/docs/5.1/customize/components/"
-                    class="d-inline-flex align-items-center rounded">Componentes</a></li>
-                <li><a href="/docs/5.1/customize/css-variables/"
-                    class="d-inline-flex align-items-center rounded">Variables CSS</a></li>
-                <li><a href="/docs/5.1/customize/optimize/"
-                    class="d-inline-flex align-items-center rounded">Optimizar</a></li>
-              </ul>
-            </div>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener">
+              <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 512 416.32" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"></path></svg>
+              <small class="d-md-none ms-2">Twitter</small>
+            </a>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#layout-collapse" aria-expanded="false">
-              Layout
-            </button>
-
-            <div class="collapse" id="layout-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/layout/breakpoints/"
-                    class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
-                <li><a href="/docs/5.1/layout/containers/"
-                    class="d-inline-flex align-items-center rounded">Contenedores</a></li>
-                <li><a href="/docs/5.1/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
-                <li><a href="/docs/5.1/layout/columns/" class="d-inline-flex align-items-center rounded">Columnas</a>
-                </li>
-                <li><a href="/docs/5.1/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a>
-                </li>
-                <li><a href="/docs/5.1/layout/utilities/"
-                    class="d-inline-flex align-items-center rounded">Utilidades</a></li>
-                <li><a href="/docs/5.1/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a>
-                </li>
-                <li><a href="/docs/5.1/layout/css-grid/" class="d-inline-flex align-items-center rounded">Cuadrícula
-                    CSS</a></li>
-              </ul>
-            </div>
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener">
+              <svg width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"></path><path fill="currentColor" d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z"></path></svg>
+              <small class="d-md-none ms-2">Slack</small>
+            </a>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#content-collapse" aria-expanded="false">
-              Contenido
-            </button>
-
-            <div class="collapse" id="content-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
-                <li><a href="/docs/5.1/content/typography/"
-                    class="d-inline-flex align-items-center rounded">Tipografía</a></li>
-                <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Imágenes</a>
-                </li>
-                <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tablas</a></li>
-                <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#forms-collapse" aria-expanded="false">
-              Formularios
-            </button>
-
-            <div class="collapse" id="forms-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/forms/overview/" class="d-inline-flex align-items-center rounded">Overview</a>
-                </li>
-                <li><a href="/docs/5.1/forms/form-control/" class="d-inline-flex align-items-center rounded">Controles
-                    de formulario</a></li>
-                <li><a href="/docs/5.1/forms/select/" class="d-inline-flex align-items-center rounded">Select</a></li>
-                <li><a href="/docs/5.1/forms/checks-radios/" class="d-inline-flex align-items-center rounded">Checks
-                    &amp; radios</a></li>
-                <li><a href="/docs/5.1/forms/range/" class="d-inline-flex align-items-center rounded">Rango</a></li>
-                <li><a href="/docs/5.1/forms/input-group/" class="d-inline-flex align-items-center rounded">Grupo de
-                    inputs</a></li>
-                <li><a href="/docs/5.1/forms/floating-labels/"
-                    class="d-inline-flex align-items-center rounded">Etiquetas flotantes</a></li>
-                <li><a href="/docs/5.1/forms/layout/" class="d-inline-flex align-items-center rounded">Layout</a></li>
-                <li><a href="/docs/5.1/forms/validation/"
-                    class="d-inline-flex align-items-center rounded">Validación</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse"
-              data-bs-target="#components-collapse" aria-expanded="true" aria-current="true">
-              Componentes
-            </button>
-
-            <div class="collapse show" id="components-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/components/accordion/"
-                    class="d-inline-flex align-items-center rounded">Accordion</a></li>
-                <li><a href="/docs/5.1/components/alerts/" class="d-inline-flex align-items-center rounded">Alerts</a>
-                </li>
-                <li><a href="/docs/5.1/components/badge/" class="d-inline-flex align-items-center rounded">Badge</a>
-                </li>
-                <li><a href="/docs/5.1/components/breadcrumb/"
-                    class="d-inline-flex align-items-center rounded">Breadcrumb</a></li>
-                <li><a href="/docs/5.1/components/buttons/" class="d-inline-flex align-items-center rounded">Buttons</a>
-                </li>
-                <li><a href="/docs/5.1/components/button-group/" class="d-inline-flex align-items-center rounded">Button
-                    group</a></li>
-                <li><a href="/docs/5.1/components/card/" class="d-inline-flex align-items-center rounded">Card</a></li>
-                <li><a href="/docs/5.1/components/carousel/"
-                    class="d-inline-flex align-items-center rounded">Carousel</a></li>
-                <li><a href="/docs/5.1/components/close-button/" class="d-inline-flex align-items-center rounded">Close
-                    button</a></li>
-                <li><a href="/docs/5.1/components/collapse/"
-                    class="d-inline-flex align-items-center rounded">Collapse</a></li>
-                <li><a href="/docs/5.1/components/dropdowns/"
-                    class="d-inline-flex align-items-center rounded">Dropdowns</a></li>
-                <li><a href="/docs/5.1/components/list-group/" class="d-inline-flex align-items-center rounded">List
-                    group</a></li>
-                <li><a href="/docs/5.1/components/modal/" class="d-inline-flex align-items-center rounded">Modal</a>
-                </li>
-                <li><a href="/docs/5.1/components/navs-tabs/" class="d-inline-flex align-items-center rounded">Navs
-                    &amp; tabs</a></li>
-                <li><a href="/docs/5.1/components/navbar/" class="d-inline-flex align-items-center rounded">Navbar</a>
-                </li>
-                <li><a href="/docs/5.1/components/offcanvas/"
-                    class="d-inline-flex align-items-center rounded">Offcanvas</a></li>
-                <li><a href="/docs/5.1/components/pagination/"
-                    class="d-inline-flex align-items-center rounded">Pagination</a></li>
-                <li><a href="/docs/5.1/components/placeholders/"
-                    class="d-inline-flex align-items-center rounded">Placeholders</a></li>
-                <li><a href="/docs/5.1/components/popovers/"
-                    class="d-inline-flex align-items-center rounded">Popovers</a></li>
-                <li><a href="/docs/5.1/components/progress/"
-                    class="d-inline-flex align-items-center rounded">Progress</a></li>
-                <li><a href="/docs/5.1/components/scrollspy/"
-                    class="d-inline-flex align-items-center rounded">Scrollspy</a></li>
-                <li><a href="/docs/5.1/components/spinners/"
-                    class="d-inline-flex align-items-center rounded">Spinners</a></li>
-                <li><a href="/docs/5.1/components/toasts/" class="d-inline-flex align-items-center rounded active"
-                    aria-current="page">Toasts</a></li>
-                <li><a href="/docs/5.1/components/tooltips/"
-                    class="d-inline-flex align-items-center rounded">Tooltips</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#helpers-collapse" aria-expanded="false">
-              Helpers
-            </button>
-
-            <div class="collapse" id="helpers-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a>
-                </li>
-                <li><a href="/docs/5.1/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Enlaces
-                    de colores</a></li>
-                <li><a href="/docs/5.1/helpers/ratio/" class="d-inline-flex align-items-center rounded">Relación de
-                    aspecto</a></li>
-                <li><a href="/docs/5.1/helpers/position/" class="d-inline-flex align-items-center rounded">Posición</a>
-                </li>
-                <li><a href="/docs/5.1/helpers/stacks/" class="d-inline-flex align-items-center rounded">Pilas</a></li>
-                <li><a href="/docs/5.1/helpers/visually-hidden/"
-                    class="d-inline-flex align-items-center rounded">Visualmente oculto</a></li>
-                <li><a href="/docs/5.1/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Enlace
-                    estirado</a></li>
-                <li><a href="/docs/5.1/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Texto
-                    truncado</a></li>
-                <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-inline-flex align-items-center rounded">Regla
-                    vertical</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#utilities-collapse" aria-expanded="false">
-              Utilidades
-            </button>
-
-            <div class="collapse" id="utilities-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
-                <li><a href="/docs/5.1/utilities/background/" class="d-inline-flex align-items-center rounded">Color de
-                    fondo</a></li>
-                <li><a href="/docs/5.1/utilities/borders/" class="d-inline-flex align-items-center rounded">Bordes</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/colors/" class="d-inline-flex align-items-center rounded">Colores</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/flex/" class="d-inline-flex align-items-center rounded">Flex</a></li>
-                <li><a href="/docs/5.1/utilities/float/" class="d-inline-flex align-items-center rounded">Float</a></li>
-                <li><a href="/docs/5.1/utilities/interactions/"
-                    class="d-inline-flex align-items-center rounded">Interacciones</a></li>
-                <li><a href="/docs/5.1/utilities/opacity/" class="d-inline-flex align-items-center rounded">Opacidad</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/overflow/"
-                    class="d-inline-flex align-items-center rounded">Desbordamiento</a></li>
-                <li><a href="/docs/5.1/utilities/position/"
-                    class="d-inline-flex align-items-center rounded">Posición</a></li>
-                <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded">Sombras</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded">Tamaño</a>
-                </li>
-                <li><a href="/docs/5.1/utilities/spacing/"
-                    class="d-inline-flex align-items-center rounded">Espaciado</a></li>
-                <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Texto</a></li>
-                <li><a href="/docs/5.1/utilities/vertical-align/"
-                    class="d-inline-flex align-items-center rounded">Alineación vertical</a></li>
-                <li><a href="/docs/5.1/utilities/visibility/"
-                    class="d-inline-flex align-items-center rounded">Visibilidad</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#extend-collapse" aria-expanded="false">
-              Ampliar
-            </button>
-
-            <div class="collapse" id="extend-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/extend/approach/" class="d-inline-flex align-items-center rounded">Enfoque</a>
-                </li>
-                <li><a href="/docs/5.1/extend/icons/" class="d-inline-flex align-items-center rounded">Iconos</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#about-collapse" aria-expanded="false">
-              Acerca de
-            </button>
-
-            <div class="collapse" id="about-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/about/overview/" class="d-inline-flex align-items-center rounded">Overview</a>
-                </li>
-                <li><a href="/docs/5.1/about/team/" class="d-inline-flex align-items-center rounded">Equipo</a></li>
-                <li><a href="/docs/5.1/about/brand/" class="d-inline-flex align-items-center rounded">Marca</a></li>
-                <li><a href="/docs/5.1/about/license/" class="d-inline-flex align-items-center rounded">Licencia</a>
-                </li>
-                <li><a href="/docs/5.1/about/translations/"
-                    class="d-inline-flex align-items-center rounded">Traducciones</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="my-3 mx-4 border-top"></li>
-          <li>
-            <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
-              Migración
+          <li class="nav-item col-6 col-md-auto">
+            <a class="nav-link p-2" href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">
+              <svg width="36" height="36" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg d-inline-block align-text-top" role="img" viewBox="0 0 40 41" xmlns="http://www.w3.org/2000/svg"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+              <small class="d-md-none ms-2">Open Collective</small>
             </a>
           </li>
         </ul>
-      </nav>
 
-    </aside>
+        <hr class="d-md-none text-white-50">
 
-    <main class="bd-main order-1">
-      <div class="bd-intro ps-lg-4">
-        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="d-md-flex">
-            <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1"
-              href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/components/toasts.md"
-              title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
-          </div>
-          <h1 class="bd-title" id="content">Toasts</h1>
-        </div>
-        <p class="bd-lead mb-5">Envía notificaciones a tus visitantes con un toast, un mensaje de alerta ligero y
-          fácilmente personalizable.</p>
-
-        <a href="https://esdocu.dev/javascript" target="_blank">
-          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
-            style="width: 100%; max-width: 800px; padding: 20px 0">
-        </a>
-
-        <br>
-        <div class="alert alert-success" style="max-width: 800px;" role="alert">
-          🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
-          (Estás en Bootstrap 5.1) <br>
-          😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-        </div>
-
-
-
-
-
-
-
-
-
-
+        <a class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3" href="/docs/5.1/getting-started/download/">Descargar</a>
       </div>
+    </div>
+  </nav>
+</header>
 
 
-      <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
-        <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
-        <nav id="TableOfContents">
-          <ul>
-            <li><a href="#qué-es-toast">¿Qué es toast?</a></li>
-            <li><a href="#descripción-general">Descripción general</a></li>
-            <li><a href="#ejemplos">Ejemplos</a>
-              <ul>
-                <li><a href="#básico">Básico</a></li>
-                <li><a href="#ejemplo-en-vivo">Ejemplo en vivo</a></li>
-                <li><a href="#translúcido">Translúcido</a></li>
-                <li><a href="#apilamiento">Apilamiento</a></li>
-                <li><a href="#contenido-personalizado">Contenido personalizado</a></li>
-                <li><a href="#esquemas-de-color">Esquemas de color</a></li>
-              </ul>
-            </li>
-            <li><a href="#colocación">Colocación</a></li>
-            <li><a href="#accesibilidad">Accesibilidad</a></li>
-            <li><a href="#sass">Sass</a>
-              <ul>
-                <li><a href="#variables">Variables</a></li>
-              </ul>
-            </li>
-            <li><a href="#uso">Uso</a>
-              <ul>
-                <li><a href="#triggers">Triggers</a></li>
-                <li><a href="#opciones">Opciones</a></li>
-                <li><a href="#métodos">Métodos</a>
-                  <ul>
-                    <li><a href="#show">show</a></li>
-                    <li><a href="#hide">hide</a></li>
-                    <li><a href="#dispose">dispose</a></li>
-                    <li><a href="#getinstance">getInstance</a></li>
-                    <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
-                  </ul>
-                </li>
-                <li><a href="#eventos">Eventos</a></li>
-              </ul>
-            </li>
+    
+<nav class="bd-subnavbar py-2" aria-label="Secondary navigation">
+  <div class="container-xxl d-flex align-items-md-center">
+    <form class="bd-search position-relative me-auto">
+      <input type="search" class="form-control" id="search-input" placeholder="Buscar docs..." aria-label="Buscar docs para..." autocomplete="off" data-bd-docs-version="5.1">
+    </form>
+
+    <div class="dropdown ms-3">
+  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+    <span class="d-none d-lg-inline">Bootstrap</span> v5.1
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
+    <li><a class="dropdown-item current" aria-current="true" href="/docs/5.1/">Latest (5.1.x)</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6/">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+  </ul>
+</div>
+
+
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+      <svg width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <title>Expand</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"></path>
+</svg>
+
+      <svg width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <title>Collapse</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"></path>
+</svg>
+
+    </button>
+  </div>
+</nav>
+
+
+<div class="container-xxl my-md-4 bd-layout">
+  <aside class="bd-sidebar">
+    <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+          Empezando
+        </button>
+
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/getting-started/introduction/" class="d-inline-flex align-items-center rounded">Introducción</a></li>
+              <li><a href="/docs/5.1/getting-started/download/" class="d-inline-flex align-items-center rounded">Descargar</a></li>
+              <li><a href="/docs/5.1/getting-started/contents/" class="d-inline-flex align-items-center rounded">Contenido</a></li>
+              <li><a href="/docs/5.1/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">Navegadores &amp; dispositivos</a></li>
+              <li><a href="/docs/5.1/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
+              <li><a href="/docs/5.1/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
+              <li><a href="/docs/5.1/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
+              <li><a href="/docs/5.1/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">Accesibilidad</a></li>
+              <li><a href="/docs/5.1/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
+              <li><a href="/docs/5.1/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a></li>
+              <li><a href="/docs/5.1/getting-started/contribute/" class="d-inline-flex align-items-center rounded">Contribuir</a></li>
           </ul>
-        </nav>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
+          Personalizar
+        </button>
+
+        <div class="collapse" id="customize-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/customize/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/customize/sass/" class="d-inline-flex align-items-center rounded">Sass</a></li>
+              <li><a href="/docs/5.1/customize/options/" class="d-inline-flex align-items-center rounded">Opciones</a></li>
+              <li><a href="/docs/5.1/customize/color/" class="d-inline-flex align-items-center rounded">Color</a></li>
+              <li><a href="/docs/5.1/customize/components/" class="d-inline-flex align-items-center rounded">Componentes</a></li>
+              <li><a href="/docs/5.1/customize/css-variables/" class="d-inline-flex align-items-center rounded">Variables CSS</a></li>
+              <li><a href="/docs/5.1/customize/optimize/" class="d-inline-flex align-items-center rounded">Optimizar</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
+          Layout
+        </button>
+
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
+              <li><a href="/docs/5.1/layout/containers/" class="d-inline-flex align-items-center rounded">Contenedores</a></li>
+              <li><a href="/docs/5.1/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
+              <li><a href="/docs/5.1/layout/columns/" class="d-inline-flex align-items-center rounded">Columnas</a></li>
+              <li><a href="/docs/5.1/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a></li>
+              <li><a href="/docs/5.1/layout/utilities/" class="d-inline-flex align-items-center rounded">Utilidades</a></li>
+              <li><a href="/docs/5.1/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
+              <li><a href="/docs/5.1/layout/css-grid/" class="d-inline-flex align-items-center rounded">Cuadrícula CSS</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
+          Contenido
+        </button>
+
+        <div class="collapse" id="content-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">Tipografía</a></li>
+              <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">Imágenes</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">Tablas</a></li>
+              <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false">
+          Formularios
+        </button>
+
+        <div class="collapse" id="forms-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/forms/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/forms/form-control/" class="d-inline-flex align-items-center rounded">Controles de formulario</a></li>
+              <li><a href="/docs/5.1/forms/select/" class="d-inline-flex align-items-center rounded">Select</a></li>
+              <li><a href="/docs/5.1/forms/checks-radios/" class="d-inline-flex align-items-center rounded">Checks &amp; radios</a></li>
+              <li><a href="/docs/5.1/forms/range/" class="d-inline-flex align-items-center rounded">Rango</a></li>
+              <li><a href="/docs/5.1/forms/input-group/" class="d-inline-flex align-items-center rounded">Grupo de inputs</a></li>
+              <li><a href="/docs/5.1/forms/floating-labels/" class="d-inline-flex align-items-center rounded">Etiquetas flotantes</a></li>
+              <li><a href="/docs/5.1/forms/layout/" class="d-inline-flex align-items-center rounded">Layout</a></li>
+              <li><a href="/docs/5.1/forms/validation/" class="d-inline-flex align-items-center rounded">Validación</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="true" aria-current="true">
+          Componentes
+        </button>
+
+        <div class="collapse show" id="components-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/components/accordion/" class="d-inline-flex align-items-center rounded">Accordion</a></li>
+              <li><a href="/docs/5.1/components/alerts/" class="d-inline-flex align-items-center rounded">Alerts</a></li>
+              <li><a href="/docs/5.1/components/badge/" class="d-inline-flex align-items-center rounded">Badge</a></li>
+              <li><a href="/docs/5.1/components/breadcrumb/" class="d-inline-flex align-items-center rounded">Breadcrumb</a></li>
+              <li><a href="/docs/5.1/components/buttons/" class="d-inline-flex align-items-center rounded">Buttons</a></li>
+              <li><a href="/docs/5.1/components/button-group/" class="d-inline-flex align-items-center rounded">Button group</a></li>
+              <li><a href="/docs/5.1/components/card/" class="d-inline-flex align-items-center rounded">Card</a></li>
+              <li><a href="/docs/5.1/components/carousel/" class="d-inline-flex align-items-center rounded">Carousel</a></li>
+              <li><a href="/docs/5.1/components/close-button/" class="d-inline-flex align-items-center rounded">Close button</a></li>
+              <li><a href="/docs/5.1/components/collapse/" class="d-inline-flex align-items-center rounded">Collapse</a></li>
+              <li><a href="/docs/5.1/components/dropdowns/" class="d-inline-flex align-items-center rounded">Dropdowns</a></li>
+              <li><a href="/docs/5.1/components/list-group/" class="d-inline-flex align-items-center rounded">List group</a></li>
+              <li><a href="/docs/5.1/components/modal/" class="d-inline-flex align-items-center rounded">Modal</a></li>
+              <li><a href="/docs/5.1/components/navs-tabs/" class="d-inline-flex align-items-center rounded">Navs &amp; tabs</a></li>
+              <li><a href="/docs/5.1/components/navbar/" class="d-inline-flex align-items-center rounded">Navbar</a></li>
+              <li><a href="/docs/5.1/components/offcanvas/" class="d-inline-flex align-items-center rounded">Offcanvas</a></li>
+              <li><a href="/docs/5.1/components/pagination/" class="d-inline-flex align-items-center rounded">Pagination</a></li>
+              <li><a href="/docs/5.1/components/placeholders/" class="d-inline-flex align-items-center rounded">Placeholders</a></li>
+              <li><a href="/docs/5.1/components/popovers/" class="d-inline-flex align-items-center rounded">Popovers</a></li>
+              <li><a href="/docs/5.1/components/progress/" class="d-inline-flex align-items-center rounded">Progress</a></li>
+              <li><a href="/docs/5.1/components/scrollspy/" class="d-inline-flex align-items-center rounded">Scrollspy</a></li>
+              <li><a href="/docs/5.1/components/spinners/" class="d-inline-flex align-items-center rounded">Spinners</a></li>
+              <li><a href="/docs/5.1/components/toasts/" class="d-inline-flex align-items-center rounded active" aria-current="page">Toasts</a></li>
+              <li><a href="/docs/5.1/components/tooltips/" class="d-inline-flex align-items-center rounded">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
+          Helpers
+        </button>
+
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
+              <li><a href="/docs/5.1/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Enlaces de colores</a></li>
+              <li><a href="/docs/5.1/helpers/ratio/" class="d-inline-flex align-items-center rounded">Relación de aspecto</a></li>
+              <li><a href="/docs/5.1/helpers/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
+              <li><a href="/docs/5.1/helpers/stacks/" class="d-inline-flex align-items-center rounded">Pilas</a></li>
+              <li><a href="/docs/5.1/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded">Visualmente oculto</a></li>
+              <li><a href="/docs/5.1/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Enlace estirado</a></li>
+              <li><a href="/docs/5.1/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Texto truncado</a></li>
+              <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-inline-flex align-items-center rounded">Regla vertical</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
+          Utilidades
+        </button>
+
+        <div class="collapse" id="utilities-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.1/utilities/background/" class="d-inline-flex align-items-center rounded">Color de fondo</a></li>
+              <li><a href="/docs/5.1/utilities/borders/" class="d-inline-flex align-items-center rounded">Bordes</a></li>
+              <li><a href="/docs/5.1/utilities/colors/" class="d-inline-flex align-items-center rounded">Colores</a></li>
+              <li><a href="/docs/5.1/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
+              <li><a href="/docs/5.1/utilities/flex/" class="d-inline-flex align-items-center rounded">Flex</a></li>
+              <li><a href="/docs/5.1/utilities/float/" class="d-inline-flex align-items-center rounded">Float</a></li>
+              <li><a href="/docs/5.1/utilities/interactions/" class="d-inline-flex align-items-center rounded">Interacciones</a></li>
+              <li><a href="/docs/5.1/utilities/opacity/" class="d-inline-flex align-items-center rounded">Opacidad</a></li>
+              <li><a href="/docs/5.1/utilities/overflow/" class="d-inline-flex align-items-center rounded">Desbordamiento</a></li>
+              <li><a href="/docs/5.1/utilities/position/" class="d-inline-flex align-items-center rounded">Posición</a></li>
+              <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded">Sombras</a></li>
+              <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded">Tamaño</a></li>
+              <li><a href="/docs/5.1/utilities/spacing/" class="d-inline-flex align-items-center rounded">Espaciado</a></li>
+              <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded">Texto</a></li>
+              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Alineación vertical</a></li>
+              <li><a href="/docs/5.1/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibilidad</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
+          Ampliar
+        </button>
+
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/extend/approach/" class="d-inline-flex align-items-center rounded">Enfoque</a></li>
+              <li><a href="/docs/5.1/extend/icons/" class="d-inline-flex align-items-center rounded">Iconos</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+          Acerca de
+        </button>
+
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/about/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.1/about/team/" class="d-inline-flex align-items-center rounded">Equipo</a></li>
+              <li><a href="/docs/5.1/about/brand/" class="d-inline-flex align-items-center rounded">Marca</a></li>
+              <li><a href="/docs/5.1/about/license/" class="d-inline-flex align-items-center rounded">Licencia</a></li>
+              <li><a href="/docs/5.1/about/translations/" class="d-inline-flex align-items-center rounded">Traducciones</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#hosting-collapse" aria-expanded="false">
+          Web Hosting
+        </button>
+
+        <div class="collapse" id="hosting-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/hosting/mejor-web-hosting/" class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="my-3 mx-4 border-top"></li>
+      <li>
+        <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
+          Migración
+        </a>
+      </li>
+  </ul>
+</nav>
+
+  </aside>
+
+  <main class="bd-main order-1">
+    <div class="bd-intro ps-lg-4">
+      <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+        <div class="d-md-flex">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0 ms-md-1" href="https://github.com/esdocu/getbootstrap/blob/main/site/content/docs/5.1/components/toasts.md" title="Ver y editar este archivo en GitHub (ES)" target="_blank" rel="noopener">En GitHub</a>
+        </div>
+        <h1 class="bd-title" id="content">Toasts</h1>
+      </div>
+      <p class="bd-lead mb-5">Envía notificaciones a tus visitantes con un toast, un mensaje de alerta ligero y fácilmente personalizable.</p>
+      
+        <a href="https://esdocu.dev/javascript" target="_blank">
+    <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg" style="width: 100%; max-width: 800px">
+</a>
+<br><br>
+<div class="alert alert-success" style="max-width: 800px;" role="alert">
+    🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
+    (Estás en Bootstrap 5.1) <br>
+    😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
+</div>
+
+
+
+
+
+
+
+
+
+      
       </div>
 
+    
+    <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+      <strong class="d-block h6 my-2 pb-2 border-bottom">En esta página</strong>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#qué-es-toast">¿Qué es toast?</a></li>
+    <li><a href="#descripción-general">Descripción general</a></li>
+    <li><a href="#ejemplos">Ejemplos</a>
+      <ul>
+        <li><a href="#básico">Básico</a></li>
+        <li><a href="#ejemplo-en-vivo">Ejemplo en vivo</a></li>
+        <li><a href="#translúcido">Translúcido</a></li>
+        <li><a href="#apilamiento">Apilamiento</a></li>
+        <li><a href="#contenido-personalizado">Contenido personalizado</a></li>
+        <li><a href="#esquemas-de-color">Esquemas de color</a></li>
+      </ul>
+    </li>
+    <li><a href="#colocación">Colocación</a></li>
+    <li><a href="#accesibilidad">Accesibilidad</a></li>
+    <li><a href="#sass">Sass</a>
+      <ul>
+        <li><a href="#variables">Variables</a></li>
+      </ul>
+    </li>
+    <li><a href="#uso">Uso</a>
+      <ul>
+        <li><a href="#triggers">Triggers</a></li>
+        <li><a href="#opciones">Opciones</a></li>
+        <li><a href="#métodos">Métodos</a>
+          <ul>
+            <li><a href="#show">show</a></li>
+            <li><a href="#hide">hide</a></li>
+            <li><a href="#dispose">dispose</a></li>
+            <li><a href="#getinstance">getInstance</a></li>
+            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
+          </ul>
+        </li>
+        <li><a href="#eventos">Eventos</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
 
-      <div class="bd-content ps-lg-4">
+    <div class="bd-content ps-lg-4">
+      
 
+      <h2 id="qué-es-toast">¿Qué es toast?</h2>
+<p>Los toasts son notificaciones livianas diseñadas para imitar las notificaciones automáticas que se han popularizado en los sistemas operativos móviles y de escritorio. Están construidos con flexbox, por lo que son fáciles de alinear y colocar.</p>
+<h2 id="descripción-general">Descripción general</h2>
+<p>Cosas que debes saber al usar el complemento de toast:</p>
+<ul>
+<li>Los toasts son opcionales por motivos de rendimiento, por lo que <strong>debes inicializarlos tú mismo</strong>.</li>
+<li>Los toasts se ocultarán automáticamente si no especificas <code>autohide: false</code>.</li>
+</ul>
+<div class="bd-callout bd-callout-info">
+El efecto de animación de este componente depende de la media query <code>prefers-reduced-motion</code>. Consulta la <a href="/docs/5.1/getting-started/accessibility/#reduced-motion">sección de movimiento reducido de nuestra documentación de accesibilidad</a>.
+</div>
 
-        <h2 id="qué-es-toast">¿Qué es toast?</h2>
-        <p>Los toasts son notificaciones livianas diseñadas para imitar las notificaciones automáticas que se han
-          popularizado en los sistemas operativos móviles y de escritorio. Están construidos con flexbox, por lo que son
-          fáciles de alinear y colocar.</p>
-        <h2 id="descripción-general">Descripción general</h2>
-        <p>Cosas que debes saber al usar el complemento de toast:</p>
-        <ul>
-          <li>Los toasts son opcionales por motivos de rendimiento, por lo que <strong>debes inicializarlos tú
-              mismo</strong>.</li>
-          <li>Los toasts se ocultarán automáticamente si no especificas <code>autohide: false</code>.</li>
-        </ul>
-        <div class="bd-callout bd-callout-info">
-          El efecto de animación de este componente depende de la media query <code>prefers-reduced-motion</code>.
-          Consulta la <a href="/docs/5.1/getting-started/accessibility/#reduced-motion">sección de movimiento reducido
-            de nuestra documentación de accesibilidad</a>.
-        </div>
+<h2 id="ejemplos">Ejemplos</h2>
+<h3 id="básico">Básico</h3>
+<p>Para fomentar los toasts extensibles y predecibles, recomendamos un encabezado y un cuerpo. Los encabezados de toasts usan <code>display: flex</code>, lo que permite una fácil alineación del contenido gracias a nuestras utilidades margin y flexbox.</p>
+<p>Los toasts son tan flexibles como necesites y requieren muy poco marcado. Como mínimo, requerimos que un solo elemento contenga tu contenido “toasted” y recomendamos enfáticamente un botón para descartar (cerrar).</p>
+<div class="bd-example bg-light">
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-        <h2 id="ejemplos">Ejemplos</h2>
-        <h3 id="básico">Básico</h3>
-        <p>Para fomentar los toasts extensibles y predecibles, recomendamos un encabezado y un cuerpo. Los encabezados
-          de toasts usan <code>display: flex</code>, lo que permite una fácil alineación del contenido gracias a
-          nuestras utilidades margin y flexbox.</p>
-        <p>Los toasts son tan flexibles como necesites y requieren muy poco marcado. Como mínimo, requerimos que un solo
-          elemento contenga tu contenido “toasted” y recomendamos enfáticamente un botón para descartar (cerrar).</p>
-        <div class="bd-example bg-light">
-          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-              <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false"
-                preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100%" height="100%" fill="#007aff"></rect>
-              </svg>
-
-              <strong class="me-auto">Bootstrap</strong>
-              <small>Hace 11 minutos</small>
-              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-              ¡Hola Mundo! Este es un mensaje de toast.
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+    <strong class="me-auto">Bootstrap</strong>
+    <small>Hace 11 minutos</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ¡Hola Mundo! Este es un mensaje de toast.
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-header"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"..."</span> <span class="na">class</span><span class="o">=</span><span class="s">"rounded me-2"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">strong</span> <span class="na">class</span><span class="o">=</span><span class="s">"me-auto"</span><span class="p">&gt;</span>Bootstrap<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
@@ -708,40 +525,31 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-body"</span><span class="p">&gt;</span>
     ¡Hola Mundo! Este es un mensaje de toast.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <div class="bd-callout bd-callout-warning">
-          Anteriormente, nuestros scripts agregaban dinámicamente la clase <code>.hide</code> para ocultar completamente
-          un toast (con <code>display:none</code>, en lugar de solo con <code>opacity:0</code>). Esto ya no es
-          necesario. Sin embargo, para compatibilidad con versiones anteriores, nuestro script continuará alternando la
-          clase (aunque no haya una necesidad práctica de hacerlo) hasta la próxima versión major.
-        </div>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-callout bd-callout-warning">
+Anteriormente, nuestros scripts agregaban dinámicamente la clase <code>.hide</code> para ocultar completamente un toast (con <code>display:none</code>, en lugar de solo con <code>opacity:0</code>). Esto ya no es necesario. Sin embargo, para compatibilidad con versiones anteriores, nuestro script continuará alternando la clase (aunque no haya una necesidad práctica de hacerlo) hasta la próxima versión major.
+</div>
 
-        <h3 id="ejemplo-en-vivo">Ejemplo en vivo</h3>
-        <p>Haz clic en el botón a continuación para mostrar un toast (ubicado con nuestras utilidades en la esquina
-          inferior derecha) que se ha ocultado de forma predeterminada.</p>
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-              <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false"
-                preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100%" height="100%" fill="#007aff"></rect>
-              </svg>
+<h3 id="ejemplo-en-vivo">Ejemplo en vivo</h3>
+<p>Haz clic en el botón a continuación para mostrar un toast (ubicado con nuestras utilidades en la esquina inferior derecha) que se ha ocultado de forma predeterminada.</p>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-              <strong class="me-auto">Bootstrap</strong>
-              <small>Hace 11 minutos</small>
-              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-              ¡Hola Mundo! Este es un mensaje de toast.
-            </div>
-          </div>
-        </div>
-        <div class="bd-example">
-          <button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar el toast en vivo</button>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary"</span> <span class="na">id</span><span class="o">=</span><span class="s">"liveToastBtn"</span><span class="p">&gt;</span>Mostrar el toast en vivo<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <strong class="me-auto">Bootstrap</strong>
+      <small>Hace 11 minutos</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      ¡Hola Mundo! Este es un mensaje de toast.
+    </div>
+  </div>
+</div>
+<div class="bd-example">
+  <button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar el toast en vivo</button>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary"</span> <span class="na">id</span><span class="o">=</span><span class="s">"liveToastBtn"</span><span class="p">&gt;</span>Mostrar el toast en vivo<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"position-fixed bottom-0 end-0 p-3"</span> <span class="na">style</span><span class="o">=</span><span class="s">"z-index: 11"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"liveToast"</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
@@ -756,15 +564,8 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre>
-        </div>
-        <p>Usamos el siguiente <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para activar nuestra demostración de
-          toast en vivo:</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">toastTrigger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'liveToastBtn'</span><span class="p">)</span>
+</code></pre></div><p>Usamos el siguiente <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu." title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para activar nuestra demostración de toast en vivo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">toastTrigger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'liveToastBtn'</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">toastLiveExample</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'liveToast'</span><span class="p">)</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">toastTrigger</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">toastTrigger</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
@@ -773,29 +574,22 @@
     <span class="nx">toast</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
   <span class="p">})</span>
 <span class="p">}</span>
-</code></pre>
-        </div>
-        <h3 id="translúcido">Translúcido</h3>
-        <p>Los toasts son ligeramente translúcidos para mezclarse con lo que hay debajo de ellos.</p>
-        <div class="bd-example bg-dark">
-          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-              <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false"
-                preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100%" height="100%" fill="#007aff"></rect>
-              </svg>
+</code></pre></div><h3 id="translúcido">Translúcido</h3>
+<p>Los toasts son ligeramente translúcidos para mezclarse con lo que hay debajo de ellos.</p>
+<div class="bd-example bg-dark">
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-              <strong class="me-auto">Bootstrap</strong>
-              <small class="text-muted">Hace 11 minutos</small>
-              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-              ¡Hola Mundo! Este es un mensaje de toast.
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+    <strong class="me-auto">Bootstrap</strong>
+    <small class="text-muted">Hace 11 minutos</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ¡Hola Mundo! Este es un mensaje de toast.
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-header"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"..."</span> <span class="na">class</span><span class="o">=</span><span class="s">"rounded me-2"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">strong</span> <span class="na">class</span><span class="o">=</span><span class="s">"me-auto"</span><span class="p">&gt;</span>Bootstrap<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
@@ -805,48 +599,38 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-body"</span><span class="p">&gt;</span>
     ¡Hola Mundo! Este es un mensaje de toast.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <h3 id="apilamiento">Apilamiento</h3>
-        <p>Puedes apilar toasts envolviéndolas en un recipiente para toasts, lo que agregará algo de espacio
-          verticalmente.</p>
-        <div class="bd-example bg-light">
-          <div class="toast-container">
-            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-              <div class="toast-header">
-                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false"
-                  preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100%" height="100%" fill="#007aff"></rect>
-                </svg>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="apilamiento">Apilamiento</h3>
+<p>Puedes apilar toasts envolviéndolas en un recipiente para toasts, lo que agregará algo de espacio verticalmente.</p>
+<div class="bd-example bg-light">
+<div class="toast-container">
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-                <strong class="me-auto">Bootstrap</strong>
-                <small class="text-muted">justo ahora</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-              </div>
-              <div class="toast-body">
-                ¿Ves? Justo como esto
-              </div>
-            </div>
+      <strong class="me-auto">Bootstrap</strong>
+      <small class="text-muted">justo ahora</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      ¿Ves? Justo como esto
+    </div>
+  </div>
 
-            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-              <div class="toast-header">
-                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false"
-                  preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100%" height="100%" fill="#007aff"></rect>
-                </svg>
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-                <strong class="me-auto">Bootstrap</strong>
-                <small class="text-muted">2 seconds ago</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-              </div>
-              <div class="toast-body">
-                Atención, los toasts se apilarán automáticamente
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-container"</span><span class="p">&gt;</span>
+      <strong class="me-auto">Bootstrap</strong>
+      <small class="text-muted">2 seconds ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Atención, los toasts se apilarán automáticamente
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-container"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-header"</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"..."</span> <span class="na">class</span><span class="o">=</span><span class="s">"rounded me-2"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
@@ -870,48 +654,38 @@
       Atención, los toasts se apilarán automáticamente
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <h3 id="contenido-personalizado">Contenido personalizado</h3>
-        <p>Personaliza tus toasts eliminando subcomponentes, ajustándolos con <a
-            href="/docs/5.1/utilities/api/">utilidades</a>, o agregando tu propio marcado. Aquí hemos creado un toast
-          más simple eliminando el <code>.toast-header</code> predeterminado, agregando un ícono de ocultación
-          personalizado de <a href="https://icons.getbootstrap.com/">Iconos de Bootstrap</a>, y usando algunas <a
-            href="/docs/5.1/utilities/flex/">utilidades de flexbox</a> para ajustar el diseño.</p>
-        <div class="bd-example bg-light">
-          <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="d-flex">
-              <div class="toast-body">
-                ¡Hola Mundo! Este es un mensaje de toast.
-              </div>
-              <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast align-items-center"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="contenido-personalizado">Contenido personalizado</h3>
+<p>Personaliza tus toasts eliminando subcomponentes, ajustándolos con <a href="/docs/5.1/utilities/api/">utilidades</a>, o agregando tu propio marcado. Aquí hemos creado un toast más simple eliminando el <code>.toast-header</code> predeterminado, agregando un ícono de ocultación personalizado de <a href="https://icons.getbootstrap.com/">Iconos de Bootstrap</a>, y usando algunas <a href="/docs/5.1/utilities/flex/">utilidades de flexbox</a> para ajustar el diseño.</p>
+<div class="bd-example bg-light">
+<div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+    ¡Hola Mundo! Este es un mensaje de toast.
+   </div>
+    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast align-items-center"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-flex"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-body"</span><span class="p">&gt;</span>
     ¡Hola Mundo! Este es un mensaje de toast.
    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-close me-2 m-auto"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Close"</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <p>Alternativamente, también puedes agregar controles y componentes adicionales a los toasts.</p>
-        <div class="bd-example bg-light">
-          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-body">
-              ¡Hola Mundo! Este es un mensaje de toast.
-              <div class="mt-2 pt-2 border-top">
-                <button type="button" class="btn btn-primary btn-sm">Tomar acción</button>
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Alternativamente, también puedes agregar controles y componentes adicionales a los toasts.</p>
+<div class="bd-example bg-light">
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-body">
+    ¡Hola Mundo! Este es un mensaje de toast.
+    <div class="mt-2 pt-2 border-top">
+      <button type="button" class="btn btn-primary btn-sm">Tomar acción</button>
+      <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Cerrar</button>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-body"</span><span class="p">&gt;</span>
     ¡Hola Mundo! Este es un mensaje de toast.
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"mt-2 pt-2 border-top"</span><span class="p">&gt;</span>
@@ -919,85 +693,67 @@
       <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-secondary btn-sm"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"toast"</span><span class="p">&gt;</span>Cerrar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</p></div>
 
-        <h3 id="esquemas-de-color">Esquemas de color</h3>
-        <p>Sobre la base del ejemplo anterior, puedes crear diferentes esquemas de colores con nuestras utilidades de <a
-            href="/docs/5.1/utilities/colors/">color</a> y <a href="/docs/5.1/utilities/background/">background</a>.
-          Aquí hemos agregado <code>.bg-primary</code> y <code>.text-white</code> a <code>.toast</code>, y luego
-          agregamos <code>.btn-close-white</code> a nuestro botón de cierre. Para un borde nítido, eliminamos el borde
-          predeterminado con <code>.border-0</code>.</p>
-        <div class="bd-example bg-light">
-          <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive"
-            aria-atomic="true">
-            <div class="d-flex">
-              <div class="toast-body">
-                ¡Hola Mundo! Este es un mensaje de toast.
-              </div>
-              <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                aria-label="Close"></button>
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast align-items-center text-white bg-primary border-0"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+<h3 id="esquemas-de-color">Esquemas de color</h3>
+<p>Sobre la base del ejemplo anterior, puedes crear diferentes esquemas de colores con nuestras utilidades de <a href="/docs/5.1/utilities/colors/">color</a> y <a href="/docs/5.1/utilities/background/">background</a>. Aquí hemos agregado <code>.bg-primary</code> y <code>.text-white</code> a <code>.toast</code>, y luego agregamos <code>.btn-close-white</code> a nuestro botón de cierre. Para un borde nítido, eliminamos el borde predeterminado con <code>.border-0</code>.</p>
+<div class="bd-example bg-light">
+<div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      ¡Hola Mundo! Este es un mensaje de toast.
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast align-items-center text-white bg-primary border-0"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-flex"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-body"</span><span class="p">&gt;</span>
       ¡Hola Mundo! Este es un mensaje de toast.
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-close btn-close-white me-2 m-auto"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Close"</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <h2 id="colocación">Colocación</h2>
-        <p>Coloca toast con CSS personalizado a medida que los necesites. La parte superior derecha se usa a menudo para
-          notificaciones, al igual que la parte superior central. Si solo vas a mostrar un toast a la vez, coloca los
-          estilos de posicionamiento justo en <code>.toast</code>.</p>
-        <div class="bd-example">
-          <form>
-            <div class="mb-3">
-              <label for="selectToastPlacement">Colocación del toast</label>
-              <select class="form-select mt-2" id="selectToastPlacement">
-                <option value="" selected="">Selecciona una posición...</option>
-                <option value="top-0 start-0">Superior izquierda</option>
-                <option value="top-0 start-50 translate-middle-x">Superior central</option>
-                <option value="top-0 end-0">Superior derecha</option>
-                <option value="top-50 start-0 translate-middle-y">Medio izquierda</option>
-                <option value="top-50 start-50 translate-middle">Medio central</option>
-                <option value="top-50 end-0 translate-middle-y">Medio derecha</option>
-                <option value="bottom-0 start-0">Inferior izquierda</option>
-                <option value="bottom-0 start-50 translate-middle-x">Inferior central</option>
-                <option value="bottom-0 end-0">Inferior derecha</option>
-              </select>
-            </div>
-          </form>
-          <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
-            <div class="toast-container position-absolute p-3" id="toastPlacement">
-              <div class="toast">
-                <div class="toast-header">
-                  <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true"
-                    focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100%" height="100%" fill="#007aff"></rect>
-                  </svg>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="colocación">Colocación</h2>
+<p>Coloca toast con CSS personalizado a medida que los necesites. La parte superior derecha se usa a menudo para notificaciones, al igual que la parte superior central. Si solo vas a mostrar un toast a la vez, coloca los estilos de posicionamiento justo en <code>.toast</code>.</p>
+<div class="bd-example">
+<form>
+  <div class="mb-3">
+    <label for="selectToastPlacement">Colocación del toast</label>
+    <select class="form-select mt-2" id="selectToastPlacement">
+      <option value="" selected="">Selecciona una posición...</option>
+      <option value="top-0 start-0">Superior izquierda</option>
+      <option value="top-0 start-50 translate-middle-x">Superior central</option>
+      <option value="top-0 end-0">Superior derecha</option>
+      <option value="top-50 start-0 translate-middle-y">Medio izquierda</option>
+      <option value="top-50 start-50 translate-middle">Medio central</option>
+      <option value="top-50 end-0 translate-middle-y">Medio derecha</option>
+      <option value="bottom-0 start-0">Inferior izquierda</option>
+      <option value="bottom-0 start-50 translate-middle-x">Inferior central</option>
+      <option value="bottom-0 end-0">Inferior derecha</option>
+    </select>
+  </div>
+</form>
+<div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
+  <div class="toast-container position-absolute p-3" id="toastPlacement">
+    <div class="toast">
+      <div class="toast-header">
+        <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-                  <strong class="me-auto">Bootstrap</strong>
-                  <small>Hace 11 minutos</small>
-                </div>
-                <div class="toast-body">
-                  ¡Hola Mundo! Este es un mensaje de toast.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+        <strong class="me-auto">Bootstrap</strong>
+        <small>Hace 11 minutos</small>
+      </div>
+      <div class="toast-body">
+        ¡Hola Mundo! Este es un mensaje de toast.
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-3"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"selectToastPlacement"</span><span class="p">&gt;</span>Colocación del toast<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-select mt-2"</span> <span class="na">id</span><span class="o">=</span><span class="s">"selectToastPlacement"</span><span class="p">&gt;</span>
@@ -1027,55 +783,45 @@
       <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <p>Para los sistemas que generan más notificaciones, considera usar un elemento envolvente para que puedan
-          apilarse fácilmente.</p>
-        <div class="bd-example bg-dark bd-example-toasts p-0">
-          <div aria-live="polite" aria-atomic="true" class="position-relative">
-            <!-- Posicionarlo: -->
-            <!-- - `.toast-container` para espaciado entre toasts -->
-            <!-- - `.position-absolute`, `top-0` & `end-0` para posicionar el toasts en la esquina superior izquierda -->
-            <!-- - `.p-3` para evitar que los toasts se peguen al borde del container  -->
-            <div class="toast-container position-absolute top-0 end-0 p-3">
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Para los sistemas que generan más notificaciones, considera usar un elemento envolvente para que puedan apilarse fácilmente.</p>
+<div class="bd-example bg-dark bd-example-toasts p-0">
+<div aria-live="polite" aria-atomic="true" class="position-relative">
+  <!-- Posicionarlo: -->
+  <!-- - `.toast-container` para espaciado entre toasts -->
+  <!-- - `.position-absolute`, `top-0` & `end-0` para posicionar el toasts en la esquina superior izquierda -->
+  <!-- - `.p-3` para evitar que los toasts se peguen al borde del container  -->
+  <div class="toast-container position-absolute top-0 end-0 p-3">
 
-              <!-- Then put toasts within -->
-              <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                  <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true"
-                    focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100%" height="100%" fill="#007aff"></rect>
-                  </svg>
+    <!-- Then put toasts within -->
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-                  <strong class="me-auto">Bootstrap</strong>
-                  <small class="text-muted">justo ahora</small>
-                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                  ¿Ves? Justo como esto
-                </div>
-              </div>
+        <strong class="me-auto">Bootstrap</strong>
+        <small class="text-muted">justo ahora</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        ¿Ves? Justo como esto
+      </div>
+    </div>
 
-              <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                  <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true"
-                    focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100%" height="100%" fill="#007aff"></rect>
-                  </svg>
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-                  <strong class="me-auto">Bootstrap</strong>
-                  <small class="text-muted">2 seconds ago</small>
-                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body">
-                  Atención, los toasts se apilarán automáticamente
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"polite"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span> <span class="na">class</span><span class="o">=</span><span class="s">"position-relative"</span><span class="p">&gt;</span>
+        <strong class="me-auto">Bootstrap</strong>
+        <small class="text-muted">2 seconds ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Atención, los toasts se apilarán automáticamente
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"polite"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span> <span class="na">class</span><span class="o">=</span><span class="s">"position-relative"</span><span class="p">&gt;</span>
   <span class="c">&lt;!-- Posicionarlo: --&gt;</span>
   <span class="c">&lt;!-- - `.toast-container` para espaciado entre toasts --&gt;</span>
   <span class="c">&lt;!-- - `.position-absolute`, `top-0` &amp; `end-0` para posicionar el toasts en la esquina superior izquierda --&gt;</span>
@@ -1107,33 +853,27 @@
       <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <p>También pueden utilizarse las utilidades de flexbox para alinear los toasts horizontal y/o verticalmente.</p>
-        <div class="bd-example bg-dark bd-example-toasts d-flex">
-          <!-- Flexbox container para el alineamiento de toasts -->
-          <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>También pueden utilizarse las utilidades de flexbox para alinear los toasts horizontal y/o verticalmente.</p>
+<div class="bd-example bg-dark bd-example-toasts d-flex">
+<!-- Flexbox container para el alineamiento de toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
-            <!-- Then put toasts within -->
-            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-              <div class="toast-header">
-                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false"
-                  preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="100%" height="100%" fill="#007aff"></rect>
-                </svg>
+  <!-- Then put toasts within -->
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-                <strong class="me-auto">Bootstrap</strong>
-                <small>Hace 11 minutos</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-              </div>
-              <div class="toast-body">
-                ¡Hola Mundo! Este es un mensaje de toast.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Flexbox container para el alineamiento de toasts --&gt;</span>
+      <strong class="me-auto">Bootstrap</strong>
+      <small>Hace 11 minutos</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      ¡Hola Mundo! Este es un mensaje de toast.
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Flexbox container para el alineamiento de toasts --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"polite"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-flex justify-content-center align-items-center w-100"</span><span class="p">&gt;</span>
 
   <span class="c">&lt;!-- Then put toasts within --&gt;</span>
@@ -1148,55 +888,30 @@
       ¡Hola Mundo! Este es un mensaje de toast.
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <h2 id="accesibilidad">Accesibilidad</h2>
-        <p>Los toasts están destinados a ser pequeñas interrupciones para tus visitantes o usuarios, por lo que para
-          ayudar a aquellos con lectores de pantalla y tecnologías de asistencia similares, debes envolver tus toasts en
-          una <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">región
-            <code>aria-live</code></a>. Los lectores de pantalla anuncian automáticamente los cambios en las regiones
-          activas (como inyectar/actualizar un componente del sistema) sin necesidad de mover el foco del usuario o
-          interrumpirlo de otra manera. Además, incluye <code>aria-atomic="true"</code> para asegurarte de que todo los
-          toasts se anuncien siempre como una sola unidad (atómica), en lugar de simplemente anunciar lo que se cambió
-          (lo que podría ocasionar problemas si solo actualizas parte del contenido del toasts, o si muestras el mismo
-          contenido de toast en un momento posterior). Si la información necesaria es importante para el proceso, p.e.
-          para obtener una lista de errores en un formulario, utiliza el <a
-            href="/docs/5.1/components/alerts/">componente de alerta</a> en lugar de toasts.</p>
-        <p>Ten en cuenta que la región en vivo debe estar presente en el marcado <em>antes</em> de que se genere o
-          actualice el toasts. Si generas dinámicamente ambos al mismo tiempo y los insertas en la página, generalmente
-          no serán anunciados por tecnologías de asistencia.</p>
-        <p>También necesitas adaptar el nivel de <code>role</code> y <code>aria-live</code> dependiendo del contenido.
-          Si es un mensaje importante como un error, usa <code>role="alert" aria-live="assertive"</code>, de lo
-          contrario, use los atributos <code>role="status" aria-live="polite"</code>.</p>
-        <p>A medida que cambias el contenido que estás mostrando, asegúrate de actualizar el <a href="#options">tiempo
-            de espera de <code>delay</code></a> para que los usuarios tengan tiempo suficiente para leer el toasts.</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"polite"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span> <span class="na">data-bs-delay</span><span class="o">=</span><span class="s">"10000"</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="accesibilidad">Accesibilidad</h2>
+<p>Los toasts están destinados a ser pequeñas interrupciones para tus visitantes o usuarios, por lo que para ayudar a aquellos con lectores de pantalla y tecnologías de asistencia similares, debes envolver tus toasts en una <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">región <code>aria-live</code></a>. Los lectores de pantalla anuncian automáticamente los cambios en las regiones activas (como inyectar/actualizar un componente del sistema) sin necesidad de mover el foco del usuario o interrumpirlo de otra manera. Además, incluye <code>aria-atomic="true"</code> para asegurarte de que todo los toasts se anuncien siempre como una sola unidad (atómica), en lugar de simplemente anunciar lo que se cambió (lo que podría ocasionar problemas si solo actualizas parte del contenido del toasts, o si muestras el mismo contenido de toast en un momento posterior). Si la información necesaria es importante para el proceso, p.e. para obtener una lista de errores en un formulario, utiliza el <a href="/docs/5.1/components/alerts/">componente de alerta</a> en lugar de toasts.</p>
+<p>Ten en cuenta que la región en vivo debe estar presente en el marcado <em>antes</em> de que se genere o actualice el toasts. Si generas dinámicamente ambos al mismo tiempo y los insertas en la página, generalmente no serán anunciados por tecnologías de asistencia.</p>
+<p>También necesitas adaptar el nivel de <code>role</code> y <code>aria-live</code> dependiendo del contenido. Si es un mensaje importante como un error, usa <code>role="alert" aria-live="assertive"</code>, de lo contrario, use los atributos <code>role="status" aria-live="polite"</code>.</p>
+<p>A medida que cambias el contenido que estás mostrando, asegúrate de actualizar el <a href="#options">tiempo de espera de <code>delay</code></a> para que los usuarios tengan tiempo suficiente para leer el toasts.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"polite"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span> <span class="na">data-bs-delay</span><span class="o">=</span><span class="s">"10000"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre>
-        </div>
-        <p>Al usar <code>autohide: false</code>, debes agregar un botón de cierre para permitir que los usuarios
-          descarten el toast.</p>
-        <div class="bd-example bg-light">
-          <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
-            <div class="toast-header">
-              <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false"
-                preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100%" height="100%" fill="#007aff"></rect>
-              </svg>
+</code></pre></div><p>Al usar <code>autohide: false</code>, debes agregar un botón de cierre para permitir que los usuarios descarten el toast.</p>
+<div class="bd-example bg-light">
+<div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
+  <div class="toast-header">
+    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
 
-              <strong class="me-auto">Bootstrap</strong>
-              <small>Hace 11 minutos</small>
-              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body">
-              ¡Hola Mundo! Este es un mensaje de toast.
-            </div>
-          </div>
-        </div>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">data-bs-autohide</span><span class="o">=</span><span class="s">"false"</span><span class="p">&gt;</span>
+    <strong class="me-auto">Bootstrap</strong>
+    <small>Hace 11 minutos</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">
+    ¡Hola Mundo! Este es un mensaje de toast.
+  </div>
+</div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">"alert"</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">"assertive"</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">"true"</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">data-bs-autohide</span><span class="o">=</span><span class="s">"false"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-header"</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"..."</span> <span class="na">class</span><span class="o">=</span><span class="s">"rounded me-2"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">strong</span> <span class="na">class</span><span class="o">=</span><span class="s">"me-auto"</span><span class="p">&gt;</span>Bootstrap<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
@@ -1206,25 +921,16 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"toast-body"</span><span class="p">&gt;</span>
     ¡Hola Mundo! Este es un mensaje de toast.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
-        </div>
-        <p>Si bien técnicamente es posible agregar controles enfocables/accionables (como botones o enlaces adicionales)
-          en tu toast, debes evitar hacer esto para ocultar automáticamente los toasts. Incluso si das al toast un largo
-          <a href="#options">tiempo de espera <code>delay</code></a>, los usuarios de tecnología de asistencia y teclado
-          pueden tener dificultades para llegar al toast a tiempo para tomar medidas (ya que los toasts no reciben
-          atención cuando se muestran) . Si es absolutamente necesario tener controles adicionales, te recomendamos usar
-          un toast con <code>autohide: false</code>.
-        </p>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Si bien técnicamente es posible agregar controles enfocables/accionables (como botones o enlaces adicionales) en tu toast, debes evitar hacer esto para ocultar automáticamente los toasts. Incluso si das al toast un largo <a href="#options">tiempo de espera <code>delay</code></a>, los usuarios de tecnología de asistencia y teclado pueden tener dificultades para llegar al toast a tiempo para tomar medidas (ya que los toasts no reciben atención cuando se muestran) . Si es absolutamente necesario tener controles adicionales, te recomendamos usar un toast con <code>autohide: false</code>.</p>
+<div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</p></div>
 
-        <h2 id="sass">Sass</h2>
-        <h3 id="variables">Variables</h3>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$toast-max-width</span><span class="o">:</span>                   <span class="mi">350</span><span class="kt">px</span><span class="p">;</span>
+<h2 id="sass">Sass</h2>
+<h3 id="variables">Variables</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$toast-max-width</span><span class="o">:</span>                   <span class="mi">350</span><span class="kt">px</span><span class="p">;</span>
 <span class="nv">$toast-padding-x</span><span class="o">:</span>                   <span class="mf">.75</span><span class="kt">rem</span><span class="p">;</span>
 <span class="nv">$toast-padding-y</span><span class="o">:</span>                   <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
 <span class="nv">$toast-font-size</span><span class="o">:</span>                   <span class="mf">.875</span><span class="kt">rem</span><span class="p">;</span>
@@ -1239,328 +945,265 @@
 <span class="nv">$toast-header-color</span><span class="o">:</span>                <span class="nv">$gray-600</span><span class="p">;</span>
 <span class="nv">$toast-header-background-color</span><span class="o">:</span>     <span class="nf">rgba</span><span class="p">(</span><span class="nv">$white</span><span class="o">,</span> <span class="mf">.85</span><span class="p">);</span>
 <span class="nv">$toast-header-border-color</span><span class="o">:</span>         <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.05</span><span class="p">);</span>
-</code></pre>
-        </div>
-        <h2 id="uso">Uso</h2>
-        <p>Inicializa los toasts a través de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>:</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">toastElList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.toast'</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="uso">Uso</h2>
+<p>Inicializa los toasts a través de <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu." title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">toastElList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.toast'</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">toastList</span> <span class="o">=</span> <span class="nx">toastElList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">toastEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">(</span><span class="nx">toastEl</span><span class="p">,</span> <span class="nx">option</span><span class="p">)</span>
 <span class="p">})</span>
-</code></pre>
-        </div>
-        <h3 id="triggers">Triggers</h3>
-        <p>El descarte (cierre) se puede lograr con el atributo <code>data</code> en un botón <strong>dentro de
-            toast</strong> como se muestra a continuación:</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Close"</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</code></pre>
-        </div>
-        <p>o en un botón <strong>fuera de toast</strong> usando <code>data-bs-target</code> como se muestra a
-          continuación:</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">"#my-toast"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Close"</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</code></pre>
-        </div>
-        <h3 id="opciones">Opciones</h3>
-        <p>Las opciones se pueden pasar a través de atributos de datos o <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para los atributos de datos, agrega el
-          nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-animation=""</code>.</p>
-        <table class="table">
-          <thead>
-            <tr>
-              <th style="width: 100px;">Nombre</th>
-              <th style="width: 100px;">Tipo</th>
-              <th style="width: 50px;">Por defecto</th>
-              <th>Descripción</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>animation</code></td>
-              <td>boolean</td>
-              <td><code>true</code></td>
-              <td>Aplicar una transición de fundido CSS al toast</td>
-            </tr>
-            <tr>
-              <td><code>autohide</code></td>
-              <td>boolean</td>
-              <td><code>true</code></td>
-              <td>Ocultar automáticamente el toast</td>
-            </tr>
-            <tr>
-              <td><code>delay</code></td>
-              <td>number</td>
-              <td>
-                <code>5000</code>
-              </td>
-              <td>Retraso en ocultar el toast (ms)</td>
-            </tr>
-          </tbody>
-        </table>
-        <h3 id="métodos">Métodos</h3>
-        <div class="bd-callout bd-callout-danger">
-          <h4 id="transiciones-y-métodos-asíncronos">Transiciones y métodos asíncronos</h4>
-          <p>Todos los métodos de la API son <strong>asincrónicos</strong> e inician una <strong>transition</strong>.
-            Regresan al lugar donde se realizó la llamada tan pronto como se inicia la transición, pero <strong>antes de
-              que finalice</strong>. Además, se ignorará una llamada de método en un <strong>componente en medio de una
-              transición</strong>.</p>
-          <p><a href="/docs/5.1/getting-started/javascript/#asynchronous-functions-and-transitions">Consulte nuestra
-              documentación de JavaScript para obtener más información</a>.</p>
+</code></pre></div><h3 id="triggers">Triggers</h3>
+<p>El descarte (cierre) se puede lograr con el atributo <code>data</code> en un botón <strong>dentro de toast</strong> como se muestra a continuación:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Close"</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div><p>o en un botón <strong>fuera de toast</strong> usando <code>data-bs-target</code> como se muestra a continuación:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn-close"</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">"toast"</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">"#my-toast"</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"Close"</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="opciones">Opciones</h3>
+<p>Las opciones se pueden pasar a través de atributos de datos o <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu." title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para los atributos de datos, agrega el nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-animation=""</code>.</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th style="width: 100px;">Nombre</th>
+      <th style="width: 100px;">Tipo</th>
+      <th style="width: 50px;">Por defecto</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>animation</code></td>
+      <td>boolean</td>
+      <td><code>true</code></td>
+      <td>Aplicar una transición de fundido CSS al toast</td>
+    </tr>
+    <tr>
+      <td><code>autohide</code></td>
+      <td>boolean</td>
+      <td><code>true</code></td>
+      <td>Ocultar automáticamente el toast</td>
+    </tr>
+    <tr>
+      <td><code>delay</code></td>
+      <td>number</td>
+      <td>
+        <code>5000</code>
+      </td>
+      <td>Retraso en ocultar el toast (ms)</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="métodos">Métodos</h3>
+<div class="bd-callout bd-callout-danger">
+<h4 id="transiciones-y-métodos-asíncronos">Transiciones y métodos asíncronos</h4>
+<p>Todos los métodos de la API son <strong>asincrónicos</strong> e inician una <strong>transition</strong>. Regresan al lugar donde se realizó la llamada tan pronto como se inicia la transición, pero <strong>antes de que finalice</strong>. Además, se ignorará una llamada de método en un <strong>componente en medio de una transición</strong>.</p>
+<p><a href="/docs/5.1/getting-started/javascript/#asynchronous-functions-and-transitions">Consulte nuestra documentación de JavaScript para obtener más información</a>.</p>
 
-        </div>
+</div>
 
-        <h4 id="show">show</h4>
-        <p>Revela el toast de un elemento. <strong>Regresa al punto de la llamada antes de que se muestre realmente el
-            toast</strong> (es decir, antes de que ocurra el evento <code>shown.bs.toast</code>).
-          Debes llamar manualmente a este método, caso contrario tu toast no se mostrará.</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
-</code></pre>
-        </div>
-        <h4 id="hide">hide</h4>
-        <p>Oculta el toast de un elemento. <strong>Regresa al punto de la llamada antes de que se haya ocultado
-            realmente el toast</strong> (es decir, antes de que ocurra el evento <code>hidden.bs.toast</code>). Tienes
-          que llamar manualmente a este método si asignaste <code>autohide</code> en <code>false</code>.</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
-</code></pre>
-        </div>
-        <h4 id="dispose">dispose</h4>
-        <p>Oculta el toast de un elemento. Tu toast permanecerá en el DOM pero ya no se mostrará.</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
-</code></pre>
-        </div>
-        <h4 id="getinstance">getInstance</h4>
-        <p>Método <em>estático</em> que te permite obtener la instancia de toast asociada con un elemento DOM</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myToastEl'</span><span class="p">)</span>
+<h4 id="show">show</h4>
+<p>Revela el toast de un elemento. <strong>Regresa al punto de la llamada antes de que se muestre realmente el toast</strong> (es decir, antes de que ocurra el evento <code>shown.bs.toast</code>).
+Debes llamar manualmente a este método, caso contrario tu toast no se mostrará.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</code></pre></div><h4 id="hide">hide</h4>
+<p>Oculta el toast de un elemento. <strong>Regresa al punto de la llamada antes de que se haya ocultado realmente el toast</strong> (es decir, antes de que ocurra el evento <code>hidden.bs.toast</code>). Tienes que llamar manualmente a este método si asignaste <code>autohide</code> en <code>false</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
+</code></pre></div><h4 id="dispose">dispose</h4>
+<p>Oculta el toast de un elemento. Tu toast permanecerá en el DOM pero ya no se mostrará.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
+</code></pre></div><h4 id="getinstance">getInstance</h4>
+<p>Método <em>estático</em> que te permite obtener la instancia de toast asociada con un elemento DOM</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myToastEl'</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">myToastEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia de toast Bootstrap
-</span></code></pre>
-        </div>
-        <h4 id="getorcreateinstance">getOrCreateInstance</h4>
-        <p>Método <em>estático</em> que te permite obtener la instancia de toast asociada con un elemento DOM, o crear
-          uno nuevo en caso de que no se haya inicializado</p>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myToastEl'</span><span class="p">)</span>
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<p>Método <em>estático</em> que te permite obtener la instancia de toast asociada con un elemento DOM, o crear uno nuevo en caso de que no se haya inicializado</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myToastEl'</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">myToastEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia de toast Bootstrap
-</span></code></pre>
-        </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+</span></code></pre></div><div class="bd-callout bd-callout-info">
+<h5 id="tal-vez-te-interese">Tal vez te interese</h5>
+<p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
+</p></div>
 
-        <h3 id="eventos">Eventos</h3>
-        <table class="table">
-          <thead>
-            <tr>
-              <th style="width: 150px;">Tipo de evento</th>
-              <th>Descripción</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>show.bs.toast</code></td>
-              <td>Este evento se activa inmediatamente cuando se llama al método de instancia <code>show</code>.</td>
-            </tr>
-            <tr>
-              <td><code>shown.bs.toast</code></td>
-              <td>Este evento se activa cuando el usuario ya puede ver el toast.</td>
-            </tr>
-            <tr>
-              <td><code>hide.bs.toast</code></td>
-              <td>Este evento se activa inmediatamente cuando se llama al método de instancia <code>hide</code>.</td>
-            </tr>
-            <tr>
-              <td><code>hidden.bs.toast</code></td>
-              <td>Este evento se activa cuando el toast ha terminado de ocultarse al usuario.</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myToast'</span><span class="p">)</span>
+<h3 id="eventos">Eventos</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th style="width: 150px;">Tipo de evento</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>show.bs.toast</code></td>
+      <td>Este evento se activa inmediatamente cuando se llama al método de instancia <code>show</code>.</td>
+    </tr>
+    <tr>
+      <td><code>shown.bs.toast</code></td>
+      <td>Este evento se activa cuando el usuario ya puede ver el toast.</td>
+    </tr>
+    <tr>
+      <td><code>hide.bs.toast</code></td>
+      <td>Este evento se activa inmediatamente cuando se llama al método de instancia <code>hide</code>.</td>
+    </tr>
+    <tr>
+      <td><code>hidden.bs.toast</code></td>
+      <td>Este evento se activa cuando el toast ha terminado de ocultarse al usuario.</td>
+    </tr>
+  </tbody>
+</table>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myToast'</span><span class="p">)</span>
 <span class="nx">myToastEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'hidden.bs.toast'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// hacer algo...
 </span><span class="c1"></span><span class="p">})</span>
-</code></pre>
-        </div>
-      </div>
-      <div class="pt-3">
-
+</code></pre></div>
+    </div>
+    <div class="pt-3">
+      
         <a href="https://esdocu.dev/javascript" target="_blank">
-          <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg"
-            style="width: 100%; max-width: 800px; padding: 20px 0">
+    <img src="/esdocu/img/ad-esdocu-dev-javascript-course.svg" style="width: 100%; max-width: 800px">
+</a>
+<br><br>
+<div class="alert alert-success" style="max-width: 800px;" role="alert">
+    🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
+    (Estás en Bootstrap 5.1) <br>
+    😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
+</div>
+      
+    </div>
+  </main>
+</div>
+
+
+    <footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          <svg width="40" height="32" class="d-block me-2" role="img" viewBox="0 0 118 94" xmlns="http://www.w3.org/2000/svg"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+          <span class="fs-5">Bootstrap</span>
         </a>
-        <br>
-        <div class="alert alert-success" style="max-width: 800px;" role="alert">
-          🎉 <strong>¡La traducción de <a href="/docs/5.3/">Bootstrap 5.3</a> ya se encuentra disponible!</strong>
-          (Estás en Bootstrap 5.1) <br>
-          😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-        </div>
-
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2">Diseñado y construido con todo el amor del mundo por el <a href="/docs/5.1/about/team/">equipo de Bootstrap</a> con la ayuda de <a href="https://github.com/twbs/bootstrap/graphs/contributors">nuestros colaboradores</a>.</li>
+          <li class="mb-2">Código con licencia <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          <li class="mb-2">Actualmente v5.1.3.</li>
+        </ul>
       </div>
-    </main>
-  </div>
-
-
-  <footer class="bd-footer py-5 mt-5 bg-light">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-3 mb-3">
-          <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
-            aria-label="Bootstrap">
-            <svg width="40" height="32" class="d-block me-2" role="img" viewBox="0 0 118 94"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>Bootstrap</title>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
-                fill="currentColor"></path>
-            </svg>
-            <span class="fs-5">Bootstrap</span>
-          </a>
-          <ul class="list-unstyled small text-muted">
-            <li class="mb-2">Diseñado y construido con todo el amor del mundo por el <a
-                href="/docs/5.1/about/team/">equipo de Bootstrap</a> con la ayuda de <a
-                href="https://github.com/twbs/bootstrap/graphs/contributors">nuestros colaboradores</a>.</li>
-            <li class="mb-2">Código con licencia <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
-                target="_blank" rel="license noopener">MIT</a>, docs <a
-                href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY
-                3.0</a>.</li>
-            <li class="mb-2">Actualmente v5.1.3.</li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-          <h5>Enlaces</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/">Inicio</a></li>
-            <li class="mb-2"><a href="/docs/5.1/">Docs</a></li>
-            <li class="mb-2"><a href="/docs/5.1/examples/">Ejemplos</a></li>
-            <li class="mb-2"><a href="https://themes.getbootstrap.com/">Temas</a></li>
-            <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Guías</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/docs/5.1/getting-started/">Guía de inicio</a></li>
-            <li class="mb-2"><a href="/docs/5.1/examples/starter-template/">Plantilla de
-                inicio</a></li>
-            <li class="mb-2"><a href="/docs/5.1/getting-started/webpack/">Webpack</a></li>
-            <li class="mb-2"><a href="/docs/5.1/getting-started/parcel/">Parcel</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Projectos</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/icons">Iconos</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-lg-2 mb-3">
-          <h5>Comunidad</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
-            <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
-            <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
-            <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
-            <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
-            <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
-          </ul>
-        </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>Enlaces</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">Inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/">Docs</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/">Ejemplos</a></li>
+          <li class="mb-2"><a href="https://themes.getbootstrap.com/">Temas</a></li>
+          <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li>
+        </ul>
       </div>
-    </div>
-  </footer>
-
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://bootstrap-esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Guías</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.1/getting-started/">Guía de inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/starter-template/">Plantilla de
+              inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Projectos</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons">Iconos</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>Comunidad</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
+          <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+        </ul>
       </div>
     </div>
   </div>
-  <script type="text/javascript">
-    // window.onload = () => {
-    //   setTimeout(function () {
-    //     const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-    //     myModal.show();
-    //   }, 140000);
+</footer>
 
-    //   var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    //   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    //     return new bootstrap.Tooltip(tooltipTriggerEl);
-    //   });
-    // }
+<div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 opacity-75">
+        <p>
+          De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
+          experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
+        </p>
+        <p>
+          Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
+          años.
+        </p>
+        <p>
+          Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
+          <a href="https://esdocu.com" target="_blank">Esdocu</a>.
+        </p>
+        <p>
+          Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E" target="_blank">software</a> que facilita la tarea de traducir sitios web de
+          documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
+          <strong>siempre actualizadas</strong>.
+        </p>
+        <p>
+          Esta traducción de <strong>Bootstrap</strong> está actualizada
+          (<a href="https://bootstrap-esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a v5.3</a>)
+          y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
+          <strong>Go</strong>.
+          Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
+          los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
+        </p>
+        <p>
+          Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
+          donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
+          anuncios.
+        </p>
+        <p>
+          ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
+        <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  window.onload = () => {
+    setTimeout(function () {
+      const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
+      myModal.show();
+    }, 140000);
 
-  </script>
-  <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
+    var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  }
+
+</script>
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 
-  <script src="/docs/5.1/assets/js/docs.min.js"></script>
-
-
+<script src="/docs/5.1/assets/js/docs.min.js"></script>
 
 
+    
 
+  
 
-</body>
-
-</html>
+</body></html>
