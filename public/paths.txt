@@ -1,0 +1,111 @@
+/docs/5.3/getting-started/introduction/ https://esdocu.net/bootstrap/5.3/getting-started/introduction/
+/docs/5.3/getting-started/download/ https://esdocu.net/bootstrap/5.3/getting-started/download/
+/docs/5.3/getting-started/contents/ https://esdocu.net/bootstrap/5.3/getting-started/contents/
+/docs/5.3/getting-started/browsers-devices/ https://esdocu.net/bootstrap/5.3/getting-started/browsers-devices/
+/docs/5.3/getting-started/javascript/ https://esdocu.net/bootstrap/5.3/getting-started/javascript/
+/docs/5.3/getting-started/webpack/ https://esdocu.net/bootstrap/5.3/getting-started/webpack/
+/docs/5.3/getting-started/parcel/ https://esdocu.net/bootstrap/5.3/getting-started/parcel/
+/docs/5.3/getting-started/vite/ https://esdocu.net/bootstrap/5.3/getting-started/vite/
+/docs/5.3/getting-started/accessibility/ https://esdocu.net/bootstrap/5.3/getting-started/accessibility/
+/docs/5.3/getting-started/rfs/ https://esdocu.net/bootstrap/5.3/getting-started/rfs/
+/docs/5.3/getting-started/rtl/ https://esdocu.net/bootstrap/5.3/getting-started/rtl/
+/docs/5.3/getting-started/contribute/ https://esdocu.net/bootstrap/5.3/getting-started/contribute/
+
+/docs/5.3/customize/overview/ https://esdocu.net/bootstrap/5.3/customize/overview/
+/docs/5.3/customize/sass/ https://esdocu.net/bootstrap/5.3/customize/sass/
+/docs/5.3/customize/options/ https://esdocu.net/bootstrap/5.3/customize/options/
+/docs/5.3/customize/color/ https://esdocu.net/bootstrap/5.3/customize/color/
+/docs/5.3/customize/color-modes/ https://esdocu.net/bootstrap/5.3/customize/color-modes/
+/docs/5.3/customize/components/ https://esdocu.net/bootstrap/5.3/customize/components/
+/docs/5.3/customize/css-variables/ https://esdocu.net/bootstrap/5.3/customize/css-variables/
+/docs/5.3/customize/optimize/ https://esdocu.net/bootstrap/5.3/customize/optimize/
+
+/docs/5.3/layout/breakpoints/ https://esdocu.net/bootstrap/5.3/layout/breakpoints/
+/docs/5.3/layout/containers/ https://esdocu.net/bootstrap/5.3/layout/containers/
+/docs/5.3/layout/grid/ https://esdocu.net/bootstrap/5.3/layout/grid/
+/docs/5.3/layout/columns/ https://esdocu.net/bootstrap/5.3/layout/columns/
+/docs/5.3/layout/gutters/ https://esdocu.net/bootstrap/5.3/layout/gutters/
+/docs/5.3/layout/utilities/ https://esdocu.net/bootstrap/5.3/layout/utilities/
+/docs/5.3/layout/z-index/ https://esdocu.net/bootstrap/5.3/layout/z-index/
+/docs/5.3/layout/css-grid/ https://esdocu.net/bootstrap/5.3/layout/css-grid/
+
+/docs/5.3/content/reboot/ https://esdocu.net/bootstrap/5.3/content/reboot/
+/docs/5.3/content/typography/ https://esdocu.net/bootstrap/5.3/content/typography/
+/docs/5.3/content/images/ https://esdocu.net/bootstrap/5.3/content/images/
+/docs/5.3/content/tables/ https://esdocu.net/bootstrap/5.3/content/tables/
+/docs/5.3/content/figures/ https://esdocu.net/bootstrap/5.3/content/figures/
+
+/docs/5.3/forms/overview/ https://esdocu.net/bootstrap/5.3/forms/overview/
+/docs/5.3/forms/form-control/ https://esdocu.net/bootstrap/5.3/forms/form-control/
+/docs/5.3/forms/select/ https://esdocu.net/bootstrap/5.3/forms/select/
+/docs/5.3/forms/checks-radios/ https://esdocu.net/bootstrap/5.3/forms/checks-radios/
+/docs/5.3/forms/range/ https://esdocu.net/bootstrap/5.3/forms/range/
+/docs/5.3/forms/input-group/ https://esdocu.net/bootstrap/5.3/forms/input-group/
+/docs/5.3/forms/floating-labels/ https://esdocu.net/bootstrap/5.3/forms/floating-labels/
+/docs/5.3/forms/layout/ https://esdocu.net/bootstrap/5.3/forms/layout/
+/docs/5.3/forms/validation/ https://esdocu.net/bootstrap/5.3/forms/validation/
+
+/docs/5.3/components/accordion/ https://esdocu.net/bootstrap/5.3/components/accordion/
+/docs/5.3/components/alerts/ https://esdocu.net/bootstrap/5.3/components/alerts/
+/docs/5.3/components/badge/ https://esdocu.net/bootstrap/5.3/components/badge/
+/docs/5.3/components/breadcrumb/ https://esdocu.net/bootstrap/5.3/components/breadcrumb/
+/docs/5.3/components/buttons/ https://esdocu.net/bootstrap/5.3/components/buttons/
+/docs/5.3/components/button-group/ https://esdocu.net/bootstrap/5.3/components/button-group/
+/docs/5.3/components/card/ https://esdocu.net/bootstrap/5.3/components/card/
+/docs/5.3/components/carousel/ https://esdocu.net/bootstrap/5.3/components/carousel/
+/docs/5.3/components/close-button/ https://esdocu.net/bootstrap/5.3/components/close-button/
+/docs/5.3/components/collapse/ https://esdocu.net/bootstrap/5.3/components/collapse/
+/docs/5.3/components/dropdowns/ https://esdocu.net/bootstrap/5.3/components/dropdowns/
+/docs/5.3/components/list-group/ https://esdocu.net/bootstrap/5.3/components/list-group/
+/docs/5.3/components/modal/ https://esdocu.net/bootstrap/5.3/components/modal/
+/docs/5.3/components/navbar/ https://esdocu.net/bootstrap/5.3/components/navbar/
+/docs/5.3/components/navs-tabs/ https://esdocu.net/bootstrap/5.3/components/navs-tabs/
+/docs/5.3/components/offcanvas/ https://esdocu.net/bootstrap/5.3/components/offcanvas/
+/docs/5.3/components/pagination/ https://esdocu.net/bootstrap/5.3/components/pagination/
+/docs/5.3/components/placeholders/ https://esdocu.net/bootstrap/5.3/components/placeholders/
+/docs/5.3/components/popovers/ https://esdocu.net/bootstrap/5.3/components/popovers/
+/docs/5.3/components/progress/ https://esdocu.net/bootstrap/5.3/components/progress/
+/docs/5.3/components/scrollspy/ https://esdocu.net/bootstrap/5.3/components/scrollspy/
+/docs/5.3/components/spinners/ https://esdocu.net/bootstrap/5.3/components/spinners/
+/docs/5.3/components/toasts/ https://esdocu.net/bootstrap/5.3/components/toasts/
+/docs/5.3/components/tooltips/ /docs/5.3/components/tooltips/
+
+/docs/5.3/helpers/clearfix/ /docs/5.3/helpers/clearfix/
+/docs/5.3/helpers/color-background/ /docs/5.3/helpers/color-background/
+/docs/5.3/helpers/colored-links/ /docs/5.3/helpers/colored-links/
+/docs/5.3/helpers/focus-ring/ /docs/5.3/helpers/focus-ring/
+/docs/5.3/helpers/icon-link/ /docs/5.3/helpers/icon-link/
+/docs/5.3/helpers/position/ /docs/5.3/helpers/position/
+/docs/5.3/helpers/ratio/ /docs/5.3/helpers/ratio/
+/docs/5.3/helpers/stacks/ /docs/5.3/helpers/stacks/
+/docs/5.3/helpers/stretched-link/ /docs/5.3/helpers/stretched-link/
+/docs/5.3/helpers/text-truncation/ /docs/5.3/helpers/text-truncation/
+/docs/5.3/helpers/vertical-rule/ /docs/5.3/helpers/vertical-rule/
+/docs/5.3/helpers/visually-hidden/ /docs/5.3/helpers/visually-hidden/
+
+/docs/5.3/utilities/api/ /docs/5.3/utilities/api/
+/docs/5.3/utilities/background/ /docs/5.3/utilities/background/
+/docs/5.3/utilities/borders/ /docs/5.3/utilities/borders/
+/docs/5.3/utilities/colors/ /docs/5.3/utilities/colors/
+/docs/5.3/utilities/display/ /docs/5.3/utilities/display/
+/docs/5.3/utilities/flex/ /docs/5.3/utilities/flex/
+/docs/5.3/utilities/float/ /docs/5.3/utilities/float/
+/docs/5.3/utilities/interactions/ /docs/5.3/utilities/interactions/
+/docs/5.3/utilities/link/ /docs/5.3/utilities/link/
+/docs/5.3/utilities/object-fit/ /docs/5.3/utilities/object-fit/
+/docs/5.3/utilities/opacity/ 
+/docs/5.3/utilities/overflow/ 
+/docs/5.3/utilities/position/ 
+/docs/5.3/utilities/shadows/ 
+/docs/5.3/utilities/sizing/ 
+/docs/5.3/utilities/spacing/ 
+/docs/5.3/utilities/text/ 
+/docs/5.3/utilities/vertical-align/ 
+/docs/5.3/utilities/visibility/ 
+/docs/5.3/utilities/z-index/ 
+
+/docs/5.3/extend/approach/ 
+/docs/5.3/extend/icons/ 
+
+/docs/5.3/about/overview/ 
+
