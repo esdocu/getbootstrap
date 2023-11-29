@@ -1,3 +1,10 @@
+/ https://esdocu.net/bootstrap/5.3/getting-started 301
+/docs https://esdocu.net/bootstrap/5.3/getting-started 301
+/docs/5.3 https://esdocu.net/bootstrap/5.3/getting-started 301
+/docs/5.3/getting-started https://esdocu.net/bootstrap/5.3/getting-started 301
+/docs/5.1 https://esdocu.net/bootstrap/5.3/getting-started 301
+/docs/5.1/getting-started https://esdocu.net/bootstrap/5.3/getting-started 301
+
 /docs/5.3/getting-started/* https://esdocu.net/bootstrap/5.3/getting-started/:splat 301
 /docs/5.3/customize/* https://esdocu.net/bootstrap/5.3/customize/:splat 301
 /docs/5.3/layout/* https://esdocu.net/bootstrap/5.3/layout/:splat 301
