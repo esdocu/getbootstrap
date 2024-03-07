@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://getbootstrap.esdocu.com/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.esdocu.com/docs/versions/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.esdocu.com/docs/5.1/getting-started/accessibility/</loc>
   </url>
   <url>
@@ -23,9 +29,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.esdocu.com/docs/5.1/getting-started/best-practices/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.esdocu.com/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.esdocu.com/docs/5.1/utilities/borders/</loc>
@@ -379,9 +382,6 @@
     <loc>https://getbootstrap.esdocu.com/docs/5.1/customize/css-variables/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.esdocu.com/docs/versions/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.esdocu.com/docs/5.1/utilities/visibility/</loc>
   </url>
   <url>
@@ -446,9 +446,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.esdocu.com/docs/5.3/examples/blog/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.esdocu.com/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.esdocu.com/docs/5.3/getting-started/parcel/</loc>
@@ -824,9 +821,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.esdocu.com/docs/5.3/forms/validation/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.esdocu.com/docs/versions/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.esdocu.com/docs/5.3/utilities/vertical-align/</loc>
