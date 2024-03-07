@@ -363,8 +363,7 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/utilities/spacing" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/5.1/utilities/spacing">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/utilities/spacing" rel="nofollow"
@@ -385,8 +384,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -853,10 +852,12 @@
         <p>Las utilidades de espaciado que se aplican a todos los puntos de interrupción, desde <code>xs</code> hasta
           <code>xxl</code>, no tienen abreviaturas de punto de interrupción. Esto se debe a que esas clases se aplican
           desde <code>min-width: 0</code> en adelante y, por lo tanto, no están vinculadas a una media query. Los puntos
-          de interrupción restantes, sin embargo, incluyen una abreviatura de punto de interrupción.</p>
+          de interrupción restantes, sin embargo, incluyen una abreviatura de punto de interrupción.
+        </p>
         <p>Las clases se nombran usando el formato <code>{property}{sides}-{size}</code> para <code>xs</code> y
           <code>{property}{sides}-{breakpoint}-{size}</code> para <code>sm</code>, <code>md</code>, <code>lg</code>,
-          <code>xl</code> y <code>xxl</code>.</p>
+          <code>xl</code> y <code>xxl</code>.
+        </p>
         <p>Donde <em>property</em> es una de:</p>
         <ul>
           <li><code>m</code> - para clases que establecen <code>margin</code></li>
@@ -880,15 +881,20 @@
           <li><code>0</code> - para clases que eliminan el <code>margin</code> o el <code>padding</code> configurándolo
             en <code>0</code></li>
           <li><code>1</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en
-            <code>$spacer * .25</code></li>
+            <code>$spacer * .25</code>
+          </li>
           <li><code>2</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en
-            <code>$spacer * .5</code></li>
+            <code>$spacer * .5</code>
+          </li>
           <li><code>3</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en
-            <code>$spacer</code></li>
+            <code>$spacer</code>
+          </li>
           <li><code>4</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en
-            <code>$spacer * 1.5</code></li>
+            <code>$spacer * 1.5</code>
+          </li>
           <li><code>5</code> - (por defecto) para clases que establecen el <code>margin</code> o <code>padding</code> en
-            <code>$spacer * 3</code></li>
+            <code>$spacer * 3</code>
+          </li>
           <li><code>auto</code> - para clases que establecen el <code>margin</code> en auto</li>
         </ul>
         <p>(Puedes agregar más tamaños agregando entradas a la variable de mapa Sass <code>$spacers</code>).</p>
@@ -918,7 +924,8 @@
             aria-label="Link to this section: Horizontal centering"></a></h3>
         <p>Además, Bootstrap también incluye una clase <code>.mx-auto</code> para centrar horizontalmente contenido a
           nivel de bloque de ancho fijo, es decir, contenido que tiene <code>display: block</code> y un conjunto de
-          <code>width</code>, estableciendo los márgenes horizontales en <code>auto</code>.</p>
+          <code>width</code>, estableciendo los márgenes horizontales en <code>auto</code>.
+        </p>
         <div class="bd-example">
           <div class="mx-auto p-2"
             style="width: 200px; background-color: rgba(var(--bd-violet-rgb),.15); border: rgba(var(--bd-violet-rgb),.3) solid 1px;">
@@ -938,7 +945,8 @@
           habilitar en Sass configurando <code>$enable-negative-margins: true</code>.</p>
         <p>La sintaxis es casi la misma que la de las utilidades de margen positivo predeterminadas, pero con la adición
           de <code>n</code> antes del tamaño solicitado. Aquí hay una clase de ejemplo que es lo opuesto a
-          <code>.mt-1</code>:</p>
+          <code>.mt-1</code>:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.mt-n1</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">margin-top</span><span class="o">:</span> <span class="o">-</span><span class="mi">0</span><span class="mf">.25</span><span class="kt">rem</span> <span class="k">!important</span><span class="p">;</span>
@@ -950,7 +958,8 @@
           <code>gap</code> en el elemento padre. Esto puede ahorrarte la necesidad de agregar utilidades de margen a
           elementos secundarios individuales de una cuadrícula o contenedor flexible. Las utilidades Gap son responsive
           de forma predeterminada y se generan a través de nuestra API de utilidades, basada en el mapa
-          <code>$spacers</code> Sass.</p>
+          <code>$spacers</code> Sass.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0 bd-example-cssgrid">
             <div class="grid gap-3">

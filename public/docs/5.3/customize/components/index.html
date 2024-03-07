@@ -363,8 +363,8 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/customize/components" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item"
+                    href="https://getbootstrap.esdocu.com/docs/5.1/customize/components">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/customize/components" rel="nofollow"
@@ -385,8 +385,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -826,12 +826,14 @@
         <p>Los componentes de Bootstrap están construidos en gran medida con una nomenclatura de modificador de base.
           Agrupamos tantas propiedades compartidas como sea posible en una clase base, como <code>.btn</code>, y luego
           agrupamos estilos individuales para cada variante en clases modificadoras, como <code>.btn-primary</code> o
-          <code>.btn-success</code>.</p>
+          <code>.btn-success</code>.
+        </p>
         <p>Para construir nuestras clases modificadoras, usamos los bucles <code>@each</code> de Sass para iterar sobre
           un mapa de Sass. Esto es especialmente útil para generar variantes de un componente mediante nuestro
           <code>$theme-colors</code> y crear variantes responsive para cada punto de interrupción. A medida que
           personalices estos mapas de Sass y los vuelvas a compilar, verás automáticamente tus cambios reflejados en
-          estos bucles.</p>
+          estos bucles.
+        </p>
         <p>Consulta <a href="/docs/5.3/customize/sass/#maps-and-loops">nuestra documentación de mapas y bucles de
             Sass</a> para saber cómo personalizar estos bucles y extender el enfoque de modificador de base de Bootstrap
           a tu propio código.</p>
@@ -841,7 +843,8 @@
           significa que la mayor parte del estilo está contenido en una clase base (por ejemplo, <code>.btn</code>),
           mientras que las variaciones de estilo se limitan a clases modificadoras (por ejemplo,
           <code>.btn-danger</code>). Estas clases modificadoras se crean a partir del mapa <code>$theme-colors</code>
-          para personalizar el número y el nombre de nuestras clases modificadoras.</p>
+          para personalizar el número y el nombre de nuestras clases modificadoras.
+        </p>
         <p>Aquí hay dos ejemplos de cómo recorremos el mapa <code>$theme-colors</code> para generar modificadores para
           los componentes <code>.alert</code> y <code>.list-group</code>.</p>
         <div class="bd-example-snippet bd-code-snippet bd-file-ref">
@@ -997,7 +1000,8 @@
         </div>
         <p>En tu CSS, tendrías algo como lo siguiente donde la mayor parte del estilo se realiza a través de
           <code>.callout</code>. Luego, los estilos únicos entre cada variante se controlan mediante una clase
-          modificadora.</p>
+          modificadora.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Base class
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nc">.callout</span> <span class="p">{}</span>

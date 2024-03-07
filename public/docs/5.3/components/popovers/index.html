@@ -363,8 +363,8 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/components/popovers" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item"
+                    href="https://getbootstrap.esdocu.com/docs/5.1/components/popovers">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/components/popovers" rel="nofollow"
@@ -385,8 +385,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -1134,11 +1134,13 @@
         <p>Los elementos con el atributo <code>disabled</code> no son interassets, lo que significa que los usuarios no
           pueden pasar el cursor sobre ellos ni hacer clic en ellos para activar una ventana emergente (o un tooltips).
           Como solución alternativa, querrás activar la ventana emergente desde un contenedor <code>&lt;div&gt;</code> o
-          <code>&lt;span&gt;</code>, idealmente enfocado desde el teclado usando <code>tabindex="0"</code>.</p>
+          <code>&lt;span&gt;</code>, idealmente enfocado desde el teclado usando <code>tabindex="0"</code>.
+        </p>
         <p>Para los activadores de ventana emergente deshabilitados, también puedes preferir
           <code>data-bs-trigger="hover focus"</code> para que la ventana emergente aparezca como retroalimentación
           visual inmediata para tus usuarios ya que es posible que no intenten <em>hacer clic</em> en un elemento
-          deshabilitado.</p>
+          deshabilitado.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
@@ -1271,11 +1273,13 @@
             <code>tabindex="0"</code>, esto puede crear tabulaciones molestas y confusas en elementos no interactivos
             para los usuarios del teclado, y la mayoría de las tecnologías de asistencia actualmente no anuncian
             ventanas emergentes en esta situación. Además, no confíes únicamente en <code>hover</code> como activador de
-            tus ventanas emergentes, ya que esto hará que sea imposible activarlas para los usuarios del teclado.</p>
+            tus ventanas emergentes, ya que esto hará que sea imposible activarlas para los usuarios del teclado.
+          </p>
           <p>Evita agregar una cantidad excesiva de contenido en los popovers con la opción <code>html</code>. Una vez
             que se muestran los popovers, su contenido se vincula al elemento desencadenante con el atributo
             <code>aria-describedby</code>, lo que hace que todo el contenido del popover se anuncie a los usuarios de
-            tecnología de asistencia como una secuencia larga e ininterrumpida.</p>
+            tecnología de asistencia como una secuencia larga e ininterrumpida.
+          </p>
           <p>Los popovers no administran el orden de enfoque del teclado y su ubicación puede ser aleatoria en el DOM,
             así que ten cuidado al agregar elementos interactivos (como formularios o enlaces), ya que puede llevar a un
             orden de enfoque ilógico o hacer que el contenido emergente sea completamente inaccesible para los usuarios
@@ -1293,16 +1297,19 @@
           <code>data-bs-</code>, como en <code>data-bs-animation="{value}"</code>. Asegúrate de cambiar el tipo de caso
           del nombre de la opción de “<em>camelCase</em>” a “<em>kebab-case</em>” al pasar las opciones a través de
           atributos de datos. Por ejemplo, utiliza <code>data-bs-custom-class="beautifier"</code> en lugar de
-          <code>data-bs-customClass="beautifier"</code>.</p>
+          <code>data-bs-customClass="beautifier"</code>.
+        </p>
         <p>A partir de Bootstrap 5.2.0, todos los componentes admiten un atributo de datos <strong>experimental</strong>
           reservado <code>data-bs-config</code> que puede albergar datos simples de configuración del componente como
           una cadena JSON. Cuando un elemento tiene los atributos <code>data-bs-config='{"delay":0, "title":123}'</code>
           y <code>data-bs-title="456"</code>, el valor final de <code>title</code> será <code>456</code> y los atributos
           de datos separados sobrescribirán los valores proporcionados en <code>data-bs-config</code>. Además, los
           atributos de datos existentes pueden albergar valores JSON como
-          <code>data-bs-delay='{"show":0,"hide":150}'</code>.</p>
+          <code>data-bs-delay='{"show":0,"hide":150}'</code>.
+        </p>
         <p>El objeto de configuración final es el resultado combinado de <code>data-bs-config</code>,
-          <code>data-bs-</code> y <code>js object</code> donde el último valor-clave dado sobrescribe los demás.</p>
+          <code>data-bs-</code> y <code>js object</code> donde el último valor-clave dado sobrescribe los demás.
+        </p>
 
         <div class="bd-callout bd-callout-warning">
           Ten en cuenta que, por motivos de seguridad, las opciones <code>sanitize</code>, <code>sanitizeFn</code> y
@@ -1359,7 +1366,8 @@
                 <td>string, element, function</td>
                 <td><code>''</code></td>
                 <td>El contenido de texto del popover. Si se proporciona una función, se llamará con su referencia
-                  <code>this</code> establecida en el elemento al que está adjunto el popover.</td>
+                  <code>this</code> establecida en el elemento al que está adjunto el popover.
+                </td>
               </tr>
               <tr>
                 <td><code>customClass</code></td>
@@ -1368,7 +1376,8 @@
                 <td>Agrega clases al popover cuando se muestra. Ten en cuenta que estas clases se agregarán además de
                   cualquier clase especificada en la plantilla. Para agregar varias clases, sepáralas con espacios:
                   <code>'class-1 class-2'</code>. También puedes pasar una función que debería devolver una única cadena
-                  que contenga nombres de clases adicionales.</td>
+                  que contenga nombres de clases adicionales.
+                </td>
               </tr>
               <tr>
                 <td><code>delay</code></td>
@@ -1394,7 +1403,8 @@
                 <td>Permitir HTML en la ventana emergente. Si es true, las etiquetas HTML en el <code>title</code> de la
                   ventana emergente se representarán en la ventana emergente. Si es false, la propiedad
                   <code>innerText</code> se utilizará para insertar contenido en el DOM. Utiliza texto si te preocupan
-                  los ataques XSS.</td>
+                  los ataques XSS.
+                </td>
               </tr>
               <tr>
                 <td><code>offset</code></td>
@@ -1437,7 +1447,8 @@
                 <td>boolean</td>
                 <td><code>true</code></td>
                 <td>Activa o desactiva la desinfección. Si se activan las opciones <code>'template'</code>,
-                  <code>'content'</code> y <code>'title'</code> se desinfectarán.</td>
+                  <code>'content'</code> y <code>'title'</code> se desinfectarán.
+                </td>
               </tr>
               <tr>
                 <td><code>sanitizeFn</code></td>
@@ -1466,7 +1477,8 @@
                 <td>HTML base para usar al crear el popover. El <code>title</code> del popover se inyectará en el
                   <code>.popover-inner</code>. <code>.popover-arrow</code> se convertirá en la flecha del popover. El
                   elemento contenedor más externo debe tener la clase <code>.popover</code> y
-                  <code>role="tooltip"</code>.</td>
+                  <code>role="tooltip"</code>.
+                </td>
               </tr>
               <tr>
                 <td><code>title</code></td>
@@ -1485,7 +1497,8 @@
                   <code>.popover('toggle')</code>; este valor no se puede combinar con ningún otro activador.
                   <code>'hover'</code> por sí solo generará ventanas emergentes que no se pueden activar a través del
                   teclado y solo deben usarse si existen métodos alternativos para transmitir la misma información a los
-                  usuarios del teclado.</td>
+                  usuarios del teclado.
+                </td>
               </tr>
             </tbody>
           </table>
@@ -1563,7 +1576,8 @@
                 <td><code>hide</code></td>
                 <td>Oculta la ventana emergente de un elemento. <strong>Vuelve al punto de la llamada antes de que la
                     ventana emergente se haya ocultado</strong> (es decir, antes de que ocurra el evento
-                  <code>hidden.bs.popover</code>). Esto se considera una activación “manual” del popover.</td>
+                  <code>hidden.bs.popover</code>). Esto se considera una activación “manual” del popover.
+                </td>
               </tr>
               <tr>
                 <td><code>setContent</code></td>
@@ -1574,14 +1588,16 @@
                 <td>Revela el popover de un elemento. <strong>Vuelve al punto de la llamada antes de que se haya
                     mostrado realmente la ventana emergente</strong> (es decir, antes de que ocurra el evento
                   <code>shown.bs.popover</code>). Esto se considera una activación “manual” del popover. Los popovers
-                  cuyo título y contenido tengan longitud cero nunca se muestran.</td>
+                  cuyo título y contenido tengan longitud cero nunca se muestran.
+                </td>
               </tr>
               <tr>
                 <td><code>toggle</code></td>
                 <td>Alterna la ventana emergente de un elemento. <strong>Vuelve al punto de la llamada antes de que la
                     ventana emergente se haya mostrado u ocultado</strong> (es decir, antes de que ocurra el evento
                   <code>shown.bs.popover</code> o <code>hidden.bs.popover</code>). Esto se considera una activación
-                  “manual” del popover.</td>
+                  “manual” del popover.
+                </td>
               </tr>
               <tr>
                 <td><code>toggleEnabled</code></td>

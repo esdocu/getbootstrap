@@ -363,8 +363,7 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/customize/sass" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/5.1/customize/sass">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/customize/sass" rel="nofollow"
@@ -385,8 +384,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -931,7 +930,8 @@
         <p>Con esa configuración implementada, puedes comenzar a modificar cualquiera de las variables y mapas de Sass
           en tu <code>custom.scss</code>. También puedes comenzar a agregar partes de Bootstrap en la sección
           <code>// Optional</code> según sea necesario. Te sugerimos utilizar la pila de importación completa de nuestro
-          archivo <code>bootstrap.scss</code> como punto de partida.</p>
+          archivo <code>bootstrap.scss</code> como punto de partida.
+        </p>
         <h2 id="compiling">Compilando <a class="anchor-link" href="#compiling"
             aria-label="Link to this section: Compiling"></a></h2>
         <p>Para poder usar tu código Sass personalizado como CSS en el navegador, necesitas un compilador Sass. Sass se
@@ -963,7 +963,8 @@
             aria-label="Link to this section: Including"></a></h2>
         <p>Una vez que tu CSS esté compilado, puedes incluirlo en tus archivos HTML. Dentro de tu
           <code>index.html</code> querrás incluir tu archivo CSS compilado. Asegúrate de actualizar la ruta a tu archivo
-          CSS compilado si lo has cambiado.</p>
+          CSS compilado si lo has cambiado.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
@@ -991,7 +992,8 @@
         <p>Las sobrescrituras de variables deben realizarse después de importar nuestras funciones, pero antes del resto
           de las importaciones.</p>
         <p>Aquí tienes un ejemplo que cambia el <code>background-color</code> y el <code>color</code> para el
-          <code>&lt;body&gt;</code> al importar y compilar Bootstrap a través de npm:</p>
+          <code>&lt;body&gt;</code> al importar y compilar Bootstrap a través de npm:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Required
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">"../node_modules/bootstrap/scss/functions"</span><span class="p">;</span>
@@ -1030,7 +1032,8 @@
           sobrescribir y ampliar.</p>
         <p>Algunos de nuestros mapas Sass se fusionan en mapas vacíos de forma predeterminada. Esto se hace para
           permitir una fácil expansión de un mapa de Sass determinado, pero tiene el costo de hacer que
-          <em>eliminar</em> elementos de un mapa sea un poco más difícil.</p>
+          <em>eliminar</em> elementos de un mapa sea un poco más difícil.
+        </p>
         <h3 id="modify-map">Modificar mapa <a class="anchor-link" href="#modify-map"
             aria-label="Link to this section: Modify map"></a></h3>
         <p>Todas las variables en el mapa <code>$theme-colors</code> se definen como variables independientes. Para
@@ -1053,7 +1056,8 @@
             aria-label="Link to this section: Add to map"></a></h3>
         <p>Agrega nuevos colores a <code>$theme-colors</code>, o cualquier otro mapa, creando un nuevo mapa Sass con tus
           valores personalizados y fusionándolo con el mapa original. En este caso, crearemos un nuevo mapa
-          <code>$custom-colors</code> y lo fusionaremos con <code>$theme-colors</code>.</p>
+          <code>$custom-colors</code> y lo fusionaremos con <code>$theme-colors</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Create your own map
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$custom-colors</span><span class="o">:</span> <span class="p">(</span>
@@ -1095,7 +1099,8 @@
         <p>Por ejemplo, usamos las claves <code>primary</code>, <code>success</code> y <code>danger</code> de
           <code>$theme-colors</code> para enlaces, botones y estados de formulario. Reemplazar los valores de estas
           claves no debería presentar problemas, pero eliminarlas puede causar problemas de compilación de Sass. En
-          estos casos, deberás modificar el código Sass que utiliza esos valores.</p>
+          estos casos, deberás modificar el código Sass que utiliza esos valores.
+        </p>
         <h2 id="functions">Funciones <a class="anchor-link" href="#functions"
             aria-label="Link to this section: Functions"></a></h2>
         <h3 id="colors">Colores <a class="anchor-link" href="#colors" aria-label="Link to this section: Colors"></a>
@@ -1112,7 +1117,8 @@
         <p>Puedes aclarar u oscurecer colores con las funciones <code>tint-color()</code> y <code>shade-color()</code>
           de Bootstrap. Estas funciones mezclarán colores con blanco o negro, a diferencia de las funciones nativas
           <code>lighten()</code> y <code>darken()</code> de Sass que cambiarán la luminosidad en una cantidad fija, lo
-          que a menudo no conduce al efecto deseado.</p>
+          que a menudo no conduce al efecto deseado.
+        </p>
         <div class="bd-example-snippet bd-code-snippet bd-file-ref">
           <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
             <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small"
@@ -1167,7 +1173,8 @@
             href="https://www.w3.org/TR/WCAG/#dfn-relative-luminance">luminancia relativa</a> en un espacio de color
           <code>sRGB</code> para devolver automáticamente un color de contraste claro (<code>#fff</code>), oscuro
           (<code>#212529</code>) o negro (<code>#000</code>) según el color base especificado. Esta función es
-          especialmente útil para mixins o bucles en los que generas varias clases.</p>
+          especialmente útil para mixins o bucles en los que generas varias clases.
+        </p>
         <p>Por ejemplo, para generar muestras de color desde nuestro mapa <code>$theme-colors</code>:</p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
@@ -1195,7 +1202,8 @@
             aria-label="Link to this section: Escape SVG"></a></h3>
         <p>Usamos la función <code>escape-svg</code> para escapar de <code>&lt;</code>, <code>&gt;</code> y
           <code>#</code> caracteres para imágenes de fondo SVG. Cuando se utiliza la función <code>escape-svg</code>, se
-          deben citar los URI de datos.</p>
+          deben citar los URI de datos.
+        </p>
         <h3 id="add-and-subtract-functions">Funciones de sumar y restar <a class="anchor-link"
             href="#add-and-subtract-functions" aria-label="Link to this section: Add and Subtract functions"></a></h3>
         <p>Usamos las funciones <code>add</code> y <code>subtract</code> para envolver la función CSS <code>calc</code>.
@@ -1242,7 +1250,8 @@
         <p>Hay disponible una combinación abreviada para la media query <code>prefers-color-scheme</code> compatible con
           <code>light</code>, <code>dark</code> y esquemas de color personalizados. Consulta <a
             href="/docs/5.3/customize/color-modes/">la documentación de modos de color</a> para obtener información
-          sobre nuestra combinación de modos de color.</p>
+          sobre nuestra combinación de modos de color.
+        </p>
         <div class="bd-example-snippet bd-code-snippet bd-file-ref">
           <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
             <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small"

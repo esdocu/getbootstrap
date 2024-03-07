@@ -363,8 +363,7 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/components/navbar" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/5.1/components/navbar">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/components/navbar" rel="nofollow"
@@ -385,8 +384,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -857,7 +856,8 @@
         <ul>
           <li>Las barras de navegación requieren un ajuste <code>.navbar</code> con
             <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> para un colapsamiento responsive y clases de <a
-              href="#color-schemes">esquema de colores</a> .</li>
+              href="#color-schemes">esquema de colores</a> .
+          </li>
           <li>Las barras de navegación y sus contenidos son fluid de forma predeterminada. Cambia el <a
               href="#containers">contenedor</a> para limitar su ancho horizontal de diferentes maneras.</li>
           <li>Usa nuestro <a href="/docs/5.3/utilities/spacing/">espaciado</a> y clases <a
@@ -873,11 +873,13 @@
             identificarla explícitamente como una región emblemática para los usuarios de tecnologías de asistencia.
           </li>
           <li>Indica el elemento actual usando <code>aria-current="page"</code> para la página actual o
-            <code>aria-current="true"</code> para el elemento actual en un conjunto.</li>
+            <code>aria-current="true"</code> para el elemento actual en un conjunto.
+          </li>
           <li><strong>Nuevo en v5.2.0:</strong> las barras de navegación pueden tener un tema con variables CSS que
             tienen como ámbito la clase base <code>.navbar</code>. <code>.navbar-light</code> ha quedado obsoleto y
             <code>.navbar-dark</code> se ha reescrito para sobrescribir las variables CSS en lugar de agregar estilos
-            adicionales.</li>
+            adicionales.
+          </li>
         </ul>
         <div class="bd-callout bd-callout-info">
           El efecto de animación de este componente depende de la media query <code>prefers-reduced-motion</code>.
@@ -1006,7 +1008,8 @@
 
         <p>Este ejemplo usa las clases de utilidad <a href="/docs/5.3/utilities/background/">fondo</a>
           (<code>bg-body-tertiary</code>) y <a href="/docs/5.3/utilities/spacing/">espaciado</a> (<code>me-auto</code>,
-          <code>mb-2</code>, <code>mb-lg-0</code>, <code>me-2</code>).</p>
+          <code>mb-2</code>, <code>mb-lg-0</code>, <code>me-2</code>).
+        </p>
         <h3 id="brand">Marca <a class="anchor-link" href="#brand" aria-label="Link to this section: Brand"></a></h3>
         <p>El <code>.navbar-brand</code> se puede aplicar a la mayoría de los elementos, pero un ancla (enlace) funciona
           mejor, ya que algunos elementos pueden requerir clases de utilidad o estilos personalizados.</p>
@@ -1104,7 +1107,8 @@
             aria-label="Link to this section: Image and text"></a></h4>
         <p>También puedes hacer uso de algunas utilidades adicionales para agregar una imagen y texto al mismo tiempo.
           Ten en cuenta la adición de <code>.d-inline-block</code> y <code>.align-text-top</code> en
-          <code>&lt;img&gt;</code>.</p>
+          <code>&lt;img&gt;</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <nav class="navbar bg-body-tertiary">
@@ -1153,7 +1157,8 @@
           de forma segura.</p>
         <p>Agrega la clase <code>.active</code> en <code>.nav-link</code> para indicar la página actual.</p>
         <p>Ten en cuenta que también debes agregar el atributo <code>aria-current</code> en el
-          <code>.nav-link</code>activo.</p>
+          <code>.nav-link</code>activo.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -1287,7 +1292,8 @@
 
         <p>También puedes usar menús desplegables en tu barra de navegación. Los menús desplegables requieren un
           elemento envolvente para su posicionamiento, así que asegúrate de utilizar elementos separados y anidados para
-          <code>.nav-item</code> y <code>.nav-link</code> como se muestra a continuación.</p>
+          <code>.nav-item</code> y <code>.nav-link</code> como se muestra a continuación.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -1420,7 +1426,8 @@
 
         <p>Los elementos secundarios inmediatos de <code>.navbar</code> usan diseño flex y por defecto serán
           <code>justify-content: space-between</code>. Utiliza <a href="/docs/5.3/utilities/flex/">utilidades flex</a>
-          adicionales según sea necesario para ajustar este comportamiento.</p>
+          adicionales según sea necesario para ajustar este comportamiento.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <nav class="navbar bg-body-tertiary">
@@ -1663,7 +1670,8 @@
             <code>.navbar-dark</code> en favor del nuevo <code>data-bs-theme="dark"</code>. Agrega
             <code>data-bs-theme="dark"</code> al <code>.navbar</code> para habilitar un modo de color específico del
             componente. <a href="/docs/5.3/customize/color-modes/">Obtén más información sobre nuestros modos de
-              color.</a></p>
+              color.</a>
+          </p>
           <hr>
           <p><strong>Nuevo en v5.2.0:</strong> el tema de la barra de navegación ahora funciona con variables CSS y
             <code>.navbar-light</code> ha quedado obsoleto. Las variables CSS se aplican a <code>.navbar</code>, de
@@ -1866,7 +1874,8 @@
           allí).</p>
         <p>Las barras de navegación fijas usan <code>position: fixed</code>, lo que significa que se extraen del flujo
           normal del DOM y pueden requerir CSS personalizado (por ejemplo, relleno <code>padding-top</code> en
-          <code>&lt;body&gt;</code>) para evitar la superposición con otros elementos.</p>
+          <code>&lt;body&gt;</code>) para evitar la superposición con otros elementos.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <nav class="navbar bg-body-tertiary">
@@ -2039,14 +2048,16 @@
           navegación contraída. De forma predeterminada, el desplazamiento se inicia en <code>75vh</code> (o el 75% de
           la altura del viewport), pero puedes sobrescribirlo con la propiedad personalizada CSS local
           <code>--bs-navbar-height</code> o estilos personalizados. En viewports más grandes, cuando se expande la barra
-          de navegación, el contenido aparecerá como aparece en la barra de navegación predeterminada.</p>
+          de navegación, el contenido aparecerá como aparece en la barra de navegación predeterminada.
+        </p>
         <p>Ten en cuenta que este comportamiento conlleva un posible inconveniente de <code>overflow</code>: al
           configurar <code>overflow-y: auto</code> (obligatorio para desplazar el contenido aquí),
           <code>overflow-x</code> es el equivalente a <code>auto</code>, que recortará parte del contenido horizontal.
         </p>
         <p>Aquí tienes una barra de navegación de ejemplo que usa <code>.navbar-nav-scroll</code> con
           <code>style="--bs-scroll-height: 100px;"</code>, con algunas utilidades de margen adicionales para un
-          espaciado óptimo.</p>
+          espaciado óptimo.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -2151,10 +2162,12 @@
         <p>Las barras de navegación pueden usar <code>.navbar-toggler</code>, <code>.navbar-collapse</code> y
           <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> clases para determinar cuándo su contenido colapsa detrás de
           un botón. En combinación con otras utilidades, puedes elegir fácilmente cuándo mostrar u ocultar elementos
-          concretos.</p>
+          concretos.
+        </p>
         <p>Para barras de navegación que nunca colapsan, agrega la clase <code>.navbar-expand</code> en la barra de
           navegación. Para las barras de navegación que siempre colapsan, no agregues ninguna clase
-          <code>.navbar-expand</code>.</p>
+          <code>.navbar-expand</code>.
+        </p>
         <h3 id="toggler">Toggler <a class="anchor-link" href="#toggler" aria-label="Link to this section: Toggler"></a>
         </h3>
         <p>Los alternadores de la barra de navegación están alineados a la izquierda de forma predeterminada, pero si
@@ -2455,7 +2468,8 @@
           recomendamos asegurarse de que el conmutador tenga el atributo <code>aria-controls</code>, apuntando al
           <code>id</code> del contenedor de contenido. En teoría, esto permite a los usuarios de tecnología de
           asistencia saltar directamente desde el conmutador al contenedor que controla, pero actualmente la
-          compatibilidad con esto es bastante irregular.</p>
+          compatibilidad con esto es bastante irregular.
+        </p>
         <h3 id="offcanvas">Offcanvas <a class="anchor-link" href="#offcanvas"
             aria-label="Link to this section: Offcanvas"></a></h3>
         <p>Transforma tu barra de navegación desplegable y contraíble en un cajón offcanvas con el <a
@@ -2590,7 +2604,8 @@
           fondo oscuro en el contenido offcanvas para evitar que el texto se vuelva ilegible. En el siguiente ejemplo,
           agregamos <code>.navbar-dark</code> y <code>.bg-dark</code> a <code>.navbar</code>, <code>.text-bg-dark</code>
           al <code>.offcanvas</code>, <code>.dropdown-menu-dark</code> al <code>.dropdown-menu</code> y
-          <code>.btn-close-white</code> a <code>.btn-close</code> para un estilo adecuado con un lienzo oscuro.</p>
+          <code>.btn-close-white</code> a <code>.btn-close</code> para un estilo adecuado con un lienzo oscuro.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <nav class="navbar navbar-dark bg-dark fixed-top">

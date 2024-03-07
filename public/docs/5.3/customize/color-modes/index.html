@@ -382,8 +382,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -951,7 +951,8 @@
               <code>data-bs-theme</code>. Este atributo se puede aplicar al elemento <code>&lt;html&gt;</code>, o a
               cualquier otro elemento o componente Bootstrap. Si se aplica al elemento <code>&lt;html&gt;</code>, se
               aplicará a todo. Si se aplica a un componente o elemento, su ámbito será ese componente o elemento
-              específico.</p>
+              específico.
+            </p>
           </li>
           <li>
             <p>Para cada modo de color que desees admitir, necesitarás agregar nuevas sobrescrituras para las variables
@@ -982,7 +983,8 @@
           <code>data-bs-theme="dark"</code> al elemento <code>&lt;html&gt;</code>. Esto aplicará el modo de color oscuro
           a todos los componentes y elementos, excepto aquellos con un atributo <code>data-bs-theme</code> específico
           aplicado. Aprovechando la <a href="/docs/5.3/getting-started/introduction/#quick-start">plantilla de inicio
-            rápido</a>:</p>
+            rápido</a>:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span> <span class="na">data-bs-theme</span><span class="o">=</span><span class="s">"dark"</span><span class="p">&gt;</span>
@@ -1006,7 +1008,8 @@
         <p>Nuestra nueva opción de modo oscuro está disponible para todos los usuarios de Bootstrap, pero se controla
           mediante atributos de datos en lugar de media queries y no alterna automáticamente el modo de color de tu
           proyecto. Puedes desactivar nuestro modo oscuro por completo a través de Sass cambiando
-          <code>$enable-dark-mode</code> a <code>false</code>.</p>
+          <code>$enable-dark-mode</code> a <code>false</code>.
+        </p>
         <p>Utilizamos un mixin Sass personalizado, <code>color-mode()</code>, para ayudarte a controlar <em>cómo</em> se
           aplican los modos de color. De forma predeterminada, utilizamos un enfoque de atributo <code>data</code>, lo
           que te permite crear experiencias más fáciles de usar donde tus visitantes pueden elegir tener un modo oscuro
@@ -1143,7 +1146,8 @@
           alternancia para controlar el atributo <code>data-bs-theme</code> en el elemento raíz,
           <code>&lt;html&gt;</code>. Hemos creado un conmutador en nuestra documentación que inicialmente se remite al
           modo de color actual del sistema del usuario, pero proporciona una opción para sobrescribirlo y elegir un modo
-          de color específico.</p>
+          de color específico.
+        </p>
         <p>Aquí tienes un vistazo al <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
             data-bs-placement="top" data-bs-custom-class="custom-tooltip"
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
@@ -1250,7 +1254,8 @@
             de listas</a>. También se deben definir nuevos colores en <code>$theme-colors-text</code>,
           <code>$theme-colors-bg-subtle</code> y <code>$theme-colors-border-subtle</code> para el tema light (claro);
           pero también en <code>$theme-colors-text-dark</code>, <code>$theme-colors-bg-subtle-dark</code> y
-          <code>$theme-colors-border-subtle-dark</code> para el tema dark (oscuro).</p>
+          <code>$theme-colors-border-subtle-dark</code> para el tema dark (oscuro).
+        </p>
         <p>Este es un proceso manual porque Sass no puede generar sus propias variables Sass a partir de una variable o
           mapa existente. En futuras versiones de Bootstrap, revisaremos esta configuración para reducir la duplicación.
         </p>

@@ -363,8 +363,8 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/components/collapse" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item"
+                    href="https://getbootstrap.esdocu.com/docs/5.1/components/collapse">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/components/collapse" rel="nofollow"
@@ -385,8 +385,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -867,7 +867,8 @@
         <p>Generalmente, recomendamos usar un <code>&lt;button&gt;</code> con el atributo <code>data-bs-target</code>.
           Aunque no se recomienda desde un punto de vista semántico, también puedes usar un enlace
           <code>&lt;a&gt;</code> con el atributo <code>href</code> (y un <code>role="button"</code>). En ambos casos, se
-          requiere <code>data-bs-toggle="collapse"</code>.</p>
+          requiere <code>data-bs-toggle="collapse"</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <p class="d-inline-flex gap-1">
@@ -926,7 +927,8 @@
           <code>.collapse-horizontal</code> para realizar la transición del <code>width</code> en lugar de
           <code>height</code> y establece un <code>width</code> en el elemento hijo inmediato. Siéntete libre de
           escribir tu propio Sass personalizado, usar estilos en línea o usar nuestras <a
-            href="/docs/5.3/utilities/sizing/">utilidades de ancho</a>.</p>
+            href="/docs/5.3/utilities/sizing/">utilidades de ancho</a>.
+        </p>
         <div class="bd-callout bd-callout-info">
           Ten en cuenta que, si bien el siguiente ejemplo tiene un <code>min-height</code> configurado para evitar
           repintados excesivos en nuestra documentación, esto no es un requisito explícito. <strong>Solo se requiere el
@@ -989,7 +991,8 @@
           haciendo referencia a ellos con un selector en su atributo <code>data-bs-target</code> o <code>href</code>.
           Por el contrario, varios elementos <code>&lt;button&gt;</code> o <code>&lt;a&gt;</code> pueden mostrar y
           ocultar el mismo elemento si cada uno de ellos hace referencia a él con su <code>data-bs-target</code> o
-          <code>href</code>.</p>
+          <code>href</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <p class="d-inline-flex gap-1">
@@ -1078,18 +1081,21 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>, o porque el usuario activó otro
           elemento de control también vinculado al mismo elemento plegable). Si el elemento HTML del elemento de control
           no es un botón (por ejemplo, un <code>&lt;a&gt;</code> o <code>&lt;div&gt;</code>), el atributo
-          <code>role="button"</code> debe agregarse al elemento.</p>
+          <code>role="button"</code> debe agregarse al elemento.
+        </p>
         <p>Si tu elemento de control apunta a un único elemento plegable, es decir, el atributo
           <code>data-bs-target</code> apunta a un selector <code>id</code>, debes agregar el atributo
           <code>aria-controls</code> al elemento de control, que contiene el <code>id</code> del elemento plegable. Los
           lectores de pantalla modernos y tecnologías de asistencia similares utilizan este atributo para proporcionar a
-          los usuarios accesos directos adicionales para navegar directamente al elemento plegable.</p>
+          los usuarios accesos directos adicionales para navegar directamente al elemento plegable.
+        </p>
         <p>Ten en cuenta que la implementación actual de Bootstrap no cubre las diversas interacciones de teclado
           <em>opcionales</em> descritas en <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/">Patrón de
             acordeón de la Guía de prácticas de creación de ARIA</a>, deberás incluirlos tú mismo con <a
             href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.</p>
+            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.
+        </p>
         <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
         <h3 id="sass-variables">Variables Sass <a class="anchor-link" href="#sass-variables"
             aria-label="Link to this section: Sass variables"></a></h3>
@@ -1165,7 +1171,8 @@
         </p>
         <p>Para agregar administración de grupos tipo acordeón a un área plegable, agrega el atributo de datos
           <code>data-bs-parent="#selector"</code>. Consulta la <a href="/docs/5.3/components/accordion/">página del
-            acordeón</a> para obtener más información.</p>
+            acordeón</a> para obtener más información.
+        </p>
         <h3 id="via-javascript">Vía <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
             data-bs-placement="top" data-bs-custom-class="custom-tooltip"
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
@@ -1186,16 +1193,19 @@
           <code>data-bs-</code>, como en <code>data-bs-animation="{value}"</code>. Asegúrate de cambiar el tipo de caso
           del nombre de la opción de “<em>camelCase</em>” a “<em>kebab-case</em>” al pasar las opciones a través de
           atributos de datos. Por ejemplo, utiliza <code>data-bs-custom-class="beautifier"</code> en lugar de
-          <code>data-bs-customClass="beautifier"</code>.</p>
+          <code>data-bs-customClass="beautifier"</code>.
+        </p>
         <p>A partir de Bootstrap 5.2.0, todos los componentes admiten un atributo de datos <strong>experimental</strong>
           reservado <code>data-bs-config</code> que puede albergar datos simples de configuración del componente como
           una cadena JSON. Cuando un elemento tiene los atributos <code>data-bs-config='{"delay":0, "title":123}'</code>
           y <code>data-bs-title="456"</code>, el valor final de <code>title</code> será <code>456</code> y los atributos
           de datos separados sobrescribirán los valores proporcionados en <code>data-bs-config</code>. Además, los
           atributos de datos existentes pueden albergar valores JSON como
-          <code>data-bs-delay='{"show":0,"hide":150}'</code>.</p>
+          <code>data-bs-delay='{"show":0,"hide":150}'</code>.
+        </p>
         <p>El objeto de configuración final es el resultado combinado de <code>data-bs-config</code>,
-          <code>data-bs-</code> y <code>js object</code> donde el último valor-clave dado sobrescribe los demás.</p>
+          <code>data-bs-</code> y <code>js object</code> donde el último valor-clave dado sobrescribe los demás.
+        </p>
 
         <div class="table-responsive">
           <table class="table">
@@ -1267,25 +1277,29 @@
                 <td><code>getOrCreateInstance</code></td>
                 <td>Método estático que devuelve una instancia colapsada asociada a un elemento DOM o crea una nueva en
                   caso de que no haya sido inicializada. Puedes usarlo así:
-                  <code>bootstrap.Collapse.getOrCreateInstance(element)</code>.</td>
+                  <code>bootstrap.Collapse.getOrCreateInstance(element)</code>.
+                </td>
               </tr>
               <tr>
                 <td><code>hide</code></td>
                 <td>Oculta un elemento plegable. <strong>Vuelve a la persona que llama antes de que el elemento
                     contraíble se haya ocultado</strong> (por ejemplo, antes de que ocurra el evento
-                  <code>hidden.bs.collapse</code>).</td>
+                  <code>hidden.bs.collapse</code>).
+                </td>
               </tr>
               <tr>
                 <td><code>show</code></td>
                 <td>Muestra un elemento plegable. <strong>Vuelve a la persona que llama antes de que el elemento
                     plegable se haya mostrado realmente</strong> (por ejemplo, antes de que ocurra el evento
-                  <code>shown.bs.collapse</code>).</td>
+                  <code>shown.bs.collapse</code>).
+                </td>
               </tr>
               <tr>
                 <td><code>toggle</code></td>
                 <td>Cambia un elemento plegable para mostrarlo u ocultarlo. <strong>Vuelve a la persona que llama antes
                     de que el elemento plegable se haya mostrado u ocultado</strong> (es decir, antes de que el evento
-                  <code>shown.bs.collapse</code> o <code>hidden.bs.collapse</code> ocurra).</td>
+                  <code>shown.bs.collapse</code> o <code>hidden.bs.collapse</code> ocurra).
+                </td>
               </tr>
             </tbody>
           </table>

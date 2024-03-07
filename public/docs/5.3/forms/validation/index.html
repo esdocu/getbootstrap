@@ -363,8 +363,7 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/forms/validation" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/5.1/forms/validation">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/forms/validation" rel="nofollow"
@@ -385,8 +384,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -849,11 +848,13 @@
         <ul>
           <li>La validación de formularios HTML se aplica a través de dos pseudoclases de CSS, <code>:invalid</code> y
             <code>:valid</code>. Se aplica a los elementos <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> y
-            <code>&lt;textarea&gt;</code>.</li>
+            <code>&lt;textarea&gt;</code>.
+          </li>
           <li>Bootstrap aplica los estilos <code>:invalid</code> y <code>:valid</code> a la clase padre
             <code>.was-validated</code>, generalmente se aplica al <code>&lt;form&gt;</code>. De lo contrario, cualquier
             campo obligatorio sin un valor aparecerá como no válido al cargar la página. De esta manera, puedes elegir
-            cuándo activarlos (normalmente después de intentar enviar el formulario).</li>
+            cuándo activarlos (normalmente después de intentar enviar el formulario).
+          </li>
           <li>Para restablecer la apariencia del formulario (por ejemplo, en el caso de envíos de formularios dinámicos
             usando Ajax), elimina la clase <code>.was-validated</code> del <code>&lt;form&gt;</code> nuevamente después
             del envío.</li>
@@ -864,7 +865,8 @@
             <code>&lt;label&gt;</code> que viene antes de un control de formulario en el DOM sin la ayuda de <a
               href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
               data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.</li>
+              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.
+          </li>
           <li>Todos los navegadores modernos admiten <a
               href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">API
               de validación de restricciones</a>, una serie de métodos <a href="https://esdocu.dev/javascript"
@@ -895,7 +897,8 @@
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> interceptará el botón de enviar y te
           transmitirá sus comentarios. Al intentar enviar, verás los estilos <code>:invalid</code> y <code>:valid</code>
-          aplicados a tus controles de formulario.</p>
+          aplicados a tus controles de formulario.
+        </p>
         <p>Los estilos de comentarios personalizados aplican colores, bordes, estilos de enfoque e íconos de fondo
           personalizados para comunicar mejor los comentarios. Los iconos de fondo para <code>&lt;select&gt;</code>s
           solo están disponibles con <code>.form-select</code>, y no con <code>.form-control</code>.</p>
@@ -1204,7 +1207,8 @@
         <p>Recomendamos usar la validación del lado del cliente, pero en caso de que requieras validación del lado del
           servidor, puedes indicar campos de formulario válidos y no válidos con <code>.is-invalid</code> y
           <code>.is-valid</code>. Ten en cuenta que <code>.invalid-feedback</code> también es compatible con estas
-          clases.</p>
+          clases.
+        </p>
         <p>Para campos no válidos, asegúrate de que el mensaje de error o comentario no válido esté asociado con el
           campo de formulario relevante usando <code>aria-describedby</code> (ten en cuenta que este atributo permite
           más de un <code>id</code> al que se hará referencia, en caso de que el campo ya apunte a texto de formulario
@@ -1494,7 +1498,8 @@
           <code>.{valid|invalid}-feedback</code> por <code>.{valid|invalid}-tooltip</code> para mostrar comentarios de
           validación en un tooltips con estilo. Asegúrate de tener un elemento padre con <code>position: relative</code>
           para el posicionamiento del tooltips. En el siguiente ejemplo, nuestras clases de columnas ya tienen esto,
-          pero es posible que tu proyecto requiera una configuración alternativa.</p>
+          pero es posible que tu proyecto requiera una configuración alternativa.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <form class="row g-3 needs-validation" novalidate="">
@@ -1964,7 +1969,8 @@
           es cómo generamos los estados de validación predeterminados <code>valid</code>/<code>invalid</code>. Se
           incluye un mapa anidado para personalizar el color, el icono, el color del tooltips y la sombra de enfoque de
           cada estado. Si bien los navegadores no admiten otros estados, aquellos que usan estilos personalizados pueden
-          agregar fácilmente comentarios a formularios más complejos.</p>
+          agregar fácilmente comentarios a formularios más complejos.
+        </p>
 
       </div>
     </main>

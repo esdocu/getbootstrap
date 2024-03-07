@@ -363,8 +363,7 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/layout/css-grid" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/5.1/layout/css-grid">v5.1.3</a>
                 </li>
                 <li>
                   <div class="dropdown-item disabled">v5.0.2</div>
@@ -384,8 +383,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -857,12 +856,14 @@
           <li>
             <p><strong>CSS Grid es opcional.</strong> Deshabilita el sistema de cuadrícula predeterminado configurando
               <code>$enable-grid-classes: false</code> y habilita CSS Grid configurando
-              <code>$enable-cssgrid: true</code>. Luego, vuelve a compilar tu Sass.</p>
+              <code>$enable-cssgrid: true</code>. Luego, vuelve a compilar tu Sass.
+            </p>
           </li>
           <li>
             <p><strong>Reemplaza las instancias de <code>.row</code> con <code>.grid</code>.</strong> La clase
               <code>.grid</code> establece <code>display: grid</code> y crea una <code>grid-template</code> que puedes
-              desarrollar con tu HTML.</p>
+              desarrollar con tu HTML.
+            </p>
           </li>
           <li>
             <p><strong>Reemplaza las clases <code>.col-*</code> con clases <code>.g-col-*</code> .</strong> Esto se debe
@@ -871,7 +872,8 @@
           <li>
             <p><strong>Los tamaños de columnas y gutter se configuran mediante variables CSS.</strong> Configúralos en
               el <code>.grid</code> principal y personalízalos como desees, en línea o en una hoja de estilo, con
-              <code>--bs-columns</code> y <code>--bs-gap</code>.</p>
+              <code>--bs-columns</code> y <code>--bs-gap</code>.
+            </p>
           </li>
         </ul>
         <p>En el futuro, Bootstrap probablemente cambiará a una solución híbrida ya que la propiedad <code>gap</code> ha
@@ -909,7 +911,8 @@
             aria-label="Link to this section: Three columns"></a></h3>
         <p>Se pueden crear tres columnas de igual ancho en todas los viewports y dispositivos usando las clases
           <code>.g-col-4</code>. Agrega <a href="#responsive">clases responsive</a> para cambiar el diseño por tamaño de
-          viewport.</p>
+          viewport.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0 bd-example-cssgrid">
             <div class="grid text-center">
@@ -1195,10 +1198,12 @@
             aria-label="Link to this section: Nesting"></a></h2>
         <p>Al igual que nuestro sistema de cuadrícula predeterminado, nuestro CSS Grid permite anidar fácilmente
           <code>.grid</code>. Sin embargo, a diferencia del valor predeterminado, esta cuadrícula hereda los cambios en
-          las filas, columnas y espacios. Considera el siguiente ejemplo:</p>
+          las filas, columnas y espacios. Considera el siguiente ejemplo:
+        </p>
         <ul>
           <li>Sobrescribimos el número predeterminado de columnas con una variable CSS local:
-            <code>--bs-columns: 3</code>.</li>
+            <code>--bs-columns: 3</code>.
+          </li>
           <li>En la primera columna automática, el recuento de columnas se hereda y cada columna tiene un tercio del
             ancho disponible.</li>
           <li>En la segunda columna automática, hemos restablecido el recuento de columnas en el <code>.grid</code>
@@ -1303,7 +1308,8 @@
           <em>hasta</em> que se proporciona una instancia local. Por ejemplo, usamos <code>var(--bs-rows, 1)</code> para
           nuestras filas de CSS Grid, que ignora <code>--bs-rows</code> porque no se ha configurado en ninguna parte
           todavía. Una vez que lo esté, la instancia <code>.grid</code> usará ese valor en lugar del valor alternativo
-          de <code>1</code>.</p>
+          de <code>1</code>.
+        </p>
         <h3 id="no-grid-classes">No hay clases en grilla <a class="anchor-link" href="#no-grid-classes"
             aria-label="Link to this section: No grid classes"></a></h3>
         <p>Los elementos secundarios inmediatos de <code>.grid</code> son elementos de cuadrícula, por lo que se les
@@ -1446,7 +1452,8 @@
         </h3>
         <p>Cambia los espacios verticales solo modificando el <code>row-gap</code>. Ten en cuenta que utilizamos
           <code>gap</code> en <code>.grid</code>s, pero <code>row-gap</code> y <code>column-gap</code> se pueden
-          modificar cuando sea necesario.</p>
+          modificar cuando sea necesario.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0 bd-example-cssgrid">
             <div class="grid text-center" style="row-gap: 0;">
@@ -1527,14 +1534,16 @@
         <h2 id="sass">Sass <a class="anchor-link" href="#sass" aria-label="Link to this section: Sass"></a></h2>
         <p>Una limitación de CSS Grid es que nuestras clases predeterminadas aún se generan mediante dos variables Sass,
           <code>$grid-columns</code> y <code>$grid-gutter-width</code>. Esto efectivamente predetermina la cantidad de
-          clases generadas en nuestro CSS compilado. Tienes dos opciones aquí:</p>
+          clases generadas en nuestro CSS compilado. Tienes dos opciones aquí:
+        </p>
         <ul>
           <li>Modifica esas variables Sass predeterminadas y vuelve a compilar tu CSS.</li>
           <li>Usa estilos en línea o personalizados para aumentar las clases proporcionadas.</li>
         </ul>
         <p>Por ejemplo, puedes aumentar el número de columnas y cambiar el tamaño del espacio, y luego dimensionar tus
           “columnas” con una combinación de estilos en línea y clases de columnas CSS Grid predefinidas (por ejemplo,
-          <code>.g-col-4</code>).</p>
+          <code>.g-col-4</code>).
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0 bd-example-cssgrid">
             <div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem;">

@@ -363,8 +363,8 @@
                     rel="nofollow" target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/getting-started/webpack"
-                    rel="nofollow" target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item"
+                    href="https://getbootstrap.esdocu.com/docs/5.1/getting-started/webpack">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/getting-started/webpack"
@@ -385,8 +385,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -849,7 +849,8 @@
           <li>
             <p><strong>Crea una carpeta de proyecto y configura npm.</strong> Crearemos la carpeta
               <code>my-project</code> e inicializaremos npm con el argumento <code>-y</code> para evitar que nos haga
-              todas las preguntas interactivas.</p>
+              todas las preguntas interactivas.
+            </p>
             <div class="highlight">
               <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir my-project <span class="o">&amp;&amp;</span> <span class="nb">cd</span> my-project
 </span></span><span class="line"><span class="cl">npm init -y
@@ -863,7 +864,8 @@
               un servidor de desarrollo local. Además, instalaremos <code>html-webpack-plugin</code> para poder
               almacenar nuestro <code>index.html</code> en el directorio <code>src</code> en lugar del directorio
               <code>dist</code>. Usamos <code>--save-dev</code> para indicar que estas dependencias son solo para uso de
-              desarrollo y no para producción.</p>
+              desarrollo y no para producción.
+            </p>
             <div class="highlight">
               <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm i --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin
 </span></span></code></pre>
@@ -895,7 +897,8 @@
         <p>Ya creamos la carpeta <code>my-project</code> e inicializamos npm. Ahora también crearemos nuestras carpetas
           <code>src</code> y <code>dist</code> para completar la estructura del proyecto. Ejecuta lo siguiente desde
           <code>my-project</code> o crea manualmente la carpeta y la estructura de archivos que se muestran a
-          continuación.</p>
+          continuación.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir <span class="o">{</span>src,src/js,src/scss<span class="o">}</span>
 </span></span><span class="line"><span class="cl">touch src/index.html src/js/main.js src/scss/styles.scss webpack.config.js
@@ -960,7 +963,8 @@
             <p><strong>A continuación completamos nuestro <code>src/index.html</code>.</strong> Esta es la página HTML
               que Webpack cargará en el navegador para utilizar el CSS y JS incluidos que agregaremos en pasos
               posteriores. Antes de que podamos hacer eso, tenemos que darle algo para renderizar e incluir el
-              <code>output</code> JS del paso anterior.</p>
+              <code>output</code> JS del paso anterior.
+            </p>
             <div class="highlight">
               <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
@@ -979,7 +983,8 @@
 </span></span></code></pre>
             </div>
             <p>Estamos incluyendo un poco de estilo Bootstrap aquí con el <code>div class="container"</code> y
-              <code>&lt;button&gt;</code> para que podamos ver cuándo Webpack carga el CSS de Bootstrap.</p>
+              <code>&lt;button&gt;</code> para que podamos ver cuándo Webpack carga el CSS de Bootstrap.
+            </p>
           </li>
           <li>
             <p><strong>Ahora necesitamos un script npm para ejecutar Webpack.</strong> Abre <code>package.json</code> y
@@ -1022,7 +1027,8 @@
           <li>
             <p><strong>Configura los cargadores en <code>webpack.config.js</code>.</strong> Tu archivo de configuración
               ahora está completo y debe coincidir con el siguiente fragmento. La única parte nueva aquí es la sección
-              <code>module</code>.</p>
+              <code>module</code>.
+            </p>
             <div class="highlight">
               <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="s1">'use strict'</span>
 </span></span><span class="line"><span class="cl">
@@ -1084,11 +1090,13 @@
               el CSS en un elemento <code>&lt;style&gt;</code> en el <code>&lt;head&gt;</code> de la página HTML,
               <code>css-loader</code> ayuda con el uso de <code>@import</code> y <code>url()</code>,
               <code>postcss-loader</code> es necesario para Autoprefixer y <code>sass-loader</code> nos permite usar
-              Sass.</p>
+              Sass.
+            </p>
           </li>
           <li>
             <p><strong>Ahora, importemos el CSS de Bootstrap.</strong> Agrega lo siguiente a
-              <code>src/scss/styles.scss</code> para importar todo el código fuente Sass de Bootstrap.</p>
+              <code>src/scss/styles.scss</code> para importar todo el código fuente Sass de Bootstrap.
+            </p>
             <div class="highlight">
               <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Import all of Bootstrap's CSS
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">"bootstrap/scss/bootstrap"</span><span class="p">;</span>
@@ -1239,7 +1247,8 @@
 </span></span></code></pre>
         </div>
         <p>Después de ejecutar <code>npm run build</code> nuevamente, encontrarás los archivos SVG extraídos en
-          <code>dist/icons</code> y referenciados correctamente desde CSS.</p>
+          <code>dist/icons</code> y referenciados correctamente desde CSS.
+        </p>
         <hr class="my-5">
         <p><em>¿Ves algo incorrecto o desactualizado aquí? <a
               href="https://github.com/twbs/bootstrap/issues/new/choose">abre un issue en GitHub</a>. ¿Necesitas ayuda

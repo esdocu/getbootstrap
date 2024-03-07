@@ -363,8 +363,7 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/components/buttons" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/5.1/components/buttons">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/components/buttons" rel="nofollow"
@@ -385,8 +384,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -1162,13 +1161,16 @@
         <p>Los botones deshabilitados que usan el elemento <code>&lt;a&gt;</code> se comportan un poco diferente:</p>
         <ul>
           <li><code>&lt;a&gt;</code> no admite el atributo <code>disabled</code>, por lo que debes agregar la clase
-            <code>.disabled</code> para que parezca visualmente deshabilitado.</li>
+            <code>.disabled</code> para que parezca visualmente deshabilitado.
+          </li>
           <li>Se incluyen algunos estilos aptos para el futuro para deshabilitar todos los <code>pointer-events</code>
             en los botones de anclaje.</li>
           <li>Los botones deshabilitados que usan <code>&lt;a&gt;</code> deben incluir el atributo
-            <code>aria-disabled="true"</code> para indicar el estado del elemento a las tecnologías de asistencia.</li>
+            <code>aria-disabled="true"</code> para indicar el estado del elemento a las tecnologías de asistencia.
+          </li>
           <li>Los botones deshabilitados que usan <code>&lt;a&gt;</code> <em>no deben</em> incluir el atributo
-            <code>href</code>.</li>
+            <code>href</code>.
+          </li>
         </ul>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
@@ -1210,7 +1212,8 @@
             href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado para desactivar su
-          funcionalidad por completo.</p>
+          funcionalidad por completo.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Enlace
@@ -1396,7 +1399,8 @@
         <p>Agrega <code>data-bs-toggle="button"</code> para alternar el estado <code>active</code> de un botón. Si está
           alternando previamente un botón, debes agregar manualmente <code>.active</code> (clase) <strong>y</strong>
           <code>aria-pressed="true"</code> para garantizar que se transmite adecuadamente a las tecnologías de
-          asistencia.</p>
+          asistencia.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <p class="d-inline-flex gap-1">
@@ -1520,7 +1524,8 @@
                 <td><code>getOrCreateInstance</code></td>
                 <td>Método estático que devuelve una instancia de botón asociada con un elemento DOM o crea uno nuevo en
                   caso de que no haya sido inicializado. Puedes usarlo así:
-                  <code>bootstrap.Button.getOrCreateInstance(element)</code>.</td>
+                  <code>bootstrap.Button.getOrCreateInstance(element)</code>.
+                </td>
               </tr>
               <tr>
                 <td><code>toggle</code></td>
@@ -1581,7 +1586,8 @@
         </div>
         <p>Cada clase modificadora <code>.btn-*</code> actualiza las variables CSS apropiadas para minimizar reglas CSS
           adicionales con nuestros mixins <code>button-variant()</code>, <code>button-outline-variant()</code> y
-          <code>button-size()</code>.</p>
+          <code>button-size()</code>.
+        </p>
         <p>Aquí tienes un ejemplo de cómo crear una clase modificadora <code>.btn-*</code> personalizada como lo hacemos
           para los botones exclusivos de nuestros documentación reasignando las variables CSS de Bootstrap con una
           mezcla de nuestras propias variables CSS y Sass.</p>
@@ -1683,7 +1689,8 @@
         <h3 id="sass-mixins">Sass mixins <a class="anchor-link" href="#sass-mixins"
             aria-label="Link to this section: Sass mixins"></a></h3>
         <p>Hay tres combinaciones para botones: combinación de botón y variante de contorno de botón (ambas basadas en
-          <code>$theme-colors</code>), además de una combinación de tamaño de botón.</p>
+          <code>$theme-colors</code>), además de una combinación de tamaño de botón.
+        </p>
         <div class="bd-example-snippet bd-code-snippet bd-file-ref">
           <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
             <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small"
@@ -1792,7 +1799,8 @@
         <h3 id="sass-loops">Sass loops <a class="anchor-link" href="#sass-loops"
             aria-label="Link to this section: Sass loops"></a></h3>
         <p>Las variantes de botones (para botones regulares y de contorno) usan sus respectivos mixins con nuestro mapa
-          <code>$theme-colors</code> para generar las clases modificadoras en <code>scss/_buttons.scss</code>.</p>
+          <code>$theme-colors</code> para generar las clases modificadoras en <code>scss/_buttons.scss</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet bd-file-ref">
           <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
             <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small"

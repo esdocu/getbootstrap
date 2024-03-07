@@ -363,8 +363,7 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/content/typography" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/5.1/content/typography">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/content/typography" rel="nofollow"
@@ -385,8 +384,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -857,16 +856,19 @@
             el mejor <code>font-family</code> para cada sistema operativo y dispositivo.</li>
           <li>Para una escala de tipografía más inclusiva y accesible, utilizamos la raíz predeterminada del navegador
             <code>font-size</code> (normalmente 16 píxeles) para que los visitantes puedan personalizar los valores
-            predeterminados de su navegador según sea necesario.</li>
+            predeterminados de su navegador según sea necesario.
+          </li>
           <li>Usa los atributos <code>$font-family-base</code>, <code>$font-size-base</code> y
-            <code>$line-height-base</code> como nuestra base tipográfica aplicada al <code>&lt;body&gt;</code>.</li>
+            <code>$line-height-base</code> como nuestra base tipográfica aplicada al <code>&lt;body&gt;</code>.
+          </li>
           <li>Establece el color del enlace global mediante <code>$link-color</code>.</li>
           <li>Usa <code>$body-bg</code> para establecer un <code>background-color</code> en el <code>&lt;body&gt;</code>
             (<code>#fff</code> por defecto).</li>
         </ul>
         <p>Estos estilos se pueden encontrar dentro de <code>_reboot.scss</code>, y las variables globales están
           definidas en <code>_variables.scss</code>. Asegúrate de configurar <code>$font-size-base</code> en
-          <code>rem</code>.</p>
+          <code>rem</code>.
+        </p>
         <h2 id="headings">Títulos <a class="anchor-link" href="#headings"
             aria-label="Link to this section: Headings"></a></h2>
         <p>Todos los encabezados HTML, desde <code>&lt;h1&gt;</code> hasta <code>&lt;h6&gt;</code>, están disponibles.
@@ -1014,7 +1016,8 @@
         <p>Los encabezados de visualización se configuran mediante el mapa Sass <code>$display-font-sizes</code> y dos
           variables, <code>$display-font-weight</code> y <code>$display-line-height</code>.</p>
         <p>Los encabezados de visualización se pueden personalizar mediante dos variables,
-          <code>$display-font-family</code> y <code>$display-font-style</code>.</p>
+          <code>$display-font-family</code> y <code>$display-font-style</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet bd-file-ref">
           <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
             <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small"
@@ -1136,7 +1139,8 @@
         </ul>
         <p>Aunque no se muestra arriba, siéntete libre de usar <code>&lt;b&gt;</code> y <code>&lt;i&gt;</code> en HTML5.
           <code>&lt;b&gt;</code> está destinado a resaltar palabras o frases sin transmitir importancia adicional,
-          mientras que <code>&lt;i&gt;</code> está destinado principalmente a voz, términos técnicos, etc.</p>
+          mientras que <code>&lt;i&gt;</code> está destinado principalmente a voz, términos técnicos, etc.
+        </p>
         <h2 id="text-utilities">Utilidades de texto <a class="anchor-link" href="#text-utilities"
             aria-label="Link to this section: Text utilities"></a></h2>
         <p>Cambia la alineación del texto, la transformación, el estilo, el peso, la altura de la línea, la decoración y
@@ -1179,7 +1183,8 @@
         <h2 id="blockquotes">Blockquotes <a class="anchor-link" href="#blockquotes"
             aria-label="Link to this section: Blockquotes"></a></h2>
         <p>Para citar bloques de contenido de otra fuente dentro de tu documento. Envuelve
-          <code>&lt;blockquote class="blockquote"&gt;</code> alrededor de cualquier HTML como cita.</p>
+          <code>&lt;blockquote class="blockquote"&gt;</code> alrededor de cualquier HTML como cita.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <blockquote class="blockquote">
@@ -1215,7 +1220,8 @@
           <code>&lt;blockquote&gt;</code>. Al proporcionar atribución, incluye tu <code>&lt;blockquote&gt;</code> en un
           <code>&lt;figure&gt;</code> y usa un <code>&lt;figcaption&gt;</code> o un elemento de nivel de bloque (por
           ejemplo, <code>&lt;p&gt;</code>) con la clase <code>.blockquote-footer</code>. Asegúrate de incluir también el
-          nombre del trabajo fuente en <code>&lt;cite&gt;</code>.</p>
+          nombre del trabajo fuente en <code>&lt;cite&gt;</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <figure>
@@ -1392,7 +1398,8 @@
 
         <h3 id="inline">Inline <a class="anchor-link" href="#inline" aria-label="Link to this section: Inline"></a></h3>
         <p>Elimina las viñetas de una lista y aplica un poco de <code>margin</code> con una combinación de dos clases,
-          <code>.list-inline</code> y <code>.list-inline-item</code>.</p>
+          <code>.list-inline</code> y <code>.list-inline-item</code>.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <ul class="list-inline">
@@ -1430,7 +1437,8 @@
             href="#description-list-alignment" aria-label="Link to this section: Description list alignment"></a></h3>
         <p>Alinear términos y descripciones horizontalmente usando las clases predefinidas de nuestro sistema de
           cuadrícula (o mixins semánticos). Para plazos más largos, puedes agregar opcionalmente una clase
-          <code>.text-truncate</code> para truncar el texto con puntos suspensivos.</p>
+          <code>.text-truncate</code> para truncar el texto con puntos suspensivos.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <dl class="row">
@@ -1509,7 +1517,8 @@
             aria-label="Link to this section: Responsive font sizes"></a></h2>
         <p>En Bootstrap 5, hemos habilitado tamaños de fuente responsive de forma predeterminada, lo que permite que el
           texto se escale de manera más natural en todos los tamaños de dispositivos y viewports. Echa un vistazo a la
-          <a href="/docs/5.3/getting-started/rfs/">página RFS</a> para descubrir cómo funciona.</p>
+          <a href="/docs/5.3/getting-started/rfs/">página RFS</a> para descubrir cómo funciona.
+        </p>
         <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
         <h3 id="sass-variables">Variables Sass <a class="anchor-link" href="#sass-variables"
             aria-label="Link to this section: Sass variables"></a></h3>

@@ -363,8 +363,8 @@
                     target="_blank" title="Página todavía no traducida">v5.2.3 ⬀</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="https://getbootstrap.com/docs/5.1/getting-started/rtl" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">v5.1.3 ⬀</a>
+                  <a class="dropdown-item"
+                    href="https://getbootstrap.esdocu.com/docs/5.1/getting-started/rtl">v5.1.3</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/getting-started/rtl" rel="nofollow"
@@ -385,8 +385,8 @@
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="https://getbootstrap.com/docs/versions" rel="nofollow"
-                    target="_blank" title="Página todavía no traducida">Todas las versiones ⬀</a></li>
+                <li><a class="dropdown-item" href="https://getbootstrap.esdocu.com/docs/versions">Todas las
+                    versiones</a></li>
               </ul>
             </li>
 
@@ -855,7 +855,8 @@
         <ol>
           <li>Establece <code>dir="rtl"</code> en el elemento <code>&lt;html&gt;</code>.</li>
           <li>Agrega un atributo <code>lang</code> apropiado, como <code>lang="ar"</code>, en el elemento
-            <code>&lt;html&gt;</code>.</li>
+            <code>&lt;html&gt;</code>.
+          </li>
         </ol>
         <p>A partir de ahí, deberás incluir una versión RTL de nuestro CSS. Por ejemplo, aquí está la hoja de estilo de
           nuestro CSS compilado y minimizado con RTL habilitado:</p>
@@ -954,9 +955,11 @@
         <p>En el caso de que estés usando una fuente personalizada, ten en cuenta que no todas las fuentes admiten el
           alfabeto no latino. Para cambiar de la familia paneuropea a la árabe, es posible que necesites usar
           <code>/*rtl:insert: {value}*/</code> en tu pila de fuentes para modificar los nombres de las familias de
-          fuentes.</p>
+          fuentes.
+        </p>
         <p>Por ejemplo, para cambiar de la fuente <code>Helvetica Neue</code> para LTR a
-          <code>Helvetica Neue Arabic</code> para RTL, tu código Sass podría verse así:</p>
+          <code>Helvetica Neue Arabic</code> para RTL, tu código Sass podría verse así:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$font-family-sans-serif</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">  <span class="n">Helvetica</span> <span class="n">Neue</span> <span class="si">#{</span><span class="s2">"/* rtl:insert:Arabic */"</span><span class="si">}</span><span class="o">,</span>
@@ -1010,13 +1013,15 @@
         <p>Después de ejecutar Sass y luego RTLCSS, cada selector en tus archivos CSS tendrá antepuesto
           <code>.ltr</code> y <code>.rtl</code> para RTL. Ahora puedes usar ambos archivos en la misma página y
           simplemente usar <code>.ltr</code> o <code>.rtl</code> en los envoltorios de tus componentes para usar una
-          dirección u otra.</p>
+          dirección u otra.
+        </p>
         <div class="bd-callout bd-callout-warning">
           <p><strong>Casos extremos y limitaciones conocidas</strong> a considerar cuando se trabaja con una
             implementación combinada de LTR y RTL:</p>
           <ol>
             <li>Al cambiar <code>.ltr</code> y <code>.rtl</code>, asegúrate de agregar los atributos <code>dir</code> y
-              <code>lang</code> en consecuencia.</li>
+              <code>lang</code> en consecuencia.
+            </li>
             <li>Cargar ambos archivos puede ser un verdadero cuello de botella en el rendimiento: considera algo de <a
                 href="/docs/5.3/customize/optimize/">optimización</a> y tal vez intentes <a
                 href="https://www.filamentgroup.com/lab/load-css-simpler/">carga uno de esos archivos de forma
@@ -1033,7 +1038,8 @@
         <p>El <a href="https://getbootstrap.com/docs/5.3/components/breadcrumb/" rel="nofollow" target="_blank"
             title="Página todavía no traducida">separador de breadcrumb ⬀</a> es el único caso que requiere una variable
           completamente nueva, concretamente <code>$breadcrumb-divider-flipped</code>, cuyo valor predeterminado es
-          <code>$breadcrumb-divider</code>.</p>
+          <code>$breadcrumb-divider</code>.
+        </p>
         <h2 id="additional-resources">Recursos adicionales <a class="anchor-link" href="#additional-resources"
             aria-label="Link to this section: Additional resources"></a></h2>
         <ul>
