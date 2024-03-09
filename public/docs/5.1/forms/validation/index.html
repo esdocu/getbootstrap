@@ -649,11 +649,13 @@
         <ul>
           <li>La validación de formularios HTML se aplica a través de dos pseudoclases de CSS, <code>:invalid</code> y
             <code>:valid</code>. Se aplica a los elementos <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> y
-            <code>&lt;textarea&gt;</code>.</li>
+            <code>&lt;textarea&gt;</code>.
+          </li>
           <li>Bootstrap aplica los estilos <code>:invalid</code> y <code>:valid</code> a la clase padre
             <code>.was-validated</code>, generalmente aplicada a <code>&lt;form&gt;</code>. De lo contrario, cualquier
             campo obligatorio sin valor aparecerá como no válido al cargar la página. De esta forma, puedes elegir
-            cuándo activarlos (por lo general, después de intentar enviar el formulario).</li>
+            cuándo activarlos (por lo general, después de intentar enviar el formulario).
+          </li>
           <li>Para restablecer la apariencia del formulario (por ejemplo, en el caso de envíos de formularios dinámicos
             usando AJAX), elimina la clase <code>.was-validated</code> del <code>&lt;form&gt;</code> nuevamente después
             del envío.</li>
@@ -664,7 +666,8 @@
             <code>&lt;label&gt;</code> que se encuentra antes de un control de formulario en el DOM sin la ayuda de <a
               href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
               data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.</li>
+              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.
+          </li>
           <li>Todos los navegadores modernos admiten la <a
               href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">API
               de validación de restricciones</a>, una serie de métodos de <a href="https://esdocu.dev/javascript"
@@ -694,7 +697,8 @@
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> interceptará el botón de enviar y te
           transmitirá sus comentarios. Cuando intentes enviar, verás los estilos <code>:invalid</code> y
-          <code>:valid</code> aplicados a los controles de tu formulario.</p>
+          <code>:valid</code> aplicados a los controles de tu formulario.
+        </p>
         <p>Los estilos de feedbacks personalizados aplican colores, bordes, estilos de enfoque e iconos de fondo
           personalizados para comunicar mejor los feedbacks. Los iconos de fondo para <code>&lt;select&gt;</code> solo
           están disponibles con <code>.form-select</code>, y no con <code>.form-control</code>.</p>
@@ -967,7 +971,8 @@
         <p>Recomendamos utilizar la validación del lado del cliente, pero en caso de que necesites la validación del
           lado del servidor, puedes indicar campos de formulario válidos y no válidos con <code>.is-invalid</code> y
           <code>.is-valid</code>. Ten en cuenta que <code>.invalid-feedback</code> también es compatible con estas
-          clases.</p>
+          clases.
+        </p>
         <p>Para los campos no válidos, asegúrate de que el mensaje de error/feedback no válido esté asociado con el
           campo de formulario relevante utilizando <code>aria-describedby</code> (ten en cuenta que este atributo
           permite hacer referencia a más de un <code>id</code>, en caso de que el campo ya apunte a un texto de
@@ -1223,7 +1228,8 @@
           <code>.{valid|invalid}-feedback</code> por clases <code>.{valid|invalid}-tooltip</code> para mostrar
           comentarios de validación en un tooltip con estilo. Asegúrate de tener un padre con
           <code>position: relative</code> en él para el posicionamiento del tooltip. En el siguiente ejemplo, nuestras
-          clases de columnas ya tienen esto, pero tu proyecto puede requerir una configuración alternativa.</p>
+          clases de columnas ya tienen esto, pero tu proyecto puede requerir una configuración alternativa.
+        </p>
         <div class="bd-example">
           <form class="row g-3 needs-validation" novalidate="">
             <div class="col-md-4 position-relative">
@@ -1535,7 +1541,8 @@
           Sass es cómo generamos los estados de validación predeterminados <code>valid</code>/<code>invalid</code>. Se
           incluye un mapa anidado para personalizar el color, el ícono, el color de tooltips y la sombra de enfoque de
           cada estado. Si bien los navegadores no admiten otros estados, aquellos que usan estilos personalizados pueden
-          agregar fácilmente feedbacks de formularios más complejos.</p>
+          agregar fácilmente feedbacks de formularios más complejos.
+        </p>
         <p>Ten en cuenta que <strong>no recomendamos personalizar los valores de <code>$form-validation-states</code>
             sin modificar también el mixin <code>form-validation-state</code></strong>.</p>
 
@@ -1628,72 +1635,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 

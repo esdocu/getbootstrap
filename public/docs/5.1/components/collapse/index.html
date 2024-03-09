@@ -650,7 +650,8 @@
           ocultar contenido. Los botones o enlaces se utilizan como disparadores que se asignan a elementos específicos
           que alternan. Colapsar un elemento animará la <code>height</code> desde su valor actual hasta <code>0</code>.
           Dada la forma en que CSS maneja las animaciones, no puedes usar <code>padding</code> en un elemento
-          <code>.collapse</code>. En su lugar, utiliza la clase como un elemento envolvente independiente.</p>
+          <code>.collapse</code>. En su lugar, utiliza la clase como un elemento envolvente independiente.
+        </p>
         <div class="bd-callout bd-callout-info">
           El efecto de animación de este componente depende de la media query <code>prefers-reduced-motion</code>.
           Consulta la <a href="/docs/5.1/getting-started/accessibility/#reduced-motion">sección de movimiento reducido
@@ -711,7 +712,8 @@
           <code>.collapse-horizontal</code> para cambiar el <code>width</code> en lugar de <code>height</code> y
           establece un <code>width</code> en el elemento secundario inmediato. Siéntete libre de escribir tu propio Sass
           personalizado, usar estilos en línea o usar nuestras <a href="/docs/5.1/utilities/sizing/">utilidades de
-            ancho</a>.</p>
+            ancho</a>.
+        </p>
         <div class="bd-callout bd-callout-info">
           Ten en cuenta que, si bien el siguiente ejemplo tiene un conjunto de <code>min-height</code> para evitar
           repintados excesivos en nuestros documentos, esto no es un requisito explícito. <strong>Solo se requiere el
@@ -823,20 +825,23 @@
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>, o porque el usuario activó otro
           elemento de control también vinculado al mismo elemento plegable). Si el elemento HTML del elemento de control
           no es un botón (por ejemplo, un <code>&lt;a&gt;</code> o <code>&lt;div&gt;</code>), se debes agregar el
-          atributo <code>role="button"</code> al elemento.</p>
+          atributo <code>role="button"</code> al elemento.
+        </p>
         <p>Si tu elemento de control apunta a un solo elemento contraíble, es decir, el atributo
           <code>data-bs-target</code> apunta a un selector <code>id</code>, debes agregar el atributo
           <code>aria-controls</code> al elemento de control, que contiene el <code>id</code> del elemento plegable. Los
           lectores de pantalla modernos y las tecnologías de asistencia similares hacen uso de este atributo para
           proporcionar a los usuarios accesos directos adicionales para navegar directamente al propio elemento
-          contraíble.</p>
+          contraíble.
+        </p>
         <p>Ten en cuenta que la implementación actual de Bootstrap no cubre las diversas interacciones de teclado
           <em>opcionales</em> descritas en el patrón de acordeón <a
             href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion">WAI-ARIA Authoring Practices 1.1</a>, deberás
           incluirlos tú mismo con <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
             data-bs-placement="top" data-bs-custom-class="custom-tooltip"
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.</p>
+            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.
+        </p>
         <h2 id="sass">Sass</h2>
         <h3 id="variables">Variables</h3>
         <div class="highlight">
@@ -882,7 +887,8 @@
           elemento colapsable. Si deseas que se abra por defecto, agrega la clase adicional <code>show</code>.</p>
         <p>Para agregar una gestión de grupos similar a un acordeón a un área contraíble, agrega el atributo de datos
           <code>data-bs-parent="#selector"</code>. Consulta la <a href="/docs/5.1/components/accordion/">página de
-            Accordion</a> para obtener más información.</p>
+            Accordion</a> para obtener más información.
+        </p>
         <h3 id="a-través-de-javascript">A través de <a href="https://esdocu.dev/javascript" target="_blank"
             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
@@ -973,13 +979,15 @@
               <td><code>show</code></td>
               <td>Muestra un elemento colapsable. <strong>Regresa al punto de la llamada antes de que se haya mostrado
                   realmente el elemento contraíble</strong> (por ejemplo, antes de que ocurra el evento
-                <code>shown.bs.collapse</code>). </td>
+                <code>shown.bs.collapse</code>).
+              </td>
             </tr>
             <tr>
               <td><code>hide</code></td>
               <td>Oculta un elemento contraíble. <strong>Vuelve al punto de la llamada antes de que el elemento
                   contraíble se haya ocultado</strong> (por ejemplo, antes de que ocurra el evento
-                <code>hidden.bs.collapse</code>).</td>
+                <code>hidden.bs.collapse</code>).
+              </td>
             </tr>
             <tr>
               <td><code>dispose</code></td>
@@ -1138,72 +1146,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 

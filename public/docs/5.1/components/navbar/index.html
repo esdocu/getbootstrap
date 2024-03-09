@@ -657,7 +657,8 @@
         <ul>
           <li>Las barras de navegación requieren un contenedor <code>.navbar</code> con
             <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> para colapsar con capacidad responsive y clases de <a
-              href="#color-schemes">esquema de color</a>.</li>
+              href="#color-schemes">esquema de color</a>.
+          </li>
           <li>Las barras de navegación y su contenido son fluidos por defecto. Cambia el <a
               href="#containers">contenedor</a> para limitar su ancho horizontal de diferentes maneras.</li>
           <li>Usa nuestras clases de utilidad <a href="/docs/5.1/utilities/spacing/">spacing</a> y <a
@@ -672,7 +673,8 @@
             como <code>&lt;div&gt;</code>, agrega un <code>role="navigation"</code> a cada barra de navegación para
             identificarla explícitamente como una región de referencia para usuarios de tecnologías de asistencia.</li>
           <li>Indica el elemento actual usando <code>aria-current="page"</code> para la página actual o
-            <code>aria-current="true"</code> para el elemento actual en un conjunto.</li>
+            <code>aria-current="true"</code> para el elemento actual en un conjunto.
+          </li>
         </ul>
         <div class="bd-callout bd-callout-info">
           El efecto de animación de este componente depende de la media query <code>prefers-reduced-motion</code>.
@@ -781,7 +783,8 @@
         </div>
         <p>Este ejemplo usa las clases de utilidad de <a href="/docs/5.1/utilities/background/">background</a>
           (<code>bg-light</code>) y de <a href="/docs/5.1/utilities/spacing/">spacing</a> (<code>me-auto</code>,
-          <code>mb-2</code>, <code>mb-lg-0</code>, <code>me-2</code>).</p>
+          <code>mb-2</code>, <code>mb-lg-0</code>, <code>me-2</code>).
+        </p>
         <h3 id="tu-marca">Tu marca</h3>
         <p>El <code>.navbar-brand</code> se puede aplicar a la mayoría de los elementos, pero un enlace funciona mejor,
           ya que algunos elementos pueden requerir clases de utilidad o estilos personalizados.</p>
@@ -846,7 +849,8 @@
         <h4 id="imagen-y-texto">Imagen y texto</h4>
         <p>También puedes hacer uso de algunas utilidades adicionales para agregar una imagen y texto al mismo tiempo.
           Ten en cuenta la adición de <code>.d-inline-block</code> y <code>.align-text-top</code> en
-          <code>&lt;img&gt;</code>.</p>
+          <code>&lt;img&gt;</code>.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
@@ -872,7 +876,8 @@
         <p>Los enlaces de navegación de Navbar se basan en nuestras opciones <code>.nav</code> con su propia clase
           modificadora y requieren el uso de <a href="#toggler">toggler classes</a> para un estilo responsive adecuado.
           <strong>La navegación en las navbars también crecerá para ocupar tanto espacio horizontal como sea
-            posible</strong> para mantener el contenido de la barra de navegación alineado de forma segura.</p>
+            posible</strong> para mantener el contenido de la barra de navegación alineado de forma segura.
+        </p>
         <p>Agrega la clase <code>.active</code> en <code>.nav-link</code> para indicar la página actual.</p>
         <p>Ten en cuenta que también debes agregar el atributo <code>aria-current</code> en el <code>.nav-link</code>
           activo.</p>
@@ -971,7 +976,8 @@
         </div>
         <p>También puedes usar menús desplegables en tu barra de navegación. Los menús desplegables requieren un
           elemento envolvente para el posicionamiento, así que asegúrate de usar elementos separados y anidados para
-          <code>.nav-item</code> y <code>.nav-link</code> como se muestra a continuación.</p>
+          <code>.nav-item</code> y <code>.nav-link</code> como se muestra a continuación.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -1208,7 +1214,8 @@
         <p>Tematizar la barra de navegación nunca ha sido tan fácil gracias a la combinación de clases de temas y
           utilidades de <code>background-color</code>. Elije entre <code>.navbar-light</code> para usar con colores de
           fondo claros o <code>.navbar-dark</code> para colores de fondo oscuros. Luego, personaliza con las utilidades
-          <code>.bg-*</code>.</p>
+          <code>.bg-*</code>.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -1364,7 +1371,8 @@
           fijo en la parte inferior (se desplaza con la página hasta que llega al final y luego permanece allí).</p>
         <p>Las barras de navegación fijas usan <code>position: fixed</code>, lo que significa que se extraen del flujo
           normal del DOM y pueden requerir CSS personalizado (por ejemplo, <code>padding-top</code> en el
-          <code>&lt;body&gt;</code>) para evitar la superposición con otros elementos.</p>
+          <code>&lt;body&gt;</code>) para evitar la superposición con otros elementos.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
@@ -1441,13 +1449,15 @@
           navegación. De forma predeterminada, el desplazamiento se inicia en <code>75vh</code> (o el 75% de la altura
           del viewport), pero puedes sobrescribirlo con la propiedad personalizada CSS local
           <code>--bs-navbar-height</code> o estilos personalizados. En viewports más grandes, cuando se expande la barra
-          de navegación, el contenido aparecerá como en una barra de navegación predeterminada.</p>
+          de navegación, el contenido aparecerá como en una barra de navegación predeterminada.
+        </p>
         <p>Ten en cuenta que este comportamiento viene con un inconveniente potencial de <code>overflow</code>: al
           configurar <code>overflow-y: auto</code> (requerido para desplazar el contenido aquí), <code>overflow-x</code>
           es el equivalente de <code>auto</code>, que recortará algo de contenido horizontal.</p>
         <p>Aquí hay un ejemplo de barra de navegación que usa <code>.navbar-nav-scroll</code> con
           <code>style="--bs-scroll-height: 100px;"</code>, con algunas utilidades de margen adicionales para un espacio
-          óptimo.</p>
+          óptimo.
+        </p>
         <div class="bd-example">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -1532,10 +1542,12 @@
         <p>Las barras de navegación pueden usar las clases <code>.navbar-toggler</code>, <code>.navbar-collapse</code> y
           <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> para determinar cuándo su contenido colapsa detrás de un
           botón. En combinación con otras utilidades, puedes elegir fácilmente cuándo mostrar u ocultar elementos
-          particulares.</p>
+          particulares.
+        </p>
         <p>Para las barras de navegación que nunca colapsan, agrega la clase <code>.navbar-expand</code> en la barra de
           navegación. Para las barras de navegación que siempre colapsan, no agregues ninguna clase
-          <code>.navbar-expand</code>.</p>
+          <code>.navbar-expand</code>.
+        </p>
         <h3 id="toggler">Toggler</h3>
         <p>Los togglers de la barra de navegación están alineados a la izquierda de forma predeterminada, pero si siguen
           a un elemento hermano como <code>.navbar-brand</code>, se alinearán automáticamente en el extremo derecho. Al
@@ -1762,7 +1774,8 @@
         <h3 id="offcanvas">Offcanvas</h3>
         <p>Transforma tu barra de navegación que se expande y contrae en un cajón fuera del lienzo con el complemento
           Offcanvas. Extendemos los estilos predeterminados de offcanvas y usamos nuestras clases
-          <code>.navbar-expand-*</code> para crear una barra lateral de navegación dinámica y flexible.</p>
+          <code>.navbar-expand-*</code> para crear una barra lateral de navegación dinámica y flexible.
+        </p>
         <p>En el siguiente ejemplo, para crear una barra de navegación Offcanvas que siempre está colapsada en todos los
           brakpoints, omite por completo la clase <code>.navbar-expand-*</code>.</p>
         <div class="bd-example">
@@ -2088,72 +2101,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 

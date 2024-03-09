@@ -669,12 +669,14 @@
           <code>$theme-colors</code> no se aplicaban a otros mapas temáticos que dependían de
           <code>$theme-colors</code>, lo que interrumpía los flujos de trabajo de personalización clave. En resumen,
           Sass tiene una limitación en la que una vez que se ha <em>usado</em> una variable o mapa predeterminado, no se
-          puede actualizar.</p>
+          puede actualizar.
+        </p>
         <p>Esta es la razón por la cual las personalizaciones de variables en Bootstrap tienen que venir después de
           <code>@import "functions"</code>, pero antes de <code>@import "variables"</code> y el resto de nuestra pila de
           importación. Lo mismo se aplica a los mapas de Sass: debes sobrescribir los valores predeterminados antes de
           que se utilicen los valores predeterminados. Los siguientes mapas se han movido al nuevo
-          <code>_maps.scss</code>:</p>
+          <code>_maps.scss</code>:
+        </p>
         <ul>
           <li><code>$theme-colors-rgb</code></li>
           <li><code>$utilities-colors</code></li>
@@ -760,7 +762,8 @@
             <p>Hemos eliminado las fusiones de mapas de Sass predeterminadas para facilitar la eliminación de valores
               redundantes. Ten en cuenta que ahora debes definir todos los valores en los mapas de Sass como
               <code>$theme-colors</code>. Mira cómo lidiar con <a href="/docs/5.1/customize/sass/#maps-and-loops">Mapas
-                Sass</a>.</p>
+                Sass</a>.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se cambió el nombre de la función <code>color-yiq()</code>
@@ -769,7 +772,8 @@
             <ul>
               <li>Se cambia el nombre de <code>$yiq-contrasted-threshold</code> a <code>$min-contrast-ratio</code>.</li>
               <li><code>$yiq-text-dark</code> y <code>$yiq-text-light</code> se renombran respectivamente a
-                <code>$color-contrast-dark</code> y <code>$color-contrast-light</code>.</li>
+                <code>$color-contrast-dark</code> y <code>$color-contrast-light</code>.
+              </li>
             </ul>
           </li>
           <li>
@@ -782,18 +786,21 @@
               <li>De manera similar, el segundo parámetro en <code>media-breakpoint-between()</code> también usa el
                 breakpoint en sí mismo en lugar del siguiente breakpoint (por ejemplo,
                 <code>media-between(sm, lg)</code> en lugar de <code>media-breakpoint-between(sm, md)</code> apunta a
-                viewports entre <code>sm</code> y <code>lg</code>).</li>
+                viewports entre <code>sm</code> y <code>lg</code>).
+              </li>
             </ul>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se eliminaron los estilos de impresión y la variable
               <code>$enable-print-styles</code>. Las clases de visualización de impresión todavía existen. <a
-                href="https://github.com/twbs/bootstrap/pull/28339">Ver #28339</a>.</p>
+                href="https://github.com/twbs/bootstrap/pull/28339">Ver #28339</a>.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se eliminaron las funciones <code>color()</code>,
               <code>theme-color()</code> y <code>gray()</code> en favor de las variables. <a
-                href="https://github.com/twbs/bootstrap/pull/29083">Ver #29083</a>.</p>
+                href="https://github.com/twbs/bootstrap/pull/29083">Ver #29083</a>.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se renombró la función <code>theme-color-level()</code> a
@@ -805,19 +812,22 @@
           <li>
             <p><span class="badge bg-danger">Breaking</span> Renombrado
               <code>$enable-prefers-reduced-motion-media-query</code> y <code>$enable-pointer-cursor-for-buttons</code>
-              a <code>$enable-reduced-motion</code> y <code>$enable-button-pointers</code> por brevedad.</p>
+              a <code>$enable-reduced-motion</code> y <code>$enable-button-pointers</code> por brevedad.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Eliminado el mixin <code>bg-gradient-variant()</code>.
               Utiliza la clase <code>.bg-gradient</code> para agregar degradados a los elementos en lugar de las clases
-              <code>.bg-gradient-*</code> generadas.</p>
+              <code>.bg-gradient-*</code> generadas.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> <strong>Se eliminaron los mixins anteriormente
                 obsoletos:</strong></p>
             <ul>
               <li><code>hover</code>, <code>hover-focus</code>, <code>plain-hover-focus</code>, and
-                <code>hover-focus-active</code></li>
+                <code>hover-focus-active</code>
+              </li>
               <li><code>float()</code></li>
               <li><code>form-control-mixin()</code></li>
               <li><code>nav-divider()</code></li>
@@ -830,7 +840,8 @@
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se cambió el nombre de la función
               <code>scale-color()</code> a <code>shift-color()</code> para evitar la colisión con la propia función de
-              escalado de color de Sass.</p>
+              escalado de color de Sass.
+            </p>
           </li>
           <li>
             <p>Los mixins <code>box-shadow</code> ahora permiten valores <code>null</code> y eliminan <code>none</code>
@@ -849,7 +860,8 @@
               <code>shade-color()</code>. Estas funciones mezclarán el color con blanco o negro en lugar de cambiar su
               luminosidad en una cantidad fija. El <code>shift-color()</code> teñirá o sombreará un color dependiendo de
               si su parámetro de peso es positivo o negativo. <a href="https://github.com/twbs/bootstrap/pull/30622">Ver
-                #30622</a> para más detalles.</p>
+                #30622</a> para más detalles.
+            </p>
           </li>
           <li>
             <p>Se agregaron nuevos tintes y sombras para cada color, proporcionando nueve colores separados para cada
@@ -862,14 +874,16 @@
           </li>
           <li>
             <p>Para soportar nuestro sistema de color, hemos agregamos nuevas funciones personalizadas
-              <code>tint-color()</code> y <code>shade-color()</code> para mezclar nuestros colores apropiadamente.</p>
+              <code>tint-color()</code> y <code>shade-color()</code> para mezclar nuestros colores apropiadamente.
+            </p>
           </li>
         </ul>
         <h2 id="actualizaciones-de-cuadrícula">Actualizaciones de cuadrícula</h2>
         <ul>
           <li>
             <p><strong>¡Nuevo breakpoint!</strong> Se agregó un nuevo breakpoint <code>xxl</code> para
-              <code>1400px</code> y superiores. No hay cambios en todos los demás breakpoints.</p>
+              <code>1400px</code> y superiores. No hay cambios en todos los demás breakpoints.
+            </p>
           </li>
           <li>
             <p><strong>Gutters mejorados.</strong> Los gutters ahora se configuran en rems, y son más angostas que v4
@@ -878,9 +892,11 @@
             <ul>
               <li>Se agregó una nueva <a href="/docs/5.1/layout/gutters/">clase de gutter</a> (<code>.g-*</code>,
                 <code>.gx-*</code> y <code>.gy-*</code>) para controlar gutters horizontal/vertical, gutters
-                horizontales y gutters verticales.</li>
+                horizontales y gutters verticales.
+              </li>
               <li><span class="badge bg-danger">Breaking</span> Se cambió el nombre de <code>.no-gutters</code> a
-                <code>.g-0</code> para que coincida con las nuevas utilidades de gutters.</li>
+                <code>.g-0</code> para que coincida con las nuevas utilidades de gutters.
+              </li>
             </ul>
           </li>
           <li>
@@ -900,7 +916,8 @@
           <li>
             <p><span class="badge bg-danger">Breaking</span> <code>bootstrap-grid.css</code> ahora solo aplica
               <code>box-sizing: border-box</code> a la columna en lugar de restablecer el box-sizing global. De esta
-              manera, nuestros estilos de cuadrícula se pueden usar en más lugares sin interferencias.</p>
+              manera, nuestros estilos de cuadrícula se pueden usar en más lugares sin interferencias.
+            </p>
           </li>
           <li>
             <p><code>$enable-grid-classes</code> ya no deshabilita la generación de clases contenedoras. <a
@@ -922,11 +939,13 @@
             <p><span class="badge bg-danger">Breaking</span> Revisamos nuestra tipografía de visualización para
               reemplazar nuestras variables <code>$display-*</code> y con un mapa Sass <code>$display-font-sizes</code>.
               También se eliminaron las variables <code>$display-*-weight</code> individuales para un único
-              <code>$display-font-weight</code> y se ajustó el <code>font-size</code>s.</p>
+              <code>$display-font-weight</code> y se ajustó el <code>font-size</code>s.
+            </p>
           </li>
           <li>
             <p>Se agregaron dos nuevos tamaños de encabezado <code>.display-*</code>, <code>.display-5</code> y
-              <code>.display-6</code>.</p>
+              <code>.display-6</code>.
+            </p>
           </li>
           <li>
             <p><strong>Los enlaces están subrayados de manera predeterminada</strong> (no solo al pasar el mouse), a
@@ -943,13 +962,15 @@
             <p><span class="badge bg-danger">Breaking</span> <code>.thead-light</code> y <code>.thead-dark</code> se
               eliminan en favor de las clases variantes <code>.table-*</code> que se pueden usar para todos elementos de
               la tabla (<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> y
-              <code>td</code>).</p>
+              <code>td</code>).
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> El mixin <code>table-row-variant()</code> se renombra a
               <code>table-variant()</code> y acepta solo 2 parámetros: <code>$color</code> (color nombre) y
               <code>$value</code> (código de color). El color del borde y los colores de énfasis se calculan
-              automáticamente en función de las variables de factor de la tabla.</p>
+              automáticamente en función de las variables de factor de la tabla.
+            </p>
           </li>
           <li>
             <p>Dividimos las variables de padding de las celdas de la tabla en <code>-y</code> y <code>-x</code>.</p>
@@ -971,12 +992,14 @@
             <p><span class="badge bg-danger">Breaking</span> Los elementos <code>&lt;hr&gt;</code> ahora usan
               <code>height</code> en lugar de <code>border</code> para admitir mejor el atributo <code>size</code>. Esto
               también permite el uso de utilidades de relleno para crear divisores más gruesos (por ejemplo,
-              <code>&lt;hr class="py-1"&gt;</code>).</p>
+              <code>&lt;hr class="py-1"&gt;</code>).
+            </p>
           </li>
           <li>
             <p>Se restablece el <code>padding-left</code> horizontal predeterminado en los elementos
               <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code> del valor predeterminado del navegador <code>40px</code>
-              a <code>2rem</code>.</p>
+              a <code>2rem</code>.
+            </p>
           </li>
           <li>
             <p>Se agregó <code>$enable-smooth-scroll</code>, que aplica <code>scroll-behavior: smooth</code>
@@ -989,7 +1012,8 @@
         <ul>
           <li>Las variables específicas de dirección horizontal, las utilidades y los mixins se han renombrado para usar
             propiedades lógicas como las que se encuentran en los diseños de flexbox, por ejemplo, <code>start</code> y
-            <code>end</code> en lugar de <code>left</code> y <code>right</code>.</li>
+            <code>end</code> en lugar de <code>left</code> y <code>right</code>.
+          </li>
         </ul>
         <h2 id="formularios">Formularios</h2>
         <ul>
@@ -1017,7 +1041,8 @@
           <li>
             <p><span class="badge bg-danger">Breaking</span> Eliminado <code>.input-group-append</code> y
               <code>.input-group-prepend</code>. Ahora puede simplemente agregar botones y
-              <code>.input-group-text</code> como elementos secundarios directos de los grupos de entrada.</p>
+              <code>.input-group-text</code> como elementos secundarios directos de los grupos de entrada.
+            </p>
           </li>
           <li>
             <p>El antiguo <a href="https://github.com/twbs/bootstrap/issues/25110">Falta el radio del borde en el grupo
@@ -1027,16 +1052,19 @@
           <li>
             <p><span class="badge bg-danger">Breaking</span> <strong>Clases de diseño específicas de formulario
                 eliminadas para nuestro sistema de cuadrícula.</strong> Use nuestra cuadrícula y utilidades en lugar de
-              <code>.form-group</code>, <code>.form-row</code>, o <code>.form-inline</code>.</p>
+              <code>.form-group</code>, <code>.form-row</code>, o <code>.form-inline</code>.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Las etiquetas de formulario ahora requieren
-              <code>.form-label</code>.</p>
+              <code>.form-label</code>.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> <code>.form-text</code> ya no establece
               <code>display</code>, lo que le permite crear texto de ayuda en línea o en bloque como desee simplemente
-              cambiando el elemento HTML.</p>
+              cambiando el elemento HTML.
+            </p>
           </li>
           <li>
             <p>Los íconos de validación ya no se aplican a <code>&lt;select&gt;</code>s con <code>multiple</code>.</p>
@@ -1064,7 +1092,8 @@
           </li>
           <li>
             <p>Se eliminaron los estilos personalizados para <code>&lt;hr&gt;</code>s en cada alerta, ya que ya usan
-              <code>currentColor</code>.</p>
+              <code>currentColor</code>.
+            </p>
           </li>
         </ul>
         <h3 id="badges">Badges</h3>
@@ -1072,11 +1101,13 @@
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se eliminaron todas las clases de color
               <code>.badge-*</code> para las utilidades de fondo (por ejemplo, use <code>.bg-primary</code> en lugar de
-              <code>.badge-primary</code>).</p>
+              <code>.badge-primary</code>).
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se eliminó <code>.badge-pill</code>: use la utilidad
-              <code>.rounded-pill</code> en su lugar.</p>
+              <code>.rounded-pill</code> en su lugar.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se eliminaron los estilos de hover y focus para los
@@ -1084,14 +1115,16 @@
           </li>
           <li>
             <p>Se aumentó el padding predeterminado para las insignias de <code>.25em</code>/<code>.5em</code> a
-              <code>.35em</code>/<code>.65em</code>.</p>
+              <code>.35em</code>/<code>.65em</code>.
+            </p>
           </li>
         </ul>
         <h3 id="breadcrumbs">Breadcrumbs</h3>
         <ul>
           <li>
             <p>Simplificó la apariencia predeterminada de las migas de pan eliminando <code>padding</code>,
-              <code>background-color</code> y <code>border-radius</code>.</p>
+              <code>background-color</code> y <code>border-radius</code>.
+            </p>
           </li>
           <li>
             <p>Se agregó una nueva propiedad personalizada de CSS <code>--bs-breadcrumb-divider</code> para una fácil
@@ -1110,7 +1143,8 @@
                 marcado.</strong> Ya no requerimos un elemento de ajuste, agregue <code>.btn-check</code> a
               <code>&lt;input&gt;</code> y empareje con cualquier clase <code>.btn</code> en <code>&lt;label&gt;</code>.
               <a href="https://github.com/twbs/bootstrap/pull/30650">Ver #30650</a>. <em>Los documentos para esto se han
-                movido de nuestra página de Botones a la nueva sección de Formularios.</em></p>
+                movido de nuestra página de Botones a la nueva sección de Formularios.</em>
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> <strong>Eliminó <code>.btn-block</code> para
@@ -1136,11 +1170,13 @@
             <p><span class="badge bg-danger">Breaking</span> Se eliminó <code>.card-deck</code> a favor de nuestra
               cuadrícula. Envuelva sus cartas en clases de columnas y agregue un contenedor principal
               <code>.row-cols-*</code> para recrear mazos de cartas (pero con más control sobre la alineación
-              responsive).</p>
+              responsive).
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se eliminó <code>.card-columns</code> a favor de Masonry.
-              <a href="https://github.com/twbs/bootstrap/pull/28922">Ver #28922</a>.</p>
+              <a href="https://github.com/twbs/bootstrap/pull/28922">Ver #28922</a>.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se reemplazó el acordeón basado en <code>.card</code> con
@@ -1168,7 +1204,8 @@
           <li>
             <p>Los botones de cierre ahora usan una <code>background-image</code> (SVG incrustado) en lugar de
               <code>&amp;times;</code> en el HTML, lo que permite una personalización más sencilla sin necesidad de
-              tocar el marcado.</p>
+              tocar el marcado.
+            </p>
           </li>
           <li>
             <p>Se agregó la nueva variante <code>.btn-close-white</code> que usa <code>filter: invert(1)</code> para
@@ -1236,7 +1273,8 @@
         <h3 id="navs-and-tabs">Navs and tabs</h3>
         <ul>
           <li>Se agregaron nuevas variables <code>null</code> para <code>font-size</code>, <code>font-weight</code>,
-            <code>color</code> y <code>:hover</code> <code>color</code> a la clase <code>.nav-link</code>.</li>
+            <code>color</code> y <code>:hover</code> <code>color</code> a la clase <code>.nav-link</code>.
+          </li>
         </ul>
         <h3 id="navbars">Navbars</h3>
         <ul>
@@ -1261,7 +1299,8 @@
         <ul>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Renombrado <code>.arrow</code> a
-              <code>.popover-arrow</code> en nuestra plantilla de popover predeterminada.</p>
+              <code>.popover-arrow</code> en nuestra plantilla de popover predeterminada.
+            </p>
           </li>
           <li>
             <p>Se renombró la opción <code>whiteList</code> a <code>allowList</code>.</p>
@@ -1271,7 +1310,8 @@
         <ul>
           <li>
             <p>Los giradores ahora respetan <code>preferers-reduced-motion: reduce</code> al ralentizar las animaciones.
-              <a href="https://github.com/twbs/bootstrap/pull/31882">Ver #31882</a>.</p>
+              <a href="https://github.com/twbs/bootstrap/pull/31882">Ver #31882</a>.
+            </p>
           </li>
           <li>
             <p>Alineación vertical de la ruleta mejorada.</p>
@@ -1296,16 +1336,19 @@
         <ul>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Renombrado <code>.arrow</code> a
-              <code>.tooltip-arrow</code> en nuestra plantilla de tooltips predeterminada.</p>
+              <code>.tooltip-arrow</code> en nuestra plantilla de tooltips predeterminada.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> El valor predeterminado para
               <code>fallbackPlacements</code> se cambió a <code>['top', 'right', 'bottom', 'left']</code> para una mejor
-              ubicación de elementos popper.</p>
+              ubicación de elementos popper.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se cambió el nombre de la opción <code>whiteList</code> a
-              <code>allowList</code>.</p>
+              <code>allowList</code>.
+            </p>
           </li>
         </ul>
         <h2 id="utilidades">Utilidades</h2>
@@ -1318,15 +1361,19 @@
               <li>Renombrado <code>.left-*</code> y <code>.right-*</code> a <code>.start-*</code> y <code>.end-*</code>.
               </li>
               <li>Renombrado <code>.float-left</code> y <code>.float-right</code> a <code>.float-start</code> y
-                <code>.float-end</code>.</li>
+                <code>.float-end</code>.
+              </li>
               <li>Renombrado <code>.border-left</code> y <code>.border-right</code> a <code>.border-start</code> y
-                <code>.border-end</code>.</li>
+                <code>.border-end</code>.
+              </li>
               <li>Renombrado <code>.rounded-left</code> y <code>.rounded-right</code> a <code>.rounded-start</code> y
-                <code>.rounded-end</code>.</li>
+                <code>.rounded-end</code>.
+              </li>
               <li>Renombrado <code>.ml-*</code> y <code>.mr-*</code> a <code>.ms-*</code> y <code>.me-*</code>.</li>
               <li>Renombrado <code>.pl-*</code> y <code>.pr-*</code> a <code>.ps-*</code> y <code>.pe-*</code>.</li>
               <li>Renombrado <code>.text-left</code> y <code>.text-right</code> a <code>.text-start</code> y
-                <code>.text-end</code>.</li>
+                <code>.text-end</code>.
+              </li>
             </ul>
           </li>
           <li>
@@ -1335,12 +1382,14 @@
           </li>
           <li>
             <p>Se agregó una nueva clase <code>.bg-body</code> para configurar rápidamente el fondo
-              <code>&lt;body&gt;</code> en elementos adicionales.</p>
+              <code>&lt;body&gt;</code> en elementos adicionales.
+            </p>
           </li>
           <li>
             <p>Se agregaron nuevas <a href="/docs/5.1/utilities/position/#arrange-elements">utilidades de posición</a>
               para <code>top</code>, <code>right</code>, <code>bottom</code>, y <code>left</code>. Los valores incluyen
-              <code>0</code>, <code>50%</code> y <code>100%</code> para cada propiedad.</p>
+              <code>0</code>, <code>50%</code> y <code>100%</code> para cada propiedad.
+            </p>
           </li>
           <li>
             <p>Se agregaron nuevas utilidades <code>.translate-middle-x</code> y <code>.translate-middle-y</code> para
@@ -1352,7 +1401,8 @@
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Renombrado <code>.text-monospace</code> a
-              <code>.font-monospace</code>.</p>
+              <code>.font-monospace</code>.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se eliminó <code>.text-hide</code> ya que es un método
@@ -1365,11 +1415,13 @@
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se cambió el nombre de las utilidades
-              <code>.font-weight-*</code> a <code>.fw-*</code> por brevedad y consistencia.</p>
+              <code>.font-weight-*</code> a <code>.fw-*</code> por brevedad y consistencia.
+            </p>
           </li>
           <li>
             <p><span class="badge bg-danger">Breaking</span> Renombradas utilidades <code>.font-style-*</code> como
-              <code>.fst-*</code> por brevedad y consistencia.</p>
+              <code>.fst-*</code> por brevedad y consistencia.
+            </p>
           </li>
           <li>
             <p>Se agregó <code>.d-grid</code> para mostrar las utilidades y nuevas utilidades <code>gap</code>
@@ -1378,12 +1430,14 @@
           <li>
             <p><span class="badge bg-danger">Breaking</span> Se eliminaron <code>.rounded-sm</code> y
               <code>rounded-lg</code>, y se introdujo una nueva escala de clases, <code>.rounded-0</code> a
-              <code>.rounded- 3</code>. <a href="https://github.com/twbs/bootstrap/pull/31687">Ver #31687</a>.</p>
+              <code>.rounded- 3</code>. <a href="https://github.com/twbs/bootstrap/pull/31687">Ver #31687</a>.
+            </p>
           </li>
           <li>
             <p>Se agregaron nuevas utilidades <code>line-height</code>: <code>.lh-1</code>, <code>.lh-sm</code>,
               <code>.lh-base</code> y <code>.lh-lg</code>. Consulta <a
-                href="/docs/5.1/utilities/text/#line-height">aquí</a>.</p>
+                href="/docs/5.1/utilities/text/#line-height">aquí</a>.
+            </p>
           </li>
           <li>
             <p>Se movió la utilidad <code>.d-none</code> en nuestro CSS para darle más peso sobre otras utilidades de
@@ -1408,10 +1462,12 @@
                 ahora funciona con cualquier elemento HTML.</li>
               <li>Se cambió el nombre del mapa Sass <code>$embed-responsive-aspect-ratios</code> a
                 <code>$aspect-ratios</code> y sus valores se simplificaron para incluir el nombre de la clase y el
-                porcentaje como el par <code>key: value</code>.</li>
+                porcentaje como el par <code>key: value</code>.
+              </li>
               <li>Las variables CSS ahora se generan e incluyen para cada valor en el mapa Sass. Modifique la variable
                 <code>--bs-aspect-ratio</code> en <code>.ratio</code> para crear cualquier <a
-                  href="/docs/5.1/helpers/ratio/#custom-ratios">relación de aspecto personalizada</a>.</li>
+                  href="/docs/5.1/helpers/ratio/#custom-ratios">relación de aspecto personalizada</a>.
+              </li>
             </ul>
           </li>
           <li>
@@ -1419,11 +1475,14 @@
                   href="/docs/5.1/helpers/visually-hidden/">clases “visualmente ocultas”</a> .</strong></p>
             <ul>
               <li>Se cambió el archivo Sass de <code>scss/helpers/_screenreaders.scss</code> a
-                <code>scss/helpers/_visually-hidden.scss</code></li>
+                <code>scss/helpers/_visually-hidden.scss</code>
+              </li>
               <li>Renombrado <code>.sr-only</code> y <code>.sr-only-focusable</code> a <code>.visually-hidden</code> y
-                <code>.visually-hidden-focusable</code></li>
+                <code>.visually-hidden-focusable</code>
+              </li>
               <li>Se cambió el nombre de los mixins <code>sr-only()</code> y <code>sr-only-focusable()</code> a
-                <code>visually-hidden()</code> y <code>visually-hidden-focusable()</code>.</li>
+                <code>visually-hidden()</code> y <code>visually-hidden-focusable()</code>.
+              </li>
             </ul>
           </li>
           <li>
@@ -1463,16 +1522,19 @@
           <li>
             <p><code>popperConfig</code> se puede pasar como una función que acepta la configuración predeterminada de
               Popper de Bootstrap como argumento, para que pueda fusionar esta configuración predeterminada a su manera.
-              <strong>Se aplica a los menús desplegables, popovers y tooltips.</strong></p>
+              <strong>Se aplica a los menús desplegables, popovers y tooltips.</strong>
+            </p>
           </li>
           <li>
             <p>El valor predeterminado para <code>fallbackPlacements</code> se cambia a
               <code>['top', 'right', 'bottom', 'left']</code> para una mejor ubicación de los elementos Popper.
-              <strong>Se aplica a los menús desplegables, popovers y tooltips.</strong></p>
+              <strong>Se aplica a los menús desplegables, popovers y tooltips.</strong>
+            </p>
           </li>
           <li>
             <p>Se eliminó el guión bajo de los métodos estáticos públicos como <code>_getInstance()</code> →
-              <code>getInstance()</code>.</p>
+              <code>getInstance()</code>.
+            </p>
           </li>
         </ul>
 
@@ -1565,72 +1627,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 

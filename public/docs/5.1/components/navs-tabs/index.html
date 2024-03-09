@@ -662,7 +662,8 @@
         <h2 id="base-nav">Base nav</h2>
         <p>La navegación disponible en Bootstrap comparte marcas y estilos generales, desde la clase base
           <code>.nav</code> hasta los estados <em>active</em> y <em>disabled</em>. Cambia las clases modificadoras para
-          cambiar entre cada estilo.</p>
+          cambiar entre cada estilo.
+        </p>
         <p>El componente base <code>.nav</code> está construido con flexbox y proporciona una base sólida para construir
           todo tipo de componentes de navegación. Incluyen algunas sobrescrituras de estilo (para trabajar con listas),
           algo de padding de enlaces para áreas de acceso más grandes y estilo básico para <em>disabled</em>.</p>
@@ -672,7 +673,8 @@
             especial.</p>
           <p>Para transmitir el estado activo a las tecnologías de asistencia, usa el atributo
             <code>aria-current</code>, usando el valor <code>page</code> para la página actual, o <code>true</code> para
-            el elemento actual en un conjunto.</p>
+            el elemento actual en un conjunto.
+          </p>
 
         </div>
 
@@ -712,7 +714,8 @@
           <code>&lt;ul&gt;</code>s como arriba, <code>&lt;ol&gt;</code> si el orden de tus elementos es importante, o
           lanza el tuyo propio con un elemento <code>&lt;nav&gt;</code>. Debido a que <code>.nav</code> usa
           <code>display: flex</code>, los enlaces de navegación se comportan igual que los elementos de navegación, pero
-          sin el marcado adicional.</p>
+          sin el marcado adicional.
+        </p>
         <div class="bd-example">
           <nav class="nav">
             <a class="nav-link active" aria-current="page" href="#">Activo</a>
@@ -812,7 +815,8 @@
         <h3 id="vertical">Vertical</h3>
         <p>Apila tu navegación cambiando la dirección del elemento flex con la utilidad <code>.flex-column</code>.
           ¿Necesitas apilarlos en algos viewports pero no en otros? Usa las versiones responsive (por ejemplo,
-          <code>.flex-sm-column</code>).</p>
+          <code>.flex-sm-column</code>).
+        </p>
         <div class="bd-example">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -936,7 +940,8 @@
         <p>Fuerza el contenido de tu <code>.nav</code> para extender el ancho completo disponible en una de las dos
           clases modificadoras. Para llenar proporcionalmente todo el espacio disponible con tus
           <code>.nav-item</code>s, usa <code>.nav-fill</code>. Observa que todo el espacio horizontal está ocupado, pero
-          no todos los elementos de navegación tienen el mismo ancho.</p>
+          no todos los elementos de navegación tienen el mismo ancho.
+        </p>
         <div class="bd-example">
           <ul class="nav nav-pills nav-fill">
             <li class="nav-item">
@@ -1066,7 +1071,8 @@
           <code>role="navigation"</code> al contenedor principal más lógico de <code>&lt;ul&gt;</code>, o ajusta un
           elemento <code>&lt;nav&gt;</code> alrededor de toda la navegación. No agregues el rol al propio
           <code>&lt;ul&gt;</code>, ya que esto evitaría que las tecnologías de asistencia lo anuncien como una lista
-          real.</p>
+          real.
+        </p>
         <p>Ten en cuenta que las barras de navegación, incluso si tienen un estilo visual como pestañas con la clase
           <code>.nav-tabs</code>, <strong>no</strong> deben recibir atributos <code>role="tablist"</code>,
           <code>role="tab"</code> o <code>role="tabpanel"</code>. Estos solo son apropiados para interfaces con pestañas
@@ -1079,7 +1085,8 @@
             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> maneja el estado seleccionado agregando
-          <code>aria-selected="true"</code> en la pestaña activa.</p>
+          <code>aria-selected="true"</code> en la pestaña activa.
+        </p>
         <h2 id="uso-de-dropdowns">Uso de dropdowns</h2>
         <p>Agrega menús desplegables con un poco de HTML adicional y el <a
             href="/docs/5.1/components/dropdowns/#usage">complemento JavaScript de menús desplegables</a>.</p>
@@ -1232,7 +1239,8 @@
           <code>aria-</code> adicionales en orden para transmitir su estructura, funcionalidad y estado actual a los
           usuarios de tecnologías de asistencia (como los lectores de pantalla). Como práctica recomendada, recomendamos
           usar elementos <code>&lt;button&gt;</code> para las pestañas, ya que estos son controles que activan un cambio
-          dinámico, en lugar de enlaces que navegan a una nueva página o ubicación.</p>
+          dinámico, en lugar de enlaces que navegan a una nueva página o ubicación.
+        </p>
         <div class="bd-callout bd-callout-danger">
           Ten en cuenta que el complemento <a href="https://esdocu.dev/javascript" target="_blank"
             data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
@@ -1315,7 +1323,8 @@
           utilizando <code>&lt;nav&gt;</code>, no debes agregar <code>role="tablist"</code> directamente, ya que esto
           sobrescribiría el rol nativo del elemento como punto de referencia de navegación. En su lugar, cambia a un
           elemento alternativo (en el ejemplo a continuación, un simple <code>&lt;div&gt;</code>) y envuélvelo con
-          <code>&lt;nav&gt;</code>.</p>
+          <code>&lt;nav&gt;</code>.
+        </p>
         <div class="bd-example">
           <nav>
             <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
@@ -1520,7 +1529,8 @@
             data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> simplemente especificando
           <code>data-bs-toggle="tab"</code> o <code>data-bs-toggle="pill"</code> en un elemento. Utiliza estos atributos
-          de datos en <code>.nav-tabs</code> o <code>.nav-pills</code>.</p>
+          de datos en <code>.nav-tabs</code> o <code>.nav-pills</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Nav tabs --&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"nav nav-tabs"</span> <span class="na">id</span><span class="o">=</span><span class="s">"myTab"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tablist"</span><span class="p">&gt;</span>
@@ -1605,7 +1615,8 @@
         <h4 id="constructor">constructor</h4>
         <p>Activa un elemento de pestaña y un contenedor de contenido. La pestaña debe tener un
           <code>data-bs-target</code> o, si usa un enlace, un atributo <code>href</code>, apuntando a un nodo contenedor
-          en el DOM.</p>
+          en el DOM.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"nav nav-tabs"</span> <span class="na">id</span><span class="o">=</span><span class="s">"myTab"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tablist"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"nav-item"</span> <span class="na">role</span><span class="o">=</span><span class="s">"presentation"</span><span class="p">&gt;</span>
@@ -1641,7 +1652,8 @@
         <p>Selecciona la pestaña dada y muestra su panel asociado. Cualquier otra pestaña que se haya seleccionado
           previamente se deselecciona y su panel asociado se oculta. <strong>Regresa a la persona que llama antes de que
             se muestre realmente el panel de pestañas</strong> (es decir, antes de que ocurra el evento
-          <code>shown.bs.tab</code>).</p>
+          <code>shown.bs.tab</code>).
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">  <span class="kd">var</span> <span class="nx">someTabTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#someTabTrigger'</span><span class="p">)</span>
   <span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="nx">someTabTriggerEl</span><span class="p">)</span>
@@ -1678,9 +1690,11 @@
           <li><code>hide.bs.tab</code> (en la pestaña activa actual)</li>
           <li><code>show.bs.tab</code> (en la pestaña que se mostrará)</li>
           <li><code>hidden.bs.tab</code> (en la pestaña activa anterior, la misma que para el evento
-            <code>hide.bs.tab</code>)</li>
+            <code>hide.bs.tab</code>)
+          </li>
           <li><code>shown.bs.tab</code> (en la pestaña recientemente activa recién mostrada, la misma que para el evento
-            <code>show.bs.tab</code>)</li>
+            <code>show.bs.tab</code>)
+          </li>
         </ol>
         <p>Si ninguna pestaña estaba activa, los eventos <code>hide.bs.tab</code> y <code>hidden.bs.tab</code> no se
           activarán.</p>
@@ -1696,13 +1710,15 @@
               <td><code>show.bs.tab</code></td>
               <td>Este evento se activa al mostrar la pestaña, pero antes de que se muestre la nueva pestaña. Usa
                 <code>event.target</code> y <code>event.relatedTarget</code> para referenciar la pestaña activa y la
-                pestaña activa anterior (si está disponible) respectivamente.</td>
+                pestaña activa anterior (si está disponible) respectivamente.
+              </td>
             </tr>
             <tr>
               <td><code>shown.bs.tab</code></td>
               <td>Este evento se activa en la presentación de pestañas después de que se haya mostrado una pestaña. Usa
                 <code>event.target</code> y <code>event.relatedTarget</code> para referenciar la pestaña activa y la
-                pestaña activa anterior (si está disponible) respectivamente.</td>
+                pestaña activa anterior (si está disponible) respectivamente.
+              </td>
             </tr>
             <tr>
               <td><code>hide.bs.tab</code></td>
@@ -1815,72 +1831,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 

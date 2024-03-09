@@ -642,7 +642,8 @@
           <em>mobile-first</em>. Usamos este término en nuestros documentos y en gran parte estamos de acuerdo con él,
           pero a veces puede ser demasiado amplio. Si bien no todos los componentes <em>deben</em> ser completamente
           responsive en Bootstrap, este enfoque responsive trata de reducir las sobrescrituras de CSS al presionarlo
-          para agregar estilos a medida que el viewport se vuelve más grande.</p>
+          para agregar estilos a medida que el viewport se vuelve más grande.
+        </p>
         <p>En Bootstrap, verás esto más claramente en nuestras media queries. En la mayoría de los casos, usamos
           consultas <code>min-width</code> que comienzan a aplicarse en un breakpoint específico y continúan a través de
           los breakpoints más altos. Por ejemplo, un <code>.d-none</code> se aplica desde <code>min-width: 0</code>
@@ -656,12 +657,14 @@
         <p>Además de nuestro Reboot, una hoja de estilo de normalización entre navegadores, todos nuestros estilos
           apuntan a usar clases como selectores. Esto significa evitar los selectores de tipo (p. ej.,
           <code>input[type="text"]</code>) y las clases primarias extrañas (p. ej., <code>.parent .child</code>) que
-          hacen que los estilos sean demasiado específicos para ser sobrescritos fácilmente.</p>
+          hacen que los estilos sean demasiado específicos para ser sobrescritos fácilmente.
+        </p>
         <p>Como tales, los componentes deben construirse con una clase base que albergue pares de valor de propiedad
           comunes, que no deben sobrescribirse. Por ejemplo, <code>.btn</code> y <code>.btn-primary</code>. Usamos
           <code>.btn</code> para todos los estilos comunes como <code>display</code>, <code>padding</code> y
           <code>border-width</code>. Luego usamos modificadores como <code>.btn-primary</code> para agregar el color,
-          color de fondo, color de borde, etc.</p>
+          color de fondo, color de borde, etc.
+        </p>
         <p>Las clases modificadoras solo deben usarse cuando hay múltiples propiedades o valores para cambiar en
           múltiples variantes. Los modificadores no siempre son necesarios, así que asegúrate de ahorrar líneas de
           código y evitar sobrescrituras innecesarias al crearlas. Buenos ejemplos de modificadores son nuestras clases
@@ -675,9 +678,11 @@
             sin modificar la propiedad <code>border</code>. Por ejemplo, grupos de botones, grupos de inputs y
             paginación.</li>
           <li>Estos componentes comparten una escala de <code>z-index</code> estándar de <code>0</code> a
-            <code>3</code>.</li>
+            <code>3</code>.
+          </li>
           <li><code>0</code> es el predeterminado (inicial), <code>1</code> es <code>:hover</code>, <code>2</code> es
-            <code>:active</code>/<code>.active</code>, y <code>3</code> es <code>:focus</code>.</li>
+            <code>:active</code>/<code>.active</code>, y <code>3</code> es <code>:focus</code>.
+          </li>
           <li>Este enfoque coincide con nuestras expectativas de máxima prioridad de usuario. Si un elemento está
             enfocado, está a la vista y a la atención del usuario. Los elementos activos son los segundos más altos
             porque indican estado. El desplazamiento es el tercero más alto porque indica la intención del usuario, pero
@@ -688,7 +693,8 @@
           orden de <code>z-index</code> más alto, menús desplegables, barras de navegación fijas y pegajosas, modales,
           tooltips y popovers. Estos componentes tienen su propia escala de <code>z-index</code> que comienza en
           <code>1000</code>. Este número inicial se eligió arbitrariamente y sirve como un pequeño búfer entre nuestros
-          estilos y los estilos personalizados de tu proyecto.</p>
+          estilos y los estilos personalizados de tu proyecto.
+        </p>
         <p>Cada componente de superposición aumenta ligeramente su valor de <code>z-index</code> de tal manera que los
           principios comunes de la interfaz de usuario permiten que los elementos centrados o sobrevolados por el
           usuario permanezcan a la vista en todo momento. Por ejemplo, un modal es un bloqueo de documentos (por
@@ -719,22 +725,26 @@
             data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
             title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>; en su lugar, escribe HTML. Lee más
           sobre esto en <a href="/docs/5.1/getting-started/javascript/#data-attributes">nuestra página de descripción
-            general de JavaScript</a>.</p>
+            general de JavaScript</a>.
+        </p>
         <p>Por último, nuestros estilos se basan en los comportamientos fundamentales de los elementos web comunes.
           Siempre que sea posible, preferimos utilizar lo que proporciona el navegador. Por ejemplo, puedes poner una
           clase <code>.btn</code> en casi cualquier elemento, pero la mayoría de los elementos no proporcionan ningún
           valor semántico o funcionalidad de navegador. Entonces, en su lugar, usamos <code>&lt;button&gt;</code>s y
-          <code>&lt;a&gt;</code>s.</p>
+          <code>&lt;a&gt;</code>s.
+        </p>
         <p>Lo mismo ocurre con los componentes más complejos. Si bien <em>podríamos</em> escribir nuestro propio
           complemento de validación de formularios para agregar clases a un elemento padre en función del estado de un
           input, lo que nos permite diseñar el texto como rojo, preferimos usar los pseudoelementos
-          <code>:valid</code>/<code>:invalid</code> que cada navegador nos proporciona.</p>
+          <code>:valid</code>/<code>:invalid</code> que cada navegador nos proporciona.
+        </p>
         <h2 id="utilidades">Utilidades</h2>
         <p>Las clases de utilidad, anteriormente helpers en Bootstrap 3, son un poderoso aliado para combatir la
           sobrecarga de CSS y el bajo rendimiento de la página. Una clase de utilidad suele ser un par propiedad-valor
           único e inmutable expresado como una clase (por ejemplo, <code>.d-block</code> representa
           <code>display: block;</code>). Su atractivo principal es la velocidad de uso al escribir HTML y limitar la
-          cantidad de CSS personalizado que tienes que escribir.</p>
+          cantidad de CSS personalizado que tienes que escribir.
+        </p>
         <p>Específicamente en lo que respecta a CSS personalizado, las utilidades pueden ayudar a combatir el aumento
           del tamaño del archivo al reducir los pares de propiedad-valor que se repiten con más frecuencia en clases
           únicas. Esto puede tener un efecto dramático a escala en tus proyectos.</p>
@@ -848,72 +858,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 

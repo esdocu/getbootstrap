@@ -765,7 +765,8 @@
         <p>Usa las utilidades <code>justify-content</code> en los contenedores de flexbox para cambiar la alineación de
           los elementos flexibles en el eje principal (el eje x para start, el eje y si es
           <code>flex-direction: column</code>). Elije entre <code>start</code> (predeterminado del navegador),
-          <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code>, o <code>evenly</code>.</p>
+          <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code>, o <code>evenly</code>.
+        </p>
         <div class="bd-example">
           <div class="d-flex justify-content-start bd-highlight mb-3">
             <div class="p-2 bd-highlight">Elemento flex</div>
@@ -857,7 +858,8 @@
         <p>Usa las utilidades <code>align-items</code> en los contenedores de flexbox para cambiar la alineación de los
           elementos flexibles en el eje transversal (el eje y para start, el eje x si es
           <code>flex-direction: column</code>). Elije entre <code>start</code>, <code>end</code>, <code>center</code>,
-          <code>baseline</code>, or <code>stretch</code> (predeterminado del navegador).</p>
+          <code>baseline</code>, or <code>stretch</code> (predeterminado del navegador).
+        </p>
         <div class="bd-example">
           <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
             <div class="p-2 bd-highlight">Elemento flex</div>
@@ -931,7 +933,8 @@
         <p>Usa las utilidades <code>align-self</code> en elementos de flexbox para cambiar individualmente su alineación
           en el eje transversal (el eje y para start, el eje x si es <code>flex-direction: column</code>). Elije entre
           las mismas opciones que <code>align-items</code>: <code>start</code>, <code>end</code>, <code>center</code>,
-          <code>baseline</code>, o <code>stretch</code> (predeterminado del navegador).</p>
+          <code>baseline</code>, o <code>stretch</code> (predeterminado del navegador).
+        </p>
         <div class="bd-example">
           <div class="d-flex bd-highlight mb-3" style="height: 100px">
             <div class="p-2 bd-highlight">Elemento flex</div>
@@ -1033,7 +1036,8 @@
         <p>Usa las utilidades <code>.flex-grow-*</code> para alternar la capacidad de crecimiento de un elemento
           flexible para llenar el espacio disponible. En el ejemplo a continuación, los elementos
           <code>.flex-grow-1</code> usan todo el espacio disponible que pueden, mientras permiten que los dos elementos
-          flexibles restantes tengan el espacio necesario.</p>
+          flexibles restantes tengan el espacio necesario.
+        </p>
         <div class="bd-example">
           <div class="d-flex bd-highlight">
             <div class="p-2 flex-grow-1 bd-highlight">Elemento flex</div>
@@ -1126,7 +1130,8 @@
         <h3 id="con-elementos-alineados">Con elementos alineados</h3>
         <p>Mueve verticalmente un elemento flexible a la parte superior o inferior de un contenedor mezclando
           <code>align-items</code>, <code>flex-direction: column</code>, y <code>margin-top: auto</code> o
-          <code>margin-bottom: auto</code>.</p>
+          <code>margin-bottom: auto</code>.
+        </p>
         <div class="bd-example">
           <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
             <div class="mb-auto p-2 bd-highlight">Elemento flex</div>
@@ -1162,7 +1167,8 @@
         <h2 id="envoltura">Envoltura</h2>
         <p>Cambia la forma en que los elementos flexibles se envuelven en un contenedor flexible. Elije entre no
           envolver en absoluto (el valor predeterminado del navegador) con <code>.flex-nowrap</code>, envolver con
-          <code>.flex-wrap</code> o envolver en reversa con <code>.flex-wrap-reverse</code>.</p>
+          <code>.flex-wrap</code> o envolver en reversa con <code>.flex-wrap-reverse</code>.
+        </p>
         <div class="bd-example">
           <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
             <div class="p-2 bd-highlight">Elemento flex</div>
@@ -1254,7 +1260,8 @@
         <p>Cambia el orden <em>visual</em> de elementos flexibles específicos con un puñado de utilidades de
           <code>order</code>. Solo proporcionamos opciones para hacer que un artículo sea el primero o el último, así
           como un reinicio para usar el orden del DOM. Como <code>order</code> toma cualquier valor entero de 0 a 5,
-          agrega CSS personalizado para cualquier valor adicional necesario.</p>
+          agrega CSS personalizado para cualquier valor adicional necesario.
+        </p>
         <div class="bd-example">
           <div class="d-flex flex-nowrap bd-highlight">
             <div class="order-3 p-2 bd-highlight">Primer elemento flex</div>
@@ -1332,7 +1339,8 @@
           <em>juntos</em> en el eje transversal. Elija entre <code>start</code> (predeterminado del navegador),
           <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code> o <code>stretch</code>. Para
           demostrar estas utilidades, aplicamos <code>flex-wrap: wrap</code> y aumentamos la cantidad de elementos
-          flexibles.</p>
+          flexibles.
+        </p>
         <p><strong>¡Cuidado!</strong> Esta propiedad no tiene efecto en filas individuales de elementos flexibles.</p>
         <div class="bd-example">
           <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">
@@ -1778,72 +1786,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 

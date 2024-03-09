@@ -632,7 +632,8 @@
           cambio de tamaño de unidades que se desarrolló inicialmente para cambiar el tamaño de las fuentes (de ahí su
           abreviatura de Responsive Font Sizes). Hoy en día, RFS es capaz de cambiar la escala de la mayoría de las
           propiedades CSS con valores unitarios como <code>margin</code>, <code>padding</code>,
-          <code>border-radius</code> o incluso <code>box-shadow</code>.</p>
+          <code>border-radius</code> o incluso <code>box-shadow</code>.
+        </p>
         <p>El mecanismo calcula automáticamente los valores apropiados en función de las dimensiones del viewport del
           navegador. Se compilará en funciones <code>calc()</code> con una combinación de <code>rem</code> y unidades de
           viewport para habilitar el comportamiento de escalado responsive.</p>
@@ -650,7 +651,8 @@
         <p>El mixin <code>rfs()</code> tiene abreviaturas para <code>font-size</code>, <code>margin</code>,
           <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, <code>margin-left</code>,
           <code>padding</code>, <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, y
-          <code>padding-left</code>. Mira el ejemplo a continuación de la fuente Sass y el CSS compilado.</p>
+          <code>padding-left</code>. Mira el ejemplo a continuación de la fuente Sass y el CSS compilado.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.title</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="p">);</span>
@@ -687,7 +689,8 @@
         <p>Cuando no deseas utilizar los incluidos, también hay dos funciones:</p>
         <ul>
           <li><code>rfs-value()</code> convierte un valor en un valor <code>rem</code> si se pasa un valor
-            <code>px</code>, en otros casos devuelve el mismo resultado.</li>
+            <code>px</code>, en otros casos devuelve el mismo resultado.
+          </li>
           <li><code>rfs-fluid-value()</code> devuelve la versión fluida de un valor si la propiedad necesita un cambio
             de escala.</li>
         </ul>
@@ -810,72 +813,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 

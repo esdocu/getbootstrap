@@ -698,7 +698,8 @@
         </div>
         <p>El ejemplo anterior crea tres columnas de igual ancho en todos los dispositivos y viewports utilizando
           nuestras clases de cuadrícula predefinidas. Esas columnas están centradas en la página con el
-          <code>.container</code> principal.</p>
+          <code>.container</code> principal.
+        </p>
         <h2 id="cómo-funciona-el-sistema-de-cuadrícula-grid">¿Cómo funciona el sistema de cuadrícula (Grid)?</h2>
         <p>Desglosándolo, así es como se compone el sistema de cuadrícula:</p>
         <ul>
@@ -713,7 +714,8 @@
             <p><strong>Los contenedores centran y rellenan horizontalmente su contenido.</strong> Usa
               <code>.container</code> para un ancho de píxel responsive, <code>.container-fluid</code> para
               <code>width: 100%</code> en todos los viewports y dispositivos, o un contenedor responsive (p. ej.,
-              <code>.container-md</code>) para una combinación entre fluido y anchos en píxeles.</p>
+              <code>.container-md</code>) para una combinación entre fluido y anchos en píxeles.
+            </p>
           </li>
           <li>
             <p><strong>Las filas son envoltorios para las columnas.</strong> Cada columna tiene un <code>padding</code>
@@ -729,7 +731,8 @@
               fila, lo que te permite crear diferentes combinaciones de elementos que abarcan cualquier número de
               columnas. Las clases de columna indican el número de columnas de plantilla que abarcan (por ejemplo,
               <code>col-4</code> abarca cuatro). <code>width</code>s se establecen en porcentajes para que siempre
-              tengas el mismo tamaño relativo.</p>
+              tengas el mismo tamaño relativo.
+            </p>
           </li>
           <li>
             <p><strong>Los gutters también son responsive y personalizables.</strong> <a
@@ -845,7 +848,8 @@
         <h3 id="anchos-iguales">Anchos iguales</h3>
         <p>Por ejemplo, aquí hay dos diseños de cuadrícula que se aplican a cada dispositivo y viewport, desde
           <code>xs</code> hasta <code>xxl</code>. Agrega cualquier número de clases sin unidades para cada breakpoint
-          que necesites y cada columna tendrá el mismo ancho.</p>
+          que necesites y cada columna tendrá el mismo ancho.
+        </p>
         <div class="bd-example bd-example-row">
           <div class="container">
             <div class="row">
@@ -1018,7 +1022,8 @@
         <h3 id="todos-los-breakpoints">Todos los breakpoints</h3>
         <p>Para cuadrículas que son iguales desde el dispositivo más pequeño hasta el más grande, usa las clases
           <code>.col</code> y <code>.col-*</code>. Especifica una clase numerada cuando necesites una columna de tamaño
-          particular; de lo contrario, siéntate libre de apegarte a <code>.col</code>.</p>
+          particular; de lo contrario, siéntate libre de apegarte a <code>.col</code>.
+        </p>
         <div class="bd-example bd-example-row">
           <div class="container">
             <div class="row">
@@ -1439,7 +1444,8 @@
         <h3 id="niveles-de-cuadrícula">Niveles de cuadrícula</h3>
         <p>Yendo más allá de las columnas en sí, también puedes personalizar la cantidad de niveles de cuadrícula. Si
           quisieras solo cuatro niveles de cuadrícula, actualizarías <code>$grid-breakpoints</code> y
-          <code>$container-max-widths</code> a algo como esto:</p>
+          <code>$container-max-widths</code> a algo como esto:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
   <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
@@ -1459,7 +1465,8 @@
           hacerlo, se generará un nuevo conjunto de clases de cuadrícula predefinidas para anchos de columna,
           compensaciones y ordenación. Las utilidades de visibilidad responsive también se actualizarán para usar los
           breakpoints personalizados. Asegúrate de establecer los valores de cuadrícula en <code>px</code> (no en
-          <code>rem</code>, <code>em</code> o <code>%</code>).</p>
+          <code>rem</code>, <code>em</code> o <code>%</code>).
+        </p>
 
       </div>
       <div class="pt-3">
@@ -1550,72 +1557,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 

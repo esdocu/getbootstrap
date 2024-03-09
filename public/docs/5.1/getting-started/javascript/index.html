@@ -652,7 +652,8 @@
         <h2 id="usando-bootstrap-como-un-módulo">Usando Bootstrap como un módulo</h2>
         <p>Proporcionamos una versión de Bootstrap creada como <code>ESM</code> (<code>bootstrap.esm.js</code> y
           <code>bootstrap.esm.min.js</code>) que te permite usar Bootstrap como un módulo en tu navegador, si tus <a
-            href="https://caniuse.com/es6-module">navegadores específicos lo admiten</a>.</p>
+            href="https://caniuse.com/es6-module">navegadores específicos lo admiten</a>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">"module"</span><span class="p">&gt;</span>
   <span class="kr">import</span> <span class="p">{</span> <span class="nx">Toast</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'bootstrap.esm.min.js'</span>
@@ -687,7 +688,8 @@
           <strong>Si Bootstrap detecta <code>jQuery</code> en el objeto <code>window</code></strong> agregará todos
           nuestros componentes en el sistema de complementos de jQuery; esto significa que podrás hacer
           <code>$('[data-bs-toggle="tooltip"]').tooltip()</code> para habilitar tooltips. Lo mismo ocurre con nuestros
-          otros componentes.</p>
+          otros componentes.
+        </p>
         <h2 id="data-attributes">Data attributes</h2>
         <p>Casi todos los complementos de Bootstrap se pueden habilitar y configurar solo a través de HTML con atributos
           de datos (nuestra forma preferida de usar la funcionalidad de <a href="https://esdocu.dev/javascript"
@@ -709,12 +711,14 @@
         <p>Bootstrap proporciona eventos personalizados para la mayoría de las acciones únicas de los plugins. Por lo
           general, estos vienen en forma de infinitivo y participio pasado, donde el infinitivo (p. ej.,
           <code>show</code>) se activa al comienzo de un evento, y su forma de participio pasado (p. ej.,
-          <code>shown</code>) se activa al finalizar un evento.</p>
+          <code>shown</code>) se activa al finalizar un evento.
+        </p>
         <p>Todos los eventos en infinitivo proporcionan la funcionalidad <a
             href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a>.
           Esto proporciona la capacidad de detener la ejecución de una acción antes de que comience. Devolver
           <code>false</code> desde un controlador de eventos también llamará automáticamente a
-          <code>preventDefault()</code>.</p>
+          <code>preventDefault()</code>.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myModal'</span><span class="p">)</span>
 
@@ -731,7 +735,8 @@
             ningún atributo <code>data-bs-no-jquery</code> establecido en <code>&lt;body&gt;</code>. Si se encuentra
             jQuery, Bootstrap emitirá eventos gracias al sistema de eventos de jQuery. Entonces, si deseas escuchar los
             eventos de Bootstrap, deberás usar los métodos jQuery (<code>.on</code>, <code>.one</code>) en lugar de
-            <code>addEventListener</code>.</p>
+            <code>addEventListener</code>.
+          </p>
           <div class="highlight">
             <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab a'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown.bs.tab'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="c1">// hacer algo...
@@ -752,11 +757,13 @@
         </div>
         <p>Si deseas obtener una instancia de complemento en particular, cada complemento expone un método
           <code>getInstance</code>. Para recuperarlo directamente de un elemento, haz lo siguiente:
-          <code>bootstrap.Popover.getInstance(myPopoverEl)</code>.</p>
+          <code>bootstrap.Popover.getInstance(myPopoverEl)</code>.
+        </p>
         <h3 id="selectores-css-en-constructores">Selectores CSS en constructores</h3>
         <p>También puedes usar un selector CSS como primer argumento en lugar de un elemento DOM para inicializar el
           complemento. Actualmente, el elemento para el complemento se encuentra mediante el método
-          <code>querySelector</code>, ya que nuestros complementos solo admiten un único elemento.</p>
+          <code>querySelector</code>, ya que nuestros complementos solo admiten un único elemento.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">dropdown</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Dropdown</span><span class="p">(</span><span class="s1">'[data-bs-toggle="dropdown"]'</span><span class="p">)</span>
@@ -795,7 +802,8 @@
         </div>
         <h3 id="configuración-por-defecto">Configuración por defecto</h3>
         <p>Puedes cambiar la configuración predeterminada de un complemento modificando el objeto
-          <code>Constructor.Default</code> del complemento:</p>
+          <code>Constructor.Default</code> del complemento:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// cambia el valor predeterminado para la opción `keyboard` del complemento modal a `false`
 </span><span class="c1"></span><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span>
@@ -804,7 +812,8 @@
         <h2 id="sin-conflicto-solo-si-usas-jquery">Sin conflicto (solo si usas jQuery)</h2>
         <p>A veces es necesario usar complementos de Bootstrap con otros frameworks UI. En estas circunstancias,
           ocasionalmente pueden ocurrir colisiones de espacios de nombres. Si esto sucede, puedes llamar a
-          <code>.noConflict</code> en el complemento cuyo valor deseas revertir.</p>
+          <code>.noConflict</code> en el complemento cuyo valor deseas revertir.
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// devolver $.fn.button al valor previamente asignado
 </span><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span> <span class="c1">// dar $().bootstrapBtn la funcionalidad Bootstrap
@@ -812,7 +821,8 @@
         </div>
         <h2 id="números-de-versión">Números de versión</h2>
         <p>Se puede acceder a la versión de cada uno de los complementos de Bootstrap a través de la propiedad
-          <code>VERSION</code> del constructor del complemento. Por ejemplo, para el complemento tooltip:</p>
+          <code>VERSION</code> del constructor del complemento. Por ejemplo, para el complemento tooltip:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; "5.1.3"
 </span></code></pre>
@@ -1006,72 +1016,7 @@
     </div>
   </footer>
 
-  <div class="modal fade" id="esdocuCustomModal" tabindex="-1" aria-labelledby="esdocuCustomModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="esdocuCustomModalLabel">¡QUEREMOS TRADUCIR MUCHAS DOCUMENTACIONES!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-4 opacity-75">
-          <p>
-            De la mano de las 🦁 <strong>IDEAS DE LA LIBERTAD</strong> 🦁, Argentina y Latinoamérica están a punto de
-            experimentar un fuerte crecimiento profesional en el mercado laboral del desarrollo de software.
-          </p>
-          <p>
-            Es claro que todo developer debe <strong>aprender inglés</strong>, pero esto es un proceso que puede demorar
-            años.
-          </p>
-          <p>
-            Para trabajar necesitamos documentaciones hoy mismo y en español. Esta es la razón de ser del proyecto
-            <a href="https://esdocu.com" target="_blank">Esdocu</a>.
-          </p>
-          <p>
-            Mi nombre es Fabián Karaben y he desarrollado un <a href="https://youtu.be/1cvMcouK85E"
-              target="_blank">software</a> que facilita la tarea de traducir sitios web de
-            documentaciones Open Source, incluyendo funcionalidades para mantener las traducciones
-            <strong>siempre actualizadas</strong>.
-          </p>
-          <p>
-            Esta traducción de <strong>Bootstrap</strong> está actualizada
-            (<a href="https://getbootstrap.esdocu.com/docs/5.3/getting-started/introduction/" target="_blank">ir a
-              v5.3</a>)
-            y ahora mismo me encuentro traduciendo los sitios web de <strong>Dart</strong>, <strong>Flutter</strong> y
-            <strong>Go</strong>.
-            Posteriormente <strong>Tailwind CSS</strong>, <strong>React</strong>, <strong>Next.js</strong> y más. Todos
-            los enlaces están en <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
-          </p>
-          <p>
-            Si te nace ayudarme a cubrir los costos del proyecto, te dejo algunos enlaces para que puedas realizar tu
-            donación. Cada pequeño aporte ayuda mucho ya que es prácticamente imposible monetizar este contenido con
-            anuncios.
-          </p>
-          <p>
-            ¡Muchas gracias! <a href="https://twitter.com/search?q=%23VLLC" target="_blank">#VLLC</a>
-          </p>
-        </div>
-        <div class="modal-footer">
-          <a href="http://link.mercadopago.com.ar/esdocu" target="_blank" class="btn btn-success">Mercado Pago</a>
-          <a href="https://paypal.me/esdocu" target="_blank" class="btn btn-success">PayPal</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    window.onload = () => {
-      setTimeout(function () {
-        const myModal = new bootstrap.Modal(document.getElementById('esdocuCustomModal'));
-        myModal.show();
-      }, 140000);
 
-      var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-    }
-
-  </script>
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"></script>
 
 
