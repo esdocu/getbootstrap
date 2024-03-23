@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -729,11 +717,7 @@
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"nav-link disabled"</span><span class="p">&gt;</span>Deshabilitado<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="estilos-disponibles">Estilos disponibles</h2>
         <p>Cambia el estilo del componente <code>.nav</code> con modificadores y utilidades. Mezcla y combina según sea
@@ -1078,10 +1062,8 @@
               title="Aplicaciones de Internet enriquecidas accesibles">ARIA</abbr></a>. Consulta <a
             href="#javascript-behavior">Comportamiento de JavaScript</a> para conocer las interfaces con pestañas
           dinámicas en esta sección para ver un ejemplo. El atributo <code>aria-current</code> no es necesario en las
-          interfaces con pestañas dinámicas ya que nuestro <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> maneja el estado seleccionado agregando
+          interfaces con pestañas dinámicas ya que nuestro JavaScript
+          maneja el estado seleccionado agregando
           <code>aria-selected="true"</code> en la pestaña activa.
         </p>
         <h2 id="uso-de-dropdowns">Uso de dropdowns</h2>
@@ -1187,11 +1169,7 @@
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="sass">Sass</h2>
         <h3 id="variables">Variables</h3>
@@ -1218,14 +1196,11 @@
 <span class="nv">$nav-pills-link-active-bg</span><span class="o">:</span>          <span class="nv">$component-active-bg</span><span class="p">;</span>
 </code></pre>
         </div>
-        <h2 id="comportamiento-de-javascript">Comportamiento de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a></h2>
-        <p>Usa el complemento <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de pestañas, inclúyelo individualmente
+        <h2 id="comportamiento-de-javascript">Comportamiento de JavaScript
+        </h2>
+        <p>Usa el complemento JavaScript de
+          pestañas, inclúyelo
+          individualmente
           o a través del archivo <code>bootstrap.js</code> compilado, para ampliar nuestras pestañas (tabs) y píldoras
           (pills) de navegación para crear paneles tabulados de contenido local.</p>
         <p>Interfaces con pestañas dinámicas, como se describe en las <a
@@ -1239,13 +1214,13 @@
           dinámico, en lugar de enlaces que navegan a una nueva página o ubicación.
         </p>
         <div class="bd-callout bd-callout-danger">
-          Ten en cuenta que el complemento <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de pestaña <strong>no</strong> admite
+          Ten en cuenta que el complemento JavaScript de
+          pestaña <strong>no</strong> admite
           interfaces con pestañas que contienen menús desplegables, ya que estos causan problemas de usabilidad y
-          accesibilidad. Desde una perspectiva de usabilidad, el hecho de que el elemento activador de la pestaña que se
-          muestra actualmente no sea visible de inmediato (ya que está dentro del menú desplegable cerrado) puede causar
+          accesibilidad. Desde una perspectiva de usabilidad, el hecho de que el elemento activador de la pestaña que
+          se
+          muestra actualmente no sea visible de inmediato (ya que está dentro del menú desplegable cerrado) puede
+          causar
           confusión. Desde el punto de vista de la accesibilidad, actualmente no existe una forma sensata de asignar
           este tipo de construcción a un patrón WAI ARIA estándar, lo que significa que no se puede hacer fácilmente
           comprensible para los usuarios de tecnologías de asistencia.
@@ -1269,28 +1244,22 @@
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <p><strong>Este es un contenido placeholder asociado a la pestaña Inicio.</strong> Al hacer clic en otra
-                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                  href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para controlar
+                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                intercambia clases para controlar
                 la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra
                 navegación basada en <code>.nav</code>.</p>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
               <p><strong>Este es un contenido placeholder asociado a la pestaña Perfil.</strong> Al hacer clic en otra
-                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                  href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para controlar
+                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                intercambia clases para controlar
                 la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra
                 navegación basada en <code>.nav</code>.</p>
             </div>
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
               <p><strong>Este es un contenido placeholder asociado a la pestaña Contacto.</strong> Al hacer clic en otra
-                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                  href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para controlar
+                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                intercambia clases para controlar
                 la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra
                 navegación basada en <code>.nav</code>.</p>
             </div>
@@ -1336,28 +1305,22 @@
           <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
               <p><strong>Este es un contenido placeholder asociado a la pestaña Inicio.</strong> Al hacer clic en otra
-                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                  href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para controlar
+                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                intercambia clases para controlar
                 la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra
                 navegación basada en <code>.nav</code>.</p>
             </div>
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
               <p><strong>Este es un contenido placeholder asociado a la pestaña Perfil.</strong> Al hacer clic en otra
-                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                  href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para controlar
+                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                intercambia clases para controlar
                 la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra
                 navegación basada en <code>.nav</code>.</p>
             </div>
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
               <p><strong>Este es un contenido placeholder asociado a la pestaña Contacto.</strong> Al hacer clic en otra
-                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                  href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para controlar
+                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                intercambia clases para controlar
                 la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra
                 navegación basada en <code>.nav</code>.</p>
             </div>
@@ -1397,28 +1360,22 @@
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
               <p><strong>Este es un contenido placeholder asociado a la pestaña Inicio.</strong> Al hacer clic en otra
-                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                  href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para controlar
+                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                intercambia clases para controlar
                 la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra
                 navegación basada en <code>.nav</code>.</p>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
               <p><strong>Este es un contenido placeholder asociado a la pestaña Perfil.</strong> Al hacer clic en otra
-                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                  href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para controlar
+                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                intercambia clases para controlar
                 la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra
                 navegación basada en <code>.nav</code>.</p>
             </div>
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
               <p><strong>Este es un contenido placeholder asociado a la pestaña Contacto.</strong> Al hacer clic en otra
-                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                  href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para controlar
+                pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                intercambia clases para controlar
                 la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier otra
                 navegación basada en <code>.nav</code>.</p>
             </div>
@@ -1462,41 +1419,33 @@
               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                 aria-labelledby="v-pills-home-tab">
                 <p><strong>Este es un contenido placeholder asociado a la pestaña Inicio.</strong> Al hacer clic en otra
-                  pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                    href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-                    data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                    data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                    title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para
+                  pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                  intercambia clases
+                  para
                   controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier
                   otra navegación basada en <code>.nav</code>.</p>
               </div>
               <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                 <p><strong>Este es un contenido placeholder asociado a la pestaña Perfil.</strong> Al hacer clic en otra
-                  pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                    href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-                    data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                    data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                    title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para
+                  pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                  intercambia clases
+                  para
                   controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier
                   otra navegación basada en <code>.nav</code>.</p>
               </div>
               <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                 <p><strong>Este es un contenido placeholder asociado a la pestaña Mensajes.</strong> Al hacer clic en
-                  otra pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                    href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-                    data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                    data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                    title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para
+                  otra pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña JavaScript
+                  intercambia clases
+                  para
                   controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier
                   otra navegación basada en <code>.nav</code>.</p>
               </div>
               <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                 <p><strong>Este es un contenido placeholder asociado a la pestaña Configuración.</strong> Al hacer clic
-                  en otra pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña <a
-                    href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-                    data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                    data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                    title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> intercambia clases para
+                  en otra pestaña, se cambiará la visibilidad de esta para la siguiente. La pestaña
+                  JavaScript intercambia clases
+                  para
                   controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, píldoras y cualquier
                   otra navegación basada en <code>.nav</code>.</p>
               </div>
@@ -1521,11 +1470,9 @@
 </code></pre>
         </div>
         <h3 id="uso-de-atributos-de-datos">Uso de atributos de datos</h3>
-        <p>Puedes activar la navegación por pestañas o píldoras sin escribir <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> simplemente especificando
-          <code>data-bs-toggle="tab"</code> o <code>data-bs-toggle="pill"</code> en un elemento. Utiliza estos atributos
+        <p>Puedes activar la navegación por pestañas o píldoras sin escribir JavaScript simplemente especificando
+          <code>data-bs-toggle="tab"</code> o <code>data-bs-toggle="pill"</code> en un elemento. Utiliza estos
+          atributos
           de datos en <code>.nav-tabs</code> o <code>.nav-pills</code>.
         </p>
         <div class="highlight">
@@ -1554,14 +1501,9 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre>
         </div>
-        <h3 id="a-través-de-javascript">A través de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a></h3>
-        <p>Habilita las pestañas que se pueden tabular a través de <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> (cada pestaña debe activarse
+        <h3 id="a-través-de-javascript">A través de JavaScript
+        </h3>
+        <p>Habilita las pestañas que se pueden tabular a través de JavaScript (cada pestaña debe activarse
           individualmente):</p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerTabList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'#myTab button'</span><span class="p">))</span>
@@ -1675,11 +1617,7 @@
 <span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia de pestaña Bootstrap
 </span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="eventos">Eventos</h3>
         <p>Al mostrar una nueva pestaña, los eventos se activan en el siguiente orden:</p>

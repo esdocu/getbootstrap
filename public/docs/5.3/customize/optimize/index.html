@@ -891,33 +891,23 @@
           carrusel, elimina esa importación para ahorrar algo de tamaño de archivo en tu CSS compilado. Ten en cuenta
           que existen algunas dependencias entre las importaciones de Sass que pueden dificultar la omisión de un
           archivo.</p>
-        <h2 id="lean-javascript"><a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> optimizado <a class="anchor-link"
-            href="#lean-javascript" aria-label="Link to this section: Lean JavaScript"></a></h2>
-        <p>El <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de Bootstrap incluye todos los
-          componentes de nuestros archivos dist primarios (<code>bootstrap.js</code> y <code>bootstrap.min.js</code>), e
+        <h2 id="lean-javascript">JavaScript
+          optimizado <a class="anchor-link" href="#lean-javascript"
+            aria-label="Link to this section: Lean JavaScript"></a></h2>
+        <p>El JavaScript
+          de Bootstrap incluye todos los
+          componentes de nuestros archivos dist primarios (<code>bootstrap.js</code> y <code>bootstrap.min.js</code>),
+          e
           incluso nuestra dependencia principal (Popper) con nuestros archivos de paquete
           (<code>bootstrap.bundle.js</code> y <code>bootstrap.bundle.min.js</code>). Mientras personalizas a través de
-          Sass, asegúrate de eliminar el <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> relacionado.</p>
-        <p>Por ejemplo, suponiendo que estás usando tu propio paquete de <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> como Webpack, Parcel o Vite, solo
-          importarás el <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> que planeas usar. En el siguiente
-          ejemplo, mostramos cómo incluir simplemente nuestro <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> modal:</p>
+          Sass, asegúrate de eliminar el JavaScript
+          relacionado.</p>
+        <p>Por ejemplo, suponiendo que estás usando tu propio paquete de JavaScript como Webpack, Parcel o Vite, solo
+          importarás el JavaScript que
+          planeas usar. En el
+          siguiente
+          ejemplo, mostramos cómo incluir simplemente nuestro JavaScript
+          modal:</p>
         <!-- eslint-skip -->
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Import just what we need
@@ -936,10 +926,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1">// import 'bootstrap/js/dist/tooltip';
 </span></span></span></code></pre>
         </div>
-        <p>De esta manera, no incluirás ningún <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> que no pretendas utilizar para
+        <p>De esta manera, no incluirás ningún JavaScript que
+          no pretendas utilizar para
           componentes como botones, carruseles e tooltips. Si estás importando menús desplegables, tooltips o ventanas
           emergentes, asegúrate de incluir la dependencia de Popper en tu archivo <code>package.json</code>.</p>
         <div class="bd-callout bd-callout-info">
@@ -993,14 +981,11 @@
           que hayas tropezado con FCP. La métrica <a href="https://web.dev/fcp/">First Contentful Paint</a> mide el
           tiempo desde que la página comienza a cargarse hasta que cualquier parte del contenido de la página se muestra
           en la pantalla.</p>
-        <p>Puedes mejorar FCP posponiendo <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> o CSS no críticos. ¿Qué significa eso?
-          Simplemente, <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> u hojas de estilo que no necesitan
+        <p>Puedes mejorar FCP posponiendo JavaScript o
+          CSS no críticos. ¿Qué significa eso?
+          Simplemente, JavaScript u hojas
+          de estilo que no
+          necesitan
           estar presentes en la primera pintura de tu página deben marcarse con los atributos <code>async</code> o
           <code>defer</code>.
         </p>

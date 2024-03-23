@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -582,10 +570,8 @@
           </div>
           <h1 class="bd-title" id="content">Modal</h1>
         </div>
-        <p class="bd-lead mb-5">Usa el complemento modal de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de Bootstrap para agregar cuadros de
+        <p class="bd-lead mb-5">Usa el complemento modal de JavaScript de
+          Bootstrap para agregar cuadros de
           diálogo a tu sitio para lightboxes, notificaciones de usuario o contenido completamente personalizado.</p>
 
 
@@ -675,10 +661,7 @@
         <p>Antes de comenzar con el componente modal de Bootstrap, asegúrate de leer lo siguiente, ya que nuestras
           opciones de menú han cambiado recientemente.</p>
         <ul>
-          <li>Los modales se construyen con HTML, CSS y <a href="https://esdocu.dev/javascript" target="_blank"
-              data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-              data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Se colocan sobre todo lo demás en el
+          <li>Los modales se construyen con HTML, CSS y JavaScript. Se colocan sobre todo lo demás en el
             documento y eliminan el desplazamiento del <code>&lt;body&gt;</code> para que el contenido modal se desplace
             en su lugar.</li>
           <li>Al hacer clic en el “backdrop (telón de fondo)”, el modal se cerrará automáticamente.</li>
@@ -696,9 +679,8 @@
           <li>Debido a cómo HTML5 define su semántica, <a
               href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus">el atributo HTML
               <code>autofocus</code></a> no tiene ningún efecto en modales Bootstrap. Para lograr el mismo efecto, usa
-            <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-              data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado:
+            JavaScript
+            personalizado:
           </li>
         </ul>
         <div class="highlight">
@@ -815,11 +797,7 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="backdrop-estático">Backdrop estático</h3>
         <p>Cuando el fondo se establece en <em>static</em>, el modal no se cerrará al hacer clic fuera de él. Haz clic
@@ -1141,11 +1119,9 @@
             href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">atributos HTML
             <code>data-bs-*</code></a> para variar el contenido del modal según en qué botón se hizo clic.
         </p>
-        <p>A continuación se muestra una demostración en vivo seguida de un ejemplo de HTML y <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para obtener más información, <a
-            href="#events">lee los documentos de eventos modales</a> para obtener detalles sobre
+        <p>A continuación se muestra una demostración en vivo seguida de un ejemplo de HTML y JavaScript.
+          Para obtener más información, <a href="#events">lee los documentos de eventos modales</a> para obtener
+          detalles sobre
           <code>relatedTarget</code>.
         </p>
         <div class="bd-example">
@@ -1235,11 +1211,7 @@
 <span class="p">})</span>
 </code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="alternar-entre-modals">Alternar entre modals</h3>
         <p>Alterna entre múltiples modales con una colocación inteligente de los atributos <code>data-bs-target</code> y
@@ -1348,16 +1320,11 @@
         <p>Asegúrate de agregar <code>aria-labelledby="..."</code> a <code>.modal</code>, haciendo referencia al título
           modal. Además, puedes dar una descripción de tu diálogo modal con <code>aria-describedby</code> en
           <code>.modal</code>. Ten en cuenta que no necesitas agregar <code>role="dialog"</code> ya que ya lo agregamos
-          a través de <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.
+          a través de JavaScript.
         </p>
         <h3 id="incrustación-de-videos-de-youtube">Incrustación de videos de YouTube</h3>
-        <p>Incrustar videos de YouTube en modales requiere <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> adicional que no está en Bootstrap para
+        <p>Incrustar videos de YouTube en modales requiere JavaScript
+          adicional que no está en Bootstrap para
           detener automáticamente la reproducción y más. <a
             href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">Lee esta útil
             publicación de Stack Overflow</a> para obtener más información.</p>
@@ -1694,19 +1661,14 @@
 </code></pre>
         </div>
         <h2 id="uso">Uso</h2>
-        <p>El complemento modal alterna su contenido oculto a pedido, a través de atributos de datos o <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. También sobrescribe el comportamiento
+        <p>El complemento modal alterna su contenido oculto a pedido, a través de atributos de datos o JavaScript.
+          También sobrescribe el comportamiento
           <strong>hover</strong> predeterminado y genera un <code>.modal-backdrop</code> para proporcionar un área de
           clic para descartar los modales mostrados al hacer clic fuera del modal.
         </p>
         <h3 id="a-través-de-atributos-de-datos">A través de atributos de datos</h3>
         <h4 id="toggle">Toggle</h4>
-        <p>Activa un modal sin escribir <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Establece
+        <p>Activa un modal sin escribir JavaScript. Establece
           <code>data-bs-toggle="modal"</code> en un elemento controlador, como un botón, junto con
           <code>data-bs-target="#foo"</code> o <code>href="#foo"</code> para apuntar a un modal específico para
           alternar.
@@ -1734,23 +1696,17 @@
             diálogo modal WAI-ARIA</a>. Haz esto bajo tu propio riesgo.
         </div>
 
-        <h3 id="a-través-de-javascript">A través de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a></h3>
-        <p>Crea un modal con una sola línea de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>:</p>
+        <h3 id="a-través-de-javascript">A través de JavaScript
+        </h3>
+        <p>Crea un modal con una sola línea de JavaScript:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myModal'</span><span class="p">),</span> <span class="nx">options</span><span class="p">)</span>
 </code></pre>
         </div>
         <h3 id="opciones">Opciones</h3>
-        <p>Las opciones se pueden pasar a través de atributos de datos o <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para los atributos de datos, agrega el
+        <p>Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega
+          el
           nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-backdrop=""</code>.</p>
         <table class="table">
           <thead>
@@ -1803,11 +1759,7 @@
 <span class="p">})</span>
 </code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h4 id="toggle-1">toggle</h4>
         <p>Cambia manualmente un modal. <strong>Regresa al punto de la llamada antes de que el modal se haya mostrado u

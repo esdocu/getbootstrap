@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -753,10 +741,9 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre>
         </div>
-        <p>Usamos el siguiente <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para activar nuestra demostración de
+        <p>Usamos el siguiente JavaScript
+          para activar nuestra
+          demostración de
           toast en vivo:</p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">toastTrigger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'liveToastBtn'</span><span class="p">)</span>
@@ -916,11 +903,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="esquemas-de-color">Esquemas de color</h3>
         <p>Sobre la base del ejemplo anterior, puedes crear diferentes esquemas de colores con nuestras utilidades de <a
@@ -1210,11 +1193,7 @@
           atención cuando se muestran) . Si es absolutamente necesario tener controles adicionales, te recomendamos usar
           un toast con <code>autohide: false</code>.
         </p>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="sass">Sass</h2>
         <h3 id="variables">Variables</h3>
@@ -1237,10 +1216,8 @@
 </code></pre>
         </div>
         <h2 id="uso">Uso</h2>
-        <p>Inicializa los toasts a través de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>:</p>
+        <p>Inicializa los toasts a través de JavaScript:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">toastElList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.toast'</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">toastList</span> <span class="o">=</span> <span class="nx">toastElList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">toastEl</span><span class="p">)</span> <span class="p">{</span>
@@ -1262,10 +1239,8 @@
 </code></pre>
         </div>
         <h3 id="opciones">Opciones</h3>
-        <p>Las opciones se pueden pasar a través de atributos de datos o <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para los atributos de datos, agrega el
+        <p>Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega
+          el
           nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-animation=""</code>.</p>
         <table class="table">
           <thead>
@@ -1348,11 +1323,7 @@
 <span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">myToastEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia de toast Bootstrap
 </span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="eventos">Eventos</h3>
         <table class="table">

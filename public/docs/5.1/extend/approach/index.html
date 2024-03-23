@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -621,18 +609,11 @@
           <li>Los componentes deben ser responsive y mobile-first</li>
           <li>Los componentes deben construirse con una clase base y extenderse a través de clases modificadoras</li>
           <li>Los estados de los componentes deben obedecer a una escala de z-index común</li>
-          <li>Siempre que sea posible, se prefiere una implementación de HTML y CSS sobre <a
-              href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-              data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a></li>
+          <li>Siempre que sea posible, se prefiere una implementación de HTML y CSS sobre JavaScript</li>
           <li>Siempre que sea posible, se usan utilidades sobre estilos personalizados</li>
           <li>Siempre que sea posible, se evita aplicar requisitos HTML estrictos (selectores hijos)</li>
         </ul>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="responsive">Responsive</h2>
         <p>Los estilos responsive de Bootstrap están diseñados para ser responsive, un enfoque que a menudo se denomina
@@ -700,28 +681,18 @@
         <p>Obtén más información sobre esto en nuestra <a href="/docs/5.1/layout/z-index/">página de diseño
             <code>z-index</code></a>.</p>
         <h2 id="html-y-css-sobre-js">HTML y CSS sobre JS</h2>
-        <p>Siempre que sea posible, preferimos escribir HTML y CSS sobre <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. En general, HTML y CSS son más
+        <p>Siempre que sea posible, preferimos escribir HTML y CSS sobre JavaScript. En general, HTML y CSS son más
           prolíficos y accesibles para más personas de todos los niveles de experiencia. HTML y CSS también son más
-          rápidos en tu navegador que <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>, y tu navegador generalmente te brinda
+          rápidos en tu navegador que JavaScript, y tu navegador
+          generalmente te brinda
           una gran cantidad de funciones.</p>
-        <p>Este principio es nuestra API de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de primera clase que usa atributos
-          <code>data</code>. No necesitas escribir casi nada de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para usar nuestros complementos de <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>; en su lugar, escribe HTML. Lee más
-          sobre esto en <a href="/docs/5.1/getting-started/javascript/#data-attributes">nuestra página de descripción
+        <p>Este principio es nuestra API de JavaScript de
+          primera clase que usa atributos
+          <code>data</code>. No necesitas escribir casi nada de JavaScript para usar nuestros complementos de
+          JavaScript;
+          en su lugar, escribe HTML. Lee más
+          sobre esto en <a href="/docs/5.1/getting-started/javascript/#data-attributes">nuestra página de
+            descripción
             general de JavaScript</a>.
         </p>
         <p>Por último, nuestros estilos se basan en los comportamientos fundamentales de los elementos web comunes.
@@ -750,11 +721,7 @@
           para los componentes. Por lo tanto, nos enfocamos en clases individuales en nuestros selectores CSS y tratamos
           de evitar los selectores hijos inmediatos (<code>&gt;</code>). Esto te brinda más flexibilidad en tu
           implementación y ayuda a mantener nuestro CSS más simple y menos específico.</p>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="convenciones-de-código">Convenciones de código</h2>
         <p><a href="https://codeguide.co/">Guía de código</a> (del cocreador de Bootstrap, @mdo) documenta cómo

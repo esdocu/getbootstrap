@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -583,10 +571,8 @@
           <h1 class="bd-title" id="content">Offcanvas</h1>
         </div>
         <p class="bd-lead mb-5">Crea barras de navegación laterales ocultas en tu proyecto, carritos de compras y más
-          con algunas clases y nuestro complemento de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</p>
+          con algunas clases y nuestro complemento de JavaScript.
+        </p>
 
 
         <div class="alert alert-success" style="max-width: 800px;" role="alert">
@@ -649,20 +635,12 @@
 
 
         <h2 id="cómo-funciona-offcanvas">¿Cómo funciona Offcanvas?</h2>
-        <p>Offcanvas es un componente de barra lateral que se puede alternar usando <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para que aparezca desde el borde
+        <p>Offcanvas es un componente de barra lateral que se puede alternar usando JavaScript
+          para que aparezca desde el borde
           izquierdo, derecho, superior o inferior del viewport. Los botones o enlaces se usan como activadores con
-          atributos <code>data</code> que se usan para invocar nuestro <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</p>
+          atributos <code>data</code> que se usan para invocar nuestro JavaScript.</p>
         <ul>
-          <li>Offcanvas comparte parte del mismo código <a href="https://esdocu.dev/javascript" target="_blank"
-              data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-              data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> que los modals. Conceptualmente, son
+          <li>Offcanvas comparte parte del mismo código JavaScript que los modals. Conceptualmente, son
             bastante similares, pero son complementos separados.</li>
           <li>Del mismo modo, algunas variables <a href="#sass">source Sass</a> para estilos y dimensiones de offcanvas
             se heredan de las variables de modal.</li>
@@ -712,10 +690,8 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
         </div>
         <h3 id="demo-en-vivo">Demo en vivo</h3>
-        <p>Usa los botones a continuación para mostrar y ocultar un elemento offcanvas a través de <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> que alterna la clase <code>.show</code>
+        <p>Usa los botones a continuación para mostrar y ocultar un elemento offcanvas a través de JavaScript
+          que alterna la clase <code>.show</code>
           en un elemento con la clase <code>.offcanvas</code>.</p>
         <ul>
           <li><code>.offcanvas</code> oculta el contenido (predeterminado)</li>
@@ -789,11 +765,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="colocación">Colocación</h2>
         <p>No hay una ubicación predeterminada para los componentes offcanvas, por lo que debes agregar una de las
@@ -969,16 +941,9 @@
         <h2 id="accesibilidad">Accesibilidad</h2>
         <p>Dado que el panel offcanvas es conceptualmente un cuadro de diálogo modal, asegúrate de agregar
           <code>aria-labelledby="..."</code>, que hace referencia al título offcanvas, a <code>.offcanvas</code>. Ten en
-          cuenta que no necesitas agregar <code>role="dialog"</code> ya que ya lo agregamos a través de <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.
+          cuenta que no necesitas agregar <code>role="dialog"</code> ya que ya lo agregamos a través de JavaScript.
         </p>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="sass">Sass</h2>
         <h3 id="variables">Variables</h3>
@@ -1009,10 +974,9 @@
           <li><code>.offcanvas-bottom</code> oculta el offcanvas en la parte inferior</li>
         </ul>
         <p>Agrega un botón de cierre con el atributo <code>data-bs-dismiss="offcanvas"</code>, que activa la
-          funcionalidad de <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Asegúrate de usar el elemento
+          funcionalidad de JavaScript.
+          Asegúrate de usar el
+          elemento
           <code>&lt;button&gt;</code> para un comportamiento adecuado en todos los dispositivos.
         </p>
         <h3 id="a-través-de-atributos-de-datos">A través de atributos de datos</h3>
@@ -1040,10 +1004,8 @@
             diseño de diálogo modal WAI-ARIA</a>. Haz esto bajo tu propio riesgo.
         </div>
 
-        <h3 id="a-través-de-javascript">A través de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a></h3>
+        <h3 id="a-través-de-javascript">A través de JavaScript
+        </h3>
         <p>Habilitar manualmente con:</p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">offcanvasElementList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.offcanvas'</span><span class="p">))</span>
@@ -1053,10 +1015,8 @@
 </code></pre>
         </div>
         <h3 id="opciones">Opciones</h3>
-        <p>Las opciones se pueden pasar a través de atributos de datos o <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para los atributos de datos, agrega el
+        <p>Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega
+          el
           nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-backdrop=""</code>.</p>
         <table class="table">
           <thead>
@@ -1149,11 +1109,7 @@
           </tbody>
         </table>
 
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="eventos">Eventos</h3>
         <p>La clase Bootstrap offcanvas expone algunos eventos para conectarse a la funcionalidad offcanvas.</p>

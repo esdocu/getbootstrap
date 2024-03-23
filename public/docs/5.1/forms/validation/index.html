@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -583,10 +571,8 @@
           <h1 class="bd-title" id="content">Validación</h1>
         </div>
         <p class="bd-lead mb-5">Proporciona comentarios valiosos a tus usuarios con la validación de formularios HTML5,
-          a través de comportamientos predeterminados del navegador o estilos personalizados y <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</p>
+          a través de comportamientos predeterminados del navegador o estilos personalizados y JavaScript.
+        </p>
 
 
         <div class="alert alert-success" style="max-width: 800px;" role="alert">
@@ -660,39 +646,31 @@
             las pseudoclases para <a href="#server-side">validación del lado del servidor</a>. No requieren una clase
             padre <code>.was-validated</code>.</li>
           <li>Debido a restricciones en el funcionamiento de CSS, no podemos (en este momento) aplicar estilos a una
-            <code>&lt;label&gt;</code> que se encuentra antes de un control de formulario en el DOM sin la ayuda de <a
-              href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-              data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.
+            <code>&lt;label&gt;</code> que se encuentra antes de un control de formulario en el DOM sin la ayuda de
+            JavaScript personalizado.
           </li>
           <li>Todos los navegadores modernos admiten la <a
               href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">API
-              de validación de restricciones</a>, una serie de métodos de <a href="https://esdocu.dev/javascript"
-              target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-              data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para validar controles de formulario.
+              de validación de restricciones</a>, una serie de métodos de JavaScript para validar controles de
+            formulario.
           </li>
           <li>Los mensajes de feedback pueden utilizar los <a href="#browser-defaults">predeterminados del navegador</a>
             (diferentes para cada navegador y sin estilo a través de CSS) o nuestros estilos personalizados de feedback
             con HTML y CSS adicionales.</li>
-          <li>Puedes proporcionar mensajes de validez personalizados con <code>setCustomValidity</code> en <a
-              href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-              data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</li>
+          <li>Puedes proporcionar mensajes de validez personalizados con <code>setCustomValidity</code> en JavaScript.
+          </li>
         </ul>
         <p>Con esto en mente, considera las siguientes demostraciones para nuestros estilos de validación de formularios
           personalizados, clases opcionales del lado del servidor y valores predeterminados del navegador.</p>
         <h2 id="estilos-personalizados">Estilos personalizados</h2>
         <p>Para los mensajes de validación de formulario Bootstrap personalizados, deberás agregar el atributo booleano
           <code>novalidate</code> a tu <code>&lt;form&gt;</code>. Esto deshabilita los tooltips de feedback
-          predeterminados del navegador, pero aún proporciona acceso a las API de validación de formularios en <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Intenta enviar el siguiente
-          formulario; nuestro <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> interceptará el botón de enviar y te
+          predeterminados del navegador, pero aún proporciona acceso a las API de validación de formularios en
+          JavaScript.
+          Intenta enviar el siguiente
+          formulario; nuestro JavaScript
+          interceptará el botón de
+          enviar y te
           transmitirá sus comentarios. Cuando intentes enviar, verás los estilos <code>:invalid</code> y
           <code>:valid</code> aplicados a los controles de tu formulario.
         </p>
@@ -833,7 +811,7 @@
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre>
         </div>
         <div class="highlight">
-          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Ejemplo de <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu." title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> inicial para deshabilitar el envío de formularios si hay campos no válidos
+          <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
 </span><span class="c1"></span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="s1">'use strict'</span>
 
@@ -854,25 +832,18 @@
     <span class="p">})</span>
 <span class="p">})()</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="valores-predeterminados-del-navegador">Valores predeterminados del navegador</h2>
-        <p>¿No te interesan los mensajes feedback de validación personalizados o escribir <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para cambiar los comportamientos de los
-          formularios? Todo bien, puedes usar los valores predeterminados del navegador. Intenta enviar el formulario a
+        <p>¿No te interesan los mensajes feedback de validación personalizados o escribir JavaScript
+          para cambiar los comportamientos de los
+          formularios? Todo bien, puedes usar los valores predeterminados del navegador. Intenta enviar el formulario
+          a
           continuación. Dependiendo de tu navegador y sistema operativo, verás un estilo de retroalimentación
           ligeramente diferente.</p>
         <p>Si bien estos estilos de comentarios no se pueden diseñar con CSS, aún puedes personalizar el texto de
-          comentarios a través de <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</p>
+          comentarios a través de JavaScript.
+        </p>
         <div class="bd-example">
           <form class="row g-3">
             <div class="col-md-4">
@@ -1113,11 +1084,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="elementos-compatibles">Elementos compatibles</h2>
         <p>Los estilos de validación están disponibles para los siguientes controles y componentes de formulario:</p>
@@ -1516,11 +1483,7 @@
         </div>
         <p>Los mapas de <code>$form-validation-states</code> pueden contener tres parámetros opcionales para
           sobrescribir los estilos de tooltips y de enfoque.</p>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="loop">Loop</h3>
         <p>Se utiliza para iterar sobre los valores del mapa <code>$form-validation-states</code> para generar nuestros

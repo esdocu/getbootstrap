@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -680,38 +668,24 @@
           el <em>carousel</em>, elimina esa importación para ahorrar algo de tamaño de archivo en tu CSS compilado. Ten
           en cuenta que existen algunas dependencias en las importaciones de Sass que pueden dificultar la omisión de un
           archivo.</p>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
-        <h2 id="javascript-ligero"><a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> ligero</h2>
-        <p>El <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de Bootstrap incluye todos los
+        <h2 id="javascript-ligero">JavaScript
+          ligero</h2>
+        <p>El JavaScript
+          de Bootstrap incluye todos los
           componentes de nuestros archivos de distribución principales (<code>bootstrap.js</code> y
           <code>bootstrap.min.js</code>), e incluso nuestra dependencia principal (Popper) con nuestros archivos de
           paquete (<code>bootstrap.bundle.js</code> y <code>bootstrap.bundle.min.js</code>). Mientras personalizas a
-          través de Sass, asegúrate de eliminar el <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> relacionado.
+          través de Sass, asegúrate de eliminar el JavaScript
+          relacionado.
         </p>
-        <p>Por ejemplo, suponiendo que estás usando tu propio paquete de <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> como Webpack o Rollup, solo importarás
-          el <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> que planeas usar. En el siguiente
-          ejemplo, mostramos cómo incluir solamente nuestro <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> modal:</p>
+        <p>Por ejemplo, suponiendo que estás usando tu propio paquete de JavaScript como Webpack o Rollup, solo
+          importarás
+          el JavaScript
+          que planeas usar. En el siguiente
+          ejemplo, mostramos cómo incluir solamente nuestro JavaScript
+          modal:</p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Import just what we need
 </span><span class="c1"></span>
@@ -729,12 +703,11 @@
 </span><span class="c1">// import 'bootstrap/js/dist/tooltip';
 </span></code></pre>
         </div>
-        <p>De esta forma, no incluyes ningún <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> que no pretendas utilizar para
+        <p>De esta forma, no incluyes ningún JavaScript que
+          no pretendas utilizar para
           componentes como botones, carruseles e tooltips. Si estás importando menús desplegables, tooltips o ventanas
-          emergentes (popovers), asegúrate de incluir la dependencia de Popper en tu archivo <code>package.json</code>.
+          emergentes (popovers), asegúrate de incluir la dependencia de Popper en tu archivo
+          <code>package.json</code>.
         </p>
         <div class="bd-callout bd-callout-info">
           <h3 id="default-exports">Default Exports</h3>
@@ -774,11 +747,7 @@
           utilizando archivos dist de Bootstrap, intenta inclinarte por las versiones minificadas (indicadas por las
           extensiones <code>.min.css</code> y <code>.min.js</code>). Si estás compilando Bootstrap desde la fuente con
           tu propio sistema de compilación, asegúrate de implementar tus propios minificadores para HTML, CSS y JS.</p>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="archivos-sin-bloqueo">Archivos sin bloqueo</h2>
         <p>Si bien minimizar y usar la compresión puede parecer suficiente, hacer que tus archivos no bloqueen también
@@ -788,14 +757,13 @@
           hayas tropezado con FCP. La métrica <a href="https://web.dev/fcp/">The First Contentful Paint</a> mide el
           tiempo desde que la página comienza a cargarse hasta que cualquier parte del contenido de la página se
           representa en la pantalla.</p>
-        <p>Puedes mejorar FCP aplazando <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> o CSS no críticos. ¿Qué significa eso?
-          Simplemente, <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> o las hojas de estilo que no necesitan
+        <p>Puedes mejorar FCP aplazando JavaScript o CSS no
+          críticos.
+          ¿Qué
+          significa eso?
+          Simplemente, JavaScript o las
+          hojas de estilo que
+          no necesitan
           estar presentes en la primera pintura de tu página deben marcarse con los atributos <code>async</code> o
           <code>defer</code>.
         </p>

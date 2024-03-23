@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded active" aria-current="page">
@@ -1133,10 +1121,8 @@
           <li>
             <p><span class="badge bg-danger">Breaking</span> <strong><a
                   href="/docs/5.1/forms/checks-radios/#toggle-buttons">Botones de alternar</a>, con casillas de
-                verificación o radios, ya no requiere <a href="https://esdocu.dev/javascript" target="_blank"
-                  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                  data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> y tiene un nuevo
+                verificación o radios, ya no requiere JavaScript y
+                tiene un nuevo
                 marcado.</strong> Ya no requerimos un elemento de ajuste, agregue <code>.btn-check</code> a
               <code>&lt;input&gt;</code> y empareje con cualquier clase <code>.btn</code> en <code>&lt;label&gt;</code>.
               <a href="https://github.com/twbs/bootstrap/pull/30650">Ver #30650</a>. <em>Los documentos para esto se han
@@ -1232,10 +1218,7 @@
           <li>
             <p>Los menús desplegables ahora tienen un atributo <code>data-bs-popper="static"</code> establecido cuando
               el posicionamiento del menú desplegable es estático, o el menú desplegable está en la barra de navegación.
-              Esto lo agrega nuestro <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-                data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> y nos ayuda a usar estilos de
+              Esto lo agrega nuestro JavaScript y nos ayuda a usar estilos de
               posición personalizados sin interferir con el posicionamiento de Popper.</p>
           </li>
           <li>
@@ -1487,23 +1470,15 @@
               importar ayudantes en compilaciones personalizadas.</p>
           </li>
         </ul>
-        <h2 id="javascript"><a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a></h2>
+        <h2 id="javascript">JavaScript</h2>
         <ul>
           <li>
             <p><strong>Se eliminó la dependencia de jQuery</strong> y se reescribieron los complementos para que estén
-              en <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-                data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> normal.</p>
+              en JavaScript normal.</p>
           </li>
           <li>
-            <p><span class="badge bg-danger">Breaking</span> Los atributos de datos para todos los complementos de <a
-                href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-                data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> ahora tienen un espacio de nombres
+            <p><span class="badge bg-danger">Breaking</span> Los atributos de datos para todos los complementos de
+              JavaScript ahora tienen un espacio de nombres
               para ayudar a distinguir la funcionalidad de Bootstrap de terceros y de su propio código. Por ejemplo,
               usamos <code>data-bs-toggle</code> en lugar de <code>data-toggle</code>.</p>
           </li>

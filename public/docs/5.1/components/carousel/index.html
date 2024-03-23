@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -647,11 +635,10 @@
 
         <h2 id="cómo-funciona-el-carousel">¿Cómo funciona el Carousel?</h2>
         <p>El carrusel es una presentación de diapositivas para recorrer una serie de contenido, creado con
-          transformaciones CSS 3D y un poco de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Funciona con una serie de imágenes,
-          texto o marcas personalizadas. También incluye soporte para controles e indicadores anteriores/siguientes.</p>
+          transformaciones CSS 3D y un poco de JavaScript.
+          Funciona con una serie de imágenes,
+          texto o marcas personalizadas. También incluye soporte para controles e indicadores anteriores/siguientes.
+        </p>
         <p>En los navegadores donde la <a href="https://www.w3.org/TR/page-visibility/">API de visibilidad de página</a>
           es compatible, el carrusel evitará el deslizamiento cuando la página web no esté visible para el usuario (como
           cuando la pestaña del navegador está inactiva, la ventana del navegador está minimizada, etc.).</p>
@@ -802,11 +789,7 @@
   <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="con-indicadores">Con indicadores</h3>
         <p>También puedes agregar los indicadores al carrusel, junto con los controles.</p>
@@ -1340,11 +1323,7 @@
   <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="transición-personalizada">Transición personalizada</h2>
         <p>La duración de la transición de <code>.carousel-item</code> se puede cambiar con la variable Sass
@@ -1397,15 +1376,11 @@
           índice particular que comienza con <code>0</code>.</p>
         <p>El atributo <code>data-bs-ride="carousel"</code> se utiliza para marcar un carrusel como animado a partir de
           la carga de la página. Si no usas <code>data-bs-ride="carousel"</code> para inicializar tu carrusel, debes
-          inicializarlo tú mismo. <strong>No se puede usar en combinación con la inicialización explícita de <a
-              href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-              data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> (redundante e innecesaria) del mismo
+          inicializarlo tú mismo. <strong>No se puede usar en combinación con la inicialización explícita de JavaScript
+            (redundante e innecesaria) del mismo
             carrusel.</strong></p>
-        <h3 id="a-través-de-javascript">A través de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a></h3>
+        <h3 id="a-través-de-javascript">A través de JavaScript
+        </h3>
         <p>Llama al carousel manualmente con:</p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myCarousel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#myCarousel'</span><span class="p">)</span>
@@ -1413,10 +1388,8 @@
 </code></pre>
         </div>
         <h3 id="opciones">Opciones</h3>
-        <p>Las opciones se pueden pasar a través de atributos de datos o <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para los atributos de datos, agrega el
+        <p>Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega
+          el
           nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-interval=""</code>.</p>
         <table class="table">
           <thead>
@@ -1567,11 +1540,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="eventos">Eventos</h3>
         <p>La clase de carrusel de Bootstrap expone dos eventos para conectarse a la funcionalidad del carrusel. Ambos

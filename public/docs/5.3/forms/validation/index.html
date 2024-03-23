@@ -780,10 +780,8 @@
           <h1 class="bd-title mb-0" id="content">Validación</h1>
         </div>
         <p class="bd-lead">Brinda comentarios valiosos y prácticos a tus usuarios con la validación de formularios
-          HTML5, a través de comportamientos predeterminados del navegador o estilos personalizados y <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</p>
+          HTML5, a través de comportamientos predeterminados del navegador o estilos personalizados y JavaScript.
+        </p>
         <div id="esdocu-ads">
           <div class="alert alert-info mt-4" role="alert">
             😎 Esta traducción es parte del proyecto <a href="https://esdocu.com" target="_blank">esdocu.com</a>.
@@ -858,25 +856,18 @@
             las pseudoclases para <a href="#server-side">validación del lado del servidor</a>. No requieren una clase
             padre <code>.was-validated</code>.</li>
           <li>Debido a limitaciones en el funcionamiento de CSS, no podemos (actualmente) aplicar estilos a un
-            <code>&lt;label&gt;</code> que viene antes de un control de formulario en el DOM sin la ayuda de <a
-              href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-              data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> personalizado.
+            <code>&lt;label&gt;</code> que viene antes de un control de formulario en el DOM sin la ayuda de JavaScript
+            personalizado.
           </li>
           <li>Todos los navegadores modernos admiten <a
               href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">API
-              de validación de restricciones</a>, una serie de métodos <a href="https://esdocu.dev/javascript"
-              target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-              data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para validar controles de formulario.
+              de validación de restricciones</a>, una serie de métodos JavaScript para validar controles de formulario.
           </li>
           <li>Los feedback pueden utilizar los <a href="#browser-defaults">valores predeterminados del navegador</a>
             (diferentes para cada navegador y sin estilo mediante CSS) o nuestros estilos de feedback personalizados con
             HTML y CSS adicionales.</li>
-          <li>Puedes proporcionar mensajes de validez personalizados con <code>setCustomValidity</code> en <a
-              href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-              data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</li>
+          <li>Puedes proporcionar mensajes de validez personalizados con <code>setCustomValidity</code> en JavaScript.
+          </li>
         </ul>
         <p>Con eso en mente, considera las siguientes demostraciones de nuestros estilos de validación de formularios
           personalizados, clases opcionales del lado del servidor y valores predeterminados del navegador.</p>
@@ -884,15 +875,14 @@
             aria-label="Link to this section: Custom styles"></a></h2>
         <p>Para mensajes de validación de formularios Bootstrap personalizados, necesitarás agregar el atributo booleano
           <code>novalidate</code> a tu <code>&lt;form&gt;</code>. Esto deshabilita los tooltips de comentarios
-          predeterminados del navegador, pero aún proporciona acceso a las API de validación de formularios en <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Intenta enviar el formulario a
-          continuación; nuestro <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> interceptará el botón de enviar y te
-          transmitirá sus comentarios. Al intentar enviar, verás los estilos <code>:invalid</code> y <code>:valid</code>
+          predeterminados del navegador, pero aún proporciona acceso a las API de validación de formularios en
+          JavaScript.
+          Intenta enviar el formulario a
+          continuación; nuestro JavaScript
+          interceptará el botón de
+          enviar y te
+          transmitirá sus comentarios. Al intentar enviar, verás los estilos <code>:invalid</code> y
+          <code>:valid</code>
           aplicados a tus controles de formulario.
         </p>
         <p>Los estilos de comentarios personalizados aplican colores, bordes, estilos de enfoque e íconos de fondo
@@ -1052,7 +1042,7 @@
 
         <div class="bd-example-snippet bd-code-snippet">
           <div class="highlight">
-            <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Example starter <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu." title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> for disabling form submissions if there are invalid fields
+            <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Example starter JavaScript for disabling form submissions if there are invalid fields
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="s1">'use strict'</span>
 </span></span><span class="line"><span class="cl">
@@ -1076,18 +1066,15 @@
 
         <h2 id="browser-defaults">Valores predeterminados del navegador <a class="anchor-link" href="#browser-defaults"
             aria-label="Link to this section: Browser defaults"></a></h2>
-        <p>¿No te interesan los mensajes de validación personalizados o escribir <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para cambiar el comportamiento de los
-          formularios? Todo bien, puedes usar los valores predeterminados del navegador. Intenta enviar el formulario a
+        <p>¿No te interesan los mensajes de validación personalizados o escribir JavaScript para cambiar el
+          comportamiento de los
+          formularios? Todo bien, puedes usar los valores predeterminados del navegador. Intenta enviar el formulario
+          a
           continuación. Dependiendo de gu navegador y sistema operativo, verás un estilo de comentarios ligeramente
           diferente.</p>
         <p>Si bien estos estilos de comentarios no se pueden diseñar con CSS, aún puedes personalizar el texto de los
-          comentarios a través de <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>.</p>
+          comentarios a través de JavaScript.
+        </p>
         <div class="bd-example-snippet bd-code-snippet">
           <div class="bd-example m-0 border-0">
             <form class="row g-3">

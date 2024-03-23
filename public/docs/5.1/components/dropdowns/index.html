@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -680,20 +668,18 @@
 
         <h2 id="qué-es-dropdown">¿Qué es Dropdown?</h2>
         <p>Los menús desplegables son superposiciones contextuales que se pueden alternar (su visibilidad) para mostrar
-          listas de enlaces y más. Se hacen interactivos con dropdown, el complemento <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> incluido de Bootstrap. Se alternan al
+          listas de enlaces y más. Se hacen interactivos con dropdown, el complemento JavaScript
+          incluido de Bootstrap. Se alternan al
           hacer clic, no al pasar el mouse; esta es <a
             href="https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/">una decisión de diseño
             intencional</a>.</p>
         <p>Los menús desplegables se basan en una biblioteca de terceros, <a href="https://popper.js.org/">Popper</a>,
           que proporciona posicionamiento dinámico y detección de viewport. Asegúrate de incluir <a
             href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js">popper.min.js</a> antes del
-          <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de Bootstrap o usa
-          <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> que contiene Popper. Popper no se usa
+          JavaScript
+          de Bootstrap o usa
+          <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> que contiene Popper. Popper no se
+          usa
           para posicionar los menús desplegables en las barras de navegación, ya que no se requiere un posicionamiento
           dinámico.
         </p>
@@ -1001,11 +987,7 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h2 id="dimensionamiento">Dimensionamiento</h2>
         <p>Los menús desplegables de botones funcionan con botones de todos los tamaños, incluidos los botones
@@ -1777,11 +1759,7 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"dropdown-item"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>Otra acción<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="divisores">Divisores</h3>
         <p>Separa los grupos de elementos de menú relacionados con un divisor.</p>
@@ -2214,12 +2192,11 @@
 </code></pre>
         </div>
         <h2 id="uso">Uso</h2>
-        <p>A través de atributos de datos o <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>, el complemento dropdown alterna el
+        <p>A través de atributos de datos o JavaScript, el
+          complemento dropdown alterna el
           contenido oculto (menús desplegables) al alternar la clase <code>.show</code> en el
-          <code>.dropdown-menu</code> padre. Se confía en el atributo <code>data-bs-toggle="dropdown"</code> para cerrar
+          <code>.dropdown-menu</code> padre. Se confía en el atributo <code>data-bs-toggle="dropdown"</code> para
+          cerrar
           los menús desplegables a nivel de aplicación, por lo que es una buena idea usarlo siempre.
         </p>
         <div class="bd-callout bd-callout-info">
@@ -2245,14 +2222,10 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre>
         </div>
-        <h3 id="a-través-de-javascript">A través de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a></h3>
-        <p>Llama a los menús desplegables a través de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>:</p>
+        <h3 id="a-través-de-javascript">A través de JavaScript
+        </h3>
+        <p>Llama a los menús desplegables a través de JavaScript:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">dropdownElementList</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'.dropdown-toggle'</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">dropdownList</span> <span class="o">=</span> <span class="nx">dropdownElementList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">dropdownToggleEl</span><span class="p">)</span> <span class="p">{</span>
@@ -2263,22 +2236,19 @@
         <div class="bd-callout bd-callout-info">
           <h5 id="data-bs-toggledropdown-todavía-se-requiere"><code>data-bs-toggle="dropdown"</code> todavía se requiere
           </h5>
-          <p>Independientemente de si llamas a tu menú desplegable a través de <a href="https://esdocu.dev/javascript"
-              target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-              data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> o en su lugar utilizas la API de
+          <p>Independientemente de si llamas a tu menú desplegable a través de JavaScript o en su lugar utilizas la API
+            de
             datos, <code>data-bs-toggle="dropdown"</code> siempre debe estar presente en el elemento desencadenante del
             menú desplegable.
           </p>
         </div>
 
         <h3 id="opciones">Opciones</h3>
-        <p>Las opciones se pueden pasar a través de atributos de datos o <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para los atributos de datos, agrega el
+        <p>Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega
+          el
           nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-offset=""</code>. Asegúrate de cambiar el
-          tipo de caso del nombre de la opción de camelCase a kebab-case al pasar las opciones a través de atributos de
+          tipo de caso del nombre de la opción de camelCase a kebab-case al pasar las opciones a través de atributos
+          de
           datos. Por ejemplo, en lugar de usar <code>data-bs-autoClose="false"</code>, usa
           <code>data-bs-auto-close="false"</code>.
         </p>
@@ -2298,10 +2268,8 @@
               <td><code>'clippingParents'</code></td>
               <td>Límite de restricción de desbordamiento del menú desplegable (se aplica solo al modificador
                 preventOverflow de Popper). De forma predeterminada, es <code>'clippingParents'</code> y puede aceptar
-                una referencia HTMLElement (solo a través de <a href="https://esdocu.dev/javascript" target="_blank"
-                  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                  data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>). Para obtener más información,
+                una referencia HTMLElement (solo a través de JavaScript). Para obtener más
+                información,
                 consulta las <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow
                   docs</a> de Popper.</td>
             </tr>
@@ -2445,11 +2413,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="eventos">Eventos</h3>
         <p>Todos los eventos desplegables se activan en el elemento de alternancia y luego se expanden. Por lo tanto,

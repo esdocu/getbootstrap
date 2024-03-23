@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -722,10 +710,9 @@
             class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"liveAlertPlaceholder"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"btn btn-primary"</span> <span class="na">id</span><span class="o">=</span><span class="s">"liveAlertBtn"</span><span class="p">&gt;</span>Mostrar alerta en vivo<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre>
         </div>
-        <p>Usamos el siguiente <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> para activar nuestra demostración de
+        <p>Usamos el siguiente JavaScript
+          para activar nuestra
+          demostración de
           alerta en vivo:</p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">alertPlaceholder</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'liveAlertPlaceholder'</span><span class="p">)</span>
@@ -827,11 +814,7 @@
   <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-0"</span><span class="p">&gt;</span>Siempre que lo necesites, asegúrate de usar utilidades de margen para mantener las cosas ordenadas y ordenadas.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="iconos">Iconos</h3>
         <p>De manera similar, puedes usar <a href="/docs/5.1/utilities/flex/">utilidades flexbox</a> y <a
@@ -953,25 +936,20 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre>
         </div>
         <h3 id="descartar">Descartar</h3>
-        <p>Con el complemento <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de alerta, es posible descartar
+        <p>Con el complemento JavaScript de
+          alerta, es posible
+          descartar
           cualquier alerta. Así es cómo:</p>
         <ul>
-          <li>Asegúrate de haber cargado el complemento de alerta o el <a href="https://esdocu.dev/javascript"
-              target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-              data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> de Bootstrap compilado.</li>
+          <li>Asegúrate de haber cargado el complemento de alerta o el JavaScript de Bootstrap compilado.</li>
           <li>Agrega un <a href="/docs/5.1/components/close-button/">botón de cierre</a> y la clase
             <code>.alert-dismissible</code>, que agrega padding adicional a la derecha de la alerta y posiciona el botón
             de cierre.
           </li>
           <li>En el botón de cerrar, agrega el atributo <code>data-bs-dismiss="alert"</code>, que activa la
-            funcionalidad de <a href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip"
-              data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-              data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-              title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Asegúrate de usar el elemento
+            funcionalidad de JavaScript.
+            Asegúrate de usar el
+            elemento
             <code>&lt;button&gt;</code> para un comportamiento adecuado en todos los dispositivos.
           </li>
           <li>Para animar alertas al descartarlas, asegúrate de agregar las clases <code>.fade</code> y
@@ -994,11 +972,11 @@
         <div class="bd-callout bd-callout-warning">
           Cuando se descarta una alerta, el elemento se elimina por completo de la estructura de la página. Si un
           usuario desde el teclado descarta la alerta usando el botón de cerrar, su enfoque se perderá repentinamente y,
-          según el navegador, se restablecerá al inicio de la página/documento. Por este motivo, recomendamos incluir <a
-            href="https://esdocu.dev/javascript" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-custom-class="custom-tooltip" data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a> adicional que detecte el evento
-          <code>closed.bs.alert</code> y programáticamente establecer <code>focus()</code> en la ubicación más adecuada
+          según el navegador, se restablecerá al inicio de la página/documento. Por este motivo, recomendamos incluir
+          JavaScript
+          adicional que detecte el evento
+          <code>closed.bs.alert</code> y programáticamente establecer <code>focus()</code> en la ubicación más
+          adecuada
           de la página. Si planeas mover el foco a un elemento no interactivo que normalmente no recibe el foco,
           asegúrate de agregar <code>tabindex="-1"</code> al elemento.
         </div>
@@ -1071,16 +1049,10 @@
 <span class="p">}</span>
 </code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
-        <h2 id="comportamiento-de-javascript">Comportamiento de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a></h2>
+        <h2 id="comportamiento-de-javascript">Comportamiento de JavaScript
+        </h2>
         <h3 id="inicializar">Inicializar</h3>
         <p>Inicializar elementos como alertas</p>
         <div class="highlight">
@@ -1165,11 +1137,7 @@
 <span class="nx">alert</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
 </code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="eventos">Eventos</h3>
         <p>El complemento de alerta de Bootstrap expone algunos eventos para conectarse a la funcionalidad de alerta.

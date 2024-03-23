@@ -548,19 +548,7 @@
               </ul>
             </div>
           </li>
-          <li class="mb-1">
-            <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-              data-bs-target="#hosting-collapse" aria-expanded="false">
-              Web Hosting
-            </button>
-
-            <div class="collapse" id="hosting-collapse">
-              <ul class="list-unstyled fw-normal pb-1 small">
-                <li><a href="/docs/5.1/hosting/mejor-web-hosting/"
-                    class="d-inline-flex align-items-center rounded">Mejor Web Hosting</a></li>
-              </ul>
-            </div>
-          </li>
+          <!-- Web hosting item (old) -->
           <li class="my-3 mx-4 border-top"></li>
           <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
@@ -841,10 +829,8 @@
 </code></pre>
         </div>
         <h2 id="uso">Uso</h2>
-        <p>Habilitar popovers a través de <a href="https://esdocu.dev/javascript" target="_blank"
-            data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>:</p>
+        <p>Habilitar popovers a través de JavaScript:
+        </p>
         <div class="highlight">
           <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'example'</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
@@ -880,19 +866,14 @@
 
         </div>
 
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="opciones">Opciones</h3>
-        <p>Las opciones se pueden pasar a través de atributos de datos o <a href="https://esdocu.dev/javascript"
-            target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-            data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-            title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>. Para los atributos de datos, agrega el
+        <p>Las opciones se pueden pasar a través de atributos de datos o JavaScript. Para los atributos de datos, agrega
+          el
           nombre de la opción a <code>data-bs-</code>, como en <code>data-bs-animation=""</code>. Asegúrate de cambiar
-          el tipo de caso del nombre de la opción de camelCase a kebab-case al pasar las opciones a través de atributos
+          el tipo de caso del nombre de la opción de camelCase a kebab-case al pasar las opciones a través de
+          atributos
           de datos. Por ejemplo, en lugar de usar <code>data-bs-customClass="beautifier"</code>, usa
           <code>data-bs-custom-class="beautifier"</code>.
         </p>
@@ -1023,10 +1004,8 @@
               <td><code>'clippingParents'</code></td>
               <td>Límite de restricción de desbordamiento del popover (se aplica solo al modificador preventOverflow de
                 Popper). De forma predeterminada, es <code>'clippingParents'</code> y puede aceptar una referencia
-                HTMLElement (solo a través de <a href="https://esdocu.dev/javascript" target="_blank"
-                  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip"
-                  data-bs-title="Ir al Curso Gratuito de JavaScript en Esdocu."
-                  title="Ir al Curso Gratuito de JavaScript en Esdocu.">JavaScript</a>). Para obtener más información,
+                HTMLElement (solo a través de JavaScript). Para
+                obtener más información,
                 consulta los <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow
                   docs</a> de Popper.</td>
             </tr>
@@ -1105,11 +1084,7 @@
           </p>
         </div>
 
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h4 id="uso-de-la-función-con-popperconfig">Uso de la función con <code>popperConfig</code></h4>
         <div class="highlight">
@@ -1224,11 +1199,7 @@
 <span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Devuelve una instancia del popover de Bootstrap
 </span></code></pre>
         </div>
-        <div class="bd-callout bd-callout-info">
-          <h5 id="tal-vez-te-interese">Tal vez te interese</h5>
-          <p><a href="/docs/5.1/hosting/mejor-web-hosting">¿Cuál es el mejor Web Hosting?</a>
-          </p>
-        </div>
+        <!-- Tal vez te interese (old callout position) -->
 
         <h3 id="eventos">Eventos</h3>
         <table class="table">
