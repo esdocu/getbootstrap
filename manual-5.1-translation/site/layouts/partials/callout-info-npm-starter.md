@@ -1,1 +1,0 @@
-**¡Comienza con Bootstrap a través de npm con nuestro proyecto de inicio!** Diríjete al repositorio de plantillas [twbs/bootstrap-npm-starter](https://github.com/twbs/bootstrap-npm-starter) para ver cómo construir y personalizar Bootstrap en tu propio proyecto npm. Incluye el compilador Sass, Autoprefixer, Stylelint, PurgeCSS y Bootstrap Icons.
