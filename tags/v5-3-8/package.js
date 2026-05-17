@@ -1,10 +1,10 @@
-// package metadata file for Meteor.js
+// Archivo de metadatos de paquete para Meteor.js
 
 /* eslint-env meteor */
 
 Package.describe({
   name: 'twbs:bootstrap', // https://atmospherejs.com/twbs/bootstrap
-  summary: 'The most popular front-end framework for developing responsive, mobile first projects on the web.',
+  summary: 'El framework front-end más popular para desarrollar proyectos responsivos y orientados a dispositivos móviles en la web.',
   version: '5.3.8',
   git: 'https://github.com/twbs/bootstrap.git'
 })

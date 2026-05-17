@@ -1,6 +1,13 @@
 ---
-import { getConfig } from '@libs/config'
 ---
+{import.meta.env.PROD && (
+  <!-- Google tag (gtag.js) -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<script is:inline defer src="https://cdn.usefathom.com/script.js" data-site={getConfig().analytics.fathom_site}
-></script>
+    gtag('config', 'G-DK014C26F7');
+  </script>
+)}
