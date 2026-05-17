@@ -1,0 +1,47 @@
+- name: Alert
+  description: Muestra y oculta mensajes de alerta a tus usuarios.
+  link: components/alerts/#javascript-behavior
+
+- name: Button
+  description: Controla mediante programación el estado activo de los botones.
+  link: components/buttons/#button-plugin
+
+- name: Carousel
+  description: Añade presentaciones de diapositivas a cualquier página, incluyendo soporte para desvanecimiento (crossfade).
+  link: components/carousel/
+
+- name: Collapse
+  description: Expande y contrae áreas de contenido, o crea acordeones.
+  link: components/collapse/
+
+- name: Dropdown
+  description: Crea menús de enlaces, acciones, formularios y más.
+  link: components/dropdowns/
+
+- name: Modal
+  description: Añade diálogos flexibles y adaptables a tu proyecto.
+  link: components/modal/
+
+- name: Offcanvas
+  description: Construye y alterna barras laterales ocultas en cualquier página.
+  link: components/offcanvas/
+
+- name: Popover
+  description: Crea superposiciones personalizadas. Construido sobre Popper.
+  link: components/popovers/
+
+- name: Scrollspy
+  description: Actualiza automáticamente los enlaces de navegación activos según el desplazamiento de la página.
+  link: components/scrollspy/
+
+- name: Tab
+  description: Permite a los componentes de navegación de Bootstrap alternar contenidos.
+  link: components/navs-tabs/
+
+- name: Toast
+  description: Muestra y oculta notificaciones a tus visitantes.
+  link: components/toasts/
+
+- name: Tooltip
+  description: Reemplaza los tooltips del navegador por otros personalizados. Construido sobre Popper.
+  link: components/tooltips/

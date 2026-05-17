@@ -1,0 +1,115 @@
+---
+import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
+import Code from '@shortcodes/Code.astro'
+---
+
+<div class="col-lg-7 mx-auto pb-3 mb-3 mb-md-5 text-md-center">
+  <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-violet-rgb);">
+    <svg class="bi fs-1" aria-hidden="true"><use xlink:href="#code"></use></svg>
+  </div>
+  <h2 class="display-5 mb-3 fw-semibold lh-sm">Empieza como tú&nbsp;quieras</h2>
+  <p class="lead fw-normal">
+    Comienza directamente a construir con Bootstrap: usa la CDN, instálalo a través de un gestor de paquetes o descarga el código fuente.
+  </p>
+  <p class="d-flex justify-content-md-center lead fw-normal">
+    <a href={getVersionedDocsPath('getting-started/download/')} class="icon-link icon-link-hover fw-semibold ps-md-4">
+      Lee la documentación de instalación
+      <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+    </a>
+  </p>
+</div>
+
+<section class="row g-3 g-md-5 mb-5 pb-5 justify-content-center">
+  <div class="col-lg-6 py-lg-4 pe-lg-5">
+    <svg class="bi mb-2 fs-2 text-body-secondary" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
+    <h3 class="fw-semibold">Instalar mediante gestor de paquetes</h3>
+    <p class="pe-lg-5">
+      Instala los archivos fuente Sass y JavaScript de Bootstrap a través de npm, RubyGems, Composer o Meteor. Las
+      instalaciones administradas por paquetes no incluyen la documentación o nuestros scripts de compilación completos. También puedes <a
+        href="https://github.com/twbs/examples/">usar cualquier demo de nuestro repositorio de ejemplos</a
+      > para iniciar rápidamente proyectos de Bootstrap.
+    </p>
+    <Code code={`npm install bootstrap@${getConfig().current_version}`} lang="sh" />
+    <Code code={`gem install bootstrap -v ${getConfig().current_ruby_version}`} lang="sh" />
+    <p>
+      <a href={getVersionedDocsPath('getting-started/download')}>Lee nuestra documentación de instalación</a> para obtener más información y
+      gestores de paquetes adicionales.
+    </p>
+  </div>
+  <div class="col-lg-6 py-lg-4 ps-lg-5 border-lg-start">
+    <svg class="bi mb-2 fs-2 text-body-secondary" aria-hidden="true"><use xlink:href="#globe2"></use></svg>
+    <h3 class="fw-semibold">Incluir mediante CDN</h3>
+    <p class="pe-lg-5">
+      Cuando solo necesites incluir el CSS o JS compilado de Bootstrap, puedes usar <a
+        href="https://www.jsdelivr.com/package/npm/bootstrap">jsDelivr</a
+      >. Míralo en acción con nuestro sencillo <a href={getVersionedDocsPath('getting-started/introduction/#quick-start')}
+        >inicio rápido</a
+      >, o <a href={getVersionedDocsPath('examples')}>explora los ejemplos</a> para comenzar rápidamente tu próximo proyecto. También puedes
+      optar por incluir Popper y nuestro JS <a href={getVersionedDocsPath('getting-started/introduction/#separate')}
+        >por separado</a
+      >.
+    </p>
+    <Code
+      code={`<link href="${getConfig().cdn.css}" rel="stylesheet" integrity="${
+        getConfig().cdn.css_hash
+      }" crossorigin="anonymous">`}
+      lang="html"
+    />
+    <Code
+      code={`<script src="${getConfig().cdn.js_bundle}" integrity="${
+        getConfig().cdn.js_bundle_hash
+      }" crossorigin="anonymous"></script>`}
+      lang="html"
+    />
+  </div>
+
+  <div class="col-md-8 mx-auto text-center">
+    <h4 class="fw-semibold">Lee nuestras guías de inicio</h4>
+    <p>Comienza rápidamente a incluir los archivos fuente de Bootstrap en un nuevo proyecto con nuestras guías oficiales.</p>
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 mt-4">
+      <a
+        class="d-flex flex-column align-items-center text-decoration-none animate-img"
+        href={getVersionedDocsPath('getting-started/webpack/')}
+      >
+        <img
+          class="d-block mb-2"
+          src={getVersionedDocsPath('/assets/img/webpack.svg')}
+          alt=""
+          width="72"
+          height="72"
+          loading="lazy"
+        />
+        <span class="text-body-secondary">Webpack</span>
+      </a>
+      <a
+        class="d-flex flex-column align-items-center text-decoration-none animate-img"
+        href={getVersionedDocsPath('getting-started/parcel/')}
+      >
+        <img
+          class="d-block mb-2"
+          src={getVersionedDocsPath('/assets/img/parcel.png')}
+          alt=""
+          width="72"
+          height="72"
+          loading="lazy"
+        />
+        <span class="text-body-secondary">Parcel</span>
+      </a>
+      <a
+        class="d-flex flex-column align-items-center text-decoration-none animate-img"
+        href={getVersionedDocsPath('getting-started/vite/')}
+      >
+        <img
+          class="d-block mb-2"
+          src={getVersionedDocsPath('/assets/img/vite.svg')}
+          alt=""
+          width="72"
+          height="72"
+          loading="lazy"
+        />
+        <span class="text-body-secondary">Vite</span>
+      </a>
+    </div>
+  </div>
+</section>

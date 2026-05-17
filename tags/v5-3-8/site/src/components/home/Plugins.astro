@@ -1,0 +1,90 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+import { getData } from '@libs/data'
+import Code from '@shortcodes/Code.astro'
+
+const plugins = getData('plugins')
+---
+
+<section class="pb-md-5 mb-5">
+  <div class="col-lg-8 mb-5">
+    <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bs-warning-rgb);">
+      <svg class="bi fs-1" aria-hidden="true"><use xlink:href="#plugin"></use></svg>
+    </div>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">Potentes plugins de JavaScript sin&nbsp;jQuery</h2>
+    <p class="lead fw-normal">
+      Añade elementos ocultos desplegables, modales y menús offcanvas, popovers y tooltips, y mucho más, todo sin
+      jQuery. El JavaScript de Bootstrap es HTML-first, lo que significa que la mayoría de los plugins se añaden con
+      atributos <code>data</code> en tu HTML. ¿Necesitas más control? Incluye plugins individuales de forma programática.
+    </p>
+    <p class="d-flex lead fw-normal mb-md-0">
+      <a href={getVersionedDocsPath('getting-started/javascript')} class="icon-link icon-link-hover fw-semibold">
+        Más información sobre el JavaScript de Bootstrap
+        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+      </a>
+    </p>
+  </div>
+  <div class="row gx-md-5">
+    <div class="col-lg-6 mb-3">
+      <h3 class="fw-semibold">API de atributos data</h3>
+      <p>
+        ¿Por qué escribir más JavaScript cuando puedes escribir HTML? Casi todos los plugins de JavaScript de Bootstrap cuentan con una
+        API de datos de primera clase, lo que te permite usar JavaScript con solo agregar atributos <code>data</code>.
+      </p>
+      <div class="p-4 mb-3 border rounded-3">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Desplegable
+          </button>
+          <ul class="dropdown-menu">
+            <li><button class="dropdown-item" type="button">Elemento de desplegable</button></li>
+            <li><button class="dropdown-item" type="button">Elemento de desplegable</button></li>
+            <li><button class="dropdown-item" type="button">Elemento de desplegable</button></li>
+          </ul>
+        </div>
+      </div>
+      <Code
+        code={`<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Desplegable
+  </button>
+  <ul class="dropdown-menu">
+    <li><button class="dropdown-item" type="button">Elemento de desplegable</button></li>
+    <li><button class="dropdown-item" type="button">Elemento de desplegable</button></li>
+    <li><button class="dropdown-item" type="button">Elemento de desplegable</button></li>
+  </ul>
+</div>`}
+        lang="html"
+      />
+      <p>
+        Obtén más información sobre <a href={getVersionedDocsPath('getting-started/javascript/#using-bootstrap-as-a-module')}
+          >nuestro JavaScript como módulos</a
+        > y <a href={getVersionedDocsPath('getting-started/javascript/#programmatic-api')}
+          >el uso de la API programática</a
+        >.
+      </p>
+    </div>
+    <div class="col-lg-6 mb-3">
+      <h3 class="fw-semibold">Conjunto completo de plugins</h3>
+      <p>
+        Bootstrap cuenta con una docena de plugins que puedes incorporar a cualquier proyecto. Incorpóralos todos a la vez o elige solo
+        los que necesites.
+      </p>
+      <hr class="my-4" />
+      <div class="row g-3">
+        {
+          plugins.map((plugin) => {
+            return (
+              <div class="col-sm-6 mb-2">
+                <a class="d-block pe-lg-4 text-decoration-none lh-sm" href={getVersionedDocsPath(plugin.link)}>
+                  <h4 class="mb-0 fs-5 fw-semibold">{plugin.name}</h4>
+                  <small class="text-body-secondary">{plugin.description}</small>
+                </a>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  </div>
+</section>

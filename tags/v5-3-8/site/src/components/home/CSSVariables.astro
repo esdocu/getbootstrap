@@ -1,0 +1,71 @@
+---
+import { getVersionedDocsPath } from '@libs/path'
+import Code from '@shortcodes/Code.astro'
+---
+
+<section class="row g-md-5 pb-md-5 mb-5 align-items-center">
+  <div class="col-lg-8 mb-5">
+    <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-pink-rgb);">
+      <svg class="bi fs-1" aria-hidden="true"><use xlink:href="#braces"></use></svg>
+    </div>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">Construye y extiende en tiempo real con variables&nbsp;CSS</h2>
+    <p class="lead fw-normal">
+      Bootstrap 5 evoluciona con cada versión para aprovechar mejor las variables CSS para los estilos de temas globales, los componentes individuales
+      e incluso las utilidades. Proporcionamos docenas de variables para colores, estilos de fuente y más a nivel de <code
+        >:root</code
+      > para usar en cualquier lugar. En componentes y utilidades, las variables CSS tienen un alcance limitado a la clase correspondiente y se pueden
+      modificar fácilmente.
+    </p>
+    <p class="d-flex flex-column lead fw-normal mb-0">
+      <a href={getVersionedDocsPath('customize/css-variables')} class="icon-link icon-link-hover fw-semibold mb-3">
+        Más información sobre las variables CSS
+        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+      </a>
+    </p>
+  </div>
+  <div class="row gx-md-5">
+    <div class="col-lg-6 mb-3">
+      <h3 class="fw-semibold">Uso de variables CSS</h3>
+      <p>
+        Usa cualquiera de nuestras <a href={getVersionedDocsPath('customize/css-variables/#root-variables')}
+          >variables globales <code>:root</code></a
+        > para escribir nuevos estilos. Las variables CSS utilizan la sintaxis <code>var(--bs-variableName)</code> y pueden ser heredadas por
+        los elementos hijos.
+      </p>
+      <Code
+        code={`.component {
+  color: var(--bs-gray-800);
+  background-color: var(--bs-gray-100);
+  border: 1px solid var(--bs-gray-200);
+  border-radius: .25rem;
+}
+
+.component-header {
+  color: var(--bs-purple);
+}`}
+        lang="scss"
+      />
+    </div>
+    <div class="col-lg-6 mb-3">
+      <h3 class="fw-semibold">Personalización mediante variables CSS</h3>
+      <p>
+        Sobrescribe las variables globales, de componentes o de clases de utilidad para personalizar Bootstrap tal como te guste. No es
+        necesario volver a declarar cada regla, solo asignar un nuevo valor a la variable.
+      </p>
+      <Code
+        code={`body {
+  --bs-body-font-family: var(--bs-font-monospace);
+  --bs-body-line-height: 1.4;
+  --bs-body-bg: var(--bs-gray-100);
+}
+
+.table {
+  --bs-table-color: var(--bs-gray-600);
+  --bs-table-bg: var(--bs-gray-100);
+  --bs-table-border-color: transparent;
+}`}
+        lang="scss"
+      />
+    </div>
+  </div>
+</section>

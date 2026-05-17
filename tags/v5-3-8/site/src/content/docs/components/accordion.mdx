@@ -1,0 +1,240 @@
+---
+title: Acordeón
+description: Construye acordeones que se colapsan verticalmente en combinación con nuestro plugin de JavaScript Collapse.
+aliases:
+ - "/components/"
+ - "/docs/[[config:docs_version]]/components/"
+toc: true
+---
+
+## Cómo funciona
+
+El acordeón utiliza [collapse]([[docsref:/components/collapse]]) internamente para hacerlo colapsable.
+
+<Callout name="info-prefersreducedmotion" />
+
+## Ejemplo
+
+Haz clic en los acordeones a continuación para expandir o colapsar el contenido del acordeón.
+
+Para renderizar un acordeón que esté expandido por defecto:
+- añade la clase `.show` al elemento `.accordion-collapse`.
+- quita la clase `.collapsed` del elemento `.accordion-button` y establece su atributo `aria-expanded` en `true`.
+
+<Example code={`<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Elemento de acordeón #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra por defecto, hasta que el plugin de colapso añade las clases apropiadas que utilizamos para dar estilo a cada elemento. Estas clases controlan la apariencia general, así como el mostrar y ocultar mediante transiciones CSS. Puedes modificar cualquier parte de esto con CSS personalizado o anulando nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Elemento de acordeón #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está oculto por defecto, hasta que el plugin de colapso añade las clases apropiadas que utilizamos para dar estilo a cada elemento. Estas clases controlan la apariencia general, así como el mostrar y ocultar mediante transiciones CSS. Puedes modificar cualquier parte de esto con CSS personalizado o anulando nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Elemento de acordeón #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Este es el cuerpo del acordeón del tercer elemento.</strong> Está oculto por defecto, hasta que el plugin de colapso añade las clases apropiadas que utilizamos para dar estilo a cada elemento. Estas clases controlan la apariencia general, así como el mostrar y ocultar mediante transiciones CSS. Puedes modificar cualquier parte de esto con CSS personalizado o anulando nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+### Flush
+
+Añade `.accordion-flush` para eliminar algunos bordes y esquinas redondeadas para renderizar los acordeones de borde a borde con su contenedor padre.
+
+<Example class="bg-body-secondary" code={`<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Elemento de acordeón #1
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Contenido de marcador de posición para este acordeón, que tiene la intención de demostrar la clase <code>.accordion-flush</code>. Este es el cuerpo del acordeón del primer elemento.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Elemento de acordeón #2
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Contenido de marcador de posición para este acordeón, que tiene la intención de demostrar la clase <code>.accordion-flush</code>. Este es el cuerpo del acordeón del segundo elemento. Imaginemos que esto se llena con algún contenido real.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          Elemento de acordeón #3
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Contenido de marcador de posición para este acordeón, que tiene la intención de demostrar la clase <code>.accordion-flush</code>. Este es el cuerpo del acordeón del tercer elemento. Nada más emocionante sucede aquí en términos de contenido, solo rellenando el espacio para que se vea, al menos a primera vista, un poco más representativo de cómo se vería esto en una aplicación del mundo real.</div>
+      </div>
+    </div>
+  </div>`} />
+
+### Siempre abierto
+
+Omite el atributo `data-bs-parent` en cada `.accordion-collapse` para que los elementos del acordeón permanezcan abiertos cuando se abre otro elemento.
+
+<Example code={`<div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          Elemento de acordeón #1
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <strong>Este es el cuerpo del acordeón del primer elemento.</strong> Se muestra por defecto, hasta que el plugin de colapso añade las clases apropiadas que utilizamos para dar estilo a cada elemento. Estas clases controlan la apariencia general, así como el mostrar y ocultar mediante transiciones CSS. Puedes modificar cualquier parte de esto con CSS personalizado o anulando nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+          Elemento de acordeón #2
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <strong>Este es el cuerpo del acordeón del segundo elemento.</strong> Está oculto por defecto, hasta que el plugin de colapso añade las clases apropiadas que utilizamos para dar estilo a cada elemento. Estas clases controlan la apariencia general, así como el mostrar y ocultar mediante transiciones CSS. Puedes modificar cualquier parte de esto con CSS personalizado o anulando nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+          Elemento de acordeón #3
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <strong>Este es el cuerpo del acordeón del tercer elemento.</strong> Está oculto por defecto, hasta que el plugin de colapso añade las clases apropiadas que utilizamos para dar estilo a cada elemento. Estas clases controlan la apariencia general, así como el mostrar y ocultar mediante transiciones CSS. Puedes modificar cualquier parte de esto con CSS personalizado o anulando nuestras variables predeterminadas. También vale la pena señalar que casi cualquier HTML puede ir dentro de <code>.accordion-body</code>, aunque la transición limita el desbordamiento.
+        </div>
+      </div>
+    </div>
+  </div>`} />
+
+## Accesibilidad
+
+Consulta la sección de [accesibilidad de collapse]([[docsref:/components/collapse#accessibility]]) para obtener más información.
+
+## CSS
+
+### Variables
+
+<AddedIn version="5.2.0" />
+
+Como parte del enfoque evolutivo de las variables CSS de Bootstrap, los acordeones ahora utilizan variables CSS locales en `.accordion` para una personalización mejorada en tiempo real. Los valores de las variables CSS se establecen a través de Sass, por lo que la personalización de Sass también es compatible.
+
+<ScssDocs name="accordion-css-vars" file="scss/_accordion.scss" />
+
+### Variables de Sass
+
+<ScssDocs name="accordion-variables" file="scss/_variables.scss" />
+
+## Uso
+
+El plugin collapse utiliza algunas clases para manejar el trabajo pesado:
+
+- `.collapse` oculta el contenido
+- `.collapse.show` muestra el contenido
+- `.collapsing` se añade cuando comienza la transición y se elimina cuando termina
+
+Estas clases se pueden encontrar en `_transitions.scss`.
+
+### Mediante atributos de datos
+
+Simplemente añade `data-bs-toggle="collapse"` y un `data-bs-target` al elemento para asignar automáticamente el control de uno o más elementos colapsables. El atributo `data-bs-target` acepta un selector CSS para aplicar el colapso. Asegúrate de añadir la clase `collapse` al elemento colapsable. Si deseas que se abra por defecto, añade la clase adicional `show`.
+
+Para añadir la gestión de grupos de acordeón a un área colapsable, añade el atributo de datos `data-bs-parent="#selector"`.
+
+### Mediante JavaScript
+
+Actívalo manualmente con:
+
+```js
+const accordionCollapseElementList = document.querySelectorAll('#myAccordion .collapse')
+const accordionCollapseList = [...accordionCollapseElementList].map(accordionCollapseEl => new bootstrap.Collapse(accordionCollapseEl))
+```
+
+### Opciones
+
+<JsDataAttributes />
+
+<BsTable>
+| Nombre | Tipo | Predeterminado | Descripción |
+| --- | --- | --- | --- |
+`parent` | selector, elemento DOM | `null` | Si se proporciona un padre, todos los elementos colapsables bajo el padre especificado se cerrarán cuando se muestre este elemento colapsable. (similar al comportamiento tradicional de acordeón; esto depende de la clase `card`). El atributo tiene que establecerse en el área colapsable de destino. |
+`toggle` | boolean | `true` | Alterna el elemento colapsable al invocarlo. |
+</BsTable>
+
+### Métodos
+
+<Callout name="danger-async-methods" type="danger" />
+
+Activa tu contenido como un elemento colapsable. Acepta un `object` de opciones opcional.
+
+Puedes crear una instancia de collapse con el constructor, por ejemplo:
+
+```js
+const bsCollapse = new bootstrap.Collapse('#myCollapse', {
+  toggle: false
+})
+```
+
+<BsTable>
+| Método | Descripción |
+| --- | --- |
+| `dispose` | Destruye el colapso de un elemento. (Elimina los datos almacenados en el elemento DOM) |
+| `getInstance` | Método estático que permite obtener la instancia de colapso asociada a un elemento DOM, puedes usarlo así: `bootstrap.Collapse.getInstance(element)`. |
+| `getOrCreateInstance` | Método estático que devuelve una instancia de colapso asociada a un elemento DOM o crea una nueva en caso de que no haya sido inicializada. Puedes usarlo así: `bootstrap.Collapse.getOrCreateInstance(element)`. |
+| `hide` | Oculta un elemento colapsable. **Vuelve al llamador antes de que el elemento colapsable se haya ocultado realmente** (por ejemplo, antes de que ocurra el evento `hidden.bs.collapse`). |
+| `show` | Muestra un elemento colapsable. **Vuelve al llamador antes de que el elemento colapsable se haya mostrado realmente** (por ejemplo, antes de que ocurra el evento `shown.bs.collapse`). |
+| `toggle` | Alterna un elemento colapsable a mostrado u oculto. **Vuelve al llamador antes de que el elemento colapsable se haya mostrado u ocultado realmente** (es decir, antes de que ocurra el evento `shown.bs.collapse` o `hidden.bs.collapse`). |
+</BsTable>
+
+### Eventos
+
+La clase collapse de Bootstrap expone algunos eventos para conectarse a la funcionalidad de colapso.
+
+<BsTable>
+| Tipo de evento | Descripción |
+| --- | --- |
+| `hide.bs.collapse` | Este evento se dispara inmediatamente cuando se ha llamado al método `hide`. |
+| `hidden.bs.collapse` | Este evento se dispara cuando un elemento de colapso se ha ocultado al usuario (esperará a que se completen las transiciones CSS). |
+| `show.bs.collapse` | Este evento se dispara inmediatamente cuando se llama al método de instancia `show`. |
+| `shown.bs.collapse` | Este evento se dispara cuando un elemento de colapso se ha hecho visible para el usuario (esperará a que se completen las transiciones CSS). |
+</BsTable>
+
+```js
+const myCollapsible = document.getElementById('myCollapsible')
+myCollapsible.addEventListener('hidden.bs.collapse', event => {
+  // hacer algo...
+})
+```
