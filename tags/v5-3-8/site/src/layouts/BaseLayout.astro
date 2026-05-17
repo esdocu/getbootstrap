@@ -27,14 +27,23 @@ type Props = {
   // Una anulación para el título de la página. Si no se define, el título será el contenido de la propiedad frontmatter `title`
   // al renderizar una página markdown o volverá de forma predeterminada al definido en el archivo `config.yml`.
   title?: string
+  // Indica si se deben deshabilitar los anuncios en la página actual.
+  disableAds?: boolean
 } & MarkdownProps
 
 // Las siguientes propiedades las establece automáticamente Astro (si se definen) en función del frontmatter de markdown al renderizar
 // una página markdown. Se puede acceder a ellas a través del objeto `Astro.props.frontmatter`, pero ten en cuenta que no se establecerán cuando
 // no se renderice una página markdown.
-type MarkdownProps = { frontmatter?: Partial<CollectionEntry<'docs'>['data']> }
+type MarkdownProps = {
+  frontmatter?: Partial<
+    CollectionEntry<'docs'>['data'] & {
+      disableAds?: boolean
+    }
+  >
+}
 
 const { frontmatter, layout, overrides, robots } = Astro.props
+const disableAds = Astro.props.disableAds ?? frontmatter?.disableAds ?? false
 
 const title = Astro.props.title ?? frontmatter?.title ?? getConfig().title
 const description = frontmatter?.description ? stripMarkdown(frontmatter.description) : getConfig().description
@@ -42,6 +51,10 @@ const thumbnail = frontmatter?.thumbnail ? `img/${frontmatter.thumbnail}` : 'bra
 
 const bodyProps = overrides?.body ?? {}
 const mainProps = overrides?.main ?? {}
+
+const adsUrl = import.meta.env.DEV
+  ? 'http://localhost:8787/ads.js'
+  : 'https://static-ads.xeost.com/ads.js'
 ---
 
 <!DOCTYPE html>
@@ -55,6 +68,9 @@ const mainProps = overrides?.main ?? {}
       thumbnail={thumbnail}
       title={title}
     />
+    {!disableAds && (
+      <script is:inline src={adsUrl} async></script>
+    )}
   </head>
   <body {...bodyProps}>
     <Header layout={layout} title={title} addedIn={frontmatter?.added} />

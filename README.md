@@ -59,3 +59,42 @@ Preview `public`:
 ```text
 npx http-server ../../public
 ```
+
+## Configuración de Anuncios (`disableAds`)
+
+Se ha integrado un script de anuncios dinámico que se carga automáticamente en todas las páginas del sitio web a través de [BaseLayout.astro](file:///Users/fabian/Documents/CodeProjects/github.com/esdocu/getbootstrap/tags/v5-3-8/site/src/layouts/BaseLayout.astro).
+
+### Comportamiento por Entorno
+
+* **Entorno de Desarrollo:** Carga el script desde `http://localhost:8787/ads.js`.
+* **Entorno de Producción:** Carga el script desde `https://static-ads.xeost.com/ads.js`.
+
+### Cómo Desactivar Anuncios
+
+Puedes deshabilitar los anuncios en páginas específicas de dos maneras:
+
+#### 1. Mediante Frontmatter en archivos Markdown o MDX (`.md` / `.mdx`)
+
+Agrega la clave `disableAds: true` en el bloque de metadatos superior (frontmatter):
+
+```yaml
+---
+title: "Mi Página"
+description: "Descripción de la página..."
+disableAds: true
+---
+```
+
+#### 2. Como Propiedad (Prop) en componentes y páginas de Astro (`.astro`)
+
+Pasa la propiedad `disableAds={true}` directamente al componente de diseño:
+
+```astro
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout disableAds={true}>
+  <!-- Tu contenido aquí -->
+</BaseLayout>
+```
