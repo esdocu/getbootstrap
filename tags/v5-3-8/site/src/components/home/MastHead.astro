@@ -2,6 +2,7 @@
 import { getConfig } from '@libs/config'
 import { getVersionedDocsPath } from '@libs/path'
 import Ads from '@components/Ads.astro'
+import EsdocuBanners from './EsdocuBanners.astro'
 import Code from '@components/shortcodes/Code.astro'
 import ResponsiveImage from '@layouts/partials/ResponsiveImage.astro'
 ---
@@ -53,6 +54,7 @@ import ResponsiveImage from '@layouts/partials/ResponsiveImage.astro'
         <span class="px-1">&middot;</span>
         <a href="/docs/versions/" class="link-secondary text-nowrap">Todas las versiones</a>
       </p>
+      <EsdocuBanners />
       <Ads />
     </div>
   </div>

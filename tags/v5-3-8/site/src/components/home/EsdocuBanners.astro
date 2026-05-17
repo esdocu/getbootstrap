@@ -1,0 +1,267 @@
+---
+// Componente de anuncios específico para la portada de esdocu.com
+---
+
+<div id="esdocu-ads">
+  <!-- Tarjeta 1: EsDocu -->
+  <div class="ads-card esdocu-card">
+    <div class="card-glow"></div>
+    <div class="card-content">
+      <div class="badge-icon">😎</div>
+      <h3 class="card-title">¿Te gustó esta traducción?</h3>
+      <p class="card-text">
+        Accede a todas nuestras documentaciones técnicas en español. Traducimos guías y referencias oficiales con la
+        máxima precisión para la comunidad de desarrolladores hispanohablantes.
+      </p>
+    </div>
+    <a href="https://esdocu.com" target="_blank" rel="noopener" class="card-link esdocu-link">
+      <span>Documentaciones en Español</span>
+      <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1 8H15M15 8L8 1M15 8L8 15"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Tarjeta 2: Wordsus -->
+  <div class="ads-card wordsus-card">
+    <div class="card-glow"></div>
+    <div class="card-content">
+      <div class="badge-icon">📚</div>
+      <h3 class="card-title" id="sabias-que">¿Te gusta aprender cosas nuevas?</h3>
+      <p class="card-text">
+        Descubre una biblioteca de libros educativos y cursos gratuitos en múltiples categorías. Lee en línea, guarda tu
+        progreso y aprende a tu ritmo. Visita Wordsus.com.
+      </p>
+    </div>
+    <a href="https://wordsus.com/es" target="_blank" rel="noopener" class="card-link wordsus-link">
+      <span>Libros y Cursos Gratis</span>
+      <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1 8H15M15 8L8 1M15 8L8 15"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<style>
+  #esdocu-ads {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 860px;
+    margin: 4.5rem auto 1.5rem auto;
+    text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    #esdocu-ads {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .ads-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  /* Light mode default styles */
+  .esdocu-card {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(13, 110, 253, 0.18);
+    box-shadow:
+      0 4px 6px -1px rgba(13, 110, 253, 0.05),
+      0 10px 30px -10px rgba(13, 110, 253, 0.1);
+  }
+
+  .wordsus-card {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(245, 158, 11, 0.18);
+    box-shadow:
+      0 4px 6px -1px rgba(245, 158, 11, 0.05),
+      0 10px 30px -10px rgba(245, 158, 11, 0.1);
+  }
+
+  /* Glow element inside the card */
+  .card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.25rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .esdocu-card .card-glow {
+    background: radial-gradient(circle at 80% 20%, rgba(13, 110, 253, 0.12), transparent 50%);
+  }
+
+  .wordsus-card .card-glow {
+    background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.12), transparent 50%);
+  }
+
+  /* Hover states */
+  .ads-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .esdocu-card:hover {
+    border-color: rgba(13, 110, 253, 0.4);
+    box-shadow:
+      0 12px 24px -10px rgba(13, 110, 253, 0.15),
+      0 20px 40px -15px rgba(13, 110, 253, 0.1);
+  }
+
+  .wordsus-card:hover {
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow:
+      0 12px 24px -10px rgba(245, 158, 11, 0.15),
+      0 20px 40px -15px rgba(245, 158, 11, 0.1);
+  }
+
+  .ads-card:hover .card-glow {
+    opacity: 1;
+  }
+
+  /* Dark mode overrides */
+  :global([data-bs-theme='dark']) .esdocu-card {
+    background: rgba(13, 110, 253, 0.05);
+    border: 1px solid rgba(13, 110, 253, 0.25);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.15),
+      inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+
+  :global([data-bs-theme='dark']) .wordsus-card {
+    background: rgba(245, 158, 11, 0.05);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.15),
+      inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+
+  :global([data-bs-theme='dark']) .esdocu-card:hover {
+    background: rgba(13, 110, 253, 0.08);
+    border-color: rgba(13, 110, 253, 0.45);
+    box-shadow:
+      0 12px 30px -5px rgba(13, 110, 253, 0.2),
+      0 20px 50px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  :global([data-bs-theme='dark']) .wordsus-card:hover {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.45);
+    box-shadow:
+      0 12px 30px -5px rgba(245, 158, 11, 0.2),
+      0 20px 50px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  :global([data-bs-theme='dark']) .esdocu-card .card-glow {
+    background: radial-gradient(circle at 80% 20%, rgba(13, 110, 253, 0.2), transparent 50%);
+  }
+
+  :global([data-bs-theme='dark']) .wordsus-card .card-glow {
+    background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.2), transparent 50%);
+  }
+
+  /* Card content details */
+  .badge-icon {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.08));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .ads-card:hover .badge-icon {
+    transform: scale(1.18) rotate(6deg);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--bs-emphasis-color);
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+  }
+
+  .card-text {
+    font-size: 0.925rem;
+    color: var(--bs-secondary-color);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  /* Beautiful modern CTA buttons */
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none !important;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  @media (min-width: 576px) {
+    .card-link {
+      width: fit-content;
+    }
+  }
+
+  .esdocu-link {
+    background: var(--bs-primary);
+    color: #fff !important;
+  }
+
+  .esdocu-link:hover {
+    background: #0b5ed7;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.35);
+  }
+
+  .wordsus-link {
+    background: #e67e22;
+    color: #fff !important;
+  }
+
+  .wordsus-link:hover {
+    background: #d35400;
+    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.35);
+  }
+
+  /* Arrow animation */
+  .link-arrow {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-link:hover .link-arrow {
+    transform: translateX(4px);
+  }
+</style>
