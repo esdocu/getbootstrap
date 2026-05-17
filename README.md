@@ -30,6 +30,7 @@ Translate and customize.
 Build:
 
 ```text
+rm -rf site/dist
 npm run docs-build
 ```
 

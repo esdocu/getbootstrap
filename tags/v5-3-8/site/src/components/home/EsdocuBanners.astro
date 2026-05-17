@@ -2,9 +2,9 @@
 // Componente de anuncios específico para la portada de esdocu.com
 ---
 
-<div id="esdocu-ads">
+<div id="esdocu-promo-banners">
   <!-- Tarjeta 1: EsDocu -->
-  <div class="ads-card esdocu-card">
+  <div class="promo-card esdocu-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="badge-icon">😎</div>
@@ -28,7 +28,7 @@
   </div>
 
   <!-- Tarjeta 2: Wordsus -->
-  <div class="ads-card wordsus-card">
+  <div class="promo-card wordsus-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="badge-icon">📚</div>
@@ -53,7 +53,7 @@
 </div>
 
 <style>
-  #esdocu-ads {
+  #esdocu-promo-banners {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -63,12 +63,12 @@
   }
 
   @media (min-width: 768px) {
-    #esdocu-ads {
+    #esdocu-promo-banners {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  .ads-card {
+  .promo-card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -122,7 +122,7 @@
   }
 
   /* Hover states */
-  .ads-card:hover {
+  .promo-card:hover {
     transform: translateY(-6px);
   }
 
@@ -140,7 +140,7 @@
       0 20px 40px -15px rgba(245, 158, 11, 0.1);
   }
 
-  .ads-card:hover .card-glow {
+  .promo-card:hover .card-glow {
     opacity: 1;
   }
 
@@ -194,7 +194,7 @@
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
-  .ads-card:hover .badge-icon {
+  .promo-card:hover .badge-icon {
     transform: scale(1.18) rotate(6deg);
   }
 
