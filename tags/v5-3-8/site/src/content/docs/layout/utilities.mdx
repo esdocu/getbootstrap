@@ -1,23 +1,23 @@
 ---
-title: Utilities for layout
-description: For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.
+title: Utilidades para diseño (Utilities for layout)
+description: Para un desarrollo responsivo y adaptado a dispositivos móviles más rápido, Bootstrap incluye docenas de clases de utilidad para mostrar, ocultar, alinear y espaciar el contenido.
 toc: true
 ---
 
-## Changing `display`
+## Cambiar `display`
 
-Use our [display utilities]([[docsref:/utilities/display]]) for responsively toggling common values of the `display` property. Mix it with our grid system, content, or components to show or hide them across specific viewports.
+Utiliza nuestras [utilidades de visualización (display)]([[docsref:/utilities/display]]) para alternar de forma responsiva los valores comunes de la propiedad `display`. Combínalo con nuestro sistema de cuadrícula, contenido o componentes para mostrarlos u ocultarlos en ventanas gráficas específicas.
 
-## Flexbox options
+## Opciones de Flexbox
 
-Bootstrap is built with flexbox, but not every element’s `display` has been changed to `display: flex` as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of [our components]([[docsref:/components/alerts]]) are built with flexbox enabled.
+Bootstrap está construido con flexbox, pero el `display` de no todos los elementos se ha cambiado a `display: flex`, ya que esto agregaría muchas anulaciones innecesarias y cambiaría inesperadamente comportamientos clave del navegador. La mayoría de [nuestros componentes]([[docsref:/components/alerts]]) están construidos con flexbox habilitado.
 
-Should you need to add `display: flex` to an element, do so with `.d-flex` or one of the responsive variants (e.g., `.d-sm-flex`). You’ll need this class or `display` value to allow the use of our extra [flexbox utilities]([[docsref:/utilities/flex]]) for sizing, alignment, spacing, and more.
+Si necesitas agregar `display: flex` a un elemento, hazlo con `.d-flex` o una de las variantes responsivas (por ejemplo, `.d-sm-flex`). Necesitarás esta clase o valor de `display` para permitir el uso de nuestras [utilidades de flexbox]([[docsref:/utilities/flex]]) adicionales para dimensionamiento, alineación, espaciado y más.
 
-## Margin and padding
+## Margen y relleno (Margin and padding)
 
-Use the `margin` and `padding` [spacing utilities]([[docsref:/utilities/spacing]]) to control how elements and components are spaced and sized. Bootstrap includes a six-level scale for spacing utilities, based on a `1rem` value default `$spacer` variable. Choose values for all viewports (e.g., `.me-3` for `margin-right: 1rem` in LTR), or pick responsive variants to target specific viewports (e.g., `.me-md-3` for `margin-right: 1rem` —in LTR— starting at the `md` breakpoint).
+Usa las [utilidades de espaciado]([[docsref:/utilities/spacing]]) de margen (`margin`) y relleno (`padding`) para controlar cómo se espacian y dimensionan los elementos y componentes. Bootstrap incluye una escala de seis niveles para utilidades de espaciado, basada en una variable predeterminada `$spacer` con un valor de `1rem`. Elige valores para todas las ventanas gráficas (por ejemplo, `.me-3` para `margin-right: 1rem` en LTR), o elige variantes responsivas para apuntar a ventanas gráficas específicas (por ejemplo, `.me-md-3` para `margin-right: 1rem` —en LTR— a partir del punto de interrupción `md`).
 
-## Toggle `visibility`
+## Alternar `visibility`
 
-When toggling `display` isn’t needed, you can toggle the `visibility` of an element with our [visibility utilities]([[docsref:/utilities/visibility]]). Invisible elements will still affect the layout of the page, but are visually hidden from visitors.
+Cuando no sea necesario alternar el `display`, puedes alternar la visibilidad (`visibility`) de un elemento con nuestras [utilidades de visibilidad]([[docsref:/utilities/visibility]]). Los elementos invisibles seguirán afectando el diseño de la página, pero estarán ocultos visualmente para los visitantes.

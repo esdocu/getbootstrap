@@ -1,52 +1,52 @@
 ---
-title: Sizing
-description: Easily make an element as wide or as tall with our width and height utilities.
+title: Dimensionamiento (Sizing)
+description: Haz que un elemento sea tan ancho o tan alto fácilmente con nuestras utilidades de ancho y alto.
 toc: true
 ---
 
-## Relative to the parent
+## Relativo al padre (Relative to the parent)
 
-Width and height utilities are generated from the utility API in `_utilities.scss`. Includes support for `25%`, `50%`, `75%`, `100%`, and `auto` by default. Modify those values as you need to generate different utilities here.
+Las utilidades de ancho y alto se generan a partir de la API de utilidades en `_utilities.scss`. Incluye soporte para `25%`, `50%`, `75%`, `100%` y `auto` por defecto. Modifica esos valores según lo necesites para generar diferentes utilidades aquí.
 
-<Example class="bd-example-flex" code={`<div class="w-25 p-3">Width 25%</div>
-<div class="w-50 p-3">Width 50%</div>
-<div class="w-75 p-3">Width 75%</div>
-<div class="w-100 p-3">Width 100%</div>
-<div class="w-auto p-3">Width auto</div>`} />
+<Example class="bd-example-flex" code={`<div class="w-25 p-3">Ancho 25%</div>
+<div class="w-50 p-3">Ancho 50%</div>
+<div class="w-75 p-3">Ancho 75%</div>
+<div class="w-100 p-3">Ancho 100%</div>
+<div class="w-auto p-3">Ancho auto</div>`} />
 
 <Example class="bd-example-flex" code={`<div style="height: 100px;">
-    <div class="h-25 d-inline-block" style="width: 120px;">Height 25%</div>
-    <div class="h-50 d-inline-block" style="width: 120px;">Height 50%</div>
-    <div class="h-75 d-inline-block" style="width: 120px;">Height 75%</div>
-    <div class="h-100 d-inline-block" style="width: 120px;">Height 100%</div>
-    <div class="h-auto d-inline-block" style="width: 120px;">Height auto</div>
+    <div class="h-25 d-inline-block" style="width: 120px;">Alto 25%</div>
+    <div class="h-50 d-inline-block" style="width: 120px;">Alto 50%</div>
+    <div class="h-75 d-inline-block" style="width: 120px;">Alto 75%</div>
+    <div class="h-100 d-inline-block" style="width: 120px;">Alto 100%</div>
+    <div class="h-auto d-inline-block" style="width: 120px;">Alto auto</div>
   </div>`} />
 
-You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
+También puedes usar utilidades `max-width: 100%;` y `max-height: 100%;` según sea necesario.
 
 <Example class="bd-example-flex" code={`<div style="width: 50%; height: 100px;">
-    <div class="mw-100" style="width: 200%;">Max-width 100%</div>
+    <div class="mw-100" style="width: 200%;">Ancho máximo 100%</div>
   </div>`} />
 
 <Example class="bd-example-flex" code={`<div style="height: 100px;">
-    <div class="mh-100" style="width: 100px; height: 200px;">Max-height 100%</div>
+    <div class="mh-100" style="width: 100px; height: 200px;">Alto máximo 100%</div>
   </div>`} />
 
-## Relative to the viewport
+## Relativo a la ventana gráfica (Relative to the viewport)
 
-You can also use utilities to set the width and height relative to the viewport.
+También puedes usar utilidades para establecer el ancho y el alto en relación con la ventana gráfica (viewport).
 
 ```html
-<div class="min-vw-100">Min-width 100vw</div>
-<div class="min-vh-100">Min-height 100vh</div>
-<div class="vw-100">Width 100vw</div>
-<div class="vh-100">Height 100vh</div>
+<div class="min-vw-100">Ancho mínimo 100vw</div>
+<div class="min-vh-100">Alto mínimo 100vh</div>
+<div class="vw-100">Ancho 100vw</div>
+<div class="vh-100">Alto 100vh</div>
 ```
 
 ## CSS
 
-### Sass utilities API
+### API de utilidades de Sass
 
-Sizing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
+Las utilidades de dimensionamiento se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a utilizar la API de utilidades.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-sizing" file="scss/_utilities.scss" />

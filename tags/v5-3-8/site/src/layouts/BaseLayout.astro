@@ -8,30 +8,30 @@ import Scripts from '@components/Scripts.astro'
 import Footer from '@components/footer/Footer.astro'
 import { stripMarkdown } from '@libs/utils'
 
-// The following props can be directly passed to the base layout component from any page or layout extending it,
-// e.g. <BaseLayout layout="docs" robots="noindex" />.
+// Las siguientes propiedades se pueden pasar directamente al componente de diseño base desde cualquier página o diseño que lo extienda,
+// por ejemplo, <BaseLayout layout="docs" robots="noindex" />.
 type Props = {
-  // A specific layout to use for the current page used to determine if some components should be rendered or not.
-  // Available layouts are defined in `src/libs/layout.ts`.
+  // Un diseño específico para usar en la página actual utilizado para determinar si algunos componentes deben renderizarse o no.
+  // Los diseños disponibles se definen en `src/libs/layout.ts`.
   layout?: Layout
-  // An object containing HTML attributes that can be overridden for some HTML elements used in the base layout keyed by
-  // HTML element names.
+  // Un objeto que contiene atributos HTML que se pueden anular para algunos elementos HTML utilizados en el diseño base con clave por
+  // nombres de elementos HTML.
   overrides?: {
     body?: LayoutOverridesHTMLAttributes<'body'>
-    // Note that main can also be overridden by the Astro slot named "main" and that the slot will take precedence over
-    // any override.
+    // Ten en cuenta que main también se puede anular con el slot de Astro llamado "main" y que el slot tendrá prioridad sobre
+    // cualquier anulación.
     main?: LayoutOverridesHTMLAttributes<'main'>
   }
-  // A string containing the robots meta tag content. If not set, the tag will not be rendered.
+  // Una cadena que contiene el contenido de la etiqueta meta de robots. Si no se establece, la etiqueta no se renderizará.
   robots?: string
-  // An override for the page title. If not defined, the title will either be the content of the `title` frontmatter
-  // property when rendering a markdown page or default back to the one defined in the `config.yml` file.
+  // Una anulación para el título de la página. Si no se define, el título será el contenido de la propiedad frontmatter `title`
+  // al renderizar una página markdown o volverá de forma predeterminada al definido en el archivo `config.yml`.
   title?: string
 } & MarkdownProps
 
-// The following props are automatically set by Astro (if defined) based on the markdown frontmatter when rendering a
-// markdown page. They can be accessed through the `Astro.props.frontmatter` object but note that they won't be set when
-// not rendering a markdown page.
+// Las siguientes propiedades las establece automáticamente Astro (si se definen) en función del frontmatter de markdown al renderizar
+// una página markdown. Se puede acceder a ellas a través del objeto `Astro.props.frontmatter`, pero ten en cuenta que no se establecerán cuando
+// no se renderice una página markdown.
 type MarkdownProps = { frontmatter?: Partial<CollectionEntry<'docs'>['data']> }
 
 const { frontmatter, layout, overrides, robots } = Astro.props

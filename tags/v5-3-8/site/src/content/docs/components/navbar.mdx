@@ -1,38 +1,38 @@
 ---
-title: Navbar
-description: Documentation and examples for Bootstrap’s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
+title: Barra de navegación
+description: Documentación y ejemplos para la potente y responsiva cabecera de navegación de Bootstrap, la barra de navegación (navbar). Incluye soporte para marca, navegación y más, incluyendo soporte para nuestro plugin collapse.
 toc: true
 ---
 
 import { getConfig } from '@libs/config'
 
-## How it works
+## Cómo funciona
 
-Here’s what you need to know before getting started with the navbar:
+Esto es lo que necesitas saber antes de comenzar con la barra de navegación:
 
-- Navbars require a wrapping `.navbar` with `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` for responsive collapsing and [color scheme](#color-schemes) classes.
-- Navbars and their contents are fluid by default. Change the [container](#containers) to limit their horizontal width in different ways.
-- Use our [spacing]([[docsref:/utilities/spacing]]) and [flex]([[docsref:/utilities/flex]]) utility classes for controlling spacing and alignment within navbars.
-- Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.
-- Ensure accessibility by using a `<nav>` element or, if using a more generic element such as a `<div>`, add a `role="navigation"` to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
-- Indicate the current item by using `aria-current="page"` for the current page or `aria-current="true"` for the current item in a set.
-- **New in v5.2.0:** Navbars can be themed with CSS variables that are scoped to the `.navbar` base class. `.navbar-light` has been deprecated and `.navbar-dark` has been rewritten to override CSS variables instead of adding additional styles.
+- Las barras de navegación requieren un contenedor `.navbar` con `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` para el colapso responsivo y clases de [esquema de color](#color-schemes).
+- Las barras de navegación y sus contenidos son fluidos por defecto. Cambia el [contenedor](#containers) para limitar su ancho horizontal de diferentes maneras.
+- Utiliza nuestras clases de utilidad de [espaciado]([[docsref:/utilities/spacing]]) y [flex]([[docsref:/utilities/flex]]) para controlar el espaciado y la alineación dentro de las barras de navegación.
+- Las barras de navegación son responsivas por defecto, pero puedes modificarlas fácilmente para cambiar eso. El comportamiento responsivo depende de nuestro plugin Collapse de JavaScript.
+- Garantiza la accesibilidad utilizando un elemento `<nav>` o, si utilizas un elemento más genérico como un `<div>`, agrega un `role="navigation"` a cada barra de navegación para identificarla explícitamente como una región de referencia para los usuarios de tecnologías de asistencia.
+- Indica el elemento actual utilizando `aria-current="page"` para la página actual o `aria-current="true"` para el elemento actual en un conjunto.
+- **Nuevo en v5.2.0:** Las barras de navegación se pueden personalizar con variables CSS que están limitadas a la clase base `.navbar`. `.navbar-light` ha quedado obsoleta y `.navbar-dark` se ha reescrito para anular las variables CSS en lugar de agregar estilos adicionales.
 
 <Callout name="info-prefersreducedmotion" />
 
-## Supported content
+## Contenido admitido
 
-Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
+Las barras de navegación vienen con soporte integrado para un puñado de subcomponentes. Elige entre los siguientes según sea necesario:
 
-- `.navbar-brand` for your company, product, or project name.
-- `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
-- `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
-- Flex and spacing utilities for any form controls and actions.
-- `.navbar-text` for adding vertically centered strings of text.
-- `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
-- Add an optional `.navbar-nav-scroll` to set a `max-height` and [scroll expanded navbar content](#scrolling).
+- `.navbar-brand` para el nombre de tu empresa, producto o proyecto.
+- `.navbar-nav` para una navegación ligera y de altura completa (incluido el soporte para menús desplegables).
+- `.navbar-toggler` para usar con nuestro plugin de colapso y otros comportamientos de [alternancia de navegación](#responsive-behaviors).
+- Utilidades de flex y espaciado para cualquier control de formulario y acción.
+- `.navbar-text` para agregar cadenas de texto centradas verticalmente.
+- `.collapse.navbar-collapse` para agrupar y ocultar el contenido de la barra de navegación mediante un punto de interrupción (breakpoint) padre.
+- Agrega un `.navbar-nav-scroll` opcional para establecer una `max-height` y [desplazar el contenido de la barra de navegación expandida](#scrolling).
 
-Here’s an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the `lg` (large) breakpoint.
+Aquí tienes un ejemplo de todos los subcomponentes incluidos en una barra de navegación responsiva con tema claro que se colapsa automáticamente en el punto de interrupción `lg` (grande).
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -71,15 +71,15 @@ Here’s an example of all the sub-components included in a responsive light-the
     </div>
   </nav>`} />
 
-This example uses [background]([[docsref:/utilities/background]]) (`bg-body-tertiary`) and [spacing]([[docsref:/utilities/spacing]]) (`me-auto`, `mb-2`, `mb-lg-0`, `me-2`) utility classes.
+Este ejemplo utiliza clases de utilidad de [fondo]([[docsref:/utilities/background]]) (`bg-body-tertiary`) y [espaciado]([[docsref:/utilities/spacing]]) (`me-auto`, `mb-2`, `mb-lg-0`, `me-2`).
 
-### Brand
+### Marca
 
-The `.navbar-brand` can be applied to most elements, but an anchor works best, as some elements might require utility classes or custom styles.
+El `.navbar-brand` se puede aplicar a la mayoría de los elementos, pero un enlace funciona mejor, ya que algunos elementos pueden requerir clases de utilidad o estilos personalizados.
 
-#### Text
+#### Texto
 
-Add your text within an element with the `.navbar-brand` class.
+Agrega tu texto dentro de un elemento con la clase `.navbar-brand`.
 
 <Example code={`<!-- As a link -->
   <nav class="navbar bg-body-tertiary">
@@ -87,7 +87,7 @@ Add your text within an element with the `.navbar-brand` class.
       <a class="navbar-brand" href="#">Navbar</a>
     </div>
   </nav>
-
+ 
   <!-- As a heading -->
   <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
@@ -95,9 +95,9 @@ Add your text within an element with the `.navbar-brand` class.
     </div>
   </nav>`} />
 
-#### Image
+#### Imagen
 
-You can replace the text within the `.navbar-brand` with an `<img>`.
+Puedes reemplazar el texto dentro del `.navbar-brand` con una etiqueta `<img>`.
 
 <Example code={`<nav class="navbar bg-body-tertiary">
     <div class="container">
@@ -107,9 +107,9 @@ You can replace the text within the `.navbar-brand` with an `<img>`.
     </div>
   </nav>`} />
 
-#### Image and text
+#### Imagen y texto
 
-You can also make use of some additional utilities to add an image and text at the same time. Note the addition of `.d-inline-block` and `.align-text-top` on the `<img>`.
+También puedes hacer uso de algunas utilidades adicionales para agregar una imagen y texto al mismo tiempo. Ten en cuenta la adición de `.d-inline-block` y `.align-text-top` en la etiqueta `<img>`.
 
 <Example code={`<nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
@@ -120,13 +120,13 @@ You can also make use of some additional utilities to add an image and text at t
     </div>
   </nav>`} />
 
-### Nav
+### Navegación
 
-Navbar navigation links build on our `.nav` options with their own modifier class and require the use of [toggler classes](#toggler) for proper responsive styling. **Navigation in navbars will also grow to occupy as much horizontal space as possible** to keep your navbar contents securely aligned.
+Los enlaces de navegación de la barra de navegación se basan en nuestras opciones de `.nav` con su propia clase modificadora y requieren el uso de [clases toggler](#toggler) para un estilo responsivo adecuado. **La navegación en las barras de navegación también crecerá para ocupar tanto espacio horizontal como sea posible** para mantener los contenidos de tu barra de navegación alineados de forma segura.
 
-Add the `.active` class on `.nav-link` to indicate the current page.
+Agrega la clase `.active` en `.nav-link` para indicar la página actual.
 
-Please note that you should also add the `aria-current` attribute on the active `.nav-link`.
+Ten en cuenta que también debes agregar el atributo `aria-current` en el `.nav-link` activo.
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -153,7 +153,7 @@ Please note that you should also add the `aria-current` attribute on the active 
     </div>
   </nav>`} />
 
-And because we use classes for our navs, you can avoid the list-based approach entirely if you like.
+Y debido a que usamos clases para nuestras navegaciones, puedes evitar por completo el enfoque basado en listas si lo deseas.
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -172,7 +172,7 @@ And because we use classes for our navs, you can avoid the list-based approach e
     </div>
   </nav>`} />
 
-You can also use dropdowns in your navbar. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for `.nav-item` and `.nav-link` as shown below.
+También puedes utilizar menús desplegables en tu barra de navegación. Los menús desplegables requieren un elemento contenedor para el posicionamiento, así que asegúrate de utilizar elementos separados y anidados para `.nav-item` y `.nav-link` como se muestra a continuación.
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -206,9 +206,9 @@ You can also use dropdowns in your navbar. Dropdown menus require a wrapping ele
     </div>
   </nav>`} />
 
-### Forms
+### Formularios
 
-Place various form controls and components within a navbar:
+Coloca varios controles y componentes de formulario dentro de una barra de navegación:
 
 <Example code={`<nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
@@ -219,7 +219,7 @@ Place various form controls and components within a navbar:
     </div>
   </nav>`} />
 
-Immediate child elements of `.navbar` use flex layout and will default to `justify-content: space-between`. Use additional [flex utilities]([[docsref:/utilities/flex]]) as needed to adjust this behavior.
+Los elementos hijos inmediatos de `.navbar` usan un diseño flex y por defecto tendrán `justify-content: space-between`. Utiliza [utilidades flex]([[docsref:/utilities/flex]]) adicionales según sea necesario para ajustar este comportamiento.
 
 <Example code={`<nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
@@ -231,7 +231,7 @@ Immediate child elements of `.navbar` use flex layout and will default to `justi
     </div>
   </nav>`} />
 
-Input groups work, too. If your navbar is an entire form, or mostly a form, you can use the `<form>` element as the container and save some HTML.
+Los grupos de entrada (input groups) también funcionan. Si tu barra de navegación es un formulario completo, o principalmente un formulario, puedes usar el elemento `<form>` como contenedor y ahorrar algo de HTML.
 
 <Example code={`<nav class="navbar bg-body-tertiary">
     <form class="container-fluid">
@@ -242,7 +242,7 @@ Input groups work, too. If your navbar is an entire form, or mostly a form, you 
     </form>
   </nav>`} />
 
-Various buttons are supported as part of these navbar forms, too. This is also a great reminder that vertical alignment utilities can be used to align different sized elements.
+Varios botones también son compatibles como parte de estos formularios de barra de navegación. Este también es un excelente recordatorio de que las utilidades de alineación vertical se pueden usar para alinear elementos de diferentes tamaños.
 
 <Example code={`<nav class="navbar bg-body-tertiary">
     <form class="container-fluid justify-content-start">
@@ -251,9 +251,9 @@ Various buttons are supported as part of these navbar forms, too. This is also a
     </form>
   </nav>`} />
 
-### Text
+### Texto
 
-Navbars may contain bits of text with the help of `.navbar-text`. This class adjusts vertical alignment and horizontal spacing for strings of text.
+Las barras de navegación pueden contener fragmentos de texto con la ayuda de `.navbar-text`. Esta clase ajusta la alineación vertical y el espaciado horizontal para cadenas de texto.
 
 <Example code={`<nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
@@ -263,7 +263,7 @@ Navbars may contain bits of text with the help of `.navbar-text`. This class adj
     </div>
   </nav>`} />
 
-Mix and match with other components and utilities as needed.
+Mezcla y combina con otros componentes y utilidades según sea necesario.
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -290,17 +290,17 @@ Mix and match with other components and utilities as needed.
     </div>
   </nav>`} />
 
-## Color schemes
+## Esquemas de color
 
 <Callout type="warning">
-**New dark navbars in v5.3.0 —** We’ve deprecated `.navbar-dark` in favor of the new `data-bs-theme="dark"`. Add `data-bs-theme="dark"` to the `.navbar` to enable a component-specific color mode. [Learn more about our color modes.]([[docsref:/customize/color-modes]])
+**Nuevas barras de navegación oscuras en v5.3.0 —** Hemos dejado obsoleta la clase `.navbar-dark` en favor del nuevo `data-bs-theme="dark"`. Agrega `data-bs-theme="dark"` a la `.navbar` para habilitar un modo de color específico del componente. [Obtén más información sobre nuestros modos de color.]([[docsref:/customize/color-modes]])
 
 ---
 
-**New in v5.2.0  —** Navbar theming is now powered by CSS variables and `.navbar-light` has been deprecated. CSS variables are applied to `.navbar`, defaulting to the “light” appearance, and can be overridden with `.navbar-dark`.
+**Nuevo en v5.2.0 —** Los temas de la barra de navegación ahora funcionan con variables CSS y `.navbar-light` ha quedado obsoleta. Las variables CSS se aplican a `.navbar`, de forma predeterminada con la apariencia "clara", y se pueden anular con `.navbar-dark`.
 </Callout>
 
-Navbar themes are easier than ever thanks to Bootstrap’s combination of Sass and CSS variables. The default is our “light navbar” for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` and additional utilities.
+Los temas de la barra de navegación son más fáciles que nunca gracias a la combinación de variables Sass y CSS de Bootstrap. El valor predeterminado es nuestra "barra de navegación clara" para usar con colores de fondo claros, pero también puedes aplicar `data-bs-theme="dark"` al elemento padre `.navbar` para colores de fondo oscuros. Luego, personaliza con `.bg-*` and utilidades adicionales.
 
 <Example showMarkup={false} code={`
 <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
@@ -405,9 +405,9 @@ Navbar themes are easier than ever thanks to Bootstrap’s combination of Sass a
 </nav>
 ```
 
-## Containers
+## Contenedores
 
-Although it’s not required, you can wrap a navbar in a `.container` to center it on a page–though note that an inner container is still required. Or you can add a container inside the `.navbar` to only center the contents of a [fixed or static top navbar](#placement).
+Aunque no es obligatorio, puedes envolver una barra de navegación en un `.container` para centrarla en una página, aunque ten en cuenta que todavía se requiere un contenedor interno. O puedes agregar un contenedor dentro de la `.navbar` para centrar únicamente el contenido de una [barra de navegación superior fija o estática](#placement).
 
 <Example code={`<div class="container">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -417,7 +417,7 @@ Although it’s not required, you can wrap a navbar in a `.container` to center 
     </nav>
   </div>`} />
 
-Use any of the responsive containers to change how wide the content in your navbar is presented.
+Utiliza cualquiera de los contenedores responsivos para cambiar la amplitud con la que se presenta el contenido en tu barra de navegación.
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-md">
@@ -425,49 +425,49 @@ Use any of the responsive containers to change how wide the content in your navb
     </div>
   </nav>`} />
 
-## Placement
+## Ubicación
 
-Use our [position utilities]([[docsref:/utilities/position]]) to place navbars in non-static positions. Choose from fixed to the top, fixed to the bottom, stickied to the top (scrolls with the page until it reaches the top, then stays there), or stickied to the bottom (scrolls with the page until it reaches the bottom, then stays there).
+Utiliza nuestras [utilidades de posición]([[docsref:/utilities/position]]) para colocar las barras de navegación en posiciones no estáticas. Elige entre fija en la parte superior (fixed to the top), fija en la parte inferior (fixed to the bottom), pegada en la parte superior (stickied to the top, se desplaza con la página hasta que llega a la parte superior, luego se queda allí) o pegada en la parte inferior (stickied to the bottom, se desplaza con la página hasta que llega a la parte inferior, luego se queda allí).
 
-Fixed navbars use `position: fixed`, meaning they’re pulled from the normal flow of the DOM and may require custom CSS (e.g., `padding-top` on the `<body>`) to prevent overlap with other elements.
+Las barras de navegación fijas usan `position: fixed`, lo que significa que se extraen del flujo normal del DOM y pueden requerir CSS personalizado (por ejemplo, `padding-top` en el `<body>`) para evitar la superposición con otros elementos.
 
 <Example code={`<nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Default</a>
+      <a class="navbar-brand" href="#">Predeterminado</a>
     </div>
   </nav>`} />
 
 <Example code={`<nav class="navbar fixed-top bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Fixed top</a>
+      <a class="navbar-brand" href="#">Fijo arriba</a>
     </div>
   </nav>`} />
 
 <Example code={`<nav class="navbar fixed-bottom bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Fixed bottom</a>
+      <a class="navbar-brand" href="#">Fijo abajo</a>
     </div>
   </nav>`} />
 
 <Example code={`<nav class="navbar sticky-top bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sticky top</a>
+      <a class="navbar-brand" href="#">Pegado arriba</a>
     </div>
   </nav>`} />
 
 <Example code={`<nav class="navbar sticky-bottom bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Sticky bottom</a>
+      <a class="navbar-brand" href="#">Pegado abajo</a>
     </div>
   </nav>`} />
 
-## Scrolling
+## Desplazamiento
 
-Add `.navbar-nav-scroll` to a `.navbar-nav` (or other navbar sub-component) to enable vertical scrolling within the toggleable contents of a collapsed navbar. By default, scrolling kicks in at `75vh` (or 75% of the viewport height), but you can override that with the local CSS custom property `--bs-navbar-height` or custom styles. At larger viewports when the navbar is expanded, content will appear as it does in a default navbar.
+Agrega `.navbar-nav-scroll` a un `.navbar-nav` (u otro subcomponente de la barra de navegación) para habilitar el desplazamiento vertical dentro de los contenidos alternables de una barra de navegación colapsada. De forma predeterminada, el desplazamiento se activa a `75vh` (o el 75% de la altura de la ventana gráfica), pero puedes anularlo con la propiedad personalizada CSS local `--bs-navbar-height` o estilos personalizados. En ventanas gráficas más grandes cuando la barra de navegación está expandida, el contenido aparecerá como lo hace en una barra de navegación predeterminada.
 
-Please note that this behavior comes with a potential drawback of `overflow`—when setting `overflow-y: auto` (required to scroll the content here), `overflow-x` is the equivalent of `auto`, which will crop some horizontal content.
+Ten en cuenta que este comportamiento tiene el inconveniente potencial de `overflow`: al establecer `overflow-y: auto` (necesario para desplazar el contenido aquí), `overflow-x` es el equivalente de `auto`, lo que recortará parte del contenido horizontal.
 
-Here’s an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-height: 100px;"`, with some extra margin utilities for optimum spacing.
+Aquí tienes un ejemplo de barra de navegación que utiliza `.navbar-nav-scroll` con `style="--bs-scroll-height: 100px;"`, con algunas utilidades de margen adicionales para un espaciado óptimo.
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -506,17 +506,17 @@ Here’s an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-h
     </div>
   </nav>`} />
 
-## Responsive behaviors
+## Comportamientos responsivos
 
-Navbars can use `.navbar-toggler`, `.navbar-collapse`, and `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` classes to determine when their content collapses behind a button. In combination with other utilities, you can easily choose when to show or hide particular elements.
+Las barras de navegación pueden usar las clases `.navbar-toggler`, `.navbar-collapse` y `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` para determinar cuándo colapsa su contenido detrás de un botón. En combinación con otras utilidades, puedes elegir fácilmente cuándo mostrar u ocultar elementos particulares.
 
-For navbars that never collapse, add the `.navbar-expand` class on the navbar. For navbars that always collapse, don’t add any `.navbar-expand` class.
+Para barras de navegación que nunca se colapsan, agrega la clase `.navbar-expand` en la barra de navegación. Para barras de navegación que siempre se colapsan, no agregues ninguna clase `.navbar-expand`.
 
-### Toggler
+### Alternador
 
-Navbar togglers are left-aligned by default, but should they follow a sibling element like a `.navbar-brand`, they’ll automatically be aligned to the far right. Reversing your markup will reverse the placement of the toggler. Below are examples of different toggle styles.
+Los alternadores (togglers) de la barra de navegación están alineados a la izquierda de forma predeterminada, pero si siguen a un elemento hermano como `.navbar-brand`, se alinearán automáticamente en el extremo derecho. Invertir tu marcado invertirá la ubicación del alternador. A continuación se muestran ejemplos de diferentes estilos de alternancia.
 
-With no `.navbar-brand` shown at the smallest breakpoint:
+Sin que se muestre `.navbar-brand` en el punto de interrupción más pequeño:
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -544,7 +544,7 @@ With no `.navbar-brand` shown at the smallest breakpoint:
     </div>
   </nav>`} />
 
-With a brand name shown on the left and toggler on the right:
+Con un nombre de marca que se muestra a la izquierda y el alternador a la derecha:
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -572,7 +572,7 @@ With a brand name shown on the left and toggler on the right:
     </div>
   </nav>`} />
 
-With a toggler on the left and brand name on the right:
+Con un alternador a la izquierda y el nombre de la marca a la derecha:
 
 <Example code={`<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -600,14 +600,14 @@ With a toggler on the left and brand name on the right:
     </div>
   </nav>`} />
 
-### External content
+### Contenido externo
 
-Sometimes you want to use the collapse plugin to trigger a container element for content that structurally sits outside of the `.navbar` . Because our plugin works on the `id` and `data-bs-target` matching, that’s easily done!
+A veces deseas utilizar el plugin collapse para activar un elemento contenedor para contenido que estructuralmente se encuentra fuera de la `.navbar`. Debido a que nuestro plugin funciona mediante la coincidencia de `id` y `data-bs-target`, ¡eso se hace fácilmente!
 
 <Example code={`<div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
     <div class="bg-dark p-4">
-      <h5 class="text-body-emphasis h4">Collapsed content</h5>
-      <span class="text-body-secondary">Toggleable via the navbar brand.</span>
+      <h5 class="text-body-emphasis h4">Contenido colapsado</h5>
+      <span class="text-body-secondary">Alternable a través de la marca de la barra de navegación.</span>
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">
@@ -618,13 +618,13 @@ Sometimes you want to use the collapse plugin to trigger a container element for
     </div>
   </nav>`} />
 
-When you do this, we recommend including additional JavaScript to move the focus programmatically to the container when it is opened. Otherwise, keyboard users and users of assistive technologies will likely have a hard time finding the newly revealed content - particularly if the container that was opened comes *before* the toggler in the document’s structure. We also recommend making sure that the toggler has the `aria-controls` attribute, pointing to the `id` of the content container. In theory, this allows assistive technology users to jump directly from the toggler to the container it controls–but support for this is currently quite patchy.
+Cuando hagas esto, te recomendamos incluir JavaScript adicional para mover el foco mediante programación al contenedor cuando se abra. De lo contrario, los usuarios de teclado y de tecnologías de asistencia probablemente tendrán dificultades para encontrar el contenido recién revelado, especialmente si el contenedor que se abrió está *before* (antes) del alternador en la estructura del documento. También recomendamos asegurarse de que el alternador tenga el atributo `aria-controls`, apuntando al `id` del contenedor de contenido. En teoría, esto permite a los usuarios de tecnologías de asistencia saltar directamente desde el alternador al contenedor que controla, pero el soporte para esto actualmente es bastante irregular.
 
 ### Offcanvas
 
-Transform your expanding and collapsing navbar into an offcanvas drawer with the [offcanvas component]([[docsref:/components/offcanvas]]). We extend both the offcanvas default styles and use our `.navbar-expand-*` classes to create a dynamic and flexible navigation sidebar.
+Transforma tu barra de navegación que se expande y colapsa en un cajón offcanvas con el [componente offcanvas]([[docsref:/components/offcanvas]]). Extendemos tanto los estilos predeterminados de offcanvas como nuestras clases `.navbar-expand-*` para crear una barra lateral de navegación dinámica y flexible.
 
-In the example below, to create an offcanvas navbar that is always collapsed across all breakpoints, omit the `.navbar-expand-*` class entirely.
+En el ejemplo a continuación, para crear una barra de navegación offcanvas que siempre esté colapsada en todos los puntos de interrupción, omite por completo la clase `.navbar-expand-*` con la que se expande.
 
 <Example code={`<nav class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
@@ -668,7 +668,7 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
     </div>
   </nav>`} />
 
-To create an offcanvas navbar that expands into a normal navbar at a specific breakpoint like `lg`, use `.navbar-expand-lg`.
+Para crear una barra de navegación offcanvas que se expanda a una barra de navegación normal en un punto de interrupción específico como `lg`, usa `.navbar-expand-lg`.
 
 ```html
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -682,7 +682,7 @@ To create an offcanvas navbar that expands into a normal navbar at a specific br
 </nav>
 ```
 
-When using offcanvas in a dark navbar, be aware that you may need to have a dark background on the offcanvas content to avoid the text becoming illegible. In the example below, we add `.navbar-dark` and `.bg-dark` to the `.navbar`, `.text-bg-dark` to the `.offcanvas`, `.dropdown-menu-dark` to `.dropdown-menu`, and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas.
+Al usar offcanvas en una barra de navegación oscura, ten en cuenta que es posible que necesites tener un fondo oscuro en el contenido offcanvas para evitar que el texto se vuelva ilegible. In el ejemplo a continuación, agregamos `.navbar-dark` y `.bg-dark` a la `.navbar`, `.text-bg-dark` al `.offcanvas`, `.dropdown-menu-dark` al `.dropdown-menu` y `.btn-close-white` al `.btn-close` para un estilo adecuado con un offcanvas oscuro.
 
 <Example code={`<nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
@@ -692,7 +692,7 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
       </button>
       <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Offcanvas oscuro</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -732,30 +732,30 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
 
 <AddedIn version="5.2.0" />
 
-As part of Bootstrap’s evolving CSS variables approach, navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Como parte del enfoque evolutivo de las variables CSS de Bootstrap, las barras de navegación ahora usan variables CSS locales en `.navbar` para una personalización mejorada en tiempo real. Los valores de las variables CSS se establecen a través de Sass, por lo que la personalización de Sass también es compatible.
 
 <ScssDocs name="navbar-css-vars" file="scss/_navbar.scss" />
 
-Some additional CSS variables are also present on `.navbar-nav`:
+Algunas variables CSS adicionales también están presentes en `.navbar-nav`:
 
 <ScssDocs name="navbar-nav-css-vars" file="scss/_navbar.scss" />
 
-Customization through CSS variables can be seen on the `.navbar-dark` class where we override specific values without adding duplicate CSS selectors.
+La personalización a través de variables CSS se puede ver en la clase `.navbar-dark`, donde anulamos valores específicos sin agregar selectores CSS duplicados.
 
 <ScssDocs name="navbar-dark-css-vars" file="scss/_navbar.scss" />
 
-### Sass variables
+### Variables de Sass
 
-Variables for all navbars:
+Variables para todas las barras de navegación:
 
 <ScssDocs name="navbar-variables" file="scss/_variables.scss" />
 
-Variables for the [dark navbar](#color-schemes):
+Variables para la [barra de navegación oscura](#color-schemes):
 
 <ScssDocs name="navbar-dark-variables" file="scss/_variables.scss" />
 
-### Sass loops
+### Bucles Sass
 
-[Responsive navbar expand/collapse classes](#responsive-behaviors) (e.g., `.navbar-expand-lg`) are combined with the `$breakpoints` map and generated through a loop in `scss/_navbar.scss`.
+Las [clases de expansión/colapso de barra de navegación responsiva](#responsive-behaviors) (por ejemplo, `.navbar-expand-lg`) se combinan con el mapa `$breakpoints` y se generan a través de un bucle en `scss/_navbar.scss`.
 
 <ScssDocs name="navbar-expand-loop" file="scss/_navbar.scss" />

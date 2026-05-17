@@ -1,69 +1,69 @@
 ---
-title: Select
-description: Customize the native `<select>`s with custom CSS that changes the element’s initial appearance.
+title: Selección (Select)
+description: Personaliza los selectores `<select>` nativos con CSS personalizado que cambia la apariencia inicial del elemento.
 toc: true
 ---
 
-## Default
+## Predeterminado
 
-Custom `<select>` menus need only a custom class, `.form-select` to trigger the custom styles. Custom styles are limited to the `<select>`’s initial appearance and cannot modify the `<option>`s due to browser limitations.
+Los menús `<select>` personalizados solo necesitan una clase personalizada, `.form-select`, para activar los estilos personalizados. Los estilos personalizados se limitan a la apariencia inicial de `<select>` y no pueden modificar las opciones `<option>` debido a limitaciones del navegador.
 
-<Example code={`<select class="form-select" aria-label="Default select example">
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+<Example code={`<select class="form-select" aria-label="Ejemplo de selección predeterminado">
+    <option selected>Abre este menú de selección</option>
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
   </select>`} />
 
-## Sizing
+## Tamaño
 
-You may also choose from small and large custom selects to match our similarly sized text inputs.
+También puedes elegir entre selectores personalizados grandes y pequeños para que coincidan con nuestras entradas de texto de tamaño similar.
 
-<Example code={`<select class="form-select form-select-lg mb-3" aria-label="Large select example">
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+<Example code={`<select class="form-select form-select-lg mb-3" aria-label="Ejemplo de selección grande">
+    <option selected>Abre este menú de selección</option>
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
   </select>
 
-  <select class="form-select form-select-sm" aria-label="Small select example">
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+  <select class="form-select form-select-sm" aria-label="Ejemplo de selección pequeña">
+    <option selected>Abre este menú de selección</option>
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
   </select>`} />
 
-The `multiple` attribute is also supported:
+También se admite el atributo `multiple`:
 
-<Example code={`<select class="form-select" multiple aria-label="Multiple select example">
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+<Example code={`<select class="form-select" multiple aria-label="Ejemplo de selección múltiple">
+    <option selected>Abre este menú de selección</option>
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
   </select>`} />
 
-As is the `size` attribute:
+Al igual que el atributo `size`:
 
-<Example code={`<select class="form-select" size="3" aria-label="Size 3 select example">
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+<Example code={`<select class="form-select" size="3" aria-label="Ejemplo de selección de tamaño 3">
+    <option selected>Abre este menú de selección</option>
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
   </select>`} />
 
-## Disabled
+## Deshabilitado
 
-Add the `disabled` boolean attribute on a select to give it a grayed out appearance and remove pointer events.
+Agrega el atributo booleano `disabled` en un elemento de selección para darle una apariencia atenuada y eliminar eventos de puntero.
 
-<Example code={`<select class="form-select" aria-label="Disabled select example" disabled>
-    <option selected>Open this select menu</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
+<Example code={`<select class="form-select" aria-label="Ejemplo de selección deshabilitada" disabled>
+    <option selected>Abre este menú de selección</option>
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
   </select>`} />
 
 ## CSS
 
-### Sass variables
+### Variables Sass
 
 <ScssDocs name="form-select-variables" file="scss/_variables.scss" />

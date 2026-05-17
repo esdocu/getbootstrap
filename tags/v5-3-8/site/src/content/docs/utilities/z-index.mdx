@@ -1,17 +1,17 @@
 ---
 title: Z-index
-description: Use our low-level `z-index` utilities to quickly change the stack level of an element or component.
+description: Utiliza nuestras utilidades de `z-index` de bajo nivel para cambiar rápidamente el nivel de superposición de un elemento o componente.
 toc: true
 added:
   version: "5.3"
 ---
 
-## Example
+## Ejemplo
 
-Use `z-index` utilities to stack elements on top of one another. Requires a `position` value other than `static`, which can be set with custom styles or using our [position utilities]([[docsref:/utilities/position/]]).
+Utiliza las utilidades `z-index` para apilar elementos uno encima de otro. Requiere un valor de `position` que no sea `static`, que se puede establecer con estilos personalizados o utilizando nuestras [utilidades de posición]([[docsref:/utilities/position/]]).
 
 <Callout>
-We call these “low-level” `z-index` utilities because of their default values of `-1` through `3`, which we use for the layout of overlapping components. High-level `z-index` values are used for overlay components like modals and tooltips.
+Llamamos a estas utilidades `z-index` de "bajo nivel" debido a sus valores predeterminados de `-1` a `3`, que usamos para el diseño de componentes superpuestos. Los valores de `z-index` de alto nivel se utilizan para componentes de superposición como modales y tooltips.
 </Callout>
 
 <Example class="bd-example-zindex-levels position-relative" code={`<div class="z-3 position-absolute p-5 rounded-3"><span>z-3</span></div>
@@ -20,28 +20,28 @@ We call these “low-level” `z-index` utilities because of their default value
 <div class="z-0 position-absolute p-5 rounded-3"><span>z-0</span></div>
 <div class="z-n1 position-absolute p-5 rounded-3"><span>z-n1</span></div>`} />
 
-## Overlays
+## Superposiciones (Overlays)
 
-Bootstrap overlay components—dropdown, modal, offcanvas, popover, toast, and tooltip—all have their own `z-index` values to ensure a usable experience with competing “layers” of an interface.
+Los componentes de superposición de Bootstrap (dropdown, modal, offcanvas, popover, toast y tooltip) tienen sus propios valores de `z-index` para garantizar una experiencia utilizable con las "capas" de una interfaz.
 
-Read about them in the [`z-index` layout page]([[docsref:/layout/z-index]]).
+Lee sobre ellos en la [página de diseño de `z-index`]([[docsref:/layout/z-index]]).
 
-## Component approach
+## Enfoque de componentes
 
-On some components, we use our low-level `z-index` values to manage repeating elements that overlap one another (like buttons in a button group or items in a list group).
+En algunos componentes, utilizamos nuestros valores de `z-index` de bajo nivel para administrar elementos repetidos que se superponen entre sí (como botones en un grupo de botones o elementos en un grupo de lista).
 
-Learn about our [`z-index` approach]([[docsref:/extend/approach#z-index-scales]]).
+Obtén más información sobre nuestro [enfoque de `z-index`]([[docsref:/extend/approach#z-index-scales]]).
 
 ## CSS
 
-### Sass maps
+### Mapas Sass
 
-Customize this Sass map to change the available values and generated utilities.
+Personaliza este mapa Sass para cambiar los valores disponibles y las utilidades generadas.
 
 <ScssDocs name="zindex-levels-map" file="scss/_variables.scss" />
 
-### Sass utilities API
+### API de utilidades de Sass
 
-Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
+Las utilidades de posición se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a utilizar la API de utilidades.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-zindex" file="scss/_utilities.scss" />

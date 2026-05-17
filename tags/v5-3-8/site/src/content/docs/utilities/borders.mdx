@@ -1,18 +1,18 @@
 ---
-title: Borders
-description: Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
+title: Bordes (Borders)
+description: Utiliza las utilidades de borde para dar estilo rápidamente al borde y al radio de borde (border-radius) de un elemento. Excelente para imágenes, botones o cualquier otro elemento.
 toc: true
 ---
 
 import { getData } from '@libs/data'
 
-## Border
+## Borde (Border)
 
-Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time.
+Utiliza las utilidades de borde para agregar o quitar los bordes de un elemento. Elige entre todos los bordes o uno a la vez.
 
-### Additive
+### Aditivo
 
-Add borders to custom elements:
+Agregar bordes a elementos personalizados:
 
 <Example class="bd-example-border-utils" code={`<span class="border"></span>
 <span class="border-top"></span>
@@ -20,9 +20,9 @@ Add borders to custom elements:
 <span class="border-bottom"></span>
 <span class="border-start"></span>`} />
 
-### Subtractive
+### Sustractivo
 
-Or remove borders:
+O eliminar bordes:
 
 <Example class="bd-example-border-utils" code={`<span class="border border-0"></span>
 <span class="border border-top-0"></span>
@@ -33,10 +33,10 @@ Or remove borders:
 ## Color
 
 <Callout>
-Border utilities like `.border-*` that generated from our original `$theme-colors` Sass map don’t yet respond to color modes, however, any `.border-*-subtle` utility will. This will be resolved in v6.
+Las utilidades de borde como `.border-*` que se generan a partir de nuestro mapa Sass original `$theme-colors` aún no responden a los modos de color, sin embargo, cualquier utilidad `.border-*-subtle` sí lo hará. Esto se resolverá en la versión 6.
 </Callout>
 
-Change the border color using utilities built on our theme colors.
+Cambia el color del borde utilizando utilidades basadas en los colores de nuestro tema.
 
 <Example class="bd-example-border-utils" code={[
   ...getData('theme-colors').map((themeColor) => `<span class="border border-${themeColor.name}"></span>
@@ -48,27 +48,27 @@ Change the border color using utilities built on our theme colors.
 Or modify the default `border-color` of a component:
 
 <Example code={`<div class="mb-4">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <label for="exampleFormControlInput1" class="form-label">Dirección de correo electrónico</label>
     <input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="name@example.com">
   </div>
 
   <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
-    Dangerous heading
+    Encabezado peligroso
   </div>
 
   <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
-    Changing border color and width
+    Cambiar el color y el ancho del borde
   </div>`} />
 
-## Opacity
+## Opacidad (Opacity)
 
 <AddedIn version="5.2.0" />
 
-Bootstrap `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+Las utilidades `border-{color}` de Bootstrap se generan con Sass utilizando variables CSS. Esto permite cambios de color en tiempo real sin compilación y cambios dinámicos de transparencia alfa.
 
-### How it works
+### Cómo funciona
 
-Consider our default `.border-success` utility.
+Considera nuestra utilidad `.border-success` predeterminada.
 
 ```css
 .border-success {
@@ -77,24 +77,24 @@ Consider our default `.border-success` utility.
 }
 ```
 
-We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don’t automatically have a modified alpha transparency.
+Usamos una versión RGB de nuestra variable CSS `--bs-success` (con el valor de `25, 135, 84`) y adjuntamos una segunda variable CSS, `--bs-border-opacity`, para la transparencia alfa (con un valor predeterminado `1` gracias a una variable CSS local). Eso significa que cada vez que uses `.border-success` ahora, tu valor de color (`color`) calculado será `rgba(25, 135, 84, 1)`. La variable CSS local dentro de cada clase `.border-*` evita problemas de herencia para que las instancias anidadas de las utilidades no tengan automáticamente una transparencia alfa modificada.
 
-### Example
+### Ejemplo
 
-To change that opacity, override `--bs-border-opacity` via custom styles or inline styles.
+Para cambiar esa opacidad, sobrescribe `--bs-border-opacity` a través de estilos personalizados o estilos en línea.
 
-<Example code={`<div class="border border-success p-2 mb-2">This is default success border</div>
-<div class="border border-success p-2" style="--bs-border-opacity: .5;">This is 50% opacity success border</div>`} />
+<Example code={`<div class="border border-success p-2 mb-2">Este es el borde success predeterminado</div>
+<div class="border border-success p-2" style="--bs-border-opacity: .5;">Este es el borde success con 50% de opacidad</div>`} />
 
-Or, choose from any of the `.border-opacity` utilities:
+O bien, elige entre cualquiera de las utilidades `.border-opacity`:
 
-<Example code={`<div class="border border-success p-2 mb-2">This is default success border</div>
-<div class="border border-success p-2 mb-2 border-opacity-75">This is 75% opacity success border</div>
-<div class="border border-success p-2 mb-2 border-opacity-50">This is 50% opacity success border</div>
-<div class="border border-success p-2 mb-2 border-opacity-25">This is 25% opacity success border</div>
-<div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>`} />
+<Example code={`<div class="border border-success p-2 mb-2">Este es el borde success predeterminado</div>
+<div class="border border-success p-2 mb-2 border-opacity-75">Este es el borde success con 75% de opacidad</div>
+<div class="border border-success p-2 mb-2 border-opacity-50">Este es el borde success con 50% de opacidad</div>
+<div class="border border-success p-2 mb-2 border-opacity-25">Este es el borde success con 25% de opacidad</div>
+<div class="border border-success p-2 border-opacity-10">Este es el borde success con 10% de opacidad</div>`} />
 
-## Width
+## Ancho (Width)
 
 <Example class="bd-example-border-utils" code={`<span class="border border-1"></span>
 <span class="border border-2"></span>
@@ -102,34 +102,34 @@ Or, choose from any of the `.border-opacity` utilities:
 <span class="border border-4"></span>
 <span class="border border-5"></span>`} />
 
-## Radius
+## Radio (Radius)
 
-Add classes to an element to easily round its corners.
+Agrega clases a un elemento para redondear fácilmente sus esquinas.
 
-<Example class="bd-example-rounded-utils" code={`<Placeholder width="75" height="75" class="rounded" title="Example rounded image" />
-<Placeholder width="75" height="75" class="rounded-top" title="Example top rounded image" />
-<Placeholder width="75" height="75" class="rounded-end" title="Example right rounded image" />
-<Placeholder width="75" height="75" class="rounded-bottom" title="Example bottom rounded image" />
-<Placeholder width="75" height="75" class="rounded-start" title="Example left rounded image" />`} />
+<Example class="bd-example-rounded-utils" code={`<Placeholder width="75" height="75" class="rounded" title="Ejemplo de imagen redondeada" />
+<Placeholder width="75" height="75" class="rounded-top" title="Ejemplo de imagen redondeada en la parte superior" />
+<Placeholder width="75" height="75" class="rounded-end" title="Ejemplo de imagen redondeada a la derecha" />
+<Placeholder width="75" height="75" class="rounded-bottom" title="Ejemplo de imagen redondeada en la parte inferior" />
+<Placeholder width="75" height="75" class="rounded-start" title="Ejemplo de imagen redondeada a la izquierda" />`} />
 
-### Sizes
+### Tamaños
 
-Use the scaling classes for larger or smaller rounded corners. Sizes range from `0` to `5` including `circle` and `pill`, and can be configured by modifying the utilities API.
+Usa las clases de escala para esquinas redondeadas más grandes o más pequeñas. Los tamaños varían de `0` a `5`, incluidos `circle` y `pill`, y se pueden configurar modificando la API de utilidades.
 
-<Example class="bd-example-rounded-utils" code={`<Placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" />
-<Placeholder width="75" height="75" class="rounded-1" title="Example small rounded image" />
-<Placeholder width="75" height="75" class="rounded-2" title="Example default rounded image" />
-<Placeholder width="75" height="75" class="rounded-3" title="Example large rounded image" />
-<Placeholder width="75" height="75" class="rounded-4" title="Example larger rounded image" />
-<Placeholder width="75" height="75" class="rounded-5" title="Example extra large rounded image" />
-<Placeholder width="75" height="75" class="rounded-circle" title="Completely round image" />
-<Placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" />`} />
+<Example class="bd-example-rounded-utils" code={`<Placeholder width="75" height="75" class="rounded-0" title="Ejemplo de imagen no redondeada" />
+<Placeholder width="75" height="75" class="rounded-1" title="Ejemplo de imagen redondeada pequeña" />
+<Placeholder width="75" height="75" class="rounded-2" title="Ejemplo de imagen redondeada predeterminada" />
+<Placeholder width="75" height="75" class="rounded-3" title="Ejemplo de imagen redondeada grande" />
+<Placeholder width="75" height="75" class="rounded-4" title="Ejemplo de imagen redondeada más grande" />
+<Placeholder width="75" height="75" class="rounded-5" title="Ejemplo de imagen redondeada extra grande" />
+<Placeholder width="75" height="75" class="rounded-circle" title="Imagen completamente redonda" />
+<Placeholder width="150" height="75" class="rounded-pill" title="Imagen de píldora redondeada" />`} />
 
-<Example class="bd-example-rounded-utils" code={`<Placeholder width="75" height="75" class="rounded-bottom-1" title="Example small rounded image" />
-<Placeholder width="75" height="75" class="rounded-start-2" title="Example default left rounded image" />
-<Placeholder width="75" height="75" class="rounded-end-circle" title="Example right completely round image" />
-<Placeholder width="75" height="75" class="rounded-start-pill" title="Example left rounded pill image" />
-<Placeholder width="75" height="75" class="rounded-5 rounded-top-0" title="Example extra large bottom rounded image" />`} />
+<Example class="bd-example-rounded-utils" code={`<Placeholder width="75" height="75" class="rounded-bottom-1" title="Ejemplo de imagen redondeada pequeña" />
+<Placeholder width="75" height="75" class="rounded-start-2" title="Ejemplo de imagen redondeada a la izquierda predeterminada" />
+<Placeholder width="75" height="75" class="rounded-end-circle" title="Ejemplo de imagen completamente redonda a la derecha" />
+<Placeholder width="75" height="75" class="rounded-start-pill" title="Ejemplo de imagen de píldora redondeada a la izquierda" />
+<Placeholder width="75" height="75" class="rounded-5 rounded-top-0" title="Ejemplo de imagen redondeada en la parte inferior extra grande" />`} />
 
 ## CSS
 
@@ -139,33 +139,33 @@ Use the scaling classes for larger or smaller rounded corners. Sizes range from 
 
 <ScssDocs name="root-border-var" file="scss/_root.scss" />
 
-### Sass variables
+### Variables Sass
 
 <ScssDocs name="border-variables" file="scss/_variables.scss" />
 
 <ScssDocs name="border-radius-variables" file="scss/_variables.scss" />
 
-Variables for setting `border-color` in `.border-*-subtle` utilities in light and dark mode:
+Variables para establecer `border-color` en utilidades `.border-*-subtle` en modo claro y oscuro:
 
 <ScssDocs name="theme-border-subtle-variables" file="scss/_variables.scss" />
 
 <ScssDocs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" />
 
-### Sass maps
+### Mapas Sass
 
-Color mode adaptive border colors are also available as a Sass map:
+Los colores de borde adaptables al modo de color también están disponibles como un mapa Sass:
 
 <ScssDocs name="theme-border-subtle-map" file="scss/_maps.scss" />
 
 <ScssDocs name="theme-border-subtle-dark-map" file="scss/_maps.scss" />
 
-### Sass mixins
+### Mixins Sass
 
 <ScssDocs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" />
 
-### Sass utilities API
+### API de utilidades de Sass
 
-Border utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
+Las utilidades de borde se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a utilizar la API de utilidades.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-borders" file="scss/_utilities.scss" />
 

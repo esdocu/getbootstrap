@@ -1,6 +1,6 @@
 ---
 title: Placeholders
-description: Use loading placeholders (skeleton loaders) for your components or pages to indicate something may still be loading.
+description: Utiliza marcadores de posición de carga (skeleton loaders) para tus componentes o páginas para indicar que algo aún se puede estar cargando.
 toc: true
 added:
   version: "5.1"
@@ -8,13 +8,13 @@ added:
 
 import { getData } from '@libs/data'
 
-## About
+## Acerca de
 
-Placeholders can be used to enhance the experience of your application. They’re built only with HTML and CSS, meaning you don’t need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, color, and sizing can be easily customized with our utility classes.
+Los marcadores de posición (placeholders) se pueden utilizar para mejorar la experiencia de tu aplicación. Están construidos únicamente con HTML y CSS, lo que significa que no necesitas ningún JavaScript para crearlos. Sin embargo, necesitarás algo de JavaScript personalizado para alternar su visibilidad. Su apariencia, color y tamaño se pueden personalizar fácilmente con nuestras clases de utilidad.
 
-## Example
+## Ejemplo
 
-In the example below, we take a typical card component and recreate it with placeholders applied to create a “loading card”. Size and proportions are the same between the two.
+En el ejemplo a continuación, tomamos un componente de tarjeta típico y lo recreamos con marcadores de posición aplicados para crear una "tarjeta de carga". El tamaño y las proporciones son los mismos entre los dos.
 
 <Example showMarkup={false} class="bd-example-placeholder-cards d-flex justify-content-around" code={`<div class="card">
     <Placeholder width="100%" height="180" class="card-img-top" text={false} background="#20c997" />
@@ -24,7 +24,7 @@ In the example below, we take a typical card component and recreate it with plac
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-
+ 
   <div class="card" aria-hidden="true">
     <Placeholder width="100%" height="180" class="card-img-top" text={false} />
     <div class="card-body">
@@ -47,9 +47,9 @@ In the example below, we take a typical card component and recreate it with plac
   <img src="..." class="card-img-top" alt="...">
 
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">Título de la tarjeta</h5>
+    <p class="card-text">Un texto de ejemplo rápido para construir sobre el título de la tarjeta y constituir la mayor parte del contenido de la tarjeta.</p>
+    <a href="#" class="btn btn-primary">Ir a algún lugar</a>
   </div>
 </div>
 
@@ -71,25 +71,25 @@ In the example below, we take a typical card component and recreate it with plac
 </div>
 ```
 
-## How it works
+## Cómo funciona
 
-Create placeholders with the `.placeholder` class and a grid column class (e.g., `.col-6`) to set the `width`. They can replace the text inside an element or be added as a modifier class to an existing component.
+Crea marcadores de posición con la clase `.placeholder` y una clase de columna de cuadrícula (por ejemplo, `.col-6`) para establecer el ancho (`width`). Pueden reemplazar el texto dentro de un elemento o agregarse como una clase modificadora a un componente existente.
 
-We apply additional styling to `.btn`s via `::before` to ensure the `height` is respected. You may extend this pattern for other situations as needed, or add a `&nbsp;` within the element to reflect the height when actual text is rendered in its place.
+Aplicamos estilo adicional a los botones `.btn` a través de `::before` para garantizar que se respete la altura (`height`). Puedes extender este patrón para otras situaciones según sea necesario, o agregar un `&nbsp;` dentro del elemento para reflejar la altura cuando se renderice el texto real en su lugar.
 
 <Example code={`<p aria-hidden="true">
     <span class="placeholder col-6"></span>
   </p>
-
+ 
   <a class="btn btn-primary disabled placeholder col-4" aria-disabled="true"></a>`} />
 
 <Callout>
-The use of `aria-hidden="true"` only indicates that the element should be hidden to screen readers. The *loading* behavior of the placeholder depends on how authors will actually use the placeholder styles, how they plan to update things, etc. Some JavaScript code may be needed to *swap* the state of the placeholder and inform AT users of the update.
+El uso de `aria-hidden="true"` solo indica que el elemento debe estar oculto para los lectores de pantalla. El comportamiento de *carga* (loading) del marcador de posición depende de cómo los autores utilizarán realmente los estilos de marcador de posición, cómo planean actualizar las cosas, etc. Es posible que se necesite algún código JavaScript para *alternar* (swap) el estado del marcador de posición e informar a los usuarios de tecnologías de asistencia sobre la actualización.
 </Callout>
 
-### Width
+### Ancho
 
-You can change the `width` through grid column classes, width utilities, or inline styles.
+Puedes cambiar el ancho (`width`) a través de clases de columnas de cuadrícula (grid), utilidades de ancho o estilos en línea.
 
 <Example code={`<span class="placeholder col-6"></span>
 <span class="placeholder w-75"></span>
@@ -97,7 +97,7 @@ You can change the `width` through grid column classes, width utilities, or inli
 
 ### Color
 
-By default, the `placeholder` uses `currentColor`. This can be overridden with a custom color or utility class.
+De forma predeterminada, el `placeholder` utiliza `currentColor`. Esto se puede anular con un color personalizado o una clase de utilidad.
 
 <Example code={[
   `<span class="placeholder col-12"></span>
@@ -105,29 +105,29 @@ By default, the `placeholder` uses `currentColor`. This can be overridden with a
   ...getData('theme-colors').map((themeColor) => `<span class="placeholder col-12 bg-${themeColor.name}"></span>`)
 ]} />
 
-### Sizing
+### Tamaños
 
-The size of `.placeholder`s are based on the typographic style of the parent element. Customize them with sizing modifiers: `.placeholder-lg`, `.placeholder-sm`, or `.placeholder-xs`.
+El tamaño de los `.placeholder` se basa en el estilo tipográfico del elemento padre. Personalízalos con modificadores de tamaño: `.placeholder-lg`, `.placeholder-sm` o `.placeholder-xs`.
 
 <Example code={`<span class="placeholder col-12 placeholder-lg"></span>
 <span class="placeholder col-12"></span>
 <span class="placeholder col-12 placeholder-sm"></span>
 <span class="placeholder col-12 placeholder-xs"></span>`} />
 
-### Animation
+### Animación
 
-Animate placeholders with `.placeholder-glow` or `.placeholder-wave` to better convey the perception of something being *actively* loaded.
+Anima los marcadores de posición con `.placeholder-glow` o `.placeholder-wave` para transmitir mejor la percepción de que algo se está cargando *activamente*.
 
 <Example code={`<p class="placeholder-glow">
     <span class="placeholder col-12"></span>
   </p>
-
+ 
   <p class="placeholder-wave">
     <span class="placeholder col-12"></span>
   </p>`} />
 
 ## CSS
 
-### Sass variables
+### Variables de Sass
 
 <ScssDocs name="placeholders" file="scss/_variables.scss" />

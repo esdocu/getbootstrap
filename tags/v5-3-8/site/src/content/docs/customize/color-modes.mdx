@@ -1,6 +1,6 @@
 ---
-title: Color modes
-description: Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
+title: Modos de color
+description: Bootstrap ahora es compatible con modos de color, o temas, a partir de la v5.3.0. Explora nuestro modo de color claro predeterminado y el nuevo modo oscuro, o crea el tuyo propio utilizando nuestros estilos como plantilla.
 toc: true
 added:
   version: "5.3"
@@ -9,93 +9,93 @@ added:
 import { getDocsRelativePath } from '@libs/path'
 
 <Callout>
-**Try it yourself!** Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/color-modes). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
+**¡Pruébalo tú mismo!** Descarga el código fuente y la demostración de trabajo para usar Bootstrap con Stylelint, y los modos de color del [repositorio twbs/examples](https://github.com/twbs/examples/tree/main/color-modes). También puedes [abrir el ejemplo en StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
 </Callout>
 
-## Dark mode
+## Modo oscuro
 
-**Bootstrap now supports color modes, starting with dark mode!** With v5.3.0 you can implement your own color mode toggler (see below for an example from Bootstrap’s docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
+**¡Bootstrap ahora es compatible con modos de color, comenzando con el modo oscuro!** Con la v5.3.0 puedes implementar tu propio alternador de modo de color (mira a continuación un ejemplo de la documentación de Bootstrap) y aplicar los diferentes modos de color según creas conveniente. Admitimos un modo claro (predeterminado) y ahora el modo oscuro. Los modos de color se pueden alternar globalmente en el elemento `<html>`, o en componentes y elementos específicos, gracias al atributo `data-bs-theme`.
 
-Alternatively, you can also switch to a media query implementation thanks to our color mode mixin—see [the usage section for details](#building-with-sass). Heads up though—this eliminates your ability to change themes on a per-component basis as shown below.
+Alternativamente, también puedes cambiar a una implementación de consulta de medios (media query) gracias a nuestro mixin de modo de color; consulta [la sección de uso para obtener más detalles](#construyendo-con-sass). Sin embargo, ten en cuenta que esto elimina tu capacidad de cambiar los temas por componente como se muestra a continuación.
 
-## Example
+## Ejemplo
 
-For example, to change the color mode of a dropdown menu, add `data-bs-theme="light"` or `data-bs-theme="dark"` to the parent `.dropdown`. Now, no matter the global color mode, these dropdowns will display with the specified theme value.
+Por ejemplo, para cambiar el modo de color de un menú desplegable, agrega `data-bs-theme="light"` o `data-bs-theme="dark"` al `.dropdown` padre. Ahora, sin importar el modo de color global, estos menús desplegables se mostrarán con el valor de tema especificado.
 
 <Example class="d-flex justify-content-between" code={`<div class="dropdown" data-bs-theme="light">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight" data-bs-toggle="dropdown" aria-expanded="false">
-      Default dropdown
+      Menú desplegable predeterminado
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
-      <li><a class="dropdown-item active" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item active" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
 
   <div class="dropdown" data-bs-theme="dark">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonDark" data-bs-toggle="dropdown" aria-expanded="false">
-      Dark dropdown
+      Menú desplegable oscuro
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonDark">
-      <li><a class="dropdown-item active" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item active" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>`} />
 
-## How it works
+## Cómo funciona
 
-- As shown above, color mode styles are controlled by the `data-bs-theme` attribute. This attribute can be applied to the `<html>` element, or to any other element or Bootstrap component. If applied to the `<html>` element, it will apply to everything. If applied to a component or element, it will be scoped to that specific component or element.
+- Como se muestra arriba, los estilos del modo de color están controlados por el atributo `data-bs-theme`. Este atributo se puede aplicar al elemento `<html>` o a cualquier otro elemento o componente de Bootstrap. Si se aplica al elemento `<html>`, se aplicará a todo. Si se aplica a un componente o elemento, se limitará a ese componente o elemento específico.
 
-- For each color mode you wish to support, you’ll need to add new overrides for the shared global CSS variables. We do this already in our `_root.scss` stylesheet for dark mode, with light mode being the default values. In writing color mode specific styles, use the mixin:
+- Para cada modo de color que desees admitir, deberás agregar nuevas anulaciones para las variables CSS globales compartidas. Ya hacemos esto en nuestra hoja de estilo `_root.scss` para el modo oscuro, siendo el modo claro los valores predeterminados. Al escribir estilos específicos del modo de color, usa el mixin:
 
   ```scss
-  // Color mode variables in _root.scss
+  // Variables de modo de color en _root.scss
   @include color-mode(dark) {
-    // CSS variable overrides here...
+    // Anulaciones de variables CSS aquí...
   }
   ```
 
-- We use a custom `_variables-dark.scss` to power those shared global CSS variable overrides for dark mode. This file isn’t required for your own custom color modes, but it’s required for our dark mode for two reasons. First, it’s better to have a single place to reset global colors. Second, some Sass variables had to be overridden for background images embedded in our CSS for accordions, form components, and more.
+- Usamos un archivo `_variables-dark.scss` personalizado para potenciar esas anulaciones de variables CSS globales compartidas para el modo oscuro. Este archivo no es necesario para tus propios modos de color personalizados, pero es necesario para nuestro modo oscuro por dos razones. Primero, es mejor tener un único lugar para restablecer los colores globales. Segundo, algunas variables de Sass tuvieron que anularse para las imágenes de fondo integradas en nuestro CSS para acordeones, componentes de formulario y más.
 
-## Usage
+## Uso
 
-### Enable dark mode
+### Habilitar el modo oscuro
 
-Enable the built in dark color mode across your entire project by adding the `data-bs-theme="dark"` attribute to the `<html>` element. This will apply the dark color mode to all components and elements, other than those with a specific `data-bs-theme` attribute applied. Building on the [quick start template]([[docsref:/getting-started/introduction#quick-start]]):
+Habilita el modo de color oscuro integrado en todo tu proyecto agregando el atributo `data-bs-theme="dark"` al elemento `<html>`. Esto aplicará el modo de color oscuro a todos los componentes y elementos, excepto a aquellos que tengan aplicado un atributo `data-bs-theme` específico. Basándonos en la [plantilla de inicio rápido]([[docsref:/getting-started/introduction#quick-start]]):
 
 ```html
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Demostración de Bootstrap</title>
     <link href="[[config:cdn.css]]" rel="stylesheet" integrity="[[config:cdn.css_hash]]" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>¡Hola, mundo!</h1>
     <script src="[[config:cdn.js_bundle]]" integrity="[[config:cdn.js_bundle_hash]]" crossorigin="anonymous"></script>
   </body>
 </html>
 ```
 
-Bootstrap does not yet ship with a built-in color mode picker, but you can use the one from our own documentation if you like. [Learn more in the JavaScript section.](#javascript)
+Bootstrap aún no viene con un selector de modo de color incorporado, pero puedes usar el de nuestra propia documentación si lo deseas. [Obtén más información en la sección de JavaScript.](#javascript)
 
-### Building with Sass
+### Construyendo con Sass
 
-Our new dark mode option is available to use for all users of Bootstrap, but it’s controlled via data attributes instead of media queries and does not automatically toggle your project’s color mode. You can disable our dark mode entirely via Sass by changing `$enable-dark-mode` to `false`.
+Nuestra nueva opción de modo oscuro está disponible para todos los usuarios de Bootstrap, pero se controla a través de atributos de datos en lugar de consultas de medios y no cambia automáticamente el modo de color de tu proyecto. Puedes desactivar nuestro modo oscuro por completo a través de Sass cambiando `$enable-dark-mode` a `false`.
 
-We use a custom Sass mixin, `color-mode()`, to help you control _how_ color modes are applied. By default, we use a `data` attribute approach, allowing you to create more user-friendly experiences where your visitors can choose to have an automatic dark mode or control their preference (like in our own docs here). This is also an easy and scalable way to add different themes and more custom color modes beyond light and dark.
+Usamos un mixin de Sass personalizado, `color-mode()`, para ayudarte a controlar _cómo_ se aplican los modos de color. De forma predeterminada, utilizamos un enfoque de atributo `data`, lo que te permite crear experiencias más fáciles de usar donde tus visitantes pueden elegir tener un modo oscuro automático o controlar su preferencia (como en nuestros propios documentos aquí). Esta también es una forma fácil y escalable de agregar diferentes temas y más modos de color personalizados más allá del claro y el oscuro.
 
-In case you want to use media queries and only make color modes automatic, you can change the mixin’s default type via Sass variable. Consider the following snippet and its compiled CSS output.
+En caso de que quieras usar consultas de medios y solo hacer que los modos de color sean automáticos, puedes cambiar el tipo predeterminado del mixin a través de la variable Sass. Considera el siguiente fragmento y su salida CSS compilada.
 
 ```scss
 $color-mode-type: data;
@@ -108,7 +108,7 @@ $color-mode-type: data;
 }
 ```
 
-Outputs to:
+Salida:
 
 ```css
 [data-bs-theme=dark] .element {
@@ -117,7 +117,7 @@ Outputs to:
 }
 ```
 
-And when setting to `media-query`:
+Y al configurarlo en `media-query`:
 
 ```scss
 $color-mode-type: media-query;
@@ -130,7 +130,7 @@ $color-mode-type: media-query;
 }
 ```
 
-Outputs to:
+Salida:
 
 ```css
 @media (prefers-color-scheme: dark) {
@@ -141,31 +141,31 @@ Outputs to:
 }
 ```
 
-## Custom color modes
+## Modos de color personalizados
 
-While the primary use case for color modes is light and dark mode, custom color modes are also possible. Create your own `data-bs-theme` selector with a custom value as the name of your color mode, then modify our Sass and CSS variables as needed. We opted to create a separate `_variables-dark.scss` stylesheet to house Bootstrap’s dark mode specific Sass variables, but that’s not required for you.
+Si bien el caso de uso principal para los modos de color es el modo claro y oscuro, también son posibles modos de color personalizados. Crea tu propio selector `data-bs-theme` con un valor personalizado como el nombre de tu modo de color, luego modifica nuestras variables Sass y CSS según sea necesario. Optamos por crear una hoja de estilo `_variables-dark.scss` separada para albergar las variables Sass específicas del modo oscuro de Bootstrap, pero eso no es obligatorio para ti.
 
-For example, you can create a “blue theme” with the selector `data-bs-theme="blue"`. In your custom Sass or CSS file, add the new selector and override any global or component CSS variables as needed. If you’re using Sass, you can also use Sass’s functions within your CSS variable overrides.
+Por ejemplo, puedes crear un "tema azul" con el selector `data-bs-theme="blue"`. En tu archivo CSS o Sass personalizado, agrega el nuevo selector y anula cualquier variable CSS global o de componente según sea necesario. Si estás usando Sass, también puedes usar las funciones de Sass dentro de tus anulaciones de variables CSS.
 
 <ScssDocs name="custom-color-mode" file="site/src/scss/_content.scss" />
 
 <Example showMarkup={false} code={`<div class="bd-example text-body bg-body" data-bs-theme="blue">
-  <div class="h4">Example blue theme</div>
-  <p>Some paragraph text to show how the blue theme might look with written copy.</p>
+  <div class="h4">Ejemplo de tema azul</div>
+  <p>Un poco de texto de párrafo para mostrar cómo podría verse el tema azul con el texto escrito.</p>
 
   <hr class="my-4"/>
 
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonCustom" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown button
+      Botón de menú desplegable
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonCustom">
-      <li><a class="dropdown-item active" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><a class="dropdown-item active" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Acción</a></li>
+      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+      <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
       <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Separated link</a></li>
+      <li><a class="dropdown-item" href="#">Enlace separado</a></li>
     </ul>
   </div>
 </div>`} />
@@ -178,25 +178,25 @@ For example, you can create a “blue theme” with the selector `data-bs-theme=
 
 ## JavaScript
 
-To allow visitors or users to toggle color modes, you’ll need to create a toggle element to control the `data-bs-theme` attribute on the root element, `<html>`. We’ve built a toggler in our documentation that initially defers to a user’s current system color mode, but provides an option to override that and pick a specific color mode.
+Para permitir que los visitantes o usuarios alternen los modos de color, deberás crear un elemento alternador para controlar el atributo `data-bs-theme` en el elemento raíz, `<html>`. Hemos creado un alternador en nuestra documentación que inicialmente se difiere al modo de color actual del sistema del usuario, pero proporciona una opción para anularlo y elegir un modo de color específico.
 
-Here’s a look at the JavaScript that powers it. Feel free to inspect our own documentation navbar to see how it’s implemented using HTML and CSS from our own components. It is suggested to include the JavaScript at the top of your page to reduce potential screen flickering during reloading of your site. Note that if you decide to use media queries for your color modes, your JavaScript may need to be modified or removed if you prefer an implicit control.
+Aquí tienes un vistazo al JavaScript que lo alimenta. Siéntete libre de inspeccionar la barra de navegación de nuestra propia documentación para ver cómo se implementa utilizando HTML y CSS de nuestros propios componentes. Se sugiere incluir el JavaScript en la parte superior de tu página para reducir el parpadeo potencial de la pantalla durante la recarga de tu sitio. Ten en cuenta que si decides utilizar consultas de medios para tus modos de color, es posible que debas modificar o eliminar tu JavaScript si prefieres un control implícito.
 
 <Code containerClass="bd-example-snippet" lang="js" filePath={getDocsRelativePath('/static/docs/[version]/assets/js/color-modes.js')} />
 
-## Adding theme colors
+## Agregar colores de tema
 
-Adding a new color in `$theme-colors` is not enough for some of our components like [alerts]([[docsref:/components/alerts]]) and [list groups]([[docsref:/components/list-group]]). New colors must also be defined in `$theme-colors-text`, `$theme-colors-bg-subtle`, and `$theme-colors-border-subtle` for light theme; but also in `$theme-colors-text-dark`, `$theme-colors-bg-subtle-dark`, and `$theme-colors-border-subtle-dark` for dark theme.
+Agregar un nuevo color en `$theme-colors` no es suficiente para algunos de nuestros componentes como [alertas]([[docsref:/components/alerts]]) y [grupos de listas]([[docsref:/components/list-group]]). Los nuevos colores también deben definirse en `$theme-colors-text`, `$theme-colors-bg-subtle`, and `$theme-colors-border-subtle` para el tema claro; pero también en `$theme-colors-text-dark`, `$theme-colors-bg-subtle-dark`, and `$theme-colors-border-subtle-dark` para el tema oscuro.
 
-This is a manual process because Sass cannot generate its own Sass variables from an existing variable or map. In future versions of Bootstrap, we'll revisit this setup to reduce the duplication.
+Este es un proceso manual porque Sass no puede generar sus propias variables Sass a partir de una variable o mapa existente. En futuras versiones de Bootstrap, revisaremos esta configuración para reducir la duplicación.
 
 ```scss
-// Required
+// Requerido
 @import "functions";
 @import "variables";
 @import "variables-dark";
 
-// Add a custom color to $theme-colors
+// Agregar un color personalizado a $theme-colors
 $custom-colors: (
   "custom-color": #712cf9
 );
@@ -206,9 +206,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "mixins";
 @import "utilities";
 
-// Add a custom color to new theme maps
+// Agregar un color personalizado a nuevos mapas de temas
 
-// Light mode
+// Modo claro
 $custom-colors-text: ("custom-color": #712cf9);
 $custom-colors-bg-subtle: ("custom-color": #e1d2fe);
 $custom-colors-border-subtle: ("custom-color": #bfa1fc);
@@ -217,7 +217,7 @@ $theme-colors-text: map-merge($theme-colors-text, $custom-colors-text);
 $theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $custom-colors-bg-subtle);
 $theme-colors-border-subtle: map-merge($theme-colors-border-subtle, $custom-colors-border-subtle);
 
-// Dark mode
+// Modo oscuro
 $custom-colors-text-dark: ("custom-color": #e1d2f2);
 $custom-colors-bg-subtle-dark: ("custom-color": #8951fa);
 $custom-colors-border-subtle-dark: ("custom-color": #e1d2f2);
@@ -226,7 +226,7 @@ $theme-colors-text-dark: map-merge($theme-colors-text-dark, $custom-colors-text-
 $theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $custom-colors-bg-subtle-dark);
 $theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $custom-colors-border-subtle-dark);
 
-// Remainder of Bootstrap imports
+// Resto de importaciones de Bootstrap
 @import "root";
 @import "reboot";
 // etc
@@ -236,18 +236,18 @@ $theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $c
 
 ### Variables
 
-Dozens of root level CSS variables are repeated as overrides for dark mode. These are scoped to the color mode selector, which defaults to `data-bs-theme` but [can be configured](#building-with-sass) to use a `prefers-color-scheme` media query. Use these variables as a guideline for generating your own new color modes.
+Decenas de variables CSS a nivel de raíz se repiten como anulaciones para el modo oscuro. Estas se limitan al selector de modo de color, que por defecto es `data-bs-theme` pero [se puede configurar](#construyendo-con-sass) para usar una consulta de medios `prefers-color-scheme`. Utiliza estas variables como guía para generar tus propios modos de color nuevos.
 
 <ScssDocs name="root-dark-mode-vars" file="scss/_root.scss" />
 
-### Sass variables
+### Variables de Sass
 
-CSS variables for our dark color mode are partially generated from dark mode specific Sass variables in `_variables-dark.scss`. This also includes some custom overrides for changing the colors of embedded SVGs used throughout our components.
+Las variables CSS para nuestro modo de color oscuro se generan parcialmente a partir de variables Sass específicas del modo oscuro en `_variables-dark.scss`. Esto también incluye algunas anulaciones personalizadas para cambiar los colores de los SVG incrustados utilizados en nuestros componentes.
 
 <ScssDocs name="sass-dark-mode-vars" file="scss/_variables-dark.scss" />
 
-### Sass mixins
+### Mixins de Sass
 
-Styles for dark mode, and any custom color modes you create, can be scoped appropriately to the `data-bs-theme` attribute selector or media query with the customizable `color-mode()` mixin. See the [Sass usage section](#building-with-sass) for more details.
+Los estilos para el modo oscuro, y cualquier modo de color personalizado que crees, se pueden limitar adecuadamente al selector de atributos `data-bs-theme` o consulta de medios con el mixin personalizable `color-mode()`. Consulta la [sección de uso de Sass](#construyendo-con-sass) para obtener más detalles.
 
 <ScssDocs name="color-mode-mixin" file="scss/mixins/_color-mode.scss" />

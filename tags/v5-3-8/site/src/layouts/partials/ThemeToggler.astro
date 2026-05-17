@@ -15,10 +15,10 @@ const { layout } = Astro.props
   aria-expanded="false"
   data-bs-toggle="dropdown"
   {...layout !== 'examples' ? { 'data-bs-display': 'static' } : {}}
-  aria-label="Toggle theme (auto)"
+  aria-label="Cambiar tema (auto)"
 >
   <svg class="bi my-1 theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg>
-  <span class=`${layout === 'examples' ? 'visually-hidden' : 'd-lg-none ms-2'}` id="bd-theme-text">Toggle theme</span>
+  <span class=`${layout === 'examples' ? 'visually-hidden' : 'd-lg-none ms-2'}` id="bd-theme-text">Cambiar tema</span>
 </button>
 <ul class=`dropdown-menu dropdown-menu-end${layout === 'examples' ? ' shadow' : ''}` aria-labelledby="bd-theme-text">
   <li>
@@ -29,7 +29,7 @@ const { layout } = Astro.props
       aria-pressed="false"
     >
       <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>
-      Light
+      Claro
       <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
     </button>
   </li>
@@ -41,7 +41,7 @@ const { layout } = Astro.props
       aria-pressed="false"
     >
       <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>
-      Dark
+      Oscuro
       <svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg>
     </button>
   </li>

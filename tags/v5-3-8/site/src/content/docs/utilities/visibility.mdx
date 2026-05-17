@@ -1,15 +1,15 @@
 ---
-title: Visibility
-description: Control the visibility of elements, without modifying their display, with visibility utilities.
+title: Visibilidad (Visibility)
+description: Controla la visibilidad de los elementos, sin modificar su display, con las utilidades de visibilidad.
 ---
 
-Set the `visibility` of elements with our visibility utilities. These utility classes do not modify the `display` value at all and do not affect layout – `.invisible` elements still take up space in the page.
+Establece la `visibility` de los elementos con nuestras utilidades de visibilidad. Estas clases de utilidad no modifican el valor `display` en absoluto y no afectan al diseño: los elementos `.invisible` aún ocupan espacio en la página.
 
 <Callout type="warning">
-Elements with the `.invisible` class will be hidden *both* visually and for assistive technology/screen reader users.
+Los elementos con la clase `.invisible` se ocultarán *tanto* visualmente como para usuarios de tecnologías de asistencia/lectores de pantalla.
 </Callout>
 
-Apply `.visible` or `.invisible` as needed.
+Aplica `.visible` o `.invisible` según sea necesario.
 
 ```html
 <div class="visible">...</div>
@@ -17,7 +17,7 @@ Apply `.visible` or `.invisible` as needed.
 ```
 
 ```scss
-// Class
+// Clase
 .visible {
   visibility: visible !important;
 }
@@ -28,8 +28,8 @@ Apply `.visible` or `.invisible` as needed.
 
 ## CSS
 
-### Sass utilities API
+### API de utilidades de Sass
 
-Visibility utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
+Las utilidades de visibilidad se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a utilizar la API de utilidades.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-visibility" file="scss/_utilities.scss" />

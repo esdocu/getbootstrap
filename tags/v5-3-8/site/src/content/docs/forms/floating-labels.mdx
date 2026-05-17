@@ -1,160 +1,160 @@
 ---
-title: Floating labels
-description: Create beautifully simple form labels that float over your input fields.
+title: Etiquetas flotantes (Floating labels)
+description: Crea etiquetas de formulario hermosas y sencillas que flotan sobre tus campos de entrada.
 toc: true
 ---
 
-## Example
+## Ejemplo
 
-Wrap a pair of `<input class="form-control">` and `<label>` elements in `.form-floating` to enable floating labels with Bootstrap’s textual form fields.
+Envuelve un par de elementos `<input class="form-control">` y `<label>` en `.form-floating` para habilitar etiquetas flotantes con los campos de formulario de texto de Bootstrap.
 
-A non-empty `placeholder` attribute is required on each `<input>` as our CSS-only floating label implementation relies on the `:placeholder-shown` pseudo-element to detect when the input is empty. The placeholder text itself is not visible; only the `<label>` is shown to users.
+Se requiere un atributo `placeholder` no vacío en cada `<input>` ya que nuestra implementación de etiquetas flotantes solo con CSS se basa en el pseudoelemento `:placeholder-shown` para detectar cuándo la entrada está vacía. El texto del marcador de posición en sí no es visible; solo se muestra la etiqueta `<label>` a los usuarios.
 
-Also note that the `<input>` must come first so we can utilize a sibling selector (i.e., `~`).
+Ten en cuenta también que la entrada `<input>` debe ir primero para que podamos utilizar un selector de hermanos (es decir, `~`).
 
 <Example code={`<div class="form-floating mb-3">
     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-    <label for="floatingInput">Email address</label>
+    <label for="floatingInput">Dirección de correo electrónico</label>
   </div>
   <div class="form-floating">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-    <label for="floatingPassword">Password</label>
+    <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+    <label for="floatingPassword">Contraseña</label>
   </div>`} />
 
-When there’s a `value` already defined, `<label>`s will automatically adjust to their floated position.
+Cuando ya hay un `value` definido, las etiquetas `<label>` se ajustarán automáticamente a su posición flotante.
 
 <Example code={`<form class="form-floating">
     <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" value="test@example.com">
-    <label for="floatingInputValue">Input with value</label>
+    <label for="floatingInputValue">Entrada con valor</label>
   </form>`} />
 
-Form validation styles also work as expected.
+Los estilos de validación de formularios también funcionan como se esperaba.
 
 <Example code={`<form class="form-floating">
     <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
-    <label for="floatingInputInvalid">Invalid input</label>
+    <label for="floatingInputInvalid">Entrada no válida</label>
   </form>`} />
 
-## Textareas
+## Áreas de texto (Textareas)
 
-By default, `<textarea>`s with `.form-control` will be the same height as `<input>`s.
-
-<Example code={`<div class="form-floating">
-    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-    <label for="floatingTextarea">Comments</label>
-  </div>`} />
-
-To set a custom height on your `<textarea>`, do not use the `rows` attribute. Instead, set an explicit `height` (either inline or via custom CSS).
+De forma predeterminada, las áreas de texto `<textarea>` con `.form-control` tendrán la misma altura que los elementos `<input>`.
 
 <Example code={`<div class="form-floating">
-    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-    <label for="floatingTextarea2">Comments</label>
+    <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextarea"></textarea>
+    <label for="floatingTextarea">Comentarios</label>
   </div>`} />
 
-## Selects
+Para establecer una altura personalizada en tu `<textarea>`, no uses el atributo `rows`. En su lugar, establece una `height` explícita (ya sea en línea o mediante CSS personalizado).
 
-Other than `.form-control`, floating labels are only available on `.form-select`s. They work in the same way, but unlike `<input>`s, they’ll always show the `<label>` in its floated state. **Selects with `size` and `multiple` are not supported.**
+<Example code={`<div class="form-floating">
+    <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextarea2" style="height: 100px"></textarea>
+    <label for="floatingTextarea2">Comentarios</label>
+  </div>`} />
+
+## Elementos de selección (Selects)
+
+Aparte de `.form-control`, las etiquetas flotantes solo están disponibles en `.form-select`. Funcionan de la misma manera, pero a diferencia de los elementos `<input>`, siempre mostrarán la etiqueta `<label>` en su estado flotante. **No se admiten elementos de selección con `size` y `multiple`.**
 
 <Example code={`<div class="form-floating">
     <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option selected>Abre este menú de selección</option>
+      <option value="1">Uno</option>
+      <option value="2">Dos</option>
+      <option value="3">Tres</option>
     </select>
-    <label for="floatingSelect">Works with selects</label>
+    <label for="floatingSelect">Funciona con selectores (selects)</label>
   </div>`} />
 
-## Disabled
+## Deshabilitado
 
-Add the `disabled` boolean attribute on an input, a textarea or a select to give it a grayed out appearance, remove pointer events, and prevent focusing.
+Agrega el atributo booleano `disabled` en una entrada, un área de texto o una selección para darle una apariencia atenuada, eliminar eventos del puntero y evitar el enfoque.
 
 <Example code={`<div class="form-floating mb-3">
     <input type="email" class="form-control" id="floatingInputDisabled" placeholder="name@example.com" disabled>
-    <label for="floatingInputDisabled">Email address</label>
+    <label for="floatingInputDisabled">Dirección de correo electrónico</label>
   </div>
   <div class="form-floating mb-3">
-    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextareaDisabled" disabled></textarea>
-    <label for="floatingTextareaDisabled">Comments</label>
+    <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextareaDisabled" disabled></textarea>
+    <label for="floatingTextareaDisabled">Comentarios</label>
   </div>
   <div class="form-floating mb-3">
-    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 100px" disabled>Disabled textarea with some text inside</textarea>
-    <label for="floatingTextarea2Disabled">Comments</label>
+    <textarea class="form-control" placeholder="Deja un comentario aquí" id="floatingTextarea2Disabled" style="height: 100px" disabled>Área de texto deshabilitada con algo de texto adentro</textarea>
+    <label for="floatingTextarea2Disabled">Comentarios</label>
   </div>
   <div class="form-floating">
     <select class="form-select" id="floatingSelectDisabled" aria-label="Floating label disabled select example" disabled>
-      <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option selected>Abre este menú de selección</option>
+      <option value="1">Uno</option>
+      <option value="2">Dos</option>
+      <option value="3">Tres</option>
     </select>
-    <label for="floatingSelectDisabled">Works with selects</label>
+    <label for="floatingSelectDisabled">Funciona con selectores (selects)</label>
   </div>`} />
 
-## Readonly plaintext
+## Texto sin formato de solo lectura (Readonly plaintext)
 
-Floating labels also support `.form-control-plaintext`, which can be helpful for toggling from an editable `<input>` to a plaintext value without affecting the page layout.
+Las etiquetas flotantes también admiten `.form-control-plaintext`, lo que puede resultar útil para pasar de una entrada `<input>` editable a un valor de texto sin formato sin afectar el diseño de la página.
 
 <Example code={`<div class="form-floating mb-3">
     <input type="email" readonly class="form-control-plaintext" id="floatingEmptyPlaintextInput" placeholder="name@example.com">
-    <label for="floatingEmptyPlaintextInput">Empty input</label>
+    <label for="floatingEmptyPlaintextInput">Entrada vacía</label>
   </div>
   <div class="form-floating mb-3">
     <input type="email" readonly class="form-control-plaintext" id="floatingPlaintextInput" placeholder="name@example.com" value="name@example.com">
-    <label for="floatingPlaintextInput">Input with value</label>
+    <label for="floatingPlaintextInput">Entrada con valor</label>
   </div>`} />
 
-## Input groups
+## Grupos de entrada (Input groups)
 
-Floating labels also support `.input-group`.
+Las etiquetas flotantes también admiten `.input-group`.
 
 <Example code={`<div class="input-group mb-3">
     <span class="input-group-text">@</span>
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
-      <label for="floatingInputGroup1">Username</label>
+      <label for="floatingInputGroup1">Nombre de usuario</label>
     </div>
   </div>`} />
 
-When using `.input-group` and `.form-floating` along with form validation, the `-feedback` should be placed outside of the `.form-floating`, but inside of the `.input-group`. This means that the feedback will need to be shown using javascript.
+Al usar `.input-group` y `.form-floating` junto con la validación del formulario, el mensaje `-feedback` debe colocarse fuera de `.form-floating`, pero dentro de `.input-group`. Esto significa que la respuesta de error o éxito deberá mostrarse usando javascript.
 
 <Example code={`<div class="input-group has-validation">
     <span class="input-group-text">@</span>
     <div class="form-floating is-invalid">
       <input type="text" class="form-control is-invalid" id="floatingInputGroup2" placeholder="Username" required>
-      <label for="floatingInputGroup2">Username</label>
+      <label for="floatingInputGroup2">Nombre de usuario</label>
     </div>
     <div class="invalid-feedback">
-      Please choose a username.
+      Por favor elige un nombre de usuario.
     </div>
   </div>`} />
 
-## Layout
+## Diseño (Layout)
 
-When working with the Bootstrap grid system, be sure to place form elements within column classes.
+Cuando trabajes con the Bootstrap grid system, be sure to place form elements within column classes.
 
 <Example code={`<div class="row g-2">
     <div class="col-md">
       <div class="form-floating">
         <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
-        <label for="floatingInputGrid">Email address</label>
+        <label for="floatingInputGrid">Dirección de correo electrónico</label>
       </div>
     </div>
     <div class="col-md">
       <div class="form-floating">
         <select class="form-select" id="floatingSelectGrid">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option selected>Abre este menú de selección</option>
+          <option value="1">Uno</option>
+          <option value="2">Dos</option>
+          <option value="3">Tres</option>
         </select>
-        <label for="floatingSelectGrid">Works with selects</label>
+        <label for="floatingSelectGrid">Funciona con selectores (selects)</label>
       </div>
     </div>
   </div>`} />
 
 ## CSS
 
-### Sass variables
+### Variables Sass
 
 <ScssDocs name="form-floating-variables" file="scss/_variables.scss" />

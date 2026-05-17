@@ -1,293 +1,293 @@
 ---
-title: Navs and tabs
-description: Documentation and examples for how to use Bootstrap’s included navigation components.
+title: Navegaciones y pestañas
+description: Documentación y ejemplos sobre cómo utilizar los componentes de navegación incluidos en Bootstrap.
 aliases: "/docs/[[config:docs_version]]/components/navs/"
 toc: true
 ---
 
-## Base nav
+## Navegación base
 
-Navigation available in Bootstrap share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
+La navegación disponible en Bootstrap comparte marcado y estilos generales, desde la clase base `.nav` hasta los estados activo y deshabilitado. Intercambia clases modificadoras para cambiar entre cada estilo.
 
-The base `.nav` component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
+El componente base `.nav` está construido con flexbox y proporciona una base sólida para construir todo tipo de componentes de navegación. Incluye algunas anulaciones de estilo (para trabajar con listas), algo de relleno de enlace (link padding) para áreas de clic más grandes y un estilo básico deshabilitado.
 
 <Callout>
-The base `.nav` component does not include any `.active` state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.
+El componente base `.nav` no incluye ningún estado `.active`. Los siguientes ejemplos incluyen la clase, principalmente para demostrar que esta clase en particular no activa ningún estilo especial.
 
-To convey the active state to assistive technologies, use the `aria-current` attribute — using the `page` value for current page, or `true` for the current item in a set.
+Para transmitir el estado activo a las tecnologías de asistencia, utiliza el atributo `aria-current`, usando el valor `page` para la página actual, o `true` para el elemento actual en un conjunto.
 </Callout>
 
 <Example code={`<ul class="nav">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
-Classes are used throughout, so your markup can be super flexible. Use `<ul>`s like above, `<ol>` if the order of your items is important, or roll your own with a `<nav>` element. Because the `.nav` uses `display: flex`, the nav links behave the same as nav items would, but without the extra markup.
+Las clases se utilizan en todo momento, por lo que tu marcado puede ser muy flexible. Utiliza elementos `<ul>` como los anteriores, `<ol>` si el orden de tus elementos es importante, o crea el tuyo propio con un elemento `<nav>`. Debido a que `.nav` usa `display: flex`, los enlaces de navegación se comportan igual que los elementos de navegación, pero sin el marcado adicional.
 
 <Example code={`<nav class="nav">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-    <a class="nav-link" href="#">Link</a>
-    <a class="nav-link" href="#">Link</a>
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    <a class="nav-link active" aria-current="page" href="#">Activo</a>
+    <a class="nav-link" href="#">Enlace</a>
+    <a class="nav-link" href="#">Enlace</a>
+    <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
   </nav>`} />
 
-## Available styles
+## Estilos disponibles
 
-Change the style of `.nav`s component with modifiers and utilities. Mix and match as needed, or build your own.
+Cambia el estilo del componente `.nav` con modificadores y utilidades. Mezcla y combina según sea necesario, o construye el tuyo propio.
 
-### Horizontal alignment
+### Alineación horizontal
 
-Change the horizontal alignment of your nav with [flexbox utilities]([[docsref:/utilities/flex#justify-content]]). By default, navs are left-aligned, but you can easily change them to center or right-aligned.
+Cambia la alineación horizontal de tu navegación con las [utilidades flexbox]([[docsref:/utilities/flex#justify-content]]). De forma predeterminada, las navegaciones están alineadas a la izquierda, pero puedes cambiarlas fácilmente para que estén centradas o alineadas a la derecha.
 
-Centered with `.justify-content-center`:
+Centrado con `.justify-content-center`:
 
 <Example code={`<ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
-Right-aligned with `.justify-content-end`:
+Alineado a la derecha con `.justify-content-end`:
 
 <Example code={`<ul class="nav justify-content-end">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
 ### Vertical
 
-Stack your navigation by changing the flex item direction with the `.flex-column` utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`).
+Apila tu navegación cambiando la dirección del elemento flex con la utilidad `.flex-column`. ¿Necesitas apilarlos en algunas ventanas gráficas (viewports) pero no en otras? Utiliza las versiones responsivas (por ejemplo, `.flex-sm-column`).
 
 <Example code={`<ul class="nav flex-column">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
-As always, vertical navigation is possible without `<ul>`s, too.
+Como siempre, la navegación vertical también es posible sin elementos `<ul>`.
 
 <Example code={`<nav class="nav flex-column">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-    <a class="nav-link" href="#">Link</a>
-    <a class="nav-link" href="#">Link</a>
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    <a class="nav-link active" aria-current="page" href="#">Activo</a>
+    <a class="nav-link" href="#">Enlace</a>
+    <a class="nav-link" href="#">Enlace</a>
+    <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
   </nav>`} />
 
-### Tabs
+### Pestañas
 
-Takes the basic nav from above and adds the `.nav-tabs` class to generate a tabbed interface. Use them to create tabbable regions with our [tab JavaScript plugin](#javascript-behavior).
+Toma la navegación básica de arriba y agrega la clase `.nav-tabs` para generar una interfaz de pestañas. Utilízalas para crear regiones interactivas con nuestro [plugin de JavaScript de pestañas](#javascript-behavior).
 
 <Example code={`<ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
-### Pills
+### Pastillas
 
-Take that same HTML, but use `.nav-pills` instead:
+Toma el mismo HTML, pero usa `.nav-pills` en su lugar:
 
 <Example code={`<ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
-### Underline
+### Subrayado
 
-Take that same HTML, but use `.nav-underline` instead:
+Toma el mismo HTML, pero usa `.nav-underline` en su lugar:
 
 <Example code={`<ul class="nav nav-underline">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
-### Fill and justify
+### Rellenar y justificar
 
-Force your `.nav`’s contents to extend the full available width with one of two modifier classes. To proportionately fill all available space with your `.nav-item`s, use `.nav-fill`. Notice that all horizontal space is occupied, but not every nav item has the same width.
+Fuerza a que los contenidos de tu `.nav` se extiendan a todo el ancho disponible con una de dos clases modificadoras. Para rellenar proporcionalmente todo el espacio disponible con tus elementos `.nav-item`, utiliza `.nav-fill`. Ten en cuenta que todo el espacio horizontal está ocupado, pero no todos los elementos de navegación tienen el mismo ancho.
 
 <Example code={`<ul class="nav nav-pills nav-fill">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Much longer nav link</a>
+      <a class="nav-link" href="#">Enlace de navegación mucho más largo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
-When using a `<nav>`-based navigation, you can safely omit `.nav-item` as only `.nav-link` is required for styling `<a>` elements.
+Al usar una navegación basada en `<nav>`, puedes omitir con seguridad `.nav-item` ya que solo se requiere `.nav-link` para dar estilo a los elementos `<a>`.
 
 <Example code={`<nav class="nav nav-pills nav-fill">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-    <a class="nav-link" href="#">Much longer nav link</a>
-    <a class="nav-link" href="#">Link</a>
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    <a class="nav-link active" aria-current="page" href="#">Activo</a>
+    <a class="nav-link" href="#">Enlace de navegación mucho más largo</a>
+    <a class="nav-link" href="#">Enlace</a>
+    <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
   </nav>`} />
 
-For equal-width elements, use `.nav-justified`. All horizontal space will be occupied by nav links, but unlike the `.nav-fill` above, every nav item will be the same width.
+Para elementos de igual ancho, usa `.nav-justified`. Todo el espacio horizontal estará ocupado por los enlaces de navegación, pero a diferencia de `.nav-fill` anterior, cada elemento de navegación tendrá el mismo ancho.
 
 <Example code={`<ul class="nav nav-pills nav-justified">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Much longer nav link</a>
+      <a class="nav-link" href="#">Enlace de navegación mucho más largo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
-Similar to the `.nav-fill` example using a `<nav>`-based navigation.
+Similar al ejemplo de `.nav-fill` que utiliza una navegación basada en `<nav>`.
 
 <Example code={`<nav class="nav nav-pills nav-justified">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-    <a class="nav-link" href="#">Much longer nav link</a>
-    <a class="nav-link" href="#">Link</a>
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    <a class="nav-link active" aria-current="page" href="#">Activo</a>
+    <a class="nav-link" href="#">Enlace de navegación mucho más largo</a>
+    <a class="nav-link" href="#">Enlace</a>
+    <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
   </nav>`} />
 
-## Working with flex utilities
+## Trabajar con utilidades flex
 
-If you need responsive nav variations, consider using a series of [flexbox utilities]([[docsref:/utilities/flex]]). While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
+Si necesitas variaciones de navegación responsivas, considera usar una serie de [utilidades flexbox]([[docsref:/utilities/flex]]). Aunque son más detalladas, estas utilidades ofrecen una mayor personalización en los puntos de interrupción responsivos. In el ejemplo a continuación, nuestra navegación se apilará en el punto de interrupción más bajo, luego se adaptará a un diseño horizontal que llena el ancho disponible a partir del punto de interrupción pequeño (sm).
 
 <Example code={`<nav class="nav nav-pills flex-column flex-sm-row">
-    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
-    <a class="flex-sm-fill text-sm-center nav-link" href="#">Longer nav link</a>
-    <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-    <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Disabled</a>
+    <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Activo</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Enlace de navegación más largo</a>
+    <a class="flex-sm-fill text-sm-center nav-link" href="#">Enlace</a>
+    <a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true">Deshabilitado</a>
   </nav>`} />
 
-## Regarding accessibility
+## Con respecto a la accesibilidad
 
-If you’re using navs to provide a navigation bar, be sure to add a `role="navigation"` to the most logical parent container of the `<ul>`, or wrap a `<nav>` element around the whole navigation. Do not add the role to the `<ul>` itself, as this would prevent it from being announced as an actual list by assistive technologies.
+Si usas navegaciones para proporcionar una barra de navegación, asegúrate de agregar un `role="navigation"` al contenedor padre más lógico de la `<ul>`, o envuelve un elemento `<nav>` alrededor de toda la navegación. No agregues el rol a la `<ul>` en sí, ya que esto evitaría que las tecnologías de asistencia la anuncien como una lista real.
 
-Note that navigation bars, even if visually styled as tabs with the `.nav-tabs` class, should **not** be given `role="tablist"`, `role="tab"` or `role="tabpanel"` attributes. These are only appropriate for dynamic tabbed interfaces, as described in the [ARIA Authoring Practices Guide tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/). See [JavaScript behavior](#javascript-behavior) for dynamic tabbed interfaces in this section for an example. The `aria-current` attribute is not necessary on dynamic tabbed interfaces since our JavaScript handles the selected state by adding `aria-selected="true"` on the active tab.
+Ten en cuenta que las barras de navegación, incluso si están estilizadas visualmente como pestañas con la clase `.nav-tabs`, **no** deben recibir los atributos `role="tablist"`, `role="tab"` o `role="tabpanel"`. Estos solo son apropiados para interfaces de pestañas dinámicas, como se describe en el [patrón de pestañas de la Guía de prácticas de autoría de ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/). Consulta el [comportamiento de JavaScript](#javascript-behavior) para interfaces dinámicas de pestañas en esta sección para ver un ejemplo. El atributo `aria-current` no es necesario en las interfaces de pestañas dinámicas ya que nuestro JavaScript maneja el estado seleccionado agregando `aria-selected="true"` en la pestaña activa.
 
-## Using dropdowns
+## Uso de menús desplegables
 
-Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin]([[docsref:/components/dropdowns#usage]]).
+Agrega menús desplegables con un poco de HTML adicional y el [plugin de JavaScript de menús desplegables]([[docsref:/components/dropdowns#usage]]).
 
-### Tabs with dropdowns
+### Pestañas con menús desplegables
 
 <Example code={`<ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Desplegable</a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="dropdown-item" href="#">Acción</a></li>
+        <li><a class="dropdown-item" href="#">Otra acción</a></li>
+        <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
+        <li><a class="dropdown-item" href="#">Enlace separado</a></li>
       </ul>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
-### Pills with dropdowns
+### Pastillas con menús desplegables
 
 <Example code={`<ul class="nav nav-pills">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <a class="nav-link active" aria-current="page" href="#">Activo</a>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Desplegable</a>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="dropdown-item" href="#">Acción</a></li>
+        <li><a class="dropdown-item" href="#">Otra acción</a></li>
+        <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
+        <li><a class="dropdown-item" href="#">Enlace separado</a></li>
       </ul>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Enlace</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
     </li>
   </ul>`} />
 
@@ -297,61 +297,61 @@ Add dropdown menus with a little extra HTML and the [dropdowns JavaScript plugin
 
 <AddedIn version="5.2.0" />
 
-As part of Bootstrap’s evolving CSS variables approach, navs now use local CSS variables on `.nav`, `.nav-tabs`, and `.nav-pills` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Como parte del enfoque evolutivo de las variables CSS de Bootstrap, las navegaciones ahora usan variables CSS locales en `.nav`, `.nav-tabs` y `.nav-pills` para una personalización mejorada en tiempo real. Los valores de las variables CSS se establecen a través de Sass, por lo que la personalización de Sass también es compatible.
 
-On the `.nav` base class:
+En la clase base `.nav`:
 
 <ScssDocs name="nav-css-vars" file="scss/_nav.scss" />
 
-On the `.nav-tabs` modifier class:
+En la clase modificadora `.nav-tabs`:
 
 <ScssDocs name="nav-tabs-css-vars" file="scss/_nav.scss" />
 
-On the `.nav-pills` modifier class:
+En la clase modificadora `.nav-pills`:
 
 <ScssDocs name="nav-pills-css-vars" file="scss/_nav.scss" />
 
 <AddedIn version="5.3.0" />
 
-On the `.nav-underline` modifier class:
+En la clase modificadora `.nav-underline`:
 
 <ScssDocs name="nav-underline-css-vars" file="scss/_nav.scss" />
 
-### Sass variables
+### Variables de Sass
 
 <ScssDocs name="nav-variables" file="scss/_variables.scss" />
 
-## JavaScript behavior
+## Comportamiento de JavaScript
 
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our navigational tabs and pills to create tabbable panes of local content.
+Utiliza el plugin de JavaScript de pestañas (tab)—inclúyelo individualmente o a través del archivo compilado `bootstrap.js`—para extender nuestras pestañas y pastillas de navegación para crear paneles interactivos (tabbable panes) de contenido local.
 
 <Example showMarkup={false} code={`
 <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Inicio</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Perfil</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contacto</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Deshabilitado</button>
   </li>
-</ul>
+ </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Home tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Inicio</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
   </div>
   <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Profile tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Perfil</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
   </div>
   <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Contact tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Contacto</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
   </div>
   <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña deshabilitada</strong>.</p>
   </div>
 </div>
 `} />
@@ -359,16 +359,16 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 ```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Inicio</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Perfil</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contacto</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Deshabilitado</button>
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
@@ -379,29 +379,29 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 </div>
 ```
 
-To help fit your needs, this works with `<ul>`-based markup, as shown above, or with any arbitrary “roll your own” markup. Note that if you’re using `<nav>`, you shouldn’t add `role="tablist"` directly to it, as this would override the element’s native role as a navigation landmark. Instead, switch to an alternative element (in the example below, a simple `<div>`) and wrap the `<nav>` around it.
+Para ayudar a satisfacer tus necesidades, esto funciona con marcado basado en `<ul>`, como se muestra arriba, o con cualquier marcado arbitrario creado por ti mismo. Ten en cuenta que si usas `<nav>`, no debes agregar `role="tablist"` directamente a él, ya que esto anularía el rol nativo del elemento como una región de navegación. En su lugar, cambia a un elemento alternativo (en el ejemplo a continuación, un `<div>` simple) y envuelve el `<nav>` a su alrededor.
 
 <Example showMarkup={false} code={`
 <nav>
   <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Inicio</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Perfil</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contacto</button>
+    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Deshabilitado</button>
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Home tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Inicio</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
   </div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Profile tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Perfil</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
   </div>
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Contact tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Contacto</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
   </div>
   <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña deshabilitada</strong>.</p>
   </div>
 </div>
 `} />
@@ -409,10 +409,10 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
 ```html
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
+    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Inicio</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Perfil</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contacto</button>
+    <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Deshabilitado</button>
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent">
@@ -423,35 +423,35 @@ To help fit your needs, this works with `<ul>`-based markup, as shown above, or 
 </div>
 ```
 
-The tabs plugin also works with pills.
+El plugin de pestañas también funciona con pastillas (pills).
 
 <Example showMarkup={false} code={`
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Inicio</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Perfil</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contacto</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
+    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Deshabilitado</button>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Home tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Inicio</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
   </div>
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Profile tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Perfil</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
   </div>
   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Contact tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Contacto</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
   </div>
   <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
-    <p>This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
+    <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña deshabilitada</strong>.</p>
   </div>
 </div>
 `} />
@@ -459,16 +459,16 @@ The tabs plugin also works with pills.
 ```html
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Inicio</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Perfil</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contacto</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
+    <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Deshabilitado</button>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
@@ -479,32 +479,32 @@ The tabs plugin also works with pills.
 </div>
 ```
 
-And with vertical pills. Ideally, for vertical tabs, you should also add `aria-orientation="vertical"` to the tab list container.
+Y con pastillas verticales. Idealmente, para pestañas verticales, también debes agregar `aria-orientation="vertical"` al contenedor de la lista de pestañas.
 
 <Example showMarkup={false} code={`
 <div class="d-flex align-items-start">
   <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Disabled</button>
-    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Inicio</button>
+    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Perfil</button>
+    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Deshabilitado</button>
+    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mensajes</button>
+    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Configuración</button>
   </div>
   <div class="tab-content" id="v-pills-tabContent">
     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-      <p>This is some placeholder content the <strong>Home tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+      <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Inicio</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
     </div>
     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
-      <p>This is some placeholder content the <strong>Profile tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+      <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Perfil</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
     </div>
     <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
-      <p>This is some placeholder content the <strong>Disabled tab’s</strong> associated content.</p>
+      <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña deshabilitada</strong>.</p>
     </div>
     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
-      <p>This is some placeholder content the <strong>Messages tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+      <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Mensajes</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
     </div>
     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
-      <p>This is some placeholder content the <strong>Settings tab’s</strong> associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other <code>.nav</code>-powered navigation.</p>
+      <p>Este es un contenido de marcador de posición para el contenido asociado de la <strong>pestaña Configuración</strong>. Al hacer clic en otra pestaña se alternará la visibilidad de esta por la siguiente. El JavaScript de la pestaña intercambia clases para controlar la visibilidad y el estilo del contenido. Puedes usarlo con pestañas, pastillas (pills) y cualquier otra navegación basada en <code>.nav</code>.</p>
     </div>
   </div>
 </div>
@@ -513,11 +513,11 @@ And with vertical pills. Ideally, for vertical tabs, you should also add `aria-o
 ```html
 <div class="d-flex align-items-start">
   <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Disabled</button>
-    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Inicio</button>
+    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Perfil</button>
+    <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Deshabilitado</button>
+    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mensajes</button>
+    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Configuración</button>
   </div>
   <div class="tab-content" id="v-pills-tabContent">
     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
@@ -529,38 +529,38 @@ And with vertical pills. Ideally, for vertical tabs, you should also add `aria-o
 </div>
 ```
 
-### Accessibility
+### Accesibilidad
 
-Dynamic tabbed interfaces, as described in the [ARIA Authoring Practices Guide tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), require `role="tablist"`, `role="tab"`, `role="tabpanel"`, and additional `aria-` attributes in order to convey their structure, functionality, and current state to users of assistive technologies (such as screen readers). As a best practice, we recommend using `<button>` elements for the tabs, as these are controls that trigger a dynamic change, rather than links that navigate to a new page or location.
+Las interfaces de pestañas dinámicas, como se describe en el [patrón de pestañas de la Guía de prácticas de autoría de ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), requieren atributos `role="tablist"`, `role="tab"`, `role="tabpanel"` y atributos `aria-` adicionales para transmitir su estructura, funcionalidad y estado actual a los usuarios de tecnologías de asistencia (como lectores de pantalla). Como mejor práctica, recomendamos usar elementos `<button>` para las pestañas, ya que son controles que activan un cambio dinámico, en lugar de enlaces que navegan a una nueva página o ubicación.
 
-In line with the ARIA Authoring Practices pattern, only the currently active tab receives keyboard focus. When the JavaScript plugin is initialized, it will set `tabindex="-1"` on all inactive tab controls. Once the currently active tab has focus, the cursor keys activate the previous/next tab. The <kbd>Home</kbd> and <kbd>End</kbd> keys activate the first and last tabs, respectively. The plugin will change the [roving `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) accordingly. However, note that the JavaScript plugin does not distinguish between horizontal and vertical tab lists when it comes to cursor key interactions: regardless of the tab list’s orientation, both the up *and* left cursor go to the previous tab, and down *and* right cursor go to the next tab.
+De acuerdo con el patrón de prácticas de autoría de ARIA, solo la pestaña actualmente activa recibe el foco del teclado. Cuando se inicializa el plugin de JavaScript, establecerá `tabindex="-1"` en todos los controles de pestaña inactivos. Una vez que la pestaña actualmente activa tiene el foco, las teclas de flecha activan la pestaña anterior/siguiente. Las teclas <kbd>Inicio</kbd> y <kbd>Fin</kbd> activan la primera y última pestaña, respectivamente. El plugin cambiará el [roving `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) en consecuencia. Sin embargo, ten en cuenta que el plugin de JavaScript no distingue entre listas de pestañas horizontales y verticales cuando se trata de interacciones de teclas de flecha: independientemente de la orientación de la lista de pestañas, tanto la flecha hacia arriba *como* hacia la izquierda van a la pestaña anterior, y la flecha hacia abajo *y* hacia la derecha van a la pestaña siguiente.
 
 <Callout type="warning">
-In general, to facilitate keyboard navigation, it’s recommended to make the tab panels themselves focusable as well, unless the first element containing meaningful content inside the tab panel is already focusable. The JavaScript plugin does not try to handle this aspect—where appropriate, you’ll need to explicitly make your tab panels focusable by adding `tabindex="0"` in your markup.
+En general, para facilitar la navegación con el teclado, se recomienda que los propios paneles de pestañas también se puedan enfocar, a menos que el primer elemento que contenga contenido significativo dentro del panel de pestañas ya se pueda enfocar. El plugin de JavaScript no intenta manejar este aspecto; cuando corresponda, deberás hacer que tus paneles de pestañas sean explícitamente enfocables agregando `tabindex="0"` en tu marcado.
 </Callout>
 
 <Callout type="danger">
-The tab JavaScript plugin **does not** support tabbed interfaces that contain dropdown menus, as these cause both usability and accessibility issues. From a usability perspective, the fact that the currently displayed tab’s trigger element is not immediately visible (as it’s inside the closed dropdown menu) can cause confusion. From an accessibility point of view, there is currently no sensible way to map this sort of construct to a standard WAI ARIA pattern, meaning that it cannot be easily made understandable to users of assistive technologies.
+El plugin de JavaScript de pestañas **no** admite interfaces de pestañas que contengan menús desplegables, ya que esto causa problemas tanto de usabilidad como de accesibilidad. Desde una perspectiva de usabilidad, el hecho de que el elemento activador de la pestaña que se muestra actualmente no sea visible de inmediato (ya que está dentro del menú desplegable cerrado) puede causar confusión. Desde el punto de vista de la accesibilidad, actualmente no existe una forma sensata de mapear este tipo de estructura a un patrón WAI ARIA estándar, lo que significa que no se puede hacer fácilmente comprensible para los usuarios de tecnologías de asistencia.
 </Callout>
 
-### Using data attributes
+### Uso de atributos de datos
 
-You can activate a tab or pill navigation without writing any JavaScript by simply specifying `data-bs-toggle="tab"` or `data-bs-toggle="pill"` on an element. Use these data attributes on `.nav-tabs` or `.nav-pills`.
+Puedes activar una navegación de pestañas o pastillas sin escribir nada de JavaScript simplemente especificando `data-bs-toggle="tab"` o `data-bs-toggle="pill"` en un elemento. Utiliza estos atributos de datos en `.nav-tabs` o `.nav-pills`.
 
 ```html
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Inicio</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Perfil</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+    <button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Mensajes</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+    <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Configuración</button>
   </li>
 </ul>
 
@@ -573,9 +573,9 @@ You can activate a tab or pill navigation without writing any JavaScript by simp
 </div>
 ```
 
-### Via JavaScript
+### A través de JavaScript
 
-Enable tabbable tabs via JavaScript (each tab needs to be activated individually):
+Habilita las pestañas interactivas a través de JavaScript (cada pestaña debe activarse individualmente):
 
 ```js
 const triggerTabList = document.querySelectorAll('#myTab button')
@@ -589,19 +589,19 @@ triggerTabList.forEach(triggerEl => {
 })
 ```
 
-You can activate individual tabs in several ways:
+Puedes activar pestañas individuales de varias maneras:
 
 ```js
 const triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
-bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+bootstrap.Tab.getInstance(triggerEl).show() // Seleccionar pestaña por nombre
 
 const triggerFirstTabEl = document.querySelector('#myTab li:first-child button')
-bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
+bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Seleccionar primera pestaña
 ```
 
-### Fade effect
+### Efecto de desvanecimiento (fade)
 
-To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
+Para hacer que las pestañas se desvanezcan al aparecer, agrega `.fade` a cada `.tab-pane`. El primer panel de pestañas también debe tener `.show` para hacer visible el contenido inicial.
 
 ```html
 <div class="tab-content">
@@ -612,51 +612,51 @@ To make tabs fade in, add `.fade` to each `.tab-pane`. The first tab pane must a
 </div>
 ```
 
-### Methods
+### Métodos
 
 <Callout name="danger-async-methods" type="danger" />
 
-Activates your content as a tab element.
+Activa tu contenido como un elemento de pestaña.
 
-You can create a tab instance with the constructor, for example:
+Puedes crear una instancia de pestaña con el constructor, por ejemplo:
 
 ```js
 const bsTab = new bootstrap.Tab('#myTab')
 ```
 
 <BsTable>
-| Method | Description |
+| Método | Descripción |
 | --- | --- |
-| `dispose` | Destroys an element’s tab. |
-| `getInstance` | Static method which allows you to get the tab instance associated with a DOM element, you can use it like this: `bootstrap.Tab.getInstance(element)`. |
-| `getOrCreateInstance` | Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn’t initialized. You can use it like this: `bootstrap.Tab.getOrCreateInstance(element)`. |
-| `show` | Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs). |
+| `dispose` | Destruye la pestaña de un elemento. |
+| `getInstance` | Método estático que te permite obtener la instancia de pestaña asociada con un elemento DOM, puedes usarlo de esta manera: `bootstrap.Tab.getInstance(element)`. |
+| `getOrCreateInstance` | Método estático que devuelve una instancia de pestaña asociada a un elemento DOM o crea una nueva en caso de que no haya sido inicializada. Puedes usarlo de esta manera: `bootstrap.Tab.getOrCreateInstance(element)`. |
+| `show` | Selecciona la pestaña dada y muestra su panel asociado. Cualquier otra pestaña que haya sido seleccionada previamente se deselecciona y su panel asociado se oculta. **Devuelve el control al llamador antes de que el panel de la pestaña se haya mostrado realmente** (es decir, antes de que ocurra el evento `shown.bs.tab`). |
 </BsTable>
 
-### Events
+### Eventos
 
-When showing a new tab, the events fire in the following order:
+Al mostrar una nueva pestaña, los eventos se disparan en el siguiente orden:
 
-1. `hide.bs.tab` (on the current active tab)
-2. `show.bs.tab` (on the to-be-shown tab)
-3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
-4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
+1. `hide.bs.tab` (en la pestaña activa actual)
+2. `show.bs.tab` (en la pestaña que se va a mostrar)
+3. `hidden.bs.tab` (en la pestaña activa anterior, la misma que para el evento `hide.bs.tab`)
+4. `shown.bs.tab` (en la pestaña recién activa que se acaba de mostrar, la misma que para el evento `show.bs.tab`)
 
-If no tab was already active, then the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+Si ninguna pestaña estaba activa previamente, los eventos `hide.bs.tab` y `hidden.bs.tab` no se dispararán.
 
 <BsTable>
-| Event type | Description |
+| Tipo de evento | Descripción |
 | --- | --- |
-| `hide.bs.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
-| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
-| `show.bs.tab` | This event fires on tab show, but before the new tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
-| `shown.bs.tab` | This event fires on tab show after a tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
+| `hide.bs.tab` | Este evento se dispara cuando se va a mostrar una nueva pestaña (y, por lo tanto, la pestaña activa anterior se va a ocultar). Utiliza `event.target` y `event.relatedTarget` para apuntar a la pestaña activa actual y a la nueva pestaña que pronto estará activa, respectivamente. |
+| `hidden.bs.tab` | Este evento se dispara después de que se muestra una nueva pestaña (y, por lo tanto, la pestaña activa anterior se oculta). Utiliza `event.target` y `event.relatedTarget` para apuntar a la pestaña activa anterior y a la nueva pestaña activa, respectivamente. |
+| `show.bs.tab` | Este evento se dispara al mostrar la pestaña, pero antes de que se haya mostrado la nueva pestaña. Utiliza `event.target` y `event.relatedTarget` para apuntar a la pestaña activa y a la pestaña activa anterior (si está disponible), respectivamente. |
+| `shown.bs.tab` | Este evento se dispara al mostrar la pestaña después de que se haya mostrado la pestaña. Utiliza `event.target` y `event.relatedTarget` para apuntar a la pestaña activa y a la pestaña activa anterior (si está disponible), respectivamente. |
 </BsTable>
 
 ```js
 const tabEl = document.querySelector('button[data-bs-toggle="tab"]')
 tabEl.addEventListener('shown.bs.tab', event => {
-  event.target // newly activated tab
-  event.relatedTarget // previous active tab
+  event.target // pestaña recién activada
+  event.relatedTarget // pestaña activa anterior
 })
 ```

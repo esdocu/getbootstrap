@@ -1,30 +1,30 @@
 ---
-title: Close button
-description: A generic close button for dismissing content like modals and alerts.
+title: Botón de cierre
+description: Un botón de cierre genérico para descartar contenido como modales y alertas.
 toc: true
 ---
 
-## Example
+## Ejemplo
 
-Provide an option to dismiss or close a component with `.btn-close`. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default `background-image`. **Be sure to include text for screen readers**, as we’ve done with `aria-label`.
+Proporciona una opción para descartar o cerrar un componente con `.btn-close`. El estilo predeterminado es limitado, pero altamente ajustable. Modifica las variables Sass para reemplazar la `background-image` predeterminada. **Asegúrate de incluir texto para lectores de pantalla**, como hemos hecho con `aria-label`.
 
 <Example code={`<button type="button" class="btn-close" aria-label="Close"></button>`} />
 
-## Disabled state
+## Estado deshabilitado
 
-Disabled close buttons change their `opacity`. We’ve also applied `pointer-events: none` and `user-select: none` to preventing hover and active states from triggering.
+Los botones de cierre deshabilitados cambian su `opacity`. También hemos aplicado `pointer-events: none` y `user-select: none` para evitar que se activen los estados activo y de desplazamiento (hover).
 
 <Example code={`<button type="button" class="btn-close" disabled aria-label="Close"></button>`} />
 
-## Dark variant
+## Variante oscura
 
 <DeprecatedIn version="5.3.0" />
 
 <Callout type="warning">
-**Heads up!** As of v5.3.0, the `.btn-close-white` class is deprecated. Instead, use `data-bs-theme="dark"` to change the color mode of the close button.
+**¡Atención!** A partir de v5.3.0, la clase `.btn-close-white` está obsoleta. En su lugar, utiliza `data-bs-theme="dark"` para cambiar el modo de color del botón de cierre.
 </Callout>
 
-Add `data-bs-theme="dark"` to the `.btn-close`, or to its parent element, to invert the close button. This uses the `filter` property to invert the `background-image` without overriding its value.
+Agrega `data-bs-theme="dark"` al `.btn-close`, o a su elemento padre, para invertir el botón de cierre. Esto utiliza la propiedad `filter` para invertir la `background-image` sin anular su valor.
 
 <Example class="bg-dark" code={`<div data-bs-theme="dark">
     <button type="button" class="btn-close" aria-label="Close"></button>
@@ -37,10 +37,10 @@ Add `data-bs-theme="dark"` to the `.btn-close`, or to its parent element, to inv
 
 <AddedIn version="5.3.0" />
 
-As part of Bootstrap’s evolving CSS variables approach, close button now uses local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Como parte del enfoque evolutivo de las variables CSS de Bootstrap, el botón de cierre ahora usa variables CSS locales en `.btn-close` para una personalización mejorada en tiempo real. Los valores de las variables CSS se establecen a través de Sass, por lo que la personalización de Sass también es compatible.
 
 <ScssDocs name="close-css-vars" file="scss/_close.scss" />
 
-### Sass variables
+### Variables de Sass
 
 <ScssDocs name="close-variables" file="scss/_variables.scss" />

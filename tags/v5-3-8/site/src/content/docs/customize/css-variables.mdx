@@ -1,46 +1,46 @@
 ---
-title: CSS variables
-description: Use Bootstrap’s CSS custom properties for fast and forward-looking design and development.
+title: Variables CSS
+description: Utiliza las propiedades personalizadas de CSS de Bootstrap para un diseño y desarrollo rápidos y orientados al futuro.
 toc: true
 ---
 
-Bootstrap includes many [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in its compiled CSS for real-time customization without the need to recompile Sass. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser’s inspector, a code sandbox, or general prototyping.
+Bootstrap incluye muchas [propiedades personalizadas de CSS (variables)](https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties) en su CSS compilado para una personalización en tiempo real sin la necesidad de volver a compilar Sass. Estas proporcionan un acceso fácil a valores de uso común como nuestros colores de tema, puntos de interrupción y pilas de fuentes principales cuando trabajas en el inspector de tu navegador, un sandbox de código o un prototipado general.
 
-**All our custom properties are prefixed with `bs-`** to avoid conflicts with third party CSS.
+**Todas nuestras propiedades personalizadas tienen el prefijo `bs-`** para evitar conflictos con CSS de terceros.
 
-## Root variables
+## Variables raíz
 
-Here are the variables we include (note that the `:root` is required) that can be accessed anywhere Bootstrap’s CSS is loaded. They’re located in our `_root.scss` file and included in our compiled dist files.
+Aquí están las variables que incluimos (ten en cuenta que se requiere el `:root`) a las que se puede acceder en cualquier lugar donde se cargue el CSS de Bootstrap. Se encuentran en nuestro archivo `_root.scss` y se incluyen en nuestros archivos dist compilados.
 
-### Default
+### Por defecto
 
-These CSS variables are available everywhere, regardless of color mode.
+Estas variables CSS están disponibles en todas partes, independientemente del modo de color.
 
 <Code lang="css" filePath="dist/css/bootstrap.css" fileMatch=":(root,\n\[data-bs-theme=light\] {[^}]*})" />
 
-### Dark mode
+### Modo oscuro
 
-These variables are scoped to our built-in dark mode.
+Estas variables están limitadas a nuestro modo oscuro integrado.
 
 <Code lang="css" filePath="dist/css/bootstrap.css" fileMatch="(\[data-bs-theme=dark\] {[^}]*})" />
 
-## Component variables
+## Variables de componentes
 
-Bootstrap 5 is increasingly making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren’t inherited in places like nested tables, and allow some basic restyling and extending of Bootstrap components after Sass compilation.
+Bootstrap 5 está haciendo un uso cada vez mayor de propiedades personalizadas como variables locales para varios componentes. De esta manera reducimos nuestro CSS compilado, aseguramos que los estilos no se hereden en lugares como tablas anidadas y permitimos un rediseño y extensión básicos de los componentes de Bootstrap después de la compilación de Sass.
 
-Have a look at our table documentation for some [insight into how we’re using CSS variables]([[docsref:/content/tables#how-do-the-variants-and-accented-tables-work]]). Our [navbars also use CSS variables]([[docsref:/components/navbar#css]]) as of v5.2.0. We’re also using CSS variables across our grids—primarily for gutters the [new opt-in CSS grid]([[docsref:/layout/css-grid]])—with more component usage coming in the future.
+Echa un vistazo a nuestra documentación de tablas para obtener información sobre [cómo usamos las variables CSS]([[docsref:/content/tables#how-do-the-variants-and-accented-tables-work]]). Nuestras [barras de navegación también utilizan variables CSS]([[docsref:/components/navbar#css]]) a partir de la v5.2.0. También estamos usando variables CSS en nuestras cuadrículas (principalmente para los canales (gutters) en la [nueva cuadrícula CSS opcional]([[docsref:/layout/css-grid]])), y en el futuro se utilizarán más componentes.
 
-Whenever possible, we'll assign CSS variables at the base component level (e.g., `.navbar` for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.
+Siempre que sea posible, asignaremos variables CSS al nivel de componente base (por ejemplo, `.navbar` para la barra de navegación y sus subcomponentes). Esto reduce las dudas sobre dónde y cómo personalizar, y permite modificaciones sencillas por parte de nuestro equipo en futuras actualizaciones.
 
-## Prefix
+## Prefijo
 
-Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the `--` that’s required on every CSS variable.
+La mayoría de las variables CSS usan un prefijo para evitar colisiones con tu propio código base. Este prefijo se suma al `--` que se requiere en cada variable CSS.
 
-Customize the prefix via the `$prefix` Sass variable. By default, it’s set to `bs-` (note the trailing dash).
+Personaliza el prefijo a través de la variable Sass `$prefix`. Por defecto, está establecido en `bs-` (ten en cuenta el guión final).
 
-## Examples
+## Ejemplos
 
-CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we’re resetting our page’s font and link styles with CSS variables.
+Las variables CSS ofrecen una flexibilidad similar a las variables de Sass, pero sin la necesidad de compilación antes de ser servidas al navegador. Por ejemplo, aquí estamos restableciendo los estilos de fuente y enlace de nuestra página con variables CSS.
 
 ```css
 body {
@@ -51,20 +51,20 @@ a {
 }
 ```
 
-## Focus variables
+## Variables de enfoque
 
 <AddedIn version="5.3.0"/>
 
-Bootstrap provides custom `:focus` styles using a combination of Sass and CSS variables that can be optionally added to specific components and elements. We do not yet globally override all `:focus` styles.
+Bootstrap proporciona estilos `:focus` personalizados utilizando una combinación de variables Sass y CSS que se pueden agregar opcionalmente a componentes y elementos específicos. Aún no anulamos globalmente todos los estilos `:focus`.
 
-In our Sass, we set default values that can be customized before compiling.
+En nuestro Sass, establecemos valores predeterminados que se pueden personalizar antes de compilar.
 
 <ScssDocs name="focus-ring-variables" file="scss/_variables.scss" />
 
-Those variables are then reassigned to `:root` level CSS variables that can be customized in real-time, including with options for `x` and `y` offsets (which default to their fallback value of `0`).
+Esas variables luego se reasignan a variables CSS a nivel de `:root` que se pueden personalizar en tiempo real, incluso con opciones para desplazamientos `x` e `y` (que por defecto tienen su valor de respaldo de `0`).
 
 <ScssDocs name="root-focus-variables" file="scss/_root.scss" />
 
-## Grid breakpoints
+## Puntos de interrupción de la cuadrícula
 
-While we include our grid breakpoints as CSS variables (except for `xs`), be aware that **CSS variables do not work in media queries**. This is by design in the CSS spec for variables, but may change in coming years with support for `env()` variables. Check out [this Stack Overflow answer](https://stackoverflow.com/a/47212942) for some helpful links. In the meantime, you can use these variables in other CSS situations, as well as in your JavaScript.
+Si bien incluimos nuestros puntos de interrupción de cuadrícula como variables CSS (excepto para `xs`), ten en cuenta que **las variables CSS no funcionan en las consultas de medios (media queries)**. Esto es por diseño en la especificación CSS para variables, pero puede cambiar en los próximos años con el soporte para variables `env()`. Echa un vistazo a [esta respuesta de Stack Overflow](https://stackoverflow.com/a/47212942) para obtener algunos enlaces útiles. Mientras tanto, puedes usar estas variables en otras situaciones de CSS, así como en tu JavaScript.

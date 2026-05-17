@@ -1,51 +1,51 @@
 ---
-title: Range
-description: Use our custom range inputs for consistent cross-browser styling and built-in customization.
+title: Rango (Range)
+description: Utiliza nuestras entradas de rango personalizadas para lograr un diseño consistente entre navegadores y una personalización integrada.
 toc: true
 ---
 
-## Overview
+## Descripción general
 
-Create custom `<input type="range">` controls with `.form-range`. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only Firefox supports “filling” their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.
+Crea controles personalizados `<input type="range">` con `.form-range`. La pista (el fondo) y el deslizador (el valor) están diseñados para tener la misma apariencia en todos los navegadores. Como solo Firefox admite el "relleno" de su pista desde la izquierda o la derecha del deslizador como medio para indicar visualmente el progreso, actualmente no lo admitimos.
 
-<Example code={`<label for="range1" class="form-label">Example range</label>
+<Example code={`<label for="range1" class="form-label">Rango de ejemplo</label>
 <input type="range" class="form-range" id="range1">`} />
 
-## Disabled
+## Deshabilitado
 
-Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
+Agrega el atributo booleano `disabled` en una entrada para darle una apariencia atenuada, eliminar eventos del puntero y evitar el enfoque.
 
-<Example code={`<label for="disabledRange" class="form-label">Disabled range</label>
+<Example code={`<label for="disabledRange" class="form-label">Rango deshabilitado</label>
 <input type="range" class="form-range" id="disabledRange" disabled>`} />
 
-## Min and max
+## Mínimo y máximo (Min and max)
 
-Range inputs have implicit values for `min` and `max`—`0` and `100`, respectively. You may specify new values for those using the `min` and `max` attributes.
+Las entradas de rango tienen valores implícitos para `min` y `max`: `0` y `100`, respectivamente. Puedes especificar nuevos valores para ellos utilizando los atributos `min` y `max`.
 
-<Example code={`<label for="range2" class="form-label">Example range</label>
+<Example code={`<label for="range2" class="form-label">Rango de ejemplo</label>
 <input type="range" class="form-range" min="0" max="5" id="range2">`} />
 
-## Steps
+## Pasos (Steps)
 
-By default, range inputs “snap” to integer values. To change this, you can specify a `step` value. In the example below, we double the number of steps by using `step="0.5"`.
+De forma predeterminada, las entradas de rango se "ajustan" a valores enteros. Para cambiar esto, puedes especificar un valor `step`. En el ejemplo a continuación, duplicamos el número de pasos usando `step="0.5"`.
 
-<Example code={`<label for="range3" class="form-label">Example range</label>
+<Example code={`<label for="range3" class="form-label">Rango de ejemplo</label>
 <input type="range" class="form-range" min="0" max="5" step="0.5" id="range3">`} />
 
-## Output value
+## Valor de salida (Output value)
 
-The value of the range input can be shown using the `output` element and a bit of JavaScript.
+El valor de la entrada de rango se puede mostrar utilizando el elemento `output` y un poco de JavaScript.
 
-<Example code={`<label for="range4" class="form-label">Example range</label>
+<Example code={`<label for="range4" class="form-label">Rango de ejemplo</label>
   <input type="range" class="form-range" min="0" max="100" value="50" id="range4">
   <output for="range4" id="rangeValue" aria-hidden="true"></output>
 
   <script>
-    // This is an example script, please modify as needed
+    // Este es un script de ejemplo, por favor modifícalo según sea necesario
     const rangeInput = document.getElementById('range4');
     const rangeOutput = document.getElementById('rangeValue');
 
-    // Set initial value
+    // Establecer valor inicial
     rangeOutput.textContent = rangeInput.value;
 
     rangeInput.addEventListener('input', function() {
@@ -55,6 +55,6 @@ The value of the range input can be shown using the `output` element and a bit o
 
 ## CSS
 
-### Sass variables
+### Variables Sass
 
 <ScssDocs name="form-range-variables" file="scss/_variables.scss" />

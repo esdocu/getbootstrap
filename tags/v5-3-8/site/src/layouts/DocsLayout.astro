@@ -18,7 +18,7 @@ interface Props {
 
 const { frontmatter, headings, id } = Astro.props
 
-// Extract the directory/section from the ID (format: "directory/filename.mdx")
+// Extraer el directorio/sección del ID (formato: "directorio/nombre-archivo.mdx")
 const parentDirectory = id.includes('/') ? id.split('/')[0] : ''
 
 const bodyProps: LayoutOverridesHTMLAttributes<'body'> = {}
@@ -34,12 +34,12 @@ if (frontmatter.toc) {
     <aside class="bd-sidebar">
       <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
         <div class="offcanvas-header border-bottom">
-          <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
+          <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Explorar documentos</h5>
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="offcanvas"
-            aria-label="Close"
+            aria-label="Cerrar"
             data-bs-target="#bdSidebar"></button>
         </div>
 
@@ -54,23 +54,23 @@ if (frontmatter.toc) {
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <div class="mb-3 mb-md-0 d-flex text-nowrap">
             {
-              // This is needed because we want to show the badge if show_badge isn't present or is set to false
+              // Esto es necesario porque queremos mostrar la insignia si show_badge es true o no está definido
               frontmatter.added &&
                 ((frontmatter.added.show_badge !== undefined && frontmatter.added.show_badge === true) ||
                   frontmatter.added.show_badge === undefined) && (
                   <small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">
-                    Added in v{frontmatter.added.version}
+                    Agregado en v{frontmatter.added.version}
                   </small>
                 )
             }
             <a
               class="btn btn-sm btn-bd-light rounded-2"
               href={`${getConfig().repo}/blob/v${getConfig().current_version}/site/src/content/docs/${id}`}
-              title="View and edit this file on GitHub"
+              title="Ver y editar este archivo en GitHub"
               target="_blank"
               rel="noopener"
             >
-              View on GitHub
+              Ver en GitHub
             </a>
           </div>
           <h1 class="bd-title mb-0" id="content">{frontmatter.title}</h1>
@@ -92,12 +92,12 @@ if (frontmatter.toc) {
               aria-expanded="false"
               aria-controls="tocContents"
             >
-              On this page
+              En esta página
               <svg class="bi d-md-none ms-2" aria-hidden="true">
                 <use xlink:href="#chevron-expand" />
               </svg>
             </button>
-            <strong class="d-none d-md-block h6 my-2 ms-3" id="docs-tocs">On this page</strong>
+            <strong class="d-none d-md-block h6 my-2 ms-3" id="docs-tocs">En esta página</strong>
             <hr class="d-none d-md-block my-2 ms-3" />
             <div class="collapse bd-toc-collapse" id="tocContents">
               <nav id="TableOfContents" aria-labelledby="docs-tocs">

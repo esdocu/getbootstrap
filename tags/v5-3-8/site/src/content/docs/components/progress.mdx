@@ -1,155 +1,155 @@
 ---
-title: Progress
-description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+title: Progreso
+description: Documentación y ejemplos para usar barras de progreso personalizadas de Bootstrap con soporte para barras apiladas, fondos animados y etiquetas de texto.
 toc: true
 ---
 
 <Callout>
-**New markup in v5.3.0 —** We’ve deprecated the previous HTML structure for progress bars and replaced it with a more accessible one. The previous structure will continue to work until v6. [See what’s changed in our migration guide.]([[docsref:/migration#improved-markup-for-progress-bars]])
+**Nuevo marcado en la v5.3.0 —** Hemos dejado obsoleta la estructura HTML anterior para las barras de progreso y la hemos reemplazado por una más accesible. La estructura anterior seguirá funcionando hasta la v6. [Consulta los cambios en nuestra guía de migración.]([[docsref:/migration#improved-markup-for-progress-bars]])
 </Callout>
 
-## How it works
+## Cómo funciona
 
-Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don’t use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.
+Los componentes de progreso se crean con dos elementos HTML, algo de CSS para establecer el ancho y algunos atributos. No utilizamos [el elemento `<progress>` de HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), lo que garantiza que puedas apilar barras de progreso, animarlas y colocar etiquetas de texto sobre ellas.
 
-- We use the `.progress` as a wrapper to indicate the max value of the progress bar.
-- The `.progress` wrapper also requires a `role="progressbar"` and `aria` attributes to make it accessible, including an accessible name (using `aria-label`, `aria-labelledby`, or similar).
-- We use the inner `.progress-bar` purely for the visual bar and label.
-- The `.progress-bar` requires an inline style, utility class, or custom CSS to set its width.
-- We provide a special `.progress-stacked` class to create multiple/stacked progress bars.
+- Usamos `.progress` como un contenedor para indicar el valor máximo de la barra de progreso.
+- El contenedor `.progress` también requiere un `role="progressbar"` y atributos `aria` para hacerlo accesible, incluido un nombre accesible (usando `aria-label`, `aria-labelledby`, o similar).
+- Usamos el `.progress-bar` interno puramente para la barra visual y la etiqueta.
+- La `.progress-bar` requiere un estilo en línea, una clase de utilidad o CSS personalizado para establecer su ancho.
+- Proporcionamos una clase especial `.progress-stacked` para crear barras de progreso múltiples/apiladas.
 
-Put that all together, and you have the following examples.
+Junta todo eso y tendrás los siguientes ejemplos.
 
-<Example code={`<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+<Example code={`<div class="progress" role="progressbar" aria-label="Ejemplo básico" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 0%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo básico" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 25%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo básico" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 50%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo básico" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 75%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo básico" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 100%"></div>
   </div>`} />
 
-## Bar sizing
+## Tamaño de la barra
 
-### Width
+### Ancho
 
-Bootstrap provides a handful of [utilities for setting width]([[docsref:/utilities/sizing]]). Depending on your needs, these may help with quickly configuring the width of the `.progress-bar`.
+Bootstrap proporciona un puñado de [utilidades para establecer el ancho]([[docsref:/utilities/sizing]]). Dependiendo de tus necesidades, estas pueden ayudar a configurar rápidamente el ancho de la `.progress-bar`.
 
-<Example code={`<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+<Example code={`<div class="progress" role="progressbar" aria-label="Ejemplo básico" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar w-75"></div>
   </div>`} />
 
-### Height
+### Altura
 
-You only set a `height` value on the `.progress` container, so if you change that value, the inner `.progress-bar` will automatically resize accordingly.
+Solo estableces un valor de `height` en el contenedor `.progress`, por lo que si cambias ese valor, la `.progress-bar` interna cambiará automáticamente de tamaño en consecuencia.
 
-<Example code={`<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
+<Example code={`<div class="progress" role="progressbar" aria-label="Ejemplo de 1px de altura" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
     <div class="progress-bar" style="width: 25%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+  <div class="progress" role="progressbar" aria-label="Ejemplo de 20px de altura" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
     <div class="progress-bar" style="width: 25%"></div>
   </div>`} />
 
-## Labels
+## Etiquetas
 
-Add labels to your progress bars by placing text within the `.progress-bar`.
+Agrega etiquetas a tus barras de progreso colocando texto dentro de `.progress-bar`.
 
-<Example code={`<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+<Example code={`<div class="progress" role="progressbar" aria-label="Ejemplo con etiqueta" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar" style="width: 25%">25%</div>
   </div>`} />
 
-### Long labels
+### Etiquetas largas
 
-Note that by default, the content inside the `.progress-bar` is controlled with `overflow: hidden`, so it doesn’t bleed out of the bar. If your progress bar is shorter than its label, the content will be capped and may become unreadable. To change this behavior, you can use `.overflow-visible` from the [overflow utilities]([[docsref:/utilities/overflow]]).
+Ten en cuenta que, de forma predeterminada, el contenido dentro de `.progress-bar` se controla con `overflow: hidden`, por lo que no se sale de la barra. Si tu barra de progreso es más corta que su etiqueta, el contenido se recortará y puede resultar ilegible. Para cambiar este comportamiento, puedes utilizar `.overflow-visible` de las [utilidades de desbordamiento (overflow)]([[docsref:/utilities/overflow]]).
 
 <Callout type="warning">
-Labels longer than the progress bar within may not be fully accessible using this method because it relies on the text color having the correct contrast ratio with both the `.progress` and `.progress-bar` background colors. Use caution when implementing this example.
+Las etiquetas más largas que la barra de progreso en su interior pueden no ser completamente accesibles usando este método porque depende de que el color del texto tenga la relación de contraste correcta con los colores de fondo de `.progress` y `.progress-bar`. Ten precaución al implementar este ejemplo.
 
-If the text can overlap the progress bar, we often recommend displaying the label outside of the progress bar for better accessibility.
+Si el texto puede superponerse a la barra de progreso, a menudo recomendamos mostrar la etiqueta fuera de la barra de progreso para una mejor accesibilidad.
 </Callout>
 
-## Backgrounds
+## Fondos
 
-Use background utility classes to change the appearance of individual progress bars.
+Utiliza clases de utilidad de fondo para cambiar la apariencia de las barras de progreso individuales.
 
-<Example code={`<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+<Example code={`<div class="progress" role="progressbar" aria-label="Ejemplo de éxito (Success)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success" style="width: 25%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo de información (Info)" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-info" style="width: 50%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo de advertencia (Warning)" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-warning" style="width: 75%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo de peligro (Danger)" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-danger" style="width: 100%"></div>
   </div>`} />
 
 <Callout name="warning-color-assistive-technologies" />
 
-If you’re adding labels to progress bars with a custom background color, make sure to also set an appropriate [text color]([[docsref:/utilities/colors#colors]]), so the labels remain readable and have sufficient contrast. We recommend using the [color and background]([[docsref:/helpers/color-background]]) helper classes.
+Si agregas etiquetas a barras de progreso con un color de fondo personalizado, asegúrate de establecer también un [color de texto]([[docsref:/utilities/colors#colors]]) adecuado, para que las etiquetas sigan siendo legibles y tengan suficiente contraste. Recomendamos utilizar las clases de ayuda de [color y fondo]([[docsref:/helpers/color-background]]).
 
-<Example code={`<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+<Example code={`<div class="progress" role="progressbar" aria-label="Ejemplo de éxito (Success)" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo de información (Info)" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo de advertencia (Warning)" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo de peligro (Danger)" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
   </div>`} />
 
-## Multiple bars
+## Múltiples barras
 
-You can include multiple progress components inside a container with `.progress-stacked` to create a single stacked progress bar. Note that in this case, the styling to set the visual width of the progress bar *must* be applied to the `.progress` elements, rather than the `.progress-bar`s.
+Puedes incluir múltiples componentes de progreso dentro de un contenedor con `.progress-stacked` para crear una sola barra de progreso apilada. Ten en cuenta que en este caso, el estilo para establecer el ancho visual de la barra de progreso *debe* aplicarse a los elementos `.progress`, en lugar de a las `.progress-bar`.
 
 <Example code={`<div class="progress-stacked">
-    <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+    <div class="progress" role="progressbar" aria-label="Segmento uno" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
       <div class="progress-bar"></div>
     </div>
-    <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+    <div class="progress" role="progressbar" aria-label="Segmento dos" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
       <div class="progress-bar bg-success"></div>
     </div>
-    <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <div class="progress" role="progressbar" aria-label="Segmento tres" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
       <div class="progress-bar bg-info"></div>
     </div>
   </div>`} />
 
-## Striped
+## A rayas
 
-Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar’s background color.
+Agrega `.progress-bar-striped` a cualquier `.progress-bar` para aplicar una raya a través de un gradiente CSS sobre el color de fondo de la barra de progreso.
 
-<Example code={`<div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+<Example code={`<div class="progress" role="progressbar" aria-label="Ejemplo con rayas predeterminado" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar progress-bar-striped" style="width: 10%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo con rayas Success" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar progress-bar-striped bg-success" style="width: 25%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo con rayas Info" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar progress-bar-striped bg-info" style="width: 50%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo con rayas Warning" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar progress-bar-striped bg-warning" style="width: 75%"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress" role="progressbar" aria-label="Ejemplo con rayas Danger" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"></div>
   </div>`} />
 
-## Animated stripes
+## Rayas animadas
 
-The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
+El gradiente a rayas también se puede animar. Agrega `.progress-bar-animated` a `.progress-bar` para animar las rayas de derecha a izquierda a través de animaciones CSS3.
 
-<Example code={`<div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+<Example code={`<div class="progress" role="progressbar" aria-label="Ejemplo con rayas animadas" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
   </div>`} />
 
@@ -159,16 +159,16 @@ The striped gradient can also be animated. Add `.progress-bar-animated` to `.pro
 
 <AddedIn version="5.2.0" />
 
-As part of Bootstrap’s evolving CSS variables approach, progress bars now use local CSS variables on `.progress` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Como parte del enfoque evolutivo de las variables CSS de Bootstrap, las barras de progreso ahora usan variables CSS locales en `.progress` para una personalización mejorada en tiempo real. Los valores de las variables CSS se establecen a través de Sass, por lo que la personalización de Sass también es compatible.
 
 <ScssDocs name="progress-css-vars" file="scss/_progress.scss" />
 
-### Sass variables
+### Variables de Sass
 
 <ScssDocs name="progress-variables" file="scss/_variables.scss" />
 
 ### Keyframes
 
-Used for creating the CSS animations for `.progress-bar-animated`. Included in `scss/_progress-bar.scss`.
+Se utiliza para crear las animaciones CSS para `.progress-bar-animated`. Incluido en `scss/_progress-bar.scss`.
 
 <ScssDocs name="progress-keyframes" file="scss/_progress.scss" />

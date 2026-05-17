@@ -1,123 +1,123 @@
 ---
-title: Migrating to v5
-description: Track and review changes to the Bootstrap source files, documentation, and components to help you migrate from v4 to v5.
+title: Migración a v5 (Migrating to v5)
+description: Sigue y revisa los cambios en los archivos fuente, la documentación y los componentes de Bootstrap para ayudarte a migrar de v4 a v5.
 aliases: "/migration/"
 toc: true
 ---
 
 ## v5.3.6
 
-### Dependencies
+### Dependencias
 
-- Migrated from Hugo to Astro for building our documentation
+- Se migró de Hugo a Astro para la construcción de nuestra documentación.
 
 ## v5.3.0
 
-If you’re migrating from our previous alpha releases of v5.3.0, please review their changes in addition to this section.
+Si vas a migrar desde nuestras versiones alfa anteriores de v5.3.0, revisa sus cambios además de esta sección.
 
-### Helpers
+### Ayudantes (Helpers)
 
-- [Colored links]([[docsref:/helpers/colored-links]]) once again have `!important` so they work better with our newly added link utilities.
+- Los [enlaces coloreados]([[docsref:/helpers/colored-links]]) vuelven a tener `!important` para que funcionen mejor con nuestras utilidades de enlaces recién agregadas.
 
-### Utilities
+### Utilidades
 
-- Added new `.d-inline-grid` [display utility]([[docsref:/utilities/display]]).
+- Se agregó la nueva [utilidad de visualización]([[docsref:/utilities/display]]) `.d-inline-grid`.
 
 ## v5.3.0-alpha2
 
-If you’re migrating from our previous alpha release of v5.3.0, please review the changes listed below.
+Si vas a migrar desde nuestra versión alfa anterior de v5.3.0, revisa los cambios que se enumeran a continuación.
 
-### CSS variables
+### Variables CSS
 
-- Removed several duplicate and unused root CSS variables.
+- Se eliminaron varias variables CSS de root duplicadas y no utilizadas.
 
-### Color modes
+### Modos de color
 
-- Dark mode colors are now derived from our theme colors (e.g., `$primary`) in Sass, rather than color specific tints or shades (e.g., `$blue-300`). This allows for a more automated dark mode when customizing the default theme colors.
+- Los colores del modo oscuro ahora se derivan de nuestros colores del tema (por ejemplo, `$primary`) en Sass, en lugar de tintes o matices específicos de color (por ejemplo, `$blue-300`). Esto permite un modo oscuro más automatizado al personalizar los colores predeterminados del tema.
 
-- Added Sass maps for generating theme colors for dark mode text, subtle background, and subtle border.
+- Se agregaron mapas Sass para generar colores de tema para texto en modo oscuro, fondo sutil y borde sutil.
 
-- [Snippet examples]([[docsref:/examples/#snippets]]) are now ready for dark mode with updated markup and reduced custom styles.
+- Los [ejemplos de fragmentos (snippets)]([[docsref:/examples/#snippets]]) ahora están listos para el modo oscuro con marcado actualizado y estilos personalizados reducidos.
 
-- Added `color-scheme: dark` to dark mode CSS to change OS level controls like scrollbars
+- Se agregó `color-scheme: dark` al CSS del modo oscuro para cambiar los controles a nivel de sistema operativo como las barras de desplazamiento.
 
-- Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
+- Los estados de validación de formulario `border-color` y `color` de texto ahora responden al modo oscuro, gracias a las nuevas variables Sass y CSS.
 
-- Dropped recently added form control background CSS variables and reassigned the Sass variables to use CSS variables instead. This simplifies the styling across color modes and avoids an issue where form controls in dark mode wouldn’t update properly.
+- Se eliminaron las variables CSS de fondo de control de formulario agregadas recientemente y se reasignaron las variables Sass para usar variables CSS en su lugar. Esto simplifica el estilo en todos los modos de color y evita un problema por el cual los controles de formulario en modo oscuro no se actualizaban correctamente.
 
-- Our `box-shadow`s will once again always stay dark instead of inverting to white when in dark mode.
+- Nuestras `box-shadow` volverán a permanecer oscuras en lugar de invertirse a blanco en el modo oscuro.
 
-- Improved HTML and JavaScript for our color mode toggle script. The selector for changing the active SVG has been improved, and the markup made more accessible with ARIA attributes.
+- Se mejoraron el HTML y JavaScript para nuestro script de alternancia de modo de color. Se mejoró el selector para cambiar el SVG activo y se hizo el marcado más accesible con atributos ARIA.
 
-- Improved docs code syntax colors and more across light and dark modes.
+- Se mejoraron los colores de sintaxis del código de la documentación y más en los modos claro y oscuro.
 
-### Typography
+### Tipografía
 
-- We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we’ve set the Sass variable to `null` and added a `null` check like we use on the default light mode.
+- Ya no establecemos un color para `$headings-color-dark` o `--bs-heading-color` para el modo oscuro. Para evitar varios problemas de encabezados dentro de componentes que aparecen con el color incorrecto, configuramos la variable Sass en `null` y agregamos una verificación de `null` como la que usamos en el modo claro predeterminado.
 
-### Components
+### Componentes
 
-- Cards now have a `color` set on them to improve rendering across color modes.
+- Las tarjetas (cards) ahora tienen un `color` establecido para mejorar la representación en todos los modos de color.
 
-- Added new `.nav-underline` variant for our navigation with a simpler bottom border under the active nav link. [See the docs for an example.]([[docsref:/components/navs-tabs#underline]])
+- Se agregó la nueva variante `.nav-underline` para nuestra navegación con un borde inferior más simple debajo del enlace de navegación activo. [Consulta la documentación para ver un ejemplo.]([[docsref:/components/navs-tabs#underline]])
 
-- Navs now have new `:focus-visible` styles that better match our custom button focus styles.
+- Los navs ahora tienen nuevos estilos `:focus-visible` que coinciden mejor con nuestros estilos de enfoque de botones personalizados.
 
-### Helpers
+### Ayudantes (Helpers)
 
-- Added new `.icon-link` helper to quickly place and align Bootstrap Icons alongside a textual link. Icon links support our new link utilities, too.
+- Se agregó el nuevo ayudante `.icon-link` para colocar y alinear rápidamente Bootstrap Icons junto a un enlace textual. Los enlaces de iconos también admiten nuestras nuevas utilidades de enlaces.
 
-- Added new focus ring helper for removing the default `outline` and setting a custom `box-shadow` focus ring.
+- Se agregó el nuevo ayudante de anillo de enfoque para eliminar el `outline` predeterminado y establecer un anillo de enfoque `box-shadow` personalizado.
 
-### Utilities
+### Utilidades
 
-- Renamed Sass and CSS variables `${color}-text` to `${color}-text-emphasis` to match their associated utilities.
+- Se cambiaron de nombre las variables Sass y CSS `${color}-text` a `${color}-text-emphasis` para que coincidan con sus utilidades asociadas.
 
-- Added new `.link-body-emphasis` helper alongside our [colored links]([[docsref:/helpers/colored-links]]). This creates a colored link using our color mode responsive emphasis color.
+- Se agregó el nuevo ayudante `.link-body-emphasis` junto con nuestros [enlaces coloreados]([[docsref:/helpers/colored-links]]). Esto crea un enlace de color utilizando nuestro color de énfasis adaptable al modo de color.
 
-- Added new link utilities for link color opacity, underline offset, underline color, and underline opacity. [Explore the new links utilities.]([[docsref:/utilities/link]])
+- Se agregaron nuevas utilidades de enlaces para la opacidad del color del enlace, el desplazamiento del subrayado, el color del subrayado y la opacidad del subrayado. [Explora las nuevas utilidades de enlaces.]([[docsref:/utilities/link]])
 
-- CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
+- Las utilidades de `border-width` basadas en variables CSS se han revertido para establecer su propiedad directamente (como se hacía antes de v5.2.0). Esto evita problemas de herencia entre elementos anidados, incluidas las tablas.
 
-- Added new `.border-black` utility to match our `.text-black` and `.bg-black` utilities.
+- Se agregó la nueva utilidad `.border-black` para coincidir con nuestras utilidades `.text-black` y `.bg-black`.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.text-muted` utility and `$text-muted` Sass variable have been deprecated and replaced with `.text-body-secondary` and `$body-secondary-color`.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> La utilidad `.text-muted` y la variable Sass `$text-muted` han quedado obsoletas y han sido reemplazadas por `.text-body-secondary` y `$body-secondary-color`.
 
-### Docs
+### Documentación (Docs)
 
-- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
+- Los ejemplos ahora se muestran con el modo de color claro u oscuro apropiado según lo dicte la configuración de nuestra documentación. Cada ejemplo tiene un selector de modo de color individual.
 
-- Improved included JavaScript for live Toast demo.
+- Se mejoró el JavaScript incluido para la demostración en vivo de Toast.
 
-- Added `twbs/examples` repo contents to the top of the Examples page.
+- Se agregaron los contenidos del repositorio `twbs/examples` a la parte superior de la página de ejemplos.
 
-### Tooling
+### Herramientas (Tooling)
 
-- Added SCSS testing via True to help test our utilities API and other customizations.
+- Se agregaron pruebas de SCSS a través de True para ayudar a probar nuestra API de utilidades y otras personalizaciones.
 
-- Replaced instances of our bootstrap-npm-starter project with the newer and more complete [twbs/examples repo](https://github.com/twbs/examples).
+- Se reemplazaron las instancias de nuestro proyecto bootstrap-npm-starter por el repositorio [twbs/examples repo](https://github.com/twbs/examples) más nuevo y completo.
 
 <hr class="mb-4"/>
 
-For a complete list of changes, [see the v5.3.0-alpha2 project on GitHub](https://github.com/orgs/twbs/projects/13).
+Para obtener una lista completa de los cambios, [consulta el proyecto v5.3.0-alpha2 en GitHub](https://github.com/orgs/twbs/projects/13).
 
 ## v5.3.0-alpha1
 
 <hr class="mb-4"/>
 
-### Color modes!
+### ¡Modos de color!
 
-Learn more by reading the new [color modes documentation]([[docsref:/customize/color-modes]]).
+Obtén más información leyendo la nueva [documentación de modos de color]([[docsref:/customize/color-modes]]).
 
-- **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
+- **Soporte global para modos de color claro (predeterminado) y oscuro.** Establece el modo de color globalmente en el elemento `:root`, en grupos de elementos y componentes con una clase contenedora, o directamente en componentes, con `data-bs-theme="light|dark"`. También se incluye un nuevo mixin `color-mode()` que puede generar un conjunto de reglas con el selector `data-bs-theme` o una media query, según tu preferencia.
 
-  <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Color modes replace dark variants for components, so  `.btn-close-white`, `.carousel-dark`, `.dropdown-menu-dark`, and `.navbar-dark` are deprecated.
+  <span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> Los modos de color reemplazan las variantes oscuras para los componentes, por lo que `.btn-close-white`, `.carousel-dark`, `.dropdown-menu-dark` y `.navbar-dark` están obsoletos.
 
-- **New extended color system.** We’ve added new theme colors (but not in `$theme-colors`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
+- **Nuevo sistema de color extendido.** Hemos agregado nuevos colores de tema (pero no en `$theme-colors`) para una paleta de colores más matizada en todo el sistema con nuevos colores secundarios, terciarios y de énfasis para `color` y `background-color`. Estos nuevos colores están disponibles como variables Sass, variables CSS y utilidades.
 
-- We’ve also expanded our theme color Sass variables, CSS variables, and utilities to include text emphasis, subtle background colors, and subtle border colors. These are available as Sass variables, CSS variables, and utilities.
+- También hemos ampliado nuestras variables Sass de color de tema, variables CSS y utilidades para incluir énfasis de texto, colores de fondo sutiles y colores de borde sutiles. Estos están disponibles como variables Sass, variables CSS y utilidades.
 
-- Adds new `_variables-dark.scss` stylesheet to house dark-mode specific overrides. This stylesheet should be imported immediately after the existing `_variables.scss` file in your import stack.
+- Agrega la nueva hoja de estilo `_variables-dark.scss` para albergar anulaciones específicas del modo oscuro. Esta hoja de estilo debe importarse inmediatamente después del archivo `_variables.scss` existente en tu pila de importación.
 
   ```diff
   diff --git a/scss/bootstrap.scss b/scss/bootstrap.scss
@@ -134,137 +134,137 @@ Learn more by reading the new [color modes documentation]([[docsref:/customize/c
    @import "utilities";
   ```
 
-### CSS variables
+### Variables CSS
 
-- Restores CSS variables for breakpoints, though we don’t use them in our media queries as they’re not supported. However, these can be useful in JS-specific contexts.
+- Restaura variables CSS para puntos de interrupción, aunque no las usamos en nuestras media queries porque no son compatibles. Sin embargo, estas pueden ser útiles en contextos específicos de JS.
 
-- Per the color modes update, we’ve added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
+- De acuerdo con la actualización de los modos de color, hemos agregado nuevas utilidades para las nuevas variables CSS Sass de colores de texto y fondo `secondary` y `tertiary`, además de `{color}-bg-subtle`, `{color}-border-subtle` y `{color}-text-emphasis` para nuestros colores de tema. Estos nuevos colores están disponibles a través de variables Sass y CSS (pero no de nuestros mapas de colores) con el objetivo expreso de facilitar la personalización en múltiples modos de colores, como claro y oscuro.
 
-- Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.
+- Agrega variables adicionales para alertas, `.btn-close` y `.offcanvas`.
 
-- The `--bs-heading-color` variable is back with an update and dark mode support. First, we now check for a `null` value on the associated Sass variable, `$headings-color`, before trying to output the CSS variable, so by default it’s not present in our compiled CSS. Second, we use the CSS variable with a fallback value, `inherit`, allowing the original behavior to persist, but also allowing for overrides.
+- La variable `--bs-heading-color` regresa con una actualización y soporte para modo oscuro. Primero, ahora verificamos un valor `null` en la variable Sass asociada, `$headings-color`, antes de intentar generar la variable CSS, por lo que de manera predeterminada no está presente en nuestro CSS compilado. Segundo, usamos la variable CSS con un valor de respaldo, `inherit`, lo que permite que el comportamiento original persista, pero también permite anulaciones.
 
-- Converts links to use CSS variables for styling `color`, but not `text-decoration`. Colors are now set with `--bs-link-color-rgb` and `--bs-link-opacity` as `rgba()` color, allowing you to customize the translucency with ease. The `a:hover` pseudo-class now overrides `--bs-link-color-rgb` instead of explicitly setting the `color` property.
+- Convierte los enlaces para usar variables CSS para diseñar el `color`, pero no la `text-decoration`. Los colores ahora se configuran con `--bs-link-color-rgb` and `--bs-link-opacity` como color `rgba()`, lo que te permite personalizar la translucidez con facilidad. La pseudo-clase `a:hover` ahora anula `--bs-link-color-rgb` en lugar de establecer explícitamente la propiedad `color`.
 
-- `--bs-border-width` is now being used in more components for greater control over default global styling.
+- `--bs-border-width` ahora se usa en más componentes para un mayor control sobre el estilo global predeterminado.
 
-- Adds new root CSS variables for our `box-shadow`s, including `--bs-box-shadow`, `--bs-box-shadow-sm`, `--bs-box-shadow-lg`, and `--bs-box-shadow-inset`.
+- Agrega nuevas variables CSS de root para nuestras `box-shadow`s, incluyendo `--bs-box-shadow`, `--bs-box-shadow-sm`, `--bs-box-shadow-lg` y `--bs-box-shadow-inset`.
 
-### Components
+### Componentes
 
-#### Alert
+#### Alerta (Alert)
 
-- Alert variants are now styled via CSS variables.
+- Las variantes de alerta ahora tienen estilos a través de variables CSS.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `alert-variant()` mixin is now deprecated. We now [use a Sass loop]([[docsref:/components/alerts#sass-loops]]) directly to modify the component’s default CSS variables for each variant.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> El mixin `alert-variant()` ahora está obsoleto. Ahora [usamos un bucle Sass]([[docsref:/components/alerts#sass-loops]]) directamente para modificar las variables CSS predeterminadas del componente para cada variante.
 
-#### List group
+#### Grupo de lista (List group)
 
-- List group item variants are now styled via CSS variables.
+- Las variantes de elementos de grupos de lista ahora tienen estilos a través de variables CSS.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `list-group-item-variant()` mixin is now deprecated. We now [use a Sass loop]([[docsref:/components/list-group#sass-loops]]) directly to modify the component’s default CSS variables for each variant.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> El mixin `list-group-item-variant()` ahora está obsoleto. Ahora [usamos un bucle Sass]([[docsref:/components/list-group#sass-loops]]) directamente para modificar las variables CSS predeterminadas del componente para cada variante.
 
-#### Dropdowns
+#### Menús desplegables (Dropdowns)
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.dropdown-menu-dark` class has been deprecated and replaced with `data-bs-theme="dark"` on the dropdown or any parent element. [See the docs for an example.]([[docsref:/components/dropdowns#dark-dropdowns]])
+- <span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> La clase `.dropdown-menu-dark` ha quedado obsoleta y ha sido reemplazada por `data-bs-theme="dark"` en el dropdown o en cualquier elemento padre. [Consulta la documentación para ver un ejemplo.]([[docsref:/components/dropdowns#dark-dropdowns]])
 
-#### Close button
+#### Botón de cierre (Close button)
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.btn-close-white` class has been deprecated and replaced with `data-bs-theme="dark"` on the close button or any parent element. [See the docs for an example.]([[docsref:/components/close-button#dark-variant]])
+- <span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> La clase `.btn-close-white` ha quedado obsoleta y ha sido reemplazada por `data-bs-theme="dark"` en el botón de cierre o en cualquier elemento padre. [Consulta la documentación para ver un ejemplo.]([[docsref:/components/close-button#dark-variant]])
 
-#### Navbar
+#### Barra de navegación (Navbar)
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.navbar-dark` class has been deprecated and replaced with `data-bs-theme="dark"` on the navbar or any parent element. [See the docs for updated examples.]([[docsref:/components/navbar#color-schemes]])
+- <span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> La clase `.navbar-dark` ha quedado obsoleta y ha sido reemplazada por `data-bs-theme="dark"` en la barra de navegación o en cualquier elemento padre. [Consulta la documentación para ver ejemplos actualizados.]([[docsref:/components/navbar#color-schemes]])
 
-### Progress bars
+### Barras de progreso (Progress bars)
 
-The markup for [progress bars]([[docsref:/components/progress]]) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
+El marcado para las [barras de progreso]([[docsref:/components/progress]]) se actualizó en v5.3.0. Debido a la ubicación de `role` y varios atributos `aria-` en el elemento interno `.progress-bar`, **algunos lectores de pantalla no anunciaban barras de progreso de valor cero**. Ahora, `role="progressbar"` y los atributos `aria-*` relevantes están en el elemento externo `.progress`, dejando la `.progress-bar` puramente para la presentación visual de la barra y la etiqueta opcional.
 
-While we recommend adopting the new markup for improved compatibility with all screen readers, note that the legacy progress bar structure will continue to work as before.
+Si bien recomendamos adoptar el nuevo marcado para una mejor compatibilidad con todos los lectores de pantalla, ten en cuenta que la estructura de barra de progreso heredada continuará funcionando como antes.
 
 ```html
-<!-- Previous markup -->
+<!-- Marcado anterior -->
 <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-label="Basic example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar" role="progressbar" aria-label="Ejemplo básico" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
-<!-- New markup -->
-<div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+<!-- Marcado nuevo -->
+<div class="progress" role="progressbar" aria-label="Ejemplo básico" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
   <div class="progress-bar" style="width: 25%"></div>
 </div>
 ```
 
-We’ve also introduced a new `.progress-stacked` class to more logically wrap [multiple progress bars]([[docsref:/components/progress#multiple-bars]]) into a single stacked progress bar.
+También hemos introducido una nueva clase `.progress-stacked` para envolver de forma más lógica [múltiples barras de progreso]([[docsref:/components/progress#multiple-bars]]) en una sola barra de progreso apilada.
 
 ```html
-<!-- Previous markup -->
+<!-- Marcado anterior -->
 <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-label="Segment one" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-success" role="progressbar" aria-label="Segment two" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-  <div class="progress-bar bg-info" role="progressbar" aria-label="Segment three" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar" role="progressbar" aria-label="Segmento uno" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" aria-label="Segmento dos" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-info" role="progressbar" aria-label="Segmento tres" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
-<!-- New markup -->
+<!-- Marcado nuevo -->
 <div class="progress-stacked">
-  <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+  <div class="progress" role="progressbar" aria-label="Segmento uno" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
     <div class="progress-bar"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+  <div class="progress" role="progressbar" aria-label="Segmento dos" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
     <div class="progress-bar bg-success"></div>
   </div>
-  <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+  <div class="progress" role="progressbar" aria-label="Segmento tres" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
     <div class="progress-bar bg-info"></div>
   </div>
 </div>
 ```
 
-### Forms
+### Formularios
 
-- `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
+- `.form-control` ahora tiene estilos con variables CSS para admitir modos de color. Esto incluye la adición de dos nuevas variables CSS de root para los fondos de control de formulario predeterminados y deshabilitados.
 
-- `.form-check` and `.form-switch` components are now built with CSS variables for setting the `background-image`. The usage here differs from other components in that the various focus, active, etc states for each component aren’t set on the base class. Instead, the states override one variable (e.g., `--bs-form-switch-bg`).
+- Los componentes `.form-check` y `.form-switch` ahora se crean con variables CSS para establecer la `background-image`. El uso aquí difiere de otros componentes en que los distintos estados de enfoque, activo, etc. para cada componente no se establecen en la clase base. En su lugar, los estados anulan una variable (por ejemplo, `--bs-form-switch-bg`).
 
-- Floating form labels now have a `background-color` to fix support for `<textarea>` elements. Additional changes have been made to also support disabled states and more.
+- Las etiquetas de formulario flotantes ahora tienen un `background-color` para corregir el soporte para los elementos `<textarea>`. Se han realizado cambios adicionales para admitir también estados deshabilitados y más.
 
-- Fixed display of date and time inputs in WebKit based browsers.
+- Se corrigió la visualización de entradas de fecha y hora en navegadores basados en WebKit.
 
-### Utilities
+### Utilidades
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> `.text-muted` will be replaced by `.text-body-secondary` in v6.
+- <span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> `.text-muted` será reemplazado por `.text-body-secondary` en v6.
 
-  With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+  Con la adición de los colores y variables de tema ampliados, las variables y la utilidad `.text-muted` han quedado obsoletas en v5.3.0. Su valor predeterminado también se reasignó a la nueva variable CSS `--bs-secondary-color` para admitir mejor los modos de color. Se eliminará en v6.0.0.
 
-- Adds new `.overflow-x`, `.overflow-y`, and several `.object-fit-*` utilities. _The object-fit property is used to specify how an `<img>` or `<video>` should be resized to fit its container, giving us a responsive alternative to using `background-image` for a resizable fill/fit image._
+- Agrega nuevas utilidades `.overflow-x`, `.overflow-y` y varias utilidades `.object-fit-*`. _La propiedad object-fit se utiliza para especificar cómo se debe redimensionar un `<img>` o `<video>` para adaptarse a su contenedor, lo que nos brinda una alternativa adaptable al uso de `background-image` para una imagen de relleno/ajuste redimensionable._
 
-- Adds new `.fw-medium` utility.
+- Agrega la nueva utilidad `.fw-medium`.
 
-- Added new [`.z-*` utilities]([[docsref:/utilities/z-index]]) for `z-index`.
+- Se agregaron nuevas [utilidades `.z-*`]([[docsref:/utilities/z-index]]) para `z-index`.
 
-- [Box shadow utilities]([[docsref:/utilities/shadows]]) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
+- Las [utilidades de sombra de caja (box shadow)]([[docsref:/utilities/shadows]]) (y las variables Sass) se han actualizado para el modo oscuro. Ahora usan `--bs-body-color-rgb` para generar los valores de color `rgba()`, lo que les permite adaptarse fácilmente a los modos de color según el color de primer plano especificado.
 
-For a complete list of changes, [see the v5.3.0 project on GitHub](https://github.com/twbs/bootstrap/projects/).
+Para obtener una lista completa de los cambios, [consulta el proyecto v5.3.0 en GitHub](https://github.com/twbs/bootstrap/projects/).
 
 ## v5.2.0
 
 <hr class="mb-4"/>
 
-### Refreshed design
+### Diseño renovado
 
-Bootstrap v5.2.0 features a subtle design update for a handful of components and properties across the project, **most notably through refined `border-radius` values on buttons and form controls**. Our documentation also has been updated with a new homepage, simpler docs layout that no longer collapses sections of the sidebar, and more prominent examples of [Bootstrap Icons](https://icons.getbootstrap.com).
+Bootstrap v5.2.0 presenta una sutil actualización de diseño para un puñado de componentes y propiedades en todo el proyecto, **sobre todo a través de valores refinados de `border-radius` en botones y controles de formulario**. Nuestra documentación también se ha actualizado con una nueva página de inicio, un diseño de documentación más simple que ya no colapsa las secciones de la barra lateral y ejemplos más destacados de [Bootstrap Icons](https://icons.getbootstrap.com).
 
-### More CSS variables
+### Más variables CSS
 
-**We’ve updated all our components to use CSS variables.** While Sass still underpins everything, each component has been updated to include CSS variables on the component base classes (e.g., `.btn`), allowing for more real-time customization of Bootstrap. In subsequent releases, we'll continue to expand our use of CSS variables into our layout, forms, helpers, and utilities. Read more about CSS variables in each component on their respective documentation pages.
+**Hemos actualizado todos nuestros componentes para usar variables CSS.** Si bien Sass sigue siendo la base de todo, cada componente se ha actualizado para incluir variables CSS en las clases base del componente (por ejemplo, `.btn`), lo que permite una personalización de Bootstrap en tiempo real. En versiones posteriores, continuaremos expandiendo nuestro uso de variables CSS en nuestros diseños, formularios, ayudantes y utilidades. Lee más sobre las variables CSS en cada componente en sus respectivas páginas de documentación.
 
-Our CSS variable usage will be somewhat incomplete until Bootstrap 6. While we’d love to fully implement these across the board, they do run the risk of causing breaking changes. For example, setting `$alert-border-width: var(--bs-border-width)` in our source code breaks potential Sass in your own code if you were doing `$alert-border-width * 2` for some reason.
+El uso de nuestras variables CSS estará algo incompleto hasta Bootstrap 6. Si bien nos encantaría implementarlas por completo en todos los ámbitos, corren el riesgo de causar cambios importantes. Por ejemplo, configurar `$alert-border-width: var(--bs-border-width)` en nuestro código fuente rompe el Sass potencial en tu propio código si estabas haciendo `$alert-border-width * 2` por alguna razón.
 
-As such, wherever possible, we will continue to push towards more CSS variables, but please recognize our implementation may be slightly limited in v5.
+Como tal, siempre que sea posible, continuaremos presionando hacia más variables CSS, pero reconoce que nuestra implementación puede estar ligeramente limitada en v5.
 
-### New `_maps.scss`
+### Nuevo `_maps.scss`
 
-**Bootstrap v5.2.0 introduced a new Sass file with `_maps.scss`.** It pulls out several Sass maps from `_variables.scss` to fix an issue where updates to an original map were not applied to secondary maps that extend them. For example, updates to `$theme-colors` were not being applied to other theme maps that relied on `$theme-colors`, breaking key customization workflows. In short, Sass has a limitation where once a default variable or map has been _used_, it cannot be updated. _There’s a similar shortcoming with CSS variables when they’re used to compose other CSS variables._
+**Bootstrap v5.2.0 introdujo un nuevo archivo Sass con `_maps.scss`.** Extrae varios mapas Sass de `_variables.scss` para solucionar un problema por el cual las actualizaciones de un mapa original no se aplicaban a los mapas secundarios que los extienden. Por ejemplo, las actualizaciones de `$theme-colors` no se aplicaban a otros mapas de temas que dependían de `$theme-colors`, lo que rompía los flujos de trabajo de personalización clave. En resumen, Sass tiene una limitación por la cual, una vez que se ha *utilizado* una variable o un mapa predeterminado, no se puede actualizar. _Existe una deficiencia similar con las variables CSS cuando se usan para componer otras variables CSS._
 
-This is why variable customizations in Bootstrap have to come after `@import "functions"`, but before `@import "variables"` and the rest of our import stack. The same applies to Sass maps—you must override the defaults before they get used. The following maps have been moved to the new `_maps.scss`:
+Es por eso que las personalizaciones de variables en Bootstrap deben realizarse después de `@import "functions"`, pero antes de `@import "variables"` y el resto de nuestra pila de importación. Lo mismo se aplica a los mapas Sass: debes anular los valores predeterminados antes de usarlos. Los siguientes mapas se han movido al nuevo `_maps.scss`:
 
 - `$theme-colors-rgb`
 - `$utilities-colors`
@@ -275,28 +275,28 @@ This is why variable customizations in Bootstrap have to come after `@import "fu
 - `$negative-spacers`
 - `$gutters`
 
-Your custom Bootstrap CSS builds should now look something like this with a separate maps import.
+Tus compilaciones personalizadas de CSS de Bootstrap ahora deberían verse así con una importación de mapas separada.
 
 ```diff
-  // Functions come first
+  // Las funciones van primero
   @import "functions";
 
-  // Optional variable overrides here
+  // Anulaciones de variables opcionales aquí
 + $custom-color: #df711b;
 + $custom-theme-colors: (
 +   "custom": $custom-color
 + );
 
-  // Variables come next
+  // Las variables vienen a continuación
   @import "variables";
 
-+ // Optional Sass map overrides here
++ // Anulaciones de mapas Sass opcionales aquí
 + $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 +
-+ // Followed by our default maps
++ // Seguido por nuestros mapas predeterminados
 + @import "maps";
 +
-  // Rest of our imports
+  // El resto de nuestras importaciones
   @import "mixins";
   @import "utilities";
   @import "root";
@@ -304,441 +304,441 @@ Your custom Bootstrap CSS builds should now look something like this with a sepa
   // etc
 ```
 
-### New utilities
+### Nuevas utilidades
 
-- Expanded [`font-weight` utilities]([[docsref:/utilities/text#font-weight-and-italics]]) to include `.fw-semibold` for semibold fonts.
-- Expanded [`border-radius` utilities]([[docsref:/utilities/borders#sizes]]) to include two new sizes, `.rounded-4` and `.rounded-5`, for more options.
+- Se ampliaron las [utilidades `font-weight`]([[docsref:/utilities/text#font-weight-and-italics]]) para incluir `.fw-semibold` para fuentes seminegritas.
+- Se ampliaron las [utilidades de radio de borde (`border-radius`)]([[docsref:/utilities/borders#sizes]]) para incluir dos nuevos tamaños, `.rounded-4` y `.rounded-5`, para más opciones.
 
-### Additional changes
+### Cambios adicionales
 
-- **Introduced new `$enable-container-classes` option. —** Now when opting into the experimental CSS Grid layout, `.container-*` classes will still be compiled, unless this option is set to `false`. Containers also now keep their gutter values.
+- **Se introdujo la nueva opción `$enable-container-classes`. —** Ahora, al optar por el diseño experimental de CSS Grid, las clases `.container-*` aún se compilarán, a menos que esta opción se establezca en `false`. Los contenedores ahora también mantienen sus valores de canaletas (gutters).
 
-- **Offcanvas component now has [responsive variations]([[docsref:/components/offcanvas#responsive]]).** The original `.offcanvas` class remains unchanged—it hides content across all viewports. To make it responsive, change that `.offcanvas` class to any `.offcanvas-{sm|md|lg|xl|xxl}` class.
+- **El componente Offcanvas ahora tiene [variantes responsivas]([[docsref:/components/offcanvas#responsive]]).** La clase `.offcanvas` original permanece sin cambios: oculta el contenido en todas las ventanas gráficas. Para que sea responsivo, cambia esa clase `.offcanvas` por cualquier clase `.offcanvas-{sm|md|lg|xl|xxl}`.
 
-- **Thicker table dividers are now opt-in. —** We’ve removed the thicker and more difficult to override border between table groups and moved it to an optional class you can apply, `.table-group-divider`. [See the table docs for an example.]([[docsref:/content/tables#table-group-dividers]])
+- **Los divisores de tabla más gruesos ahora son opcionales. —** Eliminamos el borde más grueso y difícil de anular entre grupos de tablas y lo movimos a una clase opcional que puedes aplicar, `.table-group-divider`. [Consulta la documentación de tablas para ver un ejemplo.]([[docsref:/content/tables#table-group-dividers]])
 
-- **[Scrollspy has been rewritten](https://github.com/twbs/bootstrap/pull/33421) to use the Intersection Observer API**, which means you no longer need relative parent wrappers, deprecates `offset` config, and more. Look for your Scrollspy implementations to be more accurate and consistent in their nav highlighting.
+- **[Scrollspy ha sido reescrito](https://github.com/twbs/bootstrap/pull/33421) para usar la API Intersection Observer**, lo que significa que ya no necesitas contenedores primarios relativos, deja obsoleta la configuración `offset` y más. Espera que tus implementaciones de Scrollspy sean más precisas y consistentes en su resaltado de navegación.
 
-- **Popovers and tooltips now use CSS variables.** Some CSS variables have been updated from their Sass counterparts to reduce the number of variables. As a result, three variables have been deprecated in this release: `$popover-arrow-color`, `$popover-arrow-outer-color`, and `$tooltip-arrow-color`.
+- **Los popovers y tooltips ahora usan variables CSS.** Algunas variables CSS se actualizaron a partir de sus contrapartes Sass para reducir la cantidad de variables. Como resultado, tres variables quedaron obsoletas en esta versión: `$popover-arrow-color`, `$popover-arrow-outer-color` y `$tooltip-arrow-color`.
 
-- **Added new `.text-bg-{color}` helpers.** Instead of setting individual `.text-*` and `.bg-*` utilities, you can now use [the `.text-bg-*` helpers]([[docsref:helpers/color-background]]) to set a `background-color` with contrasting foreground `color`.
+- **Se agregaron nuevos ayudantes `.text-bg-{color}`.** En lugar de configurar utilidades individuales `.text-*` y `.bg-*`, ahora puedes usar [los ayudantes `.text-bg-*`]([[docsref:helpers/color-background]]) para configurar un `background-color` con un `color` de primer plano contrastante.
 
-- Added `.form-check-reverse` modifier to flip the order of labels and associated checkboxes/radios.
+- Se agregó el modificador `.form-check-reverse` para invertir el orden de las etiquetas y las casillas de verificación/radios asociados.
 
-- Added [striped columns]([[docsref:/content/tables#striped-columns]]) support to tables via the new `.table-striped-columns` class.
+- Se agregó soporte para [columnas rayadas]([[docsref:/content/tables#striped-columns]]) a las tablas a través de la nueva clase `.table-striped-columns`.
 
-For a complete list of changes, [see the v5.2.0 project on GitHub](https://github.com/twbs/bootstrap/projects/32).
+Para obtener una lista completa de los cambios, [consulta el proyecto v5.2.0 en GitHub](https://github.com/twbs/bootstrap/projects/32).
 
 ## v5.1.0
 
 <hr class="mb-4"/>
 
-- **Added experimental support for [CSS Grid layout]([[docsref:/layout/css-grid]]). —** This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`.
+- **Se agregó soporte experimental para [diseño CSS Grid]([[docsref:/layout/css-grid]]). —** Este es un trabajo en progreso y aún no está listo para su uso en producción, pero puedes optar por la nueva función a través de Sass. Para habilitarlo, deshabilita la cuadrícula predeterminada configurando `$enable-grid-classes: false` y habilita la cuadrícula CSS configurando `$enable-cssgrid: true`.
 
-- **Updated navbars to support offcanvas. —** Add [offcanvas drawers in any navbar]([[docsref:/components/navbar#offcanvas]]) with the responsive `.navbar-expand-*` classes and some offcanvas markup.
+- **Barras de navegación actualizadas para admitir offcanvas. —** Agrega [cajones offcanvas en cualquier barra de navegación]([[docsref:/components/navbar#offcanvas]]) con las clases responsivas `.navbar-expand-*` y algo de marcado offcanvas.
 
-- **Added new [placeholder component]([[docsref:/components/placeholders/]]). —** Our newest component, a way to provide temporary blocks in lieu of real content to help indicate that something is still loading in your site or app.
+- **Se agregó un nuevo [componente de marcador de posición (placeholder)]([[docsref:/components/placeholders/]]). —** Nuestro componente más nuevo, una forma de proporcionar bloques temporales en lugar de contenido real para ayudar a indicar que algo todavía se está cargando en tu sitio o aplicación.
 
-- **Collapse plugin now supports [horizontal collapsing]([[docsref:/components/collapse#horizontal]]). —** Add `.collapse-horizontal` to your `.collapse` to collapse the `width` instead of the `height`. Avoid browser repainting by setting a `min-height` or `height`.
+- **El complemento Collapse ahora admite [despliegue horizontal]([[docsref:/components/collapse#horizontal]]). —** Agrega `.collapse-horizontal` a tu `.collapse` para contraer el ancho (`width`) en lugar de la altura (`height`). Evita que el navegador tenga que volver a pintar (repainting) estableciendo un `min-height` o `height`.
 
-- **Added new stack and vertical rule helpers. —** Quickly apply multiple flexbox properties to quickly create custom layouts with [stacks]([[docsref:/helpers/stacks/]]). Choose from horizontal (`.hstack`) and vertical (`.vstack`) stacks. Add vertical dividers similar to `<hr>` elements with the [new `.vr` helpers]([[docsref:/helpers/vertical-rule/]]).
+- **Se agregaron nuevos ayudantes de pila (stack) y regla vertical. —** Aplica rápidamente múltiples propiedades de flexbox para crear diseños personalizados rápidamente con [pilas (stacks)]([[docsref:/helpers/stacks/]]). Elige entre pilas horizontales (`.hstack`) y verticales (`.vstack`). Agrega divisores verticales similares a los elementos `<hr>` con los [nuevos ayudantes `.vr`]([[docsref:/helpers/vertical-rule/]]).
 
-- **Added new global `:root` CSS variables. —** Added several new CSS variables to the `:root` level for controlling `<body>` styles. More are in the works, including across our utilities and components, but for now read up [CSS variables in the Customize section]([[docsref:/customize/css-variables/]]).
+- **Se agregaron nuevas variables CSS globales `:root`. —** Se agregaron varias variables CSS nuevas al nivel `:root` para controlar los estilos del `<body>`. Hay más en camino, incluso en nuestras utilidades y componentes, pero por ahora lee sobre las [variables CSS en la sección Personalizar]([[docsref:/customize/css-variables/]]).
 
-- **Overhauled color and background utilities to use CSS variables, and added new [text opacity]([[docsref:/utilities/text#opacity]]) and [background opacity]([[docsref:/utilities/background#opacity]]) utilities. —** `.text-*` and `.bg-*` utilities are now built with CSS variables and `rgba()` color values, allowing you to easily customize any utility with new opacity utilities.
+- **Se revisaron las utilidades de color y fondo para usar variables CSS, y se agregaron nuevas utilidades de [opacidad del texto]([[docsref:/utilities/text#opacity]]) y [opacidad de fondo]([[docsref:/utilities/background#opacity]]). —** Las utilidades `.text-*` y `.bg-*` ahora se crean con variables CSS y valores de color `rgba()`, lo que te permite personalizar fácilmente cualquier utilidad con nuevas utilidades de opacidad.
 
-- **Added new snippet examples based to show how to customize our components. —** Pull ready to use customized components and other common design patterns with our new [Snippets examples]([[docsref:/examples/#snippets]]). Includes [footers]([[docsref:/examples/footers/]]), [dropdowns]([[docsref:/examples/dropdowns/]]), [list groups]([[docsref:/examples/list-groups/]]), and [modals]([[docsref:/examples/modals/]]).
+- **Se agregaron nuevos ejemplos de fragmentos (snippets) para mostrar cómo personalizar nuestros componentes. —** Extrae componentes personalizados listos para usar y otros patrones de diseño comunes con nuestros nuevos [ejemplos de fragmentos (snippets)]([[docsref:/examples/#snippets]]). Incluye [pies de página]([[docsref:/examples/footers/]]), [menús desplegables]([[docsref:/examples/dropdowns/]]), [grupos de listas]([[docsref:/examples/list-groups/]]) y [modales]([[docsref:/examples/modals/]]).
 
-- **Removed unused positioning styles from popovers and tooltips** as these are handled solely by Popper. `$tooltip-margin` has been deprecated and set to `null` in the process.
+- **Se eliminaron los estilos de posicionamiento no utilizados de los popovers y tooltips** ya que Popper los maneja únicamente. `$tooltip-margin` quedó obsoleto y se estableció en `null` en el proceso.
 
-Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/)
+¿Quieres más información? [Lee la publicación del blog de v5.1.0.](https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/)
 
 ## v5.0.0
 
 <hr class="mb-4"/>
 
 <Callout>
-**Hey there!** Changes to our first major release of Bootstrap 5, v5.0.0, are documented below. They don’t reflect the additional changes shown above.
+**¡Hola!** Los cambios de nuestra primera versión principal de Bootstrap 5, v5.0.0, se documentan a continuación. No reflejan los cambios adicionales que se muestran arriba.
 </Callout>
 
-### Dependencies
+### Dependencias
 
-- Dropped jQuery.
-- Upgraded from Popper v1.x to Popper v2.x.
-- Replaced Libsass with Dart Sass as our Sass compiler given Libsass was deprecated.
-- Migrated from Jekyll to Hugo for building our documentation
+- Se eliminó jQuery.
+- Se actualizó de Popper v1.x a Popper v2.x.
+- Se reemplazó Libsass con Dart Sass como nuestro compilador de Sass dado que Libsass estaba obsoleto.
+- Se migró de Jekyll a Hugo para la construcción de nuestra documentación.
 
-### Browser support
+### Soporte de navegadores
 
-- Dropped Internet Explorer 10 and 11
-- Dropped Microsoft Edge < 16 (Legacy Edge)
-- Dropped Firefox < 60
-- Dropped Safari < 12
-- Dropped iOS Safari < 12
-- Dropped Chrome < 60
+- Se eliminó Internet Explorer 10 y 11.
+- Se eliminó Microsoft Edge < 16 (Edge heredado).
+- Se eliminó Firefox < 60.
+- Se eliminó Safari < 12.
+- Se eliminó iOS Safari < 12.
+- Se eliminó Chrome < 60.
 
 <hr class="my-5"/>
 
-### Documentation changes
+### Cambios en la documentación
 
-- Redesigned homepage, docs layout, and footer.
-- Added [new Parcel guide]([[docsref:/getting-started/parcel]]).
-- Added [new Customize section]([[docsref:/customize/overview/]]), replacing [v4’s Theming page](https://getbootstrap.com/docs/4.6/getting-started/theming/), with new details on Sass, global configuration options, color schemes, CSS variables, and more.
-- Reorganized all form documentation into [new Forms section]([[docsref:/forms/overview/]]), breaking apart the content into more focused pages.
-- Similarly, updated [the Layout section]([[docsref:/layout/breakpoints]]), to flesh out grid content more clearly.
-- Renamed “Navs” component page to "Navs & Tabs".
-- Renamed “Checks” page to "Checks & radios".
-- Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.
-- Added new keyboard shortcut for the search field: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.
+- Se rediseñó la página de inicio, el diseño de la documentación y el pie de página.
+- Se agregó una [nueva guía de Parcel]([[docsref:/getting-started/parcel]]).
+- Se agregó una [nueva sección Personalizar]([[docsref:/customize/overview/]]), que reemplaza la [página de temas de la v4](https://getbootstrap.com/docs/4.6/getting-started/theming/), con nuevos detalles sobre Sass, opciones de configuración global, esquemas de color, variables CSS y más.
+- Se reorganizó toda la documentación de formularios en la [nueva sección Formularios]([[docsref:/forms/overview/]]), dividiendo el contenido en páginas más enfocadas.
+- De manera similar, se actualizó la [sección Diseño]([[docsref:/layout/breakpoints]]) para desarrollar el contenido de la cuadrícula con mayor claridad.
+- Se cambió el nombre de la página del componente "Navs" a "Navs y pestañas (Navs & Tabs)".
+- Se cambió el nombre de la página "Checks" a "Checks y radios".
+- Se rediseñó la barra de navegación y se agregó una nueva subnavegación para facilitar el desplazamiento por nuestros sitios y versiones de documentación.
+- Se agregó un nuevo método abreviado de teclado para el campo de búsqueda: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.
 
 ### Sass
 
-- We’ve ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]([[docsref:/customize/sass#maps-and-loops]]).
+- Hemos descartado las combinaciones predeterminadas de mapas Sass para facilitar la eliminación de valores redundantes. Ten en cuenta que ahora debes definir todos los valores en los mapas Sass como `$theme-colors`. Descubre cómo lidiar con los [mapas Sass]([[docsref:/customize/sass#maps-and-loops]]).
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `color-yiq()` function and related variables to `color-contrast()` as it’s no longer related to YIQ color space. [See #30168.](https://github.com/twbs/bootstrap/pull/30168/)
-  - `$yiq-contrasted-threshold` is renamed to `$min-contrast-ratio`.
-  - `$yiq-text-dark` and `$yiq-text-light` are respectively renamed to `$color-contrast-dark` and `$color-contrast-light`.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la función `color-yiq()` y las variables relacionadas a `color-contrast()`, ya que ya no está relacionada con el espacio de color YIQ. [Ver #30168.](https://github.com/twbs/bootstrap/pull/30168/)
+  - `$yiq-contrasted-threshold` pasa a llamarse `$min-contrast-ratio`.
+  - `$yiq-text-dark` y `$yiq-text-light` pasan a llamarse respectivamente `$color-contrast-dark` y `$color-contrast-light`.
 
-- <span class="badge text-bg-danger">Breaking</span> Media query mixins parameters have changed for a more logical approach.
-  - `media-breakpoint-down()` uses the breakpoint itself instead of the next breakpoint (e.g., `media-breakpoint-down(lg)` instead of `media-breakpoint-down(md)` targets viewports smaller than `lg`).
-  - Similarly, the second parameter in `media-breakpoint-between()` also uses the breakpoint itself instead of the next breakpoint (e.g., `media-breakpoint-between(sm, lg)` instead of `media-breakpoint-between(sm, md)` targets viewports between `sm` and `lg`).
+- <span class="badge text-bg-danger">Crítico</span> Los parámetros de los mixins de media query han cambiado para lograr un enfoque más lógico.
+  - `media-breakpoint-down()` utiliza el punto de interrupción en sí en lugar del siguiente punto de interrupción (por ejemplo, `media-breakpoint-down(lg)` en lugar de `media-breakpoint-down(md)` se dirige a ventanas gráficas más pequeñas que `lg`).
+  - De manera similar, el segundo parámetro en `media-breakpoint-between()` también usa el punto de interrupción en sí en lugar del siguiente (por ejemplo, `media-breakpoint-between(sm, lg)` en lugar de `media-breakpoint-between(sm, md)` se dirige a ventanas gráficas entre `sm` y `lg`).
 
-- <span class="badge text-bg-danger">Breaking</span> Removed print styles and `$enable-print-styles` variable. Print display classes are still around. [See #28339](https://github.com/twbs/bootstrap/pull/28339).
+- <span class="badge text-bg-danger">Crítico</span> Se eliminaron los estilos de impresión y la variable `$enable-print-styles`. Las clases de visualización de impresión siguen existiendo. [Ver #28339](https://github.com/twbs/bootstrap/pull/28339).
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped `color()`, `theme-color()`, and `gray()` functions in favor of variables. [See #29083](https://github.com/twbs/bootstrap/pull/29083).
+- <span class="badge text-bg-danger">Crítico</span> Se eliminaron las funciones `color()`, `theme-color()` y `gray()` en favor de las variables. [Ver #29083](https://github.com/twbs/bootstrap/pull/29083).
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `theme-color-level()` function to `color-level()` and now accepts any color you want instead of only `$theme-color` colors. [See #29083](https://github.com/twbs/bootstrap/pull/29083) **Watch out:** `color-level()` was later on dropped in `v5.0.0-alpha3`.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la función `theme-color-level()` a `color-level()` y ahora acepta cualquier color que desees en lugar de solo los colores de `$theme-color`. [Ver #29083](https://github.com/twbs/bootstrap/pull/29083) **Ten cuidado:** `color-level()` se eliminó más adelante en la versión `v5.0.0-alpha3`.
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `$enable-prefers-reduced-motion-media-query` and `$enable-pointer-cursor-for-buttons` to `$enable-reduced-motion` and `$enable-button-pointers` for brevity.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de `$enable-prefers-reduced-motion-media-query` y `$enable-pointer-cursor-for-buttons` a `$enable-reduced-motion` y `$enable-button-pointers` para abreviar.
 
-- <span class="badge text-bg-danger">Breaking</span> Removed the `bg-gradient-variant()` mixin. Use the `.bg-gradient` class to add gradients to elements instead of the generated `.bg-gradient-*` classes.
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó el mixin `bg-gradient-variant()`. Usa la clase `.bg-gradient` para agregar degradados a los elementos en lugar de las clases `.bg-gradient-*` generadas.
 
-- <span class="badge text-bg-danger">Breaking</span> **Removed previously deprecated mixins:**
-  - `hover`, `hover-focus`, `plain-hover-focus`, and `hover-focus-active`
+- <span class="badge text-bg-danger">Crítico</span> **Se eliminaron mixins previamente obsoletos:**
+  - `hover`, `hover-focus`, `plain-hover-focus` y `hover-focus-active`
   - `float()`
   - `form-control-mixin()`
   - `nav-divider()`
   - `retina-img()`
-  - `text-hide()` (also dropped the associated utility class, `.text-hide`)
+  - `text-hide()` (también se eliminó la clase de utilidad asociada, `.text-hide`)
   - `visibility()`
   - `form-control-focus()`
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `scale-color()` function to `shift-color()` to avoid collision with Sass’s own color scaling function.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la función `scale-color()` a `shift-color()` para evitar colisiones con la propia función de escalado de color de Sass.
 
-- `box-shadow` mixins now allow `null` values and drop `none` from multiple arguments. [See #30394](https://github.com/twbs/bootstrap/pull/30394).
+- Los mixins `box-shadow` ahora permiten valores `null` y descartan `none` de múltiples argumentos. [Ver #30394](https://github.com/twbs/bootstrap/pull/30394).
 
-- The `border-radius()` mixin now has a default value.
+- El mixin `border-radius()` ahora tiene un valor predeterminado.
 
-### Color system
+### Sistema de color
 
-- The color system which worked with `color-level()` and `$theme-color-interval` was removed in favor of a new color system. All `lighten()` and `darken()` functions in our codebase are replaced by `tint-color()` and `shade-color()`. These functions will mix the color with either white or black instead of changing its lightness by a fixed amount. The `shift-color()` will either tint or shade a color depending on whether its weight parameter is positive or negative. [See #30622](https://github.com/twbs/bootstrap/pull/30622) for more details.
+- El sistema de color que funcionaba con `color-level()` y `$theme-color-interval` se eliminó en favor de un nuevo sistema de color. Todas las funciones `lighten()` y `darken()` en nuestro código base se reemplazan por `tint-color()` y `shade-color()`. Estas funciones mezclarán el color con blanco o negro en lugar de cambiar su luminosidad en una cantidad fija. El `shift-color()` aplicará tinte o sombra a un color dependiendo de si su parámetro de peso es positivo o negativo. Consulta [el PR #30622](https://github.com/twbs/bootstrap/pull/30622) para obtener más detalles.
 
-- Added new tints and shades for every color, providing nine separate colors for each base color, as new Sass variables.
+- Se agregaron nuevos tintes y sombras para cada color, proporcionando nueve colores separados para cada color base, como nuevas variables Sass.
 
-- Improved color contrast. Bumped color contrast ratio from 3:1 to 4.5:1 and updated blue, green, cyan, and pink colors to ensure WCAG 2.2 AA contrast. Also changed our color contrast color from `$gray-900` to `$black`.
+- Contraste de color mejorado. Se aumentó la relación de contraste de color de 3:1 a 4.5:1 y se actualizaron los colores azul, verde, cian y rosa para garantizar el contraste WCAG 2.2 AA. También cambiamos nuestro color de contraste de color de `$gray-900` a `$black`.
 
-- To support our color system, we’ve added new custom `tint-color()` and `shade-color()` functions to mix our colors appropriately.
+- Para respaldar nuestro sistema de colores, agregamos nuevas funciones personalizadas `tint-color()` y `shade-color()` para mezclar nuestros colores adecuadamente.
 
-### Grid updates
+### Actualizaciones de cuadrícula (Grid updates)
 
-- **New breakpoint!** Added new `xxl` breakpoint for `1400px` and up. No changes to all other breakpoints.
+- **¡Nuevo punto de interrupción!** Se agregó un nuevo punto de interrupción `xxl` para `1400px` y superior. Sin cambios en todos los demás puntos de interrupción.
 
-- **Improved gutters.** Gutters are now set in rems, and are narrower than v4 (`1.5rem`, or about `24px`, down from `30px`). This aligns our grid system’s gutters with our spacing utilities.
-  - Added new [gutter class]([[docsref:/layout/gutters]]) (`.g-*`, `.gx-*`, and `.gy-*`) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.
-  - <span class="badge text-bg-danger">Breaking</span> Renamed `.no-gutters` to `.g-0` to match new gutter utilities.
+- **Canaletas (gutters) mejoradas.** Las canaletas ahora se establecen en rems y son más estrechas que en la v4 (`1.5rem`, o aproximadamente `24px`, por debajo de `30px`). Esto alinea las canaletas de nuestro sistema de cuadrícula con nuestras utilidades de espaciado.
+  - Se agregó una nueva [clase de canaleta]([[docsref:/layout/gutters]]) (`.g-*`, `.gx-*` y `.gy-*`) para controlar las canaletas horizontales/verticales, las canaletas horizontales y las canaletas verticales.
+  - <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de `.no-gutters` a `.g-0` para coincidir con las nuevas utilidades de canaletas.
 
-- Columns no longer have `position: relative` applied, so you may have to add `.position-relative` to some elements to restore that behavior.
+- A las columnas ya no se les aplica `position: relative`, por lo que es posible que debas agregar `.position-relative` a algunos elementos para restaurar ese comportamiento.
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-0` to `.order-5` out of the box.
+- <span class="badge text-bg-danger">Crítico</span> Se eliminaron varias clases `.order-*` que a menudo no se usaban. Ahora solo proporcionamos `.order-0` a `.order-5` de forma predeterminada.
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [See #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]([[docsref:/utilities/flex#media-object]]).
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó el componente `.media`, ya que se puede replicar fácilmente con utilidades. Consulta [el PR #28265](https://github.com/twbs/bootstrap/pull/28265) y la [página de utilidades flex para ver un ejemplo]([[docsref:/utilities/flex#media-object]]).
 
-- <span class="badge text-bg-danger">Breaking</span> `bootstrap-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way, our grid styles can be used in more places without interference.
+- <span class="badge text-bg-danger">Crítico</span> `bootstrap-grid.css` ahora solo aplica `box-sizing: border-box` a la columna en lugar de restablecer el box-sizing global. De esta manera, nuestros estilos de cuadrícula se pueden utilizar en más lugares sin interferencias.
 
-- `$enable-grid-classes` no longer disables the generation of container classes anymore. [See #29146.](https://github.com/twbs/bootstrap/pull/29146)
+- `$enable-grid-classes` ya no deshabilita la generación de clases de contenedor. [Ver #29146.](https://github.com/twbs/bootstrap/pull/29146)
 
-- Updated the `make-col` mixin to default to equal columns without a specified size.
+- Se actualizó el mixin `make-col` para que por defecto sea columnas iguales sin un tamaño especificado.
 
-### Content, Reboot, etc
+### Contenido, Reboot, etc.
 
-- **[RFS]([[docsref:/getting-started/rfs]]) is now enabled by default.** Headings using the `font-size()` mixin will automatically adjust their `font-size` to scale with the viewport. _This feature was previously opt-in with v4._
+- **[RFS]([[docsref:/getting-started/rfs]]) ahora está habilitado por defecto.** Los encabezados que usan el mixin `font-size()` ajustarán automáticamente su `font-size` para escalar con la ventana gráfica. _Esta característica era anteriormente opcional en la v4._
 
-- <span class="badge text-bg-danger">Breaking</span> Overhauled our display typography to replace our `$display-*` variables and with a `$display-font-sizes` Sass map. Also removed the individual `$display-*-weight` variables for a single `$display-font-weight` and adjusted `font-size`s.
+- <span class="badge text-bg-danger">Crítico</span> Se revisó nuestra tipografía de pantalla (display) para reemplazar nuestras variables `$display-*` por un mapa Sass `$display-font-sizes`. También se eliminaron las variables `$display-*-weight` individuales para un solo `$display-font-weight` y se ajustaron los `font-size`s.
 
-- Added two new `.display-*` heading sizes, `.display-5` and `.display-6`.
+- Se agregaron dos nuevos tamaños de encabezado `.display-*`, `.display-5` y `.display-6`.
 
-- **Links are underlined by default** (not just on hover), unless they’re part of specific components.
+- **Los enlaces están subrayados por defecto** (no solo al pasar el cursor), a menos que formen parte de componentes específicos.
 
-- **Redesigned tables** to refresh their styles and rebuild them with CSS variables for more control over styling.
+- **Tablas rediseñadas** para refrescar sus estilos y reconstruirlas con variables CSS para un mayor control sobre el diseño.
 
-- <span class="badge text-bg-danger">Breaking</span> Nested tables do not inherit styles anymore.
+- <span class="badge text-bg-danger">Crítico</span> Las tablas anidadas ya no heredan estilos.
 
-- <span class="badge text-bg-danger">Breaking</span> `.thead-light` and `.thead-dark` are dropped in favor of the `.table-*` variant classes which can be used for all table elements (`thead`, `tbody`, `tfoot`, `tr`, `th` and `td`).
+- <span class="badge text-bg-danger">Crítico</span> Se eliminaron `.thead-light` y `.thead-dark` en favor de las clases variantes `.table-*` que se pueden usar para todos los elementos de la tabla (`thead`, `tbody`, `tfoot`, `tr`, `th` y `td`).
 
-- <span class="badge text-bg-danger">Breaking</span> The `table-row-variant()` mixin is renamed to `table-variant()` and accepts only 2 parameters: `$color` (color name) and `$value` (color code). The border color and accent colors are automatically calculated based on the table factor variables.
+- <span class="badge text-bg-danger">Crítico</span> El mixin `table-row-variant()` pasa a llamarse `table-variant()` y acepta solo 2 parámetros: `$color` (nombre del color) y `$value` (código de color). El color del borde y los colores de acento se calculan automáticamente en función de las variables del factor de la tabla.
 
-- Split table cell padding variables into `-y` and `-x`.
+- Se dividieron las variables de relleno de las celdas de la tabla en `-y` y `-x`.
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped `.pre-scrollable` class. [See #29135](https://github.com/twbs/bootstrap/pull/29135)
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó la clase `.pre-scrollable`. [Ver #29135](https://github.com/twbs/bootstrap/pull/29135)
 
-- <span class="badge text-bg-danger">Breaking</span> `.text-*` utilities do not add hover and focus states to links anymore. `.link-*` helper classes can be used instead. [See #29267](https://github.com/twbs/bootstrap/pull/29267)
+- <span class="badge text-bg-danger">Crítico</span> Las utilidades `.text-*` ya no agregan estados de hover y focus a los enlaces. En su lugar, se pueden utilizar clases auxiliares `.link-*`. [Ver #29267](https://github.com/twbs/bootstrap/pull/29267)
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped `.text-justify` class. [See #29793](https://github.com/twbs/bootstrap/pull/29793)
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó la clase `.text-justify`. [Ver #29793](https://github.com/twbs/bootstrap/pull/29793)
 
-- <span class="badge text-bg-danger">Breaking</span> ~~`<hr>` elements now use `height` instead of `border` to better support the `size` attribute. This also enables use of padding utilities to create thicker dividers (e.g., `<hr class="py-1">`).~~
+- <span class="badge text-bg-danger">Crítico</span> Los elementos `<hr>` ahora usan `height` en lugar de `border` para soportar mejor el atributo `size`. Esto también permite el uso de utilidades de relleno para crear divisores más gruesos (por ejemplo, `<hr class="py-1">`).
 
-- Reset default horizontal `padding-left` on `<ul>` and `<ol>` elements from browser default `40px` to `2rem`.
+- Se restableció el `padding-left` horizontal predeterminado en los elementos `<ul>` y `<ol>` de `40px` predeterminado del navegador a `2rem`.
 
-- Added `$enable-smooth-scroll`, which applies `scroll-behavior: smooth` globally—except for users asking for reduced motion through `prefers-reduced-motion` media query. [See #31877](https://github.com/twbs/bootstrap/pull/31877)
+- Se agregó `$enable-smooth-scroll`, que aplica `scroll-behavior: smooth` a nivel global, excepto para los usuarios que solicitan movimiento reducido a través de la media query `prefers-reduced-motion`. [Ver #31877](https://github.com/twbs/bootstrap/pull/31877)
 
 ### RTL
 
-- Horizontal direction specific variables, utilities, and mixins have all been renamed to use logical properties like those found in flexbox layouts—e.g., `start` and `end` in lieu of `left` and `right`.
+- Las variables, utilidades y mixins específicos de la dirección horizontal se han renombrado para usar propiedades lógicas como las que se encuentran en los diseños flexbox, por ejemplo, `start` y `end` en lugar de `left` y `right`.
 
-### Forms
+### Formularios
 
-- **Added new floating forms!** We’ve promoted the Floating labels example to fully supported form components. [See the new Floating labels page.]([[docsref:/forms/floating-labels]])
+- **¡Se agregaron nuevos formularios flotantes!** Hemos promovido el ejemplo de etiquetas flotantes a componentes de formulario totalmente compatibles. [Consulta la nueva página de etiquetas flotantes (Floating labels).]([[docsref:/forms/floating-labels]])
 
-- <span class="badge text-bg-danger">Breaking</span> **Consolidated native and custom form elements.** Checkboxes, radios, selects, and other inputs that had native and custom classes in v4 have been consolidated. Now nearly all our form elements are entirely custom, most without the need for custom HTML.
-  - `.custom-control.custom-checkbox` is now `.form-check`.
-  - `.custom-control.custom-radio` is now `.form-check`.
-  - `.custom-control.custom-switch` is now `.form-check.form-switch`.
-  - `.custom-select` is now `.form-select`.
-  - `.custom-file` and `.form-control-file` have been replaced by custom styles on top of `.form-control`.
-  - `.custom-range` is now `.form-range`.
-  - Dropped native `.form-control-file` and `.form-control-range`.
+- <span class="badge text-bg-danger">Crítico</span> **Elementos de formulario nativos y personalizados consolidados.** Se han consolidado las casillas de verificación, los radios, los selectores y otras entradas que tenían clases nativas y personalizadas en la v4. Ahora casi todos nuestros elementos de formulario son completamente personalizados, la mayoría sin necesidad de HTML personalizado.
+  - `.custom-control.custom-checkbox` ahora es `.form-check`.
+  - `.custom-control.custom-radio` ahora es `.form-check`.
+  - `.custom-control.custom-switch` ahora es `.form-check.form-switch`.
+  - `.custom-select` ahora es `.form-select`.
+  - `.custom-file` y `.form-control-file` se han reemplazado por estilos personalizados encima de `.form-control`.
+  - `.custom-range` ahora es `.form-range`.
+  - Se eliminaron los `.form-control-file` y `.form-control-range` nativos.
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped `.input-group-append` and `.input-group-prepend`. You can now just add buttons and `.input-group-text` as direct children of the input groups.
+- <span class="badge text-bg-danger">Crítico</span> Se eliminaron `.input-group-append` y `.input-group-prepend`. Ahora puedes agregar botones y `.input-group-text` como hijos directos de los grupos de entrada.
 
-- The longstanding [Missing border radius on input group with validation feedback bug](https://github.com/twbs/bootstrap/issues/25110) is finally fixed by adding an additional `.has-validation` class to input groups with validation.
+- El antiguo error [Falta el radio del borde en el grupo de entrada con error de retroalimentación de validación](https://github.com/twbs/bootstrap/issues/25110) finalmente se solucionó agregando una clase `.has-validation` adicional a los grupos de entrada con validación.
 
-- <span class="badge text-bg-danger">Breaking</span> **Dropped form-specific layout classes for our grid system.** Use our grid and utilities instead of `.form-group`, `.form-row`, or `.form-inline`.
+- <span class="badge text-bg-danger">Crítico</span> **Se eliminaron las clases de diseño específicas de formularios para nuestro sistema de cuadrícula.** Utiliza nuestra cuadrícula y utilidades en lugar de `.form-group`, `.form-row` o `.form-inline`.
 
-- <span class="badge text-bg-danger">Breaking</span> Form labels now require `.form-label`.
+- <span class="badge text-bg-danger">Crítico</span> Las etiquetas de los formularios ahora requieren `.form-label`.
 
-- <span class="badge text-bg-danger">Breaking</span> `.form-text` no longer sets `display`, allowing you to create inline or block help text as you wish just by changing the HTML element.
+- <span class="badge text-bg-danger">Crítico</span> `.form-text` ya no establece `display`, lo que te permite crear texto de ayuda en línea o en bloque como desees simplemente cambiando el elemento HTML.
 
-- Form controls no longer used fixed `height` when possible, instead deferring to `min-height` to improve customization and compatibility with other components.
+- Los controles de formulario ya no usaban una `height` fija cuando era posible, sino que diferían a `min-height` para mejorar la personalización y la compatibilidad con otros componentes.
 
-- Validation icons are no longer applied to `<select>`s with `multiple`.
+- Las pestañas de validación ya no se aplican a los `<select>`s con `multiple`.
 
-- Rearranged source Sass files under `scss/forms/`, including input group styles.
+- Se reorganizaron los archivos Sass de origen en `scss/forms/`, incluidos los estilos de los grupos de entrada.
 
 <hr class="my-5"/>
 
-### Components
+### Componentes
 
-- Unified `padding` values for alerts, breadcrumbs, cards, dropdowns, list groups, modals, popovers, and tooltips to be based on our `$spacer` variable. [See #30564](https://github.com/twbs/bootstrap/pull/30564).
+- Valores de `padding` unificados para alertas, migas de pan, tarjetas, menús desplegables, grupos de listas, modales, ventanas emergentes y tooltips basados en nuestra variable `$spacer`. [Ver #30564](https://github.com/twbs/bootstrap/pull/30564).
 
-#### Accordion
+#### Acordeón (Accordion)
 
-- Added [new accordion component]([[docsref:/components/accordion]]).
+- Se agregó el [nuevo componente acordeón]([[docsref:/components/accordion]]).
 
-#### Alerts
+#### Alertas (Alerts)
 
-- Alerts now have [examples with icons]([[docsref:/components/alerts#icons]]).
+- Las alertas ahora tienen [ejemplos con iconos]([[docsref:/components/alerts#icons]]).
 
-- Removed custom styles for `<hr>`s in each alert since they already use `currentColor`.
+- Se eliminaron los estilos personalizados para `<hr>` en cada alerta ya que ya usan `currentColor`.
 
-#### Badges
+#### Insignias (Badges)
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped all `.badge-*` color classes for background utilities (e.g., use `.bg-primary` instead of `.badge-primary`).
+- <span class="badge text-bg-danger">Crítico</span> Se eliminaron todas las clases de color `.badge-*` para las utilidades de fondo (por ejemplo, usa `.bg-primary` en lugar de `.badge-primary`).
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped `.badge-pill`—use the `.rounded-pill` utility instead.
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó `.badge-pill`; en su lugar, usa la utilidad `.rounded-pill`.
 
-- <span class="badge text-bg-danger">Breaking</span> Removed hover and focus styles for `<a>` and `<button>` elements.
+- <span class="badge text-bg-danger">Crítico</span> Se eliminaron los estilos de hover y focus para los elementos `<a>` y `<button>`.
 
-- Increased default padding for badges from `.25em`/`.5em` to `.35em`/`.65em`.
+- Se aumentó el relleno predeterminado para las insignias de `.25em`/`.5em` a `.35em`/`.65em`.
 
-#### Breadcrumbs
+#### Migas de pan (Breadcrumbs)
 
-- Simplified the default appearance of breadcrumbs by removing `padding`, `background-color`, and `border-radius`.
+- Se simplificó la apariencia predeterminada de las migas de pan al eliminar `padding`, `background-color` y `border-radius`.
 
-- Added new CSS custom property `--bs-breadcrumb-divider` for easy customization without needing to recompile CSS.
+- Se agregó la nueva propiedad personalizada CSS `--bs-breadcrumb-divider` para una personalización sencilla sin necesidad de volver a compilar CSS.
 
-#### Buttons
+#### Botones (Buttons)
 
-- <span class="badge text-bg-danger">Breaking</span> **[Toggle buttons]([[docsref:/forms/checks-radios#toggle-buttons]]), with checkboxes or radios, no longer require JavaScript and have new markup.** We no longer require a wrapping element, add `.btn-check` to the `<input>`, and pair it with any `.btn` classes on the `<label>`. [See #30650](https://github.com/twbs/bootstrap/pull/30650). _The docs for this has moved from our Buttons page to the new Forms section._
+- <span class="badge text-bg-danger">Crítico</span> **[Los botones de alternancia]([[docsref:/forms/checks-radios#toggle-buttons]]), con casillas de verificación o radios, ya no requieren JavaScript y tienen un marcado nuevo.** Ya no requerimos un elemento contenedor, agregamos `.btn-check` al `<input>` y lo emparejamos con cualquier clase `.btn` en el `<label>`. [Ver #30650](https://github.com/twbs/bootstrap/pull/30650). _La documentación de esto se movió de nuestra página de Botones a la nueva sección Formularios._
 
-- <span class="badge text-bg-danger">Breaking</span> **Dropped `.btn-block` for utilities.** Instead of using `.btn-block` on the `.btn`, wrap your buttons with `.d-grid` and a `.gap-*` utility to space them as needed. Switch to responsive classes for even more control over them. [Read the docs for some examples.]([[docsref:/components/buttons#block-buttons]])
+- <span class="badge text-bg-danger">Crítico</span> **Se eliminó `.btn-block` en favor de las utilidades.** En lugar de usar `.btn-block` en el `.btn`, envuelve tus botones con `.d-grid` y una utilidad `.gap-*` para espaciarlos según sea necesario. Cambia a clases responsivas para tener aún más control sobre ellos. [Lee la documentación para ver algunos ejemplos.]([[docsref:/components/buttons#block-buttons]])
 
-- Updated our `button-variant()` and `button-outline-variant()` mixins to support additional parameters.
+- Se actualizaron nuestros mixins `button-variant()` y `button-outline-variant()` para admitir parámetros adicionales.
 
-- Updated buttons to ensure increased contrast on hover and active states.
+- Se actualizaron los botones para garantizar un mayor contraste en los estados de hover y activo.
 
-- Disabled buttons now have `pointer-events: none;`.
+- Los botones deshabilitados ahora tienen `pointer-events: none;`.
 
-#### Card
+#### Tarjetas (Card)
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped `.card-deck` in favor of our grid. Wrap your cards in column classes and add a parent `.row-cols-*` container to recreate card decks (but with more control over responsive alignment).
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó `.card-deck` en favor de nuestra cuadrícula. Envuelve tus tarjetas en clases de columna y agrega un contenedor primario `.row-cols-*` para recrear barajas de tarjetas (pero con más control sobre la alineación adaptable).
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped `.card-columns` in favor of Masonry. [See #28922](https://github.com/twbs/bootstrap/pull/28922).
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó `.card-columns` en favor de Masonry. [Ver #28922](https://github.com/twbs/bootstrap/pull/28922).
 
-- <span class="badge text-bg-danger">Breaking</span> Replaced the `.card` based accordion with a [new Accordion component]([[docsref:/components/accordion]]).
+- <span class="badge text-bg-danger">Crítico</span> Se reemplazó el acordeón basado en `.card` por un [nuevo componente Accordion]([[docsref:/components/accordion]]).
 
-#### Carousel
+#### Carrusel (Carousel)
 
-- Added new [`.carousel-dark` variant]([[docsref:/components/carousel#dark-variant]]) for dark text, controls, and indicators (great for lighter backgrounds).
+- Se agregó la nueva [variante `.carousel-dark`]([[docsref:/components/carousel#dark-variant]]) para texto oscuro, controles e indicadores (ideal para fondos más claros).
 
-- Replaced chevron icons for carousel controls with new SVGs from [Bootstrap Icons]([[config:icons]]).
+- Se reemplazaron los iconos de chevron para los controles del carrusel con nuevos SVG de [Bootstrap Icons]([[config:icons]]).
 
-#### Close button
+#### Botón de cierre (Close button)
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `.close` to `.btn-close` for a less generic name.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de `.close` a `.btn-close` para obtener un nombre menos genérico.
 
-- Close buttons now use a `background-image` (embedded SVG) instead of a `&times;` in the HTML, allowing for easier customization without the need to touch your markup.
+- Los botones de cierre ahora usan una `background-image` (SVG incrustado) en lugar de un `&times;` en el HTML, lo que permite una personalización más sencilla sin necesidad de tocar el marcado.
 
-- Added new `.btn-close-white` variant that uses `filter: invert(1)` to enable higher contrast dismiss icons against darker backgrounds.
+- Se agregó la nueva variante `.btn-close-white` que usa `filter: invert(1)` para habilitar iconos de descarte de mayor contraste contra fondos más oscuros.
 
-#### Collapse
+#### Colapso (Collapse)
 
-- Removed scroll anchoring for accordions.
+- Se eliminó el anclaje de desplazamiento para acordeones.
 
-#### Dropdowns
+#### Menús desplegables (Dropdowns)
 
-- Added new `.dropdown-menu-dark` variant and associated variables for on-demand dark dropdowns.
+- Se agregó la nueva variante `.dropdown-menu-dark` y variables asociadas para menús desplegables oscuros a pedido.
 
-- Added new variable for `$dropdown-padding-x`.
+- Se agregó una nueva variable para `$dropdown-padding-x`.
 
-- Darkened the dropdown divider for improved contrast.
+- Se oscureció el divisor del menú desplegable para mejorar el contraste.
 
-- <span class="badge text-bg-danger">Breaking</span> All the events for the dropdown are now triggered on the dropdown toggle button and then bubbled up to the parent element.
+- <span class="badge text-bg-danger">Crítico</span> Todos los eventos para el menú desplegable ahora se activan en el botón de alternancia del menú desplegable y luego se propagan al elemento padre.
 
-- Dropdown menus now have a `data-bs-popper="static"` attribute set when the positioning of the dropdown is static, or dropdown is in the navbar. This is added by our JavaScript and helps us use custom position styles without interfering with Popper’s positioning.
+- Los menús desplegables ahora tienen un atributo `data-bs-popper="static"` establecido cuando el posicionamiento del menú desplegable es estático, o el menú desplegable está en la barra de navegación. Esto lo agrega nuestro JavaScript y nos ayuda a usar estilos de posición personalizados sin interferir con el posicionamiento de Popper.
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped `flip` option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) option in [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier.
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó la opción `flip` para el complemento desplegable en favor de la configuración nativa de Popper. Ahora puedes desactivar el comportamiento de volteo pasando una matriz vacía para la opción [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) en el modificador [flip](https://popper.js.org/docs/v2/modifiers/flip/).
 
-- Dropdown menus can now be clickable with a new `autoClose` option to handle the [auto close behavior]([[docsref:/components/dropdowns#auto-close-behavior]]). You can use this option to accept the click inside or outside the dropdown menu to make it interactive.
+- Los menús desplegables ahora se pueden hacer clic con una nueva opción `autoClose` para manejar el [comportamiento de cierre automático]([[docsref:/components/dropdowns#auto-close-behavior]]). Puedes usar esta opción para aceptar el clic dentro o fuera del menú desplegable para hacerlo interactivo.
 
-- Dropdowns now support `.dropdown-item`s wrapped in `<li>`s.
+- Los menús desplegables ahora admiten `.dropdown-item` envueltos en `<li>`.
 
 #### Jumbotron
 
-- <span class="badge text-bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. [See our new Jumbotron example for a demo.]([[docsref:/examples/jumbotron]])
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó el componente jumbotron ya que se puede replicar con utilidades. [Consulta nuestro nuevo ejemplo de Jumbotron para ver una demostración.]([[docsref:/examples/jumbotron]])
 
-#### List group
+#### Grupo de lista (List group)
 
-- Added new [`.list-group-numbered` modifier]([[docsref:/components/list-group#numbered]]) to list groups.
+- Se agregó el nuevo [modificador `.list-group-numbered`]([[docsref:/components/list-group#numbered]]) a los grupos de listas.
 
-#### Navs and tabs
+#### Navs y pestañas (Navs and tabs)
 
-- Added new `null` variables for `font-size`, `font-weight`, `color`, and `:hover` `color` to the `.nav-link` class.
+- Se agregaron nuevas variables `null` para `font-size`, `font-weight`, `color` y `:hover` `color` a la clase `.nav-link`.
 
-#### Navbars
+#### Barras de navegación (Navbars)
 
-- <span class="badge text-bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
-- <span class="badge text-bg-danger">Breaking</span> The `.active` class can no longer be applied to `.nav-item`s, it must be applied directly on `.nav-link`s.
+- <span class="badge text-bg-danger">Crítico</span> Las barras de navegación ahora requieren un contenedor en su interior (para simplificar drásticamente los requisitos de espacio y el CSS requerido).
+- <span class="badge text-bg-danger">Crítico</span> La clase `.active` ya no se puede aplicar a los `.nav-item`, debe aplicarse directamente a los `.nav-link`.
 
 #### Offcanvas
 
-- Added the new [offcanvas component]([[docsref:/components/offcanvas]]).
+- Se agregó el nuevo [componente offcanvas]([[docsref:/components/offcanvas]]).
 
-#### Pagination
+#### Paginación (Pagination)
 
-- Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
+- Los enlaces de paginación ahora tienen un `margin-left` personalizable que se redondea dinámicamente en todas las esquinas cuando se separan entre sí.
 
-- Added `transition`s to pagination links.
+- Se agregaron `transition`s a los enlaces de paginación.
 
 #### Popovers
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `.arrow` to `.popover-arrow` in our default popover template.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de `.arrow` a `.popover-arrow` en nuestra plantilla de popover predeterminada.
 
-- Renamed `whiteList` option to `allowList`.
+- Se cambió el nombre de la opción `whiteList` a `allowList`.
 
 #### Spinners
 
-- Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [See #31882](https://github.com/twbs/bootstrap/pull/31882).
+- Los spinners ahora respetan `prefers-reduced-motion: reduce` al ralentizar las animaciones. [Ver #31882](https://github.com/twbs/bootstrap/pull/31882).
 
-- Improved spinner vertical alignment.
+- Alineación vertical del spinner mejorada.
 
 #### Toasts
 
-- Toasts can now be [positioned]([[docsref:/components/toasts#placement]]) in a `.toast-container` with the help of [positioning utilities]([[docsref:/utilities/position]]).
+- Los toasts ahora se pueden [posicionar]([[docsref:/components/toasts#placement]]) en un `.toast-container` con la ayuda de las [utilidades de posicionamiento]([[docsref:/utilities/position]]).
 
-- Changed default toast duration to 5 seconds.
+- Se cambió la duración predeterminada del toast a 5 segundos.
 
-- Removed `overflow: hidden` from toasts and replaced with proper `border-radius`s with `calc()` functions.
+- Se eliminó `overflow: hidden` de los toasts y se reemplazó con `border-radius` adecuados con funciones `calc()`.
 
 #### Tooltips
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `.arrow` to `.tooltip-arrow` in our default tooltip template.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de `.arrow` a `.tooltip-arrow` en nuestra plantilla de tooltip predeterminada.
 
-- <span class="badge text-bg-danger">Breaking</span> The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of popper elements.
+- <span class="badge text-bg-danger">Crítico</span> El valor predeterminado para `fallbackPlacements` se cambia a `['top', 'right', 'bottom', 'left']` para una mejor ubicación de los elementos Popper.
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `whiteList` option to `allowList`.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la opción `whiteList` a `allowList`.
 
-### Utilities
+### Utilidades
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directional names with the addition of RTL support:
-  - Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`.
-  - Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`.
-  - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
-  - Renamed `.ml-*` and `.mr-*` to `.ms-*` and `.me-*`.
-  - Renamed `.pl-*` and `.pr-*` to `.ps-*` and `.pe-*`.
-  - Renamed `.text-*-left` and `.text-*-right` to `.text-*-start` and `.text-*-end`.
+- <span class="badge text-bg-danger">Crítico</span> Se cambiaron de nombre varias utilidades para usar nombres de propiedades lógicas en lugar de nombres direccionales con la adición de soporte RTL:
+  - Se cambió el nombre de `.float-left` y `.float-right` a `.float-start` y `.float-end`.
+  - Se cambió el nombre de `.border-left` y `.border-right` a `.border-start` y `.border-end`.
+  - Se cambió el nombre de `.rounded-left` y `.rounded-right` a `.rounded-start` y `.rounded-end`.
+  - Se cambió el nombre de `.ml-*` y `.mr-*` a `.ms-*` y `.me-*`.
+  - Se cambió el nombre de `.pl-*` y `.pr-*` a `.ps-*` y `.pe-*`.
+  - Se cambió el nombre de `.text-*-left` y `.text-*-right` a `.text-*-start` y `.text-*-end`.
 
-- <span class="badge text-bg-danger">Breaking</span> Disabled negative margins by default.
+- <span class="badge text-bg-danger">Crítico</span> Se deshabilitaron los márgenes negativos de forma predeterminada.
 
-- Added new `.bg-body` class for quickly setting the `<body>`’s background to additional elements.
+- Se agregó la nueva clase `.bg-body` para configurar rápidamente el fondo del `<body>` en elementos adicionales.
 
-- Added new [position utilities]([[docsref:/utilities/position#arrange-elements]]) for `top`, `right`, `bottom`, and `left`. Values include `0`, `50%`, and `100%` for each property.
+- Se agregaron nuevas [utilidades de posición]([[docsref:/utilities/position#arrange-elements]]) para `top`, `right`, `bottom` y `left`. Los valores incluyen `0`, `50%` y `100%` para cada propiedad.
 
-- Added new `.translate-middle-x` & `.translate-middle-y` utilities to horizontally or vertically center absolute/fixed positioned elements.
+- Se agregaron nuevas utilidades `.translate-middle-x` y `.translate-middle-y` para centrar horizontal o verticalmente elementos posicionados de forma absoluta/fija.
 
-- Added new [`border-width` utilities]([[docsref:/utilities/borders#border-width]]).
+- Se agregaron nuevas [`utilidades de border-width`]([[docsref:/utilities/borders#border-width]]).
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de `.text-monospace` a `.font-monospace`.
 
-- <span class="badge text-bg-danger">Breaking</span> Removed `.text-hide` as it’s an antiquated method for hiding text that shouldn’t be used anymore.
+- <span class="badge text-bg-danger">Crítico</span> Se eliminó `.text-hide` ya que es un método obsoleto para ocultar texto que ya no debería usarse.
 
-- Added `.fs-*` utilities for `font-size` utilities (with RFS enabled). These use the same scale as HTML’s default headings (1-6, large to small), and can be modified via Sass map.
+- Se agregaron utilidades `.fs-*` para utilidades de `font-size` (con RFS habilitado). Estos usan la misma escala que los encabezados predeterminados de HTML (1-6, de grande a pequeño) y se pueden modificar mediante el mapa Sass.
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
+- <span class="badge text-bg-danger">Crítico</span> Se cambiaron de nombre las utilidades `.font-weight-*` a `.fw-*` para abreviar y mantener la coherencia.
 
-- <span class="badge text-bg-danger">Breaking</span> Renamed `.font-italic` utility to `.fst-italic` for brevity and consistency with new `.fst-normal` utility.
+- <span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la utilidad `.font-italic` a `.fst-italic` para abreviar y mantener la coherencia con la nueva utilidad `.fst-normal`.
 
-- Added `.d-grid` to display utilities and new `gap` utilities (`.gap`) for CSS Grid and flexbox layouts.
+- Se agregó `.d-grid` a las utilidades de visualización y nuevas utilidades de espacio (`.gap`) para diseños CSS Grid y flexbox.
 
-- <span class="badge text-bg-danger">Breaking</span> Removed `.rounded-sm` and `rounded-lg`, and introduced a new scale of classes, `.rounded-0` to `.rounded-3`. [See #31687](https://github.com/twbs/bootstrap/pull/31687).
+- <span class="badge text-bg-danger">Crítico</span> Se eliminaron `.rounded-sm` y `.rounded-lg`, y se introdujo una nueva escala de clases, `.rounded-0` a `.rounded-3`. [Ver #31687](https://github.com/twbs/bootstrap/pull/31687).
 
-- Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]([[docsref:/utilities/text#line-height]]).
+- Se agregaron nuevas utilidades de `line-height`: `.lh-1`, `.lh-sm`, `.lh-base` y `.lh-lg`. Consulta [aquí]([[docsref:/utilities/text#line-height]]).
 
-- Moved the `.d-none` utility in our CSS to give it more weight over other display utilities.
+- Se movió la utilidad `.d-none` en nuestro CSS para darle más peso sobre otras utilidades de visualización.
 
-- Extended the `.visually-hidden-focusable` helper to also work on containers, using `:focus-within`.
+- Se amplió el ayudante `.visually-hidden-focusable` para que también funcione en contenedores, utilizando `:focus-within`.
 
-### Helpers
+### Ayundantes (Helpers)
 
-- <span class="badge text-bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]([[docsref:/helpers/ratio]])** with new class names and improved behaviors, as well as a helpful CSS variable.
-  - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
-  - We’ve dropped the `.embed-responsive-item` and element group selector in favor of a simpler `.ratio > *` selector. No more class is needed, and the ratio helper now works with any HTML element.
-  - The `$embed-responsive-aspect-ratios` Sass map has been renamed to `$aspect-ratios` and its values have been simplified to include the class name and the percentage as the `key: value` pair.
-  - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]([[docsref:/helpers/ratio#custom-ratios]]).
+- <span class="badge text-bg-danger">Crítico</span> **Los ayudantes de inserción responsivos han pasado a llamarse [ayudantes de proporción (ratio)]([[docsref:/helpers/ratio]])** con nuevos nombres de clase y comportamientos mejorados, así como una útil variable CSS.
+  - Se han cambiado de nombre las clases para cambiar `by` por `x` en la relación de aspecto. Por ejemplo, `.ratio-16by9` ahora es `.ratio-16x9`.
+  - Hemos descartado el selector de grupo de elementos y `.embed-responsive-item` en favor de un selector `.ratio > *` más simple. No se necesita más clase y el ayudante de proporción ahora funciona con cualquier HTML elemento.
+  - El mapa Sass `$embed-responsive-aspect-ratios` ha pasado a llamarse `$aspect-ratios` y sus valores se han simplificado para incluir el nombre de la clase y el porcentaje como el par `key: value`.
+  - Ahora se generan e incluyen variables CSS para cada valor en el mapa Sass. Modifica la variable `--bs-aspect-ratio` en el `.ratio` para crear cualquier [relación de aspecto personalizada]([[docsref:/helpers/ratio#custom-ratios]]).
 
-- <span class="badge text-bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]([[docsref:/helpers/visually-hidden]]).**
-  - Changed the Sass file from `scss/helpers/_screenreaders.scss` to `scss/helpers/_visually-hidden.scss`
-  - Renamed `.sr-only` and `.sr-only-focusable` to `.visually-hidden` and `.visually-hidden-focusable`
-  - Renamed `sr-only()` and `sr-only-focusable()` mixins to `visually-hidden()` and `visually-hidden-focusable()`.
+- <span class="badge text-bg-danger">Crítico</span> **Las clases "Lector de pantalla" ahora son ["clases visualmente ocultas"]([[docsref:/helpers/visually-hidden]]).**
+  - Se cambió el archivo Sass de `scss/helpers/_screenreaders.scss` a `scss/helpers/_visually-hidden.scss`
+  - Se cambió el nombre de `.sr-only` y `.sr-only-focusable` a `.visually-hidden` y `.visually-hidden-focusable`
+  - Se cambió el nombre de los mixins `sr-only()` y `sr-only-focusable()` a `visually-hidden()` y `visually-hidden-focusable()`.
 
-- `bootstrap-utilities.css` now also includes our helpers. Helpers don’t need to be imported in custom builds anymore.
+- `bootstrap-utilities.css` ahora también incluye nuestros ayudantes. Ya no es necesario importar ayudantes en compilaciones personalizadas.
 
 ### JavaScript
 
-- **Dropped jQuery dependency** and rewrote plugins to be in regular JavaScript.
+- **Se eliminó la dependencia de jQuery** y se reescribieron los complementos para que estuvieran en JavaScript normal.
 
-- <span class="badge text-bg-danger">Breaking</span> Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
+- <span class="badge text-bg-danger">Crítico</span> Los atributos de datos para todos los complementos de JavaScript ahora tienen espacios de nombres para ayudar a distinguir la funcionalidad de Bootstrap de la de terceros y de su propio código. Por ejemplo, usamos `data-bs-toggle` en lugar de `data-toggle`.
 
-- **All plugins can now accept a CSS selector as the first argument.** You can either pass a DOM element or any valid CSS selector to create a new instance of the plugin:
+- **Todos los complementos ahora pueden aceptar un selector CSS como primer argumento.** Puedes pasar un elemento DOM o cualquier selector CSS válido para crear una nueva instancia del complemento:
 
   ```js
   const modal = new bootstrap.Modal('#myModal')
   const dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
   ```
 
-- `popperConfig` can be passed as a function that accepts the Bootstrap’s default Popper config as an argument, so that you can merge this default configuration in your way. **Applies to dropdowns, popovers, and tooltips.**
+- `popperConfig` se puede pasar como una función que acepta la configuración Popper predeterminada de Bootstrap como argumento, para que puedas fusionar esta configuración predeterminada a tu manera. **Se aplica a dropdowns, popovers y tooltips.**
 
-- The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of Popper elements. **Applies to dropdowns, popovers, and tooltips.**
+- El valor predeterminado para `fallbackPlacements` se cambia a `['top', 'right', 'bottom', 'left']` para una mejor ubicación de los elementos Popper. **Se aplica a dropdowns, popovers y tooltips.**
 
-- Removed underscore from public static methods like `_getInstance()` → `getInstance()`.
+- Se eliminó el guión bajo de los métodos estáticos públicos como `_getInstance()` → `getInstance()`.
 
-- Removed `util.js`, with its functionality now integrated into individual plugins. If you previously included `util.js` manually, you can safely remove it, as it is no longer needed. Each plugin now contains only the utilities it requires, enhancing modularity and reducing dependencies.
+- Se eliminó `util.js`, y su funcionalidad ahora está integrada en complementos individuales. Si anteriormente incluías `util.js` manualmente, puedes eliminarlo de forma segura, ya que ya no es necesario. Cada complemento ahora contiene solo las utilidades que requiere, lo que mejora la modularidad y reduce las dependencias.

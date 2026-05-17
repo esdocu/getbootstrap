@@ -1,172 +1,172 @@
 ---
-title: Checks and radios
-description: Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
+title: Casillas de verificación y botones de opción (Checks and radios)
+description: Crea casillas de verificación (checkboxes) y botones de opción (radios) consistentes en diferentes navegadores y dispositivos con nuestro componente de verificación completamente rediseñado.
 aliases: "/docs/[[config:docs_version]]/forms/checks/"
 toc: true
 ---
 
-## Approach
+## Enfoque
 
-Browser default checkboxes and radios are replaced with the help of `.form-check`, a series of classes for both input types that improves the layout and behavior of their HTML elements, that provide greater customization and cross browser consistency. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+Las casillas de verificación y los botones de opción predeterminados del navegador se reemplazan con la ayuda de `.form-check`, una serie de clases para ambos tipos de entrada que mejora el diseño y el comportamiento de sus elementos HTML, lo que proporciona una mayor personalización y consistencia entre navegadores. Las casillas de verificación sirven para seleccionar una o varias opciones de una lista, mientras que los botones de opción sirven para seleccionar una opción entre muchas.
 
-Structurally, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`. We use the sibling selector (`~`) for all our `<input>` states, like `:checked` or `:disabled`. When combined with the `.form-check-label` class, we can easily style the text for each item based on the `<input>`’s state.
+Estructuralmente, nuestros `<input>` y `<label>` son elementos hermanos en lugar de tener un `<input>` dentro de un `<label>`. Esto es un poco más detallado ya que debes especificar los atributos `id` y `for` para relacionar el `<input>` y el `<label>`. Usamos el selector de hermanos (`~`) para todos nuestros estados de `<input>`, como `:checked` o `:disabled`. Cuando se combina con la clase `.form-check-label`, podemos diseñar fácilmente el estilo del texto de cada elemento en función del estado de la entrada `<input>`.
 
-Our checks use custom Bootstrap icons to indicate checked or indeterminate states.
+Nuestras verificaciones utilizan iconos personalizados de Bootstrap para indicar estados marcados o indeterminados.
 
-## Checks
+## Casillas de verificación (Checks)
 
 <Example code={`<div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="checkDefault">
     <label class="form-check-label" for="checkDefault">
-      Default checkbox
+      Casilla de verificación predeterminada
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="checkChecked" checked>
     <label class="form-check-label" for="checkChecked">
-      Checked checkbox
+      Casilla de verificación marcada
     </label>
   </div>`} />
 
-### Indeterminate
+### Indeterminado
 
-Checkboxes can utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
+Las casillas de verificación pueden utilizar la pseudoclase `:indeterminate` cuando se configuran manualmente mediante JavaScript (no hay ningún atributo HTML disponible para especificarlo).
 
 <Example addStackblitzJs class="bd-example-indeterminate" code={`<div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="checkIndeterminate">
     <label class="form-check-label" for="checkIndeterminate">
-      Indeterminate checkbox
+      Casilla de verificación indeterminada
     </label>
   </div>`} />
 
-### Disabled
+### Deshabilitado
 
-Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input’s state.
+Agrega el atributo `disabled` y las etiquetas `<label>` asociadas se diseñarán automáticamente para que coincidan con un color más claro para ayudar a indicar el estado de la entrada.
 
 <Example addStackblitzJs class="bd-example-indeterminate" code={`<div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="checkIndeterminateDisabled" disabled>
     <label class="form-check-label" for="checkIndeterminateDisabled">
-      Disabled indeterminate checkbox
+      Casilla de verificación indeterminada deshabilitada
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="checkDisabled" disabled>
     <label class="form-check-label" for="checkDisabled">
-      Disabled checkbox
+      Casilla de verificación deshabilitada
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="checkCheckedDisabled" checked disabled>
     <label class="form-check-label" for="checkCheckedDisabled">
-      Disabled checked checkbox
+      Casilla de verificación marcada deshabilitada
     </label>
   </div>`} />
 
-## Radios
+## Botones de opción (Radios)
 
 <Example code={`<div class="form-check">
     <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
     <label class="form-check-label" for="radioDefault1">
-      Default radio
+      Botón de opción predeterminado
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
     <label class="form-check-label" for="radioDefault2">
-      Default checked radio
+      Botón de opción marcado predeterminado
     </label>
   </div>`} />
 
-### Disabled
+### Deshabilitado
 
-Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input’s state.
+Agrega el atributo `disabled` y las etiquetas `<label>` asociadas se diseñarán automáticamente para que coincidan con un color más claro para ayudar a indicar el estado de la entrada.
 
 <Example code={`<div class="form-check">
     <input class="form-check-input" type="radio" name="radioDisabled" id="radioDisabled" disabled>
     <label class="form-check-label" for="radioDisabled">
-      Disabled radio
+      Botón de opción deshabilitado
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="radio" name="radioDisabled" id="radioCheckedDisabled" checked disabled>
     <label class="form-check-label" for="radioCheckedDisabled">
-      Disabled checked radio
+      Botón de opción marcado deshabilitado
     </label>
   </div>`} />
 
-## Switches
+## Interruptores (Switches)
 
-A switch has the markup of a custom checkbox but uses the `.form-switch` class to render a toggle switch. Consider using `role="switch"` to more accurately convey the nature of the control to assistive technologies that support this role. In older assistive technologies, it will simply be announced as a regular checkbox as a fallback. Switches also support the `disabled` attribute.
+Un interruptor (switch) tiene el marcado de una casilla de verificación personalizada pero utiliza la clase `.form-switch` para representar un interruptor de palanca. Considera usar `role="switch"` para transmitir con mayor precisión la naturaleza del control a las tecnologías de asistencia que admiten este rol. En tecnologías de asistencia más antiguas, simplemente se anunciará como una casilla de verificación normal como respaldo. Los interruptores también admiten el atributo `disabled`.
 
 <Example code={`<div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-    <label class="form-check-label" for="switchCheckDefault">Default switch checkbox input</label>
+    <label class="form-check-label" for="switchCheckDefault">Entrada de casilla de verificación de interruptor predeterminada</label>
   </div>
   <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
-    <label class="form-check-label" for="switchCheckChecked">Checked switch checkbox input</label>
+    <label class="form-check-label" for="switchCheckChecked">Entrada de casilla de verificación de interruptor marcada</label>
   </div>
   <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDisabled" disabled>
-    <label class="form-check-label" for="switchCheckDisabled">Disabled switch checkbox input</label>
+    <label class="form-check-label" for="switchCheckDisabled">Entrada de casilla de verificación de interruptor deshabilitada</label>
   </div>
   <div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" role="switch" id="switchCheckCheckedDisabled" checked disabled>
-    <label class="form-check-label" for="switchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+    <label class="form-check-label" for="switchCheckCheckedDisabled">Entrada de casilla de verificación de interruptor marcada deshabilitada</label>
   </div>`} />
 
-### Native switches
+### Interruptores nativos
 
-Progressively enhance your switches for mobile Safari (iOS 17.4+) by adding a `switch` attribute to your input to enable haptic feedback when toggling switches, just like native iOS switches. There are no style changes attached to using this attribute in Bootstrap as all our switches use custom styles.
+Mejora progresivamente tus interruptores para Safari móvil (iOS 17.4+) agregando un atributo `switch` a tu entrada para habilitar la respuesta háptica al alternar interruptores, al igual que los interruptores nativos de iOS. No hay cambios de estilo asociados al uso de este atributo en Bootstrap, ya que todos nuestros interruptores utilizan estilos personalizados.
 
 <Example code={`<div class="form-check form-switch">
     <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch>
     <label class="form-check-label" for="checkNativeSwitch">
-      Native switch haptics
+      Respuesta háptica nativa de interruptores
     </label>
   </div>`} />
 
-Be sure to read more about [the switch attribute on the WebKit blog](https://webkit.org/blog/15054/an-html-switch-control/). Safari 17.4+ on macOS and iOS both have native-style switches in HTML while other browsers simply fall back to the standard checkbox appearance. Applying the attribute to a non-Bootstrap checkbox in more recent versions of Safari will render a native switch.
+Asegúrate de leer más sobre [el atributo switch en el blog de WebKit](https://webkit.org/blog/15054/an-html-switch-control/). Safari 17.4+ tanto en macOS como en iOS tiene interruptores de estilo nativo en HTML, mientras que otros navegadores simplemente recurren a la apariencia de la casilla de verificación estándar. Aplicar el atributo a una casilla de verificación que no sea de Bootstrap en versiones más recientes de Safari renderizará un interruptor nativo.
 
-## Default (stacked)
+## Predeterminado (apilado)
 
-By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
+De forma predeterminada, cualquier cantidad de casillas de verificación y botones de opción que sean hermanos inmediatos se apilarán verticalmente y se espaciarán adecuadamente con `.form-check`.
 
 <Example code={`<div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
     <label class="form-check-label" for="defaultCheck1">
-      Default checkbox
+      Casilla de verificación predeterminada
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
     <label class="form-check-label" for="defaultCheck2">
-      Disabled checkbox
+      Casilla de verificación deshabilitada
     </label>
   </div>`} />
 
 <Example code={`<div class="form-check">
     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
     <label class="form-check-label" for="exampleRadios1">
-      Default radio
+      Botón de opción predeterminado
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
     <label class="form-check-label" for="exampleRadios2">
-      Second default radio
+      Segundo botón de opción predeterminado
     </label>
   </div>
   <div class="form-check">
     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
     <label class="form-check-label" for="exampleRadios3">
-      Disabled radio
+      Botón de opción deshabilitado
     </label>
   </div>`} />
 
-## Inline
+## En línea (Inline)
 
-Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
+Agrupa casillas de verificación o botones de opción en la misma fila horizontal agregando `.form-check-inline` a cualquier `.form-check`.
 
 <Example code={`<div class="form-check form-check-inline">
     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
@@ -178,7 +178,7 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
   </div>
   <div class="form-check form-check-inline">
     <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-    <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+    <label class="form-check-label" for="inlineCheckbox3">3 (deshabilitado)</label>
   </div>`} />
 
 <Example code={`<div class="form-check form-check-inline">
@@ -191,34 +191,34 @@ Group checkboxes or radios on the same horizontal row by adding `.form-check-inl
   </div>
   <div class="form-check form-check-inline">
     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-    <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+    <label class="form-check-label" for="inlineRadio3">3 (deshabilitado)</label>
   </div>`} />
 
-## Reverse
+## Inverso (Reverse)
 
-Put your checkboxes, radios, and switches on the opposite side with the `.form-check-reverse` modifier class.
+Coloca tus casillas de verificación, botones de opción e interruptores en el lado opuesto con la clase modificadora `.form-check-reverse`.
 
 <Example code={`<div class="form-check form-check-reverse">
     <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
     <label class="form-check-label" for="reverseCheck1">
-      Reverse checkbox
+      Casilla de verificación inversa
     </label>
   </div>
   <div class="form-check form-check-reverse">
     <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled>
     <label class="form-check-label" for="reverseCheck2">
-      Disabled reverse checkbox
+      Casilla de verificación inversa deshabilitada
     </label>
   </div>
 
   <div class="form-check form-switch form-check-reverse">
     <input class="form-check-input" type="checkbox" id="switchCheckReverse">
-    <label class="form-check-label" for="switchCheckReverse">Reverse switch checkbox input</label>
+    <label class="form-check-label" for="switchCheckReverse">Entrada de casilla de verificación de interruptor inversa</label>
   </div>`} />
 
-## Without labels
+## Sin etiquetas
 
-Omit the wrapping `.form-check` for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-label`). See the [forms overview accessibility]([[docsref:/forms/overview/#accessibility]]) section for details.
+Omite el contenedor `.form-check` para casillas de verificación y botones de opción que no tengan texto de etiqueta. Recuerda proporcionar de todos modos alguna forma de nombre accesible para tecnologías de asistencia (por ejemplo, usando `aria-label`). Consulta la sección de [accesibilidad en la descripción general de formularios]([[docsref:/forms/overview/#accessibility]]) para obtener más detalles.
 
 <Example code={`<div>
     <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
@@ -228,84 +228,84 @@ Omit the wrapping `.form-check` for checkboxes and radios that have no label tex
     <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
   </div>`} />
 
-## Toggle buttons
+## Botones de alternancia (Toggle buttons)
 
-Create button-like checkboxes and radio buttons by using `.btn` styles rather than `.form-check-label` on the `<label>` elements. These toggle buttons can further be grouped in a [button group]([[docsref:/components/button-group]]) if needed.
+Crea casillas de verificación y botones de opción similares a botones utilizando estilos `.btn` en lugar de `.form-check-label` en los elementos `<label>`. Estos botones de alternancia se pueden agrupar en un [grupo de botones]([[docsref:/components/button-group]]) si es necesario.
 
-### Checkbox toggle buttons
+### Botones de alternancia de casillas de verificación
 
 <Example code={`<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-<label class="btn btn-primary" for="btn-check">Single toggle</label>
+<label class="btn btn-primary" for="btn-check">Alternancia única</label>
 
 <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-<label class="btn btn-primary" for="btn-check-2">Checked</label>
+<label class="btn btn-primary" for="btn-check-2">Marcado</label>
 
 <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
-<label class="btn btn-primary" for="btn-check-3">Disabled</label>`} />
+<label class="btn btn-primary" for="btn-check-3">Deshabilitado</label>`} />
 
 <Example code={`<input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
-<label class="btn" for="btn-check-4">Single toggle</label>
+<label class="btn" for="btn-check-4">Alternancia única</label>
 
 <input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
-<label class="btn" for="btn-check-5">Checked</label>
+<label class="btn" for="btn-check-5">Marcado</label>
 
 <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled>
-<label class="btn" for="btn-check-6">Disabled</label>`} />
+<label class="btn" for="btn-check-6">Deshabilitado</label>`} />
 
 <Callout>
-Visually, these checkbox toggle buttons are identical to the [button plugin toggle buttons]([[docsref:/components/buttons#button-plugin]]). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as “checked“/“not checked“ (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as “button“/“button pressed“. The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
+Visualmente, estos botones de alternancia de casilla de verificación son idénticos a los [botones de alternancia del complemento de botones]([[docsref:/components/buttons#button-plugin]]). Sin embargo, las tecnologías de asistencia los transmiten de manera diferente: los lectores de pantalla anunciarán los controles de casilla de verificación como "marcado"/"no marcado" (ya que, a pesar de su apariencia, son fundamentalmente casillas de verificación), mientras que los botones de alternancia del complemento de botón se anunciarán como "botón"/"botón presionado". La elección entre estos dos enfoques dependerá del tipo de alternancia que estés creando y de si la alternancia tendrá sentido para los usuarios cuando se anuncie como una casilla de verificación o como un botón real.
 </Callout>
 
-### Radio toggle buttons
+### Botones de alternancia de radio
 
 <Example code={`<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-<label class="btn btn-secondary" for="option1">Checked</label>
+<label class="btn btn-secondary" for="option1">Marcado</label>
 
 <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-<label class="btn btn-secondary" for="option2">Radio</label>
+<label class="btn btn-secondary" for="option2">Opción</label>
 
 <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-<label class="btn btn-secondary" for="option3">Disabled</label>
+<label class="btn btn-secondary" for="option3">Deshabilitado</label>
 
 <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-<label class="btn btn-secondary" for="option4">Radio</label>`} />
+<label class="btn btn-secondary" for="option4">Opción</label>`} />
 
 <Example code={`<input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
-<label class="btn" for="option5">Checked</label>
+<label class="btn" for="option5">Marcado</label>
 
 <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
-<label class="btn" for="option6">Radio</label>
+<label class="btn" for="option6">Opción</label>
 
 <input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled>
-<label class="btn" for="option7">Disabled</label>
+<label class="btn" for="option7">Deshabilitado</label>
 
 <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
-<label class="btn" for="option8">Radio</label>`} />
+<label class="btn" for="option8">Opción</label>`} />
 
-### Outlined styles
+### Estilos de contorno (Outlined)
 
-Different variants of `.btn`, such as the various outlined styles, are supported.
+Se admiten diferentes variantes de `.btn`, como los diversos estilos de contorno (outlined).
 
 <Example code={`<input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+<label class="btn btn-outline-primary" for="btn-check-outlined">Alternancia única</label><br>
 
 <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
-<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Marcado</label><br>
 
 <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
-<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+<label class="btn btn-outline-success" for="success-outlined">Botón de opción de éxito marcado</label>
 
 <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
-<label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>`} />
+<label class="btn btn-outline-danger" for="danger-outlined">Botón de opción de peligro</label>`} />
 
 ## CSS
 
-### Sass variables
+### Variables Sass
 
-Variables for checks:
+Variables para casillas de verificación:
 
 <ScssDocs name="form-check-variables" file="scss/_variables.scss" />
 
-Variables for switches:
+Variables para interruptores:
 
 <ScssDocs name="form-switch-variables" file="scss/_variables.scss" />

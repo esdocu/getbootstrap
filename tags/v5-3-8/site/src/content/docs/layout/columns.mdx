@@ -1,39 +1,39 @@
 ---
-title: Columns
-description: Learn how to modify columns with a handful of options for alignment, ordering, and offsetting thanks to our flexbox grid system. Plus, see how to use column classes to manage widths of non-grid elements.
+title: Columnas (Columns)
+description: Aprende a modificar columnas con un puñado de opciones de alineación, ordenación y desplazamiento gracias a nuestro sistema de cuadrícula flexbox. Además, mira cómo usar clases de columna para administrar el ancho de elementos que no pertenecen a la cuadrícula.
 toc: true
 ---
 
 <Callout>
-**Heads up!** Be sure to [read the Grid page]([[docsref:/layout/grid]]) first before diving into how to modify and customize your grid columns.
+**¡Atención!** Asegúrate de [leer la página de Cuadrícula (Grid)]([[docsref:/layout/grid]]) primero antes de profundizar en cómo modificar y personalizar tus columnas de cuadrícula.
 </Callout>
 
-## How they work
+## Cómo funcionan
 
-- **Columns build on the grid’s flexbox architecture.** Flexbox means we have options for changing individual columns and [modifying groups of columns at the row level]([[docsref:/layout/grid#row-columns]]). You choose how columns grow, shrink, or otherwise change.
+- **Las columnas se basan en la arquitectura flexbox de la cuadrícula.** Flexbox significa que tenemos opciones para cambiar columnas individuales y [modificar grupos de columnas a nivel de fila]([[docsref:/layout/grid#row-columns]]). Tú eliges cómo crecen, se encogen o cambian las columnas.
 
-- **When building grid layouts, all content goes in columns.** The hierarchy of Bootstrap’s grid goes from [container]([[docsref:/layout/containers]]) to row to column to your content. On rare occasions, you may combine content and column, but be aware there can be unintended consequences.
+- **Al crear diseños de cuadrícula, todo el contenido va en columnas.** La jerarquía de la cuadrícula de Bootstrap va desde el [contenedor]([[docsref:/layout/containers]]) a la fila, a la columna y a tu contenido. En raras ocasiones, puedes combinar contenido y columna, pero ten en cuenta que puede haber consecuencias no deseadas.
 
-- **Bootstrap includes predefined classes for creating fast, responsive layouts.** With [six breakpoints]([[docsref:/layout/breakpoints]]) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
+- **Bootstrap incluye clases predefinidas para crear diseños rápidos y responsivos.** Con [seis puntos de interrupción]([[docsref:/layout/breakpoints]]) y una docena de columnas en cada nivel de cuadrícula, ya tenemos decenas de clases creadas para que crees tus diseños deseados. Esto se puede desactivar a través de Sass si lo deseas.
 
-## Alignment
+## Alineación
 
-Use flexbox alignment utilities to vertically and horizontally align columns.
+Utiliza utilidades de alineación flexbox para alinear columnas vertical y horizontalmente.
 
-### Vertical alignment
+### Alineación vertical
 
-Change the vertical alignment with any of the responsive `align-items-*` classes.
+Cambia la alineación vertical con cualquiera de las clases responsivas `align-items-*`.
 
 <Example class="bd-example-row bd-example-row-flex-cols" code={`<div class="container text-center">
     <div class="row align-items-start">
       <div class="col">
-        One of three columns
+        Una de tres columnas
       </div>
       <div class="col">
-        One of three columns
+        Una de tres columnas
       </div>
       <div class="col">
-        One of three columns
+        Una de tres columnas
       </div>
     </div>
   </div>`} />
@@ -41,13 +41,13 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 <Example class="bd-example-row bd-example-row-flex-cols" code={`<div class="container text-center">
     <div class="row align-items-center">
       <div class="col">
-        One of three columns
+        Una de tres columnas
       </div>
       <div class="col">
-        One of three columns
+        Una de tres columnas
       </div>
       <div class="col">
-        One of three columns
+        Una de tres columnas
       </div>
     </div>
   </div>`} />
@@ -55,110 +55,110 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 <Example class="bd-example-row bd-example-row-flex-cols" code={`<div class="container text-center">
     <div class="row align-items-end">
       <div class="col">
-        One of three columns
+        Una de tres columnas
       </div>
       <div class="col">
-        One of three columns
+        Una de tres columnas
       </div>
       <div class="col">
-        One of three columns
+        Una de tres columnas
       </div>
     </div>
   </div>`} />
 
-Or, change the alignment of each column individually with any of the responsive `.align-self-*` classes.
+O bien, cambia la alineación de cada columna individualmente con cualquiera de las clases responsivas `.align-self-*`.
 
 <Example class="bd-example-row bd-example-row-flex-cols" code={`<div class="container text-center">
     <div class="row">
       <div class="col align-self-start">
-        One of three columns
+        Una de tres columnas
       </div>
       <div class="col align-self-center">
-        One of three columns
+        Una de three columns
       </div>
       <div class="col align-self-end">
-        One of three columns
+        Una de three columns
       </div>
     </div>
   </div>`} />
 
-### Horizontal alignment
+### Alineación horizontal
 
-Change the horizontal alignment with any of the responsive `justify-content-*` classes.
+Cambia la alineación horizontal con cualquiera de las clases responsivas `justify-content-*`.
 
 <Example class="bd-example-row" code={`<div class="container text-center">
     <div class="row justify-content-start">
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
     </div>
     <div class="row justify-content-center">
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
     </div>
     <div class="row justify-content-end">
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
     </div>
     <div class="row justify-content-around">
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
     </div>
     <div class="row justify-content-between">
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
     </div>
     <div class="row justify-content-evenly">
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
       <div class="col-4">
-        One of two columns
+        Una de dos columnas
       </div>
     </div>
   </div>`} />
 
-### Column wrapping
+### Envoltura de columnas (Column wrapping)
 
-If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
+Si se colocan más de 12 columnas dentro de una sola fila, cada grupo de columnas adicionales se envolverá, como una unidad, en una nueva línea.
 
 <Example class="bd-example-row" code={`<div class="container">
     <div class="row">
       <div class="col-9">.col-9</div>
-      <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-      <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+      <div class="col-4">.col-4<br>Como 9 + 4 = 13 &gt; 12, este div de 4 columnas de ancho se envuelve en una nueva línea como una unidad contigua.</div>
+      <div class="col-6">.col-6<br>Las columnas siguientes continúan a lo largo de la nueva línea.</div>
     </div>
   </div>`} />
 
-### Column breaks
+### Rupturas de columnas (Column breaks)
 
-Breaking columns to a new line in flexbox requires a small hack: add an element with `width: 100%` wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple `.row`s, but not every implementation method can account for this.
+Romper columnas en una nueva línea en flexbox requiere un pequeño truco: agrega un elemento con `width: 100%` donde quieras envolver tus columnas en una nueva línea. Normalmente esto se logra con múltiples clases `.row`, pero no todos los métodos de implementación pueden tener esto en cuenta.
 
 <Example class="bd-example-row" code={`<div class="container text-center">
     <div class="row">
       <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
       <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
 
-      <!-- Force next columns to break to new line -->
+      <!-- Forzar a las siguientes columnas a romperse a una nueva línea -->
       <div class="w-100"></div>
 
       <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
@@ -166,14 +166,14 @@ Breaking columns to a new line in flexbox requires a small hack: add an element 
     </div>
   </div>`} />
 
-You may also apply this break at specific breakpoints with our [responsive display utilities]([[docsref:/utilities/display]]).
+También puedes aplicar esta ruptura en puntos de interrupción específicos con nuestras [utilidades de visualización responsivas]([[docsref:/utilities/display]]).
 
 <Example class="bd-example-row" code={`<div class="container text-center">
     <div class="row">
       <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
       <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
 
-      <!-- Force next columns to break to new line at md breakpoint and up -->
+      <!-- Forzar a las siguientes columnas a romperse a una nueva línea en el punto de interrupción md y superior -->
       <div class="w-100 d-none d-md-block"></div>
 
       <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
@@ -181,44 +181,43 @@ You may also apply this break at specific breakpoints with our [responsive displ
     </div>
   </div>`} />
 
-## Reordering
+## Reordenación
 
-### Order classes
+### Clases de orden (Order classes)
 
-Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `5` across all six grid tiers.
+Usa las clases `.order-` para controlar el **orden visual** de tu contenido. Estas clases son responsivas, por lo que puedes establecer el orden (`order`) por punto de interrupción (por ejemplo, `.order-1.order-md-2`). Incluye soporte de `1` a `5` en los seis niveles de cuadrícula.
 
 <Example class="bd-example-row" code={`<div class="container text-center">
     <div class="row">
       <div class="col">
-        First in DOM, no order applied
+        Primero en el DOM, sin orden aplicado
       </div>
       <div class="col order-5">
-        Second in DOM, with a larger order
+        Segundo en el DOM, con un orden más grande
       </div>
       <div class="col order-1">
-        Third in DOM, with an order of 1
+        Tercero en el DOM, con un orden de 1
       </div>
     </div>
   </div>`} />
 
-There are also responsive `.order-first` and `.order-last` classes that change the `order` of an element by applying `order: -1` and `order: 6`, respectively. These classes can also be intermixed with the numbered `.order-*` classes as needed.
+También hay clases responsivas `.order-first` and `.order-last` que cambian el orden (`order`) de un elemento aplicando `order: -1` y `order: 6`, respectivamente. Estas clases también se pueden mezclar con las clases numeradas `.order-*` según sea necesario.
 
 <Example class="bd-example-row" code={`<div class="container text-center">
     <div class="row">
       <div class="col order-last">
-        First in DOM, ordered last
+        Primero en el DOM, ordenado al final
       </div>
       <div class="col">
-        Second in DOM, unordered
+        Segundo en el DOM, sin ordenar
       </div>
       <div class="col order-first">
-        Third in DOM, ordered first
+        Tercero en el DOM, ordenado al principio
       </div>
     </div>
   </div>`} />
 
-
-If you need more `.order-*` classes, you can add new ones by modifying our `$utilities` Sass map. [Read our Sass maps and loops docs]([[docsref:/customize/sass#maps-and-loops]]) or [our Modify utilities docs]([[docsref:/utilities/api#modify-utilities]]) for details.
+Si necesitas más clases `.order-*`, puedes agregar otras nuevas modificando nuestro mapa Sass `$utilities`. [Lee nuestros documentos de mapas y bucles Sass]([[docsref:/customize/sass#maps-and-loops]]) o [nuestros documentos de modificación de utilidades]([[docsref:/utilities/api#modify-utilities]]) para obtener más detalles.
 
 ```scss
 $utilities: map-merge(
@@ -230,8 +229,8 @@ $utilities: map-merge(
         values: map-merge(
           map-get(map-get($utilities, "order"), "values"),
           (
-            6: 6, // Add a new `.order-{breakpoint}-6` utility
-            last: 7 // Change the `.order-{breakpoint}-last` utility to use the next number
+            6: 6, // Agregar una nueva utilidad `.order-{breakpoint}-6`
+            last: 7 // Cambiar la utilidad `.order-{breakpoint}-last` para usar el siguiente número
           )
         ),
       ),
@@ -240,13 +239,13 @@ $utilities: map-merge(
 );
 ```
 
-### Offsetting columns
+### Desplazamiento de columnas (Offsetting columns)
 
-You can offset grid columns in two ways: our responsive `.offset-` grid classes and our [margin utilities]([[docsref:/utilities/spacing]]). Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.
+Puedes desplazar las columnas de la cuadrícula de dos formas: nuestras clases de cuadrícula responsivas `.offset-` y nuestras [utilidades de margen]([[docsref:/utilities/spacing]]). Las clases de cuadrícula están dimensionadas para coincidir con las columnas, mientras que los márgenes son más útiles para diseños rápidos donde el ancho del desplazamiento es variable.
 
-#### Offset classes
+#### Clases de desplazamiento (Offset classes)
 
-Move columns to the right using `.offset-md-*` classes. These classes increase the left margin of a column by `*` columns. For example, `.offset-md-4` moves `.col-md-4` over four columns.
+Mueve las columnas hacia la derecha usando las clases `.offset-md-*`. Estas clases aumentan el margen izquierdo de una columna en `*` columnas. Por ejemplo, `.offset-md-4` mueve `.col-md-4` cuatro columnas.
 
 <Example class="bd-example-row" code={`<div class="container text-center">
     <div class="row">
@@ -262,7 +261,7 @@ Move columns to the right using `.offset-md-*` classes. These classes increase t
     </div>
   </div>`} />
 
-In addition to column clearing at responsive breakpoints, you may need to reset offsets. See this in action in [the grid example]([[docsref:/examples/grid/]]).
+Además de limpiar las columnas en puntos de interrupción responsivos, es posible que necesites restablecer los desplazamientos. Mira esto en acción en [el ejemplo de cuadrícula]([[docsref:/examples/grid/]]):
 
 <Example class="bd-example-row" code={`<div class="container text-center">
     <div class="row">
@@ -275,9 +274,9 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
     </div>
   </div>`} />
 
-#### Margin utilities
+#### Utilidades de margen
 
-With the move to flexbox in v4, you can use margin utilities like `.me-auto` to force sibling columns away from one another.
+Con el paso a flexbox en la versión 4, puedes utilizar utilidades de margen como `.me-auto` para forzar a las columnas hermanas a alejarse unas de otras.
 
 <Example class="bd-example-row" code={`<div class="container text-center">
     <div class="row">
@@ -294,32 +293,32 @@ With the move to flexbox in v4, you can use margin utilities like `.me-auto` to 
     </div>
   </div>`} />
 
-## Standalone column classes
+## Clases de columna independientes
 
-The `.col-*` classes can also be used outside a `.row` to give an element a specific width. Whenever column classes are used as non-direct children of a row, the paddings are omitted.
+Las clases `.col-*` también se pueden usar fuera de un `.row` para darle a un elemento un ancho específico. Siempre que las clases de columna se utilicen como hijos no directos de una fila, se omiten los rellenos (paddings).
 
 <Example class="bd-example-row" code={`<div class="col-3 p-3 mb-2">
-    .col-3: width of 25%
+    .col-3: ancho del 25%
   </div>
 
   <div class="col-sm-9 p-3">
-    .col-sm-9: width of 75% above sm breakpoint
+    .col-sm-9: ancho del 75% por encima del punto de interrupción sm
   </div>`} />
 
-The classes can be used together with utilities to create responsive floated images. Make sure to wrap the content in a [`.clearfix`]([[docsref:/helpers/clearfix]]) wrapper to clear the float if the text is shorter.
+Las clases se pueden usar junto con utilidades para crear imágenes flotantes responsivas. Asegúrate de volver a envolver el contenido en un contenedor [`.clearfix`]([[docsref:/helpers/clearfix]]) para limpiar el float si el texto es más corto.
 
 <Example code={`<div class="clearfix">
-    <Placeholder width="100%" height="210" class="col-md-6 float-md-end mb-3 ms-md-3" text="Responsive floated image" />
+    <Placeholder width="100%" height="210" class="col-md-6 float-md-end mb-3 ms-md-3" text="Imagen flotante responsiva" />
 
     <p>
-      A paragraph of placeholder text. We’re using it here to show the use of the clearfix class. We’re adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+      Un párrafo de texto de marcador de posición. Lo estamos usando aquí para mostrar el uso de la clase clearfix. Estamos agregando bastantes frases sin sentido aquí para demostrar cómo interactúan las columnas aquí con la imagen flotante.
     </p>
 
     <p>
-      As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
+      Como puedes ver, los párrafos se envuelven con gracia alrededor de la imagen flotante. Ahora imagina cómo se vería esto con contenido real aquí, en lugar de este aburrido texto de marcador de posición que sigue y sigue, pero que en realidad no transmite información tangible. Simplemente ocupa espacio y realmente no debería leerse.
     </p>
 
     <p>
-      And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there’s none of that here.
+      Y sin embargo, aquí estás, todavía perseverando en la lectura de este texto de marcador de posición, esperando algunas ideas más o algún huevo de pascua oculto de contenido. Un chiste, tal vez. Desafortunadamente, no hay nada de eso aquí.
     </p>
   </div>`} />

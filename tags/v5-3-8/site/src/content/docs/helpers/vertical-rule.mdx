@@ -1,46 +1,46 @@
 ---
-title: Vertical rule
-description: Use the custom vertical rule helper to create vertical dividers like the `<hr>` element.
+title: Regla vertical (Vertical rule)
+description: Utiliza el ayudante personalizado de regla vertical para crear divisores verticales similares al elemento `<hr>`.
 toc: true
 added:
   version: "5.1"
 ---
 
-## How it works
+## Cómo funciona
 
-Vertical rules are inspired by the `<hr>` element, allowing you to create vertical dividers in common layouts. They’re styled just like `<hr>` elements:
+Las reglas verticales están inspiradas en el elemento `<hr>`, lo que te permite crear divisores verticales en diseños comunes. Tienen el mismo estilo que los elementos `<hr>`:
 
-- They’re `1px` wide
-- They have `min-height` of `1em`
-- Their color is set via `currentColor` and `opacity`
+- Tienen `1px` de ancho
+- Tienen una altura mínima (`min-height`) de `1em`
+- Su color se establece mediante `currentColor` y `opacity`
 
-Customize them with additional styles as needed.
+Personalízalos con estilos adicionales según sea necesario.
 
-## Example
+## Ejemplo
 
 <Example code={`<div class="vr"></div>`} />
 
-Vertical rules scale their height in flex layouts:
+Las reglas verticales escalan su altura en diseños flex:
 
 <Example code={`<div class="d-flex" style="height: 200px;">
     <div class="vr"></div>
   </div>`} />
 
-## With stacks
+## Con stacks (pilas)
 
-They can also be used in [stacks]([[docsref:/helpers/stacks]]):
+También se pueden usar en [stacks (pilas)]([[docsref:/helpers/stacks]]):
 
 <Example class="bd-example-flex" code={`<div class="hstack gap-3">
-    <div class="p-2">First item</div>
-    <div class="p-2 ms-auto">Second item</div>
+    <div class="p-2">Primer elemento</div>
+    <div class="p-2 ms-auto">Segundo elemento</div>
     <div class="vr"></div>
-    <div class="p-2">Third item</div>
+    <div class="p-2">Tercer elemento</div>
   </div>`} />
 
 ## CSS
 
-### Sass variables
+### Variables Sass
 
-Customize the vertical rule Sass variable to change its width.
+Personaliza la variable Sass de regla vertical para cambiar su ancho.
 
 <ScssDocs name="vr-variables" file="scss/_variables.scss" />

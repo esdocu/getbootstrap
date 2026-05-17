@@ -1,137 +1,137 @@
 ---
-title: Text
-description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
+title: Texto (Text)
+description: Documentación y ejemplos de utilidades de texto comunes para controlar la alineación, el ajuste, el grosor y más.
 toc: true
 ---
 
-## Text alignment
+## Alineación del texto (Text alignment)
 
-Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
+Realinea fácilmente el texto con clases de alineación de texto. Para la alineación al inicio, al final y al centro, están disponibles clases responsivas que utilizan los mismos puntos de interrupción de ancho de ventana gráfica que el sistema de cuadrícula.
 
-<Example code={`<p class="text-start">Start aligned text on all viewport sizes.</p>
-<p class="text-center">Center aligned text on all viewport sizes.</p>
-<p class="text-end">End aligned text on all viewport sizes.</p>
+<Example code={`<p class="text-start">Texto alineado al inicio en todos los tamaños de ventana gráfica.</p>
+<p class="text-center">Texto centrado en todos los tamaños de ventana gráfica.</p>
+<p class="text-end">Texto alineado al final en todos los tamaños de ventana gráfica.</p>
 
-<p class="text-sm-end">End aligned text on viewports sized SM (small) or wider.</p>
-<p class="text-md-end">End aligned text on viewports sized MD (medium) or wider.</p>
-<p class="text-lg-end">End aligned text on viewports sized LG (large) or wider.</p>
-<p class="text-xl-end">End aligned text on viewports sized XL (extra large) or wider.</p>
-<p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>`} />
+<p class="text-sm-end">Texto alineado al final en ventanas gráficas de tamaño SM (pequeño) o más anchas.</p>
+<p class="text-md-end">Texto alineado al final en ventanas gráficas de tamaño MD (mediano) o más anchas.</p>
+<p class="text-lg-end">Texto alineado al final en ventanas gráficas de tamaño LG (grande) o más anchas.</p>
+<p class="text-xl-end">Texto alineado al final en ventanas gráficas de tamaño XL (extra grande) o más anchas.</p>
+<p class="text-xxl-end">Texto alineado al final en ventanas gráficas de tamaño XXL (extra extra grande) o más anchas.</p>`} />
 
 <Callout>
-Note that we don’t provide utility classes for justified text. While, aesthetically, justified text might look more appealing, it does make word-spacing more random and therefore harder to read.
+Ten en cuenta que no proporcionamos clases de utilidad para texto justificado. Si bien, estéticamente, el texto justificado puede parecer más atractivo, hace que el espaciado entre palabras sea más aleatorio y, por lo tanto, más difícil de leer.
 </Callout>
 
-## Text wrapping and overflow
+## Ajuste de línea y desbordamiento de texto (Text wrapping and overflow)
 
-Wrap text with a `.text-wrap` class.
+Ajusta el texto con una clase `.text-wrap`.
 
 <Example code={`<div class="badge text-bg-primary text-wrap" style="width: 6rem;">
-    This text should wrap.
+    Este texto debería ajustarse.
   </div>`} />
 
-Prevent text from wrapping with a `.text-nowrap` class.
+Evita que el texto se ajuste con una clase `.text-nowrap`.
 
 <Example code={`<div class="text-nowrap bg-body-secondary border" style="width: 8rem;">
-    This text should overflow the parent.
+    Este texto debería desbordar al padre.
   </div>`} />
 
-## Word break
+## Salto de palabra (Word break)
 
-Prevent long strings of text from breaking your components’ layout by using `.text-break` to set `word-wrap: break-word` and `word-break: break-word`. We use `word-wrap` instead of the more common `overflow-wrap` for wider browser support, and add the deprecated `word-break: break-word` to avoid issues with flex containers.
+Evita que cadenas largas de texto rompan el diseño de tus componentes utilizando `.text-break` para establecer `word-wrap: break-word` y `word-break: break-word`. Usamos `word-wrap` en lugar de `overflow-wrap` que es más común para una compatibilidad más amplia del navegador, y agregamos la propiedad en desuso `word-break: break-word` para evitar problemas con contenedores flex.
 
 <Example code={`<p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>`} />
 
 <Callout type="warning">
-Note that [breaking words isn’t possible in Arabic](https://rtlstyling.com/posts/rtl-styling#3.-line-break), which is the most used RTL language. Therefore `.text-break` is removed from our RTL compiled CSS.
+Ten en cuenta que [romper palabras no es posible en árabe](https://rtlstyling.com/posts/rtl-styling#3.-line-break), que es el idioma RTL más utilizado. Por lo tanto, `.text-break` se elimina de nuestro CSS compilado para RTL.
 </Callout>
 
-## Text transform
+## Transformación de texto (Text transform)
 
-Transform text in components with our text capitalization classes: `text-lowercase`, `text-uppercase` or `text-capitalize`.
+Transforma el texto en los componentes con nuestras clases de mayúsculas y minúsculas: `text-lowercase`, `text-uppercase` o `text-capitalize`.
 
-<Example code={`<p class="text-lowercase">Lowercased text.</p>
-<p class="text-uppercase">Uppercased text.</p>
-<p class="text-capitalize">CapiTaliZed text.</p>`} />
+<Example code={`<p class="text-lowercase">Texto en minúsculas.</p>
+<p class="text-uppercase">Texto en mayúsculas.</p>
+<p class="text-capitalize">Texto Con Mayúsculas Iniciales.</p>`} />
 
-Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected.
+Ten en cuenta que `.text-capitalize` solo cambia la primera letra de cada palabra, dejando el caso de cualquier otra letra sin afectar.
 
-## Font size
+## Tamaño de fuente (Font size)
 
-Quickly change the `font-size` of text. While our heading classes (e.g., `.h1`–`.h6`) apply `font-size`, `font-weight`, and `line-height`, these utilities _only_ apply `font-size`. Sizing for these utilities matches HTML’s heading elements, so as the number increases, their size decreases.
+Cambia rápidamente el `font-size` del texto. Mientras que nuestras clases de encabezado (por ejemplo, `.h1`–`.h6`) aplican `font-size`, `font-weight` y `line-height`, estas utilidades _solo_ aplican `font-size`. El tamaño de estas utilidades coincide con los elementos de encabezado de HTML, por lo que a medida que aumenta el número, su tamaño disminuye.
 
-<Example code={`<p class="fs-1">.fs-1 text</p>
-<p class="fs-2">.fs-2 text</p>
-<p class="fs-3">.fs-3 text</p>
-<p class="fs-4">.fs-4 text</p>
-<p class="fs-5">.fs-5 text</p>
-<p class="fs-6">.fs-6 text</p>`} />
+<Example code={`<p class="fs-1">texto fs-1</p>
+<p class="fs-2">texto fs-2</p>
+<p class="fs-3">texto fs-3</p>
+<p class="fs-4">texto fs-4</p>
+<p class="fs-5">texto fs-5</p>
+<p class="fs-6">texto fs-6</p>`} />
 
-Customize your available `font-size`s by modifying the `$font-sizes` Sass map.
+Personaliza tus `font-size` disponibles modificando el mapa Sass `$font-sizes`.
 
-## Font weight and italics
+## Grosor de fuente y cursiva (Font weight and italics)
 
-Quickly change the `font-weight` or `font-style` of text with these utilities. `font-style` utilities are abbreviated as `.fst-*` and `font-weight` utilities are abbreviated as `.fw-*`.
+Cambia rápidamente el `font-weight` o el `font-style` del texto con estas utilidades. Las utilidades de `font-style` se abrevian como `.fst-*` y las utilidades de `font-weight` se abrevian como `.fw-*`.
 
-<Example code={`<p class="fw-bold">Bold text.</p>
-<p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
-<p class="fw-semibold">Semibold weight text.</p>
-<p class="fw-medium">Medium weight text.</p>
-<p class="fw-normal">Normal weight text.</p>
-<p class="fw-light">Light weight text.</p>
-<p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
-<p class="fst-italic">Italic text.</p>
-<p class="fst-normal">Text with normal font style</p>`} />
+<Example code={`<p class="fw-bold">Texto en negrita.</p>
+<p class="fw-bolder">Texto con un grosor más negrita (en relación con el elemento padre).</p>
+<p class="fw-semibold">Texto seminegrita.</p>
+<p class="fw-medium">Texto de grosor medio.</p>
+<p class="fw-normal">Texto de grosor normal.</p>
+<p class="fw-light">Texto ligero.</p>
+<p class="fw-lighter">Texto de grosor más ligero (en relación con el elemento padre).</p>
+<p class="fst-italic">Texto en cursiva.</p>
+<p class="fst-normal">Texto con estilo de fuente normal</p>`} />
 
-## Line height
+## Altura de línea (Line height)
 
-Change the line height with `.lh-*` utilities.
+Cambia la altura de línea con las utilidades `.lh-*`.
 
-<Example code={`<p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
-<p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
-<p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
-<p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>`} />
+<Example code={`<p class="lh-1">Este es un párrafo largo escrito para mostrar cómo la altura de línea de un elemento se ve afectada por nuestras utilidades. Las clases se aplican al elemento en sí o, a veces, al elemento padre. Estas clases se pueden personalizar según sea necesario con nuestra API de utilidades.</p>
+<p class="lh-sm">Este es un párrafo largo escrito para mostrar cómo la altura de línea de un elemento se ve afectada por nuestras utilidades. Las clases se aplican al elemento en sí o, a veces, al elemento padre. Estas clases se pueden personalizar según sea necesario con nuestra API de utilidades.</p>
+<p class="lh-base">Este es un párrafo largo escrito para mostrar cómo la altura de línea de un elemento se ve afectada por nuestras utilidades. Las clases se aplican al elemento en sí o, a veces, al elemento padre. Estas clases se pueden personalizar según sea necesario con nuestra API de utilidades.</p>
+<p class="lh-lg">Este es un párrafo largo escrito para mostrar cómo la altura de línea de un elemento se ve afectada por nuestras utilidades. Las clases se aplican al elemento en sí o, a veces, al elemento padre. Estas clases se pueden personalizar según sea necesario con nuestra API de utilidades.</p>`} />
 
-## Monospace
+## Monoespaciado (Monospace)
 
-Change a selection to our monospace font stack with `.font-monospace`.
+Cambia una selección a nuestra pila de fuentes monoespaciadas con `.font-monospace`.
 
-<Example code={`<p class="font-monospace">This is in monospace</p>`} />
+<Example code={`<p class="font-monospace">Esto está en monoespaciado</p>`} />
 
-## Reset color
+## Restablecer color (Reset color)
 
-Reset a text or link’s color with `.text-reset`, so that it inherits the color from its parent.
+Restablece el color de un texto o enlace con `.text-reset`, de modo que herede el color de su padre.
 
 <Example code={`<p class="text-body-secondary">
-    Secondary body text with a <a href="#" class="text-reset">reset link</a>.
+    Texto del cuerpo secundario con un <a href="#" class="text-reset">enlace de restablecimiento</a>.
   </p>`} />
 
-## Text decoration
+## Decoración de texto (Text decoration)
 
-Decorate text in components with text decoration classes.
+Decora el texto en los componentes con clases de decoración de texto.
 
-<Example code={`<p class="text-decoration-underline">This text has a line underneath it.</p>
-<p class="text-decoration-line-through">This text has a line going through it.</p>
-<a href="#" class="text-decoration-none">This link has its text decoration removed</a>`} />
+<Example code={`<p class="text-decoration-underline">Este texto tiene una línea debajo.</p>
+<p class="text-decoration-line-through">Este texto tiene una línea que lo atraviesa.</p>
+<a href="#" class="text-decoration-none">Este enlace no tiene decoración de texto</a>`} />
 
 ## CSS
 
-### Sass variables
+### Variables Sass
 
-Default type and font related Sass variables:
+Variables Sass predeterminadas relacionadas con el tipo y la fuente:
 
 <ScssDocs name="font-variables" file="scss/_variables.scss" />
 
-### Sass maps
+### Mapas Sass
 
-Font-size utilities are generated from this map, in combination with our utilities API.
+Las utilidades de tamaño de fuente se generan a partir de este mapa, en combinación con nuestra API de utilidades.
 
 <ScssDocs name="font-sizes" file="scss/_variables.scss" />
 
 <ScssDocs name="theme-text-map" file="scss/_maps.scss" />
 
-### Sass utilities API
+### API de utilidades de Sass
 
-Font and text utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
+Las utilidades de fuente y texto se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a utilizar la API de utilidades.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-text" file="scss/_utilities.scss" />

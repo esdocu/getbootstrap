@@ -1,46 +1,46 @@
 ---
-title: Object fit
-description: Use the object fit utilities to modify how the content of a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element" target="_blank" rel="noopener noreferrer">replaced element</a>, such as an `<img>` or `<video>`, should be resized to fit its container.
+title: Ajuste de objeto (Object fit)
+description: Utiliza las utilidades de ajuste de objeto (object fit) para modificar cómo se debe redimensionar el contenido de un <a href="https://developer.mozilla.org/es/docs/Web/CSS/Replaced_element" target="_blank" rel="noopener noreferrer">elemento reemplazado</a>, como un `<img>` o `<video>`, para adaptarse a su contenedor.
 toc: true
 added:
   version: "5.3"
 ---
 
-## How it works
+## Cómo funciona
 
-Change the value of the [`object-fit` property](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) with our responsive `object-fit` utility classes. This property tells the content to fill the parent container in a variety of ways, such as preserving the aspect ratio or stretching to take up as much space as possible.
+Cambia el valor de la [propiedad `object-fit`](https://developer.mozilla.org/es/docs/Web/CSS/object-fit) con nuestras clases de utilidad `object-fit` responsivas. Esta propiedad le indica al contenido que llene el contenedor padre de varias formas, como conservando la relación de aspecto o estirándose para ocupar tanto espacio como sea posible.
 
-Classes for the value of `object-fit` are named using the format `.object-fit-{value}`. Choose from the following values:
+Las clases para el valor de `object-fit` se nombran usando el formato `.object-fit-{value}`. Elige entre los siguientes valores:
 
 - `contain`
 - `cover`
 - `fill`
-- `scale` (for scale-down)
+- `scale` (para scale-down)
 - `none`
 
-## Examples
+## Ejemplos
 
-Add the `object-fit-{value}` class to the [replaced element](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element):
+Agrega la clase `object-fit-{value}` al [elemento reemplazado](https://developer.mozilla.org/es/docs/Web/CSS/Replaced_element):
 
-<Example class="d-flex overflow-auto" code={`<Placeholder width="140" height="120" class="object-fit-contain border rounded" text="Object fit contain" markup="img" />
-<Placeholder width="140" height="120" class="object-fit-cover border rounded" text="Object fit cover" markup="img" />
-<Placeholder width="140" height="120" class="object-fit-fill border rounded" text="Object fit fill" markup="img" />
-<Placeholder width="140" height="120" class="object-fit-scale border rounded" text="Object fit scale down" markup="img" />
-<Placeholder width="140" height="120" class="object-fit-none border rounded" text="Object fit none" markup="img" />`} />
+<Example class="d-flex overflow-auto" code={`<Placeholder width="140" height="120" class="object-fit-contain border rounded" text="Ajuste de objeto contain" markup="img" />
+<Placeholder width="140" height="120" class="object-fit-cover border rounded" text="Ajuste de objeto cover" markup="img" />
+<Placeholder width="140" height="120" class="object-fit-fill border rounded" text="Ajuste de objeto fill" markup="img" />
+<Placeholder width="140" height="120" class="object-fit-scale border rounded" text="Ajuste de objeto scale down" markup="img" />
+<Placeholder width="140" height="120" class="object-fit-none border rounded" text="Ajuste de objeto none" markup="img" />`} />
 
-## Responsive
+## Responsivo
 
-Responsive variations also exist for each `object-fit` value using the format `.object-fit-{breakpoint}-{value}`, for the following breakpoint abbreviations: `sm`, `md`, `lg`, `xl`, and `xxl`. Classes can be combined for various effects as you need.
+También existen variantes responsivas para cada valor de `object-fit` usando el formato `.object-fit-{breakpoint}-{value}`, para las siguientes abreviaturas de puntos de interrupción: `sm`, `md`, `lg`, `xl` y `xxl`. Las clases se pueden combinar para varios efectos según lo necesites.
 
-<Example class="d-flex overflow-auto" code={`<Placeholder width="140" height="80" class="object-fit-sm-contain border rounded" text="Contain on sm" markup="img" />
-<Placeholder width="140" height="80" class="object-fit-md-contain border rounded" text="Contain on md" markup="img" />
-<Placeholder width="140" height="80" class="object-fit-lg-contain border rounded" text="Contain on lg" markup="img" />
-<Placeholder width="140" height="80" class="object-fit-xl-contain border rounded" text="Contain on xl" markup="img" />
-<Placeholder width="140" height="80" class="object-fit-xxl-contain border rounded" text="Contain on xxl" markup="img" />`} />
+<Example class="d-flex overflow-auto" code={`<Placeholder width="140" height="80" class="object-fit-sm-contain border rounded" text="Contain en sm" markup="img" />
+<Placeholder width="140" height="80" class="object-fit-md-contain border rounded" text="Contain en md" markup="img" />
+<Placeholder width="140" height="80" class="object-fit-lg-contain border rounded" text="Contain en lg" markup="img" />
+<Placeholder width="140" height="80" class="object-fit-xl-contain border rounded" text="Contain en xl" markup="img" />
+<Placeholder width="140" height="80" class="object-fit-xxl-contain border rounded" text="Contain en xxl" markup="img" />`} />
 
 ## Video
 
-The `.object-fit-{value}` and responsive `.object-fit-{breakpoint}-{value}` utilities also work on `<video>` elements.
+Las utilidades `.object-fit-{value}` y las utilidades responsivas `.object-fit-{breakpoint}-{value}` también funcionan en elementos `<video>`.
 
 ```html
 <video src="..." class="object-fit-contain" autoplay></video>
@@ -52,8 +52,8 @@ The `.object-fit-{value}` and responsive `.object-fit-{breakpoint}-{value}` util
 
 ## CSS
 
-### Sass utilities API
+### API de utilidades de Sass
 
-Object fit utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
+Las utilidades de ajuste de objeto (object fit) se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a utilizar la API de utilidades.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-object-fit" file="scss/_utilities.scss" />

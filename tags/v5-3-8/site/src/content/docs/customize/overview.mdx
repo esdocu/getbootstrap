@@ -1,51 +1,51 @@
 ---
-title: Customize
-description: Learn how to theme, customize, and extend Bootstrap with Sass, a boatload of global options, an expansive color system, and more.
+title: Personalizar
+description: Aprende a tematizar, personalizar y extender Bootstrap con Sass, una gran cantidad de opciones globales, un amplio sistema de colores y más.
 toc: false
 aliases: "/docs/[[config:docs_version]]/customize/"
 sections:
   - title: Sass
-    description: Utilize our source Sass files to take advantage of variables, maps, mixins, and functions.
-  - title: Options
-    description: Customize Bootstrap with built-in variables to easily toggle global CSS preferences.
+    description: Utiliza nuestros archivos Sass fuente para aprovechar las variables, mapas, mixins y funciones.
+  - title: Opciones
+    description: Personaliza Bootstrap con variables integradas para alternar fácilmente las preferencias globales de CSS.
   - title: Color
-    description: Learn about and customize the color systems that support the entire toolkit.
-  - title: Color modes
-    description: Explore our default light mode and the new dark mode, or create custom color modes yourself.
-  - title: Components
-    description: Learn how we build nearly all our components responsively and with base and modifier classes.
-  - title: CSS variables
-    description: Use Bootstrap’s CSS custom properties for fast and forward-looking design and development.
-  - title: Optimize
-    description: Keep your projects lean, responsive, and maintainable so you can deliver the best experience.
+    description: Conoce y personaliza los sistemas de color que respaldan todo el conjunto de herramientas.
+  - title: Modos de color
+    description: Explora nuestro modo claro predeterminado y el nuevo modo oscuro, o crea modos de color personalizados tú mismo.
+  - title: Componentes
+    description: Aprende cómo creamos casi todos nuestros componentes de forma responsiva y con clases base y modificadoras.
+  - title: Variables CSS
+    description: Utiliza las propiedades personalizadas de CSS de Bootstrap para un diseño y desarrollo rápidos y orientados al futuro.
+  - title: Optimizar
+    description: Mantén tus proyectos eficientes, responsivos y fáciles de mantener para ofrecer la mejor experiencia.
 ---
 
-## Overview
+## Resumen
 
-There are multiple ways to customize Bootstrap. Your best path can depend on your project, the complexity of your build tools, the version of Bootstrap you’re using, browser support, and more.
+Existen múltiples formas de personalizar Bootstrap. Tu mejor camino puede depender de tu proyecto, la complejidad de tus herramientas de compilación, la versión de Bootstrap que estés utilizando, el soporte del navegador y más.
 
-Our two preferred methods are:
+Nuestros dos métodos preferidos son:
 
-1. Using Bootstrap [via package manager]([[docsref:/getting-started/download#package-managers]]) so you can use and extend our source files.
-2. Using Bootstrap’s compiled distribution files or [jsDelivr]([[docsref:/getting-started/download#cdn-via-jsdelivr]]) so you can add onto or override Bootstrap’s styles.
+1. Usar Bootstrap [a través de un gestor de paquetes]([[docsref:/getting-started/download#package-managers]]) para que puedas usar y extender nuestros archivos fuente.
+2. Usar los archivos de distribución compilados de Bootstrap o [jsDelivr]([[docsref:/getting-started/download#cdn-via-jsdelivr]]) para que puedas agregar o anular los estilos de Bootstrap.
 
-While we cannot go into details here on how to use every package manager, we can give some guidance on [using Bootstrap with your own Sass compiler]([[docsref:/customize/sass]]).
+Si bien no podemos entrar en detalles aquí sobre cómo usar cada gestor de paquetes, podemos dar alguna guía sobre [el uso de Bootstrap con tu propio compilador Sass]([[docsref:/customize/sass]]).
 
-For those who want to use the distribution files, review the [getting started page]([[docsref:/getting-started/introduction]]) for how to include those files and an example HTML page. From there, consult the docs for the layout, components, and behaviors you’d like to use.
+Para aquellos que deseen utilizar los archivos de distribución, revisen la [página de inicio rápido]([[docsref:/getting-started/introduction]]) para saber cómo incluir esos archivos y ver un ejemplo de página HTML. A partir de ahí, consulta la documentación sobre el diseño, los componentes y los comportamientos que te gustaría utilizar.
 
-As you familiarize yourself with Bootstrap, continue exploring this section for more details on how to utilize our global options, making use of and changing our color system, how we build our components, how to use our growing list of CSS custom properties, and how to optimize your code when building with Bootstrap.
+A medida que te familiarices con Bootstrap, continúa explorando esta sección para obtener más detalles sobre cómo utilizar nuestras opciones globales, hacer uso y cambiar nuestro sistema de color, cómo construimos nuestros componentes, cómo utilizar nuestra lista creciente de propiedades personalizadas de CSS y cómo optimizar tu código al compilar con Bootstrap.
 
-## CSPs and embedded SVGs
+## CSP y SVG incrustados
 
-Several Bootstrap components include embedded SVGs in our CSS to style components consistently and easily across browsers and devices. **For organizations with more strict <abbr title="Content Security Policy">CSP</abbr> configurations**, we’ve documented all instances of our embedded SVGs (all of which are applied via `background-image`) so you can more thoroughly review your options.
+Varios componentes de Bootstrap incluyen SVG incrustados en nuestro CSS para dar estilo a los componentes de manera consistente y fácil en todos los navegadores y dispositivos. **Para organizaciones con configuraciones de <abbr title="Política de seguridad de contenido">CSP</abbr> más estrictas**, hemos documentado todas las instancias de nuestros SVG incrustados (todos los cuales se aplican a través de `background-image`) para que puedas revisar tus opciones más a fondo.
 
-- [Accordion]([[docsref:/components/accordion]])
-- [Carousel controls]([[docsref:/components/carousel#with-controls]])
-- [Close button]([[docsref:/components/close-button]]) (used in alerts and modals)
-- [Form checkboxes and radio buttons]([[docsref:/forms/checks-radios]])
-- [Form switches]([[docsref:/forms/checks-radios#switches]])
-- [Form validation icons]([[docsref:/forms/validation#server-side]])
-- [Navbar toggle buttons]([[docsref:/components/navbar#responsive-behaviors]])
-- [Select menus]([[docsref:/forms/select]])
+- [Acordeón]([[docsref:/components/accordion]])
+- [Controles de carrusel]([[docsref:/components/carousel#with-controls]])
+- [Botón de cierre]([[docsref:/components/close-button]]) (usado en alertas y modales)
+- [Casillas de verificación y botones de opción de formulario (Checkboxes y radios)]([[docsref:/forms/checks-radios]])
+- [Interruptores de formulario (Switches)]([[docsref:/forms/checks-radios#switches]])
+- [Iconos de validación de formulario]([[docsref:/forms/validation#server-side]])
+- [Botones de alternancia de barra de navegación]([[docsref:/components/navbar#responsive-behaviors]])
+- [Menús de selección (Selects)]([[docsref:/forms/select]])
 
-Based on [community conversation](https://github.com/twbs/bootstrap/issues/25394), some options for addressing this in your own codebase include [replacing the URLs with locally hosted assets]([[docsref:/getting-started/webpack#extracting-svg-files]]), removing the images and using inline images (not possible in all components), and modifying your CSP. Our recommendation is to carefully review your own security policies and decide on the best path forward, if necessary.
+Según la [conversación de la comunidad](https://github.com/twbs/bootstrap/issues/25394), algunas opciones para abordar esto en tu propio código base incluyen [reemplazar las URL con recursos alojados localmente]([[docsref:/getting-started/webpack#extracting-svg-files]]), eliminar las imágenes y usar imágenes en línea (no es posible en todos los componentes) y modificar tu CSP. Nuestra recomendación es revisar cuidadosamente tus propias políticas de seguridad y decidir el mejor camino a seguir, si es necesario.

@@ -1,33 +1,33 @@
 ---
-title: Colored links
-description: Colored links with hover states
+title: Enlaces coloreados (Colored links)
+description: Enlaces coloreados con estados de desplazamiento (hover).
 toc: true
 ---
 
 import { getData } from '@libs/data'
 
-## Link colors
+## Colores de enlaces
 
-You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` classes]([[docsref:/utilities/colors]]), these classes have a `:hover` and `:focus` state. Some of the link styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
+Puedes utilizar las clases `.link-*` para colorear enlaces. A diferencia de las [clases `.text-*`]([[docsref:/utilities/colors]]), estas clases tienen un estado `:hover` y `:focus`. Algunos de los estilos de enlaces utilizan un color de primer plano relativamente claro y solo deben usarse sobre un fondo oscuro para tener suficiente contraste.
 
 <Callout>
-**Heads up!** `.link-body-emphasis` is currently the only colored link that adapts to color modes. It’s treated as a special case until v6 arrives and we can more thoroughly rebuild our theme colors for color modes. Until then, it’s a unique, high-contrast link color with custom `:hover` and `:focus` styles. However, it still responds to the new link utilities.
+**¡Atención!** `.link-body-emphasis` es actualmente el único enlace coloreado que se adapta a los modos de color. Se trata como un caso especial hasta que llegue la versión 6 y podamos reconstruir más a fondo los colores de nuestro tema para los modos de color. Hasta entonces, es un color de enlace único y de alto contraste con estilos `:hover` y `:focus` personalizados. Sin embargo, sigue respondiendo a las nuevas utilidades de enlaces.
 </Callout>
 
 <Example code={[
-  ...getData('theme-colors').map((themeColor) => `<p><a href="#" class="link-${themeColor.name}">${themeColor.title} link</a></p>`),
-  `<p><a href="#" class="link-body-emphasis">Emphasis link</a></p>`
+  ...getData('theme-colors').map((themeColor) => `<p><a href="#" class="link-${themeColor.name}">Enlace ${themeColor.title}</a></p>`),
+  `<p><a href="#" class="link-body-emphasis">Enlace destacado (Emphasis link)</a></p>`
 ]} />
 
 <Callout name="warning-color-assistive-technologies" />
 
-## Link utilities
+## Utilidades de enlaces
 
 <AddedIn version="5.3.0"/>
 
-Colored links can also be modified by our [link utilities]([[docsref:/utilities/link/]]).
+Los enlaces coloreados también se pueden modificar mediante nuestras [utilidades de enlaces]([[docsref:/utilities/link/]]).
 
 <Example code={[
-  ...getData('theme-colors').map((themeColor) => `<p><a href="#" class="link-${themeColor.name} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">${themeColor.title} link</a></p>`),
-  `<p><a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Emphasis link</a></p>`
+  ...getData('theme-colors').map((themeColor) => `<p><a href="#" class="link-${themeColor.name} link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Enlace ${themeColor.title}</a></p>`),
+  `<p><a href="#" class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Enlace destacado</a></p>`
 ]} />

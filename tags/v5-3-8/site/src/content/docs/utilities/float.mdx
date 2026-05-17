@@ -1,32 +1,32 @@
 ---
-title: Float
-description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
+title: Flotación (Float)
+description: Alterna flotadores en cualquier elemento, en cualquier punto de interrupción, utilizando nuestras utilidades de flotación responsivas.
 toc: true
 ---
 
 import { getData } from '@libs/data'
 
-## Overview
+## Resumen
 
-These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.
+Estas clases de utilidad flotan un elemento hacia la izquierda o hacia la derecha, o desactivan la flotación, según el tamaño actual de la ventana gráfica utilizando la [propiedad CSS `float`](https://developer.mozilla.org/es/docs/Web/CSS/float). Se incluye `!important` para evitar problemas de especificidad. Estos utilizan los mismos puntos de interrupción de ventana gráfica que nuestro sistema de cuadrícula. Ten en cuenta que las utilidades de flotación no tienen efecto en los elementos flex.
 
-<Example code={`<div class="float-start">Float start on all viewport sizes</div><br>
-<div class="float-end">Float end on all viewport sizes</div><br>
-<div class="float-none">Don’t float on all viewport sizes</div>`} />
+<Example code={`<div class="float-start">Flotar al inicio en todos los tamaños de ventana gráfica</div><br>
+<div class="float-end">Flotar al final en todos los tamaños de ventana gráfica</div><br>
+<div class="float-none">No flotar en todos los tamaños de ventana gráfica</div>`} />
 
-Use the [clearfix helper]([[docsref:/helpers/clearfix]]) on a parent element to clear floats.
+Usa el [ayudante clearfix]([[docsref:/helpers/clearfix]]) en un elemento padre para limpiar las flotaciones.
 
-## Responsive
+## Responsivo
 
-Responsive variations also exist for each `float` value.
+También existen variantes responsivas para cada valor de `float`.
 
-<Example code={`<div class="float-sm-end">Float end on viewports sized SM (small) or wider</div><br>
-<div class="float-md-end">Float end on viewports sized MD (medium) or wider</div><br>
-<div class="float-lg-end">Float end on viewports sized LG (large) or wider</div><br>
-<div class="float-xl-end">Float end on viewports sized XL (extra large) or wider</div><br>
-<div class="float-xxl-end">Float end on viewports sized XXL (extra extra large) or wider</div><br>`} />
+<Example code={`<div class="float-sm-end">Flotar al final en ventanas gráficas de tamaño SM (pequeño) o más anchas</div><br>
+<div class="float-md-end">Flotar al final en ventanas gráficas de tamaño MD (mediano) o más anchas</div><br>
+<div class="float-lg-end">Flotar al final en ventanas gráficas de tamaño LG (grande) o más anchas</div><br>
+<div class="float-xl-end">Flotar al final en ventanas gráficas de tamaño XL (extra grande) o más anchas</div><br>
+<div class="float-xxl-end">Flotar al final en ventanas gráficas de tamaño XXL (extra extra grande) o más anchas</div><br>`} />
 
-Here are all the support classes:
+Aquí están todas las clases compatibles:
 
 <ul>
 {getData('breakpoints').map((breakpoint) => {
@@ -42,8 +42,8 @@ Here are all the support classes:
 
 ## CSS
 
-### Sass utilities API
+### API de utilidades de Sass
 
-Float utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
+Las utilidades de flotación se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a utilizar la API de utilidades.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-float" file="scss/_utilities.scss" />

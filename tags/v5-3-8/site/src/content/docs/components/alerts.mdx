@@ -1,69 +1,69 @@
 ---
-title: Alerts
-description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+title: Alertas
+description: Proporciona mensajes de comentarios contextuales para las acciones típicas del usuario con un puñado de mensajes de alerta disponibles y flexibles.
 toc: true
 ---
 
 import { getData } from '@libs/data'
 
-## Examples
+## Ejemplos
 
-Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the eight **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts JavaScript plugin](#dismissing).
+Las alertas están disponibles para cualquier longitud de texto, así como con un botón de cierre opcional. Para un estilo adecuado, utiliza una de las ocho clases contextuales **requeridas** (por ejemplo, `.alert-success`). Para el descarte en línea, utiliza el [plugin de JavaScript de alertas](#descarte).
 
 <Callout>
-**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
+**¡Atención!** A partir de la v5.3.0, el mixin de Sass `alert-variant()` está en desuso (deprecated). Las variantes de alerta ahora tienen sus variables CSS anuladas en [un bucle Sass](#bucles-sass).
 </Callout>
 
 <Example code={getData('theme-colors').map((themeColor) => `<div class="alert alert-${themeColor.name}" role="alert">
-    A simple ${themeColor.name} alert—check it out!
+    Una alerta simple de tipo ${themeColor.name}—¡compruébalo!
   </div>`)} />
 
 <Callout name="warning-color-assistive-technologies" />
 
-### Live example
+### Ejemplo en vivo
 
-Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
+Haz clic en el botón a continuación para mostrar una alerta (oculta con estilos en línea al principio), luego descártala (y destrúyela) con el botón de cierre incorporado.
 
 <Example addStackblitzJs code={`<div id="liveAlertPlaceholder"></div>
-<button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>`} />
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Mostrar alerta en vivo</button>`} />
 
-We use the following JavaScript to trigger our live alert demo:
+Utilizamos el siguiente JavaScript para activar nuestra demostración de alerta en vivo:
 
 <JsDocs name="live-alert" file="site/src/assets/partials/snippets.js" />
 
-### Link color
+### Color de enlace
 
-Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+Utiliza la clase de utilidad `.alert-link` para proporcionar rápidamente enlaces de colores coincidentes dentro de cualquier alerta.
 
 <Example code={getData('theme-colors').map((themeColor) => `<div class="alert alert-${themeColor.name}" role="alert">
-    A simple ${themeColor.name} alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    Una alerta simple de tipo ${themeColor.name} con <a href="#" class="alert-link">un enlace de ejemplo</a>. Haz clic en él si lo deseas.
   </div>`)} />
 
-### Additional content
+### Contenido adicional
 
-Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+Las alertas también pueden contener elementos HTML adicionales como encabezados, párrafos y divisores.
 
 <Example code={`<div class="alert alert-success" role="alert">
-    <h4 class="alert-heading">Well done!</h4>
-    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <h4 class="alert-heading">¡Bien hecho!</h4>
+    <p>¡Excelente! Leíste con éxito este importante mensaje de alerta. Este texto de ejemplo se va a extender un poco más para que puedas ver cómo funciona el espaciado dentro de una alerta con este tipo de contenido.</p>
     <hr>
-    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    <p class="mb-0">Siempre que lo necesites, asegúrate de utilizar utilidades de margen para mantener todo limpio y ordenado.</p>
   </div>`} />
 
-### Icons
+### Iconos
 
-Similarly, you can use [flexbox utilities]([[docsref:/utilities/flex]]) and [Bootstrap Icons]([[config:icons]]) to create alerts with icons. Depending on your icons and content, you may want to add more utilities or custom styles.
+De manera similar, puedes usar [utilidades de flexbox]([[docsref:/utilities/flex]]) y [Bootstrap Icons]([[config:icons]]) para crear alertas con iconos. Dependiendo de tus iconos y contenido, es posible que desees agregar más utilidades o estilos personalizados.
 
 <Example code={`<div class="alert alert-primary d-flex align-items-center" role="alert">
     <svg xmlns="http://www.w3.org/2000/svg" class="bi flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
       <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
     </svg>
     <div>
-      An example alert with an icon
+      Un ejemplo de alerta con un icono
     </div>
   </div>`} />
 
-Need more than one icon for your alerts? Consider using more Bootstrap Icons and making a local SVG sprite like so to easily reference the same icons repeatedly.
+¿Necesitas más de un icono para tus alertas? Considera usar más Bootstrap Icons y crear un sprite SVG local como este para hacer referencia fácilmente a los mismos iconos de forma repetida.
 
 <Example code={`<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check-circle-fill" viewBox="0 0 16 16">
@@ -76,50 +76,50 @@ Need more than one icon for your alerts? Consider using more Bootstrap Icons and
       <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
     </symbol>
   </svg>
-
+ 
   <div class="alert alert-primary d-flex align-items-center" role="alert">
     <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
     <div>
-      An example alert with an icon
+      Un ejemplo de alerta con un icono
     </div>
   </div>
   <div class="alert alert-success d-flex align-items-center" role="alert">
     <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
     <div>
-      An example success alert with an icon
+      Un ejemplo de alerta de éxito con un icono
     </div>
   </div>
   <div class="alert alert-warning d-flex align-items-center" role="alert">
     <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
     <div>
-      An example warning alert with an icon
+      Un ejemplo de alerta de advertencia con un icono
     </div>
   </div>
   <div class="alert alert-danger d-flex align-items-center" role="alert">
     <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
     <div>
-      An example danger alert with an icon
+      Un ejemplo de alerta de peligro con un icono
     </div>
   </div>`} />
 
-### Dismissing
+### Descarte
 
-Using the alert JavaScript plugin, it’s possible to dismiss any alert inline. Here’s how:
+Usando el plugin de JavaScript de alerta, es posible descartar cualquier alerta en línea. Así es cómo:
 
-- Be sure you’ve loaded the alert plugin, or the compiled Bootstrap JavaScript.
-- Add a [close button]([[docsref:/components/close-button]]) and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the close button.
-- On the close button, add the `data-bs-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
-- To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
+- Asegúrate de haber cargado el plugin de alerta o el archivo JavaScript compilado de Bootstrap.
+- Agrega un [botón de cierre]([[docsref:/components/close-button]]) y la clase `.alert-dismissible`, que agrega espaciado (padding) adicional a la derecha de la alerta y posiciona el botón de cierre.
+- En el botón de cierre, agrega el atributo `data-bs-dismiss="alert"`, que activa la funcionalidad de JavaScript. Asegúrate de usar el elemento `<button>` con él para un comportamiento adecuado en todos los dispositivos.
+- Para animar las alertas al descartarlas, asegúrate de agregar las clases `.fade` y `.show`.
 
-You can see this in action with a live demo:
+Puedes ver esto en acción con una demostración en vivo:
 
 <Example code={`<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <strong>¡Santo guacamole!</strong> Deberías revisar algunos de esos campos a continuación.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
   </div>`} />
 
 <Callout type="warning">
-When an alert is dismissed, the element is completely removed from the page structure. If a keyboard user dismisses the alert using the close button, their focus will suddenly be lost and, depending on the browser, reset to the start of the page/document. For this reason, we recommend including additional JavaScript that listens for the `closed.bs.alert` event and programmatically sets `focus()` to the most appropriate location in the page. If you’re planning to move focus to a non-interactive element that normally does not receive focus, make sure to add `tabindex="-1"` to the element.
+Cuando se descarta una alerta, el elemento se elimina por completo de la estructura de la página. Si un usuario de teclado descarta la alerta utilizando el botón de cierre, su enfoque se perderá repentinamente y, según el navegador, se restablecerá al inicio de la página/documento. Por esta razón, recomendamos incluir JavaScript adicional que escuche el evento `closed.bs.alert` y establezca mediante programación el `focus()` en la ubicación más adecuada de la página. Si planeas mover el enfoque a un elemento no interactivo que normalmente no recibe el enfoque, asegúrate de agregar `tabindex="-1"` al elemento.
 </Callout>
 
 ## CSS
@@ -128,31 +128,31 @@ When an alert is dismissed, the element is completely removed from the page stru
 
 <AddedIn version="5.2.0" />
 
-As part of Bootstrap’s evolving CSS variables approach, alerts now use local CSS variables on `.alert` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Como parte del enfoque evolutivo de las variables CSS de Bootstrap, las alertas ahora usan variables CSS locales en `.alert` para una personalización mejorada en tiempo real. Los valores de las variables CSS se establecen a través de Sass, por lo que la personalización de Sass también es compatible.
 
 <ScssDocs name="alert-css-vars" file="scss/_alert.scss" />
 
-### Sass variables
+### Variables de Sass
 
 <ScssDocs name="alert-variables" file="scss/_variables.scss" />
 
-### Sass mixins
+### Mixins de Sass
 
 <DeprecatedIn version="5.3.0" />
 
 <ScssDocs name="alert-variant-mixin" file="scss/mixins/_alert.scss" removeIndentation={false} />
 
-### Sass loops
+### Bucles Sass
 
-Loop that generates the modifier classes with an overriding of CSS variables.
+Bucle que genera las clases modificadoras con una anulación de las variables CSS.
 
 <ScssDocs name="alert-modifiers" file="scss/_alert.scss" removeIndentation={false} />
 
-## JavaScript behavior
+## Comportamiento de JavaScript
 
-### Initialize
+### Inicializar
 
-Initialize elements as alerts
+Inicializar elementos como alertas
 
 ```js
 const alertList = document.querySelectorAll('.alert')
@@ -160,59 +160,59 @@ const alerts = [...alertList].map(element => new bootstrap.Alert(element))
 ```
 
 <Callout>
-For the sole purpose of dismissing an alert, it isn’t necessary to initialize the component manually via the JS API. By making use of `data-bs-dismiss="alert"`, the component will be initialized automatically and properly dismissed.
+Con el único propósito de descartar una alerta, no es necesario inicializar el componente manualmente a través de la API de JS. Al hacer uso de `data-bs-dismiss="alert"`, el componente se inicializará automáticamente y se descartará correctamente.
 
-See the [triggers](#triggers) section for more details.
+Consulte la sección de [disparadores](#disparadores) para obtener más detalles.
 </Callout>
 
-### Triggers
+### Disparadores
 
 <JsDismiss name="alert" />
 
-**Note that closing an alert will remove it from the DOM.**
+**Ten en cuenta que cerrar una alerta la eliminará del DOM.**
 
-### Methods
+### Métodos
 
-You can create an alert instance with the alert constructor, for example:
+Puedes crear una instancia de alerta con el constructor de alertas, por ejemplo:
 
 ```js
 const bsAlert = new bootstrap.Alert('#myAlert')
 ```
 
-This makes an alert listen for click events on descendant elements which have the `data-bs-dismiss="alert"` attribute. (Not necessary when using the data-api’s auto-initialization.)
+Esto hace que una alerta escuche los eventos de clic en los elementos descendientes que tienen el atributo `data-bs-dismiss="alert"`. (No es necesario cuando se utiliza la inicialización automática de la data-api).
 
 <BsTable>
-| Method | Description |
+| Método | Descripción |
 | --- | --- |
-| `close` | Closes an alert by removing it from the DOM. If the `.fade` and `.show` classes are present on the element, the alert will fade out before it is removed. |
-| `dispose` | Destroys an element’s alert. (Removes stored data on the DOM element) |
-| `getInstance` | Static method which allows you to get the alert instance associated to a DOM element. For example: `bootstrap.Alert.getInstance(alert)`. |
-| `getOrCreateInstance` | Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn’t initialized. You can use it like this: `bootstrap.Alert.getOrCreateInstance(element)`. |
+| `close` | Cierra una alerta eliminándola del DOM. Si las clases `.fade` y `.show` están presentes en el elemento, la alerta se desvanecerá antes de ser eliminada. |
+| `dispose` | Destruye la alerta de un elemento. (Elimina los datos almacenados en el elemento DOM) |
+| `getInstance` | Método estático que te permite obtener la instancia de alerta asociada a un elemento DOM. Por ejemplo: `bootstrap.Alert.getInstance(alert)`. |
+| `getOrCreateInstance` | Método estático que devuelve una instancia de alerta asociada a un elemento DOM o crea una nueva en caso de que no haya sido inicializada. Puedes usarlo así: `bootstrap.Alert.getOrCreateInstance(element)`. |
 </BsTable>
 
-Basic usage:
+Uso básico:
 
 ```js
 const alert = bootstrap.Alert.getOrCreateInstance('#myAlert')
 alert.close()
 ```
 
-### Events
+### Eventos
 
-Bootstrap’s alert plugin exposes a few events for hooking into alert functionality.
+El plugin de alerta de Bootstrap expone algunos eventos para conectarse a la funcionalidad de alerta.
 
 <BsTable>
-| Event | Description |
+| Evento | Descripción |
 | --- | --- |
-| `close.bs.alert` | Fires immediately when the `close` instance method is called. |
-| `closed.bs.alert` | Fired when the alert has been closed and CSS transitions have completed. |
+| `close.bs.alert` | Se dispara inmediatamente cuando se llama al método de instancia `close`. |
+| `closed.bs.alert` | Se dispara cuando la alerta se ha cerrado y se han completado las transiciones CSS. |
 </BsTable>
 
 ```js
 const myAlert = document.getElementById('myAlert')
 myAlert.addEventListener('closed.bs.alert', event => {
-  // do something, for instance, explicitly move focus to the most appropriate element,
-  // so it doesn’t get lost/reset to the start of the page
+  // hacer algo, por ejemplo, mover explícitamente el enfoque al elemento más apropiado,
+  // para que no se pierda/restablezca al inicio de la página
   // document.getElementById('...').focus()
 })
 ```

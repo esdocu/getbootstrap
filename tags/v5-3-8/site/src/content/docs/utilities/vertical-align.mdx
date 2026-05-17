@@ -1,15 +1,15 @@
 ---
-title: Vertical alignment
-description: Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
+title: Alineación vertical (Vertical alignment)
+description: Cambia fácilmente la alineación vertical de elementos en línea, inline-block, inline-table y celdas de tabla.
 ---
 
-Change the alignment of elements with the [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
+Cambia la alineación de los elementos con las utilidades de [`vertical-alignment`](https://developer.mozilla.org/es/docs/Web/CSS/vertical-align). Ten en cuenta que vertical-align solo afecta a elementos en línea, inline-block, inline-table y celdas de tabla.
 
-Choose from `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, and `.align-text-top` as needed.
+Elige entre `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom` y `.align-text-top` según sea necesario.
 
-To vertically center non-inline content (like `<div>`s and more), use our [flex box utilities]([[docsref:/utilities/flex#align-items]]).
+Para centrar verticalmente contenido que no está en línea (como `<div>` y más), usa nuestras [utilidades flexbox]([[docsref:/utilities/flex#align-items]]).
 
-With inline elements:
+Con elementos en línea:
 
 <Example code={`<span class="align-baseline">baseline</span>
 <span class="align-top">top</span>
@@ -18,7 +18,7 @@ With inline elements:
 <span class="align-text-top">text-top</span>
 <span class="align-text-bottom">text-bottom</span>`} />
 
-With table cells:
+Con celdas de tabla:
 
 <Example code={`<table style="height: 100px;">
     <tbody>
@@ -35,8 +35,8 @@ With table cells:
 
 ## CSS
 
-### Sass utilities API
+### API de utilidades de Sass
 
-Vertical align utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]([[docsref:/utilities/api#using-the-api]])
+Las utilidades de alineación vertical se declaran en nuestra API de utilidades en `scss/_utilities.scss`. [Aprende a utilizar la API de utilidades.]([[docsref:/utilities/api#using-the-api]])
 
 <ScssDocs name="utils-vertical-align" file="scss/_utilities.scss" />
