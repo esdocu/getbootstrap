@@ -6,7 +6,7 @@ export const GET: APIRoute = function GET({ site }) {
 
   const allowCrawling = !isNetlify && isProduction
 
-  const robotsTxt = `# www.robotstxt.org${allowCrawling ? '\n# Allow crawling of all content' : ''}
+  const robotsTxt = `# www.robotstxt.org${allowCrawling ? '\n# Permitir el rastreo de todo el contenido' : ''}
 User-agent: *
 Disallow: ${allowCrawling ? '' : '/'}
 Sitemap: ${new URL('sitemap-index.xml', site)}

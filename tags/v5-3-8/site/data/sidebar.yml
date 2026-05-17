@@ -1,159 +1,275 @@
 # This file holds all sidebar menu's entries.
 # The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
 
-- title: Getting started
+- title: Primeros pasos
+  slug: getting-started
   icon: book-half
   icon_color: indigo
   pages:
-    - title: Introduction
-    - title: Download
-    - title: Contents
-    - title: Browsers & devices
+    - title: Introducción
+      slug: introduction
+    - title: Descarga
+      slug: download
+    - title: Contenidos
+      slug: contents
+    - title: Navegadores y dispositivos
+      slug: browsers-devices
     - title: JavaScript
+      slug: javascript
     - title: Webpack
+      slug: webpack
     - title: Parcel
+      slug: parcel
     - title: Vite
-    - title: Accessibility
+      slug: vite
+    - title: Accesibilidad
+      slug: accessibility
     - title: RFS
+      slug: rfs
     - title: RTL
-    - title: Contribute
+      slug: rtl
+    - title: Contribuir
+      slug: contribute
 
-- title: Customize
+- title: Personalizar
+  slug: customize
   icon: palette2
   icon_color: pink
   pages:
-    - title: Overview
+    - title: Información general
+      slug: overview
     - title: Sass
-    - title: Options
+      slug: sass
+    - title: Opciones
+      slug: options
     - title: Color
-    - title: Color modes
-    - title: Components
-    - title: CSS variables
-    - title: Optimize
+      slug: color
+    - title: Modos de color
+      slug: color-modes
+    - title: Componentes
+      slug: components
+    - title: Variables CSS
+      slug: css-variables
+    - title: Optimizar
+      slug: optimize
 
-- title: Layout
+- title: Diseño
+  slug: layout
   icon: grid-fill
   icon_color: teal
   pages:
-    - title: Breakpoints
-    - title: Containers
-    - title: Grid
-    - title: Columns
-    - title: Gutters
-    - title: Utilities
+    - title: Puntos de interrupción
+      slug: breakpoints
+    - title: Contenedores
+      slug: containers
+    - title: Cuadrícula
+      slug: grid
+    - title: Columnas
+      slug: columns
+    - title: Medianiles
+      slug: gutters
+    - title: Utilidades
+      slug: utilities
     - title: Z-index
+      slug: z-index
     - title: CSS Grid
+      slug: css-grid
 
-- title: Content
+- title: Contenido
+  slug: content
   icon: file-earmark-richtext
   icon_color: gray
   pages:
     - title: Reboot
-    - title: Typography
-    - title: Images
-    - title: Tables
-    - title: Figures
+      slug: reboot
+    - title: Tipografía
+      slug: typography
+    - title: Imágenes
+      slug: images
+    - title: Tablas
+      slug: tables
+    - title: Figuras
+      slug: figures
 
-- title: Forms
+- title: Formularios
+  slug: forms
   icon: ui-radios
   icon_color: blue
   pages:
-    - title: Overview
-    - title: Form control
+    - title: Información general
+      slug: overview
+    - title: Control de formulario
+      slug: form-control
     - title: Select
-    - title: Checks & radios
-    - title: Range
-    - title: Input group
-    - title: Floating labels
-    - title: Layout
-    - title: Validation
+      slug: select
+    - title: Checks y radios
+      slug: checks-radios
+    - title: Rango
+      slug: range
+    - title: Grupo de entrada
+      slug: input-group
+    - title: Etiquetas flotantes
+      slug: floating-labels
+    - title: Diseño
+      slug: layout
+    - title: Validación
+      slug: validation
 
-- title: Components
+- title: Componentes
+  slug: components
   icon: menu-button-wide-fill
   icon_color: cyan
   pages:
-    - title: Accordion
-    - title: Alerts
-    - title: Badge
-    - title: Breadcrumb
-    - title: Buttons
-    - title: Button group
-    - title: Card
-    - title: Carousel
-    - title: Close button
-    - title: Collapse
+    - title: Acordeón
+      slug: accordion
+    - title: Alertas
+      slug: alerts
+    - title: Insignias
+      slug: badge
+    - title: Miga de pan
+      slug: breadcrumb
+    - title: Botones
+      slug: buttons
+    - title: Grupo de botones
+      slug: button-group
+    - title: Tarjetas
+      slug: card
+    - title: Carrusel
+      slug: carousel
+    - title: Botón de cierre
+      slug: close-button
+    - title: Colapso
+      slug: collapse
     - title: Dropdowns
-    - title: List group
+      slug: dropdowns
+    - title: Grupo de listas
+      slug: list-group
     - title: Modal
-    - title: Navbar
-    - title: Navs & tabs
+      slug: modal
+    - title: Barra de navegación
+      slug: navbar
+    - title: Navs y pestañas
+      slug: navs-tabs
     - title: Offcanvas
-    - title: Pagination
+      slug: offcanvas
+    - title: Paginación
+      slug: pagination
     - title: Placeholders
+      slug: placeholders
     - title: Popovers
-    - title: Progress
+      slug: popovers
+    - title: Progreso
+      slug: progress
     - title: Scrollspy
+      slug: scrollspy
     - title: Spinners
+      slug: spinners
     - title: Toasts
+      slug: toasts
     - title: Tooltips
+      slug: tooltips
 
 - title: Helpers
+  slug: helpers
   icon: magic
   icon_color: orange
   pages:
     - title: Clearfix
-    - title: Color & background
-    - title: Colored links
-    - title: Focus ring
-    - title: Icon link
-    - title: Position
+      slug: clearfix
+    - title: Color y fondo
+      slug: color-background
+    - title: Enlaces coloreados
+      slug: colored-links
+    - title: Anillo de enfoque
+      slug: focus-ring
+    - title: Enlace de icono
+      slug: icon-link
+    - title: Posición
+      slug: position
     - title: Ratio
+      slug: ratio
     - title: Stacks
-    - title: Stretched link
-    - title: Text truncation
-    - title: Vertical rule
-    - title: Visually hidden
+      slug: stacks
+    - title: Enlace estirado
+      slug: stretched-link
+    - title: Truncamiento de texto
+      slug: text-truncation
+    - title: Regla vertical
+      slug: vertical-rule
+    - title: Oculto visualmente
+      slug: visually-hidden
 
-- title: Utilities
+- title: Utilidades
+  slug: utilities
   icon: braces-asterisk
   icon_color: red
   pages:
     - title: API
-    - title: Background
-    - title: Borders
-    - title: Colors
+      slug: api
+    - title: Fondo
+      slug: background
+    - title: Bordes
+      slug: borders
+    - title: Colores
+      slug: colors
     - title: Display
+      slug: display
     - title: Flex
+      slug: flex
     - title: Float
-    - title: Interactions
-    - title: Link
+      slug: float
+    - title: Interacciones
+      slug: interactions
+    - title: Enlace
+      slug: link
     - title: Object fit
-    - title: Opacity
-    - title: Overflow
-    - title: Position
-    - title: Shadows
-    - title: Sizing
-    - title: Spacing
-    - title: Text
-    - title: Vertical align
-    - title: Visibility
+      slug: object-fit
+    - title: Opacidad
+      slug: opacity
+    - title: Desbordamiento
+      slug: overflow
+    - title: Posición
+      slug: position
+    - title: Sombras
+      slug: shadows
+    - title: Tamaño
+      slug: sizing
+    - title: Espaciado
+      slug: spacing
+    - title: Texto
+      slug: text
+    - title: Alineación vertical
+      slug: vertical-align
+    - title: Visibilidad
+      slug: visibility
     - title: Z-index
+      slug: z-index
 
-- title: Extend
+- title: Extender
+  slug: extend
   icon: tools
   icon_color: blue
   pages:
-    - title: Approach
-    - title: Icons
+    - title: Enfoque
+      slug: approach
+    - title: Iconos
+      slug: icons
 
-- title: About
+- title: Acerca de
+  slug: about
   icon: globe2
   icon_color: indigo
   pages:
-    - title: Overview
-    - title: Team
-    - title: Brand
-    - title: License
-    - title: Translations
+    - title: Información general
+      slug: overview
+    - title: Equipo
+      slug: team
+    - title: Marca
+      slug: brand
+    - title: Licencia
+      slug: license
+    - title: Traducciones
+      slug: translations
 
-- title: Migration
+- title: Migración
+  slug: migration

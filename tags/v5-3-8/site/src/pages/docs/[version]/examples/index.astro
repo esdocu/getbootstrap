@@ -12,8 +12,8 @@ export function getStaticPaths() {
 ---
 
 <SingleLayout
-  title="Examples"
-  description="Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts."
+  title="Ejemplos"
+  description="Comienza rápidamente un proyecto con cualquiera de nuestros ejemplos, que van desde el uso de partes del framework hasta componentes y diseños personalizados."
 >
   <div class="d-flex flex-column flex-md-row gap-3" slot="header-content">
     <a
@@ -21,9 +21,9 @@ export function getStaticPaths() {
       class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold"
     >
       <svg class="bi me-2" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
-      Download examples
+      Descargar ejemplos
     </a>
-    <a href={getConfig().download.source} class="btn btn-lg bd-btn-lg btn-outline-secondary"> Download source code</a>
+    <a href={getConfig().download.source} class="btn btn-lg bd-btn-lg btn-outline-secondary"> Descargar código fuente</a>
   </div>
   <Fragment slot="main-content">
     <ExamplesMain />

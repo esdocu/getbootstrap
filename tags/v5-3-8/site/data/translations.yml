@@ -3,22 +3,22 @@
   description: Bootstrap 5 繁體中文手冊
   url: https://bootstrap5.hexschool.com/
 
-- name: Simplified Chinese
+- name: Chino simplificado
   code: zh-CN
   description: Bootstrap 5 中文文档
   url: https://v5.bootcss.com/
 
-- name: Japanese
+- name: Japonés
   code: ja
   description: Bootstrap 5 日本語リファレンス
   url: https://getbootstrap.jp/
 
-- name: Russian
+- name: Ruso
   code: ru
   description: Bootstrap 5 на русском
   url: https://getbootstrap.su/
 
-- name: Korean
+- name: Coreano
   code: ko
   description: Bootstrap 5 한국어 문서
   url: https://getbootstrap.kr/

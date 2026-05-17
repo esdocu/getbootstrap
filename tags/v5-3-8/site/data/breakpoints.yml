@@ -1,35 +1,35 @@
 - breakpoint: xs
   abbr: ''
-  name: X-Small
+  name: Extra pequeño
   min-width: 0px
   container: ''
 
 - breakpoint: sm
   abbr: -sm
-  name: Small
+  name: Pequeño
   min-width: 576px
   container: 540px
 
 - breakpoint: md
   abbr: -md
-  name: Medium
+  name: Mediano
   min-width: 768px
   container: 720px
 
 - breakpoint: lg
   abbr: -lg
-  name: Large
+  name: Grande
   min-width: 992px
   container: 960px
 
 - breakpoint: xl
   abbr: -xl
-  name: X-Large
+  name: Extra grande
   min-width: 1200px
   container: 1140px
 
 - breakpoint: xxl
   abbr: -xxl
-  name: XX-Large
+  name: Extra extra grande
   min-width: 1400px
   container: 1320px

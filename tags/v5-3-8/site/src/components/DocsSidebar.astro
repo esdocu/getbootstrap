@@ -11,7 +11,7 @@ const sidebar = getData('sidebar')
   <ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2">
     {
       sidebar.map((group) => {
-        const groupSlug = getSlug(group.title)
+        const groupSlug = group.slug || getSlug(group.title)
 
         if (group.pages) {
           return (
@@ -30,7 +30,7 @@ const sidebar = getData('sidebar')
               </strong>
               <ul class="list-unstyled fw-normal pb-2 small">
                 {group.pages?.map((page) => {
-                  const docSlug = getSlug(page.title)
+                  const docSlug = page.slug || getSlug(page.title)
                   const unversionedPageSlug = `${groupSlug}/${docSlug}`
 
                   const url = `/docs/${getConfig().docs_version}/${unversionedPageSlug}`

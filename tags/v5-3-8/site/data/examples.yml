@@ -1,141 +1,141 @@
-- category: Starters
+- category: Plantillas de inicio
   external: true
-  description: 'Functional examples of using Bootstrap in common JS frameworks like Webpack, Parcel, Vite, and more you can edit in StackBlitz.'
+  description: 'Ejemplos funcionales del uso de Bootstrap en frameworks comunes de JS como Webpack, Parcel, Vite y más, que puedes editar en StackBlitz.'
   examples:
-    - name: CDN starter
-      description: "Instantly include Bootstrap's compiled CSS and JavaScript via the jsDelivr CDN."
+    - name: Inicio con CDN
+      description: "Incluye instantáneamente el CSS y JavaScript compilados de Bootstrap a través del CDN de jsDelivr."
       url: /examples/tree/main/starter
-    - name: Sass & JS
-      description: "Use npm to import and compile Bootstrap's Sass with Autoprefixer and Stylelint, plus our bundled JavaScript."
+    - name: Sass y JS
+      description: "Usa npm para importar y compilar el Sass de Bootstrap con Autoprefixer y Stylelint, además de nuestro JavaScript empaquetado."
       url: /examples/tree/main/sass-js
-    - name: Sass & ESM JS
-      description: "Import and compile Bootstrap's Sass with Autoprefixer and Stylelint, and compile our source JavaScript with an ESM shim."
+    - name: Sass y ESM JS
+      description: "Importa y compila el Sass de Bootstrap con Autoprefixer y Stylelint, y compila nuestro JavaScript de origen con un shim ESM."
       url: /examples/tree/main/sass-js-esm
-    - name: Bootstrap color modes
-      description: "Import and compile Bootstrap's Sass with Stylelint, and the Bootstrap color modes."
+    - name: Modos de color de Bootstrap
+      description: "Importa y compila el Sass de Bootstrap con Stylelint, y los modos de color de Bootstrap."
       url: /examples/tree/main/color-modes
-    - name: Bootstrap Icons
-      description: "Import and compile Bootstrap's Sass with Stylelint, PurgeCSS, and the Bootstrap Icons web font."
+    - name: Iconos de Bootstrap
+      description: "Importa y compila el Sass de Bootstrap con Stylelint, PurgeCSS y la fuente web de Bootstrap Icons."
       url: /examples/tree/main/icons-font
     - name: Parcel
-      description: "Import and bundle Bootstrap's source Sass and JavaScript via Parcel."
+      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap a través de Parcel."
       url: /examples/tree/main/parcel
       indexPath: src/index.html
     - name: React
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with React, Next.js, and React Bootstrap."
+      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con React, Next.js y React Bootstrap."
       url: /examples/tree/main/react-nextjs
       indexPath: src/pages/index.tsx
     - name: Vite
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with Vite."
+      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con Vite."
       url: /examples/tree/main/vite
     - name: Vue
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with Vue and Vite."
+      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con Vue y Vite."
       url: /examples/tree/main/vue
     - name: Webpack
-      description: "Import and bundle Bootstrap's source Sass and JavaScript with Webpack."
+      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con Webpack."
       url: /examples/tree/main/webpack
       indexPath: src/index.html
 
-- category: Snippets
-  description: 'Common patterns for building sites and apps that build on existing components and utilities with custom CSS and more.'
+- category: Fragmentos
+  description: 'Patrones comunes para construir sitios y aplicaciones que se basan en componentes y utilidades existentes con CSS personalizado y más.'
   examples:
-    - name: Headers
-      description: 'Display your branding, navigation, search, and more with these header components'
+    - name: Cabeceras
+      description: 'Muestra tu marca, navegación, búsqueda y más con estos componentes de cabecera'
     - name: Heroes
-      description: 'Set the stage on your homepage with heroes that feature clear calls to action.'
-    - name: Features
-      description: 'Explain the features, benefits, or other details in your marketing content.'
-    - name: Sidebars
-      description: 'Common navigation patterns ideal for offcanvas or multi-column layouts.'
-    - name: Footers
-      description: 'Finish every page strong with an awesome footer, big or small.'
+      description: 'Prepara el escenario en tu página de inicio con secciones hero que presentan llamadas a la acción claras.'
+    - name: Características
+      description: 'Explica las características, beneficios u otros detalles en tu contenido de marketing.'
+    - name: Barras laterales
+      description: 'Patrones de navegación comunes ideales para diseños offcanvas o de múltiples columnas.'
+    - name: Pies de página
+      description: 'Termina cada página con fuerza con un pie de página increíble, grande o pequeño.'
     - name: Dropdowns
-      description: 'Enhance your dropdowns with filters, icons, custom styles, and more.'
-    - name: List groups
-      description: 'Extend list groups with utilities and custom styles for any content.'
-    - name: Modals
-      description: 'Transform modals to serve any purpose, from feature tours to dialogs.'
-    - name: Badges
-      description: 'Make badges work with custom inner HTML and new looks.'
-    - name: Breadcrumbs
-      description: 'Integrate custom icons and create stepper components.'
-    - name: Buttons
-      description: 'Create custom buttons for just about any use case with utilities.'
+      description: 'Mejora tus menús desplegables con filtros, iconos, estilos personalizados y más.'
+    - name: Grupos de listas
+      description: 'Extiende los grupos de listas con utilidades y estilos personalizados para cualquier contenido.'
+    - name: Modales
+      description: 'Transforma los modales para cumplir cualquier propósito, desde recorridos por funciones hasta diálogos.'
+    - name: Insignias
+      description: 'Haz que las insignias funcionen con HTML interno personalizado y nuevos aspectos.'
+    - name: Migas de pan
+      description: 'Integra iconos personalizados y crea componentes de pasos.'
+    - name: Botones
+      description: 'Crea botones personalizados para casi cualquier caso de uso con utilidades.'
     - name: Jumbotrons
-      description: 'Create modernized versions of the classic Bootstrap component.'
+      description: 'Crea versiones modernizadas del clásico componente Bootstrap.'
 
-- category: Custom Components
-  description: 'Brand-new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework.'
+- category: Componentes personalizados
+  description: 'Componentes y plantillas completamente nuevos para ayudar a las personas a comenzar rápidamente con Bootstrap y demostrar las mejores prácticas para extender el framework.'
   examples:
-    - name: Album
-      description: 'Simple one-page template for photo galleries, portfolios, and more.'
-    - name: Pricing
-      description: 'Example pricing page built with Cards and featuring a custom header and footer.'
+    - name: Álbum
+      description: 'Plantilla simple de una sola página para galerías de fotos, portafolios y más.'
+    - name: Precios
+      description: 'Ejemplo de página de precios creada con Tarjetas y que presenta una cabecera y pie de página personalizados.'
     - name: Checkout
-      description: 'Custom checkout form showing our form components and their validation features.'
-    - name: Product
-      description: 'Lean product-focused marketing page with extensive grid and image work.'
-    - name: Cover
-      description: 'A one-page template for building simple and beautiful home pages.'
-    - name: Carousel
-      description: 'Customize the navbar and carousel, then add some new components.'
+      description: 'Formulario de checkout personalizado que muestra nuestros componentes de formulario y sus funciones de validación.'
+    - name: Producto
+      description: 'Página de marketing sencilla centrada en el producto con un amplio trabajo de cuadrícula e imágenes.'
+    - name: Portada
+      description: 'Una plantilla de una sola página para crear páginas de inicio sencillas y hermosas.'
+    - name: Carrusel
+      description: 'Personaliza la barra de navegación y el carrusel, luego añade algunos componentes nuevos.'
     - name: Blog
-      description: 'Magazine like blog template with header, navigation, featured content.'
-    - name: Dashboard
-      description: 'Basic admin dashboard shell with fixed sidebar and navbar.'
-    - name: Sign-in
-      description: 'Custom form layout and design for a simple sign in form.'
-    - name: Sticky footer
-      description: 'Attach a footer to the bottom of the viewport when page content is short.'
-    - name: Sticky footer navbar
-      description: 'Attach a footer to the bottom of the viewport with a fixed top navbar.'
+      description: 'Plantilla de blog tipo revista con cabecera, navegación y contenido destacado.'
+    - name: Panel de control
+      description: 'Estructura básica de panel de administración con barra lateral y barra de navegación fijas.'
+    - name: Iniciar sesión
+      description: 'Diseño y maquetación de formulario personalizado para un formulario de inicio de sesión simple.'
+    - name: Pie de página fijo
+      description: 'Fija un pie de página en la parte inferior de la pantalla cuando el contenido de la página es corto.'
+    - name: Barra de navegación con pie de página fijo
+      description: 'Fija un pie de página en la parte inferior de la pantalla con una barra de navegación fija en la parte superior.'
     - name: Jumbotron
-      description: "Use utilities to recreate and enhance Bootstrap 4's jumbotron."
+      description: "Utiliza utilidades para recrear y mejorar el jumbotron de Bootstrap 4."
 
 - category: Framework
-  description: 'Examples that focus on implementing uses of built-in components provided by Bootstrap.'
+  description: 'Ejemplos que se centran en implementar el uso de componentes integrados proporcionados por Bootstrap.'
   examples:
-    - name: 'Starter template'
-      description: 'Nothing but the basics: compiled CSS and JavaScript.'
-    - name: Grid
-      description: 'Multiple examples of grid layouts with all four tiers, nesting, and more.'
+    - name: 'Plantilla de inicio'
+      description: 'Nada más que lo básico: CSS y JavaScript compilados.'
+    - name: Cuadrícula
+      description: 'Múltiples ejemplos de diseños de cuadrícula con los cuatro niveles, anidamiento y más.'
     - name: Cheatsheet
-      description: 'Kitchen sink of Bootstrap components.'
+      description: 'Una lista completa con todos los componentes de Bootstrap.'
 
-- category: Navbars
-  description: 'Taking the default navbar component and showing how it can be moved, placed, and extended.'
+- category: Barras de navegación
+  description: 'Toma el componente de barra de navegación predeterminado y muestra cómo se puede mover, colocar y extender.'
   examples:
-    - name: Navbars
-      description: 'Demonstration of all responsive and container options for the navbar.'
-    - name: Navbars offcanvas
-      description: 'Same as the Navbars example, but with our offcanvas component.'
-    - name: Navbar static
-      description: 'Single navbar example of a static top navbar along with some additional content.'
-    - name: Navbar fixed
-      description: 'Single navbar example with a fixed top navbar along with some additional content.'
-    - name: Navbar bottom
-      description: 'Single navbar example with a bottom navbar along with some additional content.'
-    - name: Offcanvas navbar
-      description: "Turn your expandable navbar into a sliding offcanvas menu (doesn't use our offcanvas component)."
+    - name: Barras de navegación
+      description: 'Demostración de todas las opciones responsivas y de contenedor para la barra de navegación.'
+    - name: Barras de navegación offcanvas
+      description: 'Igual al ejemplo de barras de navegación, pero con nuestro componente offcanvas.'
+    - name: Barra de navegación estática
+      description: 'Ejemplo de una sola barra de navegación superior estática junto con contenido adicional.'
+    - name: Barra de navegación fija
+      description: 'Ejemplo de una sola barra de navegación superior fija junto con contenido adicional.'
+    - name: Barra de navegación inferior
+      description: 'Ejemplo de una sola barra de navegación inferior junto con contenido adicional.'
+    - name: Barra de navegación offcanvas
+      description: "Convierte tu barra de navegación expandible en un menú offcanvas deslizante (no utiliza nuestro componente offcanvas)."
 
 - category: RTL
-  description: "See Bootstrap's RTL version in action with these modified examples from various categories."
+  description: "Mira la versión RTL de Bootstrap en acción con estos ejemplos modificados de varias categorías."
   examples:
-    - name: Album RTL
-      description: 'Simple one-page template for photo galleries, portfolios, and more.'
+    - name: Álbum RTL
+      description: 'Plantilla simple de una sola página para galerías de fotos, portafolios y más.'
     - name: Checkout RTL
-      description: 'Custom checkout form showing our form components and their validation features.'
-    - name: Carousel RTL
-      description: 'Customize the navbar and carousel, then add some new components.'
+      description: 'Formulario de checkout personalizado que muestra nuestros componentes de formulario y sus funciones de validación.'
+    - name: Carrusel RTL
+      description: 'Personaliza la barra de navegación y el carrusel, luego añade algunos componentes nuevos.'
     - name: Blog RTL
-      description: 'Magazine like blog template with header, navigation, featured content.'
-    - name: Dashboard RTL
-      description: 'Basic admin dashboard shell with fixed sidebar and navbar.'
+      description: 'Plantilla de blog tipo revista con cabecera, navegación y contenido destacado.'
+    - name: Panel de control RTL
+      description: 'Estructura básica de panel de administración con barra lateral y barra de navegación fijas.'
     - name: Cheatsheet RTL
-      description: 'Kitchen sink of Bootstrap components, RTL.'
+      description: 'Una lista completa con todos los componentes de Bootstrap, RTL.'
 
-- category: Integrations
-  description: 'Integrations with external libraries.'
+- category: Integraciones
+  description: 'Integraciones con bibliotecas externas.'
   examples:
     - name: 'Masonry'
-      description: 'Combine the powers of the Bootstrap grid and the Masonry layout.'
+      description: 'Combina la potencia de la cuadrícula de Bootstrap y el diseño Masonry.'

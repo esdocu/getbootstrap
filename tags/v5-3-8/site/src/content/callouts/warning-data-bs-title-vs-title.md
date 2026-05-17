@@ -1,1 +1,1 @@
-Feel free to use either `title` or `data-bs-title` in your HTML. When `title` is used, Popper will replace it automatically with `data-bs-title` when the element is rendered.
+Siéntete libre de usar tanto `title` como `data-bs-title` en tu HTML. Cuando se utiliza `title`, Popper lo reemplazará automáticamente con `data-bs-title` cuando el elemento se renderice.
