@@ -3,16 +3,16 @@ import fs from 'node:fs'
 import { getConfig } from '@libs/config'
 import Code from '@shortcodes/Code.astro'
 
-// Prints everything between `// scss-docs-start "name"` and `// scss-docs-end "name"`
-// comments in the docs.
+// Imprime todo lo que se encuentra entre los comentarios
+// `// scss-docs-start "name"` y `// scss-docs-end "name"` en la documentación.
 
 interface Props {
   /**
-   * Reference name used to find the content to display within the content of the `file` prop.
+   * Nombre de referencia utilizado para buscar el contenido a mostrar dentro del contenido de la propiedad `file`.
    */
   name: string
   /**
-   * File path that contains the content to display relative to the root of the repository.
+   * Ruta del archivo que contiene el contenido a mostrar relativa a la raíz del repositorio.
    */
   file: string
 }
@@ -21,7 +21,7 @@ const { name, file } = Astro.props
 
 if (!name || !file) {
   throw new Error(
-    `Missing required parameter(s) for the '<ScssDocs />' component, expected both 'name' and 'file' but got 'name: ${name}' and 'file: ${file}'.`
+    `Faltan parámetros requeridos para el componente '<ScssDocs />', se esperaba tanto 'name' como 'file' pero se obtuvo 'name: ${name}' y 'file: ${file}'.`
   )
 }
 
@@ -36,19 +36,19 @@ try {
 
   if (!matches || !matches[1]) {
     throw new Error(
-      `Failed to find the content named '${name}', make sure that '// scss-docs-start ${name}' and '// scss-docs-end ${name}' are defined.`
+      `No se pudo encontrar el contenido denominado '${name}', asegúrate de que '// scss-docs-start ${name}' y '// scss-docs-end ${name}' estén definidos.`
     )
   }
 
   content = matches[1].replaceAll(' !default', '')
 
-  // Fix the indentation by removing extra spaces at the beginning of each line
+  // Corregir la sangría eliminando espacios adicionales al principio de cada línea
   const lines = content.split('\n')
   const spaceCounts = lines.filter((line) => line.trim().length > 0).map((line) => line.match(/^ */)[0].length)
   const minSpaces = spaceCounts.length ? Math.min(...spaceCounts) : 0
   content = lines.map((line) => line.slice(minSpaces)).join('\n')
 } catch (error) {
-  throw new Error(`Failed to find the content to render in the '<ScssDocs />' component at '${file}'.`, {
+  throw new Error(`No se pudo encontrar el contenido para renderizar en el componente '<ScssDocs />' en '${file}'.`, {
     cause: error
   })
 }
@@ -63,7 +63,7 @@ try {
       {file}
     </a>
     <div class="d-flex ms-auto">
-      <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+      <button type="button" class="btn-clipboard mt-0 me-0" title="Copiar al portapapeles">
         <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"></use></svg>
       </button>
     </div>

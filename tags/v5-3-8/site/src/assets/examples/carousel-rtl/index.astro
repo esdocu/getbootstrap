@@ -1,32 +1,33 @@
 ---
-export const title = 'قالب  شرائح العرض'
+import Placeholder from "@shortcodes/Placeholder.astro"
+export const title = 'Plantilla de Carrusel RTL'
 export const direction = 'rtl'
 export const extra_css = ['../carousel/carousel.rtl.css']
-import Placeholder from "@shortcodes/Placeholder.astro"
 ---
+
 
 <header data-bs-theme="dark">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">شرائح العرض</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="تبديل التنقل">
+      <a class="navbar-brand" href="#">Carousel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">الصفحة الرئيسية</a>
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">حلقة الوصل</a>
+            <a class="nav-link" href="#">Enlace</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">رابط غير مفعل</a>
+            <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="بحث" aria-label="بحث">
-          <button class="btn btn-outline-success" type="submit">بحث</button>
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
       </div>
     </div>
@@ -46,9 +47,9 @@ import Placeholder from "@shortcodes/Placeholder.astro"
         <Placeholder width="100%" height="100%" background="var(--bs-secondary-color)" text={false} title={false} />
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>عنوان المثال.</h1>
-            <p class="opacity-75">تشير الدراسات الإحصائية حسب الجمعية الأمريكية للغات بأن الإقبال على العربية زاد %126 في الولايات المتحدة الأمريكية وحدها بين عامي 2002 و2009م.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">سجل اليوم</a></p>
+            <h1>Ejemplo de titular.</h1>
+            <p class="opacity-75">Contenido de marcador de posición representativo para la primera diapositiva del carrusel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Regístrate hoy</a></p>
           </div>
         </div>
       </div>
@@ -56,9 +57,9 @@ import Placeholder from "@shortcodes/Placeholder.astro"
         <Placeholder width="100%" height="100%" background="var(--bs-secondary-color)" text={false} title={false} />
         <div class="container">
           <div class="carousel-caption">
-            <h1>عنوان مثال آخر.</h1>
-            <p>حسب المجلس الثقافي البريطاني فإن تعليم الإنجليزية داخل بريطانيا يسهم في تعزيز اقتصادها بما يتجاوز ملياري جنيه سنوياً، كما أنه وفر أكثر من 26 ألف وظيفة.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">أعرف أكثر</a></p>
+            <h1>Otro ejemplo de titular.</h1>
+            <p>Contenido de marcador de posición representativo para la segunda diapositiva del carrusel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Más información</a></p>
           </div>
         </div>
       </div>
@@ -66,20 +67,20 @@ import Placeholder from "@shortcodes/Placeholder.astro"
         <Placeholder width="100%" height="100%" background="var(--bs-secondary-color)" text={false} title={false} />
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>واحد أكثر لقياس جيد.</h1>
-            <p>الإحصاءات لحجم الاستثمار اللغوي خارج بريطانيا تتفاوت من سنة لأخرى إلا أن المدير التنفيذي للمجلس الثقافي البريطاني إدي بايرز يرى أن استثمار تعليم الإنجليزية في الخارج لا يحسب على المستوى المالي فحسب بل على المستوى السياسي أيضاً.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">تصفح المعرض</a></p>
+            <h1>Una más para asegurarse.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Explorar galería</a></p>
           </div>
         </div>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">السابق</span>
+      <span class="visually-hidden">Anterior</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">التالي</span>
+      <span class="visually-hidden">Siguiente</span>
     </button>
   </div>
 
@@ -94,21 +95,21 @@ import Placeholder from "@shortcodes/Placeholder.astro"
     <div class="row">
       <div class="col-lg-4">
         <Placeholder width="140" height="140" background="var(--bs-secondary-color)" text={false} class="rounded-circle" />
-        <h2 class="fw-normal">عنوان</h2>
-        <p>تذكر دائماً أن الحاسوب لا يمتلك ذكاءً، ولكنه يكتسب الذكاء الاصطناعي من خلال ثلاثة عناصر وظيفية رئيسة، هي: القدرة على التحليل، والقدرة على التأليف، والاستدلال المنطقي.</p>
-        <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        <h2 class="fw-normal">Encabezado</h2>
+        <p>Contenido de marcador de posición representativo para las tres columnas de texto debajo del carrusel. Esta es la primera columna.</p>
+        <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <Placeholder width="140" height="140" background="var(--bs-secondary-color)" text={false} class="rounded-circle" />
-        <h2 class="fw-normal">عنوان آخر</h2>
-        <p>إذا أردنا استخدام الحاسوب الذكي في معالجة اللغة العربية فإننا نجد أنفسنا أمام تحدٍّ كبير، خاصة وأن لغتنا تمتاز بتماسك منظوماتها وتداخلها، ومع ذلك فإن الذكاء الاصطناعي يمكّننا من الحصول على أربعة أنواع من المعالجة، هي: المعالجة الصوتية، والمعالجة الصرفية، والمعالجة النحوية، والمعالجة الدلالية.</p>
-        <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        <h2 class="fw-normal">Encabezado</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <Placeholder width="140" height="140" background="var(--bs-secondary-color)" text={false} class="rounded-circle" />
-        <h2 class="fw-normal">عنوان ثالث لتأكيد المعلومة</h2>
-        <p>بفضل بحوث الذكاء الاصطناعي وتقنياته استطعنا الانتقال من مرحلة التعامل مع الفيزيائي إلى مرحلة التعامل مع المنطقي، وقد انعكس هذا الانتقال بصورة إيجابية على الكيفية التي تتعامل بها الشعوب مع لغاتها الحيَّة، وهذا يعني أنه يجب أن ينعكس بصورة إيجابية على كيفية تعاملنا مع لغتنا العربية.</p>
-        <p><a class="btn btn-secondary" href="#">عرض التفاصيل</a></p>
+        <h2 class="fw-normal">Encabezado</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
@@ -119,8 +120,8 @@ import Placeholder from "@shortcodes/Placeholder.astro"
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">العنوان الأول المميز. <span class="text-body-secondary"> سيذهل عقلك. </span></h2>
-        <p class="lead">وجه الإنسان هو جزء معقَّد ومتميِّز للغاية من جسمه. وفي الواقع، إنه أحد أكثر أنظمة الإشارات المتاحة تعقيداً لدينا؛ فهو يتضمَّن أكثر من 40 عضلة مستقلة هيكلياً ووظيفياً، بحيث يمكن تشغيل كل منها بشكل مستقل عن البعض الآخر؛ وتشكِّل أحد أقوى مؤشرات العواطف.</p>
+        <h2 class="featurette-heading fw-normal lh-1">Primer encabezado de featurette. <span class="text-body-secondary">Te dejará boquiabierto.</span></h2>
+        <p class="lead">Excelente contenido de marcador de posición para la primera featurette aquí. Imagina una prosa emocionante aquí.</p>
       </div>
       <div class="col-md-5">
         <Placeholder width="500" height="500" background="var(--bs-secondary-bg)" color="var(--bs-secondary-color)" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" />
@@ -131,8 +132,8 @@ import Placeholder from "@shortcodes/Placeholder.astro"
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">أوه نعم، هذا جيد. <span class="text-body-secondary"> شاهد بنفسك. </span></h2>
-        <p class="lead">عندما نضحك أو نبكي، فإننا نعرض عواطفنا، مما يسمح للآخرين بإلقاء نظرة خاطفة على أذهاننا أثناء "قراءة" وجوهنا بناءً على التغييرات في مكوّنات الوجه الرئيسة، مثل: العينين والحاجبين والجفنين والأنف والشفتين.</p>
+        <h2 class="featurette-heading fw-normal lh-1">Oh sí, es tan bueno. <span class="text-body-secondary">Míralo tú mismo.</span></h2>
+        <p class="lead">¿Otra featurette? Por supuesto. Más contenido de marcador de posición aquí para darte una idea de cómo funcionaría este diseño con contenido real del mundo real.</p>
       </div>
       <div class="col-md-5 order-md-1">
         <Placeholder width="500" height="500" background="var(--bs-secondary-bg)" color="var(--bs-secondary-color)" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" />
@@ -143,8 +144,8 @@ import Placeholder from "@shortcodes/Placeholder.astro"
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">وأخيرًا، هذا. <span class="text-body-secondary"> كش ملك. </span></h2>
-        <p class="lead">إن جميع العضلات في أجسامنا مدعمة بالأعصاب المتصلة من كافة أنحاء الجسم بالنخاع الشوكي والدماغ. وهذا الاتصال العصبي هو ثنائي الاتجاه، أي إن العصب يتسبَّب في تقلصات العضلات بناءً على إشارات الدماغ، ويقوم في الوقت نفسه بإرسال معلومات عن حالة العضلات إلى الدماغ</p>
+        <h2 class="featurette-heading fw-normal lh-1">Y por último, este. <span class="text-body-secondary">Jaque mate.</span></h2>
+        <p class="lead">Y sí, este es el último bloque de contenido de marcador de posición representativo. Nuevamente, no está destinado a ser leído realmente, simplemente está aquí para darte una mejor vista de cómo se vería esto con contenido real. Tu contenido.</p>
       </div>
       <div class="col-md-5">
         <Placeholder width="500" height="500" background="var(--bs-secondary-bg)" color="var(--bs-secondary-color)" class="bd-placeholder-img-lg featurette-image img-fluid mx-auto" />
@@ -160,7 +161,7 @@ import Placeholder from "@shortcodes/Placeholder.astro"
 
   <!-- FOOTER -->
   <footer class="container">
-    <p class="float-end"><a href="#">عد إلى الأعلى</a></p>
-    <p>&copy; 2017–{new Date().getFullYear()} Company, Inc. &middot; <a href="#">سياسة الخصوصية</a> &middot; <a href="#">شروط الاستخدام</a></p>
+    <p class="float-end"><a href="#">Volver arriba</a></p>
+    <p>&copy; 2017–{new Date().getFullYear()} Company, Inc. &middot; <a href="#">Privacidad</a> &middot; <a href="#">Términos</a></p>
   </footer>
 </main>

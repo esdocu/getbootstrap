@@ -5,36 +5,36 @@ import { Prism } from '@astrojs/prism'
 
 interface Props {
   /**
-   * The CSS class(es) to be added to the `pre` HTML element when rendering code blocks in Markdown.
-   * Note that this prop is not used when the component is invoked directly.
+   * Las clases CSS a añadir al elemento HTML `pre` al renderizar bloques de código en Markdown.
+   * Ten en cuenta que esta propiedad no se usa cuando el componente se invoca directamente.
    */
   class?: string
   /**
-   * The code to highlight.
-   * If an array is passed, elements will be joined with a new line.
+   * El código a resaltar.
+   * Si se pasa un array, los elementos se unirán con una nueva línea.
    */
   code?: string | string[]
   /**
-   * The CSS class(es) to be added to the `div` wrapper HTML element.
+   * Las clases CSS a añadir al elemento HTML contenedor `div`.
    */
   containerClass?: string
   /**
-   * The language to use for highlighting.
+   * El lenguaje a usar para el resaltado.
    * @see https://prismjs.com/#supported-languages
    */
   lang?: string
   /**
-   * If the `filePath` prop is defined, this prop can be used to specify a regex containing a match group to extract
-   * only a part of the file.
+   * Si se define la propiedad `filePath`, esta propiedad se puede usar para especificar una expresión regular que contenga un grupo de coincidencia para extraer
+   * solo una parte del archivo.
    */
   fileMatch?: string
   /**
-   * A path to the file containing the code to highlight relative to the root of the repository.
-   * This takes precedence over the `code` prop.
+   * Una ruta al archivo que contiene el código a resaltar relativa a la raíz del repositorio.
+   * Esto tiene prioridad sobre la propiedad `code`.
    */
   filePath?: string
   /**
-   * Defines if the `<Code>` component is nested inside an `<Example>` component or not.
+   * Define si el componente `<Code>` está anidado dentro de un componente `<Example>` o no.
    * @default false
    */
   nestedInExample?: boolean
@@ -52,7 +52,7 @@ if (filePath && fileMatch && codeToDisplay) {
   const match = codeToDisplay.match(new RegExp(fileMatch))
 
   if (!match || !match[0]) {
-    throw new Error(`The file at ${filePath} does not contains a match for the regex '${fileMatch}'.`)
+    throw new Error(`El archivo en ${filePath} no contiene una coincidencia para la expresión regular '${fileMatch}'.`)
   }
 
   codeToDisplay = match[0]
@@ -62,8 +62,8 @@ if (filePath && fileMatch && codeToDisplay) {
 <script>
   import ClipboardJS from 'clipboard'
 
-  const btnTitle = 'Copy to clipboard'
-  const btnEdit = 'Edit on StackBlitz'
+  const btnTitle = 'Copiar al portapapeles'
+  const btnEdit = 'Editar en StackBlitz'
 
   function snippetButtonTooltip(selector: string, title: string) {
     document.querySelectorAll(selector).forEach((btn) => {
@@ -77,8 +77,8 @@ if (filePath && fileMatch && codeToDisplay) {
   const clipboard = new ClipboardJS('.btn-clipboard', {
     target: (trigger) => trigger.closest('.bd-code-snippet')?.querySelector('.highlight')!,
     text: (trigger) => {
-      // Trim text to workaround a Firefox issue where the structure of the DOM (uncontrolled) is relevant for the
-      // copied text.
+      // Recortar texto para solucionar un problema de Firefox donde la estructura del DOM (no controlado) es relevante para el
+      // texto copiado.
       // https://github.com/zenorocha/clipboard.js/issues/439#issuecomment-312344621
       return trigger.closest('.bd-code-snippet')?.querySelector('.highlight')!.textContent?.trim()!
     }
@@ -95,7 +95,7 @@ if (filePath && fileMatch && codeToDisplay) {
       return
     }
 
-    tooltipBtn?.setContent({ '.tooltip-inner': 'Copied!' })
+    tooltipBtn?.setContent({ '.tooltip-inner': '¡Copiado!' })
 
     event.trigger.addEventListener(
       'hidden.bs.tooltip',
@@ -120,7 +120,7 @@ if (filePath && fileMatch && codeToDisplay) {
 
   clipboard.on('error', (event) => {
     const modifierKey = /mac/i.test(navigator.userAgent) ? '\u2318' : 'Ctrl-'
-    const fallbackMsg = `Press ${modifierKey}C to copy`
+    const fallbackMsg = `Presiona ${modifierKey}C para copiar`
     const tooltipBtn = bootstrap.Tooltip.getInstance(event.trigger)
 
     tooltipBtn?.setContent({ '.tooltip-inner': fallbackMsg })
@@ -146,7 +146,7 @@ if (filePath && fileMatch && codeToDisplay) {
         : (
           <div class="bd-clipboard">
             <button type="button" class="btn-clipboard">
-              <svg class="bi" role="img" aria-label="Copy">
+              <svg class="bi" role="img" aria-label="Copiar">
                 <use xlink:href="#clipboard" />
               </svg>
             </button>

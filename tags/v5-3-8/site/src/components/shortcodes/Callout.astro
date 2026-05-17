@@ -4,8 +4,8 @@ import type { MarkdownInstance } from 'astro'
 
 interface Props {
   /**
-   * The name of an existing callout to display located in `src/content/callouts`.
-   * This will override any content passed in via the default slot.
+   * El nombre de una llamada (callout) existente para mostrar ubicada en `src/content/callouts`.
+   * Esto anulará cualquier contenido pasado a través del slot predeterminado.
    */
   name?:
     | 'danger-async-methods'
@@ -17,7 +17,7 @@ interface Props {
     | 'warning-data-bs-title-vs-title'
     | 'warning-input-support'
   /**
-   * The type of callout to display. One of `info`, `danger`, or `warning`.
+   * El tipo de llamada (callout) a mostrar. Uno de `info`, `danger` o `warning`.
    * @default 'info'
    */
   type?: 'danger' | 'info' | 'warning'
@@ -31,7 +31,7 @@ if (name) {
   const callout = await getCalloutByName(name)
 
   if (!callout) {
-    throw new Error(`Could not find callout with name '${name}'.`)
+    throw new Error(`No se pudo encontrar la llamada (callout) con el nombre '${name}'.`)
   }
 
   const namedCallout = await callout.render()

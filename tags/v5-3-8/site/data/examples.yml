@@ -40,102 +40,142 @@
   description: 'Patrones comunes para construir sitios y aplicaciones que se basan en componentes y utilidades existentes con CSS personalizado y más.'
   examples:
     - name: Cabeceras
+      id: headers
       description: 'Muestra tu marca, navegación, búsqueda y más con estos componentes de cabecera'
     - name: Heroes
+      id: heroes
       description: 'Prepara el escenario en tu página de inicio con secciones hero que presentan llamadas a la acción claras.'
     - name: Características
+      id: features
       description: 'Explica las características, beneficios u otros detalles en tu contenido de marketing.'
     - name: Barras laterales
+      id: sidebars
       description: 'Patrones de navegación comunes ideales para diseños offcanvas o de múltiples columnas.'
     - name: Pies de página
+      id: footers
       description: 'Termina cada página con fuerza con un pie de página increíble, grande o pequeño.'
     - name: Dropdowns
+      id: dropdowns
       description: 'Mejora tus menús desplegables con filtros, iconos, estilos personalizados y más.'
     - name: Grupos de listas
+      id: list-groups
       description: 'Extiende los grupos de listas con utilidades y estilos personalizados para cualquier contenido.'
     - name: Modales
+      id: modals
       description: 'Transforma los modales para cumplir cualquier propósito, desde recorridos por funciones hasta diálogos.'
     - name: Insignias
+      id: badges
       description: 'Haz que las insignias funcionen con HTML interno personalizado y nuevos aspectos.'
     - name: Migas de pan
+      id: breadcrumbs
       description: 'Integra iconos personalizados y crea componentes de pasos.'
     - name: Botones
+      id: buttons
       description: 'Crea botones personalizados para casi cualquier caso de uso con utilidades.'
     - name: Jumbotrons
+      id: jumbotrons
       description: 'Crea versiones modernizadas del clásico componente Bootstrap.'
 
 - category: Componentes personalizados
   description: 'Componentes y plantillas completamente nuevos para ayudar a las personas a comenzar rápidamente con Bootstrap y demostrar las mejores prácticas para extender el framework.'
   examples:
     - name: Álbum
+      id: album
       description: 'Plantilla simple de una sola página para galerías de fotos, portafolios y más.'
     - name: Precios
+      id: pricing
       description: 'Ejemplo de página de precios creada con Tarjetas y que presenta una cabecera y pie de página personalizados.'
     - name: Checkout
+      id: checkout
       description: 'Formulario de checkout personalizado que muestra nuestros componentes de formulario y sus funciones de validación.'
     - name: Producto
+      id: product
       description: 'Página de marketing sencilla centrada en el producto con un amplio trabajo de cuadrícula e imágenes.'
     - name: Portada
+      id: cover
       description: 'Una plantilla de una sola página para crear páginas de inicio sencillas y hermosas.'
     - name: Carrusel
+      id: carousel
       description: 'Personaliza la barra de navegación y el carrusel, luego añade algunos componentes nuevos.'
     - name: Blog
+      id: blog
       description: 'Plantilla de blog tipo revista con cabecera, navegación y contenido destacado.'
     - name: Panel de control
+      id: dashboard
       description: 'Estructura básica de panel de administración con barra lateral y barra de navegación fijas.'
     - name: Iniciar sesión
+      id: sign-in
       description: 'Diseño y maquetación de formulario personalizado para un formulario de inicio de sesión simple.'
     - name: Pie de página fijo
+      id: sticky-footer
       description: 'Fija un pie de página en la parte inferior de la pantalla cuando el contenido de la página es corto.'
     - name: Barra de navegación con pie de página fijo
+      id: sticky-footer-navbar
       description: 'Fija un pie de página en la parte inferior de la pantalla con una barra de navegación fija en la parte superior.'
     - name: Jumbotron
+      id: jumbotron
       description: "Utiliza utilidades para recrear y mejorar el jumbotron de Bootstrap 4."
 
 - category: Framework
   description: 'Ejemplos que se centran en implementar el uso de componentes integrados proporcionados por Bootstrap.'
   examples:
     - name: 'Plantilla de inicio'
+      id: starter-template
       description: 'Nada más que lo básico: CSS y JavaScript compilados.'
     - name: Cuadrícula
+      id: grid
       description: 'Múltiples ejemplos de diseños de cuadrícula con los cuatro niveles, anidamiento y más.'
     - name: Cheatsheet
+      id: cheatsheet
       description: 'Una lista completa con todos los componentes de Bootstrap.'
 
 - category: Barras de navegación
   description: 'Toma el componente de barra de navegación predeterminado y muestra cómo se puede mover, colocar y extender.'
   examples:
     - name: Barras de navegación
+      id: navbars
       description: 'Demostración de todas las opciones responsivas y de contenedor para la barra de navegación.'
     - name: Barras de navegación offcanvas
+      id: navbars-offcanvas
       description: 'Igual al ejemplo de barras de navegación, pero con nuestro componente offcanvas.'
     - name: Barra de navegación estática
+      id: navbar-static
       description: 'Ejemplo de una sola barra de navegación superior estática junto con contenido adicional.'
     - name: Barra de navegación fija
+      id: navbar-fixed
       description: 'Ejemplo de una sola barra de navegación superior fija junto con contenido adicional.'
     - name: Barra de navegación inferior
+      id: navbar-bottom
       description: 'Ejemplo de una sola barra de navegación inferior junto con contenido adicional.'
     - name: Barra de navegación offcanvas
+      id: offcanvas-navbar
       description: "Convierte tu barra de navegación expandible en un menú offcanvas deslizante (no utiliza nuestro componente offcanvas)."
 
 - category: RTL
   description: "Mira la versión RTL de Bootstrap en acción con estos ejemplos modificados de varias categorías."
   examples:
     - name: Álbum RTL
+      id: album-rtl
       description: 'Plantilla simple de una sola página para galerías de fotos, portafolios y más.'
     - name: Checkout RTL
+      id: checkout-rtl
       description: 'Formulario de checkout personalizado que muestra nuestros componentes de formulario y sus funciones de validación.'
     - name: Carrusel RTL
+      id: carousel-rtl
       description: 'Personaliza la barra de navegación y el carrusel, luego añade algunos componentes nuevos.'
     - name: Blog RTL
+      id: blog-rtl
       description: 'Plantilla de blog tipo revista con cabecera, navegación y contenido destacado.'
     - name: Panel de control RTL
+      id: dashboard-rtl
       description: 'Estructura básica de panel de administración con barra lateral y barra de navegación fijas.'
     - name: Cheatsheet RTL
+      id: cheatsheet-rtl
       description: 'Una lista completa con todos los componentes de Bootstrap, RTL.'
 
 - category: Integraciones
   description: 'Integraciones con bibliotecas externas.'
   examples:
     - name: 'Masonry'
+      id: masonry
       description: 'Combina la potencia de la cuadrícula de Bootstrap y el diseño Masonry.'

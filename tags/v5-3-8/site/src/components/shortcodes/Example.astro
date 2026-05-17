@@ -4,35 +4,35 @@ import Code from '@components/shortcodes/Code.astro'
 
 interface Props {
   /**
-   * Defines if extra JS snippet should be added to StackBlitz or not.
+   * Define si se debe añadir un fragmento extra de JS a StackBlitz o no.
    * @default false
    */
   addStackblitzJs?: boolean
   /**
-   * The example code.
-   * If an array is passed, elements will be joined with a new line.
+   * El código de ejemplo.
+   * Si se pasa un array, los elementos se unirán con una nueva línea.
    */
   code: string | string[]
   /**
-   * The CSS class(es) to be added to the preview wrapping `div` element.
+   * Las clases CSS a añadir al elemento `div` contenedor de la vista previa.
    */
   class?: string
   /**
-   * The preview wrapping `div` element ID.
+   * El ID del elemento `div` contenedor de la vista previa.
    */
   id?: string
   /**
-   * Language used to display the code.
+   * Lenguaje utilizado para mostrar el código.
    * @default 'html'
    */
   lang?: string
   /**
-   * Defines if the markup should be visible or not.
+   * Define si el marcado debe ser visible o no.
    * @default true
    */
   showMarkup?: boolean
   /**
-   * Defines if the preview should be visible or not.
+   * Define si la vista previa debe ser visible o no.
    * @default true
    */
   showPreview?: boolean
@@ -81,14 +81,14 @@ const simplifiedMarkup = markup
               <button
                 type="button"
                 class="btn-edit text-nowrap"
-                title="Try it on StackBlitz"
+                title="Pruébalo en StackBlitz"
                 data-sb-js-snippet={addStackblitzJs ? true : undefined}
               >
                 <svg class="bi" aria-hidden="true">
                   <use xlink:href="#lightning-charge-fill" />
                 </svg>
               </button>
-              <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
+              <button type="button" class="btn-clipboard mt-0 me-0" title="Copiar al portapapeles">
                 <svg class="bi" aria-hidden="true">
                   <use xlink:href="#clipboard" />
                 </svg>

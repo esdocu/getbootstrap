@@ -1,6 +1,6 @@
 ---
 /*
- * Outputs message about dark mode component variants being deprecated in v5.3.
+ * Muestra un mensaje sobre las variantes oscuras de componentes que quedan obsoletas en v5.3.
  */
 
 interface Props {
@@ -12,8 +12,7 @@ const { component } = Astro.props
 
 <div class="bd-callout bd-callout-warning">
   <p>
-    <strong>Heads up!</strong> Dark variants for components were deprecated in v5.3.0 with the introduction of color modes.
-    Instead of adding <code>.{component}-dark</code>, set <code>data-bs-theme="dark"</code> on the root element, a parent
-    wrapper, or the component itself.
+    <strong>¡Atención!</strong> Las variantes oscuras para los componentes quedaron obsoletas en v5.3.0 con la introducción de los modos de color.
+    En lugar de agregar <code>.{component}-dark</code>, establece <code>data-bs-theme="dark"</code> en el elemento root, un contenedor padre o el propio componente.
   </p>
 </div>

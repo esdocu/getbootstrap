@@ -1,5 +1,5 @@
 ---
-export const title = 'Masonry example'
+export const title = 'Ejemplo de Masonry'
 export const extra_js = [{
   src: 'https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js',
   integrity: 'sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D',
@@ -9,26 +9,26 @@ import Placeholder from "@shortcodes/Placeholder.astro"
 ---
 
 <main class="container py-5">
-  <h1>Bootstrap and Masonry</h1>
-  <p class="lead">Integrate <a href="https://masonry.desandro.com/">Masonry</a> with the Bootstrap grid system and cards component.</p>
+  <h1>Bootstrap y Masonry</h1>
+  <p class="lead">Integra <a href="https://masonry.desandro.com/">Masonry</a> con el sistema de cuadrícula y el componente de tarjetas de Bootstrap.</p>
 
-  <p>Masonry is not included in Bootstrap. Add it by including the JavaScript plugin manually, or using a CDN like so:</p>
+  <p>Masonry no está incluido en Bootstrap. Añádelo incluyendo el plugin de JavaScript manualmente, o usando un CDN como este:</p>
 
   <pre><code>
 &lt;script src=&quot;https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js&quot; integrity=&quot;sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D&quot; crossorigin=&quot;anonymous&quot; async&gt;&lt;/script&gt;
   </code></pre>
 
-  <p>By adding <code>data-masonry='&lcub;"percentPosition": true &rcub;'</code> to the <code>.row</code> wrapper, we can combine the powers of Bootstrap's responsive grid and Masonry's positioning.</p>
+  <p>Al añadir <code>data-masonry='&lcub;"percentPosition": true &rcub;'</code> al contenedor <code>.row</code>, podemos combinar las ventajas de la cuadrícula responsiva de Bootstrap y el posicionamiento de Masonry.</p>
 
   <hr class="my-5">
 
   <div class="row" data-masonry='{"percentPosition": true }'>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card">
-        <Placeholder width="100%" height="200" class="card-img-top" text="Image cap" />
+        <Placeholder width="100%" height="200" class="card-img-top" text="Encabezado de imagen" />
         <div class="card-body">
-          <h5 class="card-title">Card title that wraps to a new line</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">Título de tarjeta que se ajusta a una nueva línea</h5>
+          <p class="card-text">Esta es una tarjeta más larga con texto de apoyo debajo como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
         </div>
       </div>
     </div>
@@ -36,21 +36,21 @@ import Placeholder from "@shortcodes/Placeholder.astro"
       <div class="card p-3">
         <figure class="p-3 mb-0">
           <blockquote class="blockquote">
-            <p>A well-known quote, contained in a blockquote element.</p>
+            <p>Una cita conocida, contenida en un elemento blockquote.</p>
           </blockquote>
           <figcaption class="blockquote-footer mb-0 text-body-secondary">
-            Someone famous in <cite title="Source Title">Source Title</cite>
+            Alguien famoso en <cite title="Título de la fuente">Título de la fuente</cite>
           </figcaption>
         </figure>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card">
-        <Placeholder width="100%" height="200" class="card-img-top" text="Image cap" />
+        <Placeholder width="100%" height="200" class="card-img-top" text="Encabezado de imagen" />
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          <h5 class="card-title">Título de tarjeta</h5>
+          <p class="card-text">Esta tarjeta tiene texto de apoyo debajo como introducción natural a contenido adicional.</p>
+          <p class="card-text"><small class="text-body-secondary">Última actualización hace 3 minutos</small></p>
         </div>
       </div>
     </div>
@@ -58,10 +58,10 @@ import Placeholder from "@shortcodes/Placeholder.astro"
       <div class="card text-bg-primary text-center p-3">
         <figure class="mb-0">
           <blockquote class="blockquote">
-            <p>A well-known quote, contained in a blockquote element.</p>
+            <p>Una cita conocida, contenida en un elemento blockquote.</p>
           </blockquote>
           <figcaption class="blockquote-footer mb-0 text-white">
-            Someone famous in <cite title="Source Title">Source Title</cite>
+            Alguien famoso en <cite title="Título de la fuente">Título de la fuente</cite>
           </figcaption>
         </figure>
       </div>
@@ -69,25 +69,25 @@ import Placeholder from "@shortcodes/Placeholder.astro"
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card text-center">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          <h5 class="card-title">Título de tarjeta</h5>
+          <p class="card-text">Esta tarjeta tiene un título normal y un párrafo corto de texto debajo.</p>
+          <p class="card-text"><small class="text-body-secondary">Última actualización hace 3 minutos</small></p>
         </div>
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card">
-        <Placeholder width="100%" height="260" class="card-img" text="Card image" />
+        <Placeholder width="100%" height="260" class="card-img" text="Imagen de tarjeta" />
       </div>
     </div>
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card p-3 text-end">
         <figure class="mb-0">
           <blockquote class="blockquote">
-            <p>A well-known quote, contained in a blockquote element.</p>
+            <p>Una cita conocida, contenida en un elemento blockquote.</p>
           </blockquote>
           <figcaption class="blockquote-footer mb-0 text-body-secondary">
-            Someone famous in <cite title="Source Title">Source Title</cite>
+            Alguien famoso en <cite title="Título de la fuente">Título de la fuente</cite>
           </figcaption>
         </figure>
       </div>
@@ -95,9 +95,9 @@ import Placeholder from "@shortcodes/Placeholder.astro"
     <div class="col-sm-6 col-lg-4 mb-4">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          <h5 class="card-title">Título de tarjeta</h5>
+          <p class="card-text">Esta es otra tarjeta con título y texto de apoyo debajo. Esta tarjeta tiene contenido adicional para hacerla un poco más alta en general.</p>
+          <p class="card-text"><small class="text-body-secondary">Última actualización hace 3 minutos</small></p>
         </div>
       </div>
     </div>

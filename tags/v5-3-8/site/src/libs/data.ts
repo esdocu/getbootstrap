@@ -46,6 +46,7 @@ const dataDefinitions = {
       examples: z
         .object({
           description: z.string(),
+          id: z.string().optional(),
           indexPath: z.string().optional(),
           name: z.string(),
           url: z.string().optional()

@@ -23,6 +23,8 @@ import { getSlug } from '@libs/utils'
         )}
         <div class="row">
           {examples.map((example, index) => {
+            const exampleSlug = example.id || getSlug(example.name)
+
             if (external) {
               return (
                 <article class="col-md-6 col-lg-4 mb-3 d-flex gap-3">
@@ -67,15 +69,15 @@ import { getSlug } from '@libs/utils'
               <article class="col-sm-6 col-md-3 mb-3">
                 <a
                   class="d-block link-offset-1"
-                  href={`/docs/${getConfig().docs_version}/examples/${getSlug(example.name)}/`}
+                  href={`/docs/${getConfig().docs_version}/examples/${exampleSlug}/`}
                   hreflang={example.name.includes('RTL') ? 'ar' : undefined}
                 >
                   <img
                     class="img-thumbnail mb-3"
                     srcset={`${getVersionedDocsPath(
-                      `/assets/img/examples/${getSlug(example.name)}.png`
-                    )}, ${getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}@2x.png`)} 2x`}
-                    src={getVersionedDocsPath(`/assets/img/examples/${getSlug(example.name)}.png`)}
+                      `/assets/img/examples/${exampleSlug}.png`
+                    )}, ${getVersionedDocsPath(`/assets/img/examples/${exampleSlug}@2x.png`)} 2x`}
+                    src={getVersionedDocsPath(`/assets/img/examples/${exampleSlug}.png`)}
                     alt=""
                     width="480"
                     height="300"

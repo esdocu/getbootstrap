@@ -1,7 +1,7 @@
 ---
 import { getVersionedDocsPath } from '@libs/path'
 
-export const title = 'Checkout example'
+export const title = 'Ejemplo de Checkout'
 export const extra_css = ['checkout.css']
 export const extra_js = [{ src: 'checkout.js' }]
 export const body_class = 'bg-body-tertiary'
@@ -11,42 +11,42 @@ export const body_class = 'bg-body-tertiary'
   <main>
     <div class="py-5 text-center">
       <img class="d-block mx-auto mb-4" src={getVersionedDocsPath('/assets/brand/bootstrap-logo.svg')} alt="" width="72" height="57">
-      <h1 class="h2">Checkout form</h1>
-      <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      <h1 class="h2">Formulario de checkout</h1>
+      <p class="lead">A continuación se muestra un formulario de ejemplo creado íntegramente con los controles de formulario de Bootstrap. Cada grupo de formulario obligatorio tiene un estado de validación que se puede activar al intentar enviar el formulario sin completarlo.</p>
     </div>
 
     <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
+          <span class="text-primary">Tu carrito</span>
           <span class="badge bg-primary rounded-pill">3</span>
         </h4>
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
-              <h6 class="my-0">Product name</h6>
-              <small class="text-body-secondary">Brief description</small>
+              <h6 class="my-0">Nombre del producto</h6>
+              <small class="text-body-secondary">Breve descripción</small>
             </div>
             <span class="text-body-secondary">$12</span>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
               <h6 class="my-0">Second product</h6>
-              <small class="text-body-secondary">Brief description</small>
+              <small class="text-body-secondary">Breve descripción</small>
             </div>
             <span class="text-body-secondary">$8</span>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
               <h6 class="my-0">Third item</h6>
-              <small class="text-body-secondary">Brief description</small>
+              <small class="text-body-secondary">Breve descripción</small>
             </div>
             <span class="text-body-secondary">$5</span>
           </li>
           <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
             <div class="text-success">
-              <h6 class="my-0">Promo code</h6>
-              <small>EXAMPLECODE</small>
+              <h6 class="my-0">Código promocional</h6>
+              <small>CODIGODEJEMPLO</small>
             </div>
             <span class="text-success">−$5</span>
           </li>
@@ -58,90 +58,90 @@ export const body_class = 'bg-body-tertiary'
 
         <form class="card p-2">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Promo code">
-            <button type="submit" class="btn btn-secondary">Redeem</button>
+            <input type="text" class="form-control" placeholder="Código promocional">
+            <button type="submit" class="btn btn-secondary">Canjear</button>
           </div>
         </form>
       </div>
       <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Billing address</h4>
+        <h4 class="mb-3">Dirección de facturación</h4>
         <form class="needs-validation" novalidate>
           <div class="row g-3">
             <div class="col-sm-6">
-              <label for="firstName" class="form-label">First name</label>
+              <label for="firstName" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
               <div class="invalid-feedback">
-                Valid first name is required.
+                Se requiere un nombre válido.
               </div>
             </div>
 
             <div class="col-sm-6">
-              <label for="lastName" class="form-label">Last name</label>
+              <label for="lastName" class="form-label">Apellido</label>
               <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
               <div class="invalid-feedback">
-                Valid last name is required.
+                Se requiere un apellido válido.
               </div>
             </div>
 
             <div class="col-12">
-              <label for="username" class="form-label">Username</label>
+              <label for="username" class="form-label">Nombre de usuario</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required>
               <div class="invalid-feedback">
-                  Your username is required.
+                  Se requiere tu nombre de usuario.
                 </div>
               </div>
             </div>
 
             <div class="col-12">
-              <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+              <label for="email" class="form-label">Correo electrónico <span class="text-body-secondary">(Opcional)</span></label>
               <input type="email" class="form-control" id="email" placeholder="you@example.com">
               <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
+                Por favor, introduce una dirección de correo electrónico válida para las actualizaciones de envío.
               </div>
             </div>
 
             <div class="col-12">
-              <label for="address" class="form-label">Address</label>
+              <label for="address" class="form-label">Dirección</label>
               <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
               <div class="invalid-feedback">
-                Please enter your shipping address.
+                Por favor, introduce tu dirección de envío.
               </div>
             </div>
 
             <div class="col-12">
-              <label for="address2" class="form-label">Address 2 <span class="text-body-secondary">(Optional)</span></label>
+              <label for="address2" class="form-label">Dirección 2 <span class="text-body-secondary">(Optional)</span></label>
               <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
             </div>
 
             <div class="col-md-5">
-              <label for="country" class="form-label">Country</label>
+              <label for="country" class="form-label">País</label>
               <select class="form-select" id="country" required>
-                <option value="">Choose...</option>
-                <option>United States</option>
+                <option value="">Elegir...</option>
+                <option>Estados Unidos</option>
               </select>
               <div class="invalid-feedback">
-                Please select a valid country.
+                Por favor, selecciona un país válido.
               </div>
             </div>
 
             <div class="col-md-4">
-              <label for="state" class="form-label">State</label>
+              <label for="state" class="form-label">Estado / Provincia</label>
               <select class="form-select" id="state" required>
-                <option value="">Choose...</option>
+                <option value="">Elegir...</option>
                 <option>California</option>
               </select>
               <div class="invalid-feedback">
-                Please provide a valid state.
+                Por favor, proporciona un estado válido.
               </div>
             </div>
 
             <div class="col-md-3">
-              <label for="zip" class="form-label">Zip</label>
+              <label for="zip" class="form-label">Código postal</label>
               <input type="text" class="form-control" id="zip" placeholder="" required>
               <div class="invalid-feedback">
-                Zip code required.
+                Código postal code required.
               </div>
             </div>
           </div>
@@ -150,26 +150,26 @@ export const body_class = 'bg-body-tertiary'
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+            <label class="form-check-label" for="same-address">La dirección de envío es la misma que mi dirección de facturación</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="save-info">
-            <label class="form-check-label" for="save-info">Save this information for next time</label>
+            <label class="form-check-label" for="save-info">Guardar esta información para la próxima vez</label>
           </div>
 
           <hr class="my-4">
 
-          <h4 class="mb-3">Payment</h4>
+          <h4 class="mb-3">Pago</h4>
 
           <div class="my-3">
             <div class="form-check">
               <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-              <label class="form-check-label" for="credit">Credit card</label>
+              <label class="form-check-label" for="credit">Tarjeta de crédito</label>
             </div>
             <div class="form-check">
               <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-              <label class="form-check-label" for="debit">Debit card</label>
+              <label class="form-check-label" for="debit">Tarjeta de débito</label>
             </div>
             <div class="form-check">
               <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
@@ -179,27 +179,27 @@ export const body_class = 'bg-body-tertiary'
 
           <div class="row gy-3">
             <div class="col-md-6">
-              <label for="cc-name" class="form-label">Name on card</label>
+              <label for="cc-name" class="form-label">Nombre en la tarjeta</label>
               <input type="text" class="form-control" id="cc-name" placeholder="" required>
-              <small class="text-body-secondary">Full name as displayed on card</small>
+              <small class="text-body-secondary">Nombre completo como se muestra en la tarjeta</small>
               <div class="invalid-feedback">
-                Name on card is required
+                Nombre en la tarjeta is required
               </div>
             </div>
 
             <div class="col-md-6">
-              <label for="cc-number" class="form-label">Credit card number</label>
+              <label for="cc-number" class="form-label">Tarjeta de crédito number</label>
               <input type="text" class="form-control" id="cc-number" placeholder="" required>
               <div class="invalid-feedback">
-                Credit card number is required
+                Tarjeta de crédito number is required
               </div>
             </div>
 
             <div class="col-md-3">
-              <label for="cc-expiration" class="form-label">Expiration</label>
+              <label for="cc-expiration" class="form-label">Vencimiento</label>
               <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
               <div class="invalid-feedback">
-                Expiration date required
+                Vencimiento date required
               </div>
             </div>
 
@@ -207,14 +207,14 @@ export const body_class = 'bg-body-tertiary'
               <label for="cc-cvv" class="form-label">CVV</label>
               <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
               <div class="invalid-feedback">
-                Security code required
+                Se requiere el código de seguridad
               </div>
             </div>
           </div>
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Continuar con el pago</button>
         </form>
       </div>
     </div>

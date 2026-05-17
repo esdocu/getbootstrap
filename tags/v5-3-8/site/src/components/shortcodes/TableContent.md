@@ -1,9 +1,9 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nombre (First)</th>
+      <th scope="col">Apellido (Last)</th>
+      <th scope="col">Usuario (Handle)</th>
     </tr>
   </thead>
   <tbody>
