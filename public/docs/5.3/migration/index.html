@@ -1,0 +1,966 @@
+<!DOCTYPE html><html lang="es" data-bs-theme="auto"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Sigue y revisa los cambios en los archivos fuente, la documentación y los componentes de Bootstrap para ayudarte a migrar de v4 a v5."><meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors"><meta name="generator" content="Astro v5.13.2"><meta name="docsearch:language" content="es"><meta name="docsearch:version" content="5.3"><link rel="canonical" href="https://getbootstrap.esdocu.com/docs/5.3/migration/"><link rel="preconnect" href="https://AK7KMZKZHQ-dsn.algolia.net" crossorigin><title>Migración a v5 (Migrating to v5) · Bootstrap en Español v5.3</title><script src="/docs/5.3/assets/js/color-modes.js"></script><link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB">
+  <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180"><link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png"><link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png"><link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json"><link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9"><link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico"><meta name="theme-color" content="#712cf9"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@getbootstrap"><meta name="twitter:creator" content="@getbootstrap"><meta property="og:url" content="https://getbootstrap.esdocu.com/docs/5.3/migration/"><meta property="og:title" content="Migración a v5 (Migrating to v5)"><meta property="og:description" content="Sigue y revisa los cambios en los archivos fuente, la documentación y los componentes de Bootstrap para ayudarte a migrar de v4 a v5."><meta property="og:type" content="article"><meta property="og:image" content="https://getbootstrap.esdocu.com/docs/5.3/assets/brand/bootstrap-social.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="2000"><meta property="og:image:height" content="1000"><!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK014C26F7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-DK014C26F7');
+  </script><link rel="stylesheet" href="/docs/5.3/assets/_slug_.CJzlHdSW.css"><style>.esdocu-banner-horizontal[data-astro-cid-xmzgey5p]{position:relative;display:flex;flex-direction:column;gap:1.25rem;padding:1.5rem;border-radius:1rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .3s cubic-bezier(.16,1,.3,1);overflow:hidden;z-index:1;text-align:left;background:#ffffff8c;border:1px solid rgba(13,110,253,.15);box-shadow:0 4px 6px -1px #0d6efd08,0 10px 20px -10px #0d6efd0d}@media (min-width: 768px){.esdocu-banner-horizontal[data-astro-cid-xmzgey5p]{flex-direction:row;align-items:center;justify-content:space-between;padding:1.5rem 2rem;gap:2rem}}.banner-body[data-astro-cid-xmzgey5p]{display:flex;align-items:flex-start;gap:1.25rem;flex:1}.banner-icon-container[data-astro-cid-xmzgey5p]{font-size:2.25rem;line-height:1;filter:drop-shadow(0 2px 5px rgba(0,0,0,.05));transition:transform .4s cubic-bezier(.175,.885,.32,1.275);display:flex;align-items:center;justify-content:center;margin-top:.15rem}.esdocu-banner-horizontal[data-astro-cid-xmzgey5p]:hover .banner-icon-container[data-astro-cid-xmzgey5p]{transform:scale(1.15) rotate(5deg)}.banner-text-container[data-astro-cid-xmzgey5p]{flex:1}.banner-title[data-astro-cid-xmzgey5p]{font-size:1.15rem;font-weight:700;margin:0 0 .35rem;color:var(--bs-emphasis-color);line-height:1.3;letter-spacing:-.01em}.banner-desc[data-astro-cid-xmzgey5p]{font-size:.9rem;color:var(--bs-secondary-color);line-height:1.5;margin:0}.banner-action[data-astro-cid-xmzgey5p]{display:flex;align-items:center;flex-shrink:0}.banner-link[data-astro-cid-xmzgey5p]{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;font-size:.9rem;text-decoration:none!important;padding:.6rem 1.25rem;border-radius:.5rem;transition:all .3s ease;width:100%;background:var(--bs-primary);color:#fff!important}@media (min-width: 768px){.banner-link[data-astro-cid-xmzgey5p]{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}}.banner-link[data-astro-cid-xmzgey5p]:hover{background:#0b5ed7;box-shadow:0 4px 12px #0d6efd4d}.card-glow[data-astro-cid-xmzgey5p]{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1rem;opacity:0;transition:opacity .4s ease;z-index:-1;pointer-events:none;background:radial-gradient(circle at 90% 50%,rgba(13,110,253,.08),transparent 60%)}.esdocu-banner-horizontal[data-astro-cid-xmzgey5p]:hover{transform:translateY(-3px);border-color:#0d6efd4d;box-shadow:0 10px 20px -8px #0d6efd1f,0 15px 30px -10px #0d6efd14}.esdocu-banner-horizontal[data-astro-cid-xmzgey5p]:hover .card-glow[data-astro-cid-xmzgey5p]{opacity:1}[data-bs-theme=dark] .esdocu-banner-horizontal[data-astro-cid-xmzgey5p]{background:#0d6efd0a;border:1px solid rgba(13,110,253,.22);box-shadow:0 4px 20px #00000026,inset 0 1px 1px #ffffff0d}[data-bs-theme=dark] .esdocu-banner-horizontal[data-astro-cid-xmzgey5p]:hover{background:#0d6efd12;border-color:#0d6efd66;box-shadow:0 10px 25px -5px #0d6efd26,0 15px 35px -10px #00000040}[data-bs-theme=dark] .card-glow[data-astro-cid-xmzgey5p]{background:radial-gradient(circle at 90% 50%,rgba(13,110,253,.15),transparent 60%)}.link-arrow[data-astro-cid-xmzgey5p]{transition:transform .3s cubic-bezier(.16,1,.3,1)}.banner-link[data-astro-cid-xmzgey5p]:hover .link-arrow[data-astro-cid-xmzgey5p]{transform:translate(4px)}
+</style><style>.wordsus-banner-horizontal[data-astro-cid-4wd7aez2]{position:relative;display:flex;flex-direction:column;gap:1.25rem;padding:1.5rem;border-radius:1rem;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .3s cubic-bezier(.16,1,.3,1);overflow:hidden;z-index:1;text-align:left;background:#ffffff8c;border:1px solid rgba(245,158,11,.15);box-shadow:0 4px 6px -1px #f59e0b08,0 10px 20px -10px #f59e0b0d}@media (min-width: 768px){.wordsus-banner-horizontal[data-astro-cid-4wd7aez2]{flex-direction:row;align-items:center;justify-content:space-between;padding:1.5rem 2rem;gap:2rem}}.banner-body[data-astro-cid-4wd7aez2]{display:flex;align-items:flex-start;gap:1.25rem;flex:1}.banner-icon-container[data-astro-cid-4wd7aez2]{font-size:2.25rem;line-height:1;filter:drop-shadow(0 2px 5px rgba(0,0,0,.05));transition:transform .4s cubic-bezier(.175,.885,.32,1.275);display:flex;align-items:center;justify-content:center;margin-top:.15rem}.wordsus-banner-horizontal[data-astro-cid-4wd7aez2]:hover .banner-icon-container[data-astro-cid-4wd7aez2]{transform:scale(1.15) rotate(5deg)}.banner-text-container[data-astro-cid-4wd7aez2]{flex:1}.banner-title[data-astro-cid-4wd7aez2]{font-size:1.15rem;font-weight:700;margin:0 0 .35rem;color:var(--bs-emphasis-color);line-height:1.3;letter-spacing:-.01em}.banner-desc[data-astro-cid-4wd7aez2]{font-size:.9rem;color:var(--bs-secondary-color);line-height:1.5;margin:0}.banner-inline-link[data-astro-cid-4wd7aez2]{color:#e67e22;text-decoration:underline;font-weight:600}.banner-inline-link[data-astro-cid-4wd7aez2]:hover{color:#d35400}.banner-action[data-astro-cid-4wd7aez2]{display:flex;align-items:center;flex-shrink:0}.banner-link[data-astro-cid-4wd7aez2]{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;font-size:.9rem;text-decoration:none!important;padding:.6rem 1.25rem;border-radius:.5rem;transition:all .3s ease;width:100%;background:#e67e22;color:#fff!important}@media (min-width: 768px){.banner-link[data-astro-cid-4wd7aez2]{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}}.banner-link[data-astro-cid-4wd7aez2]:hover{background:#d35400;box-shadow:0 4px 12px #e67e224d}.card-glow[data-astro-cid-4wd7aez2]{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1rem;opacity:0;transition:opacity .4s ease;z-index:-1;pointer-events:none;background:radial-gradient(circle at 90% 50%,rgba(245,158,11,.08),transparent 60%)}.wordsus-banner-horizontal[data-astro-cid-4wd7aez2]:hover{transform:translateY(-3px);border-color:#f59e0b4d;box-shadow:0 10px 20px -8px #f59e0b1f,0 15px 30px -10px #f59e0b14}.wordsus-banner-horizontal[data-astro-cid-4wd7aez2]:hover .card-glow[data-astro-cid-4wd7aez2]{opacity:1}[data-bs-theme=dark] .wordsus-banner-horizontal[data-astro-cid-4wd7aez2]{background:#f59e0b0a;border:1px solid rgba(245,158,11,.22);box-shadow:0 4px 20px #00000026,inset 0 1px 1px #ffffff0d}[data-bs-theme=dark] .wordsus-banner-horizontal[data-astro-cid-4wd7aez2]:hover{background:#f59e0b12;border-color:#f59e0b66;box-shadow:0 10px 25px -5px #f59e0b26,0 15px 35px -10px #00000040}[data-bs-theme=dark] .card-glow[data-astro-cid-4wd7aez2]{background:radial-gradient(circle at 90% 50%,rgba(245,158,11,.15),transparent 60%)}.link-arrow[data-astro-cid-4wd7aez2]{transition:transform .3s cubic-bezier(.16,1,.3,1)}.banner-link[data-astro-cid-4wd7aez2]:hover .link-arrow[data-astro-cid-4wd7aez2]{transform:translate(4px)}
+</style></head> <body data-bs-spy="scroll" data-bs-target="#TableOfContents"> <div class="skippy visually-hidden-focusable overflow-hidden"> <div class="container-xl"> <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a> <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">
+Skip to docs navigation
+</a> </div> </div> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path> </symbol> <symbol id="arrow-right-short" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"></path> </symbol> <symbol id="book-half" viewBox="0 0 16 16"> <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"></path> </symbol> <symbol id="box-seam" viewBox="0 0 16 16"> <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"></path> </symbol> <symbol id="braces" viewBox="0 0 16 16"> <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"></path> </symbol> <symbol id="braces-asterisk" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5h-1Z"></path> </symbol> <symbol id="check2" viewBox="0 0 16 16"> <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path> </symbol> <symbol id="chevron-expand" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"></path> </symbol> <symbol id="circle-half" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path> </symbol> <symbol id="clipboard" viewBox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"></path> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"></path> </symbol> <symbol id="code" viewBox="0 0 16 16"> <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"></path> </symbol> <symbol id="file-earmark-richtext" viewBox="0 0 16 16"> <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"></path> <path d="M4.5 12.5A.5.5 0 0 1 5 12h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 10h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V8.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V8s1.54-1.274 1.639-1.208zM6.25 6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z"></path> </symbol> <symbol id="globe2" viewBox="0 0 16 16"> <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"></path> </symbol> <symbol id="grid-fill" viewBox="0 0 16 16"> <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"></path> </symbol> <symbol id="lightning-charge-fill" viewBox="0 0 16 16"> <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"></path> </symbol> <symbol id="list" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path> </symbol> <symbol id="magic" viewBox="0 0 16 16"> <path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1h1.829ZM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707L13.293 10ZM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0v1.829Zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0L8.354 9.06Z"></path> </symbol> <symbol id="menu-button-wide-fill" viewBox="0 0 16 16"> <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zm9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"></path> </symbol> <symbol id="moon-stars-fill" viewBox="0 0 16 16"> <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path> <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path> </symbol> <symbol id="palette2" viewBox="0 0 16 16"> <path d="M0 .5A.5.5 0 0 1 .5 0h5a.5.5 0 0 1 .5.5v5.277l4.147-4.131a.5.5 0 0 1 .707 0l3.535 3.536a.5.5 0 0 1 0 .708L10.261 10H15.5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5H3a2.99 2.99 0 0 1-2.121-.879A2.99 2.99 0 0 1 0 13.044m6-.21 7.328-7.3-2.829-2.828L6 7.188v5.647zM4.5 13a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0zM15 15v-4H9.258l-4.015 4H15zM0 .5v12.495V.5z"></path> <path d="M0 12.995V13a3.07 3.07 0 0 0 0-.005z"></path> </symbol> <symbol id="plugin" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a7 7 0 1 1 2.898 5.673c-.167-.121-.216-.406-.002-.62l1.8-1.8a3.5 3.5 0 0 0 4.572-.328l1.414-1.415a.5.5 0 0 0 0-.707l-.707-.707 1.559-1.563a.5.5 0 1 0-.708-.706l-1.559 1.562-1.414-1.414 1.56-1.562a.5.5 0 1 0-.707-.706l-1.56 1.56-.707-.706a.5.5 0 0 0-.707 0L5.318 5.975a3.5 3.5 0 0 0-.328 4.571l-1.8 1.8c-.58.58-.62 1.6.121 2.137A8 8 0 1 0 0 8a.5.5 0 0 0 1 0Z"></path> </symbol> <symbol id="plus" viewBox="0 0 16 16"> <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path> </symbol> <symbol id="sun-fill" viewBox="0 0 16 16"> <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path> </symbol> <symbol id="three-dots" viewBox="0 0 16 16"> <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path> </symbol> <symbol id="tools" viewBox="0 0 16 16"> <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"></path> </symbol> <symbol id="ui-radios" viewBox="0 0 16 16"> <path d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zM0 12a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm7-1.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zM3 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path> </symbol> </svg> <header class="navbar navbar-expand-lg bd-navbar sticky-top"> <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation"> <div class="bd-navbar-toggle"> <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="bi" height="24" width="24" aria-hidden="true"> <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path> </svg> <span class="d-none fs-6 pe-1">Browse</span> </button> </div>  <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="Bootstrap"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 94" role="img" class="d-block my-1" height="32" width="40"> <title>Bootstrap</title> <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path> </svg> </a> <div class="d-flex"> <div class="bd-search" id="docsearch" data-bd-docs-version="5.3"></div> <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation"> <svg class="bi" aria-hidden="true"><use xlink:href="#three-dots"></use></svg> </button> </div> <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel"> <div class="offcanvas-header px-4 pb-0"> <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5> <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button> </div> <div class="offcanvas-body p-4 pt-0 p-lg-0"> <hr class="d-lg-none text-white-50"> <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav"> <li class="nav-item col-6 col-lg-auto"> <a aria-current="true" class="nav-link py-2 px-0 px-lg-2 active" href="/docs/5.3/getting-started/introduction/"> 
+Docs
+ </a> </li> <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2" href="/docs/5.3/examples/"> Examples </a> </li> <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2" href="https://icons.getbootstrap.com/" target="_blank" rel="noopener"> Icons </a> </li> <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2" href="https://blog.getbootstrap.com/" target="_blank" rel="noopener"> Blog </a> </li> </ul> <hr class="d-lg-none text-white-50"> <ul class="navbar-nav flex-row flex-wrap ms-md-auto"> <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2 nav-link py-2 px-0 px-lg-2" href="https://github.com/twbs" target="_blank" rel="noopener">  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" role="img" class="navbar-nav-svg" height="16" width="16"> <title>GitHub</title> <path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path> </svg> <small class="d-lg-none ms-2">GitHub</small>  </a> </li> <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2 nav-link py-2 px-0 px-lg-2" href="https://x.com/getbootstrap" target="_blank" rel="noopener">  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" role="img" class="navbar-nav-svg" height="16" width="16"> <title>X</title> <path fill="currentColor" d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"></path> </svg> <small class="d-lg-none ms-2">X</small>  </a> </li> <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2 nav-link py-2 px-0 px-lg-2" href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" fill-rule="evenodd" viewBox="0 0 40 41" role="img" class="navbar-nav-svg" height="16" width="16"> <title>Open Collective</title> <path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path> <path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path> </svg> <small class="d-lg-none ms-2">Open Collective</small>  </a> </li> <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto"> <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div> <hr class="d-lg-none my-2 text-white-50"> </li> <li class="nav-item dropdown"> <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static"> <span class="d-lg-none" aria-hidden="true">Bootstrap</span><span class="visually-hidden">Bootstrap&nbsp;</span> v5.3 <span class="visually-hidden">(switch to other versions)</span> </button> <ul class="dropdown-menu dropdown-menu-end"> <li><h6 class="dropdown-header">v5 releases</h6></li> <li> <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="/docs/5.3/migration/">
+Latest (5.3.x)
+<svg class="bi" aria-hidden="true"><use xlink:href="#check2"></use></svg> </a> </li> <li> <a class="dropdown-item" href="https://getbootstrap.com/docs/5.2/migration/">
+v5.2.3
+</a> </li> <li> <a class="dropdown-item" href="/docs/5.1/migration/">
+v5.1.3
+</a> </li> <li> <a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/migration/">
+v5.0.2
+</a> </li> <li><hr class="dropdown-divider"></li> <li><h6 class="dropdown-header">Previous releases</h6></li> <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6/">v4.6.x</a></li> <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li> <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li> <li><hr class="dropdown-divider"></li> <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li> </ul> </li> <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto"> <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div> <hr class="d-lg-none my-2 text-white-50"> </li> <li class="nav-item dropdown"> <button class="btn btn-link nav-link px-0 px-lg-2 py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Cambiar tema (auto)"> <svg class="bi my-1 theme-icon-active" aria-hidden="true"><use href="#circle-half"></use></svg> <span class="d-lg-none ms-2" id="bd-theme-text">Cambiar tema</span> </button> <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text"> <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false"> <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#sun-fill"></use></svg>
+Claro
+<svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg> </button> </li> <li> <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false"> <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#moon-stars-fill"></use></svg>
+Oscuro
+<svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg> </button> </li> <li> <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true"> <svg class="bi me-2 opacity-50" aria-hidden="true"><use href="#circle-half"></use></svg>
+Auto
+<svg class="bi ms-auto d-none" aria-hidden="true"><use href="#check2"></use></svg> </button> </li> </ul> </li> </ul> </div> </div> </nav> </header> <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout"> <aside class="bd-sidebar"> <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel"> <div class="offcanvas-header border-bottom"> <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Explorar documentos</h5> <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar" data-bs-target="#bdSidebar"></button> </div> <div class="offcanvas-body"> <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation"> <ul class="bd-links-nav list-unstyled mb-0 pb-3 pb-md-2 pe-lg-2"> <li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true"> <use  xlink:href="#book-half"></use> </svg> Primeros pasos </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/getting-started/introduction" class="bd-links-link d-inline-block rounded"> Introducción </a> </li><li> <a href="/docs/5.3/getting-started/download" class="bd-links-link d-inline-block rounded"> Descarga </a> </li><li> <a href="/docs/5.3/getting-started/contents" class="bd-links-link d-inline-block rounded"> Contenidos </a> </li><li> <a href="/docs/5.3/getting-started/browsers-devices" class="bd-links-link d-inline-block rounded"> Navegadores y dispositivos </a> </li><li> <a href="/docs/5.3/getting-started/javascript" class="bd-links-link d-inline-block rounded"> JavaScript </a> </li><li> <a href="/docs/5.3/getting-started/webpack" class="bd-links-link d-inline-block rounded"> Webpack </a> </li><li> <a href="/docs/5.3/getting-started/parcel" class="bd-links-link d-inline-block rounded"> Parcel </a> </li><li> <a href="/docs/5.3/getting-started/vite" class="bd-links-link d-inline-block rounded"> Vite </a> </li><li> <a href="/docs/5.3/getting-started/accessibility" class="bd-links-link d-inline-block rounded"> Accesibilidad </a> </li><li> <a href="/docs/5.3/getting-started/rfs" class="bd-links-link d-inline-block rounded"> RFS </a> </li><li> <a href="/docs/5.3/getting-started/rtl" class="bd-links-link d-inline-block rounded"> RTL </a> </li><li> <a href="/docs/5.3/getting-started/contribute" class="bd-links-link d-inline-block rounded"> Contribuir </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-pink);" aria-hidden="true"> <use  xlink:href="#palette2"></use> </svg> Personalizar </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/customize/overview" class="bd-links-link d-inline-block rounded"> Información general </a> </li><li> <a href="/docs/5.3/customize/sass" class="bd-links-link d-inline-block rounded"> Sass </a> </li><li> <a href="/docs/5.3/customize/options" class="bd-links-link d-inline-block rounded"> Opciones </a> </li><li> <a href="/docs/5.3/customize/color" class="bd-links-link d-inline-block rounded"> Color </a> </li><li> <a href="/docs/5.3/customize/color-modes" class="bd-links-link d-inline-block rounded"> Modos de color </a> </li><li> <a href="/docs/5.3/customize/components" class="bd-links-link d-inline-block rounded"> Componentes </a> </li><li> <a href="/docs/5.3/customize/css-variables" class="bd-links-link d-inline-block rounded"> Variables CSS </a> </li><li> <a href="/docs/5.3/customize/optimize" class="bd-links-link d-inline-block rounded"> Optimizar </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-teal);" aria-hidden="true"> <use  xlink:href="#grid-fill"></use> </svg> Diseño </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/layout/breakpoints" class="bd-links-link d-inline-block rounded"> Puntos de interrupción </a> </li><li> <a href="/docs/5.3/layout/containers" class="bd-links-link d-inline-block rounded"> Contenedores </a> </li><li> <a href="/docs/5.3/layout/grid" class="bd-links-link d-inline-block rounded"> Cuadrícula </a> </li><li> <a href="/docs/5.3/layout/columns" class="bd-links-link d-inline-block rounded"> Columnas </a> </li><li> <a href="/docs/5.3/layout/gutters" class="bd-links-link d-inline-block rounded"> Medianiles </a> </li><li> <a href="/docs/5.3/layout/utilities" class="bd-links-link d-inline-block rounded"> Utilidades </a> </li><li> <a href="/docs/5.3/layout/z-index" class="bd-links-link d-inline-block rounded"> Z-index </a> </li><li> <a href="/docs/5.3/layout/css-grid" class="bd-links-link d-inline-block rounded"> CSS Grid </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-gray);" aria-hidden="true"> <use  xlink:href="#file-earmark-richtext"></use> </svg> Contenido </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/content/reboot" class="bd-links-link d-inline-block rounded"> Reboot </a> </li><li> <a href="/docs/5.3/content/typography" class="bd-links-link d-inline-block rounded"> Tipografía </a> </li><li> <a href="/docs/5.3/content/images" class="bd-links-link d-inline-block rounded"> Imágenes </a> </li><li> <a href="/docs/5.3/content/tables" class="bd-links-link d-inline-block rounded"> Tablas </a> </li><li> <a href="/docs/5.3/content/figures" class="bd-links-link d-inline-block rounded"> Figuras </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"> <use  xlink:href="#ui-radios"></use> </svg> Formularios </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/forms/overview" class="bd-links-link d-inline-block rounded"> Información general </a> </li><li> <a href="/docs/5.3/forms/form-control" class="bd-links-link d-inline-block rounded"> Control de formulario </a> </li><li> <a href="/docs/5.3/forms/select" class="bd-links-link d-inline-block rounded"> Select </a> </li><li> <a href="/docs/5.3/forms/checks-radios" class="bd-links-link d-inline-block rounded"> Checks y radios </a> </li><li> <a href="/docs/5.3/forms/range" class="bd-links-link d-inline-block rounded"> Rango </a> </li><li> <a href="/docs/5.3/forms/input-group" class="bd-links-link d-inline-block rounded"> Grupo de entrada </a> </li><li> <a href="/docs/5.3/forms/floating-labels" class="bd-links-link d-inline-block rounded"> Etiquetas flotantes </a> </li><li> <a href="/docs/5.3/forms/layout" class="bd-links-link d-inline-block rounded"> Diseño </a> </li><li> <a href="/docs/5.3/forms/validation" class="bd-links-link d-inline-block rounded"> Validación </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-cyan);" aria-hidden="true"> <use  xlink:href="#menu-button-wide-fill"></use> </svg> Componentes </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/components/accordion" class="bd-links-link d-inline-block rounded"> Acordeón </a> </li><li> <a href="/docs/5.3/components/alerts" class="bd-links-link d-inline-block rounded"> Alertas </a> </li><li> <a href="/docs/5.3/components/badge" class="bd-links-link d-inline-block rounded"> Insignias </a> </li><li> <a href="/docs/5.3/components/breadcrumb" class="bd-links-link d-inline-block rounded"> Miga de pan </a> </li><li> <a href="/docs/5.3/components/buttons" class="bd-links-link d-inline-block rounded"> Botones </a> </li><li> <a href="/docs/5.3/components/button-group" class="bd-links-link d-inline-block rounded"> Grupo de botones </a> </li><li> <a href="/docs/5.3/components/card" class="bd-links-link d-inline-block rounded"> Tarjetas </a> </li><li> <a href="/docs/5.3/components/carousel" class="bd-links-link d-inline-block rounded"> Carrusel </a> </li><li> <a href="/docs/5.3/components/close-button" class="bd-links-link d-inline-block rounded"> Botón de cierre </a> </li><li> <a href="/docs/5.3/components/collapse" class="bd-links-link d-inline-block rounded"> Colapso </a> </li><li> <a href="/docs/5.3/components/dropdowns" class="bd-links-link d-inline-block rounded"> Dropdowns </a> </li><li> <a href="/docs/5.3/components/list-group" class="bd-links-link d-inline-block rounded"> Grupo de listas </a> </li><li> <a href="/docs/5.3/components/modal" class="bd-links-link d-inline-block rounded"> Modal </a> </li><li> <a href="/docs/5.3/components/navbar" class="bd-links-link d-inline-block rounded"> Barra de navegación </a> </li><li> <a href="/docs/5.3/components/navs-tabs" class="bd-links-link d-inline-block rounded"> Navs y pestañas </a> </li><li> <a href="/docs/5.3/components/offcanvas" class="bd-links-link d-inline-block rounded"> Offcanvas </a> </li><li> <a href="/docs/5.3/components/pagination" class="bd-links-link d-inline-block rounded"> Paginación </a> </li><li> <a href="/docs/5.3/components/placeholders" class="bd-links-link d-inline-block rounded"> Placeholders </a> </li><li> <a href="/docs/5.3/components/popovers" class="bd-links-link d-inline-block rounded"> Popovers </a> </li><li> <a href="/docs/5.3/components/progress" class="bd-links-link d-inline-block rounded"> Progreso </a> </li><li> <a href="/docs/5.3/components/scrollspy" class="bd-links-link d-inline-block rounded"> Scrollspy </a> </li><li> <a href="/docs/5.3/components/spinners" class="bd-links-link d-inline-block rounded"> Spinners </a> </li><li> <a href="/docs/5.3/components/toasts" class="bd-links-link d-inline-block rounded"> Toasts </a> </li><li> <a href="/docs/5.3/components/tooltips" class="bd-links-link d-inline-block rounded"> Tooltips </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-orange);" aria-hidden="true"> <use  xlink:href="#magic"></use> </svg> Helpers </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/helpers/clearfix" class="bd-links-link d-inline-block rounded"> Clearfix </a> </li><li> <a href="/docs/5.3/helpers/color-background" class="bd-links-link d-inline-block rounded"> Color y fondo </a> </li><li> <a href="/docs/5.3/helpers/colored-links" class="bd-links-link d-inline-block rounded"> Enlaces coloreados </a> </li><li> <a href="/docs/5.3/helpers/focus-ring" class="bd-links-link d-inline-block rounded"> Anillo de enfoque </a> </li><li> <a href="/docs/5.3/helpers/icon-link" class="bd-links-link d-inline-block rounded"> Enlace de icono </a> </li><li> <a href="/docs/5.3/helpers/position" class="bd-links-link d-inline-block rounded"> Posición </a> </li><li> <a href="/docs/5.3/helpers/ratio" class="bd-links-link d-inline-block rounded"> Ratio </a> </li><li> <a href="/docs/5.3/helpers/stacks" class="bd-links-link d-inline-block rounded"> Stacks </a> </li><li> <a href="/docs/5.3/helpers/stretched-link" class="bd-links-link d-inline-block rounded"> Enlace estirado </a> </li><li> <a href="/docs/5.3/helpers/text-truncation" class="bd-links-link d-inline-block rounded"> Truncamiento de texto </a> </li><li> <a href="/docs/5.3/helpers/vertical-rule" class="bd-links-link d-inline-block rounded"> Regla vertical </a> </li><li> <a href="/docs/5.3/helpers/visually-hidden" class="bd-links-link d-inline-block rounded"> Oculto visualmente </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-red);" aria-hidden="true"> <use  xlink:href="#braces-asterisk"></use> </svg> Utilidades </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/utilities/api" class="bd-links-link d-inline-block rounded"> API </a> </li><li> <a href="/docs/5.3/utilities/background" class="bd-links-link d-inline-block rounded"> Fondo </a> </li><li> <a href="/docs/5.3/utilities/borders" class="bd-links-link d-inline-block rounded"> Bordes </a> </li><li> <a href="/docs/5.3/utilities/colors" class="bd-links-link d-inline-block rounded"> Colores </a> </li><li> <a href="/docs/5.3/utilities/display" class="bd-links-link d-inline-block rounded"> Display </a> </li><li> <a href="/docs/5.3/utilities/flex" class="bd-links-link d-inline-block rounded"> Flex </a> </li><li> <a href="/docs/5.3/utilities/float" class="bd-links-link d-inline-block rounded"> Float </a> </li><li> <a href="/docs/5.3/utilities/interactions" class="bd-links-link d-inline-block rounded"> Interacciones </a> </li><li> <a href="/docs/5.3/utilities/link" class="bd-links-link d-inline-block rounded"> Enlace </a> </li><li> <a href="/docs/5.3/utilities/object-fit" class="bd-links-link d-inline-block rounded"> Object fit </a> </li><li> <a href="/docs/5.3/utilities/opacity" class="bd-links-link d-inline-block rounded"> Opacidad </a> </li><li> <a href="/docs/5.3/utilities/overflow" class="bd-links-link d-inline-block rounded"> Desbordamiento </a> </li><li> <a href="/docs/5.3/utilities/position" class="bd-links-link d-inline-block rounded"> Posición </a> </li><li> <a href="/docs/5.3/utilities/shadows" class="bd-links-link d-inline-block rounded"> Sombras </a> </li><li> <a href="/docs/5.3/utilities/sizing" class="bd-links-link d-inline-block rounded"> Tamaño </a> </li><li> <a href="/docs/5.3/utilities/spacing" class="bd-links-link d-inline-block rounded"> Espaciado </a> </li><li> <a href="/docs/5.3/utilities/text" class="bd-links-link d-inline-block rounded"> Texto </a> </li><li> <a href="/docs/5.3/utilities/vertical-align" class="bd-links-link d-inline-block rounded"> Alineación vertical </a> </li><li> <a href="/docs/5.3/utilities/visibility" class="bd-links-link d-inline-block rounded"> Visibilidad </a> </li><li> <a href="/docs/5.3/utilities/z-index" class="bd-links-link d-inline-block rounded"> Z-index </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-blue);" aria-hidden="true"> <use  xlink:href="#tools"></use> </svg> Extender </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/extend/approach" class="bd-links-link d-inline-block rounded"> Enfoque </a> </li><li> <a href="/docs/5.3/extend/icons" class="bd-links-link d-inline-block rounded"> Iconos </a> </li> </ul> </li><li class="bd-links-group py-2"> <strong class="bd-links-heading d-flex w-100 align-items-center fw-semibold"> <svg class="bi me-2" style="color: var(--bs-indigo);" aria-hidden="true"> <use  xlink:href="#globe2"></use> </svg> Acerca de </strong> <ul class="list-unstyled fw-normal pb-2 small"> <li> <a href="/docs/5.3/about/overview" class="bd-links-link d-inline-block rounded"> Información general </a> </li><li> <a href="/docs/5.3/about/team" class="bd-links-link d-inline-block rounded"> Equipo </a> </li><li> <a href="/docs/5.3/about/brand" class="bd-links-link d-inline-block rounded"> Marca </a> </li><li> <a href="/docs/5.3/about/license" class="bd-links-link d-inline-block rounded"> Licencia </a> </li><li> <a href="/docs/5.3/about/translations" class="bd-links-link d-inline-block rounded"> Traducciones </a> </li> </ul> </li> <li class="bd-links-span-all mt-1 mb-3 mx-4 border-top"></li> <li class="bd-links-span-all"> <a href="/docs/5.3/migration/" class="bd-links-link d-inline-block rounded small active" aria-current="page"> Migración </a> </li>  </ul> </nav> </div> </div> </aside> <main class="bd-main order-1"> <div class="bd-intro pt-2 ps-lg-2"> <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between"> <div class="mb-3 mb-md-0 d-flex text-nowrap">  <a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.8/site/src/content/docs/migration.mdx" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener">
+Ver en GitHub
+</a> </div> <h1 class="bd-title mb-0" id="content">Migración a v5 (Migrating to v5)</h1> </div> <div class="bd-subtitle"> <p>Sigue y revisa los cambios en los archivos fuente, la documentación y los componentes de Bootstrap para ayudarte a migrar de v4 a v5.</p>
+ </div> </div> <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary"> <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
+En esta página
+<svg class="bi d-md-none ms-2" aria-hidden="true"> <use xlink:href="#chevron-expand"></use> </svg> </button>
+            <strong class="d-none d-md-block h6 my-2 ms-3" id="docs-tocs">En esta página</strong>
+            <hr class="d-none d-md-block my-2 ms-3">
+            <div class="collapse bd-toc-collapse" id="tocContents"> <nav id="TableOfContents" aria-labelledby="docs-tocs"> <ul> <li> <a href="#v536">v5.3.6</a> <ul> <li> <a href="#dependencias">Dependencias</a>  </li> </ul> </li><li> <a href="#v530">v5.3.0</a> <ul> <li> <a href="#ayudantes-helpers">Ayudantes (Helpers)</a>  </li><li> <a href="#utilidades">Utilidades</a>  </li> </ul> </li><li> <a href="#v530-alpha2">v5.3.0-alpha2</a> <ul> <li> <a href="#variables-css">Variables CSS</a>  </li><li> <a href="#modos-de-color">Modos de color</a>  </li><li> <a href="#tipografía">Tipografía</a>  </li><li> <a href="#componentes">Componentes</a>  </li><li> <a href="#ayudantes-helpers-1">Ayudantes (Helpers)</a>  </li><li> <a href="#utilidades-1">Utilidades</a>  </li><li> <a href="#documentación-docs">Documentación (Docs)</a>  </li><li> <a href="#herramientas-tooling">Herramientas (Tooling)</a>  </li> </ul> </li><li> <a href="#v530-alpha1">v5.3.0-alpha1</a> <ul> <li> <a href="#modos-de-color-1">¡Modos de color!</a>  </li><li> <a href="#variables-css-1">Variables CSS</a>  </li><li> <a href="#componentes-1">Componentes</a> <ul> <li> <a href="#alerta-alert">Alerta (Alert)</a>  </li><li> <a href="#grupo-de-lista-list-group">Grupo de lista (List group)</a>  </li><li> <a href="#menús-desplegables-dropdowns">Menús desplegables (Dropdowns)</a>  </li><li> <a href="#botón-de-cierre-close-button">Botón de cierre (Close button)</a>  </li><li> <a href="#barra-de-navegación-navbar">Barra de navegación (Navbar)</a>  </li> </ul> </li><li> <a href="#barras-de-progreso-progress-bars">Barras de progreso (Progress bars)</a>  </li><li> <a href="#formularios">Formularios</a>  </li><li> <a href="#utilidades-2">Utilidades</a>  </li> </ul> </li><li> <a href="#v520">v5.2.0</a> <ul> <li> <a href="#diseño-renovado">Diseño renovado</a>  </li><li> <a href="#más-variables-css">Más variables CSS</a>  </li><li> <a href="#nuevo-_mapsscss">Nuevo _maps.scss</a>  </li><li> <a href="#nuevas-utilidades">Nuevas utilidades</a>  </li><li> <a href="#cambios-adicionales">Cambios adicionales</a>  </li> </ul> </li><li> <a href="#v510">v5.1.0</a>  </li><li> <a href="#v500">v5.0.0</a> <ul> <li> <a href="#dependencias-1">Dependencias</a>  </li><li> <a href="#soporte-de-navegadores">Soporte de navegadores</a>  </li><li> <a href="#cambios-en-la-documentación">Cambios en la documentación</a>  </li><li> <a href="#sass">Sass</a>  </li><li> <a href="#sistema-de-color">Sistema de color</a>  </li><li> <a href="#actualizaciones-de-cuadrícula-grid-updates">Actualizaciones de cuadrícula (Grid updates)</a>  </li><li> <a href="#contenido-reboot-etc">Contenido, Reboot, etc.</a>  </li><li> <a href="#rtl">RTL</a>  </li><li> <a href="#formularios-1">Formularios</a>  </li><li> <a href="#componentes-2">Componentes</a> <ul> <li> <a href="#acordeón-accordion">Acordeón (Accordion)</a>  </li><li> <a href="#alertas-alerts">Alertas (Alerts)</a>  </li><li> <a href="#insignias-badges">Insignias (Badges)</a>  </li><li> <a href="#migas-de-pan-breadcrumbs">Migas de pan (Breadcrumbs)</a>  </li><li> <a href="#botones-buttons">Botones (Buttons)</a>  </li><li> <a href="#tarjetas-card">Tarjetas (Card)</a>  </li><li> <a href="#carrusel-carousel">Carrusel (Carousel)</a>  </li><li> <a href="#botón-de-cierre-close-button-1">Botón de cierre (Close button)</a>  </li><li> <a href="#colapso-collapse">Colapso (Collapse)</a>  </li><li> <a href="#menús-desplegables-dropdowns-1">Menús desplegables (Dropdowns)</a>  </li><li> <a href="#jumbotron">Jumbotron</a>  </li><li> <a href="#grupo-de-lista-list-group-1">Grupo de lista (List group)</a>  </li><li> <a href="#navs-y-pestañas-navs-and-tabs">Navs y pestañas (Navs and tabs)</a>  </li><li> <a href="#barras-de-navegación-navbars">Barras de navegación (Navbars)</a>  </li><li> <a href="#offcanvas">Offcanvas</a>  </li><li> <a href="#paginación-pagination">Paginación (Pagination)</a>  </li><li> <a href="#popovers">Popovers</a>  </li><li> <a href="#spinners">Spinners</a>  </li><li> <a href="#toasts">Toasts</a>  </li><li> <a href="#tooltips">Tooltips</a>  </li> </ul> </li><li> <a href="#utilidades-3">Utilidades</a>  </li><li> <a href="#ayundantes-helpers">Ayundantes (Helpers)</a>  </li><li> <a href="#javascript">JavaScript</a>  </li> </ul> </li> </ul> </nav> </div>  </div> <div class="bd-content ps-lg-2">   <div class="esdocu-banner-horizontal my-4" data-astro-cid-xmzgey5p> <div class="card-glow" data-astro-cid-xmzgey5p></div> <div class="banner-body" data-astro-cid-xmzgey5p> <div class="banner-icon-container" data-astro-cid-xmzgey5p> <span class="banner-icon" data-astro-cid-xmzgey5p>😎</span> </div> <div class="banner-text-container" data-astro-cid-xmzgey5p> <h4 class="banner-title" data-astro-cid-xmzgey5p>¿Te gustó esta traducción?</h4> <p class="banner-desc" data-astro-cid-xmzgey5p>
+Accede a todas nuestras documentaciones técnicas en español. Traducimos guías y referencias oficiales con la máxima precisión para la comunidad de desarrolladores hispanohablantes.
+</p> </div> </div> <div class="banner-action" data-astro-cid-xmzgey5p> <a href="https://esdocu.com" target="_blank" rel="noopener" class="banner-link" data-astro-cid-xmzgey5p> <span data-astro-cid-xmzgey5p>Documentaciones en Español</span> <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-xmzgey5p> <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-xmzgey5p></path> </svg> </a> </div> </div> 
+<h2 id="v536">v5.3.6<a class="anchor-link" aria-label="Link to this section: v5.3.6" href="#v536"> </a></h2>
+<h3 id="dependencias">Dependencias<a class="anchor-link" aria-label="Link to this section: Dependencias" href="#dependencias"> </a></h3>
+<ul>
+<li>Se migró de Hugo a Astro para la construcción de nuestra documentación.</li>
+</ul>
+<h2 id="v530">v5.3.0<a class="anchor-link" aria-label="Link to this section: v5.3.0" href="#v530"> </a></h2>
+<p>Si vas a migrar desde nuestras versiones alfa anteriores de v5.3.0, revisa sus cambios además de esta sección.</p>
+<h3 id="ayudantes-helpers">Ayudantes (Helpers)<a class="anchor-link" aria-label="Link to this section: Ayudantes (Helpers)" href="#ayudantes-helpers"> </a></h3>
+<ul>
+<li>Los <a href="/docs/5.3/helpers/colored-links">enlaces coloreados</a> vuelven a tener <code>!important</code> para que funcionen mejor con nuestras utilidades de enlaces recién agregadas.</li>
+</ul>
+<h3 id="utilidades">Utilidades<a class="anchor-link" aria-label="Link to this section: Utilidades" href="#utilidades"> </a></h3>
+<ul>
+<li>Se agregó la nueva <a href="/docs/5.3/utilities/display">utilidad de visualización</a> <code>.d-inline-grid</code>.</li>
+</ul>
+<h2 id="v530-alpha2">v5.3.0-alpha2<a class="anchor-link" aria-label="Link to this section: v5.3.0-alpha2" href="#v530-alpha2"> </a></h2>
+<p>Si vas a migrar desde nuestra versión alfa anterior de v5.3.0, revisa los cambios que se enumeran a continuación.</p>
+<h3 id="variables-css">Variables CSS<a class="anchor-link" aria-label="Link to this section: Variables CSS" href="#variables-css"> </a></h3>
+<ul>
+<li>Se eliminaron varias variables CSS de root duplicadas y no utilizadas.</li>
+</ul>
+<h3 id="modos-de-color">Modos de color<a class="anchor-link" aria-label="Link to this section: Modos de color" href="#modos-de-color"> </a></h3>
+<ul>
+<li>
+<p>Los colores del modo oscuro ahora se derivan de nuestros colores del tema (por ejemplo, <code>$primary</code>) en Sass, en lugar de tintes o matices específicos de color (por ejemplo, <code>$blue-300</code>). Esto permite un modo oscuro más automatizado al personalizar los colores predeterminados del tema.</p>
+</li>
+<li>
+<p>Se agregaron mapas Sass para generar colores de tema para texto en modo oscuro, fondo sutil y borde sutil.</p>
+</li>
+<li>
+<p>Los <a href="/docs/5.3/examples/#snippets">ejemplos de fragmentos (snippets)</a> ahora están listos para el modo oscuro con marcado actualizado y estilos personalizados reducidos.</p>
+</li>
+<li>
+<p>Se agregó <code>color-scheme: dark</code> al CSS del modo oscuro para cambiar los controles a nivel de sistema operativo como las barras de desplazamiento.</p>
+</li>
+<li>
+<p>Los estados de validación de formulario <code>border-color</code> y <code>color</code> de texto ahora responden al modo oscuro, gracias a las nuevas variables Sass y CSS.</p>
+</li>
+<li>
+<p>Se eliminaron las variables CSS de fondo de control de formulario agregadas recientemente y se reasignaron las variables Sass para usar variables CSS en su lugar. Esto simplifica el estilo en todos los modos de color y evita un problema por el cual los controles de formulario en modo oscuro no se actualizaban correctamente.</p>
+</li>
+<li>
+<p>Nuestras <code>box-shadow</code> volverán a permanecer oscuras en lugar de invertirse a blanco en el modo oscuro.</p>
+</li>
+<li>
+<p>Se mejoraron el HTML y JavaScript para nuestro script de alternancia de modo de color. Se mejoró el selector para cambiar el SVG activo y se hizo el marcado más accesible con atributos ARIA.</p>
+</li>
+<li>
+<p>Se mejoraron los colores de sintaxis del código de la documentación y más en los modos claro y oscuro.</p>
+</li>
+</ul>
+<h3 id="tipografía">Tipografía<a class="anchor-link" aria-label="Link to this section: Tipografía" href="#tipografía"> </a></h3>
+<ul>
+<li>Ya no establecemos un color para <code>$headings-color-dark</code> o <code>--bs-heading-color</code> para el modo oscuro. Para evitar varios problemas de encabezados dentro de componentes que aparecen con el color incorrecto, configuramos la variable Sass en <code>null</code> y agregamos una verificación de <code>null</code> como la que usamos en el modo claro predeterminado.</li>
+</ul>
+<h3 id="componentes">Componentes<a class="anchor-link" aria-label="Link to this section: Componentes" href="#componentes"> </a></h3>
+<ul>
+<li>
+<p>Las tarjetas (cards) ahora tienen un <code>color</code> establecido para mejorar la representación en todos los modos de color.</p>
+</li>
+<li>
+<p>Se agregó la nueva variante <code>.nav-underline</code> para nuestra navegación con un borde inferior más simple debajo del enlace de navegación activo. <a href="/docs/5.3/components/navs-tabs#underline">Consulta la documentación para ver un ejemplo.</a></p>
+</li>
+<li>
+<p>Los navs ahora tienen nuevos estilos <code>:focus-visible</code> que coinciden mejor con nuestros estilos de enfoque de botones personalizados.</p>
+</li>
+</ul>
+<h3 id="ayudantes-helpers-1">Ayudantes (Helpers)<a class="anchor-link" aria-label="Link to this section: Ayudantes (Helpers)" href="#ayudantes-helpers-1"> </a></h3>
+<ul>
+<li>
+<p>Se agregó el nuevo ayudante <code>.icon-link</code> para colocar y alinear rápidamente Bootstrap Icons junto a un enlace textual. Los enlaces de iconos también admiten nuestras nuevas utilidades de enlaces.</p>
+</li>
+<li>
+<p>Se agregó el nuevo ayudante de anillo de enfoque para eliminar el <code>outline</code> predeterminado y establecer un anillo de enfoque <code>box-shadow</code> personalizado.</p>
+</li>
+</ul>
+<h3 id="utilidades-1">Utilidades<a class="anchor-link" aria-label="Link to this section: Utilidades" href="#utilidades-1"> </a></h3>
+<ul>
+<li>
+<p>Se cambiaron de nombre las variables Sass y CSS <code>${color}-text</code> a <code>${color}-text-emphasis</code> para que coincidan con sus utilidades asociadas.</p>
+</li>
+<li>
+<p>Se agregó el nuevo ayudante <code>.link-body-emphasis</code> junto con nuestros <a href="/docs/5.3/helpers/colored-links">enlaces coloreados</a>. Esto crea un enlace de color utilizando nuestro color de énfasis adaptable al modo de color.</p>
+</li>
+<li>
+<p>Se agregaron nuevas utilidades de enlaces para la opacidad del color del enlace, el desplazamiento del subrayado, el color del subrayado y la opacidad del subrayado. <a href="/docs/5.3/utilities/link">Explora las nuevas utilidades de enlaces.</a></p>
+</li>
+<li>
+<p>Las utilidades de <code>border-width</code> basadas en variables CSS se han revertido para establecer su propiedad directamente (como se hacía antes de v5.2.0). Esto evita problemas de herencia entre elementos anidados, incluidas las tablas.</p>
+</li>
+<li>
+<p>Se agregó la nueva utilidad <code>.border-black</code> para coincidir con nuestras utilidades <code>.text-black</code> y <code>.bg-black</code>.</p>
+</li>
+<li>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> La utilidad <code>.text-muted</code> y la variable Sass <code>$text-muted</code> han quedado obsoletas y han sido reemplazadas por <code>.text-body-secondary</code> y <code>$body-secondary-color</code>.</p>
+</li>
+</ul>
+<h3 id="documentación-docs">Documentación (Docs)<a class="anchor-link" aria-label="Link to this section: Documentación (Docs)" href="#documentación-docs"> </a></h3>
+<ul>
+<li>
+<p>Los ejemplos ahora se muestran con el modo de color claro u oscuro apropiado según lo dicte la configuración de nuestra documentación. Cada ejemplo tiene un selector de modo de color individual.</p>
+</li>
+<li>
+<p>Se mejoró el JavaScript incluido para la demostración en vivo de Toast.</p>
+</li>
+<li>
+<p>Se agregaron los contenidos del repositorio <code>twbs/examples</code> a la parte superior de la página de ejemplos.</p>
+</li>
+</ul>
+<h3 id="herramientas-tooling">Herramientas (Tooling)<a class="anchor-link" aria-label="Link to this section: Herramientas (Tooling)" href="#herramientas-tooling"> </a></h3>
+<ul>
+<li>
+<p>Se agregaron pruebas de SCSS a través de True para ayudar a probar nuestra API de utilidades y otras personalizaciones.</p>
+</li>
+<li>
+<p>Se reemplazaron las instancias de nuestro proyecto bootstrap-npm-starter por el repositorio <a href="https://github.com/twbs/examples">twbs/examples repo</a> más nuevo y completo.</p>
+</li>
+</ul>
+<hr class="mb-4"/>
+<p>Para obtener una lista completa de los cambios, <a href="https://github.com/orgs/twbs/projects/13">consulta el proyecto v5.3.0-alpha2 en GitHub</a>.</p>
+<h2 id="v530-alpha1">v5.3.0-alpha1<a class="anchor-link" aria-label="Link to this section: v5.3.0-alpha1" href="#v530-alpha1"> </a></h2>
+<hr class="mb-4"/>
+<h3 id="modos-de-color-1">¡Modos de color!<a class="anchor-link" aria-label="Link to this section: ¡Modos de color!" href="#modos-de-color-1"> </a></h3>
+<p>Obtén más información leyendo la nueva <a href="/docs/5.3/customize/color-modes">documentación de modos de color</a>.</p>
+<ul>
+<li>
+<p><strong>Soporte global para modos de color claro (predeterminado) y oscuro.</strong> Establece el modo de color globalmente en el elemento <code>:root</code>, en grupos de elementos y componentes con una clase contenedora, o directamente en componentes, con <code>data-bs-theme=&quot;light|dark&quot;</code>. También se incluye un nuevo mixin <code>color-mode()</code> que puede generar un conjunto de reglas con el selector <code>data-bs-theme</code> o una media query, según tu preferencia.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> Los modos de color reemplazan las variantes oscuras para los componentes, por lo que <code>.btn-close-white</code>, <code>.carousel-dark</code>, <code>.dropdown-menu-dark</code> y <code>.navbar-dark</code> están obsoletos.</p>
+</li>
+<li>
+<p><strong>Nuevo sistema de color extendido.</strong> Hemos agregado nuevos colores de tema (pero no en <code>$theme-colors</code>) para una paleta de colores más matizada en todo el sistema con nuevos colores secundarios, terciarios y de énfasis para <code>color</code> y <code>background-color</code>. Estos nuevos colores están disponibles como variables Sass, variables CSS y utilidades.</p>
+</li>
+<li>
+<p>También hemos ampliado nuestras variables Sass de color de tema, variables CSS y utilidades para incluir énfasis de texto, colores de fondo sutiles y colores de borde sutiles. Estos están disponibles como variables Sass, variables CSS y utilidades.</p>
+</li>
+<li>
+<p>Agrega la nueva hoja de estilo <code>_variables-dark.scss</code> para albergar anulaciones específicas del modo oscuro. Esta hoja de estilo debe importarse inmediatamente después del archivo <code>_variables.scss</code> existente en tu pila de importación.</p>
+<script type="module" src="/docs/5.3/assets/Code.astro_astro_type_script_index_0_lang.BvVZaovm.js"></script> <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copiar"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-diff"><code is:raw class="language-diff">diff --git a/scss/bootstrap.scss b/scss/bootstrap.scss
+index 8f8296def..449d70487 100644
+<span class="token coord">--- a/scss/bootstrap.scss</span>
+<span class="token coord">+++ b/scss/bootstrap.scss</span>
+<span class="token coord">@@ -6,6 +6,7 @@</span>
+<span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">// Configuration
+</span><span class="token prefix unchanged"> </span><span class="token line">@import &quot;functions&quot;;
+</span><span class="token prefix unchanged"> </span><span class="token line">@import &quot;variables&quot;;
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">@import &quot;variables-dark&quot;;
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">@import &quot;maps&quot;;
+</span><span class="token prefix unchanged"> </span><span class="token line">@import &quot;mixins&quot;;
+</span><span class="token prefix unchanged"> </span><span class="token line">@import &quot;utilities&quot;;
+</span></span></code></pre> </div> </div>
+</li>
+</ul>
+<h3 id="variables-css-1">Variables CSS<a class="anchor-link" aria-label="Link to this section: Variables CSS" href="#variables-css-1"> </a></h3>
+<ul>
+<li>
+<p>Restaura variables CSS para puntos de interrupción, aunque no las usamos en nuestras media queries porque no son compatibles. Sin embargo, estas pueden ser útiles en contextos específicos de JS.</p>
+</li>
+<li>
+<p>De acuerdo con la actualización de los modos de color, hemos agregado nuevas utilidades para las nuevas variables CSS Sass de colores de texto y fondo <code>secondary</code> y <code>tertiary</code>, además de <code>{color}-bg-subtle</code>, <code>{color}-border-subtle</code> y <code>{color}-text-emphasis</code> para nuestros colores de tema. Estos nuevos colores están disponibles a través de variables Sass y CSS (pero no de nuestros mapas de colores) con el objetivo expreso de facilitar la personalización en múltiples modos de colores, como claro y oscuro.</p>
+</li>
+<li>
+<p>Agrega variables adicionales para alertas, <code>.btn-close</code> y <code>.offcanvas</code>.</p>
+</li>
+<li>
+<p>La variable <code>--bs-heading-color</code> regresa con una actualización y soporte para modo oscuro. Primero, ahora verificamos un valor <code>null</code> en la variable Sass asociada, <code>$headings-color</code>, antes de intentar generar la variable CSS, por lo que de manera predeterminada no está presente en nuestro CSS compilado. Segundo, usamos la variable CSS con un valor de respaldo, <code>inherit</code>, lo que permite que el comportamiento original persista, pero también permite anulaciones.</p>
+</li>
+<li>
+<p>Convierte los enlaces para usar variables CSS para diseñar el <code>color</code>, pero no la <code>text-decoration</code>. Los colores ahora se configuran con <code>--bs-link-color-rgb</code> and <code>--bs-link-opacity</code> como color <code>rgba()</code>, lo que te permite personalizar la translucidez con facilidad. La pseudo-clase <code>a:hover</code> ahora anula <code>--bs-link-color-rgb</code> en lugar de establecer explícitamente la propiedad <code>color</code>.</p>
+</li>
+<li>
+<p><code>--bs-border-width</code> ahora se usa en más componentes para un mayor control sobre el estilo global predeterminado.</p>
+</li>
+<li>
+<p>Agrega nuevas variables CSS de root para nuestras <code>box-shadow</code>s, incluyendo <code>--bs-box-shadow</code>, <code>--bs-box-shadow-sm</code>, <code>--bs-box-shadow-lg</code> y <code>--bs-box-shadow-inset</code>.</p>
+</li>
+</ul>
+<h3 id="componentes-1">Componentes<a class="anchor-link" aria-label="Link to this section: Componentes" href="#componentes-1"> </a></h3>
+<h4 id="alerta-alert">Alerta (Alert)<a class="anchor-link" aria-label="Link to this section: Alerta (Alert)" href="#alerta-alert"> </a></h4>
+<ul>
+<li>
+<p>Las variantes de alerta ahora tienen estilos a través de variables CSS.</p>
+</li>
+<li>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> El mixin <code>alert-variant()</code> ahora está obsoleto. Ahora <a href="/docs/5.3/components/alerts#sass-loops">usamos un bucle Sass</a> directamente para modificar las variables CSS predeterminadas del componente para cada variante.</p>
+</li>
+</ul>
+<h4 id="grupo-de-lista-list-group">Grupo de lista (List group)<a class="anchor-link" aria-label="Link to this section: Grupo de lista (List group)" href="#grupo-de-lista-list-group"> </a></h4>
+<ul>
+<li>
+<p>Las variantes de elementos de grupos de lista ahora tienen estilos a través de variables CSS.</p>
+</li>
+<li>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> El mixin <code>list-group-item-variant()</code> ahora está obsoleto. Ahora <a href="/docs/5.3/components/list-group#sass-loops">usamos un bucle Sass</a> directamente para modificar las variables CSS predeterminadas del componente para cada variante.</p>
+</li>
+</ul>
+<h4 id="menús-desplegables-dropdowns">Menús desplegables (Dropdowns)<a class="anchor-link" aria-label="Link to this section: Menús desplegables (Dropdowns)" href="#menús-desplegables-dropdowns"> </a></h4>
+<ul>
+<li><span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> La clase <code>.dropdown-menu-dark</code> ha quedado obsoleta y ha sido reemplazada por <code>data-bs-theme=&quot;dark&quot;</code> en el dropdown o en cualquier elemento padre. <a href="/docs/5.3/components/dropdowns#dark-dropdowns">Consulta la documentación para ver un ejemplo.</a></li>
+</ul>
+<h4 id="botón-de-cierre-close-button">Botón de cierre (Close button)<a class="anchor-link" aria-label="Link to this section: Botón de cierre (Close button)" href="#botón-de-cierre-close-button"> </a></h4>
+<ul>
+<li><span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> La clase <code>.btn-close-white</code> ha quedado obsoleta y ha sido reemplazada por <code>data-bs-theme=&quot;dark&quot;</code> en el botón de cierre o en cualquier elemento padre. <a href="/docs/5.3/components/close-button#dark-variant">Consulta la documentación para ver un ejemplo.</a></li>
+</ul>
+<h4 id="barra-de-navegación-navbar">Barra de navegación (Navbar)<a class="anchor-link" aria-label="Link to this section: Barra de navegación (Navbar)" href="#barra-de-navegación-navbar"> </a></h4>
+<ul>
+<li><span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> La clase <code>.navbar-dark</code> ha quedado obsoleta y ha sido reemplazada por <code>data-bs-theme=&quot;dark&quot;</code> en la barra de navegación o en cualquier elemento padre. <a href="/docs/5.3/components/navbar#color-schemes">Consulta la documentación para ver ejemplos actualizados.</a></li>
+</ul>
+<h3 id="barras-de-progreso-progress-bars">Barras de progreso (Progress bars)<a class="anchor-link" aria-label="Link to this section: Barras de progreso (Progress bars)" href="#barras-de-progreso-progress-bars"> </a></h3>
+<p>El marcado para las <a href="/docs/5.3/components/progress">barras de progreso</a> se actualizó en v5.3.0. Debido a la ubicación de <code>role</code> y varios atributos <code>aria-</code> en el elemento interno <code>.progress-bar</code>, <strong>algunos lectores de pantalla no anunciaban barras de progreso de valor cero</strong>. Ahora, <code>role=&quot;progressbar&quot;</code> y los atributos <code>aria-*</code> relevantes están en el elemento externo <code>.progress</code>, dejando la <code>.progress-bar</code> puramente para la presentación visual de la barra y la etiqueta opcional.</p>
+<p>Si bien recomendamos adoptar el nuevo marcado para una mejor compatibilidad con todos los lectores de pantalla, ten en cuenta que la estructura de barra de progreso heredada continuará funcionando como antes.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copiar"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-html"><code is:raw class="language-html"><span class="token comment">&lt;!-- Marcado anterior --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress-bar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progressbar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Ejemplo básico<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 25%</span><span class="token punctuation">&quot;</span></span></span> <span class="token attr-name">aria-valuenow</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>25<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemax</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>100<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- Marcado nuevo --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress<span class="token punctuation">&quot;</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progressbar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Ejemplo básico<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuenow</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>25<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemax</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>100<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress-bar<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 25%</span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre> </div> </div>
+<p>También hemos introducido una nueva clase <code>.progress-stacked</code> para envolver de forma más lógica <a href="/docs/5.3/components/progress#multiple-bars">múltiples barras de progreso</a> en una sola barra de progreso apilada.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copiar"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-html"><code is:raw class="language-html"><span class="token comment">&lt;!-- Marcado anterior --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress-bar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progressbar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Segmento uno<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 15%</span><span class="token punctuation">&quot;</span></span></span> <span class="token attr-name">aria-valuenow</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>15<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemax</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>100<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress-bar bg-success<span class="token punctuation">&quot;</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progressbar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Segmento dos<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 30%</span><span class="token punctuation">&quot;</span></span></span> <span class="token attr-name">aria-valuenow</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemax</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>100<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress-bar bg-info<span class="token punctuation">&quot;</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progressbar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Segmento tres<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 20%</span><span class="token punctuation">&quot;</span></span></span> <span class="token attr-name">aria-valuenow</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>20<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemax</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>100<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- Marcado nuevo --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress-stacked<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress<span class="token punctuation">&quot;</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progressbar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Segmento uno<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuenow</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>15<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemax</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>100<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 15%</span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress-bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress<span class="token punctuation">&quot;</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progressbar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Segmento dos<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuenow</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>30<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemax</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>100<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 30%</span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress-bar bg-success<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress<span class="token punctuation">&quot;</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progressbar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Segmento tres<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuenow</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>20<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemin</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">aria-valuemax</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>100<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">width</span><span class="token punctuation">:</span> 20%</span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>progress-bar bg-info<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre> </div> </div>
+<h3 id="formularios">Formularios<a class="anchor-link" aria-label="Link to this section: Formularios" href="#formularios"> </a></h3>
+<ul>
+<li>
+<p><code>.form-control</code> ahora tiene estilos con variables CSS para admitir modos de color. Esto incluye la adición de dos nuevas variables CSS de root para los fondos de control de formulario predeterminados y deshabilitados.</p>
+</li>
+<li>
+<p>Los componentes <code>.form-check</code> y <code>.form-switch</code> ahora se crean con variables CSS para establecer la <code>background-image</code>. El uso aquí difiere de otros componentes en que los distintos estados de enfoque, activo, etc. para cada componente no se establecen en la clase base. En su lugar, los estados anulan una variable (por ejemplo, <code>--bs-form-switch-bg</code>).</p>
+</li>
+<li>
+<p>Las etiquetas de formulario flotantes ahora tienen un <code>background-color</code> para corregir el soporte para los elementos <code>&lt;textarea&gt;</code>. Se han realizado cambios adicionales para admitir también estados deshabilitados y más.</p>
+</li>
+<li>
+<p>Se corrigió la visualización de entradas de fecha y hora en navegadores basados en WebKit.</p>
+</li>
+</ul>
+<h3 id="utilidades-2">Utilidades<a class="anchor-link" aria-label="Link to this section: Utilidades" href="#utilidades-2"> </a></h3>
+<ul>
+<li>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">Obsoleto</span> <code>.text-muted</code> será reemplazado por <code>.text-body-secondary</code> en v6.</p>
+<p>Con la adición de los colores y variables de tema ampliados, las variables y la utilidad <code>.text-muted</code> han quedado obsoletas en v5.3.0. Su valor predeterminado también se reasignó a la nueva variable CSS <code>--bs-secondary-color</code> para admitir mejor los modos de color. Se eliminará en v6.0.0.</p>
+</li>
+<li>
+<p>Agrega nuevas utilidades <code>.overflow-x</code>, <code>.overflow-y</code> y varias utilidades <code>.object-fit-*</code>. <em>La propiedad object-fit se utiliza para especificar cómo se debe redimensionar un <code>&lt;img&gt;</code> o <code>&lt;video&gt;</code> para adaptarse a su contenedor, lo que nos brinda una alternativa adaptable al uso de <code>background-image</code> para una imagen de relleno/ajuste redimensionable.</em></p>
+</li>
+<li>
+<p>Agrega la nueva utilidad <code>.fw-medium</code>.</p>
+</li>
+<li>
+<p>Se agregaron nuevas <a href="/docs/5.3/utilities/z-index">utilidades <code>.z-*</code></a> para <code>z-index</code>.</p>
+</li>
+<li>
+<p>Las <a href="/docs/5.3/utilities/shadows">utilidades de sombra de caja (box shadow)</a> (y las variables Sass) se han actualizado para el modo oscuro. Ahora usan <code>--bs-body-color-rgb</code> para generar los valores de color <code>rgba()</code>, lo que les permite adaptarse fácilmente a los modos de color según el color de primer plano especificado.</p>
+</li>
+</ul>
+<p>Para obtener una lista completa de los cambios, <a href="https://github.com/twbs/bootstrap/projects/">consulta el proyecto v5.3.0 en GitHub</a>.</p>
+<h2 id="v520">v5.2.0<a class="anchor-link" aria-label="Link to this section: v5.2.0" href="#v520"> </a></h2>
+<hr class="mb-4"/>
+<h3 id="diseño-renovado">Diseño renovado<a class="anchor-link" aria-label="Link to this section: Diseño renovado" href="#diseño-renovado"> </a></h3>
+<p>Bootstrap v5.2.0 presenta una sutil actualización de diseño para un puñado de componentes y propiedades en todo el proyecto, <strong>sobre todo a través de valores refinados de <code>border-radius</code> en botones y controles de formulario</strong>. Nuestra documentación también se ha actualizado con una nueva página de inicio, un diseño de documentación más simple que ya no colapsa las secciones de la barra lateral y ejemplos más destacados de <a href="https://icons.getbootstrap.com">Bootstrap Icons</a>.</p>
+<h3 id="más-variables-css">Más variables CSS<a class="anchor-link" aria-label="Link to this section: Más variables CSS" href="#más-variables-css"> </a></h3>
+<p><strong>Hemos actualizado todos nuestros componentes para usar variables CSS.</strong> Si bien Sass sigue siendo la base de todo, cada componente se ha actualizado para incluir variables CSS en las clases base del componente (por ejemplo, <code>.btn</code>), lo que permite una personalización de Bootstrap en tiempo real. En versiones posteriores, continuaremos expandiendo nuestro uso de variables CSS en nuestros diseños, formularios, ayudantes y utilidades. Lee más sobre las variables CSS en cada componente en sus respectivas páginas de documentación.</p>
+<p>El uso de nuestras variables CSS estará algo incompleto hasta Bootstrap 6. Si bien nos encantaría implementarlas por completo en todos los ámbitos, corren el riesgo de causar cambios importantes. Por ejemplo, configurar <code>$alert-border-width: var(--bs-border-width)</code> en nuestro código fuente rompe el Sass potencial en tu propio código si estabas haciendo <code>$alert-border-width * 2</code> por alguna razón.</p>
+<p>Como tal, siempre que sea posible, continuaremos presionando hacia más variables CSS, pero reconoce que nuestra implementación puede estar ligeramente limitada en v5.</p>
+<h3 id="nuevo-_mapsscss">Nuevo <code>_maps.scss</code><a class="anchor-link" aria-label="Link to this section: Nuevo " href="#nuevo-_mapsscss"> </a></h3>
+<p><strong>Bootstrap v5.2.0 introdujo un nuevo archivo Sass con <code>_maps.scss</code>.</strong> Extrae varios mapas Sass de <code>_variables.scss</code> para solucionar un problema por el cual las actualizaciones de un mapa original no se aplicaban a los mapas secundarios que los extienden. Por ejemplo, las actualizaciones de <code>$theme-colors</code> no se aplicaban a otros mapas de temas que dependían de <code>$theme-colors</code>, lo que rompía los flujos de trabajo de personalización clave. En resumen, Sass tiene una limitación por la cual, una vez que se ha <em>utilizado</em> una variable o un mapa predeterminado, no se puede actualizar. <em>Existe una deficiencia similar con las variables CSS cuando se usan para componer otras variables CSS.</em></p>
+<p>Es por eso que las personalizaciones de variables en Bootstrap deben realizarse después de <code>@import &quot;functions&quot;</code>, pero antes de <code>@import &quot;variables&quot;</code> y el resto de nuestra pila de importación. Lo mismo se aplica a los mapas Sass: debes anular los valores predeterminados antes de usarlos. Los siguientes mapas se han movido al nuevo <code>_maps.scss</code>:</p>
+<ul>
+<li><code>$theme-colors-rgb</code></li>
+<li><code>$utilities-colors</code></li>
+<li><code>$utilities-text</code></li>
+<li><code>$utilities-text-colors</code></li>
+<li><code>$utilities-bg</code></li>
+<li><code>$utilities-bg-colors</code></li>
+<li><code>$negative-spacers</code></li>
+<li><code>$gutters</code></li>
+</ul>
+<p>Tus compilaciones personalizadas de CSS de Bootstrap ahora deberían verse así con una importación de mapas separada.</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copiar"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-diff"><code is:raw class="language-diff"><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line"> // Las funciones van primero
+</span><span class="token prefix unchanged"> </span><span class="token line"> @import &quot;functions&quot;;
+</span></span>
+<span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line"> // Anulaciones de variables opcionales aquí
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> $custom-color: #df711b;
+</span><span class="token prefix inserted">+</span><span class="token line"> $custom-theme-colors: (
+</span><span class="token prefix inserted">+</span><span class="token line">   &quot;custom&quot;: $custom-color
+</span><span class="token prefix inserted">+</span><span class="token line"> );
+</span></span>
+<span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line"> // Las variables vienen a continuación
+</span><span class="token prefix unchanged"> </span><span class="token line"> @import &quot;variables&quot;;
+</span></span>
+<span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> // Anulaciones de mapas Sass opcionales aquí
+</span><span class="token prefix inserted">+</span><span class="token line"> $theme-colors: map-merge($theme-colors, $custom-theme-colors);
+</span><span class="token prefix inserted">+</span><span class="token line">
+</span><span class="token prefix inserted">+</span><span class="token line"> // Seguido por nuestros mapas predeterminados
+</span><span class="token prefix inserted">+</span><span class="token line"> @import &quot;maps&quot;;
+</span><span class="token prefix inserted">+</span><span class="token line">
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line"> // El resto de nuestras importaciones
+</span><span class="token prefix unchanged"> </span><span class="token line"> @import &quot;mixins&quot;;
+</span><span class="token prefix unchanged"> </span><span class="token line"> @import &quot;utilities&quot;;
+</span><span class="token prefix unchanged"> </span><span class="token line"> @import &quot;root&quot;;
+</span><span class="token prefix unchanged"> </span><span class="token line"> @import &quot;reboot&quot;;
+</span><span class="token prefix unchanged"> </span><span class="token line"> // etc
+</span></span></code></pre> </div> </div>
+<h3 id="nuevas-utilidades">Nuevas utilidades<a class="anchor-link" aria-label="Link to this section: Nuevas utilidades" href="#nuevas-utilidades"> </a></h3>
+<ul>
+<li>Se ampliaron las <a href="/docs/5.3/utilities/text#font-weight-and-italics">utilidades <code>font-weight</code></a> para incluir <code>.fw-semibold</code> para fuentes seminegritas.</li>
+<li>Se ampliaron las <a href="/docs/5.3/utilities/borders#sizes">utilidades de radio de borde (<code>border-radius</code>)</a> para incluir dos nuevos tamaños, <code>.rounded-4</code> y <code>.rounded-5</code>, para más opciones.</li>
+</ul>
+<h3 id="cambios-adicionales">Cambios adicionales<a class="anchor-link" aria-label="Link to this section: Cambios adicionales" href="#cambios-adicionales"> </a></h3>
+<ul>
+<li>
+<p><strong>Se introdujo la nueva opción <code>$enable-container-classes</code>. —</strong> Ahora, al optar por el diseño experimental de CSS Grid, las clases <code>.container-*</code> aún se compilarán, a menos que esta opción se establezca en <code>false</code>. Los contenedores ahora también mantienen sus valores de canaletas (gutters).</p>
+</li>
+<li>
+<p><strong>El componente Offcanvas ahora tiene <a href="/docs/5.3/components/offcanvas#responsive">variantes responsivas</a>.</strong> La clase <code>.offcanvas</code> original permanece sin cambios: oculta el contenido en todas las ventanas gráficas. Para que sea responsivo, cambia esa clase <code>.offcanvas</code> por cualquier clase <code>.offcanvas-{sm|md|lg|xl|xxl}</code>.</p>
+</li>
+<li>
+<p><strong>Los divisores de tabla más gruesos ahora son opcionales. —</strong> Eliminamos el borde más grueso y difícil de anular entre grupos de tablas y lo movimos a una clase opcional que puedes aplicar, <code>.table-group-divider</code>. <a href="/docs/5.3/content/tables#table-group-dividers">Consulta la documentación de tablas para ver un ejemplo.</a></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/twbs/bootstrap/pull/33421">Scrollspy ha sido reescrito</a> para usar la API Intersection Observer</strong>, lo que significa que ya no necesitas contenedores primarios relativos, deja obsoleta la configuración <code>offset</code> y más. Espera que tus implementaciones de Scrollspy sean más precisas y consistentes en su resaltado de navegación.</p>
+</li>
+<li>
+<p><strong>Los popovers y tooltips ahora usan variables CSS.</strong> Algunas variables CSS se actualizaron a partir de sus contrapartes Sass para reducir la cantidad de variables. Como resultado, tres variables quedaron obsoletas en esta versión: <code>$popover-arrow-color</code>, <code>$popover-arrow-outer-color</code> y <code>$tooltip-arrow-color</code>.</p>
+</li>
+<li>
+<p><strong>Se agregaron nuevos ayudantes <code>.text-bg-{color}</code>.</strong> En lugar de configurar utilidades individuales <code>.text-*</code> y <code>.bg-*</code>, ahora puedes usar <a href="/docs/5.3/helpers/color-background">los ayudantes <code>.text-bg-*</code></a> para configurar un <code>background-color</code> con un <code>color</code> de primer plano contrastante.</p>
+</li>
+<li>
+<p>Se agregó el modificador <code>.form-check-reverse</code> para invertir el orden de las etiquetas y las casillas de verificación/radios asociados.</p>
+</li>
+<li>
+<p>Se agregó soporte para <a href="/docs/5.3/content/tables#striped-columns">columnas rayadas</a> a las tablas a través de la nueva clase <code>.table-striped-columns</code>.</p>
+</li>
+</ul>
+<p>Para obtener una lista completa de los cambios, <a href="https://github.com/twbs/bootstrap/projects/32">consulta el proyecto v5.2.0 en GitHub</a>.</p>
+<h2 id="v510">v5.1.0<a class="anchor-link" aria-label="Link to this section: v5.1.0" href="#v510"> </a></h2>
+<hr class="mb-4"/>
+<ul>
+<li>
+<p><strong>Se agregó soporte experimental para <a href="/docs/5.3/layout/css-grid">diseño CSS Grid</a>. —</strong> Este es un trabajo en progreso y aún no está listo para su uso en producción, pero puedes optar por la nueva función a través de Sass. Para habilitarlo, deshabilita la cuadrícula predeterminada configurando <code>$enable-grid-classes: false</code> y habilita la cuadrícula CSS configurando <code>$enable-cssgrid: true</code>.</p>
+</li>
+<li>
+<p><strong>Barras de navegación actualizadas para admitir offcanvas. —</strong> Agrega <a href="/docs/5.3/components/navbar#offcanvas">cajones offcanvas en cualquier barra de navegación</a> con las clases responsivas <code>.navbar-expand-*</code> y algo de marcado offcanvas.</p>
+</li>
+<li>
+<p><strong>Se agregó un nuevo <a href="/docs/5.3/components/placeholders/">componente de marcador de posición (placeholder)</a>. —</strong> Nuestro componente más nuevo, una forma de proporcionar bloques temporales en lugar de contenido real para ayudar a indicar que algo todavía se está cargando en tu sitio o aplicación.</p>
+</li>
+<li>
+<p><strong>El complemento Collapse ahora admite <a href="/docs/5.3/components/collapse#horizontal">despliegue horizontal</a>. —</strong> Agrega <code>.collapse-horizontal</code> a tu <code>.collapse</code> para contraer el ancho (<code>width</code>) en lugar de la altura (<code>height</code>). Evita que el navegador tenga que volver a pintar (repainting) estableciendo un <code>min-height</code> o <code>height</code>.</p>
+</li>
+<li>
+<p><strong>Se agregaron nuevos ayudantes de pila (stack) y regla vertical. —</strong> Aplica rápidamente múltiples propiedades de flexbox para crear diseños personalizados rápidamente con <a href="/docs/5.3/helpers/stacks/">pilas (stacks)</a>. Elige entre pilas horizontales (<code>.hstack</code>) y verticales (<code>.vstack</code>). Agrega divisores verticales similares a los elementos <code>&lt;hr&gt;</code> con los <a href="/docs/5.3/helpers/vertical-rule/">nuevos ayudantes <code>.vr</code></a>.</p>
+</li>
+<li>
+<p><strong>Se agregaron nuevas variables CSS globales <code>:root</code>. —</strong> Se agregaron varias variables CSS nuevas al nivel <code>:root</code> para controlar los estilos del <code>&lt;body&gt;</code>. Hay más en camino, incluso en nuestras utilidades y componentes, pero por ahora lee sobre las <a href="/docs/5.3/customize/css-variables/">variables CSS en la sección Personalizar</a>.</p>
+</li>
+<li>
+<p><strong>Se revisaron las utilidades de color y fondo para usar variables CSS, y se agregaron nuevas utilidades de <a href="/docs/5.3/utilities/text#opacity">opacidad del texto</a> y <a href="/docs/5.3/utilities/background#opacity">opacidad de fondo</a>. —</strong> Las utilidades <code>.text-*</code> y <code>.bg-*</code> ahora se crean con variables CSS y valores de color <code>rgba()</code>, lo que te permite personalizar fácilmente cualquier utilidad con nuevas utilidades de opacidad.</p>
+</li>
+<li>
+<p><strong>Se agregaron nuevos ejemplos de fragmentos (snippets) para mostrar cómo personalizar nuestros componentes. —</strong> Extrae componentes personalizados listos para usar y otros patrones de diseño comunes con nuestros nuevos <a href="/docs/5.3/examples/#snippets">ejemplos de fragmentos (snippets)</a>. Incluye <a href="/docs/5.3/examples/footers/">pies de página</a>, <a href="/docs/5.3/examples/dropdowns/">menús desplegables</a>, <a href="/docs/5.3/examples/list-groups/">grupos de listas</a> y <a href="/docs/5.3/examples/modals/">modales</a>.</p>
+</li>
+<li>
+<p><strong>Se eliminaron los estilos de posicionamiento no utilizados de los popovers y tooltips</strong> ya que Popper los maneja únicamente. <code>$tooltip-margin</code> quedó obsoleto y se estableció en <code>null</code> en el proceso.</p>
+</li>
+</ul>
+<p>¿Quieres más información? <a href="https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/">Lee la publicación del blog de v5.1.0.</a></p>
+<h2 id="v500">v5.0.0<a class="anchor-link" aria-label="Link to this section: v5.0.0" href="#v500"> </a></h2>
+<hr class="mb-4"/>
+<div class="bd-callout bd-callout-info"> <p><strong>¡Hola!</strong> Los cambios de nuestra primera versión principal de Bootstrap 5, v5.0.0, se documentan a continuación. No reflejan los cambios adicionales que se muestran arriba.</p> </div>
+<h3 id="dependencias-1">Dependencias<a class="anchor-link" aria-label="Link to this section: Dependencias" href="#dependencias-1"> </a></h3>
+<ul>
+<li>Se eliminó jQuery.</li>
+<li>Se actualizó de Popper v1.x a Popper v2.x.</li>
+<li>Se reemplazó Libsass con Dart Sass como nuestro compilador de Sass dado que Libsass estaba obsoleto.</li>
+<li>Se migró de Jekyll a Hugo para la construcción de nuestra documentación.</li>
+</ul>
+<h3 id="soporte-de-navegadores">Soporte de navegadores<a class="anchor-link" aria-label="Link to this section: Soporte de navegadores" href="#soporte-de-navegadores"> </a></h3>
+<ul>
+<li>Se eliminó Internet Explorer 10 y 11.</li>
+<li>Se eliminó Microsoft Edge &lt; 16 (Edge heredado).</li>
+<li>Se eliminó Firefox &lt; 60.</li>
+<li>Se eliminó Safari &lt; 12.</li>
+<li>Se eliminó iOS Safari &lt; 12.</li>
+<li>Se eliminó Chrome &lt; 60.</li>
+</ul>
+<hr class="my-5"/>
+<h3 id="cambios-en-la-documentación">Cambios en la documentación<a class="anchor-link" aria-label="Link to this section: Cambios en la documentación" href="#cambios-en-la-documentación"> </a></h3>
+<ul>
+<li>Se rediseñó la página de inicio, el diseño de la documentación y el pie de página.</li>
+<li>Se agregó una <a href="/docs/5.3/getting-started/parcel">nueva guía de Parcel</a>.</li>
+<li>Se agregó una <a href="/docs/5.3/customize/overview/">nueva sección Personalizar</a>, que reemplaza la <a href="https://getbootstrap.com/docs/4.6/getting-started/theming/">página de temas de la v4</a>, con nuevos detalles sobre Sass, opciones de configuración global, esquemas de color, variables CSS y más.</li>
+<li>Se reorganizó toda la documentación de formularios en la <a href="/docs/5.3/forms/overview/">nueva sección Formularios</a>, dividiendo el contenido en páginas más enfocadas.</li>
+<li>De manera similar, se actualizó la <a href="/docs/5.3/layout/breakpoints">sección Diseño</a> para desarrollar el contenido de la cuadrícula con mayor claridad.</li>
+<li>Se cambió el nombre de la página del componente &quot;Navs&quot; a &quot;Navs y pestañas (Navs &amp; Tabs)&quot;.</li>
+<li>Se cambió el nombre de la página &quot;Checks&quot; a &quot;Checks y radios&quot;.</li>
+<li>Se rediseñó la barra de navegación y se agregó una nueva subnavegación para facilitar el desplazamiento por nuestros sitios y versiones de documentación.</li>
+<li>Se agregó un nuevo método abreviado de teclado para el campo de búsqueda: <kbd><kbd>Ctrl</kbd> + <kbd>/</kbd></kbd>.</li>
+</ul>
+<h3 id="sass">Sass<a class="anchor-link" aria-label="Link to this section: Sass" href="#sass"> </a></h3>
+<ul>
+<li>
+<p>Hemos descartado las combinaciones predeterminadas de mapas Sass para facilitar la eliminación de valores redundantes. Ten en cuenta que ahora debes definir todos los valores en los mapas Sass como <code>$theme-colors</code>. Descubre cómo lidiar con los <a href="/docs/5.3/customize/sass#maps-and-loops">mapas Sass</a>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la función <code>color-yiq()</code> y las variables relacionadas a <code>color-contrast()</code>, ya que ya no está relacionada con el espacio de color YIQ. <a href="https://github.com/twbs/bootstrap/pull/30168/">Ver #30168.</a></p>
+<ul>
+<li><code>$yiq-contrasted-threshold</code> pasa a llamarse <code>$min-contrast-ratio</code>.</li>
+<li><code>$yiq-text-dark</code> y <code>$yiq-text-light</code> pasan a llamarse respectivamente <code>$color-contrast-dark</code> y <code>$color-contrast-light</code>.</li>
+</ul>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Los parámetros de los mixins de media query han cambiado para lograr un enfoque más lógico.</p>
+<ul>
+<li><code>media-breakpoint-down()</code> utiliza el punto de interrupción en sí en lugar del siguiente punto de interrupción (por ejemplo, <code>media-breakpoint-down(lg)</code> en lugar de <code>media-breakpoint-down(md)</code> se dirige a ventanas gráficas más pequeñas que <code>lg</code>).</li>
+<li>De manera similar, el segundo parámetro en <code>media-breakpoint-between()</code> también usa el punto de interrupción en sí en lugar del siguiente (por ejemplo, <code>media-breakpoint-between(sm, lg)</code> en lugar de <code>media-breakpoint-between(sm, md)</code> se dirige a ventanas gráficas entre <code>sm</code> y <code>lg</code>).</li>
+</ul>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminaron los estilos de impresión y la variable <code>$enable-print-styles</code>. Las clases de visualización de impresión siguen existiendo. <a href="https://github.com/twbs/bootstrap/pull/28339">Ver #28339</a>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminaron las funciones <code>color()</code>, <code>theme-color()</code> y <code>gray()</code> en favor de las variables. <a href="https://github.com/twbs/bootstrap/pull/29083">Ver #29083</a>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la función <code>theme-color-level()</code> a <code>color-level()</code> y ahora acepta cualquier color que desees en lugar de solo los colores de <code>$theme-color</code>. <a href="https://github.com/twbs/bootstrap/pull/29083">Ver #29083</a> <strong>Ten cuidado:</strong> <code>color-level()</code> se eliminó más adelante en la versión <code>v5.0.0-alpha3</code>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de <code>$enable-prefers-reduced-motion-media-query</code> y <code>$enable-pointer-cursor-for-buttons</code> a <code>$enable-reduced-motion</code> y <code>$enable-button-pointers</code> para abreviar.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminó el mixin <code>bg-gradient-variant()</code>. Usa la clase <code>.bg-gradient</code> para agregar degradados a los elementos en lugar de las clases <code>.bg-gradient-*</code> generadas.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> <strong>Se eliminaron mixins previamente obsoletos:</strong></p>
+<ul>
+<li><code>hover</code>, <code>hover-focus</code>, <code>plain-hover-focus</code> y <code>hover-focus-active</code></li>
+<li><code>float()</code></li>
+<li><code>form-control-mixin()</code></li>
+<li><code>nav-divider()</code></li>
+<li><code>retina-img()</code></li>
+<li><code>text-hide()</code> (también se eliminó la clase de utilidad asociada, <code>.text-hide</code>)</li>
+<li><code>visibility()</code></li>
+<li><code>form-control-focus()</code></li>
+</ul>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la función <code>scale-color()</code> a <code>shift-color()</code> para evitar colisiones con la propia función de escalado de color de Sass.</p>
+</li>
+<li>
+<p>Los mixins <code>box-shadow</code> ahora permiten valores <code>null</code> y descartan <code>none</code> de múltiples argumentos. <a href="https://github.com/twbs/bootstrap/pull/30394">Ver #30394</a>.</p>
+</li>
+<li>
+<p>El mixin <code>border-radius()</code> ahora tiene un valor predeterminado.</p>
+</li>
+</ul>
+<h3 id="sistema-de-color">Sistema de color<a class="anchor-link" aria-label="Link to this section: Sistema de color" href="#sistema-de-color"> </a></h3>
+<ul>
+<li>
+<p>El sistema de color que funcionaba con <code>color-level()</code> y <code>$theme-color-interval</code> se eliminó en favor de un nuevo sistema de color. Todas las funciones <code>lighten()</code> y <code>darken()</code> en nuestro código base se reemplazan por <code>tint-color()</code> y <code>shade-color()</code>. Estas funciones mezclarán el color con blanco o negro en lugar de cambiar su luminosidad en una cantidad fija. El <code>shift-color()</code> aplicará tinte o sombra a un color dependiendo de si su parámetro de peso es positivo o negativo. Consulta <a href="https://github.com/twbs/bootstrap/pull/30622">el PR #30622</a> para obtener más detalles.</p>
+</li>
+<li>
+<p>Se agregaron nuevos tintes y sombras para cada color, proporcionando nueve colores separados para cada color base, como nuevas variables Sass.</p>
+</li>
+<li>
+<p>Contraste de color mejorado. Se aumentó la relación de contraste de color de 3:1 a 4.5:1 y se actualizaron los colores azul, verde, cian y rosa para garantizar el contraste WCAG 2.2 AA. También cambiamos nuestro color de contraste de color de <code>$gray-900</code> a <code>$black</code>.</p>
+</li>
+<li>
+<p>Para respaldar nuestro sistema de colores, agregamos nuevas funciones personalizadas <code>tint-color()</code> y <code>shade-color()</code> para mezclar nuestros colores adecuadamente.</p>
+</li>
+</ul>
+<h3 id="actualizaciones-de-cuadrícula-grid-updates">Actualizaciones de cuadrícula (Grid updates)<a class="anchor-link" aria-label="Link to this section: Actualizaciones de cuadrícula (Grid updates)" href="#actualizaciones-de-cuadrícula-grid-updates"> </a></h3>
+<ul>
+<li>
+<p><strong>¡Nuevo punto de interrupción!</strong> Se agregó un nuevo punto de interrupción <code>xxl</code> para <code>1400px</code> y superior. Sin cambios en todos los demás puntos de interrupción.</p>
+</li>
+<li>
+<p><strong>Canaletas (gutters) mejoradas.</strong> Las canaletas ahora se establecen en rems y son más estrechas que en la v4 (<code>1.5rem</code>, o aproximadamente <code>24px</code>, por debajo de <code>30px</code>). Esto alinea las canaletas de nuestro sistema de cuadrícula con nuestras utilidades de espaciado.</p>
+<ul>
+<li>Se agregó una nueva <a href="/docs/5.3/layout/gutters">clase de canaleta</a> (<code>.g-*</code>, <code>.gx-*</code> y <code>.gy-*</code>) para controlar las canaletas horizontales/verticales, las canaletas horizontales y las canaletas verticales.</li>
+<li><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de <code>.no-gutters</code> a <code>.g-0</code> para coincidir con las nuevas utilidades de canaletas.</li>
+</ul>
+</li>
+<li>
+<p>A las columnas ya no se les aplica <code>position: relative</code>, por lo que es posible que debas agregar <code>.position-relative</code> a algunos elementos para restaurar ese comportamiento.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminaron varias clases <code>.order-*</code> que a menudo no se usaban. Ahora solo proporcionamos <code>.order-0</code> a <code>.order-5</code> de forma predeterminada.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminó el componente <code>.media</code>, ya que se puede replicar fácilmente con utilidades. Consulta <a href="https://github.com/twbs/bootstrap/pull/28265">el PR #28265</a> y la <a href="/docs/5.3/utilities/flex#media-object">página de utilidades flex para ver un ejemplo</a>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> <code>bootstrap-grid.css</code> ahora solo aplica <code>box-sizing: border-box</code> a la columna en lugar de restablecer el box-sizing global. De esta manera, nuestros estilos de cuadrícula se pueden utilizar en más lugares sin interferencias.</p>
+</li>
+<li>
+<p><code>$enable-grid-classes</code> ya no deshabilita la generación de clases de contenedor. <a href="https://github.com/twbs/bootstrap/pull/29146">Ver #29146.</a></p>
+</li>
+<li>
+<p>Se actualizó el mixin <code>make-col</code> para que por defecto sea columnas iguales sin un tamaño especificado.</p>
+</li>
+</ul>
+<h3 id="contenido-reboot-etc">Contenido, Reboot, etc.<a class="anchor-link" aria-label="Link to this section: Contenido, Reboot, etc." href="#contenido-reboot-etc"> </a></h3>
+<ul>
+<li>
+<p><strong><a href="/docs/5.3/getting-started/rfs">RFS</a> ahora está habilitado por defecto.</strong> Los encabezados que usan el mixin <code>font-size()</code> ajustarán automáticamente su <code>font-size</code> para escalar con la ventana gráfica. <em>Esta característica era anteriormente opcional en la v4.</em></p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se revisó nuestra tipografía de pantalla (display) para reemplazar nuestras variables <code>$display-*</code> por un mapa Sass <code>$display-font-sizes</code>. También se eliminaron las variables <code>$display-*-weight</code> individuales para un solo <code>$display-font-weight</code> y se ajustaron los <code>font-size</code>s.</p>
+</li>
+<li>
+<p>Se agregaron dos nuevos tamaños de encabezado <code>.display-*</code>, <code>.display-5</code> y <code>.display-6</code>.</p>
+</li>
+<li>
+<p><strong>Los enlaces están subrayados por defecto</strong> (no solo al pasar el cursor), a menos que formen parte de componentes específicos.</p>
+</li>
+<li>
+<p><strong>Tablas rediseñadas</strong> para refrescar sus estilos y reconstruirlas con variables CSS para un mayor control sobre el diseño.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Las tablas anidadas ya no heredan estilos.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminaron <code>.thead-light</code> y <code>.thead-dark</code> en favor de las clases variantes <code>.table-*</code> que se pueden usar para todos los elementos de la tabla (<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code> y <code>td</code>).</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> El mixin <code>table-row-variant()</code> pasa a llamarse <code>table-variant()</code> y acepta solo 2 parámetros: <code>$color</code> (nombre del color) y <code>$value</code> (código de color). El color del borde y los colores de acento se calculan automáticamente en función de las variables del factor de la tabla.</p>
+</li>
+<li>
+<p>Se dividieron las variables de relleno de las celdas de la tabla en <code>-y</code> y <code>-x</code>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminó la clase <code>.pre-scrollable</code>. <a href="https://github.com/twbs/bootstrap/pull/29135">Ver #29135</a></p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Las utilidades <code>.text-*</code> ya no agregan estados de hover y focus a los enlaces. En su lugar, se pueden utilizar clases auxiliares <code>.link-*</code>. <a href="https://github.com/twbs/bootstrap/pull/29267">Ver #29267</a></p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminó la clase <code>.text-justify</code>. <a href="https://github.com/twbs/bootstrap/pull/29793">Ver #29793</a></p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Los elementos <code>&lt;hr&gt;</code> ahora usan <code>height</code> en lugar de <code>border</code> para soportar mejor el atributo <code>size</code>. Esto también permite el uso de utilidades de relleno para crear divisores más gruesos (por ejemplo, <code>&lt;hr class=&quot;py-1&quot;&gt;</code>).</p>
+</li>
+<li>
+<p>Se restableció el <code>padding-left</code> horizontal predeterminado en los elementos <code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code> de <code>40px</code> predeterminado del navegador a <code>2rem</code>.</p>
+</li>
+<li>
+<p>Se agregó <code>$enable-smooth-scroll</code>, que aplica <code>scroll-behavior: smooth</code> a nivel global, excepto para los usuarios que solicitan movimiento reducido a través de la media query <code>prefers-reduced-motion</code>. <a href="https://github.com/twbs/bootstrap/pull/31877">Ver #31877</a></p>
+</li>
+</ul>
+<h3 id="rtl">RTL<a class="anchor-link" aria-label="Link to this section: RTL" href="#rtl"> </a></h3>
+<ul>
+<li>Las variables, utilidades y mixins específicos de la dirección horizontal se han renombrado para usar propiedades lógicas como las que se encuentran en los diseños flexbox, por ejemplo, <code>start</code> y <code>end</code> en lugar de <code>left</code> y <code>right</code>.</li>
+</ul>
+<h3 id="formularios-1">Formularios<a class="anchor-link" aria-label="Link to this section: Formularios" href="#formularios-1"> </a></h3>
+<ul>
+<li>
+<p><strong>¡Se agregaron nuevos formularios flotantes!</strong> Hemos promovido el ejemplo de etiquetas flotantes a componentes de formulario totalmente compatibles. <a href="/docs/5.3/forms/floating-labels">Consulta la nueva página de etiquetas flotantes (Floating labels).</a></p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> <strong>Elementos de formulario nativos y personalizados consolidados.</strong> Se han consolidado las casillas de verificación, los radios, los selectores y otras entradas que tenían clases nativas y personalizadas en la v4. Ahora casi todos nuestros elementos de formulario son completamente personalizados, la mayoría sin necesidad de HTML personalizado.</p>
+<ul>
+<li><code>.custom-control.custom-checkbox</code> ahora es <code>.form-check</code>.</li>
+<li><code>.custom-control.custom-radio</code> ahora es <code>.form-check</code>.</li>
+<li><code>.custom-control.custom-switch</code> ahora es <code>.form-check.form-switch</code>.</li>
+<li><code>.custom-select</code> ahora es <code>.form-select</code>.</li>
+<li><code>.custom-file</code> y <code>.form-control-file</code> se han reemplazado por estilos personalizados encima de <code>.form-control</code>.</li>
+<li><code>.custom-range</code> ahora es <code>.form-range</code>.</li>
+<li>Se eliminaron los <code>.form-control-file</code> y <code>.form-control-range</code> nativos.</li>
+</ul>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminaron <code>.input-group-append</code> y <code>.input-group-prepend</code>. Ahora puedes agregar botones y <code>.input-group-text</code> como hijos directos de los grupos de entrada.</p>
+</li>
+<li>
+<p>El antiguo error <a href="https://github.com/twbs/bootstrap/issues/25110">Falta el radio del borde en el grupo de entrada con error de retroalimentación de validación</a> finalmente se solucionó agregando una clase <code>.has-validation</code> adicional a los grupos de entrada con validación.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> <strong>Se eliminaron las clases de diseño específicas de formularios para nuestro sistema de cuadrícula.</strong> Utiliza nuestra cuadrícula y utilidades en lugar de <code>.form-group</code>, <code>.form-row</code> o <code>.form-inline</code>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Las etiquetas de los formularios ahora requieren <code>.form-label</code>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> <code>.form-text</code> ya no establece <code>display</code>, lo que te permite crear texto de ayuda en línea o en bloque como desees simplemente cambiando el elemento HTML.</p>
+</li>
+<li>
+<p>Los controles de formulario ya no usaban una <code>height</code> fija cuando era posible, sino que diferían a <code>min-height</code> para mejorar la personalización y la compatibilidad con otros componentes.</p>
+</li>
+<li>
+<p>Las pestañas de validación ya no se aplican a los <code>&lt;select&gt;</code>s con <code>multiple</code>.</p>
+</li>
+<li>
+<p>Se reorganizaron los archivos Sass de origen en <code>scss/forms/</code>, incluidos los estilos de los grupos de entrada.</p>
+</li>
+</ul>
+<hr class="my-5"/>
+<h3 id="componentes-2">Componentes<a class="anchor-link" aria-label="Link to this section: Componentes" href="#componentes-2"> </a></h3>
+<ul>
+<li>Valores de <code>padding</code> unificados para alertas, migas de pan, tarjetas, menús desplegables, grupos de listas, modales, ventanas emergentes y tooltips basados en nuestra variable <code>$spacer</code>. <a href="https://github.com/twbs/bootstrap/pull/30564">Ver #30564</a>.</li>
+</ul>
+<h4 id="acordeón-accordion">Acordeón (Accordion)<a class="anchor-link" aria-label="Link to this section: Acordeón (Accordion)" href="#acordeón-accordion"> </a></h4>
+<ul>
+<li>Se agregó el <a href="/docs/5.3/components/accordion">nuevo componente acordeón</a>.</li>
+</ul>
+<h4 id="alertas-alerts">Alertas (Alerts)<a class="anchor-link" aria-label="Link to this section: Alertas (Alerts)" href="#alertas-alerts"> </a></h4>
+<ul>
+<li>
+<p>Las alertas ahora tienen <a href="/docs/5.3/components/alerts#icons">ejemplos con iconos</a>.</p>
+</li>
+<li>
+<p>Se eliminaron los estilos personalizados para <code>&lt;hr&gt;</code> en cada alerta ya que ya usan <code>currentColor</code>.</p>
+</li>
+</ul>
+<h4 id="insignias-badges">Insignias (Badges)<a class="anchor-link" aria-label="Link to this section: Insignias (Badges)" href="#insignias-badges"> </a></h4>
+<ul>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminaron todas las clases de color <code>.badge-*</code> para las utilidades de fondo (por ejemplo, usa <code>.bg-primary</code> en lugar de <code>.badge-primary</code>).</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminó <code>.badge-pill</code>; en su lugar, usa la utilidad <code>.rounded-pill</code>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminaron los estilos de hover y focus para los elementos <code>&lt;a&gt;</code> y <code>&lt;button&gt;</code>.</p>
+</li>
+<li>
+<p>Se aumentó el relleno predeterminado para las insignias de <code>.25em</code>/<code>.5em</code> a <code>.35em</code>/<code>.65em</code>.</p>
+</li>
+</ul>
+<h4 id="migas-de-pan-breadcrumbs">Migas de pan (Breadcrumbs)<a class="anchor-link" aria-label="Link to this section: Migas de pan (Breadcrumbs)" href="#migas-de-pan-breadcrumbs"> </a></h4>
+<ul>
+<li>
+<p>Se simplificó la apariencia predeterminada de las migas de pan al eliminar <code>padding</code>, <code>background-color</code> y <code>border-radius</code>.</p>
+</li>
+<li>
+<p>Se agregó la nueva propiedad personalizada CSS <code>--bs-breadcrumb-divider</code> para una personalización sencilla sin necesidad de volver a compilar CSS.</p>
+</li>
+</ul>
+<h4 id="botones-buttons">Botones (Buttons)<a class="anchor-link" aria-label="Link to this section: Botones (Buttons)" href="#botones-buttons"> </a></h4>
+<ul>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> <strong><a href="/docs/5.3/forms/checks-radios#toggle-buttons">Los botones de alternancia</a>, con casillas de verificación o radios, ya no requieren JavaScript y tienen un marcado nuevo.</strong> Ya no requerimos un elemento contenedor, agregamos <code>.btn-check</code> al <code>&lt;input&gt;</code> y lo emparejamos con cualquier clase <code>.btn</code> en el <code>&lt;label&gt;</code>. <a href="https://github.com/twbs/bootstrap/pull/30650">Ver #30650</a>. <em>La documentación de esto se movió de nuestra página de Botones a la nueva sección Formularios.</em></p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> <strong>Se eliminó <code>.btn-block</code> en favor de las utilidades.</strong> En lugar de usar <code>.btn-block</code> en el <code>.btn</code>, envuelve tus botones con <code>.d-grid</code> y una utilidad <code>.gap-*</code> para espaciarlos según sea necesario. Cambia a clases responsivas para tener aún más control sobre ellos. <a href="/docs/5.3/components/buttons#block-buttons">Lee la documentación para ver algunos ejemplos.</a></p>
+</li>
+<li>
+<p>Se actualizaron nuestros mixins <code>button-variant()</code> y <code>button-outline-variant()</code> para admitir parámetros adicionales.</p>
+</li>
+<li>
+<p>Se actualizaron los botones para garantizar un mayor contraste en los estados de hover y activo.</p>
+</li>
+<li>
+<p>Los botones deshabilitados ahora tienen <code>pointer-events: none;</code>.</p>
+</li>
+</ul>
+<h4 id="tarjetas-card">Tarjetas (Card)<a class="anchor-link" aria-label="Link to this section: Tarjetas (Card)" href="#tarjetas-card"> </a></h4>
+<ul>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminó <code>.card-deck</code> en favor de nuestra cuadrícula. Envuelve tus tarjetas en clases de columna y agrega un contenedor primario <code>.row-cols-*</code> para recrear barajas de tarjetas (pero con más control sobre la alineación adaptable).</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminó <code>.card-columns</code> en favor de Masonry. <a href="https://github.com/twbs/bootstrap/pull/28922">Ver #28922</a>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se reemplazó el acordeón basado en <code>.card</code> por un <a href="/docs/5.3/components/accordion">nuevo componente Accordion</a>.</p>
+</li>
+</ul>
+<h4 id="carrusel-carousel">Carrusel (Carousel)<a class="anchor-link" aria-label="Link to this section: Carrusel (Carousel)" href="#carrusel-carousel"> </a></h4>
+<ul>
+<li>
+<p>Se agregó la nueva <a href="/docs/5.3/components/carousel#dark-variant">variante <code>.carousel-dark</code></a> para texto oscuro, controles e indicadores (ideal para fondos más claros).</p>
+</li>
+<li>
+<p>Se reemplazaron los iconos de chevron para los controles del carrusel con nuevos SVG de <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>.</p>
+</li>
+</ul>
+<h4 id="botón-de-cierre-close-button-1">Botón de cierre (Close button)<a class="anchor-link" aria-label="Link to this section: Botón de cierre (Close button)" href="#botón-de-cierre-close-button-1"> </a></h4>
+<ul>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de <code>.close</code> a <code>.btn-close</code> para obtener un nombre menos genérico.</p>
+</li>
+<li>
+<p>Los botones de cierre ahora usan una <code>background-image</code> (SVG incrustado) en lugar de un <code>&amp;times;</code> en el HTML, lo que permite una personalización más sencilla sin necesidad de tocar el marcado.</p>
+</li>
+<li>
+<p>Se agregó la nueva variante <code>.btn-close-white</code> que usa <code>filter: invert(1)</code> para habilitar iconos de descarte de mayor contraste contra fondos más oscuros.</p>
+</li>
+</ul>
+<h4 id="colapso-collapse">Colapso (Collapse)<a class="anchor-link" aria-label="Link to this section: Colapso (Collapse)" href="#colapso-collapse"> </a></h4>
+<ul>
+<li>Se eliminó el anclaje de desplazamiento para acordeones.</li>
+</ul>
+<h4 id="menús-desplegables-dropdowns-1">Menús desplegables (Dropdowns)<a class="anchor-link" aria-label="Link to this section: Menús desplegables (Dropdowns)" href="#menús-desplegables-dropdowns-1"> </a></h4>
+<ul>
+<li>
+<p>Se agregó la nueva variante <code>.dropdown-menu-dark</code> y variables asociadas para menús desplegables oscuros a pedido.</p>
+</li>
+<li>
+<p>Se agregó una nueva variable para <code>$dropdown-padding-x</code>.</p>
+</li>
+<li>
+<p>Se oscureció el divisor del menú desplegable para mejorar el contraste.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Todos los eventos para el menú desplegable ahora se activan en el botón de alternancia del menú desplegable y luego se propagan al elemento padre.</p>
+</li>
+<li>
+<p>Los menús desplegables ahora tienen un atributo <code>data-bs-popper=&quot;static&quot;</code> establecido cuando el posicionamiento del menú desplegable es estático, o el menú desplegable está en la barra de navegación. Esto lo agrega nuestro JavaScript y nos ayuda a usar estilos de posición personalizados sin interferir con el posicionamiento de Popper.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminó la opción <code>flip</code> para el complemento desplegable en favor de la configuración nativa de Popper. Ahora puedes desactivar el comportamiento de volteo pasando una matriz vacía para la opción <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a> en el modificador <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip</a>.</p>
+</li>
+<li>
+<p>Los menús desplegables ahora se pueden hacer clic con una nueva opción <code>autoClose</code> para manejar el <a href="/docs/5.3/components/dropdowns#auto-close-behavior">comportamiento de cierre automático</a>. Puedes usar esta opción para aceptar el clic dentro o fuera del menú desplegable para hacerlo interactivo.</p>
+</li>
+<li>
+<p>Los menús desplegables ahora admiten <code>.dropdown-item</code> envueltos en <code>&lt;li&gt;</code>.</p>
+</li>
+</ul>
+<h4 id="jumbotron">Jumbotron<a class="anchor-link" aria-label="Link to this section: Jumbotron" href="#jumbotron"> </a></h4>
+<ul>
+<li><span class="badge text-bg-danger">Crítico</span> Se eliminó el componente jumbotron ya que se puede replicar con utilidades. <a href="/docs/5.3/examples/jumbotron">Consulta nuestro nuevo ejemplo de Jumbotron para ver una demostración.</a></li>
+</ul>
+<h4 id="grupo-de-lista-list-group-1">Grupo de lista (List group)<a class="anchor-link" aria-label="Link to this section: Grupo de lista (List group)" href="#grupo-de-lista-list-group-1"> </a></h4>
+<ul>
+<li>Se agregó el nuevo <a href="/docs/5.3/components/list-group#numbered">modificador <code>.list-group-numbered</code></a> a los grupos de listas.</li>
+</ul>
+<h4 id="navs-y-pestañas-navs-and-tabs">Navs y pestañas (Navs and tabs)<a class="anchor-link" aria-label="Link to this section: Navs y pestañas (Navs and tabs)" href="#navs-y-pestañas-navs-and-tabs"> </a></h4>
+<ul>
+<li>Se agregaron nuevas variables <code>null</code> para <code>font-size</code>, <code>font-weight</code>, <code>color</code> y <code>:hover</code> <code>color</code> a la clase <code>.nav-link</code>.</li>
+</ul>
+<h4 id="barras-de-navegación-navbars">Barras de navegación (Navbars)<a class="anchor-link" aria-label="Link to this section: Barras de navegación (Navbars)" href="#barras-de-navegación-navbars"> </a></h4>
+<ul>
+<li><span class="badge text-bg-danger">Crítico</span> Las barras de navegación ahora requieren un contenedor en su interior (para simplificar drásticamente los requisitos de espacio y el CSS requerido).</li>
+<li><span class="badge text-bg-danger">Crítico</span> La clase <code>.active</code> ya no se puede aplicar a los <code>.nav-item</code>, debe aplicarse directamente a los <code>.nav-link</code>.</li>
+</ul>
+<h4 id="offcanvas">Offcanvas<a class="anchor-link" aria-label="Link to this section: Offcanvas" href="#offcanvas"> </a></h4>
+<ul>
+<li>Se agregó el nuevo <a href="/docs/5.3/components/offcanvas">componente offcanvas</a>.</li>
+</ul>
+<h4 id="paginación-pagination">Paginación (Pagination)<a class="anchor-link" aria-label="Link to this section: Paginación (Pagination)" href="#paginación-pagination"> </a></h4>
+<ul>
+<li>
+<p>Los enlaces de paginación ahora tienen un <code>margin-left</code> personalizable que se redondea dinámicamente en todas las esquinas cuando se separan entre sí.</p>
+</li>
+<li>
+<p>Se agregaron <code>transition</code>s a los enlaces de paginación.</p>
+</li>
+</ul>
+<h4 id="popovers">Popovers<a class="anchor-link" aria-label="Link to this section: Popovers" href="#popovers"> </a></h4>
+<ul>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de <code>.arrow</code> a <code>.popover-arrow</code> en nuestra plantilla de popover predeterminada.</p>
+</li>
+<li>
+<p>Se cambió el nombre de la opción <code>whiteList</code> a <code>allowList</code>.</p>
+</li>
+</ul>
+<h4 id="spinners">Spinners<a class="anchor-link" aria-label="Link to this section: Spinners" href="#spinners"> </a></h4>
+<ul>
+<li>
+<p>Los spinners ahora respetan <code>prefers-reduced-motion: reduce</code> al ralentizar las animaciones. <a href="https://github.com/twbs/bootstrap/pull/31882">Ver #31882</a>.</p>
+</li>
+<li>
+<p>Alineación vertical del spinner mejorada.</p>
+</li>
+</ul>
+<h4 id="toasts">Toasts<a class="anchor-link" aria-label="Link to this section: Toasts" href="#toasts"> </a></h4>
+<ul>
+<li>
+<p>Los toasts ahora se pueden <a href="/docs/5.3/components/toasts#placement">posicionar</a> en un <code>.toast-container</code> con la ayuda de las <a href="/docs/5.3/utilities/position">utilidades de posicionamiento</a>.</p>
+</li>
+<li>
+<p>Se cambió la duración predeterminada del toast a 5 segundos.</p>
+</li>
+<li>
+<p>Se eliminó <code>overflow: hidden</code> de los toasts y se reemplazó con <code>border-radius</code> adecuados con funciones <code>calc()</code>.</p>
+</li>
+</ul>
+<h4 id="tooltips">Tooltips<a class="anchor-link" aria-label="Link to this section: Tooltips" href="#tooltips"> </a></h4>
+<ul>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de <code>.arrow</code> a <code>.tooltip-arrow</code> en nuestra plantilla de tooltip predeterminada.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> El valor predeterminado para <code>fallbackPlacements</code> se cambia a <code>[&#39;top&#39;, &#39;right&#39;, &#39;bottom&#39;, &#39;left&#39;]</code> para una mejor ubicación de los elementos Popper.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la opción <code>whiteList</code> a <code>allowList</code>.</p>
+</li>
+</ul>
+<h3 id="utilidades-3">Utilidades<a class="anchor-link" aria-label="Link to this section: Utilidades" href="#utilidades-3"> </a></h3>
+<ul>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambiaron de nombre varias utilidades para usar nombres de propiedades lógicas en lugar de nombres direccionales con la adición de soporte RTL:</p>
+<ul>
+<li>Se cambió el nombre de <code>.float-left</code> y <code>.float-right</code> a <code>.float-start</code> y <code>.float-end</code>.</li>
+<li>Se cambió el nombre de <code>.border-left</code> y <code>.border-right</code> a <code>.border-start</code> y <code>.border-end</code>.</li>
+<li>Se cambió el nombre de <code>.rounded-left</code> y <code>.rounded-right</code> a <code>.rounded-start</code> y <code>.rounded-end</code>.</li>
+<li>Se cambió el nombre de <code>.ml-*</code> y <code>.mr-*</code> a <code>.ms-*</code> y <code>.me-*</code>.</li>
+<li>Se cambió el nombre de <code>.pl-*</code> y <code>.pr-*</code> a <code>.ps-*</code> y <code>.pe-*</code>.</li>
+<li>Se cambió el nombre de <code>.text-*-left</code> y <code>.text-*-right</code> a <code>.text-*-start</code> y <code>.text-*-end</code>.</li>
+</ul>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se deshabilitaron los márgenes negativos de forma predeterminada.</p>
+</li>
+<li>
+<p>Se agregó la nueva clase <code>.bg-body</code> para configurar rápidamente el fondo del <code>&lt;body&gt;</code> en elementos adicionales.</p>
+</li>
+<li>
+<p>Se agregaron nuevas <a href="/docs/5.3/utilities/position#arrange-elements">utilidades de posición</a> para <code>top</code>, <code>right</code>, <code>bottom</code> y <code>left</code>. Los valores incluyen <code>0</code>, <code>50%</code> y <code>100%</code> para cada propiedad.</p>
+</li>
+<li>
+<p>Se agregaron nuevas utilidades <code>.translate-middle-x</code> y <code>.translate-middle-y</code> para centrar horizontal o verticalmente elementos posicionados de forma absoluta/fija.</p>
+</li>
+<li>
+<p>Se agregaron nuevas <a href="/docs/5.3/utilities/borders#border-width"><code>utilidades de border-width</code></a>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de <code>.text-monospace</code> a <code>.font-monospace</code>.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminó <code>.text-hide</code> ya que es un método obsoleto para ocultar texto que ya no debería usarse.</p>
+</li>
+<li>
+<p>Se agregaron utilidades <code>.fs-*</code> para utilidades de <code>font-size</code> (con RFS habilitado). Estos usan la misma escala que los encabezados predeterminados de HTML (1-6, de grande a pequeño) y se pueden modificar mediante el mapa Sass.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambiaron de nombre las utilidades <code>.font-weight-*</code> a <code>.fw-*</code> para abreviar y mantener la coherencia.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se cambió el nombre de la utilidad <code>.font-italic</code> a <code>.fst-italic</code> para abreviar y mantener la coherencia con la nueva utilidad <code>.fst-normal</code>.</p>
+</li>
+<li>
+<p>Se agregó <code>.d-grid</code> a las utilidades de visualización y nuevas utilidades de espacio (<code>.gap</code>) para diseños CSS Grid y flexbox.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Se eliminaron <code>.rounded-sm</code> y <code>.rounded-lg</code>, y se introdujo una nueva escala de clases, <code>.rounded-0</code> a <code>.rounded-3</code>. <a href="https://github.com/twbs/bootstrap/pull/31687">Ver #31687</a>.</p>
+</li>
+<li>
+<p>Se agregaron nuevas utilidades de <code>line-height</code>: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code> y <code>.lh-lg</code>. Consulta <a href="/docs/5.3/utilities/text#line-height">aquí</a>.</p>
+</li>
+<li>
+<p>Se movió la utilidad <code>.d-none</code> en nuestro CSS para darle más peso sobre otras utilidades de visualización.</p>
+</li>
+<li>
+<p>Se amplió el ayudante <code>.visually-hidden-focusable</code> para que también funcione en contenedores, utilizando <code>:focus-within</code>.</p>
+</li>
+</ul>
+<h3 id="ayundantes-helpers">Ayundantes (Helpers)<a class="anchor-link" aria-label="Link to this section: Ayundantes (Helpers)" href="#ayundantes-helpers"> </a></h3>
+<ul>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> <strong>Los ayudantes de inserción responsivos han pasado a llamarse <a href="/docs/5.3/helpers/ratio">ayudantes de proporción (ratio)</a></strong> con nuevos nombres de clase y comportamientos mejorados, así como una útil variable CSS.</p>
+<ul>
+<li>Se han cambiado de nombre las clases para cambiar <code>by</code> por <code>x</code> en la relación de aspecto. Por ejemplo, <code>.ratio-16by9</code> ahora es <code>.ratio-16x9</code>.</li>
+<li>Hemos descartado el selector de grupo de elementos y <code>.embed-responsive-item</code> en favor de un selector <code>.ratio &gt; *</code> más simple. No se necesita más clase y el ayudante de proporción ahora funciona con cualquier HTML elemento.</li>
+<li>El mapa Sass <code>$embed-responsive-aspect-ratios</code> ha pasado a llamarse <code>$aspect-ratios</code> y sus valores se han simplificado para incluir el nombre de la clase y el porcentaje como el par <code>key: value</code>.</li>
+<li>Ahora se generan e incluyen variables CSS para cada valor en el mapa Sass. Modifica la variable <code>--bs-aspect-ratio</code> en el <code>.ratio</code> para crear cualquier <a href="/docs/5.3/helpers/ratio#custom-ratios">relación de aspecto personalizada</a>.</li>
+</ul>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> <strong>Las clases &quot;Lector de pantalla&quot; ahora son <a href="/docs/5.3/helpers/visually-hidden">&quot;clases visualmente ocultas&quot;</a>.</strong></p>
+<ul>
+<li>Se cambió el archivo Sass de <code>scss/helpers/_screenreaders.scss</code> a <code>scss/helpers/_visually-hidden.scss</code></li>
+<li>Se cambió el nombre de <code>.sr-only</code> y <code>.sr-only-focusable</code> a <code>.visually-hidden</code> y <code>.visually-hidden-focusable</code></li>
+<li>Se cambió el nombre de los mixins <code>sr-only()</code> y <code>sr-only-focusable()</code> a <code>visually-hidden()</code> y <code>visually-hidden-focusable()</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>bootstrap-utilities.css</code> ahora también incluye nuestros ayudantes. Ya no es necesario importar ayudantes en compilaciones personalizadas.</p>
+</li>
+</ul>
+<h3 id="javascript">JavaScript<a class="anchor-link" aria-label="Link to this section: JavaScript" href="#javascript"> </a></h3>
+<ul>
+<li>
+<p><strong>Se eliminó la dependencia de jQuery</strong> y se reescribieron los complementos para que estuvieran en JavaScript normal.</p>
+</li>
+<li>
+<p><span class="badge text-bg-danger">Crítico</span> Los atributos de datos para todos los complementos de JavaScript ahora tienen espacios de nombres para ayudar a distinguir la funcionalidad de Bootstrap de la de terceros y de su propio código. Por ejemplo, usamos <code>data-bs-toggle</code> en lugar de <code>data-toggle</code>.</p>
+</li>
+<li>
+<p><strong>Todos los complementos ahora pueden aceptar un selector CSS como primer argumento.</strong> Puedes pasar un elemento DOM o cualquier selector CSS válido para crear una nueva instancia del complemento:</p>
+ <div class="bd-code-snippet"> <div class="bd-clipboard"> <button type="button" class="btn-clipboard"> <svg class="bi" role="img" aria-label="Copiar"> <use xlink:href="#clipboard"></use> </svg> </button> </div> <div class="highlight"> <pre class="language-js"><code is:raw class="language-js"><span class="token keyword">const</span> modal <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">bootstrap<span class="token punctuation">.</span>Modal</span><span class="token punctuation">(</span><span class="token string">&#39;#myModal&#39;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> dropdown <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">bootstrap<span class="token punctuation">.</span>Dropdown</span><span class="token punctuation">(</span><span class="token string">&#39;[data-bs-toggle=&quot;dropdown&quot;]&#39;</span><span class="token punctuation">)</span>
+</code></pre> </div> </div>
+</li>
+<li>
+<p><code>popperConfig</code> se puede pasar como una función que acepta la configuración Popper predeterminada de Bootstrap como argumento, para que puedas fusionar esta configuración predeterminada a tu manera. <strong>Se aplica a dropdowns, popovers y tooltips.</strong></p>
+</li>
+<li>
+<p>El valor predeterminado para <code>fallbackPlacements</code> se cambia a <code>[&#39;top&#39;, &#39;right&#39;, &#39;bottom&#39;, &#39;left&#39;]</code> para una mejor ubicación de los elementos Popper. <strong>Se aplica a dropdowns, popovers y tooltips.</strong></p>
+</li>
+<li>
+<p>Se eliminó el guión bajo de los métodos estáticos públicos como <code>_getInstance()</code> → <code>getInstance()</code>.</p>
+</li>
+<li>
+<p>Se eliminó <code>util.js</code>, y su funcionalidad ahora está integrada en complementos individuales. Si anteriormente incluías <code>util.js</code> manualmente, puedes eliminarlo de forma segura, ya que ya no es necesario. Cada complemento ahora contiene solo las utilidades que requiere, lo que mejora la modularidad y reduce las dependencias.</p>
+</li>
+</ul>  </div> </main> </div> <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary"> <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary"> <div class="row"> <div class="col-lg-3 mb-3"> <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 94" role="img" class="d-block me-2" height="32" width="40"> <title>Bootstrap</title> <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path> </svg> <span class="fs-5">Bootstrap</span> </a> <ul class="list-unstyled small"> <li class="mb-2">
+Diseñado y construido con todo el amor del mundo por el <a href="/docs/5.3/about/team">equipo de Bootstrap</a> con la ayuda de <a href="https://github.com/twbs/bootstrap/graphs/contributors">nuestros colaboradores</a>.
+</li> <li class="mb-2">
+Código licenciado bajo <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, documentación bajo <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.
+</li> <li class="mb-2">Actualmente v5.3.8.</li> </ul> </div> <div class="col-6 col-lg-2 offset-lg-1 mb-3"> <h5>Enlaces</h5> <ul class="list-unstyled"> <li class="mb-2"><a href="/">Inicio</a></li> <li class="mb-2"><a href="/docs/5.3/">Documentación</a></li> <li class="mb-2"><a href="/docs/5.3/examples">Ejemplos</a></li> <li class="mb-2"><a href="https://icons.getbootstrap.com/">Iconos</a></li> <li class="mb-2"><a href="https://blog.getbootstrap.com/">Blog</a></li> <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" target="_blank" rel="noopener">Tienda Swag</a></li> </ul> </div> <div class="col-6 col-lg-2 mb-3"> <h5>Guías</h5> <ul class="list-unstyled"> <li class="mb-2"><a href="/docs/5.3/getting-started">Primeros pasos</a></li> <li class="mb-2"><a href="/docs/5.3/examples/starter-template">Plantilla de inicio</a></li> <li class="mb-2"><a href="/docs/5.3/getting-started/webpack">Webpack</a></li> <li class="mb-2"><a href="/docs/5.3/getting-started/parcel">Parcel</a></li> <li class="mb-2"><a href="/docs/5.3/getting-started/vite">Vite</a></li> </ul> </div> <div class="col-6 col-lg-2 mb-3"> <h5>Proyectos</h5> <ul class="list-unstyled"> <li class="mb-2"> <a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">Bootstrap 5</a> </li> <li class="mb-2"> <a href="https://github.com/twbs/bootstrap/tree/v4-dev" target="_blank" rel="noopener">Bootstrap 4</a> </li> <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank" rel="noopener">Iconos</a></li> <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">RFS</a></li> <li class="mb-2"> <a href="https://github.com/twbs/examples" target="_blank" rel="noopener">Repositorio de ejemplos</a> </li> </ul> </div> <div class="col-6 col-lg-2 mb-3"> <h5>Comunidad</h5> <ul class="list-unstyled"> <li class="mb-2"> <a href="https://github.com/twbs/bootstrap/issues" target="_blank" rel="noopener">Incidencias</a> </li> <li class="mb-2"> <a href="https://github.com/twbs/bootstrap/discussions" target="_blank" rel="noopener">Discusiones</a> </li> <li class="mb-2"> <a href="https://github.com/sponsors/twbs" target="_blank" rel="noopener">Patrocinadores corporativos</a> </li> <li class="mb-2"><a href="https://opencollective.com/bootstrap" target="_blank" rel="noopener">Open Collective</a></li> <li class="mb-2"> <a href="https://stackoverflow.com/questions/tagged/bootstrap-5" target="_blank" rel="noopener">Stack Overflow</a> </li> </ul> </div> </div> </div> </footer> <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"></script> <script type="module" src="/docs/5.3/assets/Scripts.astro_astro_type_script_index_0_lang.B072HICR.js"></script> <script type="module">const p=()=>{const t=document.querySelector(".bd-sidebar"),a=document.querySelector(".bd-links-nav .active");if(!t||!a)return;const c=t.clientHeight,i=a.offsetTop,r=a.clientHeight,n=i,s=n-c+r;(t.scrollTop>n||t.scrollTop<s)&&(t.scrollTop=n-c/2+r/2)},v=()=>{document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(e=>{new bootstrap.Tooltip(e)}),document.querySelectorAll('[data-bs-toggle="popover"]').forEach(e=>{new bootstrap.Popover(e)});const t=document.getElementById("toastPlacement");t&&document.getElementById("selectToastPlacement").addEventListener("change",function(){t.dataset.originalClass||(t.dataset.originalClass=t.className),t.className=`${t.dataset.originalClass} ${this.value}`}),document.querySelectorAll(".bd-example .toast").forEach(e=>{new bootstrap.Toast(e,{autohide:!1}).show()});const a=document.getElementById("liveToastBtn"),c=document.getElementById("liveToast");if(a){const e=bootstrap.Toast.getOrCreateInstance(c);a.addEventListener("click",()=>{e.show()})}const i=document.getElementById("liveAlertPlaceholder"),r=(e,o)=>{const l=document.createElement("div");l.innerHTML=[`<div class="alert alert-${o} alert-dismissible" role="alert">`,`   <div>${e}</div>`,'   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',"</div>"].join(""),i.append(l)},n=document.getElementById("liveAlertBtn");n&&n.addEventListener("click",()=>{r("Nice, you triggered this alert message!","success")}),document.querySelectorAll('.carousel:not([data-bs-ride="carousel"])').forEach(e=>{bootstrap.Carousel.getOrCreateInstance(e)}),document.querySelectorAll('.bd-example-indeterminate [type="checkbox"]').forEach(e=>{e.id.includes("Indeterminate")&&(e.indeterminate=!0)}),document.querySelectorAll('.bd-content [href="#"]').forEach(e=>{e.addEventListener("click",o=>{o.preventDefault()})});const s=document.getElementById("exampleModal");s&&s.addEventListener("show.bs.modal",e=>{const l=e.relatedTarget.getAttribute("data-bs-whatever"),m=s.querySelector(".modal-title"),u=s.querySelector(".modal-body input");m.textContent=`New message to ${l}`,u.value=l});const d=document.querySelectorAll(".bd-example-offcanvas .offcanvas");d&&d.forEach(e=>{e.addEventListener("show.bs.offcanvas",o=>{o.preventDefault()},!1)})};p();v();</script> <script type="module" src="/docs/5.3/assets/DocsScripts.astro_astro_type_script_index_0_lang.Y79Pi1OG.js"></script>  <div class="position-fixed" aria-hidden="true"> <input type="text" tabindex="-1"> </div> </body></html>

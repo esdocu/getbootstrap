@@ -1,0 +1,5 @@
+# www.robotstxt.org
+# Permitir el rastreo de todo el contenido
+User-agent: *
+Disallow: 
+Sitemap: https://getbootstrap.esdocu.com/sitemap-index.xml
