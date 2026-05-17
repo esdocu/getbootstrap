@@ -20,10 +20,6 @@ export function getVersionedBsCssProps(direction: 'rtl' | undefined) {
     rel: 'stylesheet'
   }
 
-  if (import.meta.env.PROD) {
-    bsCssLinkProps.integrity = direction === 'rtl' ? getConfig().cdn.css_rtl_hash : getConfig().cdn.css_hash
-  }
-
   return bsCssLinkProps
 }
 
@@ -38,10 +34,6 @@ export function getVersionedBsJsProps() {
 
   const bsJsLinkProps: HTMLAttributes<'script'> = {
     src: getVersionedDocsPath(bsJsScriptSrc)
-  }
-
-  if (import.meta.env.PROD) {
-    bsJsLinkProps.integrity = getConfig().cdn.js_bundle_hash
   }
 
   return bsJsLinkProps
