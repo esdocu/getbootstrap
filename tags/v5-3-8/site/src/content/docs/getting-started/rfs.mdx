@@ -1,22 +1,22 @@
 ---
 title: RFS
-description: Bootstrap’s resizing engine responsively scales common CSS properties to better utilize available space across viewports and devices.
+description: El motor de redimensionamiento de Bootstrap escala de forma adaptiva (responsive) las propiedades CSS comunes para aprovechar mejor el espacio disponible en los viewports y dispositivos.
 toc: true
 ---
 
-## What is RFS?
+## ¿Qué es RFS?
 
-Bootstrap’s side project [RFS](https://github.com/twbs/rfs/tree/[[config:rfs_version]]) is a unit resizing engine which was initially developed to resize font sizes (hence its abbreviation for Responsive Font Sizes). Nowadays RFS is capable of rescaling most CSS properties with unit values like `margin`, `padding`, `border-radius`, or even `box-shadow`.
+El proyecto paralelo de Bootstrap [RFS](https://github.com/twbs/rfs/tree/[[config:rfs_version]]) es un motor de redimensionamiento de unidades que se desarrolló inicialmente para redimensionar tamaños de fuente (de ahí su abreviatura para Responsive Font Sizes). Hoy en día, RFS es capaz de reescalar la mayoría de las propiedades CSS con valores unitarios como `margin`, `padding`, `border-radius` o incluso `box-shadow`.
 
-The mechanism automatically calculates the appropriate values based on the dimensions of the browser viewport. It will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior.
+El mecanismo calcula automáticamente los valores adecuados en función de las dimensiones del viewport del navegador. Se compilará en funciones `calc()` con una combinación de `rem` y unidades de viewport para habilitar el comportamiento de escalado adaptivo (responsive).
 
-## Using RFS
+## Uso de RFS
 
-The mixins are included in Bootstrap and are available once you include Bootstrap’s `scss`. RFS can also be [installed standalone](https://github.com/twbs/rfs/tree/[[config:rfs_version]]#installation) if needed.
+Los mixins están incluidos en Bootstrap y están disponibles una vez que incluyes el `scss` de Bootstrap. RFS también se puede [instalar de forma independiente](https://github.com/twbs/rfs/tree/[[config:rfs_version]]#installation) si es necesario.
 
-### Using the mixins
+### Uso de los mixins
 
-The `rfs()` mixin has shorthands for `font-size`, `margin`, `margin-top`, `margin-right`, `margin-bottom`, `margin-left`, `padding`, `padding-top`, `padding-right`, `padding-bottom`, and `padding-left`. See the example below for source Sass and compiled CSS.
+El mixin `rfs()` tiene atajos para `font-size`, `margin`, `margin-top`, `margin-right`, `margin-bottom`, `margin-left`, `padding`, `padding-top`, `padding-right`, `padding-bottom` y `padding-left`. Consulta el ejemplo a continuación para ver el Sass de origen y el CSS compilado.
 
 ```scss
 .title {
@@ -36,7 +36,7 @@ The `rfs()` mixin has shorthands for `font-size`, `margin`, `margin-top`, `margi
 }
 ```
 
-Any other property can be passed to the `rfs()` mixin like this:
+Cualquier otra propiedad se puede pasar al mixin `rfs()` de esta manera:
 
 ```scss
 .selector {
@@ -44,7 +44,7 @@ Any other property can be passed to the `rfs()` mixin like this:
 }
 ```
 
-`!important` can also just be added to whatever value you want:
+También se puede agregar `!important` a cualquier valor que desees:
 
 ```scss
 .selector {
@@ -52,14 +52,14 @@ Any other property can be passed to the `rfs()` mixin like this:
 }
 ```
 
-### Using the functions
+### Uso de las funciones
 
-When you don’t want to use the includes, there are also two functions:
+Cuando no quieras usar los mixins (includes), también hay dos funciones:
 
-- `rfs-value()` converts a value into a `rem` value if a `px` value is passed, in other cases it returns the same result.
-- `rfs-fluid-value()` returns the fluid version of a value if the property needs rescaling.
+- `rfs-value()` convierte un valor en un valor `rem` si se pasa un valor en `px`, en otros casos devuelve el mismo resultado.
+- `rfs-fluid-value()` devuelve la versión fluida de un valor si la propiedad necesita reescalado.
 
-In this example, we use one of Bootstrap’s built-in [responsive breakpoint mixins]([[docsref:/layout/breakpoints]]) to only apply styling below the `lg` breakpoint.
+En este ejemplo, usamos uno de los [mixins de puntos de interrupción adaptivos (responsive breakpoint mixins)]([[docsref:/layout/breakpoints]]) integrados de Bootstrap para aplicar estilo solo por debajo del punto de interrupción `lg`.
 
 ```scss
 .selector {
@@ -74,11 +74,11 @@ In this example, we use one of Bootstrap’s built-in [responsive breakpoint mix
 @media (max-width: 991.98px) {
   .selector {
     padding: calc(1.325rem + 0.9vw);
-    font-size: 1.125rem; /* 1.125rem is small enough, so RFS won’t rescale this */
+    font-size: 1.125rem; /* 1.125rem es lo suficientemente pequeño, por lo que RFS no lo reescalará */
   }
 }
 ```
 
-## Extended documentation
+## Documentación extendida
 
-RFS is a separate project under the Bootstrap organization. More about RFS and its configuration can be found on its [GitHub repository](https://github.com/twbs/rfs/tree/[[config:rfs_version]]).
+RFS es un proyecto independiente bajo la organización Bootstrap. Se puede encontrar más información sobre RFS y su configuración en su [repositorio de GitHub](https://github.com/twbs/rfs/tree/[[config:rfs_version]]).

@@ -1,59 +1,59 @@
 ---
-title: Accessibility
-description: A brief overview of Bootstrap’s features and limitations for the creation of accessible content.
+title: Accesibilidad
+description: Una breve descripción de las características y limitaciones de Bootstrap para la creación de contenido accesible.
 toc: true
 ---
 
-Bootstrap provides an easy-to-use framework of ready-made styles, layout tools, and interactive components, allowing developers to create websites and applications that are visually appealing, functionally rich, and accessible out of the box.
+Bootstrap proporciona un marco fácil de usar de estilos listos para usar, herramientas de diseño y componentes interactivos, lo que permite a los desarrolladores crear sitios web y aplicaciones que sean visualmente atractivos, funcionalmente ricos y accesibles de forma predeterminada.
 
-## Overview and limitations
+## Descripción general y limitaciones
 
-The overall accessibility of any project built with Bootstrap depends in large part on the author’s markup, additional styling, and scripting they’ve included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Bootstrap that fulfill [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/), and similar accessibility standards and requirements.
+La accesibilidad general de cualquier proyecto creado con Bootstrap depende en gran medida del marcado del autor, del estilo adicional y de los scripts que haya incluido. Sin embargo, siempre que estos se hayan implementado correctamente, debería ser perfectamente posible crear sitios web y aplicaciones con Bootstrap que cumplan con [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2](https://www.w3.org/TR/WCAG/) (A/AA/AAA), la [Sección 508](https://www.section508.gov/) y estándares y requisitos de accesibilidad similares.
 
-### Structural markup
+### Marcado estructural
 
-Bootstrap’s styling and layout can be applied to a wide range of markup structures. This documentation aims to provide developers with best practice examples to demonstrate the use of Bootstrap itself and illustrate appropriate semantic markup, including ways in which potential accessibility concerns can be addressed.
+El estilo y el diseño de Bootstrap se pueden aplicar a una amplia gama de estructuras de marcado. Esta documentación tiene como objetivo proporcionar a los desarrolladores ejemplos de mejores prácticas para demostrar el uso de Bootstrap en sí e ilustrar el marcado semántico adecuado, incluidas las formas en que se pueden abordar los posibles problemas de accesibilidad.
 
-### Interactive components
+### Componentes interactivos
 
-Bootstrap’s interactive components—such as modal dialogs, dropdown menus, and custom tooltips—are designed to work for touch, mouse, and keyboard users. Through the use of relevant [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).
+Los componentes interactivos de Bootstrap (como diálogos modales, menús desplegables y tooltips personalizados) están diseñados para funcionar para usuarios de pantalla táctil, mouse y teclado. Mediante el uso de roles y atributos relevantes de [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/), estos componentes también deben ser comprensibles y operables mediante tecnologías de asistencia (como lectores de pantalla).
 
-Because Bootstrap’s components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.
+Debido a que los componentes de Bootstrap están diseñados a propósito para ser bastante genéricos, es posible que los autores necesiten incluir más roles y atributos <abbr title="Accessible Rich Internet Applications">ARIA</abbr>, así como comportamiento de JavaScript, para transmitir con mayor precisión la naturaleza y funcionalidad exactas de su componente. Esto generalmente se indica en la documentación.
 
-### Color contrast
+### Contraste de color
 
-Some combinations of colors that currently make up Bootstrap’s default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—may lead to *insufficient* color contrast (below the recommended [WCAG 2.2 text color contrast ratio of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and the [WCAG 2.2 non-text color contrast ratio of 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast)), particularly when used against a light background. Authors are encouraged to test their specific uses of color and, where necessary, manually modify/extend these default colors to ensure adequate color contrast ratios.
+Algunas combinaciones de colores que actualmente componen la paleta predeterminada de Bootstrap (utilizada en todo el framework para elementos como variaciones de botones, variaciones de alertas e indicadores de validación de formularios) pueden provocar un contraste de color *insuficiente* (por debajo de la relación de contraste de color de texto recomendada por [WCAG 2.2 de 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) y la relación de contraste de color no de texto de [WCAG 2.2 de 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast)), especialmente cuando se usa contra un fondo claro. Se anima a los autores a probar sus usos específicos del color y, cuando sea necesario, modificar o ampliar manualmente estos colores predeterminados para garantizar relaciones de contraste de color adecuadas.
 
-### Visually hidden content
+### Contenido oculto visualmente
 
-Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the `.visually-hidden` class. This can be useful in situations where additional visual information or cues (such as meaning denoted through the use of color) need to also be conveyed to non-visual users.
+El contenido que debe ocultarse visualmente, pero seguir siendo accesible para las tecnologías de asistencia como los lectores de pantalla, se puede diseñar utilizando la clase `.visually-hidden`. Esto puede ser útil en situaciones en las que también es necesario transmitir información visual adicional o pistas (como el significado indicado mediante el uso del color) a usuarios no visuales.
 
 ```html
 <p class="text-danger">
-  <span class="visually-hidden">Danger: </span>
-  This action is not reversible
+  <span class="visually-hidden">Peligro: </span>
+  Esta acción no es reversible
 </p>
 ```
 
-For visually hidden interactive controls, such as traditional “skip” links, use the `.visually-hidden-focusable` class. This will ensure that the control becomes visible once focused (for sighted keyboard users). **Watch out, compared to the equivalent `.sr-only` and `.sr-only-focusable` classes in past versions, Bootstrap 5’s `.visually-hidden-focusable` is a standalone class, and must not be used in combination with the `.visually-hidden` class.**
+Para controles interactivos ocultos visualmente, como los enlaces tradicionales de "omitir" (skip links), utiliza la clase `.visually-hidden-focusable`. Esto garantizará que el control se vuelva visible una vez enfocado (para usuarios de teclado videntes). **Cuidado, en comparación con las clases equivalentes `.sr-only` y `.sr-only-focusable` en versiones anteriores, `.visually-hidden-focusable` de Bootstrap 5 es una clase independiente y no debe usarse en combinación con la clase `.visually-hidden`.**
 
 ```html
-<a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+<a class="visually-hidden-focusable" href="#content">Saltar al contenido principal</a>
 ```
 
-### Reduced motion
+### Movimiento reducido
 
-Bootstrap includes support for the [`prefers-reduced-motion` media feature](https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion). In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Bootstrap (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.
+Bootstrap incluye soporte para la [característica de medios `prefers-reduced-motion`](https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion). En navegadores/entornos que permiten al usuario especificar su preferencia por el movimiento reducido, la mayoría de los efectos de transición CSS en Bootstrap (por ejemplo, cuando se abre o cierra un diálogo modal, o la animación de deslizamiento en los carruseles) se desactivarán, y las animaciones significativas (como los spinners) se ralentizarán.
 
-On browsers that support `prefers-reduced-motion`, and where the user has *not* explicitly signaled that they’d prefer reduced motion (i.e. where `prefers-reduced-motion: no-preference`), Bootstrap enables smooth scrolling using the `scroll-behavior` property.
+En los navegadores que admiten `prefers-reduced-motion`, y donde el usuario *no* ha indicado explícitamente que prefiere un movimiento reducido (es decir, donde `prefers-reduced-motion: no-preference`), Bootstrap habilita el desplazamiento suave mediante la propiedad `scroll-behavior`.
 
-## Additional resources
+## Recursos adicionales
 
-- [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG/)
-- [The A11Y Project](https://www.a11yproject.com/)
-- [MDN accessibility documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+- [Pautas de Accesibilidad al Contenido Web (WCAG) 2.2](https://www.w3.org/TR/WCAG/)
+- [El Proyecto A11Y](https://www.a11yproject.com/)
+- [Documentación de accesibilidad de MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Color Contrast Analyser (CCA)](https://www.tpgi.com/color-contrast-checker/)
-- ["HTML Codesniffer" bookmarklet for identifying accessibility issues](https://github.com/squizlabs/HTML_CodeSniffer)
+- [Marcador "HTML Codesniffer" para identificar problemas de accesibilidad](https://github.com/squizlabs/HTML_CodeSniffer)
 - [Microsoft Accessibility Insights](https://accessibilityinsights.io/)
-- [Deque Axe testing tools](https://www.deque.com/axe/)
-- [Introduction to Web Accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
+- [Herramientas de prueba Deque Axe](https://www.deque.com/axe/)
+- [Introducción a la accesibilidad web](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
