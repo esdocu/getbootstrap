@@ -3,7 +3,31 @@
 ---
 
 <div id="esdocu-promo-banners">
-  <!-- Tarjeta 1: EsDocu -->
+  <!-- Tarjeta 1: VeoBible -->
+  <div class="promo-card veobible-card">
+    <div class="card-glow"></div>
+    <div class="badge-icon">📖</div>
+    <div class="card-content">
+      <h3 class="card-title">Lee la Biblia de una forma moderna - VeoBible.com</h3>
+      <p class="card-text">
+        Lee, estudia y escucha la Biblia con una interfaz limpia, moderna y completamente libre de anuncios. Gratis y
+        disponible en múltiples versiones.
+      </p>
+    </div>
+    <a href="https://veobible.com/es" target="_blank" rel="noopener" class="card-link veobible-link">
+      <span>Leer la Biblia</span>
+      <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1 8H15M15 8L8 1M15 8L8 15"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Tarjeta 2: EsDocu -->
   <div class="promo-card esdocu-card">
     <div class="card-glow"></div>
     <div class="card-content">
@@ -27,7 +51,7 @@
     </a>
   </div>
 
-  <!-- Tarjeta 2: Wordsus -->
+  <!-- Tarjeta 3: Wordsus -->
   <div class="promo-card wordsus-card">
     <div class="card-glow"></div>
     <div class="card-content">
@@ -83,6 +107,14 @@
   }
 
   /* Light mode default styles */
+  .veobible-card {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(139, 92, 246, 0.18);
+    box-shadow:
+      0 4px 6px -1px rgba(139, 92, 246, 0.05),
+      0 10px 30px -10px rgba(139, 92, 246, 0.1);
+  }
+
   .esdocu-card {
     background: rgba(255, 255, 255, 0.55);
     border: 1px solid rgba(13, 110, 253, 0.18);
@@ -113,6 +145,10 @@
     pointer-events: none;
   }
 
+  .veobible-card .card-glow {
+    background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.12), transparent 50%);
+  }
+
   .esdocu-card .card-glow {
     background: radial-gradient(circle at 80% 20%, rgba(13, 110, 253, 0.12), transparent 50%);
   }
@@ -124,6 +160,13 @@
   /* Hover states */
   .promo-card:hover {
     transform: translateY(-6px);
+  }
+
+  .veobible-card:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow:
+      0 12px 24px -10px rgba(139, 92, 246, 0.15),
+      0 20px 40px -15px rgba(139, 92, 246, 0.1);
   }
 
   .esdocu-card:hover {
@@ -145,6 +188,14 @@
   }
 
   /* Dark mode overrides */
+  :global([data-bs-theme='dark']) .veobible-card {
+    background: rgba(139, 92, 246, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.15),
+      inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+
   :global([data-bs-theme='dark']) .esdocu-card {
     background: rgba(13, 110, 253, 0.05);
     border: 1px solid rgba(13, 110, 253, 0.25);
@@ -161,6 +212,14 @@
       inset 0 1px 1px rgba(255, 255, 255, 0.1);
   }
 
+  :global([data-bs-theme='dark']) .veobible-card:hover {
+    background: rgba(139, 92, 246, 0.08);
+    border-color: rgba(139, 92, 246, 0.45);
+    box-shadow:
+      0 12px 30px -5px rgba(139, 92, 246, 0.2),
+      0 20px 50px -10px rgba(0, 0, 0, 0.3);
+  }
+
   :global([data-bs-theme='dark']) .esdocu-card:hover {
     background: rgba(13, 110, 253, 0.08);
     border-color: rgba(13, 110, 253, 0.45);
@@ -175,6 +234,10 @@
     box-shadow:
       0 12px 30px -5px rgba(245, 158, 11, 0.2),
       0 20px 50px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  :global([data-bs-theme='dark']) .veobible-card .card-glow {
+    background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2), transparent 50%);
   }
 
   :global([data-bs-theme='dark']) .esdocu-card .card-glow {
@@ -236,6 +299,16 @@
     }
   }
 
+  .veobible-link {
+    background: #8b5cf6;
+    color: #fff !important;
+  }
+
+  .veobible-link:hover {
+    background: #7c3aed;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
+  }
+
   .esdocu-link {
     background: var(--bs-primary);
     color: #fff !important;
@@ -263,5 +336,36 @@
 
   .card-link:hover .link-arrow {
     transform: translateX(4px);
+  }
+
+  /* Responsive layout for the full-width VeoBible card on desktop */
+  @media (min-width: 768px) {
+    .veobible-card {
+      grid-column: 1 / -1;
+      flex-direction: row !important;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .veobible-card .badge-icon {
+      margin-bottom: 0;
+      font-size: 2.75rem;
+      flex-shrink: 0;
+    }
+
+    .veobible-card .card-content {
+      flex: 1;
+    }
+
+    .veobible-card .card-text {
+      margin-bottom: 0;
+    }
+
+    .veobible-card .card-link {
+      margin-top: 0;
+      flex-shrink: 0;
+      width: fit-content;
+    }
   }
 </style>
