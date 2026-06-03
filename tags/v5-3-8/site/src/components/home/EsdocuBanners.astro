@@ -74,6 +74,31 @@
       </svg>
     </a>
   </div>
+
+  <!-- Tarjeta 4: Comparativas de Esdocu -->
+  <div class="promo-card comparativas-card">
+    <div class="card-glow"></div>
+    <div class="badge-icon">⚖️</div>
+    <div class="card-content">
+      <h3 class="card-title">Comparativas de Esdocu</h3>
+      <p class="card-text">
+        Analizamos y comparamos en detalle herramientas, aplicaciones y servicios técnicos para ayudarte a tomar la mejor decisión con datos objetivos.
+      </p>
+    </div>
+    <div class="comparativas-links">
+      <a href="https://esdocu.com/mejor-app-para-leer-la-biblia" target="_blank" rel="noopener" class="card-link comparativas-link">
+        <span>Mejor app para leer la Biblia</span>
+        <svg class="link-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1 8H15M15 8L8 1M15 8L8 15"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
 </div>
 
 <style>
@@ -131,6 +156,14 @@
       0 10px 30px -10px rgba(245, 158, 11, 0.1);
   }
 
+  .comparativas-card {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(16, 185, 129, 0.18);
+    box-shadow:
+      0 4px 6px -1px rgba(16, 185, 129, 0.05),
+      0 10px 30px -10px rgba(16, 185, 129, 0.1);
+  }
+
   /* Glow element inside the card */
   .card-glow {
     position: absolute;
@@ -157,6 +190,10 @@
     background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.12), transparent 50%);
   }
 
+  .comparativas-card .card-glow {
+    background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.12), transparent 50%);
+  }
+
   /* Hover states */
   .promo-card:hover {
     transform: translateY(-6px);
@@ -181,6 +218,13 @@
     box-shadow:
       0 12px 24px -10px rgba(245, 158, 11, 0.15),
       0 20px 40px -15px rgba(245, 158, 11, 0.1);
+  }
+
+  .comparativas-card:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+    box-shadow:
+      0 12px 24px -10px rgba(16, 185, 129, 0.15),
+      0 20px 40px -15px rgba(16, 185, 129, 0.1);
   }
 
   .promo-card:hover .card-glow {
@@ -212,6 +256,14 @@
       inset 0 1px 1px rgba(255, 255, 255, 0.1);
   }
 
+  :global([data-bs-theme='dark']) .comparativas-card {
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.15),
+      inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+
   :global([data-bs-theme='dark']) .veobible-card:hover {
     background: rgba(139, 92, 246, 0.08);
     border-color: rgba(139, 92, 246, 0.45);
@@ -236,6 +288,14 @@
       0 20px 50px -10px rgba(0, 0, 0, 0.3);
   }
 
+  :global([data-bs-theme='dark']) .comparativas-card:hover {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.45);
+    box-shadow:
+      0 12px 30px -5px rgba(16, 185, 129, 0.2),
+      0 20px 50px -10px rgba(0, 0, 0, 0.3);
+  }
+
   :global([data-bs-theme='dark']) .veobible-card .card-glow {
     background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2), transparent 50%);
   }
@@ -246,6 +306,10 @@
 
   :global([data-bs-theme='dark']) .wordsus-card .card-glow {
     background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.2), transparent 50%);
+  }
+
+  :global([data-bs-theme='dark']) .comparativas-card .card-glow {
+    background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.2), transparent 50%);
   }
 
   /* Card content details */
@@ -329,6 +393,30 @@
     box-shadow: 0 4px 15px rgba(230, 126, 34, 0.35);
   }
 
+  .comparativas-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 576px) {
+    .comparativas-links {
+      width: fit-content;
+    }
+  }
+
+  .comparativas-link {
+    background: #10b981;
+    color: #fff !important;
+  }
+
+  .comparativas-link:hover {
+    background: #059669;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
+  }
+
   /* Arrow animation */
   .link-arrow {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -340,7 +428,8 @@
 
   /* Responsive layout for the full-width VeoBible card on desktop */
   @media (min-width: 768px) {
-    .veobible-card {
+    .veobible-card,
+    .comparativas-card {
       grid-column: 1 / -1;
       flex-direction: row !important;
       align-items: center;
@@ -348,17 +437,20 @@
       gap: 2rem;
     }
 
-    .veobible-card .badge-icon {
+    .veobible-card .badge-icon,
+    .comparativas-card .badge-icon {
       margin-bottom: 0;
       font-size: 2.75rem;
       flex-shrink: 0;
     }
 
-    .veobible-card .card-content {
+    .veobible-card .card-content,
+    .comparativas-card .card-content {
       flex: 1;
     }
 
-    .veobible-card .card-text {
+    .veobible-card .card-text,
+    .comparativas-card .card-text {
       margin-bottom: 0;
     }
 
@@ -366,6 +458,12 @@
       margin-top: 0;
       flex-shrink: 0;
       width: fit-content;
+    }
+
+    .comparativas-links {
+      margin-top: 0;
+      flex-shrink: 0;
+      align-items: flex-end;
     }
   }
 </style>

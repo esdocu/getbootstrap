@@ -3,36 +3,36 @@
   description: 'Ejemplos funcionales del uso de Bootstrap en frameworks comunes de JS como Webpack, Parcel, Vite y más, que puedes editar en StackBlitz.'
   examples:
     - name: Inicio con CDN
-      description: "Incluye instantáneamente el CSS y JavaScript compilados de Bootstrap a través del CDN de jsDelivr."
+      description: 'Incluye instantáneamente el CSS y JavaScript compilados de Bootstrap a través del CDN de jsDelivr.'
       url: /examples/tree/main/starter
     - name: Sass y JS
-      description: "Usa npm para importar y compilar el Sass de Bootstrap con Autoprefixer y Stylelint, además de nuestro JavaScript empaquetado."
+      description: 'Usa npm para importar y compilar el Sass de Bootstrap con Autoprefixer y Stylelint, además de nuestro JavaScript empaquetado.'
       url: /examples/tree/main/sass-js
     - name: Sass y ESM JS
-      description: "Importa y compila el Sass de Bootstrap con Autoprefixer y Stylelint, y compila nuestro JavaScript de origen con un shim ESM."
+      description: 'Importa y compila el Sass de Bootstrap con Autoprefixer y Stylelint, y compila nuestro JavaScript de origen con un shim ESM.'
       url: /examples/tree/main/sass-js-esm
     - name: Modos de color de Bootstrap
-      description: "Importa y compila el Sass de Bootstrap con Stylelint, y los modos de color de Bootstrap."
+      description: 'Importa y compila el Sass de Bootstrap con Stylelint, y los modos de color de Bootstrap.'
       url: /examples/tree/main/color-modes
     - name: Iconos de Bootstrap
-      description: "Importa y compila el Sass de Bootstrap con Stylelint, PurgeCSS y la fuente web de Bootstrap Icons."
+      description: 'Importa y compila el Sass de Bootstrap con Stylelint, PurgeCSS y la fuente web de Bootstrap Icons.'
       url: /examples/tree/main/icons-font
     - name: Parcel
-      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap a través de Parcel."
+      description: 'Importa y empaqueta el Sass y JavaScript de origen de Bootstrap a través de Parcel.'
       url: /examples/tree/main/parcel
       indexPath: src/index.html
     - name: React
-      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con React, Next.js y React Bootstrap."
+      description: 'Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con React, Next.js y React Bootstrap.'
       url: /examples/tree/main/react-nextjs
       indexPath: src/pages/index.tsx
     - name: Vite
-      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con Vite."
+      description: 'Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con Vite.'
       url: /examples/tree/main/vite
     - name: Vue
-      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con Vue y Vite."
+      description: 'Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con Vue y Vite.'
       url: /examples/tree/main/vue
     - name: Webpack
-      description: "Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con Webpack."
+      description: 'Importa y empaqueta el Sass y JavaScript de origen de Bootstrap con Webpack.'
       url: /examples/tree/main/webpack
       indexPath: src/index.html
 
@@ -114,7 +114,7 @@
       description: 'Fija un pie de página en la parte inferior de la pantalla con una barra de navegación fija en la parte superior.'
     - name: Jumbotron
       id: jumbotron
-      description: "Utiliza utilidades para recrear y mejorar el jumbotron de Bootstrap 4."
+      description: 'Utiliza utilidades para recrear y mejorar el jumbotron de Bootstrap 4.'
 
 - category: Framework
   description: 'Ejemplos que se centran en implementar el uso de componentes integrados proporcionados por Bootstrap.'
@@ -149,10 +149,10 @@
       description: 'Ejemplo de una sola barra de navegación inferior junto con contenido adicional.'
     - name: Barra de navegación offcanvas
       id: offcanvas-navbar
-      description: "Convierte tu barra de navegación expandible en un menú offcanvas deslizante (no utiliza nuestro componente offcanvas)."
+      description: 'Convierte tu barra de navegación expandible en un menú offcanvas deslizante (no utiliza nuestro componente offcanvas).'
 
 - category: RTL
-  description: "Mira la versión RTL de Bootstrap en acción con estos ejemplos modificados de varias categorías."
+  description: 'Mira la versión RTL de Bootstrap en acción con estos ejemplos modificados de varias categorías.'
   examples:
     - name: Álbum RTL
       id: album-rtl
