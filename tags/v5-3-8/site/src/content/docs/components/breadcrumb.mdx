@@ -6,6 +6,8 @@ toc: true
 
 <EsdocuBanner />
 
+<VeoBibleBanner id="salmos-23-1" />
+
 ## Ejemplo
 
 Utiliza una lista ordenada o desordenada con elementos de lista vinculados para crear una miga de pan con un estilo mínimo. Utiliza nuestras utilidades para agregar estilos adicionales según lo desees.
@@ -31,7 +33,10 @@ Utiliza una lista ordenada o desordenada con elementos de lista vinculados para 
     </ol>
   </nav>`} />
 
-## Divisores
+## 
+<VeoBibleBanner id="proverbios-18-15" />
+
+Divisores
 
 Los divisores se agregan automáticamente en CSS a través de [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) y [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). Se pueden cambiar modificando una propiedad personalizada de CSS local `--bs-breadcrumb-divider`, o mediante la variable Sass `$breadcrumb-divider` — y `$breadcrumb-divider-flipped` para su contraparte RTL, si es necesario. Por defecto, utilizamos nuestra variable Sass, que se establece como alternativa (fallback) a la propiedad personalizada. De esta manera, obtienes un divisor global que puedes anular sin tener que volver a compilar CSS en cualquier momento.
 
@@ -73,7 +78,6 @@ También puedes eliminar el divisor configurando `--bs-breadcrumb-divider: '';` 
       <li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
     </ol>
   </nav>`} />
-
 
 ```scss
 $breadcrumb-divider: none;

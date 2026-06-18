@@ -676,10 +676,12 @@ const textAfter = parts[1] ?? ''
   <div class="vbb-content">
     <blockquote class="vbb-quote">
       <p class="vbb-verse-text">{verse.text}</p>
-      <cite class="vbb-reference">— {verse.reference}</cite>
+      <cite class="vbb-reference">
+        — <a href={verse.url} target="_blank" rel="noopener follow" class="vbb-reference-link" title={`Leer ${verse.reference} en VeoBible`}>{verse.reference}</a>
+      </cite>
     </blockquote>
     <p class="vbb-cta">
-      {textBefore}<a href={verse.url} target="_blank" rel="noopener" class="vbb-link">{verse.linkText}</a>{textAfter}
+      {textBefore}<a href={verse.url} target="_blank" rel="noopener follow" class="vbb-link">{verse.linkText}</a>{textAfter}
     </p>
   </div>
 </aside>
@@ -777,6 +779,18 @@ const textAfter = parts[1] ?? ''
     color: #8b5cf6;
     font-style: normal;
     opacity: 0.8;
+  }
+
+  .vbb-reference-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+
+  .vbb-reference-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    opacity: 1;
   }
 
   /* ── CTA / texto de marketing ── */

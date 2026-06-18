@@ -1,5 +1,6 @@
 ---
 import SingleLayout from '@layouts/SingleLayout.astro'
+import VeoBibleBanner from '@components/shortcodes/VeoBibleBanner.astro'
 import { getConfig } from '@libs/config'
 import ExamplesMain from '@layouts/partials/ExamplesMain.astro'
 export function getStaticPaths() {
@@ -26,6 +27,8 @@ export function getStaticPaths() {
     <a href={getConfig().download.source} class="btn btn-lg bd-btn-lg btn-outline-secondary"> Descargar código fuente</a>
   </div>
   <Fragment slot="main-content">
+    <div class="mb-5"><VeoBibleBanner id="exodo-20-9" /></div>
     <ExamplesMain />
+    <div class="mt-5"><VeoBibleBanner id="2-tesalonicenses-3-10" /></div>
   </Fragment>
 </SingleLayout>
