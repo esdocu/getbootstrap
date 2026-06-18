@@ -1,0 +1,779 @@
+---
+/**
+ * VeoBibleBanner — Componente de banner con versículos de la Biblia Reina Valera
+ *
+ * Uso en MDX:
+ *   <VeoBibleBanner id="filipenses-4-13" />
+ *
+ * El parámetro `id` corresponde al identificador único de un versículo dentro del mapa
+ * interno `verses`. El componente valida en tiempo de construcción que cada ID se use
+ * una sola vez en todo el sitio.
+ */
+
+interface Props {
+  /** Identificador único del versículo a mostrar. Debe coincidir con una clave del mapa `verses`. */
+  id: string
+}
+
+interface Verse {
+  /** Referencia bíblica legible (e.g. "Filipenses 4:13") */
+  reference: string
+  /** Texto del versículo en Reina Valera */
+  text: string
+  /** URL del capítulo en VeoBible (versión rv1909) */
+  url: string
+  /** Frase de marketing única que invita a leer en VeoBible */
+  marketingText: string
+  /** Texto del enlace en negrita dentro de la frase de marketing (el anchor text a posicionar) */
+  linkText: string
+}
+
+// ---------------------------------------------------------------------------
+// Registro global para detectar IDs duplicados en el mismo build
+// ---------------------------------------------------------------------------
+// Este mecanismo solo es útil en SSG (build estático), donde cada página se
+// renderiza exactamente una vez. En el servidor de desarrollo (SSR), el mismo
+// proceso Node.js atiende múltiples requests y el Set acumularía IDs entre
+// refrescos, generando falsos positivos. Por eso solo lo activamos en builds
+// de producción mediante import.meta.env.DEV.
+const _usedIds = (globalThis as Record<string, unknown>)['__VeoBibleBannerIds__'] as Set<string> | undefined
+const usedIds: Set<string> = _usedIds ?? new Set<string>()
+;(globalThis as Record<string, unknown>)['__VeoBibleBannerIds__'] = usedIds
+
+// ---------------------------------------------------------------------------
+// Catálogo de versículos
+// ---------------------------------------------------------------------------
+const verses: Record<string, Verse> = {
+  // ═══════════════════════════════════════════════════════════════════════════
+  // 1–10 · Trabajo y esfuerzo
+  // ═══════════════════════════════════════════════════════════════════════════
+  'colosenses-3-23': {
+    reference: 'Colosenses 3:23',
+    text: '«Y todo lo que hagáis, hacedlo de corazón, como para el Señor y no para los hombres.»',
+    url: 'https://veobible.com/es/rv1909/colosenses/3',
+    marketingText: 'El trabajo hecho con propósito trasciende lo ordinario. Puedes {link} en la versión Reina Valera y encontrar el contexto completo de este pasaje.',
+    linkText: 'leer la Biblia'
+  },
+  'proverbios-14-23': {
+    reference: 'Proverbios 14:23',
+    text: '«En toda labor hay fruto; mas las vanas palabras de los labios sólo empobrecen.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/14',
+    marketingText: 'La acción constante es la semilla de todo logro. Si este versículo te inspira, accede a la {link} completa en línea y descubre más sabiduría de Proverbios.',
+    linkText: 'Biblia online'
+  },
+  'ecclesiastes-9-10': {
+    reference: 'Eclesiastés 9:10',
+    text: '«Todo lo que te viniere a la mano para hacer, hazlo según tus fuerzas; porque en el seol, adonde vas, no hay obra, ni trabajo, ni ciencia, ni sabiduría.»',
+    url: 'https://veobible.com/es/rv1909/ecclesiastes/9',
+    marketingText: 'Cada día es una oportunidad irrepetible para actuar. Descubre el contexto de este versículo y explora {link} sin límites, incluyendo Eclesiastés y todos los libros.',
+    linkText: 'la Biblia'
+  },
+  'proverbios-12-11': {
+    reference: 'Proverbios 12:11',
+    text: '«El que labra su tierra se hartará de pan; mas el que sigue a los vagabundos es falto de entendimiento.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/12',
+    marketingText: 'La dedicación al trabajo produce resultados reales. Para descubrir más principios de productividad bíblica, explora los {link} que han guiado a generaciones.',
+    linkText: 'versículos de la Biblia'
+  },
+  'proverbios-10-4': {
+    reference: 'Proverbios 10:4',
+    text: '«La mano negligente empobrece; mas la mano de los diligentes enriquece.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/10',
+    marketingText: 'La diligencia marca la diferencia entre avanzar y estancarse. Si quieres profundizar, puedes {link} y encontrar el capítulo completo de Proverbios 10.',
+    linkText: 'leer la Biblia'
+  },
+  'proverbios-22-29': {
+    reference: 'Proverbios 22:29',
+    text: '«¿Has visto hombre solícito en su trabajo? Delante de los reyes estará; no estará delante de los de baja suerte.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/22',
+    marketingText: 'La excelencia profesional abre puertas que ninguna otra cosa puede. Lee este capítulo completo en la {link} y descubre más sabiduría de Salomón.',
+    linkText: 'Biblia Reina Valera'
+  },
+  'genesis-2-15': {
+    reference: 'Génesis 2:15',
+    text: '«Tomó, pues, Jehová Dios al hombre, y le puso en el huerto de Edén, para que lo labrara y lo guardase.»',
+    url: 'https://veobible.com/es/rv1909/genesis/2',
+    marketingText: 'Desde el principio, el trabajo fue diseñado como propósito, no como castigo. Descubre los orígenes de este mandato y lee {link} desde su primer libro.',
+    linkText: 'la Biblia'
+  },
+  'exodo-20-9': {
+    reference: 'Éxodo 20:9',
+    text: '«Seis días trabajarás, y harás toda tu obra.»',
+    url: 'https://veobible.com/es/rv1909/exodo/20',
+    marketingText: 'El equilibrio entre trabajo y descanso es un principio milenario. Lee los Diez Mandamientos completos en la {link} y reflexiona sobre su vigencia hoy.',
+    linkText: 'Biblia online'
+  },
+  '2-tesalonicenses-3-10': {
+    reference: '2 Tesalonicenses 3:10',
+    text: '«Porque aun estando con vosotros, os denunciábamos esto: Que si alguno no quisiere trabajar, tampoco coma.»',
+    url: 'https://veobible.com/es/rv1909/2-tesalonicenses/3',
+    marketingText: 'La responsabilidad personal es la base de toda comunidad fuerte. Descubre más enseñanzas del apóstol Pablo consultando {link} en su carta a los tesalonicenses.',
+    linkText: 'versículos de la Biblia'
+  },
+  'proverbios-6-6-8': {
+    reference: 'Proverbios 6:6-8',
+    text: '«Ve a la hormiga, oh perezoso, mira sus caminos, y sé sabio; la cual no teniendo capitán, ni gobernador, ni señor, prepara en el verano su comida, y recoge en el tiempo de la siega su mantenimiento.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/6',
+    marketingText: 'La naturaleza misma enseña disciplina y previsión. Para seguir aprendiendo de Proverbios, puedes {link} y descubrir lecciones que transforman el día a día.',
+    linkText: 'leer la Biblia'
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // 11–20 · Emprendimiento y propósito
+  // ═══════════════════════════════════════════════════════════════════════════
+  'jeremias-29-11': {
+    reference: 'Jeremías 29:11',
+    text: '«Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal, para daros el fin que esperáis.»',
+    url: 'https://veobible.com/es/rv1909/jeremias/29',
+    marketingText: 'Emprender con propósito divino cambia todo. Lee este capítulo completo en la {link} y descubre cómo la fe abre puertas que ningún esfuerzo humano puede abrir solo.',
+    linkText: 'Biblia Reina Valera'
+  },
+  'josue-1-9': {
+    reference: 'Josué 1:9',
+    text: '«¿No te lo he mandado yo? Esfuérzate y sé valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas.»',
+    url: 'https://veobible.com/es/rv1909/josue/1',
+    marketingText: 'El valor no es ausencia de miedo, sino decisión de avanzar. Si este pasaje te mueve, puedes {link} en Josué y encontrar la fortaleza que necesitas para cada proyecto.',
+    linkText: 'leer la Biblia'
+  },
+  'proverbios-16-3': {
+    reference: 'Proverbios 16:3',
+    text: '«Encomienda a Jehová tus obras, y tus pensamientos serán afirmados.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/16',
+    marketingText: 'Cada emprendimiento necesita un fundamento sólido. Lee más de la sabiduría de Salomón accediendo a la {link} y explorando Proverbios capítulo por capítulo.',
+    linkText: 'Biblia online'
+  },
+  'isaias-43-19': {
+    reference: 'Isaías 43:19',
+    text: '«He aquí que yo hago cosa nueva; presto saldrá a luz; ¿no la conoceréis? Otra vez abriré camino en el desierto, y ríos en la soledad.»',
+    url: 'https://veobible.com/es/rv1909/isaias/43',
+    marketingText: 'Innovar es un acto de fe. Dios siempre está creando caminos donde antes no los había. Encuentra más promesas como esta consultando {link} que inspiran superación.',
+    linkText: 'versículos de la Biblia'
+  },
+  'habacuc-2-2': {
+    reference: 'Habacuc 2:2',
+    text: '«Y Jehová me respondió, y dijo: Escribe la visión, y declárala en tablas, para que corra el que leyere en ella.»',
+    url: 'https://veobible.com/es/rv1909/habacuc/2',
+    marketingText: 'Escribir la visión es el primer paso para materializarla. Lee la profecía completa de Habacuc en {link} y descubre su relevancia para quienes emprenden hoy.',
+    linkText: 'la Biblia'
+  },
+  'filipenses-1-6': {
+    reference: 'Filipenses 1:6',
+    text: '«Estando confiado de esto, que el que comenzó en vosotros la buena obra, la perfeccionará hasta el día de Jesucristo.»',
+    url: 'https://veobible.com/es/rv1909/filipenses/1',
+    marketingText: 'Los grandes proyectos se completan paso a paso. Descubre la carta de Pablo a los filipenses y muchos más {link} que fortalecen la determinación.',
+    linkText: 'versículos de la Biblia'
+  },
+  'proverbios-24-27': {
+    reference: 'Proverbios 24:27',
+    text: '«Prepara tus labores fuera, y dispónlas en tu heredad, y después edificarás tu casa.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/24',
+    marketingText: 'Planificar antes de construir: un principio antiguo que sigue vigente. Para más consejos prácticos de Proverbios, puedes acceder a la {link} y leer el capítulo completo.',
+    linkText: 'Biblia online'
+  },
+  'nehemias-4-6': {
+    reference: 'Nehemías 4:6',
+    text: '«Edificamos, pues, el muro, y toda la muralla fue junta hasta su mitad; porque el pueblo tuvo ánimo para obrar.»',
+    url: 'https://veobible.com/es/rv1909/nehemias/4',
+    marketingText: 'La voluntad colectiva transforma las circunstancias más adversas. Lee la historia de Nehemías en la {link} y descubre cómo un líder reconstruyó una nación.',
+    linkText: 'Biblia Reina Valera'
+  },
+  'marcos-11-24': {
+    reference: 'Marcos 11:24',
+    text: '«Por tanto, os digo que todo lo que pidiereis orando, creed que lo recibiréis, y os vendrá.»',
+    url: 'https://veobible.com/es/rv1909/marcos/11',
+    marketingText: 'La fe y la acción van de la mano en cada emprendimiento. Explora las enseñanzas de Jesús sobre la fe consultando el {link} en el Evangelio de Marcos.',
+    linkText: 'evangelio del día'
+  },
+  'proverbios-21-5': {
+    reference: 'Proverbios 21:5',
+    text: '«Los pensamientos del diligente ciertamente tienden a la abundancia; mas todo el que se apresura, ciertamente va a la pobreza.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/21',
+    marketingText: 'La planificación diligente supera siempre a la prisa. Descubre este y otros proverbios de sabiduría práctica usando nuestro {link} para navegar capítulo por capítulo.',
+    linkText: 'buscador bíblico'
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // 21–35 · Disciplina y perseverancia
+  // ═══════════════════════════════════════════════════════════════════════════
+  'filipenses-4-13': {
+    reference: 'Filipenses 4:13',
+    text: '«Todo lo puedo en Cristo que me fortalece.»',
+    url: 'https://veobible.com/es/rv1909/filipenses/4',
+    marketingText: 'Cuando los límites humanos se agotan, comienza una fuerza diferente. Puedes {link} en Filipenses y entender el contexto poderoso detrás de este versículo tan citado.',
+    linkText: 'leer la Biblia'
+  },
+  'galatas-6-9': {
+    reference: 'Gálatas 6:9',
+    text: '«No nos cansemos, pues, de hacer bien; porque a su tiempo segaremos, si no desmayamos.»',
+    url: 'https://veobible.com/es/rv1909/galatas/6',
+    marketingText: 'La constancia es el secreto de los que llegan lejos. Puedes acceder a la {link} en Gálatas y renovar tu motivación desde sus páginas.',
+    linkText: 'Biblia online'
+  },
+  'hebreos-12-1': {
+    reference: 'Hebreos 12:1',
+    text: '«Corramos con paciencia la carrera que tenemos por delante.»',
+    url: 'https://veobible.com/es/rv1909/hebreos/12',
+    marketingText: 'Todo gran logro es una carrera de fondo, no un sprint. Para explorar este llamado a la perseverancia, lee {link} en Hebreos y medita en el capítulo completo.',
+    linkText: 'la Biblia'
+  },
+  'santiago-1-12': {
+    reference: 'Santiago 1:12',
+    text: '«Bienaventurado el varón que sufre la tentación; porque cuando fuere probado, recibirá la corona de vida, que Dios ha prometido a los que le aman.»',
+    url: 'https://veobible.com/es/rv1909/santiago/1',
+    marketingText: 'Superar las pruebas construye un carácter que perdura. Lee la epístola de Santiago completa en la {link} y encuentra la fortaleza para cada desafío.',
+    linkText: 'Biblia Reina Valera'
+  },
+  '1-corintios-9-24': {
+    reference: '1 Corintios 9:24',
+    text: '«¿No sabéis que los que corren en el estadio, todos a la verdad corren, mas uno lleva el premio? Corred de tal manera que lo obtengáis.»',
+    url: 'https://veobible.com/es/rv1909/1-corintios/9',
+    marketingText: 'La disciplina del atleta es la metáfora perfecta para la vida con propósito. Encuentra esta y otras enseñanzas de Pablo navegando {link} en 1 Corintios.',
+    linkText: 'versículos de la Biblia'
+  },
+  'santiago-1-4': {
+    reference: 'Santiago 1:4',
+    text: '«Mas tenga la paciencia su obra perfecta, para que seáis perfectos y cabales, sin faltar en alguna cosa.»',
+    url: 'https://veobible.com/es/rv1909/santiago/1',
+    marketingText: 'La paciencia no es pasividad; es perseverancia activa que perfecciona el carácter. Consulta más {link} sobre la madurez espiritual en Santiago.',
+    linkText: 'versículos de la Biblia'
+  },
+  'hebreos-12-11': {
+    reference: 'Hebreos 12:11',
+    text: '«Es verdad que ninguna disciplina al presente parece ser causa de gozo, sino de tristeza; pero después da fruto apacible de justicia a los que en ella son ejercitados.»',
+    url: 'https://veobible.com/es/rv1909/hebreos/12',
+    marketingText: 'La disciplina duele en el momento pero sus frutos son extraordinarios. Para meditar en este capítulo transformador, accede a la {link} y lee Hebreos 12 completo.',
+    linkText: 'Biblia online'
+  },
+  '2-timoteo-2-15': {
+    reference: '2 Timoteo 2:15',
+    text: '«Procura con diligencia presentarte a Dios aprobado, como obrero que no tiene de qué avergonzarse, que traza bien la palabra de verdad.»',
+    url: 'https://veobible.com/es/rv1909/2-timoteo/2',
+    marketingText: 'La excelencia profesional y espiritual van de la mano. Lee los consejos de Pablo a Timoteo usando una {link} para profundizar en el contexto original.',
+    linkText: 'Biblia de estudio'
+  },
+  '1-corintios-15-58': {
+    reference: '1 Corintios 15:58',
+    text: '«Así que, hermanos míos amados, estad firmes y constantes, creciendo en la obra del Señor siempre, sabiendo que vuestro trabajo en el Señor no es en vano.»',
+    url: 'https://veobible.com/es/rv1909/1-corintios/15',
+    marketingText: 'Tu esfuerzo tiene sentido y trascendencia. Lee el capítulo más esperanzador de Corintios y descubre más al {link} en su contexto completo.',
+    linkText: 'leer la Biblia'
+  },
+  'proverbios-12-24': {
+    reference: 'Proverbios 12:24',
+    text: '«La mano de los diligentes señoreará; mas la negligencia será tributaria.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/12',
+    marketingText: 'La diligencia no solo trae resultados: trae libertad. Encuentra más principios de liderazgo en la {link} explorando el libro de Proverbios completo.',
+    linkText: 'Biblia Reina Valera'
+  },
+  'romanos-12-11': {
+    reference: 'Romanos 12:11',
+    text: '«En el cuidado no perezosos; ardientes en espíritu; sirviendo al Señor;»',
+    url: 'https://veobible.com/es/rv1909/romanos/12',
+    marketingText: 'La pasión y el servicio transforman cualquier actividad en algo significativo. Lee Romanos 12 completo y {link} para descubrir la guía de vida que ofrece Pablo.',
+    linkText: 'escuchar la Biblia'
+  },
+  'proverbios-13-4': {
+    reference: 'Proverbios 13:4',
+    text: '«El alma del perezoso desea, y nada alcanza; mas el alma de los diligentes será satisfecha.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/13',
+    marketingText: 'Los sueños sin acción se quedan en deseos. Lee Proverbios 13 completo en la {link} y transforma cada aspiración en un plan de acción.',
+    linkText: 'Biblia online'
+  },
+  'efesios-6-7': {
+    reference: 'Efesios 6:7',
+    text: '«Sirviendo con buena voluntad, como al Señor, y no a los hombres.»',
+    url: 'https://veobible.com/es/rv1909/efesios/6',
+    marketingText: 'Servir con propósito eleva cualquier profesión. Descubre cómo Pablo enseñaba sobre el trabajo consultando el {link} y leyendo Efesios.',
+    linkText: 'versículo del día'
+  },
+  'hebreos-10-36': {
+    reference: 'Hebreos 10:36',
+    text: '«Porque la paciencia os es necesaria; para que, habiendo hecho la voluntad de Dios, obtengáis la promesa.»',
+    url: 'https://veobible.com/es/rv1909/hebreos/10',
+    marketingText: 'La paciencia activa es el puente entre el esfuerzo y la recompensa. Lee Hebreos 10 completo y más al {link} en esta carta fundamental del Nuevo Testamento.',
+    linkText: 'leer la Biblia'
+  },
+  '2-timoteo-4-7': {
+    reference: '2 Timoteo 4:7',
+    text: '«He peleado la buena batalla, he acabado la carrera, he guardado la fe.»',
+    url: 'https://veobible.com/es/rv1909/2-timoteo/4',
+    marketingText: 'Llegar al final con integridad es el mayor triunfo. Lee las últimas palabras de Pablo a Timoteo en la {link} y reflexiona sobre tu propia carrera.',
+    linkText: 'Biblia Reina Valera'
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // 36–55 · Superación y crecimiento
+  // ═══════════════════════════════════════════════════════════════════════════
+  'romanos-8-28': {
+    reference: 'Romanos 8:28',
+    text: '«Y sabemos que a los que aman a Dios, todas las cosas les ayudan a bien, esto es, a los que conforme a su propósito son llamados.»',
+    url: 'https://veobible.com/es/rv1909/romanos/8',
+    marketingText: 'Hasta los tropiezos forman parte de un plan mayor. Si buscas esa perspectiva transformadora, puedes {link} gratis en línea y descubrir la promesa completa en Romanos 8.',
+    linkText: 'leer la Biblia'
+  },
+  '2-pedro-1-5-7': {
+    reference: '2 Pedro 1:5-7',
+    text: '«Vosotros también, poniendo toda diligencia en esto mismo, añadid a vuestra fe virtud; a la virtud, ciencia; a la ciencia, templanza; a la templanza, paciencia; a la paciencia, piedad; a la piedad, amor fraternal; y al amor fraternal, caridad.»',
+    url: 'https://veobible.com/es/rv1909/2-pedro/1',
+    marketingText: 'El crecimiento personal es un camino de capas que se construyen unas sobre otras. Para explorar esta hoja de ruta bíblica, puedes {link} en 2 Pedro y toda la Biblia Reina Valera.',
+    linkText: 'leer la Biblia'
+  },
+  'proverbios-3-5-6': {
+    reference: 'Proverbios 3:5-6',
+    text: '«Fíate de Jehová de todo tu corazón, y no estribes en tu propia prudencia. Reconócelo en todos tus caminos, y él enderezará tus veredas.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/3',
+    marketingText: 'La sabiduría más profunda reconoce sus propios límites. Puedes acceder a la {link} directamente en Proverbios y dejarte guiar por uno de los libros más prácticos de la escritura.',
+    linkText: 'Biblia online'
+  },
+  'isaias-40-31': {
+    reference: 'Isaías 40:31',
+    text: '«Pero los que esperan en Jehová tendrán nuevas fuerzas; levantarán alas como las águilas; correrán, y no se cansarán; caminarán, y no se fatigarán.»',
+    url: 'https://veobible.com/es/rv1909/isaias/40',
+    marketingText: 'Cuando el agotamiento amenaza tus sueños, la espera activa renueva. Encuentra este versículo en su contexto y lee {link} entera en Isaías, una de las profecías más poderosas.',
+    linkText: 'la Biblia'
+  },
+  'mateo-25-21': {
+    reference: 'Mateo 25:21',
+    text: '«Bien, buen siervo y fiel; sobre poco has sido fiel, sobre mucho te pondré; entra en el gozo de tu señor.»',
+    url: 'https://veobible.com/es/rv1909/mateo/25',
+    marketingText: 'La fidelidad en lo pequeño abre puertas grandes. Para leer la parábola completa, consulta {link} en Mateo y descubre la enseñanza detrás de este reconocimiento.',
+    linkText: 'versículos de la Biblia'
+  },
+  'deuteronomio-8-18': {
+    reference: 'Deuteronomio 8:18',
+    text: '«Sino acuérdate de Jehová tu Dios, porque él te da el poder para hacer las riquezas, a fin de confirmar su pacto que juró a tus padres, como en este día.»',
+    url: 'https://veobible.com/es/rv1909/deuteronomio/8',
+    marketingText: 'El emprendimiento con gratitud y conciencia de dónde viene la fuerza es el más sostenible. Lee {link} en Deuteronomio y descubre el fundamento espiritual de la prosperidad.',
+    linkText: 'la Biblia'
+  },
+  'lucas-16-10': {
+    reference: 'Lucas 16:10',
+    text: '«El que es fiel en lo muy poco, también en lo más es fiel; y el que en lo muy poco es injusto, también en lo más es injusto.»',
+    url: 'https://veobible.com/es/rv1909/lucas/16',
+    marketingText: 'Los grandes proyectos nacen de pequeños hábitos sostenidos. Para meditar en este principio de integridad, puedes {link} en Lucas y explorar las enseñanzas más influyentes de la historia.',
+    linkText: 'leer la Biblia'
+  },
+  'romanos-5-3-4': {
+    reference: 'Romanos 5:3-4',
+    text: '«Y no sólo esto, mas aun nos gloriamos en las tribulaciones, sabiendo que la tribulación produce paciencia; y la paciencia, prueba; y la prueba, esperanza.»',
+    url: 'https://veobible.com/es/rv1909/romanos/5',
+    marketingText: 'Las dificultades no son el fin, sino el principio de algo mejor. Descubre la cadena completa que Pablo describe al {link} en Romanos, capítulo 5.',
+    linkText: 'leer la Biblia'
+  },
+  'santiago-1-2-3': {
+    reference: 'Santiago 1:2-3',
+    text: '«Hermanos míos, tened por sumo gozo cuando cayereis en diversas tentaciones; sabiendo que la prueba de vuestra fe obra paciencia.»',
+    url: 'https://veobible.com/es/rv1909/santiago/1',
+    marketingText: 'Las pruebas forjan el carácter que el éxito no puede crear. Lee la carta de Santiago completa en la {link} y transforma tu perspectiva ante los desafíos.',
+    linkText: 'Biblia Reina Valera'
+  },
+  'filipenses-3-14': {
+    reference: 'Filipenses 3:14',
+    text: '«Prosigo al blanco, al premio de la soberana vocación de Dios en Cristo Jesús.»',
+    url: 'https://veobible.com/es/rv1909/filipenses/3',
+    marketingText: 'Avanzar sin mirar atrás: esa es la clave del crecimiento. Descubre el contexto completo de esta declaración de Pablo y más al {link} en Filipenses.',
+    linkText: 'leer la Biblia'
+  },
+  'isaias-54-2': {
+    reference: 'Isaías 54:2',
+    text: '«Ensancha el sitio de tu cabaña, y las cortinas de tus tiendas sean extendidas; no seas escasa; alarga tus cuerdas, y fortifica tus estacas.»',
+    url: 'https://veobible.com/es/rv1909/isaias/54',
+    marketingText: 'Expandir la visión requiere preparar el terreno con fe y acción. Lee esta profecía de crecimiento en la {link} y aplícala a tu vida y tus proyectos.',
+    linkText: 'Biblia online'
+  },
+  'efesios-3-20': {
+    reference: 'Efesios 3:20',
+    text: '«Y á Aquel que es poderoso para hacer todas las cosas mucho más abundantemente de lo que pedimos ó entendemos, por la potencia que obra en nosotros,»',
+    url: 'https://veobible.com/es/rv1909/efesios/3',
+    marketingText: 'Hay un poder que supera cualquier expectativa humana. Descubre esta promesa de abundancia leyendo la carta a los Efesios y también puedes {link} en todo el Nuevo Testamento.',
+    linkText: 'escuchar la Biblia'
+  },
+  'salmos-37-5': {
+    reference: 'Salmos 37:5',
+    text: '«Encomienda a Jehová tu camino, y espera en él; y él hará.»',
+    url: 'https://veobible.com/es/rv1909/salmos/37',
+    marketingText: 'Confiar el camino no es rendirse, es soltar el control para recibir algo mayor. Lee el Salmo 37 completo y descubre más {link} sobre la confianza en Dios.',
+    linkText: 'versículos de la Biblia'
+  },
+  'juan-15-5': {
+    reference: 'Juan 15:5',
+    text: '«Yo soy la vid, vosotros los pámpanos; el que está en mí, y yo en él, éste lleva mucho fruto; porque sin mí nada podéis hacer.»',
+    url: 'https://veobible.com/es/rv1909/juan/15',
+    marketingText: 'El crecimiento verdadero nace de estar conectado a la fuente correcta. Lee las palabras de Jesús en Juan 15 explorando el {link} y meditando en su significado.',
+    linkText: 'evangelio del día'
+  },
+  '2-corintios-9-8': {
+    reference: '2 Corintios 9:8',
+    text: '«Y poderoso es Dios para hacer que abunde en vosotros toda gracia; a fin de que, teniendo siempre en todas las cosas todo lo suficiente, abundéis para toda buena obra.»',
+    url: 'https://veobible.com/es/rv1909/2-corintios/9',
+    marketingText: 'La suficiencia divina transforma la escasez en abundancia para servir. Profundiza en la carta de Pablo y {link} para comprender el contexto completo de esta promesa.',
+    linkText: 'leer la Biblia'
+  },
+  'salmos-1-3': {
+    reference: 'Salmos 1:3',
+    text: '«Y será como el árbol plantado junto a corrientes de aguas, que da su fruto en su tiempo, y su hoja no cae; y todo lo que hace, prosperará.»',
+    url: 'https://veobible.com/es/rv1909/salmos/1',
+    marketingText: 'La prosperidad nace de raíces profundas en los principios correctos. Comienza tu lectura diaria con el Salmo 1 y proponte {link} este año para nutrir tu vida.',
+    linkText: 'leer la Biblia en un año'
+  },
+  'mateo-6-33': {
+    reference: 'Mateo 6:33',
+    text: '«Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas.»',
+    url: 'https://veobible.com/es/rv1909/mateo/6',
+    marketingText: 'Cuando las prioridades están en orden, lo demás encuentra su lugar. Lee el Sermón del Monte completo en la {link} y descubre principios que trascienden el tiempo.',
+    linkText: 'Biblia Reina Valera'
+  },
+  'proverbios-4-7': {
+    reference: 'Proverbios 4:7',
+    text: '«Sabiduría ante todo; adquiere sabiduría; y ante toda tu posesión adquiere inteligencia.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/4',
+    marketingText: 'La inversión más rentable de todas es invertir en conocimiento y sabiduría. Lee Proverbios 4 en la {link} y comienza tu camino de aprendizaje milenario.',
+    linkText: 'Biblia online'
+  },
+  'romanos-12-2': {
+    reference: 'Romanos 12:2',
+    text: '«Y no os conforméis á este siglo; mas reformaos por la renovación de vuestro entendimiento, para que experimentéis cuál sea la buena voluntad de Dios, agradable y perfecta.»',
+    url: 'https://veobible.com/es/rv1909/romanos/12',
+    marketingText: 'Renovar la mente es el primer paso hacia una vida transformada. Lee Romanos 12 con una {link} y profundiza en las enseñanzas de Pablo sobre el crecimiento personal.',
+    linkText: 'Biblia de estudio'
+  },
+  'juan-16-33': {
+    reference: 'Juan 16:33',
+    text: '«Estas cosas os he hablado, para que en mí tengáis paz. En el mundo tendréis aflicción: mas confiad, yo he vencido al mundo.»',
+    url: 'https://veobible.com/es/rv1909/juan/16',
+    marketingText: 'En medio de la adversidad, hay una paz que el mundo no puede dar. Lee las palabras de Jesús antes de la cruz explorando el {link} en Juan y meditando en cada enseñanza.',
+    linkText: 'evangelio del día'
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // 56–70 · Sabiduría, provisión y fe
+  // ═══════════════════════════════════════════════════════════════════════════
+  'proverbios-11-14': {
+    reference: 'Proverbios 11:14',
+    text: '«Cuando faltaren las industrias, caerá el pueblo: Mas en la multitud de consejeros hay salud.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/11',
+    marketingText: 'Rodearse de buenas voces es una decisión estratégica. Para descubrir más sabiduría de liderazgo, puedes {link} en Proverbios y aplicar estos principios a tu equipo.',
+    linkText: 'leer la Biblia'
+  },
+  'salmos-90-12': {
+    reference: 'Salmos 90:12',
+    text: '«Enséñanos de tal modo a contar nuestros días, que traigamos al corazón sabiduría.»',
+    url: 'https://veobible.com/es/rv1909/salmos/90',
+    marketingText: 'El tiempo es el recurso más valioso; usarlo bien es sabiduría. Reflexiona con el Salmo 90 accediendo a la {link} y meditando en cada versículo.',
+    linkText: 'Biblia online'
+  },
+  'salmos-127-1': {
+    reference: 'Salmos 127:1',
+    text: '«Si Jehová no edificare la casa, En vano trabajan los que la edifican: Si Jehová no guardare la ciudad, En vano vela la guarda.»',
+    url: 'https://veobible.com/es/rv1909/salmos/127',
+    marketingText: 'El esfuerzo humano necesita cimientos más profundos para perdurar. Lee el Salmo 127 y otros {link} sobre la confianza en Dios como base de toda construcción.',
+    linkText: 'versículos de la Biblia'
+  },
+  'mateo-7-7': {
+    reference: 'Mateo 7:7',
+    text: '«Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá.»',
+    url: 'https://veobible.com/es/rv1909/mateo/7',
+    marketingText: 'La persistencia abre puertas que parecían cerradas para siempre. Descubre la promesa completa de Jesús leyendo {link} en el Sermón del Monte.',
+    linkText: 'la Biblia'
+  },
+  'salmos-23-1': {
+    reference: 'Salmos 23:1',
+    text: '«Jehová es mi pastor; nada me faltará.»',
+    url: 'https://veobible.com/es/rv1909/salmos/23',
+    marketingText: 'La provisión comienza con saber quién guía tus pasos. Lee el salmo más conocido del mundo en la {link} y descubre por qué ha consolado a millones.',
+    linkText: 'Biblia Reina Valera'
+  },
+  'proverbios-18-15': {
+    reference: 'Proverbios 18:15',
+    text: '«El corazón del entendido adquiere sabiduría; y el oído de los sabios busca la ciencia.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/18',
+    marketingText: 'Nunca dejar de aprender es la marca de un espíritu sabio. Encuentra más proverbios de sabiduría práctica usando un {link} para navegar entre capítulos.',
+    linkText: 'buscador bíblico'
+  },
+  'salmos-119-105': {
+    reference: 'Salmos 119:105',
+    text: '«Lámpara es a mis pies tu palabra, y lumbrera a mi camino.»',
+    url: 'https://veobible.com/es/rv1909/salmos/119',
+    marketingText: 'La dirección correcta comienza con la luz adecuada. Lee el salmo más extenso de la Biblia y proponte {link} para iluminar cada paso de tu camino.',
+    linkText: 'leer la Biblia en un año'
+  },
+  'mateo-5-16': {
+    reference: 'Mateo 5:16',
+    text: '«Así alumbre vuestra luz delante de los hombres, para que vean vuestras buenas obras, y glorifiquen a vuestro Padre que está en los cielos.»',
+    url: 'https://veobible.com/es/rv1909/mateo/5',
+    marketingText: 'Tu trabajo bien hecho es una luz que inspira a otros. Descubre las Bienaventuranzas completas consultando el {link} en Mateo y aplicando sus enseñanzas cada mañana.',
+    linkText: 'versículo del día'
+  },
+  'salmos-46-10': {
+    reference: 'Salmos 46:10',
+    text: '«Estad quietos, y conoced que yo soy Dios: Ensalzado he de ser entre las gentes, ensalzado seré en la tierra.»',
+    url: 'https://veobible.com/es/rv1909/salmos/46',
+    marketingText: 'A veces, detenerse es el mayor acto de fe y la mejor estrategia. Lee el Salmo 46 y muchos otros al {link} y encontrar quietud en medio de la tormenta.',
+    linkText: 'leer la Biblia'
+  },
+  '1-pedro-5-7': {
+    reference: '1 Pedro 5:7',
+    text: '«Echando toda vuestra solicitud en él, porque él tiene cuidado de vosotros.»',
+    url: 'https://veobible.com/es/rv1909/1-pedro/5',
+    marketingText: 'Soltar la ansiedad no es debilidad; es confiar en quien puede cargar con todo. Lee la primera carta de Pedro en la {link} y encuentra alivio para cada preocupación.',
+    linkText: 'Biblia online'
+  },
+  'proverbios-16-9': {
+    reference: 'Proverbios 16:9',
+    text: '«El corazón del hombre piensa su camino; mas Jehová endereza sus pasos.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/16',
+    marketingText: 'Planifica con inteligencia y confía con fe: ambas cosas son compatibles. Descubre la sabiduría de Proverbios 16 al {link} en la versión Reina Valera.',
+    linkText: 'leer la Biblia'
+  },
+  'daniel-1-17': {
+    reference: 'Daniel 1:17',
+    text: '«Y á estos cuatro muchachos dióles Dios conocimiento é inteligencia en todas letras y ciencia: mas Daniel tuvo entendimiento en toda visión y sueños.»',
+    url: 'https://veobible.com/es/rv1909/daniel/1',
+    marketingText: 'La capacidad intelectual y la fe no son opuestas; Dios honra a quienes buscan ambas. Lee la historia de Daniel y también puedes {link} para conocer toda su historia.',
+    linkText: 'escuchar la Biblia'
+  },
+  'salmos-37-23': {
+    reference: 'Salmos 37:23',
+    text: '«Por Jehová son satisfechos los pasos del hombre, y aprueba su camino.»',
+    url: 'https://veobible.com/es/rv1909/salmos/37',
+    marketingText: 'Cada paso que das con integridad está siendo sostenido. Medita en el Salmo 37 completo y {link} para descubrir más promesas sobre el camino del justo.',
+    linkText: 'leer la Biblia'
+  },
+  'proverbios-15-22': {
+    reference: 'Proverbios 15:22',
+    text: '«Los pensamientos son satisfechos donde no hay consejo; mas en la multitud de consejeros se afirman.»',
+    url: 'https://veobible.com/es/rv1909/proverbios/15',
+    marketingText: 'El consejo sabio multiplica las oportunidades de acertar. Busca más principios de liderazgo en la {link} navegando Proverbios con profundidad.',
+    linkText: 'Biblia Reina Valera'
+  },
+  '1-corintios-10-31': {
+    reference: '1 Corintios 10:31',
+    text: '«Si pues coméis, ó bebéis, ó hacéis otra cosa, haced lo todo á gloria de Dios.»',
+    url: 'https://veobible.com/es/rv1909/1-corintios/10',
+    marketingText: 'Hasta las acciones más cotidianas pueden tener un propósito trascendente. Lee 1 Corintios en la {link} y transforma tu perspectiva sobre lo ordinario.',
+    linkText: 'Biblia de estudio'
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Resolución del versículo solicitado
+// ---------------------------------------------------------------------------
+const { id } = Astro.props
+
+// Validación de ID duplicado en tiempo de generación (solo en builds de producción)
+if (!import.meta.env.DEV) {
+  if (usedIds.has(id)) {
+    throw new Error(
+      `[VeoBibleBanner] El ID "${id}" ya ha sido utilizado en otra página. Cada versículo solo puede aparecer una vez en el sitio.`
+    )
+  }
+  usedIds.add(id)
+}
+
+// Validación de que el ID exista en el catálogo
+const verse = verses[id]
+if (!verse) {
+  const validIds = Object.keys(verses).join(', ')
+  throw new Error(`[VeoBibleBanner] El ID "${id}" no existe en el catálogo de versículos. IDs válidos: ${validIds}`)
+}
+
+// Construir las dos partes del texto de marketing (antes y después del enlace)
+const linkPlaceholder = '{link}'
+const parts = verse.marketingText.split(linkPlaceholder)
+const textBefore = parts[0] ?? ''
+const textAfter = parts[1] ?? ''
+---
+
+<aside class="veo-bible-banner my-5" aria-label={`Versículo: ${verse.reference}`}>
+  <div class="vbb-glow" aria-hidden="true"></div>
+  <div class="vbb-ornament" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M14 2C14 2 8 6 8 14C8 22 14 26 14 26C14 26 20 22 20 14C20 6 14 2 14 2Z"
+        fill="currentColor"
+        opacity="0.15"
+      >
+      </path>
+      <path
+        d="M14 5C10.5 8 9 11 9 14C9 17 10.5 20 14 23C17.5 20 19 17 19 14C19 11 17.5 8 14 5Z"
+        fill="currentColor"
+        opacity="0.25"
+      >
+      </path>
+      <circle cx="14" cy="14" r="3" fill="currentColor" opacity="0.6"></circle>
+    </svg>
+  </div>
+  <div class="vbb-content">
+    <blockquote class="vbb-quote">
+      <p class="vbb-verse-text">{verse.text}</p>
+      <cite class="vbb-reference">— {verse.reference}</cite>
+    </blockquote>
+    <p class="vbb-cta">
+      {textBefore}<a href={verse.url} target="_blank" rel="noopener" class="vbb-link">{verse.linkText}</a>{textAfter}
+    </p>
+  </div>
+</aside>
+
+<style>
+  /* ── Contenedor principal ── */
+  .veo-bible-banner {
+    position: relative;
+    padding: 1.75rem 1.75rem 1.5rem 2.25rem;
+    border-radius: 0.875rem;
+    overflow: hidden;
+    z-index: 1;
+    text-align: left;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Borde izquierdo decorativo */
+    border-left: 3px solid rgba(139, 92, 246, 0.55);
+
+    /* Light mode */
+    background: rgba(248, 246, 255, 0.6);
+    border-top: 1px solid rgba(139, 92, 246, 0.08);
+    border-right: 1px solid rgba(139, 92, 246, 0.08);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+    box-shadow:
+      0 2px 8px -2px rgba(139, 92, 246, 0.06),
+      0 8px 24px -8px rgba(139, 92, 246, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* ── Efecto de brillo (hover) ── */
+  .vbb-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 0.875rem;
+    background: radial-gradient(ellipse at 10% 50%, rgba(139, 92, 246, 0.07), transparent 65%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .veo-bible-banner:hover .vbb-glow {
+    opacity: 1;
+  }
+
+  /* ── Ornamento decorativo ── */
+  .vbb-ornament {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    color: #8b5cf6;
+    opacity: 0.55;
+    transition:
+      transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      opacity 0.3s ease;
+  }
+
+  .veo-bible-banner:hover .vbb-ornament {
+    transform: rotate(15deg) scale(1.1);
+    opacity: 0.75;
+  }
+
+  /* ── Contenido ── */
+  .vbb-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* ── Cita / versículo ── */
+  .vbb-quote {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .vbb-verse-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--bs-emphasis-color);
+    letter-spacing: -0.01em;
+    font-style: italic;
+    margin: 0 0 0.5rem 0;
+    opacity: 0.92;
+  }
+
+  .vbb-reference {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #8b5cf6;
+    font-style: normal;
+    opacity: 0.8;
+  }
+
+  /* ── CTA / texto de marketing ── */
+  .vbb-cta {
+    font-size: 0.875rem;
+    color: var(--bs-secondary-color);
+    line-height: 1.55;
+    margin: 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(139, 92, 246, 0.1);
+  }
+
+  /* ── Enlace inline ── */
+  .vbb-link {
+    color: #7c3aed;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    transition:
+      color 0.2s ease,
+      text-decoration-color 0.2s ease;
+  }
+
+  .vbb-link:hover {
+    color: #6d28d9;
+    text-decoration-color: currentColor;
+  }
+
+  /* ── Dark mode ── */
+  :global([data-bs-theme='dark']) .veo-bible-banner {
+    background: rgba(139, 92, 246, 0.04);
+    border-left-color: rgba(167, 139, 250, 0.5);
+    border-top-color: rgba(139, 92, 246, 0.12);
+    border-right-color: rgba(139, 92, 246, 0.12);
+    border-bottom-color: rgba(139, 92, 246, 0.12);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.2),
+      inset 0 1px 1px rgba(255, 255, 255, 0.04);
+  }
+
+  :global([data-bs-theme='dark']) .vbb-glow {
+    background: radial-gradient(ellipse at 10% 50%, rgba(139, 92, 246, 0.12), transparent 65%);
+  }
+
+  :global([data-bs-theme='dark']) .veo-bible-banner:hover {
+    background: rgba(139, 92, 246, 0.07);
+    border-left-color: rgba(167, 139, 250, 0.7);
+  }
+
+  :global([data-bs-theme='dark']) .vbb-reference {
+    color: #a78bfa;
+  }
+
+  :global([data-bs-theme='dark']) .vbb-cta {
+    border-top-color: rgba(139, 92, 246, 0.15);
+  }
+
+  :global([data-bs-theme='dark']) .vbb-link {
+    color: #a78bfa;
+  }
+
+  :global([data-bs-theme='dark']) .vbb-link:hover {
+    color: #c4b5fd;
+  }
+
+  :global([data-bs-theme='dark']) .vbb-ornament {
+    color: #a78bfa;
+  }
+</style>
