@@ -1,0 +1,456 @@
+---
+/**
+ * VeoBibleComparisonBanner — Banner de comparativas de apps y recursos bíblicos
+ *
+ * Uso en MDX:
+ *   <VeoBibleComparisonBanner id="mejor-app-biblia-1" />
+ *
+ * El parámetro `id` es el identificador único del texto a mostrar.
+ * Cada ID puede usarse una sola vez en el sitio (validación en build).
+ *
+ * Todos los textos mantienen un tono neutro e informativo, propio de una
+ * comparativa seria. Ninguno menciona a VeoBible directamente.
+ */
+
+interface Props {
+  /** Identificador único del texto a mostrar. Debe coincidir con una clave del mapa `entries`. */
+  id: string
+}
+
+interface Entry {
+  /** Texto del banner antes del enlace (puede quedar vacío) */
+  before: string
+  /** Anchor text del enlace */
+  linkText: string
+  /** URL de destino */
+  url: string
+  /** Texto del banner después del enlace */
+  after: string
+}
+
+// ---------------------------------------------------------------------------
+// Registro global para detectar IDs duplicados en el mismo build
+// ---------------------------------------------------------------------------
+const _usedIds = (globalThis as Record<string, unknown>)['__VeoBibleComparisonBannerIds__'] as Set<string> | undefined
+const usedIds: Set<string> = _usedIds ?? new Set<string>()
+;(globalThis as Record<string, unknown>)['__VeoBibleComparisonBannerIds__'] = usedIds
+
+// ---------------------------------------------------------------------------
+// Catálogo de entradas
+// ---------------------------------------------------------------------------
+const entries: Record<string, Entry> = {
+
+  // ── mejor app para leer la Biblia ───────────────────────────────────────
+  'comparativa-app-biblia-1': {
+    before: 'Si estás buscando la ',
+    linkText: 'mejor app para leer la Biblia',
+    url: 'https://esdocu.com/mejor-app-para-leer-la-biblia',
+    after: ', esta comparativa analiza en detalle las opciones más completas del mercado, con datos reales de funciones, diseño y experiencia de usuario.'
+  },
+  'comparativa-app-biblia-2': {
+    before: 'Elegir la ',
+    linkText: 'mejor app de la Biblia',
+    url: 'https://esdocu.com/mejor-app-para-leer-la-biblia',
+    after: ' no es una decisión trivial: la cantidad de versiones, el modo offline, los marcadores y el audio cambian por completo la experiencia de estudio.'
+  },
+  'comparativa-app-biblia-3': {
+    before: 'Contar con una buena ',
+    linkText: 'app para leer la Biblia',
+    url: 'https://esdocu.com/mejor-app-para-leer-la-biblia',
+    after: ' permite llevar siempre el texto bíblico en el bolsillo, sin depender de conexión a internet ni de ediciones físicas. En esta comparativa encontrarás cuál se adapta mejor a tu forma de estudiar.'
+  },
+  'comparativa-app-biblia-4': {
+    before: 'No todas las apps bíblicas ofrecen lo mismo. Esta guía te ayuda a encontrar la ',
+    linkText: 'mejor app para leer la Biblia',
+    url: 'https://esdocu.com/mejor-app-para-leer-la-biblia',
+    after: ' según si priorizas el modo offline, el audio, los marcadores con notas o la sincronización entre dispositivos.'
+  },
+
+  // ── mejor página para leer la Biblia ────────────────────────────────────
+  'comparativa-pagina-biblia-1': {
+    before: 'Encontrar la ',
+    linkText: 'mejor página para leer la Biblia',
+    url: 'https://esdocu.com/mejor-pagina-para-leer-la-biblia',
+    after: ' en línea depende de factores como la velocidad de carga, la navegación por capítulos, la disponibilidad de varias versiones y la comodidad de lectura en pantalla.'
+  },
+  'comparativa-pagina-biblia-2': {
+    before: 'Esta comparativa analiza cuál es el ',
+    linkText: 'mejor sitio para leer la Biblia',
+    url: 'https://esdocu.com/mejor-pagina-para-leer-la-biblia',
+    after: ' en español, evaluando la interfaz, la velocidad, la compatibilidad con dispositivos móviles y las funciones de estudio disponibles de forma gratuita.'
+  },
+  'comparativa-pagina-biblia-3': {
+    before: 'Si prefieres leer desde el navegador, elegir la ',
+    linkText: 'mejor página para leer la Biblia',
+    url: 'https://esdocu.com/mejor-pagina-para-leer-la-biblia',
+    after: ' marca la diferencia entre una experiencia cómoda y una frustrante. Aquí comparamos las plataformas más utilizadas en el mundo hispanohablante.'
+  },
+  'comparativa-pagina-biblia-4': {
+    before: 'El acceso al texto bíblico desde la web ha mejorado enormemente. Descubre cuál es el ',
+    linkText: 'mejor sitio para leer la Biblia',
+    url: 'https://esdocu.com/mejor-pagina-para-leer-la-biblia',
+    after: ' hoy, con una comparativa que evalúa funciones, gratuidad y facilidad de uso.'
+  },
+
+  // ── Biblia online ────────────────────────────────────────────────────────
+  'comparativa-biblia-online-1': {
+    before: 'Acceder a la ',
+    linkText: 'Biblia online',
+    url: 'https://esdocu.com/biblia-online-gratis',
+    after: ' desde cualquier dispositivo es hoy más fácil que nunca. Esta comparativa revisa las plataformas que ofrecen una experiencia de lectura más cómoda y completa.'
+  },
+  'comparativa-biblia-online-2': {
+    before: 'Leer la ',
+    linkText: 'Biblia online gratis',
+    url: 'https://esdocu.com/biblia-online-gratis',
+    after: ' es posible desde múltiples plataformas. En esta comparativa evaluamos cuáles ofrecen más versiones, mejores herramientas de estudio y una experiencia sin anuncios molestos.'
+  },
+  'comparativa-biblia-online-3': {
+    before: 'Si quieres ',
+    linkText: 'leer la Biblia online',
+    url: 'https://esdocu.com/biblia-online-gratis',
+    after: ' sin instalar nada, hay varias opciones disponibles. Esta guía compara las más populares y te ayuda a elegir la que mejor se ajusta a tu rutina de lectura.'
+  },
+  'comparativa-biblia-online-4': {
+    before: 'La ',
+    linkText: 'Biblia online',
+    url: 'https://esdocu.com/biblia-online-gratis',
+    after: ' tiene ventajas claras sobre las apps: no ocupa espacio en el dispositivo y siempre está actualizada. Aquí comparamos las plataformas web más completas disponibles en español.'
+  },
+  'comparativa-biblia-online-5': {
+    before: 'Para quienes desean ',
+    linkText: 'leer la Biblia online',
+    url: 'https://esdocu.com/biblia-online-gratis',
+    after: ' con continuidad y sin costo, esta comparativa detalla las plataformas que ofrecen acceso completo al texto bíblico de forma gratuita y sin registro obligatorio.'
+  },
+
+  // ── escuchar la Biblia / audio Biblia ───────────────────────────────────
+  'comparativa-audio-biblia-1': {
+    before: 'La posibilidad de ',
+    linkText: 'escuchar la Biblia',
+    url: 'https://esdocu.com/escuchar-la-biblia',
+    after: ' transforma la lectura pasiva en una experiencia inmersiva. Comparamos las aplicaciones y plataformas que ofrecen audio bíblico de calidad en español.'
+  },
+  'comparativa-audio-biblia-2': {
+    before: 'Si buscas ',
+    linkText: 'audio Biblia gratis',
+    url: 'https://esdocu.com/audio-biblia-gratis',
+    after: ', esta comparativa detalla las mejores opciones disponibles: cuáles tienen locutores profesionales, qué versiones ofrecen y si se puede descargar para escuchar sin conexión.'
+  },
+  'comparativa-audio-biblia-3': {
+    before: 'Escuchar la ',
+    linkText: 'Biblia en audio',
+    url: 'https://esdocu.com/escuchar-la-biblia',
+    after: ' es especialmente útil durante los desplazamientos o actividades físicas. Esta guía compara las plataformas que permiten seguir la lectura bíblica con los oídos, sin mirar la pantalla.'
+  },
+  'comparativa-audio-biblia-4': {
+    before: 'El ',
+    linkText: 'audio Biblia gratis',
+    url: 'https://esdocu.com/audio-biblia-gratis',
+    after: ' es uno de los recursos más buscados por quienes desean integrar la lectura bíblica en su día a día. Descubre cuáles plataformas ofrecen esta función sin costo y con buena calidad de voz.'
+  },
+  'comparativa-audio-biblia-5': {
+    before: 'Para quienes prefieren ',
+    linkText: 'escuchar la Biblia',
+    url: 'https://esdocu.com/escuchar-la-biblia',
+    after: ' en lugar de leerla, existen opciones muy completas. Aquí comparamos las más valoradas por los usuarios hispanohablantes, con especial atención a la calidad de audio y la navegación por libro y capítulo.'
+  },
+  'comparativa-audio-biblia-6': {
+    before: 'Contar con la ',
+    linkText: 'Biblia en audio',
+    url: 'https://esdocu.com/escuchar-la-biblia',
+    after: ' facilita la lectura diaria para personas con limitaciones visuales o para quienes tienen una rutina muy activa. Esta comparativa analiza las herramientas más accesibles y completas.'
+  },
+
+  // ── Biblia sin internet / offline ────────────────────────────────────────
+  'comparativa-offline-biblia-1': {
+    before: 'Tener acceso a la ',
+    linkText: 'Biblia sin internet',
+    url: 'https://esdocu.com/biblia-sin-internet',
+    after: ' es fundamental en zonas con conectividad limitada o durante viajes. Esta comparativa analiza qué aplicaciones ofrecen modo offline real, sin restricciones de versión ni capítulos bloqueados.'
+  },
+  'comparativa-offline-biblia-2': {
+    before: 'Una ',
+    linkText: 'Biblia offline',
+    url: 'https://esdocu.com/biblia-sin-internet',
+    after: ' garantiza que puedas leer el texto bíblico completo sin depender de la señal. Descubre qué apps permiten descargar versiones completas y cuáles tienen limitaciones ocultas.'
+  },
+  'comparativa-offline-biblia-3': {
+    before: 'Para comunidades rurales o lugares con señal inestable, una ',
+    linkText: 'Biblia sin internet',
+    url: 'https://esdocu.com/biblia-sin-internet',
+    after: ' es una necesidad práctica. Comparamos las apps que ofrecen esta función de forma gratuita y sin requerir suscripción.'
+  },
+  'comparativa-offline-biblia-4': {
+    before: 'El modo ',
+    linkText: 'Biblia offline',
+    url: 'https://esdocu.com/biblia-sin-internet',
+    after: ' no está disponible en todas las plataformas, y las que lo ofrecen no siempre lo hacen de la misma forma. Esta guía compara las opciones más confiables para estudiar sin conexión.'
+  },
+  'comparativa-offline-biblia-5': {
+    before: 'Si dependes de datos móviles limitados, tener la ',
+    linkText: 'Biblia sin internet',
+    url: 'https://esdocu.com/biblia-sin-internet',
+    after: ' descargada en tu dispositivo puede marcar la diferencia en tu práctica devocional diaria. Aquí encontrarás las mejores opciones gratuitas.'
+  },
+
+  // ── Biblia Reina Valera ──────────────────────────────────────────────────
+  'comparativa-rv-biblia-1': {
+    before: 'La ',
+    linkText: 'Biblia Reina Valera',
+    url: 'https://esdocu.com/biblia-reina-valera-online',
+    after: ' es la traducción más leída en el mundo hispanohablante. Esta comparativa analiza qué plataformas ofrecen el texto más fiel, mejor formateado y con funciones de estudio más completas.'
+  },
+  'comparativa-rv-biblia-2': {
+    before: 'Encontrar la ',
+    linkText: 'Biblia Reina Valera online',
+    url: 'https://esdocu.com/biblia-reina-valera-online',
+    after: ' es sencillo, pero no todas las versiones en línea son iguales. Comparamos las plataformas que presentan el texto sin errores tipográficos, con buena navegación y herramientas de lectura adicionales.'
+  },
+  'comparativa-rv-biblia-3': {
+    before: 'Leer la ',
+    linkText: 'Biblia Reina Valera',
+    url: 'https://esdocu.com/biblia-reina-valera-online',
+    after: ' en su versión de 1909 o 1960 en formato digital presenta diferencias según la plataforma. Esta guía explica qué opciones respetan mejor la edición original y cuáles introducen variaciones.'
+  },
+  'comparativa-rv-biblia-4': {
+    before: 'Para quienes buscan la ',
+    linkText: 'Biblia Reina Valera online',
+    url: 'https://esdocu.com/biblia-reina-valera-online',
+    after: ', esta comparativa evalúa las plataformas gratuitas más completas: velocidad de carga, versiones disponibles, marcadores, audio y compatibilidad con dispositivos móviles.'
+  },
+  'comparativa-rv-biblia-5': {
+    before: 'La ',
+    linkText: 'Biblia Reina Valera',
+    url: 'https://esdocu.com/biblia-reina-valera-online',
+    after: ' tiene una larga historia que merece un soporte digital a la altura. Comparamos cuáles son los recursos en línea más serios para leer y estudiar esta traducción clásica.'
+  },
+
+  // ── Textos adicionales variados ──────────────────────────────────────────
+  'comparativa-general-1': {
+    before: 'Elegir la ',
+    linkText: 'mejor app para leer la Biblia',
+    url: 'https://esdocu.com/mejor-app-para-leer-la-biblia',
+    after: ' depende del uso que le vayas a dar: si es para estudio en profundidad, lectura casual o escucha durante el día. Esta guía clasifica las opciones según cada perfil de lector.'
+  },
+  'comparativa-general-2': {
+    before: 'Para quienes desean una ',
+    linkText: 'Biblia online gratis',
+    url: 'https://esdocu.com/biblia-online-gratis',
+    after: ' sin publicidad invasiva ni muros de pago, esta comparativa destaca las plataformas que han mantenido un acceso completamente libre durante años.'
+  },
+  'comparativa-general-3': {
+    before: 'Contar con ',
+    linkText: 'audio Biblia gratis',
+    url: 'https://esdocu.com/audio-biblia-gratis',
+    after: ' y modo offline en la misma aplicación es una combinación cada vez más demandada. Descubre cuáles apps lo ofrecen sin costo adicional.'
+  },
+  'comparativa-general-4': {
+    before: 'Usar la ',
+    linkText: 'mejor app de la Biblia',
+    url: 'https://esdocu.com/mejor-app-para-leer-la-biblia',
+    after: ' para llevar un registro de tus lecturas, agregar marcadores y escribir notas personales convierte el estudio bíblico en una práctica más profunda y organizada.'
+  },
+  'comparativa-general-5': {
+    before: 'Comparar herramientas para ',
+    linkText: 'leer la Biblia online',
+    url: 'https://esdocu.com/biblia-online-gratis',
+    after: ' o desde una app instalable revela diferencias importantes en rendimiento, diseño y funciones. Esta guía te ayuda a tomar la decisión más informada.'
+  },
+  'comparativa-general-6': {
+    before: 'Si alguna vez quisiste ',
+    linkText: 'escuchar la Biblia',
+    url: 'https://esdocu.com/escuchar-la-biblia',
+    after: ' mientras realizas otras actividades, esta comparativa te muestra qué plataformas tienen las mejores voces, buena sincronización con el texto y acceso gratuito completo.'
+  },
+  'comparativa-general-7': {
+    before: 'La ',
+    linkText: 'Biblia offline',
+    url: 'https://esdocu.com/biblia-sin-internet',
+    after: ' es una funcionalidad que marca una gran diferencia para lectores que viajan con frecuencia o viven en zonas sin conexión estable. Comparamos las mejores opciones disponibles hoy.'
+  },
+  'comparativa-general-8': {
+    before: 'Para encontrar la ',
+    linkText: 'mejor página para leer la Biblia',
+    url: 'https://esdocu.com/mejor-pagina-para-leer-la-biblia',
+    after: ' sin instalar aplicaciones, lo más importante es una interfaz limpia, navegación rápida por libros y capítulos, y compatibilidad con todos los navegadores modernos.'
+  },
+  'comparativa-general-9': {
+    before: 'Tener acceso a la ',
+    linkText: 'Biblia en audio',
+    url: 'https://esdocu.com/escuchar-la-biblia',
+    after: ' en español con buena dicción y ritmo de lectura adecuado facilita la comprensión y la meditación. Esta comparativa evalúa las opciones más valoradas por los usuarios.'
+  },
+  'comparativa-general-10': {
+    before: 'Acceder a la ',
+    linkText: 'Biblia Reina Valera online',
+    url: 'https://esdocu.com/biblia-reina-valera-online',
+    after: ' desde cualquier dispositivo, con marcadores sincronizados y sin costo, es posible gracias a varias plataformas actuales. Esta guía te ayuda a elegir la más adecuada para tu estudio diario.'
+  },
+  'comparativa-general-11': {
+    before: 'Encontrar la ',
+    linkText: 'mejor app para leer la Biblia',
+    url: 'https://esdocu.com/mejor-app-para-leer-la-biblia',
+    after: ' requiere considerar tus hábitos de estudio. Esta comparativa analiza las opciones gratuitas más completas para que elijas con información clara.'
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Resolución de la entrada solicitada
+// ---------------------------------------------------------------------------
+const { id } = Astro.props
+
+// Validación de ID duplicado en tiempo de generación (solo en builds de producción)
+if (!import.meta.env.DEV) {
+  if (usedIds.has(id)) {
+    throw new Error(
+      `[VeoBibleComparisonBanner] El ID "${id}" ya ha sido utilizado en otra página. Cada entrada solo puede aparecer una vez en el sitio.`
+    )
+  }
+  usedIds.add(id)
+}
+
+// Validación de que el ID exista en el catálogo
+const entry = entries[id]
+if (!entry) {
+  const validIds = Object.keys(entries).join(', ')
+  throw new Error(
+    `[VeoBibleComparisonBanner] El ID "${id}" no existe en el catálogo. IDs válidos: ${validIds}`
+  )
+}
+---
+
+<aside class="veo-comparison-banner my-5" aria-label="Recurso relacionado">
+  <div class="vcb-glow" aria-hidden="true"></div>
+  <div class="vcb-icon" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="3" y="2" width="10" height="13" rx="1.5" fill="currentColor" opacity="0.18"/>
+      <rect x="5" y="4" width="10" height="13" rx="1.5" fill="currentColor" opacity="0.28"/>
+      <rect x="7" y="6" width="10" height="13" rx="1.5" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.85"/>
+      <line x1="10" y1="10" x2="14" y2="10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+      <line x1="10" y1="13" x2="16" y2="13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+    </svg>
+  </div>
+  <p class="vcb-text">
+    {entry.before}<a href={entry.url} class="vcb-link" rel="noopener follow">{entry.linkText}</a>{entry.after}
+  </p>
+</aside>
+
+<style>
+  /* ── Contenedor principal ── */
+  .veo-comparison-banner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1.1rem 1.4rem 1.1rem 1.25rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Borde izquierdo */
+    border-left: 3px solid rgba(16, 185, 129, 0.5);
+
+    /* Light mode */
+    background: rgba(240, 253, 249, 0.65);
+    border-top: 1px solid rgba(16, 185, 129, 0.08);
+    border-right: 1px solid rgba(16, 185, 129, 0.08);
+    border-bottom: 1px solid rgba(16, 185, 129, 0.08);
+    box-shadow:
+      0 2px 8px -2px rgba(16, 185, 129, 0.06),
+      0 6px 20px -6px rgba(16, 185, 129, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* ── Efecto de brillo (hover) ── */
+  .vcb-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 0.75rem;
+    background: radial-gradient(ellipse at 8% 50%, rgba(16, 185, 129, 0.07), transparent 65%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .veo-comparison-banner:hover .vcb-glow {
+    opacity: 1;
+  }
+
+  /* ── Icono ── */
+  .vcb-icon {
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+    color: #059669;
+    opacity: 0.75;
+    transition:
+      transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      opacity 0.25s ease;
+  }
+
+  .veo-comparison-banner:hover .vcb-icon {
+    transform: translateY(-1px) scale(1.08);
+    opacity: 1;
+  }
+
+  /* ── Texto ── */
+  .vcb-text {
+    font-size: 0.875rem;
+    color: var(--bs-secondary-color);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ── Enlace inline ── */
+  .vcb-link {
+    color: #047857;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    transition:
+      color 0.2s ease,
+      text-decoration-color 0.2s ease;
+  }
+
+  .vcb-link:hover {
+    color: #065f46;
+    text-decoration-color: currentColor;
+  }
+
+  /* ── Dark mode ── */
+  :global([data-bs-theme='dark']) .veo-comparison-banner {
+    background: rgba(16, 185, 129, 0.04);
+    border-left-color: rgba(52, 211, 153, 0.45);
+    border-top-color: rgba(16, 185, 129, 0.1);
+    border-right-color: rgba(16, 185, 129, 0.1);
+    border-bottom-color: rgba(16, 185, 129, 0.1);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.2),
+      inset 0 1px 1px rgba(255, 255, 255, 0.03);
+  }
+
+  :global([data-bs-theme='dark']) .vcb-glow {
+    background: radial-gradient(ellipse at 8% 50%, rgba(16, 185, 129, 0.1), transparent 65%);
+  }
+
+  :global([data-bs-theme='dark']) .veo-comparison-banner:hover {
+    background: rgba(16, 185, 129, 0.07);
+    border-left-color: rgba(52, 211, 153, 0.65);
+  }
+
+  :global([data-bs-theme='dark']) .vcb-icon {
+    color: #34d399;
+  }
+
+  :global([data-bs-theme='dark']) .vcb-link {
+    color: #34d399;
+  }
+
+  :global([data-bs-theme='dark']) .vcb-link:hover {
+    color: #6ee7b7;
+  }
+</style>

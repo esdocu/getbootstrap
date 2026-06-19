@@ -10,6 +10,7 @@ export function getStaticPaths() {
     }
   ]
 }
+import VeoBibleComparisonBanner from '@components/shortcodes/VeoBibleComparisonBanner.astro'
 ---
 
 <SingleLayout
@@ -32,3 +33,6 @@ export function getStaticPaths() {
     <div class="mt-5"><VeoBibleBanner id="2-tesalonicenses-3-10" /></div>
   </Fragment>
 </SingleLayout>
+
+
+<div class="my-5"><VeoBibleComparisonBanner id="comparativa-pagina-biblia-1" /></div>
