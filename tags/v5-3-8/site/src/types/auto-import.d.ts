@@ -19,7 +19,4 @@ export declare global {
   export const Placeholder: typeof import('@shortcodes/Placeholder.astro').default
   export const ScssDocs: typeof import('@shortcodes/ScssDocs.astro').default
   export const Table: typeof import('@shortcodes/Table.astro').default
-  export const VeoBibleBanner: typeof import('@shortcodes/VeoBibleBanner.astro').default
-  export const VeoBibleComparisonBanner: typeof import('@shortcodes/VeoBibleComparisonBanner.astro').default
-  export const WordsusBanner: typeof import('@shortcodes/WordsusBanner.astro').default
 }

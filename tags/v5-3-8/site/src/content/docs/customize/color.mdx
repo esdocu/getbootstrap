@@ -3,9 +3,6 @@ title: Color
 description: Bootstrap está respaldado por un extenso sistema de colores que tematiza nuestros estilos y componentes. Esto permite una personalización y extensión más completas para cualquier proyecto.
 toc: true
 ---
-
-<VeoBibleBanner id="proverbios-12-24" />
-
 import { getData } from '@libs/data'
 import { getSequence } from '@libs/utils'
 
@@ -361,9 +358,6 @@ Los colores que terminan en `-rgb` proporcionan los valores `red, green, blue` (
 
 ### Usando los nuevos colores
 
-<VeoBibleComparisonBanner id="comparativa-audio-biblia-3" />
-
-
 Estos nuevos colores son accesibles a través de variables CSS y clases de utilidad —como `--bs-primary-bg-subtle` y `.bg-primary-subtle`— lo que te permite componer tus propias reglas CSS con las variables, o aplicar estilos rápidamente a través de clases. Las utilidades se construyen con las variables CSS asociadas al color y, dado que personalizamos esas variables CSS para el modo oscuro, también se adaptan al modo de color de forma predeterminada.
 
 <Example code={`<div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
@@ -446,7 +440,6 @@ El uso de `mix()` no es lo mismo que `lighten()` y `darken()`; el primero mezcla
 Nuestras funciones `tint-color()` and `shade-color()` usan `mix()` junto con nuestra variable `$theme-color-interval`, que especifica un valor de porcentaje escalonado para cada color mixto que producimos. Consulta los archivos `scss/_functions.scss` y `scss/_variables.scss` para ver el código fuente completo.
 
 ## 
-<VeoBibleBanner id="romanos-12-11" />
 
 Mapas Sass de colores
 
