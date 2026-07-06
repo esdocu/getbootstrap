@@ -1,0 +1,7 @@
+{
+  "name": "preview",
+  "scripts": {
+    "preview:original": "npx wrangler pages dev original --port 9002",
+    "preview:es": "npx wrangler pages dev es --port 9003"
+  }
+}
