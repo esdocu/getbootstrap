@@ -1,0 +1,19 @@
+# Generated automatically by staticl10n
+# Detected redirects: 16 | Manual: 0
+
+/docs/5.2  /docs/5.2/getting-started/introduction  301
+/docs/5.1  /docs/5.1/getting-started/introduction  301
+/docs/5.0  /docs/5.0/getting-started/introduction  301
+/docs/5.3  /docs/5.3/getting-started/introduction  301
+/docs/5.3/getting-started  /docs/5.3/getting-started/introduction  301
+/docs/5.2/getting-started  /docs/5.2/getting-started/introduction  301
+/docs/5.1/getting-started  /docs/5.1/getting-started/introduction  307
+/docs/5.0/getting-started  /docs/5.0/getting-started/introduction  301
+/docs/5.2/components  /docs/5.2/components/accordion  301
+/docs/5.1/components  /docs/5.1/components/accordion  301
+/docs/5.0/components  /docs/5.0/components/accordion  307
+/docs/5.2/layout  /docs/5.2/layout/breakpoints  301
+/docs/5.1/layout  /docs/5.1/layout/breakpoints  301
+/docs/5.2/getting-started/build-tools  /docs/5.2/getting-started/contribute  301
+/docs/5.1/getting-started/build-tools  /docs/5.1/getting-started/contribute  301
+/docs/5.0/layout  /docs/5.0/layout/breakpoints  307
