@@ -1,0 +1,1163 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Los grupos de lista son un componente flexible y potente para mostrar una serie de contenido. Modifícalos y extiéndelos para soportar prácticamente cualquier contenido dentro.">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.88.1">
+
+<meta name="docsearch:language" content="en">
+<meta name="docsearch:version" content="5.1">
+
+<title>Grupo de lista · Bootstrap en Español v5.1</title>
+
+<link rel="canonical" href="https://getbootstrap.com/docs/5.1/components/list-group/">
+
+<!-- Bootstrap core CSS -->
+<style class="anchorjs"></style><link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<link href="/docs/5.1/assets/css/docs.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="List group">
+<meta name="twitter:description" content="Los grupos de lista son un componente flexible y potente para mostrar una serie de contenido. Modifícalos y extiéndelos para soportar prácticamente cualquier contenido dentro.">
+<meta name="twitter:image" content="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-social.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://getbootstrap.com/docs/5.1/components/list-group/">
+<meta property="og:title" content="List group">
+<meta property="og:description" content="Los grupos de lista son un componente flexible y potente para mostrar una serie de contenido. Modifícalos y extiéndelos para soportar prácticamente cualquier contenido dentro.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://getbootstrap.com/docs/5.1/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="500">
+
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-W2VMDSX0CE&amp;cx=c&amp;_slc=1"></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-146052-10', 'getbootstrap.com');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+
+  <link rel="alternate" hreflang="en" href="https://getbootstrap.com/docs/5.1/components/list-group"><link rel="alternate" hreflang="es" href="https://getbootstrap.esdocu.com/docs/5.1/components/list-group"><link rel="alternate" hreflang="x-default" href="https://getbootstrap.com/docs/5.1/components/list-group"></head>
+  <body>
+    <div class="skippy visually-hidden-focusable overflow-hidden">
+  <div class="container-xl">
+    <a class="d-inline-flex p-2 m-1" href="#content" data-sl-id="f1">Saltar al contenido principal</a>
+    <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav" data-sl-id="f2">Saltar a la navegación de la documentación</a>
+  </div>
+</div>
+
+<div class="d-block px-3 py-2 text-center text-bold skippy">
+  <a href="/" class="text-white text-decoration-none" data-sl-id="f3">¡Hay una versión más nueva de Bootstrap!</a>
+</div>
+
+    <header class="navbar navbar-expand-md navbar-dark bd-navbar">
+  <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Navegación principal">
+    <a class="navbar-brand p-0 me-2" href="/" aria-label="Bootstrap" data-sl-id="f4"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Alternar navegación">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+</svg>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="bdNavbar">
+      <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');" data-sl-id="f5">Inicio</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2 active" aria-current="true" href="/docs/5.1/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');" data-sl-id="f6">Documentación</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="/docs/5.1/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');" data-sl-id="f7">Ejemplos</a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener" data-sl-id="f8">Iconos</a>
+        </li>
+        
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener" data-sl-id="f9">Blog</a>
+        </li>
+      </ul>
+
+      <hr class="d-md-none text-white-50">
+
+      <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="https://github.com/twbs" target="_blank" rel="noopener" data-sl-id="f10"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path></svg>
+            <small class="d-md-none ms-2">GitHub</small></a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener" data-sl-id="f11"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 416.32" role="img"><title>Twitter</title><path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"></path></svg>
+            <small class="d-md-none ms-2">Twitter</small></a>
+        </li>
+        <li class="nav-item col-6 col-md-auto">
+          <a class="nav-link p-2" href="https://opencollective.com/bootstrap" target="_blank" rel="noopener" data-sl-id="f12"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 40 41" role="img"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path></svg>
+            <small class="d-md-none ms-2">Open Collective</small></a>
+        </li>
+      </ul>
+
+      <a class="btn btn-bd-download d-lg-inline-block my-2 my-md-0 ms-md-3" href="/docs/5.1/getting-started/download/" data-sl-id="f13">Descargar</a>
+    </div>
+  </nav>
+</header>
+
+  <nav class="bd-subnavbar py-2" aria-label="Navegación secundaria">
+  <div class="container-xxl d-flex align-items-md-center">
+    <form class="bd-search position-relative me-auto">
+      <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="search" class="form-control ds-input" id="search-input" placeholder="Buscar en la documentación..." aria-label="Buscar en la documentación por..." autocomplete="off" data-bd-docs-version="5.1" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
+    </form>
+
+    <div class="dropdown ms-3">
+  <button class="btn btn-bd-light dropdown-toggle" id="bd-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-sl-id="f14"><span class="d-none d-lg-inline">Bootstrap</span> v5.1</button>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
+    <li><h6 class="dropdown-header" data-sl-id="f15">lanzamientos v5</h6></li>
+    <li>
+      <a class="dropdown-item" href="/docs/5.2/components/list-group/" data-sl-id="f16">Latest (5.2.x)</a>
+    </li>
+    <li>
+        <a class="dropdown-item current" aria-current="true" href="/docs/5.1/components/list-group/" data-sl-id="f17">v5.1.3</a>
+    </li>
+    <li>
+        <a class="dropdown-item" href="/docs/5.0/components/list-group/" data-sl-id="f18">v5.0.2</a>
+    </li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6" data-sl-id="f19">v4.6.x</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4" data-sl-id="f20">v3.4.1</a></li>
+    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2" data-sl-id="f21">v2.3.2</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/docs/versions/" data-sl-id="f22">Todas las versiones</a></li>
+  </ul>
+</div>
+
+    <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Alternar navegación de la documentación" data-sl-id="f23"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
+  <title>Expand</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"></path>
+</svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16">
+  <title>Collapse</title>
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"></path>
+</svg></button>
+  </div>
+</nav>
+
+  <div class="container-xxl my-md-4 bd-layout">
+    <aside class="bd-sidebar">
+      <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Navegación de la documentación"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false" data-sl-id="f24">Primeros pasos</button>
+
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/getting-started/introduction/" class="d-inline-flex align-items-center rounded" data-sl-id="f25">Introducción</a></li>
+              <li><a href="/docs/5.1/getting-started/download/" class="d-inline-flex align-items-center rounded" data-sl-id="f26">Descargar</a></li>
+              <li><a href="/docs/5.1/getting-started/contents/" class="d-inline-flex align-items-center rounded" data-sl-id="f27">Contenidos</a></li>
+              <li><a href="/docs/5.1/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded" data-sl-id="f28">Navegadores y dispositivos</a></li>
+              <li><a href="/docs/5.1/getting-started/javascript/" class="d-inline-flex align-items-center rounded" data-sl-id="f29">JavaScript</a></li>
+              <li><a href="/docs/5.1/getting-started/webpack/" class="d-inline-flex align-items-center rounded" data-sl-id="f30">Webpack</a></li>
+              <li><a href="/docs/5.1/getting-started/parcel/" class="d-inline-flex align-items-center rounded" data-sl-id="f31">Parcel</a></li>
+              <li><a href="/docs/5.1/getting-started/accessibility/" class="d-inline-flex align-items-center rounded" data-sl-id="f32">Accesibilidad</a></li>
+              <li><a href="/docs/5.1/getting-started/rfs/" class="d-inline-flex align-items-center rounded" data-sl-id="f33">RFS</a></li>
+              <li><a href="/docs/5.1/getting-started/rtl/" class="d-inline-flex align-items-center rounded" data-sl-id="f34">RTL</a></li>
+              <li><a href="/docs/5.1/getting-started/contribute/" class="d-inline-flex align-items-center rounded" data-sl-id="f35">Contribuye</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false" data-sl-id="f36">Personalizar</button>
+
+        <div class="collapse" id="customize-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/customize/overview/" class="d-inline-flex align-items-center rounded" data-sl-id="f37">Visión general</a></li>
+              <li><a href="/docs/5.1/customize/sass/" class="d-inline-flex align-items-center rounded" data-sl-id="f38">Sass</a></li>
+              <li><a href="/docs/5.1/customize/options/" class="d-inline-flex align-items-center rounded" data-sl-id="f39">Opciones</a></li>
+              <li><a href="/docs/5.1/customize/color/" class="d-inline-flex align-items-center rounded" data-sl-id="f40">Color</a></li>
+              <li><a href="/docs/5.1/customize/components/" class="d-inline-flex align-items-center rounded" data-sl-id="f41">Componentes</a></li>
+              <li><a href="/docs/5.1/customize/css-variables/" class="d-inline-flex align-items-center rounded" data-sl-id="f42">Variables CSS</a></li>
+              <li><a href="/docs/5.1/customize/optimize/" class="d-inline-flex align-items-center rounded" data-sl-id="f43">Optimizar</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false" data-sl-id="f44">Layout</button>
+
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/layout/breakpoints/" class="d-inline-flex align-items-center rounded" data-sl-id="f45">Breakpoints</a></li>
+              <li><a href="/docs/5.1/layout/containers/" class="d-inline-flex align-items-center rounded" data-sl-id="f46">Containers</a></li>
+              <li><a href="/docs/5.1/layout/grid/" class="d-inline-flex align-items-center rounded" data-sl-id="f47">Grid</a></li>
+              <li><a href="/docs/5.1/layout/columns/" class="d-inline-flex align-items-center rounded" data-sl-id="f48">Columnas</a></li>
+              <li><a href="/docs/5.1/layout/gutters/" class="d-inline-flex align-items-center rounded" data-sl-id="f49">Gutters</a></li>
+              <li><a href="/docs/5.1/layout/utilities/" class="d-inline-flex align-items-center rounded" data-sl-id="f50">Utilidades</a></li>
+              <li><a href="/docs/5.1/layout/z-index/" class="d-inline-flex align-items-center rounded" data-sl-id="f51">Z-index</a></li>
+              <li><a href="/docs/5.1/layout/css-grid/" class="d-inline-flex align-items-center rounded" data-sl-id="f52">CSS Grid</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false" data-sl-id="f53">Contenido</button>
+
+        <div class="collapse" id="content-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded" data-sl-id="f54">Reboot</a></li>
+              <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded" data-sl-id="f55">Tipografía</a></li>
+              <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded" data-sl-id="f56">Imágenes</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded" data-sl-id="f57">Tablas</a></li>
+              <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded" data-sl-id="f58">Figuras</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="false" data-sl-id="f59">Formularios</button>
+
+        <div class="collapse" id="forms-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/forms/overview/" class="d-inline-flex align-items-center rounded" data-sl-id="f60">Visión general</a></li>
+              <li><a href="/docs/5.1/forms/form-control/" class="d-inline-flex align-items-center rounded" data-sl-id="f61">Control de formulario</a></li>
+              <li><a href="/docs/5.1/forms/select/" class="d-inline-flex align-items-center rounded" data-sl-id="f62">Select</a></li>
+              <li><a href="/docs/5.1/forms/checks-radios/" class="d-inline-flex align-items-center rounded" data-sl-id="f63">Checks y radios</a></li>
+              <li><a href="/docs/5.1/forms/range/" class="d-inline-flex align-items-center rounded" data-sl-id="f64">Range</a></li>
+              <li><a href="/docs/5.1/forms/input-group/" class="d-inline-flex align-items-center rounded" data-sl-id="f65">Input group</a></li>
+              <li><a href="/docs/5.1/forms/floating-labels/" class="d-inline-flex align-items-center rounded" data-sl-id="f66">Etiquetas flotantes</a></li>
+              <li><a href="/docs/5.1/forms/layout/" class="d-inline-flex align-items-center rounded" data-sl-id="f67">Layout</a></li>
+              <li><a href="/docs/5.1/forms/validation/" class="d-inline-flex align-items-center rounded" data-sl-id="f68">Validación</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="true" aria-current="true" data-sl-id="f69">Componentes</button>
+
+        <div class="collapse show" id="components-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/components/accordion/" class="d-inline-flex align-items-center rounded" data-sl-id="f70">Accordion</a></li>
+              <li><a href="/docs/5.1/components/alerts/" class="d-inline-flex align-items-center rounded" data-sl-id="f71">Alerts</a></li>
+              <li><a href="/docs/5.1/components/badge/" class="d-inline-flex align-items-center rounded" data-sl-id="f72">Badge</a></li>
+              <li><a href="/docs/5.1/components/breadcrumb/" class="d-inline-flex align-items-center rounded" data-sl-id="f73">Breadcrumb</a></li>
+              <li><a href="/docs/5.1/components/buttons/" class="d-inline-flex align-items-center rounded" data-sl-id="f74">Buttons</a></li>
+              <li><a href="/docs/5.1/components/button-group/" class="d-inline-flex align-items-center rounded" data-sl-id="f75">Button group</a></li>
+              <li><a href="/docs/5.1/components/card/" class="d-inline-flex align-items-center rounded" data-sl-id="f76">Card</a></li>
+              <li><a href="/docs/5.1/components/carousel/" class="d-inline-flex align-items-center rounded" data-sl-id="f77">Carousel</a></li>
+              <li><a href="/docs/5.1/components/close-button/" class="d-inline-flex align-items-center rounded" data-sl-id="f78">Close button</a></li>
+              <li><a href="/docs/5.1/components/collapse/" class="d-inline-flex align-items-center rounded" data-sl-id="f79">Collapse</a></li>
+              <li><a href="/docs/5.1/components/dropdowns/" class="d-inline-flex align-items-center rounded" data-sl-id="f80">Dropdowns</a></li>
+              <li><a href="/docs/5.1/components/list-group/" class="d-inline-flex align-items-center rounded active" aria-current="page" data-sl-id="f81">List group</a></li>
+              <li><a href="/docs/5.1/components/modal/" class="d-inline-flex align-items-center rounded" data-sl-id="f82">Modal</a></li>
+              <li><a href="/docs/5.1/components/navs-tabs/" class="d-inline-flex align-items-center rounded" data-sl-id="f83">Navs y tabs</a></li>
+              <li><a href="/docs/5.1/components/navbar/" class="d-inline-flex align-items-center rounded" data-sl-id="f84">Navbar</a></li>
+              <li><a href="/docs/5.1/components/offcanvas/" class="d-inline-flex align-items-center rounded" data-sl-id="f85">Offcanvas</a></li>
+              <li><a href="/docs/5.1/components/pagination/" class="d-inline-flex align-items-center rounded" data-sl-id="f86">Pagination</a></li>
+              <li><a href="/docs/5.1/components/placeholders/" class="d-inline-flex align-items-center rounded" data-sl-id="f87">Placeholders</a></li>
+              <li><a href="/docs/5.1/components/popovers/" class="d-inline-flex align-items-center rounded" data-sl-id="f88">Popovers</a></li>
+              <li><a href="/docs/5.1/components/progress/" class="d-inline-flex align-items-center rounded" data-sl-id="f89">Progress</a></li>
+              <li><a href="/docs/5.1/components/scrollspy/" class="d-inline-flex align-items-center rounded" data-sl-id="f90">Scrollspy</a></li>
+              <li><a href="/docs/5.1/components/spinners/" class="d-inline-flex align-items-center rounded" data-sl-id="f91">Spinners</a></li>
+              <li><a href="/docs/5.1/components/toasts/" class="d-inline-flex align-items-center rounded" data-sl-id="f92">Toasts</a></li>
+              <li><a href="/docs/5.1/components/tooltips/" class="d-inline-flex align-items-center rounded" data-sl-id="f93">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false" data-sl-id="f94">Helpers</button>
+
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/helpers/clearfix/" class="d-inline-flex align-items-center rounded" data-sl-id="f95">Clearfix</a></li>
+              <li><a href="/docs/5.1/helpers/colored-links/" class="d-inline-flex align-items-center rounded" data-sl-id="f96">Enlaces de colores</a></li>
+              <li><a href="/docs/5.1/helpers/ratio/" class="d-inline-flex align-items-center rounded" data-sl-id="f97">Ratio</a></li>
+              <li><a href="/docs/5.1/helpers/position/" class="d-inline-flex align-items-center rounded" data-sl-id="f98">Position</a></li>
+              <li><a href="/docs/5.1/helpers/stacks/" class="d-inline-flex align-items-center rounded" data-sl-id="f99">Stacks</a></li>
+              <li><a href="/docs/5.1/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded" data-sl-id="f100">Visually hidden</a></li>
+              <li><a href="/docs/5.1/helpers/stretched-link/" class="d-inline-flex align-items-center rounded" data-sl-id="f101">Stretched link</a></li>
+              <li><a href="/docs/5.1/helpers/text-truncation/" class="d-inline-flex align-items-center rounded" data-sl-id="f102">Truncamiento de texto</a></li>
+              <li><a href="/docs/5.1/helpers/vertical-rule/" class="d-inline-flex align-items-center rounded" data-sl-id="f103">Regla vertical</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false" data-sl-id="f104">Utilidades</button>
+
+        <div class="collapse" id="utilities-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/utilities/api/" class="d-inline-flex align-items-center rounded" data-sl-id="f105">API</a></li>
+              <li><a href="/docs/5.1/utilities/background/" class="d-inline-flex align-items-center rounded" data-sl-id="f106">Fondo</a></li>
+              <li><a href="/docs/5.1/utilities/borders/" class="d-inline-flex align-items-center rounded" data-sl-id="f107">Bordes</a></li>
+              <li><a href="/docs/5.1/utilities/colors/" class="d-inline-flex align-items-center rounded" data-sl-id="f108">Colores</a></li>
+              <li><a href="/docs/5.1/utilities/display/" class="d-inline-flex align-items-center rounded" data-sl-id="f109">Display</a></li>
+              <li><a href="/docs/5.1/utilities/flex/" class="d-inline-flex align-items-center rounded" data-sl-id="f110">Flex</a></li>
+              <li><a href="/docs/5.1/utilities/float/" class="d-inline-flex align-items-center rounded" data-sl-id="f111">Float</a></li>
+              <li><a href="/docs/5.1/utilities/interactions/" class="d-inline-flex align-items-center rounded" data-sl-id="f112">Interacciones</a></li>
+              <li><a href="/docs/5.1/utilities/opacity/" class="d-inline-flex align-items-center rounded" data-sl-id="f113">Opacidad</a></li>
+              <li><a href="/docs/5.1/utilities/overflow/" class="d-inline-flex align-items-center rounded" data-sl-id="f114">Overflow</a></li>
+              <li><a href="/docs/5.1/utilities/position/" class="d-inline-flex align-items-center rounded" data-sl-id="f115">Position</a></li>
+              <li><a href="/docs/5.1/utilities/shadows/" class="d-inline-flex align-items-center rounded" data-sl-id="f116">Sombras</a></li>
+              <li><a href="/docs/5.1/utilities/sizing/" class="d-inline-flex align-items-center rounded" data-sl-id="f117">Tamaños</a></li>
+              <li><a href="/docs/5.1/utilities/spacing/" class="d-inline-flex align-items-center rounded" data-sl-id="f118">Espaciado</a></li>
+              <li><a href="/docs/5.1/utilities/text/" class="d-inline-flex align-items-center rounded" data-sl-id="f119">Texto</a></li>
+              <li><a href="/docs/5.1/utilities/vertical-align/" class="d-inline-flex align-items-center rounded" data-sl-id="f120">Alineación vertical</a></li>
+              <li><a href="/docs/5.1/utilities/visibility/" class="d-inline-flex align-items-center rounded" data-sl-id="f121">Visibilidad</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false" data-sl-id="f122">Extender</button>
+
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/extend/approach/" class="d-inline-flex align-items-center rounded" data-sl-id="f123">Enfoque</a></li>
+              <li><a href="/docs/5.1/extend/icons/" class="d-inline-flex align-items-center rounded" data-sl-id="f124">Iconos</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false" data-sl-id="f125">Acerca de</button>
+
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.1/about/overview/" class="d-inline-flex align-items-center rounded" data-sl-id="f126">Visión general</a></li>
+              <li><a href="/docs/5.1/about/team/" class="d-inline-flex align-items-center rounded" data-sl-id="f127">Equipo</a></li>
+              <li><a href="/docs/5.1/about/brand/" class="d-inline-flex align-items-center rounded" data-sl-id="f128">Marca</a></li>
+              <li><a href="/docs/5.1/about/license/" class="d-inline-flex align-items-center rounded" data-sl-id="f129">Licencia</a></li>
+              <li><a href="/docs/5.1/about/translations/" class="d-inline-flex align-items-center rounded" data-sl-id="f130">Traducciones</a></li>
+          </ul>
+        </div>
+      </li>
+      
+      <li>
+        <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded" data-sl-id="f131">Migración</a>
+      </li>
+  </ul>
+</nav>
+
+    </aside>
+
+    <main class="bd-main order-1">
+      <div class="bd-intro ps-lg-4">
+        <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/v5.1.3/site/content/docs/5.1/components/list-group.md" title="Ver y editar este archivo en GitHub" target="_blank" rel="noopener" data-sl-id="f132">Ver en GitHub</a>
+          <h1 class="bd-title" id="content" data-sl-id="f133">List group</h1>
+        </div>
+        <p class="bd-lead" data-sl-id="f134">Los grupos de lista son un componente flexible y potente para mostrar una serie de contenido. Modifícalos y extiéndelos para soportar prácticamente cualquier contenido dentro.</p>
+        
+
+      </div>
+
+        <div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted">
+          <strong class="d-block h6 my-2 pb-2 border-bottom">On this page</strong>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#basic-example" data-sl-id="f135">Ejemplo básico</a></li>
+    <li><a href="#active-items" data-sl-id="f136">Elementos activos</a></li>
+    <li><a href="#disabled-items" data-sl-id="f137">Elementos deshabilitados</a></li>
+    <li><a href="#links-and-buttons" data-sl-id="f138">Enlaces y botones</a></li>
+    <li><a href="#flush" data-sl-id="f139">Flush</a></li>
+    <li><a href="#numbered" data-sl-id="f140">Numerados</a></li>
+    <li><a href="#horizontal" data-sl-id="f141">Horizontal</a></li>
+    <li><a href="#contextual-classes" data-sl-id="f142">Clases contextuales</a></li>
+    <li><a href="#with-badges" data-sl-id="f143">Con insignias</a></li>
+    <li><a href="#custom-content" data-sl-id="f144">Contenido personalizado</a></li>
+    <li><a href="#checkboxes-and-radios" data-sl-id="f145">Casillas de verificación y radios</a></li>
+    <li><a href="#sass" data-sl-id="f146">Sass</a>
+      <ul>
+        <li><a href="#variables" data-sl-id="f147">Variables</a></li>
+        <li><a href="#mixins" data-sl-id="f148">Mixins</a></li>
+        <li><a href="#loop" data-sl-id="f149">Loop</a></li>
+      </ul>
+    </li>
+    <li><a href="#javascript-behavior" data-sl-id="f150">Comportamiento de JavaScript</a>
+      <ul>
+        <li><a href="#using-data-attributes" data-sl-id="f151">Uso de atributos data</a></li>
+        <li><a href="#via-javascript" data-sl-id="f152">A través de JavaScript</a></li>
+        <li><a href="#fade-effect" data-sl-id="f153">Efecto de desvanecimiento</a></li>
+        <li><a href="#methods" data-sl-id="f154">Métodos</a>
+          <ul>
+            <li><a href="#constructor" data-sl-id="f155">constructor</a></li>
+            <li><a href="#show" data-sl-id="f156">show</a></li>
+            <li><a href="#dispose" data-sl-id="f157">dispose</a></li>
+            <li><a href="#getinstance" data-sl-id="f158">getInstance</a></li>
+            <li><a href="#getorcreateinstance" data-sl-id="f159">getOrCreateInstance</a></li>
+          </ul>
+        </li>
+        <li><a href="#events" data-sl-id="f160">Eventos</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+
+      <div class="bd-content ps-lg-4">
+
+        <h2 id="basic-example" data-sl-id="f161">Ejemplo básico<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#basic-example" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f162">El grupo de lista más básico es una lista desordenada con elementos de lista y las clases apropiadas. Construye sobre él con las opciones que siguen, o con tu propio CSS según sea necesario.</p>
+<div class="bd-example">
+<ul class="list-group">
+  <li class="list-group-item" data-sl-id="f163">Un elemento</li>
+  <li class="list-group-item" data-sl-id="f164">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f165">Un tercer elemento</li>
+  <li class="list-group-item" data-sl-id="f166">Un cuarto elemento</li>
+  <li class="list-group-item" data-sl-id="f167">Y un quinto</li>
+</ul>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f168">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>An item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A fourth item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>And a fifth one<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="active-items" data-sl-id="f169">Elementos activos<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#active-items" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f170">Añade <code>.active</code> a un <code>.list-group-item</code> para indicar la selección activa actual.</p>
+<div class="bd-example">
+<ul class="list-group">
+  <li class="list-group-item active" aria-current="true" data-sl-id="f171">Un elemento activo</li>
+  <li class="list-group-item" data-sl-id="f172">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f173">Un tercer elemento</li>
+  <li class="list-group-item" data-sl-id="f174">Un cuarto elemento</li>
+  <li class="list-group-item" data-sl-id="f175">Y un quinto</li>
+</ul>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f176">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item active"</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>An active item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A fourth item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>And a fifth one<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="disabled-items" data-sl-id="f177">Elementos deshabilitados<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#disabled-items" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f178">Añade <code>.disabled</code> a un <code>.list-group-item</code> para hacer que <em>parezca</em> deshabilitado. Ten en cuenta que algunos elementos con <code>.disabled</code> también requerirán JavaScript personalizado para deshabilitar completamente sus eventos de clic (por ejemplo, los enlaces).</p>
+<div class="bd-example">
+<ul class="list-group">
+  <li class="list-group-item disabled" aria-disabled="true" data-sl-id="f179">Un elemento deshabilitado</li>
+  <li class="list-group-item" data-sl-id="f180">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f181">Un tercer elemento</li>
+  <li class="list-group-item" data-sl-id="f182">Un cuarto elemento</li>
+  <li class="list-group-item" data-sl-id="f183">Y un quinto</li>
+</ul>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f184">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item disabled"</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>A disabled item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A fourth item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>And a fifth one<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="links-and-buttons" data-sl-id="f185">Enlaces y botones<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#links-and-buttons" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f186">Usa <code>&lt;a&gt;</code>s o <code>&lt;button&gt;</code>s para crear elementos de grupo de lista <em>accionables</em> con estados hover, deshabilitado y activo añadiendo <code>.list-group-item-action</code>. Separamos estas pseudo-clases para asegurar que los grupos de lista compuestos por elementos no interactivos (como <code>&lt;li&gt;</code>s o <code>&lt;div&gt;</code>s) no ofrezcan una funcionalidad de clic o toque.</p>
+<p data-sl-id="f187">Asegúrate de <strong>no usar las clases estándar <code>.btn</code> aquí</strong>.</p>
+<div class="bd-example">
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true" data-sl-id="f188">El elemento de enlace actual</a>
+  <a href="#" class="list-group-item list-group-item-action" data-sl-id="f189">Un segundo elemento de enlace</a>
+  <a href="#" class="list-group-item list-group-item-action" data-sl-id="f190">Un tercer elemento de enlace</a>
+  <a href="#" class="list-group-item list-group-item-action" data-sl-id="f191">Un cuarto elemento de enlace</a>
+  <a class="list-group-item list-group-item-action disabled" data-sl-id="f192">Un elemento de enlace deshabilitado</a>
+</div>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f193">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action active"</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+    The current link item
+  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span><span class="p">&gt;</span>A second link item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span><span class="p">&gt;</span>A third link item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span><span class="p">&gt;</span>A fourth link item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action disabled"</span><span class="p">&gt;</span>A disabled link item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p data-sl-id="f194">Con <code>&lt;button&gt;</code>s, también puedes usar el atributo <code>disabled</code> en lugar de la clase <code>.disabled</code>. Lamentablemente, los <code>&lt;a&gt;</code>s no soportan el atributo disabled.</p>
+<div class="bd-example">
+<div class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active" aria-current="true" data-sl-id="f195">El botón actual</button>
+  <button type="button" class="list-group-item list-group-item-action" data-sl-id="f196">Un segundo elemento</button>
+  <button type="button" class="list-group-item list-group-item-action" data-sl-id="f197">Un tercer elemento de botón</button>
+  <button type="button" class="list-group-item list-group-item-action" data-sl-id="f198">Un cuarto elemento de botón</button>
+  <button type="button" class="list-group-item list-group-item-action" disabled="" data-sl-id="f199">Un elemento de botón deshabilitado</button>
+</div>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f200">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action active"</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+    The current button
+  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span><span class="p">&gt;</span>A third button item<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span><span class="p">&gt;</span>A fourth button item<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"button"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">disabled</span><span class="p">&gt;</span>A disabled button item<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="flush" data-sl-id="f201">Flush<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#flush" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f202">Añade <code>.list-group-flush</code> para eliminar algunos bordes y esquinas redondeadas y renderizar los elementos del grupo de lista de borde a borde dentro de un contenedor padre (por ejemplo, tarjetas).</p>
+<div class="bd-example">
+<ul class="list-group list-group-flush">
+  <li class="list-group-item" data-sl-id="f203">Un elemento</li>
+  <li class="list-group-item" data-sl-id="f204">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f205">Un tercer elemento</li>
+  <li class="list-group-item" data-sl-id="f206">Un cuarto elemento</li>
+  <li class="list-group-item" data-sl-id="f207">Y un quinto</li>
+</ul>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f208">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group list-group-flush"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>An item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A fourth item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>And a fifth one<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="numbered" data-sl-id="f209">Numerados<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#numbered" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f210">Añade la clase modificadora <code>.list-group-numbered</code> (y opcionalmente usa un elemento <code>&lt;ol&gt;</code>) para activar los elementos de grupo de lista numerados. Los números se generan vía CSS (a diferencia del estilo predeterminado del navegador para <code>&lt;ol&gt;</code>s) para una mejor ubicación dentro de los elementos del grupo de lista y permitir una mejor personalización.</p>
+<p data-sl-id="f211">Los números se generan mediante <code>counter-reset</code> en el <code>&lt;ol&gt;</code>, y luego se estilizan y colocan con un pseudo-elemento <code>::before</code> en el <code>&lt;li&gt;</code> con <code>counter-increment</code> y <code>content</code>.</p>
+<div class="bd-example">
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item" data-sl-id="f212">Un elemento de lista</li>
+  <li class="list-group-item" data-sl-id="f213">Un elemento de lista</li>
+  <li class="list-group-item" data-sl-id="f214">Un elemento de lista</li>
+</ol>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f215">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ol</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group list-group-numbered"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A list item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A list item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A list item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span></code></pre></div>
+<p data-sl-id="f216">Estas también funcionan muy bien con contenido personalizado.</p>
+<div class="bd-example">
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold" data-sl-id="f217">Subtítulo</div>
+      Content for list item
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold" data-sl-id="f218">Subtítulo</div>
+      Content for list item
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold" data-sl-id="f219">Subtítulo</div>
+      Content for list item
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+</ol>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f220">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ol</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group list-group-numbered"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item d-flex justify-content-between align-items-start"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"ms-2 me-auto"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"fw-bold"</span><span class="p">&gt;</span>Subheading<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      Content for list item
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge bg-primary rounded-pill"</span><span class="p">&gt;</span>14<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item d-flex justify-content-between align-items-start"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"ms-2 me-auto"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"fw-bold"</span><span class="p">&gt;</span>Subheading<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      Content for list item
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge bg-primary rounded-pill"</span><span class="p">&gt;</span>14<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item d-flex justify-content-between align-items-start"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"ms-2 me-auto"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"fw-bold"</span><span class="p">&gt;</span>Subheading<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      Content for list item
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge bg-primary rounded-pill"</span><span class="p">&gt;</span>14<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="horizontal" data-sl-id="f221">Horizontal<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#horizontal" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f222">Añade <code>.list-group-horizontal</code> para cambiar el diseño de los elementos del grupo de lista de vertical a horizontal en todos los breakpoints. Alternativamente, elige una variante responsive <code>.list-group-horizontal-{sm|md|lg|xl|xxl}</code> para hacer que un grupo de lista sea horizontal a partir del <code>min-width</code> de ese breakpoint. Actualmente, <strong>los grupos de lista horizontales no se pueden combinar con grupos de lista flush.</strong></p>
+<p data-sl-id="f223"><strong>Consejo Pro:</strong> ¿Quieres elementos de grupo de lista de igual ancho cuando están en horizontal? Añade <code>.flex-fill</code> a cada elemento del grupo de lista.</p>
+<div class="bd-example">
+
+<ul class="list-group list-group-horizontal">
+  <li class="list-group-item" data-sl-id="f224">Un elemento</li>
+  <li class="list-group-item" data-sl-id="f225">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f226">Un tercer elemento</li>
+</ul>
+<ul class="list-group list-group-horizontal-sm">
+  <li class="list-group-item" data-sl-id="f227">Un elemento</li>
+  <li class="list-group-item" data-sl-id="f228">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f229">Un tercer elemento</li>
+</ul>
+<ul class="list-group list-group-horizontal-md">
+  <li class="list-group-item" data-sl-id="f230">Un elemento</li>
+  <li class="list-group-item" data-sl-id="f231">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f232">Un tercer elemento</li>
+</ul>
+<ul class="list-group list-group-horizontal-lg">
+  <li class="list-group-item" data-sl-id="f233">Un elemento</li>
+  <li class="list-group-item" data-sl-id="f234">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f235">Un tercer elemento</li>
+</ul>
+<ul class="list-group list-group-horizontal-xl">
+  <li class="list-group-item" data-sl-id="f236">Un elemento</li>
+  <li class="list-group-item" data-sl-id="f237">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f238">Un tercer elemento</li>
+</ul>
+<ul class="list-group list-group-horizontal-xxl">
+  <li class="list-group-item" data-sl-id="f239">Un elemento</li>
+  <li class="list-group-item" data-sl-id="f240">Un segundo elemento</li>
+  <li class="list-group-item" data-sl-id="f241">Un tercer elemento</li>
+</ul>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f242">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group list-group-horizontal"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>An item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group list-group-horizontal-sm"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>An item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group list-group-horizontal-md"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>An item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group list-group-horizontal-lg"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>An item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group list-group-horizontal-xl"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>An item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group list-group-horizontal-xxl"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>An item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A second item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A third item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="contextual-classes" data-sl-id="f243">Clases contextuales<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#contextual-classes" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f244">Usa clases contextuales para estilizar los elementos de lista con un fondo y color con estado.</p>
+<div class="bd-example">
+<ul class="list-group">
+  <li class="list-group-item" data-sl-id="f245">Un elemento de grupo de lista predeterminado simple</li>
+
+  <li class="list-group-item list-group-item-primary" data-sl-id="f246">Un elemento de grupo de lista primary simple</li>
+  <li class="list-group-item list-group-item-secondary" data-sl-id="f247">Un elemento de grupo de lista secondary simple</li>
+  <li class="list-group-item list-group-item-success" data-sl-id="f248">Un elemento de grupo de lista success simple</li>
+  <li class="list-group-item list-group-item-danger" data-sl-id="f249">Un elemento de grupo de lista danger simple</li>
+  <li class="list-group-item list-group-item-warning" data-sl-id="f250">Un elemento de grupo de lista warning simple</li>
+  <li class="list-group-item list-group-item-info" data-sl-id="f251">Un elemento de grupo de lista info simple</li>
+  <li class="list-group-item list-group-item-light" data-sl-id="f252">Un elemento de grupo de lista light simple</li>
+  <li class="list-group-item list-group-item-dark" data-sl-id="f253">Un elemento de grupo de lista dark simple</li>
+</ul>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f254">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>A simple default list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-primary"</span><span class="p">&gt;</span>A simple primary list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-secondary"</span><span class="p">&gt;</span>A simple secondary list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-success"</span><span class="p">&gt;</span>A simple success list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-danger"</span><span class="p">&gt;</span>A simple danger list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-warning"</span><span class="p">&gt;</span>A simple warning list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-info"</span><span class="p">&gt;</span>A simple info list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-light"</span><span class="p">&gt;</span>A simple light list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-dark"</span><span class="p">&gt;</span>A simple dark list group item<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<p data-sl-id="f255">Las clases contextuales también funcionan con <code>.list-group-item-action</code>. Ten en cuenta la adición de los estilos hover aquí no presentes en el ejemplo anterior. También se soporta el estado <code>.active</code>; aplícalo para indicar una selección activa en un elemento de grupo de lista contextual.</p>
+<div class="bd-example">
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action" data-sl-id="f256">Un elemento de grupo de lista predeterminado simple</a>
+
+  <a href="#" class="list-group-item list-group-item-action list-group-item-primary" data-sl-id="f257">Un elemento de grupo de lista primary simple</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-secondary" data-sl-id="f258">Un elemento de grupo de lista secondary simple</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-success" data-sl-id="f259">Un elemento de grupo de lista success simple</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-danger" data-sl-id="f260">Un elemento de grupo de lista danger simple</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-warning" data-sl-id="f261">Un elemento de grupo de lista warning simple</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-info" data-sl-id="f262">Un elemento de grupo de lista info simple</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-light" data-sl-id="f263">Un elemento de grupo de lista light simple</a>
+  <a href="#" class="list-group-item list-group-item-action list-group-item-dark" data-sl-id="f264">Un elemento de grupo de lista dark simple</a>
+</div>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f265">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span><span class="p">&gt;</span>A simple default list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action list-group-item-primary"</span><span class="p">&gt;</span>A simple primary list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action list-group-item-secondary"</span><span class="p">&gt;</span>A simple secondary list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action list-group-item-success"</span><span class="p">&gt;</span>A simple success list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action list-group-item-danger"</span><span class="p">&gt;</span>A simple danger list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action list-group-item-warning"</span><span class="p">&gt;</span>A simple warning list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action list-group-item-info"</span><span class="p">&gt;</span>A simple info list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action list-group-item-light"</span><span class="p">&gt;</span>A simple light list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action list-group-item-dark"</span><span class="p">&gt;</span>A simple dark list group item<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-callout bd-callout-info">
+<h5 id="conveying-meaning-to-assistive-technologies" data-sl-id="f266">Transmisión de significado a tecnologías asistivas</h5>
+<p data-sl-id="f267">Usar color para añadir significado solo proporciona una indicación visual, que no será transmitida a los usuarios de tecnologías asistivas – como los lectores de pantalla. Asegúrate de que la información denotada por el color sea evidente desde el contenido mismo (ej. el texto visible), o se incluya mediante medios alternativos, como texto adicional oculto con la clase <code>.visually-hidden</code>.</p></div>
+
+<h2 id="with-badges" data-sl-id="f268">Con insignias<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#with-badges" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f269">Añade insignias a cualquier elemento de grupo de lista para mostrar contadores de no leídos, actividad y más con la ayuda de algunas <a href="/docs/5.1/utilities/flex/">utilidades</a>.</p>
+<div class="bd-example">
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center" data-sl-id="f270">Un elemento de lista
+    <span class="badge bg-primary rounded-pill">14</span></li>
+  <li class="list-group-item d-flex justify-content-between align-items-center" data-sl-id="f271">Un segundo elemento de lista
+    <span class="badge bg-primary rounded-pill">2</span></li>
+  <li class="list-group-item d-flex justify-content-between align-items-center" data-sl-id="f272">Un tercer elemento de lista
+    <span class="badge bg-primary rounded-pill">1</span></li>
+</ul>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f273">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item d-flex justify-content-between align-items-center"</span><span class="p">&gt;</span>
+    A list item
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge bg-primary rounded-pill"</span><span class="p">&gt;</span>14<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item d-flex justify-content-between align-items-center"</span><span class="p">&gt;</span>
+    A second list item
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge bg-primary rounded-pill"</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item d-flex justify-content-between align-items-center"</span><span class="p">&gt;</span>
+    A third list item
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"badge bg-primary rounded-pill"</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="custom-content" data-sl-id="f274">Contenido personalizado<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#custom-content" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f275">Añade casi cualquier HTML dentro, incluso para grupos de lista enlazados como el de abajo, con la ayuda de las <a href="/docs/5.1/utilities/flex/">utilidades de flexbox</a>.</p>
+<div class="bd-example">
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1" data-sl-id="f276">Encabezado del elemento de grupo de lista</h5>
+      <small data-sl-id="f277">Hace 3 días</small>
+    </div>
+    <p class="mb-1" data-sl-id="f278">Algún contenido de marcador de posición en un párrafo.</p>
+    <small data-sl-id="f279">Y algo de letra pequeña.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1" data-sl-id="f280">Encabezado del elemento de grupo de lista</h5>
+      <small class="text-muted" data-sl-id="f281">Hace 3 días</small>
+    </div>
+    <p class="mb-1" data-sl-id="f282">Algún contenido de marcador de posición en un párrafo.</p>
+    <small class="text-muted" data-sl-id="f283">Y algo de letra pequeña silenciada.</small>
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1" data-sl-id="f284">Encabezado del elemento de grupo de lista</h5>
+      <small class="text-muted" data-sl-id="f285">Hace 3 días</small>
+    </div>
+    <p class="mb-1" data-sl-id="f286">Algún contenido de marcador de posición en un párrafo.</p>
+    <small class="text-muted" data-sl-id="f287">Y algo de letra pequeña silenciada.</small>
+  </a>
+</div>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f288">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action active"</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">"true"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-flex w-100 justify-content-between"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-1"</span><span class="p">&gt;</span>List group item heading<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>3 days ago<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-1"</span><span class="p">&gt;</span>Some placeholder content in a paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>And some small print.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-flex w-100 justify-content-between"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-1"</span><span class="p">&gt;</span>List group item heading<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">"text-muted"</span><span class="p">&gt;</span>3 days ago<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-1"</span><span class="p">&gt;</span>Some placeholder content in a paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">"text-muted"</span><span class="p">&gt;</span>And some muted small print.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"d-flex w-100 justify-content-between"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-1"</span><span class="p">&gt;</span>List group item heading<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">"text-muted"</span><span class="p">&gt;</span>3 days ago<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-1"</span><span class="p">&gt;</span>Some placeholder content in a paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">"text-muted"</span><span class="p">&gt;</span>And some muted small print.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="checkboxes-and-radios" data-sl-id="f289">Casillas de verificación y radios<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#checkboxes-and-radios" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f290">Coloca las casillas de verificación y radios de Bootstrap dentro de los elementos del grupo de lista y personalízalos según sea necesario. Puedes usarlos sin <code>&lt;label&gt;</code>s, pero por favor recuerda incluir un atributo <code>aria-label</code> y su valor para accesibilidad.</p>
+<div class="bd-example">
+<ul class="list-group">
+  <li class="list-group-item" data-sl-id="f291"><input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+    Primera casilla de verificación</li>
+  <li class="list-group-item" data-sl-id="f292"><input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+    Segunda casilla de verificación</li>
+  <li class="list-group-item" data-sl-id="f293"><input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+    Tercera casilla de verificación</li>
+  <li class="list-group-item" data-sl-id="f294"><input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+    Cuarta casilla de verificación</li>
+  <li class="list-group-item" data-sl-id="f295"><input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+    Quinta casilla de verificación</li>
+</ul>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f296">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
+    First checkbox
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
+    Second checkbox
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
+    Third checkbox
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
+    Fourth checkbox
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">"..."</span><span class="p">&gt;</span>
+    Fifth checkbox
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+<p data-sl-id="f297">Y si quieres que los <code>&lt;label&gt;</code>s sean el <code>.list-group-item</code> para grandes áreas de clic, también puedes hacerlo.</p>
+<div class="bd-example">
+<div class="list-group">
+  <label class="list-group-item" data-sl-id="f298"><input class="form-check-input me-1" type="checkbox" value="">
+    Primera casilla de verificación</label>
+  <label class="list-group-item" data-sl-id="f299"><input class="form-check-input me-1" type="checkbox" value="">
+    Segunda casilla de verificación</label>
+  <label class="list-group-item" data-sl-id="f300"><input class="form-check-input me-1" type="checkbox" value="">
+    Tercera casilla de verificación</label>
+  <label class="list-group-item" data-sl-id="f301"><input class="form-check-input me-1" type="checkbox" value="">
+    Cuarta casilla de verificación</label>
+  <label class="list-group-item" data-sl-id="f302"><input class="form-check-input me-1" type="checkbox" value="">
+    Quinta casilla de verificación</label>
+</div>
+</div><div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f303">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span>
+    First checkbox
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span>
+    Second checkbox
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span>
+    Third checkbox
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span>
+    Fourth checkbox
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"form-check-input me-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"checkbox"</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span>
+    Fifth checkbox
+  <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="sass" data-sl-id="f304">Sass<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#sass" style="padding-left: 0.375em;"></a></h2>
+<h3 id="variables" data-sl-id="f305">Variables<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#variables" style="padding-left: 0.375em;"></a></h3>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f306">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$list-group-color</span><span class="o">:</span>                  <span class="nv">$gray-900</span><span class="p">;</span>
+<span class="nv">$list-group-bg</span><span class="o">:</span>                     <span class="nv">$white</span><span class="p">;</span>
+<span class="nv">$list-group-border-color</span><span class="o">:</span>           <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mf">.125</span><span class="p">);</span>
+<span class="nv">$list-group-border-width</span><span class="o">:</span>           <span class="nv">$border-width</span><span class="p">;</span>
+<span class="nv">$list-group-border-radius</span><span class="o">:</span>          <span class="nv">$border-radius</span><span class="p">;</span>
+
+<span class="nv">$list-group-item-padding-y</span><span class="o">:</span>         <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
+<span class="nv">$list-group-item-padding-x</span><span class="o">:</span>         <span class="nv">$spacer</span><span class="p">;</span>
+<span class="nv">$list-group-item-bg-scale</span><span class="o">:</span>          <span class="o">-</span><span class="mi">80</span><span class="kt">%</span><span class="p">;</span>
+<span class="nv">$list-group-item-color-scale</span><span class="o">:</span>       <span class="mi">40</span><span class="kt">%</span><span class="p">;</span>
+
+<span class="nv">$list-group-hover-bg</span><span class="o">:</span>               <span class="nv">$gray-100</span><span class="p">;</span>
+<span class="nv">$list-group-active-color</span><span class="o">:</span>           <span class="nv">$component-active-color</span><span class="p">;</span>
+<span class="nv">$list-group-active-bg</span><span class="o">:</span>              <span class="nv">$component-active-bg</span><span class="p">;</span>
+<span class="nv">$list-group-active-border-color</span><span class="o">:</span>    <span class="nv">$list-group-active-bg</span><span class="p">;</span>
+
+<span class="nv">$list-group-disabled-color</span><span class="o">:</span>         <span class="nv">$gray-600</span><span class="p">;</span>
+<span class="nv">$list-group-disabled-bg</span><span class="o">:</span>            <span class="nv">$list-group-bg</span><span class="p">;</span>
+
+<span class="nv">$list-group-action-color</span><span class="o">:</span>           <span class="nv">$gray-700</span><span class="p">;</span>
+<span class="nv">$list-group-action-hover-color</span><span class="o">:</span>     <span class="nv">$list-group-action-color</span><span class="p">;</span>
+
+<span class="nv">$list-group-action-active-color</span><span class="o">:</span>    <span class="nv">$body-color</span><span class="p">;</span>
+<span class="nv">$list-group-action-active-bg</span><span class="o">:</span>       <span class="nv">$gray-200</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="mixins" data-sl-id="f307">Mixins<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#mixins" style="padding-left: 0.375em;"></a></h3>
+<p data-sl-id="f308">Usado en combinación con <code>$theme-colors</code> para generar las <a href="#contextual-classes">clases variantes contextuales</a> para los <code>.list-group-item</code>s.</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f309">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> list-group-item-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$background</span><span class="o">,</span> <span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.list-group-item-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$background</span><span class="p">;</span>
+
+    <span class="k">&amp;</span><span class="nc">.list-group-item-action</span> <span class="p">{</span>
+      <span class="na">&amp;</span><span class="o">:</span><span class="n">hover</span><span class="o">,</span>
+      <span class="o">&amp;:</span><span class="ni">focus</span> <span class="p">{</span>
+        <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+        <span class="na">background-color</span><span class="o">:</span> <span class="nf">shade-color</span><span class="p">(</span><span class="nv">$background</span><span class="o">,</span> <span class="mi">10</span><span class="kt">%</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nc">.active</span> <span class="p">{</span>
+        <span class="na">color</span><span class="o">:</span> <span class="nv">$white</span><span class="p">;</span>
+        <span class="na">background-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+        <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="loop" data-sl-id="f310">Loop<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#loop" style="padding-left: 0.375em;"></a></h3>
+<p data-sl-id="f311">Bucle que genera las clases modificadoras con el mixin <code>list-group-item-variant()</code>.</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f312">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// List group contextual variants
+</span><span class="c1">//
+</span><span class="c1">// Add modifier classes to change text and background color on individual items.
+</span><span class="c1">// Organizationally, this must come after the `:hover` states.
+</span><span class="c1"></span>
+<span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
+  <span class="nv">$list-group-variant-bg</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-bg-scale</span><span class="p">);</span>
+  <span class="nv">$list-group-variant-color</span><span class="o">:</span> <span class="nf">shift-color</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nv">$list-group-item-color-scale</span><span class="p">);</span>
+  <span class="k">@if</span> <span class="p">(</span><span class="nf">contrast-ratio</span><span class="p">(</span><span class="nv">$list-group-variant-bg</span><span class="o">,</span> <span class="nv">$list-group-variant-color</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nv">$min-contrast-ratio</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$list-group-variant-color</span><span class="o">:</span> <span class="nf">mix</span><span class="p">(</span><span class="nv">$value</span><span class="o">,</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$list-group-variant-bg</span><span class="p">)</span><span class="o">,</span> <span class="nf">abs</span><span class="p">(</span><span class="nv">$list-group-item-color-scale</span><span class="p">));</span>
+  <span class="p">}</span>
+
+  <span class="k">@include</span><span class="nd"> list-group-item-variant</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$list-group-variant-bg</span><span class="o">,</span> <span class="nv">$list-group-variant-color</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="javascript-behavior" data-sl-id="f313">Comportamiento de JavaScript<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#javascript-behavior" style="padding-left: 0.375em;"></a></h2>
+<p data-sl-id="f314">Usa el plugin de JavaScript de pestañas—inclúyelo individualmente o a través del archivo compilado <code>bootstrap.js</code>—para extender nuestro grupo de lista y crear paneles navegables por pestañas de contenido local.</p>
+<div class="bd-example" role="tabpanel">
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home" data-sl-id="f315">Inicio</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile" data-sl-id="f316">Perfil</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages" data-sl-id="f317">Mensajes</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings" data-sl-id="f318">Configuración</a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+          <p data-sl-id="f319">Algún contenido de marcador de posición en un párrafo relacionado con "Inicio". Y algo más de contenido, usado aquí solo para rellenar y completar este panel de pestañas. En producción, obviamente tendrías más contenido real aquí. Y no solo texto. Podría ser cualquier cosa, realmente. Texto, imágenes, formularios.</p>
+        </div>
+        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+          <p data-sl-id="f320">Algún contenido de marcador de posición en un párrafo relacionado con "Perfil". Y algo más de contenido, usado aquí solo para rellenar y completar este panel de pestañas. En producción, obviamente tendrías más contenido real aquí. Y no solo texto. Podría ser cualquier cosa, realmente. Texto, imágenes, formularios.</p>
+        </div>
+        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+          <p data-sl-id="f321">Algún contenido de marcador de posición en un párrafo relacionado con "Mensajes". Y algo más de contenido, usado aquí solo para rellenar y completar este panel de pestañas. En producción, obviamente tendrías más contenido real aquí. Y no solo texto. Podría ser cualquier cosa, realmente. Texto, imágenes, formularios.</p>
+        </div>
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+          <p data-sl-id="f322">Algún contenido de marcador de posición en un párrafo relacionado con "Configuración". Y algo más de contenido, usado aquí solo para rellenar y completar este panel de pestañas. En producción, obviamente tendrías más contenido real aquí. Y no solo texto. Podría ser cualquier cosa, realmente. Texto, imágenes, formularios.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f323">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"row"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"col-4"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span> <span class="na">id</span><span class="o">=</span><span class="s">"list-tab"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tablist"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action active"</span> <span class="na">id</span><span class="o">=</span><span class="s">"list-home-list"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#list-home"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">"list-home"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">id</span><span class="o">=</span><span class="s">"list-profile-list"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#list-profile"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">"list-profile"</span><span class="p">&gt;</span>Profile<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">id</span><span class="o">=</span><span class="s">"list-messages-list"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#list-messages"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">"list-messages"</span><span class="p">&gt;</span>Messages<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">id</span><span class="o">=</span><span class="s">"list-settings-list"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#list-settings"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">"list-settings"</span><span class="p">&gt;</span>Settings<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"col-8"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-content"</span> <span class="na">id</span><span class="o">=</span><span class="s">"nav-tabContent"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane fade show active"</span> <span class="na">id</span><span class="o">=</span><span class="s">"list-home"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">"list-home-list"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane fade"</span> <span class="na">id</span><span class="o">=</span><span class="s">"list-profile"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">"list-profile-list"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane fade"</span> <span class="na">id</span><span class="o">=</span><span class="s">"list-messages"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">"list-messages-list"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane fade"</span> <span class="na">id</span><span class="o">=</span><span class="s">"list-settings"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">"list-settings-list"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="using-data-attributes" data-sl-id="f324">Uso de atributos data<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#using-data-attributes" style="padding-left: 0.375em;"></a></h3>
+<p data-sl-id="f325">Puedes activar una navegación de grupo de lista sin escribir ningún JavaScript simplemente especificando <code>data-bs-toggle="list"</code> en un elemento. Usa estos atributos data en <code>.list-group-item</code>.</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f326">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>
+  <span class="c">&lt;!-- List group --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span> <span class="na">id</span><span class="o">=</span><span class="s">"myList"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tablist"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action active"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#home"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#profile"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span><span class="p">&gt;</span>Profile<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#messages"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span><span class="p">&gt;</span>Messages<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#settings"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span><span class="p">&gt;</span>Settings<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="c">&lt;!-- Tab panes --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-content"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane active"</span> <span class="na">id</span><span class="o">=</span><span class="s">"home"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane"</span> <span class="na">id</span><span class="o">=</span><span class="s">"profile"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane"</span> <span class="na">id</span><span class="o">=</span><span class="s">"messages"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane"</span> <span class="na">id</span><span class="o">=</span><span class="s">"settings"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="via-javascript" data-sl-id="f327">A través de JavaScript<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#via-javascript" style="padding-left: 0.375em;"></a></h3>
+<p data-sl-id="f328">Habilita un elemento de lista navegable por pestañas vía JavaScript (cada elemento de lista debe activarse individualmente):</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f329">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerTabList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'#myTab a'</span><span class="p">))</span>
+<span class="nx">triggerTabList</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">tabTrigger</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span>
+
+  <span class="nx">triggerEl</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+    <span class="nx">tabTrigger</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+  <span class="p">})</span>
+<span class="p">})</span>
+</code></pre></div><p data-sl-id="f330">Puedes activar elementos de lista individuales de varias maneras:</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f331">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#myTab a[href="#profile"]'</span><span class="p">)</span>
+<span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">).</span><span class="nx">show</span><span class="p">()</span> <span class="c1">// Select tab by name
+</span><span class="c1"></span>
+<span class="kd">var</span> <span class="nx">triggerFirstTabEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#myTab li:first-child a'</span><span class="p">)</span>
+<span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerFirstTabEl</span><span class="p">).</span><span class="nx">show</span><span class="p">()</span> <span class="c1">// Select first tab
+</span></code></pre></div><h3 id="fade-effect" data-sl-id="f332">Efecto de desvanecimiento<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#fade-effect" style="padding-left: 0.375em;"></a></h3>
+<p data-sl-id="f333">Para hacer que el panel de pestañas se desvanezca al aparecer, añade <code>.fade</code> a cada <code>.tab-pane</code>. El primer panel de pestaña también debe tener <code>.show</code> para hacer visible el contenido inicial.</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f334">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-content"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane fade show active"</span> <span class="na">id</span><span class="o">=</span><span class="s">"home"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane fade"</span> <span class="na">id</span><span class="o">=</span><span class="s">"profile"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane fade"</span> <span class="na">id</span><span class="o">=</span><span class="s">"messages"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane fade"</span> <span class="na">id</span><span class="o">=</span><span class="s">"settings"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="methods" data-sl-id="f335">Métodos<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#methods" style="padding-left: 0.375em;"></a></h3>
+<h4 id="constructor" data-sl-id="f336">constructor<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#constructor" style="padding-left: 0.375em;"></a></h4>
+<p data-sl-id="f337">Activa un elemento de lista y un contenedor de contenido. La pestaña debe tener un <code>data-bs-target</code> o un <code>href</code> que apunte a un nodo contenedor en el DOM.</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f338">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group"</span> <span class="na">id</span><span class="o">=</span><span class="s">"myList"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tablist"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action active"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#home"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#profile"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span><span class="p">&gt;</span>Profile<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#messages"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span><span class="p">&gt;</span>Messages<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"list-group-item list-group-item-action"</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">"list"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#settings"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tab"</span><span class="p">&gt;</span>Settings<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-content"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane active"</span> <span class="na">id</span><span class="o">=</span><span class="s">"home"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane"</span> <span class="na">id</span><span class="o">=</span><span class="s">"profile"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane"</span> <span class="na">id</span><span class="o">=</span><span class="s">"messages"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"tab-pane"</span> <span class="na">id</span><span class="o">=</span><span class="s">"settings"</span> <span class="na">role</span><span class="o">=</span><span class="s">"tabpanel"</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="kd">var</span> <span class="nx">firstTabEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#myTab a:last-child'</span><span class="p">)</span>
+  <span class="kd">var</span> <span class="nx">firstTab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="nx">firstTabEl</span><span class="p">)</span>
+
+  <span class="nx">firstTab</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><h4 id="show" data-sl-id="f339">show<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#show" style="padding-left: 0.375em;"></a></h4>
+<p data-sl-id="f340">Selecciona el elemento de lista dado y muestra su panel asociado. Cualquier otro elemento de lista que hubiera sido seleccionado previamente deja de estarlo y su panel asociado se oculta. <strong>Retorna al llamador antes de que el panel de pestaña se haya mostrado realmente</strong> (por ejemplo, antes de que ocurra el evento <code>shown.bs.tab</code>).</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f341">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">  <span class="kd">var</span> <span class="nx">someListItemEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#someListItem'</span><span class="p">)</span>
+  <span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="nx">someListItemEl</span><span class="p">)</span>
+
+  <span class="nx">tab</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
+</code></pre></div><h4 id="dispose" data-sl-id="f342">dispose<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#dispose" style="padding-left: 0.375em;"></a></h4>
+<p data-sl-id="f343">Destruye la pestaña de un elemento.</p>
+<h4 id="getinstance" data-sl-id="f344">getInstance<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#getinstance" style="padding-left: 0.375em;"></a></h4>
+<p data-sl-id="f345">Método <em>estático</em> que te permite obtener la instancia de pestaña asociada a un elemento del DOM</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f346">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#trigger'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tab instance
+</span></code></pre></div><h4 id="getorcreateinstance" data-sl-id="f347">getOrCreateInstance<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#getorcreateinstance" style="padding-left: 0.375em;"></a></h4>
+<p data-sl-id="f348">Método <em>estático</em> que te permite obtener la instancia de tab asociada a un elemento del DOM, o crear una nueva en caso de que no haya sido inicializada</p>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f349">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#trigger'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tab instance
+</span></code></pre></div><h3 id="events" data-sl-id="f350">Eventos<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#events" style="padding-left: 0.375em;"></a></h3>
+<p data-sl-id="f351">Al mostrar una pestaña nueva, los eventos se disparan en el siguiente orden:</p>
+<ol>
+<li data-sl-id="f352"><code>hide.bs.tab</code> (en la pestaña activa actual)</li>
+<li data-sl-id="f353"><code>show.bs.tab</code> (en la pestaña que se va a mostrar)</li>
+<li data-sl-id="f354"><code>hidden.bs.tab</code> (en la pestaña activa anterior, la misma que para el evento <code>hide.bs.tab</code>)</li>
+<li data-sl-id="f355"><code>shown.bs.tab</code> (en la pestaña recién activada que se acaba de mostrar, la misma que para el evento <code>show.bs.tab</code>)</li>
+</ol>
+<p data-sl-id="f356">Si ninguna pestaña estaba activa ya, los eventos <code>hide.bs.tab</code> y <code>hidden.bs.tab</code> no se dispararán.</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th style="width: 150px;" data-sl-id="f357">Tipo de evento</th>
+      <th data-sl-id="f358">Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>show.bs.tab</code></td>
+      <td data-sl-id="f359">Este evento se dispara al mostrar la pestaña, pero antes de que la nueva pestaña se haya mostrado. Usa <code>event.target</code> y <code>event.relatedTarget</code> para apuntar a la pestaña activa y a la pestaña activa anterior (si está disponible) respectivamente.</td>
+    </tr>
+    <tr>
+      <td><code>shown.bs.tab</code></td>
+      <td data-sl-id="f360">Este evento se dispara al mostrar la pestaña después de que una pestaña se haya mostrado. Usa <code>event.target</code> y <code>event.relatedTarget</code> para apuntar a la pestaña activa y a la pestaña activa anterior (si está disponible) respectivamente.</td>
+    </tr>
+    <tr>
+      <td><code>hide.bs.tab</code></td>
+      <td data-sl-id="f361">Este evento se dispara cuando se va a mostrar una pestaña nueva (y por tanto la pestaña activa anterior se va a ocultar). Usa <code>event.target</code> y <code>event.relatedTarget</code> para apuntar a la pestaña activa actual y a la nueva pestaña que pronto estará activa, respectivamente.</td>
+    </tr>
+    <tr>
+      <td><code>hidden.bs.tab</code></td>
+      <td data-sl-id="f362">Este evento se dispara después de que se muestra una pestaña nueva (y por tanto la pestaña activa anterior queda oculta). Usa <code>event.target</code> y <code>event.relatedTarget</code> para apuntar a la pestaña activa anterior y a la nueva pestaña activa, respectivamente.</td>
+    </tr>
+  </tbody>
+</table>
+<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard" data-sl-id="f363">Copiar</button></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tabElms</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">'a[data-bs-toggle="list"]'</span><span class="p">)</span>
+<span class="nx">tabElms</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">tabElm</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">tabElm</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'shown.bs.tab'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// newly activated tab
+</span><span class="c1"></span>    <span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// previous active tab
+</span><span class="c1"></span>  <span class="p">})</span>
+<span class="p">}</span>
+</code></pre></div>
+      </div>
+    </main>
+  </div>
+
+    <footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap" data-sl-id="f364"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+          <span class="fs-5">Bootstrap</span></a>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2" data-sl-id="f365">Diseñado y construido con todo el amor del mundo por el <a href="/docs/5.1/about/team/">equipo de Bootstrap</a> con la ayuda de <a href="https://github.com/twbs/bootstrap/graphs/contributors">nuestros colaboradores</a>.</li>
+          <li class="mb-2" data-sl-id="f366">Código licenciado <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, documentación <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</li>
+          <li class="mb-2" data-sl-id="f367">Actualmente v5.1.3.</li>
+          <li class="mb-2" data-sl-id="f368">Analíticas por <a href="https://usefathom.com/ref/ADZSBE" target="_blank" rel="noopener">Fathom</a>.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5 data-sl-id="f369">Enlaces</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/" data-sl-id="f370">Inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1" data-sl-id="f371">Documentación</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/" data-sl-id="f372">Ejemplos</a></li>
+          
+          <li class="mb-2"><a href="https://blog.getbootstrap.com/" data-sl-id="f373">Blog</a></li>
+          <li class="mb-2"><a href="https://cottonbureau.com/people/bootstrap" data-sl-id="f374">Swag Store</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5 data-sl-id="f375">Guías</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.1/getting-started" data-sl-id="f376">Primeros pasos</a></li>
+          <li class="mb-2"><a href="/docs/5.1/examples/starter-template/" data-sl-id="f377">Plantilla de inicio</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/webpack/" data-sl-id="f378">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.1/getting-started/parcel/" data-sl-id="f379">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5 data-sl-id="f380">Proyectos</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap" data-sl-id="f381">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev" data-sl-id="f382">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons" data-sl-id="f383">Iconos</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs" data-sl-id="f384">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter" data-sl-id="f385">npm starter</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5 data-sl-id="f386">Comunidad</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues" data-sl-id="f387">Issues</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions" data-sl-id="f388">Discusiones</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs" data-sl-id="f389">Patrocinadores corporativos</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap" data-sl-id="f390">Open Collective</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5" data-sl-id="f391">Stack Overflow</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/5.1/assets/js/docs.min.js"></script>
+
+  
+
+<div class="text-center text-muted small py-3 border-top">
+  Traducción mantenida por <strong>Esdocu</strong>. Visita <a href="https://esdocu.com" rel="noopener">esdocu.com</a> para ver más documentaciones traducidas.
+</div>
+</body></html>

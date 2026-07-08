@@ -1,0 +1,252 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Ejemplo de pago · Bootstrap en Español v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://getbootstrap.com/docs/5.0/examples/checkout"><link rel="alternate" hreflang="es" href="https://getbootstrap.esdocu.com/docs/5.0/examples/checkout"><link rel="alternate" hreflang="x-default" href="https://getbootstrap.com/docs/5.0/examples/checkout"></head>
+  <body class="bg-light">
+    
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+      <h2 data-sl-id="f1">Formulario de pago</h2>
+      <p class="lead" data-sl-id="f2">A continuación se muestra un formulario de ejemplo construido completamente con los controles de formulario de Bootstrap. Cada grupo de formulario requerido tiene un estado de validación que puede activarse al intentar enviar el formulario sin completarlo.</p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3" data-sl-id="f3"><span class="text-primary">Tu carrito</span>
+          <span class="badge bg-primary rounded-pill">3</span></h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0" data-sl-id="f4">Nombre del producto</h6>
+              <small class="text-muted" data-sl-id="f5">Breve descripción</small>
+            </div>
+            <span class="text-muted">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0" data-sl-id="f6">Segundo producto</h6>
+              <small class="text-muted" data-sl-id="f7">Breve descripción</small>
+            </div>
+            <span class="text-muted">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0" data-sl-id="f8">Tercer artículo</h6>
+              <small class="text-muted" data-sl-id="f9">Breve descripción</small>
+            </div>
+            <span class="text-muted">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0" data-sl-id="f10">Código promocional</h6>
+              <small data-sl-id="f11">EXAMPLECODE</small>
+            </div>
+            <span class="text-success">−$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span data-sl-id="f12">Total (USD)</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Código promocional">
+            <button type="submit" class="btn btn-secondary" data-sl-id="f13">Canjear</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3" data-sl-id="f14">Dirección de facturación</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label" data-sl-id="f15">Nombre</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback" data-sl-id="f16">Se requiere un nombre válido.</div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label" data-sl-id="f17">Apellido</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback" data-sl-id="f18">Se requiere un apellido válido.</div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label" data-sl-id="f19">Nombre de usuario</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Nombre de usuario" required="">
+              <div class="invalid-feedback" data-sl-id="f20">Se requiere tu nombre de usuario.</div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label" data-sl-id="f21">Correo electrónico <span class="text-muted">(Opcional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback" data-sl-id="f22">Por favor, introduce una dirección de correo electrónico válida para las actualizaciones de envío.</div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label" data-sl-id="f23">Dirección</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+              <div class="invalid-feedback" data-sl-id="f24">Por favor, introduce tu dirección de envío.</div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label" data-sl-id="f25">Dirección 2 <span class="text-muted">(Opcional)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Apartamento o suite">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label" data-sl-id="f26">País</label>
+              <select class="form-select" id="country" required="">
+                <option value="" data-sl-id="f27">Elegir...</option>
+                <option data-sl-id="f28">Estados Unidos</option>
+              </select>
+              <div class="invalid-feedback" data-sl-id="f29">Por favor, selecciona un país válido.</div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label" data-sl-id="f30">Estado</label>
+              <select class="form-select" id="state" required="">
+                <option value="" data-sl-id="f31">Elegir...</option>
+                <option data-sl-id="f32">California</option>
+              </select>
+              <div class="invalid-feedback" data-sl-id="f33">Por favor, proporciona un estado válido.</div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label" data-sl-id="f34">Código postal</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <div class="invalid-feedback" data-sl-id="f35">Se requiere código postal.</div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address" data-sl-id="f36">La dirección de envío es la misma que mi dirección de facturación</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info" data-sl-id="f37">Guardar esta información para la próxima vez</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3" data-sl-id="f38">Pago</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+              <label class="form-check-label" for="credit" data-sl-id="f39">Tarjeta de crédito</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="debit" data-sl-id="f40">Tarjeta de débito</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="paypal" data-sl-id="f41">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label" data-sl-id="f42">Nombre en la tarjeta</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+              <small class="text-muted" data-sl-id="f43">Nombre completo como aparece en la tarjeta</small>
+              <div class="invalid-feedback" data-sl-id="f44">Se requiere el nombre en la tarjeta</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label" data-sl-id="f45">Número de tarjeta de crédito</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+              <div class="invalid-feedback" data-sl-id="f46">Se requiere el número de tarjeta de crédito</div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label" data-sl-id="f47">Caducidad</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+              <div class="invalid-feedback" data-sl-id="f48">Se requiere fecha de caducidad</div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label" data-sl-id="f49">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+              <div class="invalid-feedback" data-sl-id="f50">Se requiere código de seguridad</div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit" data-sl-id="f51">Continuar al pago</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1" data-sl-id="f52">© 2017–2021 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#" data-sl-id="f53">Privacidad</a></li>
+      <li class="list-inline-item"><a href="#" data-sl-id="f54">Términos</a></li>
+      <li class="list-inline-item"><a href="#" data-sl-id="f55">Soporte</a></li>
+    </ul>
+  </footer>
+</div>
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+      <script src="form-validation.js"></script>
+  
+
+<div class="text-center text-muted small py-3 border-top">
+  Traducción mantenida por <strong>Esdocu</strong>. Visita <a href="https://esdocu.com" rel="noopener">esdocu.com</a> para ver más documentaciones traducidas.
+</div>
+</body></html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Plantilla de blog · Bootstrap en Español v5.2</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
+
+    
+
+    
+
+<link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  <link rel="alternate" hreflang="en" href="https://getbootstrap.com/docs/5.2/examples/blog"><link rel="alternate" hreflang="es" href="https://getbootstrap.esdocu.com/docs/5.2/examples/blog"><link rel="alternate" hreflang="x-default" href="https://getbootstrap.com/docs/5.2/examples/blog"></head>
+  <body>
+    
+<div class="container">
+  <header class="blog-header lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="link-secondary" href="#" data-sl-id="f1">Suscríbete</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="#" data-sl-id="f2">Grande</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Buscar" data-sl-id="f3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg></a>
+        <a class="btn btn-sm btn-outline-secondary" href="#" data-sl-id="f4">Regístrate</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="#" data-sl-id="f5">Mundo</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f6">EE.UU.</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f7">Tecnología</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f8">Diseño</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f9">Cultura</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f10">Negocios</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f11">Política</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f12">Opinión</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f13">Ciencia</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f14">Salud</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f15">Estilo</a>
+      <a class="p-2 link-secondary" href="#" data-sl-id="f16">Viajes</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic" data-sl-id="f17">Título de una publicación de blog destacada más larga</h1>
+      <p class="lead my-3" data-sl-id="f18">Múltiples líneas de texto que forman la introducción, informando a los nuevos lectores de forma rápida y eficiente sobre lo más interesante en el contenido de esta publicación.</p>
+      <p class="lead mb-0"><a href="#" class="text-white fw-bold" data-sl-id="f19">Seguir leyendo...</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0" data-sl-id="f20">Publicación destacada</h3>
+          <div class="mb-1 text-muted" data-sl-id="f21">12 nov</div>
+          <p class="card-text mb-auto" data-sl-id="f22">Esta es una card más amplia con texto de apoyo debajo como introducción natural a contenido adicional.</p>
+          <a href="#" class="stretched-link" data-sl-id="f23">Seguir leyendo</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Design</strong>
+          <h3 class="mb-0" data-sl-id="f24">Título de la publicación</h3>
+          <div class="mb-1 text-muted" data-sl-id="f25">11 nov</div>
+          <p class="mb-auto" data-sl-id="f26">Esta es una card más amplia con texto de apoyo debajo como introducción natural a contenido adicional.</p>
+          <a href="#" class="stretched-link" data-sl-id="f27">Seguir leyendo</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom" data-sl-id="f28">Desde el Firehose</h3>
+
+      <article class="blog-post">
+        <h2 class="blog-post-title mb-1" data-sl-id="f29">Publicación de blog de ejemplo</h2>
+        <p class="blog-post-meta" data-sl-id="f30">1 de enero de 2021 por <a href="#">Mark</a></p>
+
+        <p data-sl-id="f31">Esta publicación de blog muestra algunos tipos diferentes de contenido que son compatibles y estilizados con Bootstrap. Tipografía básica, listas, tablas, imágenes, código y más son todos compatibles como se espera.</p>
+        <hr>
+        <p data-sl-id="f32">Este es algo de contenido de párrafo adicional de placeholder. Se ha escrito para llenar el espacio disponible y mostrar cómo un fragmento más largo de texto afecta al contenido circundante. Lo repetiremos a menudo para mantener la demostración fluida, así que estate atento a esta misma cadena de texto.</p>
+        <h2 data-sl-id="f33">Citas en bloque</h2>
+        <p data-sl-id="f34">Este es un ejemplo de blockquote en acción:</p>
+        <blockquote class="blockquote">
+          <p data-sl-id="f35">Aquí va el texto citado.</p>
+        </blockquote>
+        <p data-sl-id="f36">Este es algo de contenido de párrafo adicional de placeholder. Se ha escrito para llenar el espacio disponible y mostrar cómo un fragmento más largo de texto afecta al contenido circundante. Lo repetiremos a menudo para mantener la demostración fluida, así que estate atento a esta misma cadena de texto.</p>
+        <h3 data-sl-id="f37">Listas de ejemplo</h3>
+        <p data-sl-id="f38">Este es algo de contenido de párrafo adicional de placeholder. Es una versión ligeramente más corta del otro texto del cuerpo muy repetitivo usado en todo. Esta es una lista desordenada de ejemplo:</p>
+        <ul>
+          <li data-sl-id="f39">Primer elemento de la lista</li>
+          <li data-sl-id="f40">Segundo elemento de la lista con una descripción más larga</li>
+          <li data-sl-id="f41">Tercer elemento de la lista para cerrar</li>
+        </ul>
+        <p data-sl-id="f42">Y esta es una lista ordenada:</p>
+        <ol>
+          <li data-sl-id="f43">Primer elemento de la lista</li>
+          <li data-sl-id="f44">Segundo elemento de la lista con una descripción más larga</li>
+          <li data-sl-id="f45">Tercer elemento de la lista para cerrar</li>
+        </ol>
+        <p data-sl-id="f46">Y esta es una lista de definición:</p>
+        <dl>
+          <dt data-sl-id="f47">HyperText Markup Language (HTML)</dt>
+          <dd data-sl-id="f48">El lenguaje usado para describir y definir el contenido de una página Web</dd>
+          <dt data-sl-id="f49">Cascading Style Sheets (CSS)</dt>
+          <dd data-sl-id="f50">Usado para describir la apariencia del contenido Web</dd>
+          <dt data-sl-id="f51">JavaScript (JS)</dt>
+          <dd data-sl-id="f52">El lenguaje de programación usado para construir sitios y aplicaciones Web avanzados</dd>
+        </dl>
+        <h2 data-sl-id="f53">Elementos HTML en línea</h2>
+        <p data-sl-id="f54">HTML define una larga lista de etiquetas en línea disponibles, cuya lista completa se puede encontrar en la <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+        <ul>
+          <li data-sl-id="f55"><strong>Para poner texto en negrita</strong>, usa <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+          <li data-sl-id="f56"><em>Para poner texto en cursiva</em>, usa <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+          <li data-sl-id="f57">Las abreviaturas, como <abbr title="Lenguaje de Marcado de Hipertexto">HTML</abbr>, deben usar <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, con un atributo opcional <code class="language-plaintext highlighter-rouge">title</code> para la frase completa.</li>
+          <li data-sl-id="f58">Las citas, como <cite>— Mark Otto</cite>, deben usar <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+          <li data-sl-id="f59">El texto <del>eliminado</del> debe usar <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> y el texto <ins>insertado</ins> debe usar <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+          <li data-sl-id="f60">El texto en <sup>superíndice</sup> usa <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> y el texto en <sub>subíndice</sub> usa <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+        </ul>
+        <p data-sl-id="f61">La mayoría de estos elementos son estilizados por los navegadores con pocas modificaciones por nuestra parte.</p>
+        <h2 data-sl-id="f62">Encabezado</h2>
+        <p data-sl-id="f63">Este es algo de contenido de párrafo adicional de placeholder. Se ha escrito para llenar el espacio disponible y mostrar cómo un fragmento más largo de texto afecta al contenido circundante. Lo repetiremos a menudo para mantener la demostración fluida, así que estate atento a esta misma cadena de texto.</p>
+        <h3 data-sl-id="f64">Subtítulo</h3>
+        <p data-sl-id="f65">Este es algo de contenido de párrafo adicional de placeholder. Se ha escrito para llenar el espacio disponible y mostrar cómo un fragmento más largo de texto afecta al contenido circundante. Lo repetiremos a menudo para mantener la demostración fluida, así que estate atento a esta misma cadena de texto.</p>
+        <pre><code>Example code block</code></pre>
+        <p data-sl-id="f66">Este es algo de contenido de párrafo adicional de placeholder. Es una versión ligeramente más corta del otro texto del cuerpo muy repetitivo usado en todo.</p>
+      </article>
+
+      <article class="blog-post">
+        <h2 class="blog-post-title mb-1" data-sl-id="f67">Otra publicación de blog</h2>
+        <p class="blog-post-meta" data-sl-id="f68">23 de diciembre de 2020 por <a href="#">Jacob</a></p>
+
+        <p data-sl-id="f69">Este es algo de contenido de párrafo adicional de placeholder. Se ha escrito para llenar el espacio disponible y mostrar cómo un fragmento más largo de texto afecta al contenido circundante. Lo repetiremos a menudo para mantener la demostración fluida, así que estate atento a esta misma cadena de texto.</p>
+        <blockquote>
+          <p data-sl-id="f70">Aquí va una cita más larga, quizás con algo de <strong>texto enfatizado</strong> en el medio.</p>
+        </blockquote>
+        <p data-sl-id="f71">Este es algo de contenido de párrafo adicional de placeholder. Se ha escrito para llenar el espacio disponible y mostrar cómo un fragmento más largo de texto afecta al contenido circundante. Lo repetiremos a menudo para mantener la demostración fluida, así que estate atento a esta misma cadena de texto.</p>
+        <h3 data-sl-id="f72">Tabla de ejemplo</h3>
+        <p data-sl-id="f73">Y no te olvides de las tablas en estas publicaciones:</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th data-sl-id="f74">Nombre</th>
+              <th data-sl-id="f75">Votos positivos</th>
+              <th data-sl-id="f76">Votos negativos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-sl-id="f77">Alice</td>
+              <td>10</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td data-sl-id="f78">Bob</td>
+              <td>4</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td data-sl-id="f79">Charlie</td>
+              <td>7</td>
+              <td>9</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td data-sl-id="f80">Totales</td>
+              <td>21</td>
+              <td>23</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <p data-sl-id="f81">Este es algo de contenido de párrafo adicional de placeholder. Es una versión ligeramente más corta del otro texto del cuerpo muy repetitivo usado en todo.</p>
+      </article>
+
+      <article class="blog-post">
+        <h2 class="blog-post-title mb-1" data-sl-id="f82">Nueva función</h2>
+        <p class="blog-post-meta" data-sl-id="f83">14 de diciembre de 2020 por <a href="#">Chris</a></p>
+
+        <p data-sl-id="f84">Este es algo de contenido de párrafo adicional de placeholder. Se ha escrito para llenar el espacio disponible y mostrar cómo un fragmento más largo de texto afecta al contenido circundante. Lo repetiremos a menudo para mantener la demostración fluida, así que estate atento a esta misma cadena de texto.</p>
+        <ul>
+          <li data-sl-id="f85">Primer elemento de la lista</li>
+          <li data-sl-id="f86">Segundo elemento de la lista con una descripción más larga</li>
+          <li data-sl-id="f87">Tercer elemento de la lista para cerrar</li>
+        </ul>
+        <p data-sl-id="f88">Este es algo de contenido de párrafo adicional de placeholder. Es una versión ligeramente más corta del otro texto del cuerpo muy repetitivo usado en todo.</p>
+      </article>
+
+      <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#" data-sl-id="f89">Más antiguas</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" data-sl-id="f90">Más nuevas</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="fst-italic" data-sl-id="f91">Acerca de</h4>
+          <p class="mb-0" data-sl-id="f92">Personaliza esta sección para contar a tus visitantes un poco sobre tu publicación, escritores, contenido, o cualquier otra cosa. Totalmente a tu elección.</p>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic" data-sl-id="f93">Archivos</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#" data-sl-id="f94">Marzo 2021</a></li>
+            <li><a href="#" data-sl-id="f95">Febrero 2021</a></li>
+            <li><a href="#" data-sl-id="f96">Enero 2021</a></li>
+            <li><a href="#" data-sl-id="f97">Diciembre 2020</a></li>
+            <li><a href="#" data-sl-id="f98">Noviembre 2020</a></li>
+            <li><a href="#" data-sl-id="f99">Octubre 2020</a></li>
+            <li><a href="#" data-sl-id="f100">Septiembre 2020</a></li>
+            <li><a href="#" data-sl-id="f101">Agosto 2020</a></li>
+            <li><a href="#" data-sl-id="f102">Julio 2020</a></li>
+            <li><a href="#" data-sl-id="f103">Junio 2020</a></li>
+            <li><a href="#" data-sl-id="f104">Mayo 2020</a></li>
+            <li><a href="#" data-sl-id="f105">Abril 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic" data-sl-id="f106">En otras redes</h4>
+          <ol class="list-unstyled">
+            <li><a href="#" data-sl-id="f107">GitHub</a></li>
+            <li><a href="#" data-sl-id="f108">Twitter</a></li>
+            <li><a href="#" data-sl-id="f109">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="blog-footer">
+  <p data-sl-id="f110">Plantilla de blog construida para <a href="/">Bootstrap</a> por <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>
+    <a href="#" data-sl-id="f111">Volver arriba</a>
+  </p>
+</footer>
+
+    
+  
+
+<div class="text-center text-muted small py-3 border-top">
+  Traducción mantenida por <strong>Esdocu</strong>. Visita <a href="https://esdocu.com" rel="noopener">esdocu.com</a> para ver más documentaciones traducidas.
+</div>
+</body></html>
