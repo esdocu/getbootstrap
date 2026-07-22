@@ -1,185 +1,229 @@
-<!DOCTYPE html><html lang="es"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
-    <title>Ejemplo de masonry · Bootstrap en Español v5.2</title>
+<!DOCTYPE html>
+<html lang="es">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/masonry/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.104.2">
+  <title>Ejemplo de masonry · Bootstrap en Español v5.2</title>
 
-    
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/masonry/">
 
-    
 
-<link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#712cf9">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+
+  <link href="/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+  <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#712cf9">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
 
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
 
-    
-  <link rel="alternate" hreflang="en" href="https://getbootstrap.com/docs/5.2/examples/masonry"><link rel="alternate" hreflang="es" href="https://getbootstrap.esdocu.com/docs/5.2/examples/masonry"><link rel="alternate" hreflang="x-default" href="https://getbootstrap.com/docs/5.2/examples/masonry"></head>
-  <body>
-    
-<main class="container py-5">
-  <h1 data-sl-id="f1">Bootstrap y Masonry</h1>
-  <p class="lead" data-sl-id="f2">Integra <a href="https://masonry.desandro.com/">Masonry</a> con el sistema de cuadrícula de Bootstrap y el componente de tarjetas.</p>
+  <link rel="alternate" hreflang="en" href="https://getbootstrap.com/docs/5.2/examples/masonry">
+  <link rel="alternate" hreflang="es" href="https://getbootstrap.esdocu.com/docs/5.2/examples/masonry">
+  <link rel="alternate" hreflang="x-default" href="https://getbootstrap.com/docs/5.2/examples/masonry">
+</head>
 
-  <p data-sl-id="f3">Masonry no está incluido en Bootstrap. Añádelo incluyendo el plugin de JavaScript manualmente, o usando un CDN así:</p>
+<body>
 
-  <pre><code>
+  <main class="container py-5">
+    <h1 data-sl-id="f1">Bootstrap y Masonry</h1>
+    <p class="lead" data-sl-id="f2">Integra <a href="https://masonry.desandro.com/">Masonry</a> con el sistema de
+      cuadrícula de Bootstrap y el componente de tarjetas.</p>
+
+    <p data-sl-id="f3">Masonry no está incluido en Bootstrap. Añádelo incluyendo el plugin de JavaScript manualmente, o
+      usando un CDN así:</p>
+
+    <pre><code>
 &lt;script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async&gt;&lt;/script&gt;
   </code></pre>
 
-  <p data-sl-id="f4">Al añadir <code>data-masonry='{"percentPosition": true }'</code> al contenedor <code>.row</code>, podemos combinar el poder de la cuadrícula responsive de Bootstrap y el posicionamiento de Masonry.</p>
+    <p data-sl-id="f4">Al añadir <code>data-masonry='{"percentPosition": true }'</code> al contenedor <code>.row</code>,
+      podemos combinar el poder de la cuadrícula responsive de Bootstrap y el posicionamiento de Masonry.</p>
 
-  <hr class="my-5">
+    <hr class="my-5">
 
-  <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 714px;">
-    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
-      <div class="card">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Imagen superior" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+    <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 714px;">
+      <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Imagen superior" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
+              cap</text>
+          </svg>
 
-        <div class="card-body">
-          <h5 class="card-title" data-sl-id="f5">Título de tarjeta que ocupa una nueva línea</h5>
-          <p class="card-text" data-sl-id="f6">Esta es una card más larga con texto de apoyo abajo como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
+          <div class="card-body">
+            <h5 class="card-title" data-sl-id="f5">Título de tarjeta que ocupa una nueva línea</h5>
+            <p class="card-text" data-sl-id="f6">Esta es una card más larga con texto de apoyo abajo como introducción
+              natural a contenido adicional. Este contenido es un poco más largo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 0px;">
+        <div class="card p-3">
+          <figure class="p-3 mb-0">
+            <blockquote class="blockquote">
+              <p data-sl-id="f7">Una cita conocida, contenida en un elemento blockquote.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-muted" data-sl-id="f8">Alguien famoso en <cite
+                title="Título de la fuente">Título de la fuente</cite></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Imagen superior" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
+              cap</text>
+          </svg>
+
+          <div class="card-body">
+            <h5 class="card-title" data-sl-id="f9">Título de card</h5>
+            <p class="card-text" data-sl-id="f10">Esta card tiene texto de apoyo abajo como introducción natural a
+              contenido adicional.</p>
+            <p class="card-text"><small class="text-muted" data-sl-id="f11">Última actualización hace 3 minutos</small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 171px;">
+        <div class="card text-bg-primary text-center p-3">
+          <figure class="mb-0">
+            <blockquote class="blockquote">
+              <p data-sl-id="f12">Una cita conocida, contenida en un elemento blockquote.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-white" data-sl-id="f13">Alguien famoso en <cite
+                title="Título de la fuente">Título de la fuente</cite></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 310px;">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title" data-sl-id="f14">Título de card</h5>
+            <p class="card-text" data-sl-id="f15">Esta tarjeta tiene un título regular y un párrafo corto de texto
+              debajo.</p>
+            <p class="card-text"><small class="text-muted" data-sl-id="f16">Última actualización hace 3 minutos</small>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 362px;">
+        <div class="card">
+          <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Placeholder: Imagen de card" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card
+              image</text>
+          </svg>
+
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6667%; top: 378px;">
+        <div class="card p-3 text-end">
+          <figure class="mb-0">
+            <blockquote class="blockquote">
+              <p data-sl-id="f17">Una cita conocida, contenida en un elemento blockquote.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-muted" data-sl-id="f18">Alguien famoso en <cite
+                title="Título de la fuente">Título de la fuente</cite></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 488px;">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" data-sl-id="f19">Título de card</h5>
+            <p class="card-text" data-sl-id="f20">Esta es otra tarjeta con título y texto de apoyo debajo. Esta tarjeta
+              tiene algo de contenido adicional para hacerla un poco más alta en general.</p>
+            <p class="card-text"><small class="text-muted" data-sl-id="f21">Última actualización hace 3 minutos</small>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 0px;">
-      <div class="card p-3">
-        <figure class="p-3 mb-0">
-          <blockquote class="blockquote">
-            <p data-sl-id="f7">Una cita conocida, contenida en un elemento blockquote.</p>
-          </blockquote>
-          <figcaption class="blockquote-footer mb-0 text-muted" data-sl-id="f8">Alguien famoso en <cite title="Título de la fuente">Título de la fuente</cite></figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
-      <div class="card">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Imagen superior" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
 
-        <div class="card-body">
-          <h5 class="card-title" data-sl-id="f9">Título de card</h5>
-          <p class="card-text" data-sl-id="f10">Esta card tiene texto de apoyo abajo como introducción natural a contenido adicional.</p>
-          <p class="card-text"><small class="text-muted" data-sl-id="f11">Última actualización hace 3 minutos</small></p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 171px;">
-      <div class="card text-bg-primary text-center p-3">
-        <figure class="mb-0">
-          <blockquote class="blockquote">
-            <p data-sl-id="f12">Una cita conocida, contenida en un elemento blockquote.</p>
-          </blockquote>
-          <figcaption class="blockquote-footer mb-0 text-white" data-sl-id="f13">Alguien famoso en <cite title="Título de la fuente">Título de la fuente</cite></figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 310px;">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title" data-sl-id="f14">Título de card</h5>
-          <p class="card-text" data-sl-id="f15">Esta tarjeta tiene un título regular y un párrafo corto de texto debajo.</p>
-          <p class="card-text"><small class="text-muted" data-sl-id="f16">Última actualización hace 3 minutos</small></p>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 362px;">
-      <div class="card">
-        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Imagen de card" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text></svg>
+  </main>
 
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 66.6667%; top: 378px;">
-      <div class="card p-3 text-end">
-        <figure class="mb-0">
-          <blockquote class="blockquote">
-            <p data-sl-id="f17">Una cita conocida, contenida en un elemento blockquote.</p>
-          </blockquote>
-          <figcaption class="blockquote-footer mb-0 text-muted" data-sl-id="f18">Alguien famoso en <cite title="Título de la fuente">Título de la fuente</cite></figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 33.3333%; top: 488px;">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title" data-sl-id="f19">Título de card</h5>
-          <p class="card-text" data-sl-id="f20">Esta es otra tarjeta con título y texto de apoyo debajo. Esta tarjeta tiene algo de contenido adicional para hacerla un poco más alta en general.</p>
-          <p class="card-text"><small class="text-muted" data-sl-id="f21">Última actualización hace 3 minutos</small></p>
-        </div>
-      </div>
-    </div>
+  <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script async="" src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+    crossorigin="anonymous"></script>
+
+
+  <script src="https://static-ads.xeost.com/ads.js" async=""></script>
+  <div class="text-center text-muted small py-3 border-top">
+    Traducción mantenida por <strong>Esdocu</strong>. Visita <a href="https://esdocu.com" rel="noopener">esdocu.com</a>
+    para ver más documentaciones traducidas.
   </div>
+</body>
 
-</main>
-
-    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-      <script async="" src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
-  
-
-<div class="text-center text-muted small py-3 border-top">
-  Traducción mantenida por <strong>Esdocu</strong>. Visita <a href="https://esdocu.com" rel="noopener">esdocu.com</a> para ver más documentaciones traducidas.
-</div>
-</body></html>
+</html>
